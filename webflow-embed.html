@@ -1,0 +1,815 @@
+<!-- ==========================================================
+     BUDAPEST PROSECCO CRUISES - WEBFLOW HTML EMBED CODE
+     ========================================================== 
+     Instructions:
+     1. Create a page in Webflow (e.g., /best-unlimited-prosecco-cruises).
+     2. Drag an "HTML Embed" component into your Webflow designer canvas.
+     3. Copy and paste ALL the code below into the HTML Embed box.
+     4. Save, close, and publish your Webflow site!
+=========================================================== -->
+
+<div class="prosecco-guide-wrapper">
+
+    <!-- CSS Styling (Scoped to avoid breaking your global Webflow styles) -->
+    <style>
+        .prosecco-guide-wrapper {
+            --bg-primary: #0a0b0d;
+            --bg-secondary: #121316;
+            --accent-gold: #d4af37;
+            --accent-gold-light: #f3e5ab;
+            --accent-gold-gradient: linear-gradient(135deg, #d4af37 0%, #f9e29a 100%);
+            --text-primary: #f1f1f4;
+            --text-secondary: #a1a3a9;
+            --card-bg: rgba(22, 23, 27, 0.65);
+            --card-border: rgba(212, 175, 55, 0.15);
+            --card-border-hover: rgba(212, 175, 55, 0.4);
+            --shadow-main: 0 15px 35px rgba(0, 0, 0, 0.6);
+            --shadow-gold-glow: 0 0 20px rgba(212, 175, 55, 0.35);
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            padding: 2rem 0;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        /* Typography */
+        .prosecco-guide-wrapper h1, 
+        .prosecco-guide-wrapper h2, 
+        .prosecco-guide-wrapper h3, 
+        .prosecco-guide-wrapper h4 {
+            font-family: var(--font-serif);
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .prosecco-guide-wrapper a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .prosecco-guide-wrapper a:hover {
+            color: var(--accent-gold-light);
+        }
+
+        /* Hero Section inside Embed */
+        .prosecco-guide-wrapper .embed-hero {
+            position: relative;
+            padding: 4rem 2rem;
+            text-align: center;
+            background: radial-gradient(circle at 85% 50%, rgba(10, 11, 13, 0.1) 0%, var(--bg-primary) 70%), 
+                        url('https://images.unsplash.com/photo-1543791187-df796fa11835?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.05);
+            margin-bottom: 3rem;
+            border-radius: 12px;
+        }
+
+        .prosecco-guide-wrapper .embed-hero h1 {
+            font-size: 2.75rem;
+            line-height: 1.25;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .prosecco-guide-wrapper .hero-sub-serif {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-weight: 400;
+            background: var(--accent-gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .prosecco-guide-wrapper .glass-pill-container {
+            background: rgba(22, 23, 27, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.25rem 2rem;
+            border-radius: 12px;
+            display: inline-block;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .prosecco-guide-wrapper .glass-pill-text {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .prosecco-guide-wrapper .glass-pill-sub {
+            font-size: 0.65rem;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Container */
+        .prosecco-guide-wrapper .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Filters */
+        .prosecco-guide-wrapper .filter-section {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .prosecco-guide-wrapper .filter-section h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .prosecco-guide-wrapper .section-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .prosecco-guide-wrapper .filters {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .prosecco-guide-wrapper .filter-btn {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            padding: 0.6rem 1.4rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .prosecco-guide-wrapper .filter-btn:hover {
+            color: #fff;
+            border-color: var(--accent-gold);
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .prosecco-guide-wrapper .filter-btn.active {
+            background: var(--accent-gold-gradient);
+            color: #0a0b0d;
+            border-color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        /* Grid & Cards */
+        .prosecco-guide-wrapper .cruises-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+            margin-bottom: 5rem;
+        }
+
+        .prosecco-guide-wrapper .cruise-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-main);
+            transition: var(--transition);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+        .prosecco-guide-wrapper .cruise-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--card-border-hover);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.12);
+        }
+
+        .prosecco-guide-wrapper .card-image-wrapper {
+            height: 160px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .prosecco-guide-wrapper .card-img-gala {
+            background-image: linear-gradient(to bottom, rgba(10, 11, 13, 0.1), rgba(10, 11, 13, 0.8)), 
+                              url('https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&w=600&q=80');
+        }
+
+        .prosecco-guide-wrapper .card-img-legend {
+            background-image: linear-gradient(to bottom, rgba(10, 11, 13, 0.1), rgba(10, 11, 13, 0.8)), 
+                              url('https://images.unsplash.com/photo-1543791187-df796fa11835?auto=format&fit=crop&w=600&q=80');
+        }
+
+        .prosecco-guide-wrapper .card-img-stars {
+            background-image: linear-gradient(to bottom, rgba(10, 11, 13, 0.1), rgba(10, 11, 13, 0.8)), 
+                              url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=600&q=80');
+        }
+
+        .prosecco-guide-wrapper .card-img-glow {
+            background-image: linear-gradient(to bottom, rgba(10, 11, 13, 0.1), rgba(10, 11, 13, 0.8)), 
+                              url('https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=600&q=80');
+        }
+
+        .prosecco-guide-wrapper .price-capsule {
+            position: absolute;
+            bottom: 0.75rem;
+            right: 0.75rem;
+            background: var(--accent-gold-gradient);
+            color: #0c0d10;
+            padding: 0.3rem 0.85rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            font-family: var(--font-serif);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .prosecco-guide-wrapper .price-suffix {
+            font-size: 0.6rem;
+            font-weight: 400;
+            font-family: var(--font-sans);
+            opacity: 0.85;
+        }
+
+        .prosecco-guide-wrapper .card-content {
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .prosecco-guide-wrapper .card-content h3 {
+            font-size: 1.15rem;
+            color: #fff;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+        }
+
+        .prosecco-guide-wrapper .card-meta {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .prosecco-guide-wrapper .checklist {
+            list-style: none;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .prosecco-guide-wrapper .checklist li {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .prosecco-guide-wrapper .chk-icon {
+            color: var(--accent-gold);
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .prosecco-guide-wrapper .rating-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .prosecco-guide-wrapper .rating-text {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            opacity: 0.75;
+        }
+
+        .prosecco-guide-wrapper .stars {
+            color: var(--accent-gold);
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .prosecco-guide-wrapper .card-btn {
+            background: var(--accent-gold-gradient);
+            color: #0c0d10 !important;
+            text-align: center;
+            padding: 0.65rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .prosecco-guide-wrapper .card-btn:hover {
+            background: var(--accent-gold-light);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-gold-glow);
+        }
+
+        /* Comparison Table */
+        .prosecco-guide-wrapper .comparison-section {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .prosecco-guide-wrapper .comparison-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .prosecco-guide-wrapper .table-container {
+            overflow-x: auto;
+            background: var(--bg-secondary);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: 10px;
+            margin-top: 2rem;
+            box-shadow: var(--shadow-main);
+        }
+
+        .prosecco-guide-wrapper .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            min-width: 700px;
+        }
+
+        .prosecco-guide-wrapper .comparison-table th, 
+        .prosecco-guide-wrapper .comparison-table td {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .prosecco-guide-wrapper .comparison-table th {
+            background: rgba(255, 255, 255, 0.01);
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .prosecco-guide-wrapper .comparison-table td {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .prosecco-guide-wrapper .comparison-table tr.highlighted {
+            background: rgba(212, 175, 55, 0.05) !important;
+        }
+
+        .prosecco-guide-wrapper .comparison-table tr.highlighted td {
+            color: #fff;
+        }
+
+        .prosecco-guide-wrapper .comparison-table tr:hover {
+            background: rgba(255, 255, 255, 0.012);
+            cursor: pointer;
+        }
+
+        .prosecco-guide-wrapper .feature-title {
+            font-weight: 600;
+            color: #fff !important;
+        }
+
+        .prosecco-guide-wrapper .price-val {
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            color: #fff !important;
+            font-weight: bold;
+        }
+
+        .prosecco-guide-wrapper .tag {
+            font-size: 0.65rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .prosecco-guide-wrapper .premium-tag { background: rgba(212, 175, 55, 0.15); color: var(--accent-gold); }
+        .prosecco-guide-wrapper .variety-tag { background: rgba(224, 169, 109, 0.15); color: #e0a96d; }
+        .prosecco-guide-wrapper .budget-tag { background: rgba(90, 174, 226, 0.15); color: #5aaee2; }
+
+        /* Tips Section */
+        .prosecco-guide-wrapper .tips-section {
+            margin-top: 4rem;
+        }
+
+        .prosecco-guide-wrapper .tips-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .prosecco-guide-wrapper .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .prosecco-guide-wrapper .tip-card {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 2rem 1.75rem;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .prosecco-guide-wrapper .tip-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-gold-gradient);
+        }
+
+        .prosecco-guide-wrapper .tip-num {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 700;
+            color: rgba(212, 175, 55, 0.04);
+            position: absolute;
+            right: 1.25rem;
+            top: 0.25rem;
+        }
+
+        .prosecco-guide-wrapper .tip-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+            font-family: var(--font-sans);
+            font-weight: 600;
+        }
+
+        .prosecco-guide-wrapper .tip-card p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .prosecco-guide-wrapper .tip-card strong {
+            color: var(--accent-gold-light);
+        }
+
+        /* Disclaimer */
+        .prosecco-guide-wrapper .disclaimer-box {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            opacity: 0.5;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 1.5rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1100px) {
+            .prosecco-guide-wrapper .cruises-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .prosecco-guide-wrapper .embed-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .prosecco-guide-wrapper .glass-pill-container {
+                padding: 1rem;
+            }
+            
+            .prosecco-guide-wrapper .glass-pill-text {
+                font-size: 0.9rem;
+            }
+            
+            .prosecco-guide-wrapper .cruises-grid {
+                grid-template-columns: 1fr;
+                max-width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+
+    <!-- Embedded Hero Section (Designed to transition from your header) -->
+    <section class="embed-hero">
+        <div class="hero-content">
+            <h1>Budapest’s Best Unlimited Prosecco Cruises:<br><span class="hero-sub-serif">A Local Guide’s Comparison</span></h1>
+            
+            <div class="glass-pill-container">
+                <p class="glass-pill-text">Explore the Danube at Night with Endless Sparkling Wine & Stunning Views</p>
+                <div class="glass-pill-sub">Glassmorphism widget</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <div class="content-container">
+        
+        <!-- Interactive Vibe Filter -->
+        <section class="filter-section">
+            <h2>Select Your Vibe</h2>
+            <p class="section-desc">Filter the reviewed cruises below by category to find your perfect style.</p>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Cruises</button>
+                <button class="filter-btn" data-filter="premium">🥂 Premium Choice</button>
+                <button class="filter-btn" data-filter="variety">🍹 Variety Champion</button>
+                <button class="filter-btn" data-filter="budget">💰 Budget Friendly</button>
+            </div>
+        </section>
+
+        <!-- Cruise Cards Grid (4 Columns) -->
+        <section class="cruises-grid">
+            
+            <!-- Card 1: Royal Danube Gala -->
+            <div class="cruise-card" data-category="premium">
+                <div class="card-image-wrapper card-img-gala">
+                    <div class="price-capsule">€39 <span class="price-suffix">/ person</span></div>
+                </div>
+                <div class="card-content">
+                    <h3>Royal Danube Gala</h3>
+                    <div class="card-meta">⏱️ 90 min</div>
+                    
+                    <ul class="checklist">
+                        <li><span class="chk-icon">✓</span> Unlimited Prosecco</li>
+                        <li><span class="chk-icon">✓</span> Full Sightseeing</li>
+                        <li><span class="chk-icon">✓</span> Live Music</li>
+                        <li><span class="chk-icon">✓</span> Panoramic Deck</li>
+                    </ul>
+
+                    <div class="rating-row">
+                        <span class="rating-text">Elegant typography</span>
+                        <span class="stars">★ 4.9/5</span>
+                    </div>
+
+                    <a href="https://silver-line.hu" target="_blank" rel="noopener" class="btn card-btn">VIEW DETAILS & BOOK</a>
+                </div>
+            </div>
+
+            <!-- Card 2: Legend Unlimited Cruise -->
+            <div class="cruise-card" data-category="premium">
+                <div class="card-image-wrapper card-img-legend">
+                    <div class="price-capsule">€49 <span class="price-suffix">/ person</span></div>
+                </div>
+                <div class="card-content">
+                    <h3>Legend Unlimited Cruise</h3>
+                    <div class="card-meta">⏱️ 2 hrs</div>
+                    
+                    <ul class="checklist">
+                        <li><span class="chk-icon">✓</span> Unlimited Prosecco</li>
+                        <li><span class="chk-icon">✓</span> Full Sightseeing</li>
+                        <li><span class="chk-icon">✓</span> Live Music</li>
+                        <li><span class="chk-icon">✓</span> Buffet option</li>
+                    </ul>
+
+                    <div class="rating-row">
+                        <span class="rating-text">Elegant typography</span>
+                        <span class="stars">★ 4.8/5</span>
+                    </div>
+
+                    <a href="https://rubingroup.hu" target="_blank" rel="noopener" class="btn card-btn">VIEW DETAILS & BOOK</a>
+                </div>
+            </div>
+
+            <!-- Card 3: Danube Stars Experience -->
+            <div class="cruise-card" data-category="variety">
+                <div class="card-image-wrapper card-img-stars">
+                    <div class="price-capsule">€35 <span class="price-suffix">/ person</span></div>
+                </div>
+                <div class="card-content">
+                    <h3>Danube Stars Experience</h3>
+                    <div class="card-meta">⏱️ 75 min</div>
+                    
+                    <ul class="checklist">
+                        <li><span class="chk-icon">✓</span> Unlimited Prosecco</li>
+                        <li><span class="chk-icon">✓</span> Full Sightseeing</li>
+                        <li><span class="chk-icon">✓</span> Live Music</li>
+                        <li><span class="chk-icon">✓</span> Buffet option</li>
+                    </ul>
+
+                    <div class="rating-row">
+                        <span class="rating-text">Elegant typography</span>
+                        <span class="stars">★ 4.7/5</span>
+                    </div>
+
+                    <a href="https://rubingroup.hu" target="_blank" rel="noopener" class="btn card-btn">VIEW DETAILS & BOOK</a>
+                </div>
+            </div>
+
+            <!-- Card 4: Glow Sparkling Night -->
+            <div class="cruise-card" data-category="budget">
+                <div class="card-image-wrapper card-img-glow">
+                    <div class="price-capsule">€42 <span class="price-suffix">/ person</span></div>
+                </div>
+                <div class="card-content">
+                    <h3>Glow Sparkling Night</h3>
+                    <div class="card-meta">⏱️ 1.5 hrs</div>
+                    
+                    <ul class="checklist">
+                        <li><span class="chk-icon">✓</span> Unlimited Prosecco</li>
+                        <li><span class="chk-icon">✓</span> Full Sightseeing</li>
+                        <li><span class="chk-icon">✓</span> Live Music</li>
+                        <li><span class="chk-icon">✓</span> Panoramic Deck</li>
+                    </ul>
+
+                    <div class="rating-row">
+                        <span class="rating-text">Elegant typography</span>
+                        <span class="stars">★ 4.6/5</span>
+                    </div>
+
+                    <a href="https://budapestrivercruise.com" target="_blank" rel="noopener" class="btn card-btn">VIEW DETAILS & BOOK</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Comparison Matrix -->
+        <section class="comparison-section" id="comparison">
+            <h2>The Side-by-Side Comparison</h2>
+            <p class="section-desc">Click any row to highlight and compare features of the top bottomless cruises.</p>
+            
+            <div class="table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Royal Danube Gala</th>
+                            <th>Legend Unlimited</th>
+                            <th>Danube Stars</th>
+                            <th>Glow Sparkling</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row">
+                            <td class="feature-title">Vibe Category</td>
+                            <td><span class="tag premium-tag">Premium</span></td>
+                            <td><span class="tag premium-tag">Premium</span></td>
+                            <td><span class="tag variety-tag">Variety</span></td>
+                            <td><span class="tag budget-tag">Budget-Friendly</span></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="feature-title">Ticket Price</td>
+                            <td class="price-val">€39</td>
+                            <td class="price-val">€49</td>
+                            <td class="price-val">€35</td>
+                            <td class="price-val">€42</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="feature-title">Duration</td>
+                            <td>90 minutes</td>
+                            <td>120 minutes</td>
+                            <td>75 minutes</td>
+                            <td>90 minutes</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="feature-title">Prosecco Selection</td>
+                            <td>Bottega (White & Rosé)</td>
+                            <td>Bottega DOC Selection</td>
+                            <td>Standard Italian Prosecco</td>
+                            <td>Hungarian Sparkling</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="feature-title">Live Entertainment</td>
+                            <td>Yes (Violin duo)</td>
+                            <td>Yes (Piano show option)</td>
+                            <td>Lounge beats (DJ)</td>
+                            <td>Ambient music</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="feature-title">Departure Dock</td>
+                            <td>Dock 11 (Elizabeth Bridge)</td>
+                            <td>Dock 11 (Jane Haining Quay)</td>
+                            <td>Dock 11 (Jane Haining Quay)</td>
+                            <td>Dock 42 (Margaret Bridge)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Local Guide Pro Tips Section -->
+        <section class="tips-section" id="tips">
+            <h2>🕵️ Local Guide Insider Secrets</h2>
+            <p class="section-desc">Before you book, make sure you keep these verified travel guide tips in mind to maximize your cruise experience.</p>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-num">01</div>
+                    <h3>Timing is Everything</h3>
+                    <p>Always check the local sunset time. The perfect cruise leaves <strong>30 minutes before sunset</strong>. You get stunning golden-hour photographs of Buda Castle, and by the time you turn back, the Hungarian Parliament will be illuminated in its full gold glory.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-num">02</div>
+                    <h3>Arrive Early for Upper Deck Seating</h3>
+                    <p>Almost all operators use a first-come, first-served seating policy. If you want a prime spot on the open-air upper deck for photography, arrive at the dock at least <strong>25 minutes before departure</strong>.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-num">03</div>
+                    <h3>Locate Your Dock in Advance</h3>
+                    <p>Dock 11 (central, near Elizabeth Bridge) and Dock 42 (further north, past Margaret Bridge) are a 15-to-20 minute walk apart. Double-check your ticket so you don't end up sprinting to the wrong pier as the boat departs!</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="disclaimer-box">
+            <p>Please drink responsibly. Passengers must be 18+ to consume alcohol. Reviews are editorial and independent.</p>
+        </div>
+
+    </div> <!-- End content-container -->
+
+    <!-- Interactive Logic (Scoped to this page) -->
+    <script>
+        (function() {
+            document.addEventListener("DOMContentLoaded", function() {
+                // Scope selectors within our custom parent class
+                const wrapper = document.querySelector(".prosecco-guide-wrapper");
+                if (!wrapper) return;
+
+                const filterButtons = wrapper.querySelectorAll(".filter-btn");
+                const cruiseCards = wrapper.querySelectorAll(".cruise-card");
+
+                filterButtons.forEach(button => {
+                    button.addEventListener("click", () => {
+                        filterButtons.forEach(btn => btn.classList.remove("active"));
+                        button.classList.add("active");
+
+                        const filterValue = button.getAttribute("data-filter");
+
+                        cruiseCards.forEach(card => {
+                            const cardCategory = card.getAttribute("data-category");
+
+                            if (filterValue === "all" || cardCategory === filterValue) {
+                                card.style.display = "flex";
+                                setTimeout(() => {
+                                    card.style.opacity = "1";
+                                    card.style.transform = "translateY(0)";
+                                }, 50);
+                            } else {
+                                card.style.opacity = "0";
+                                card.style.transform = "translateY(15px)";
+                                setTimeout(() => {
+                                    card.style.display = "none";
+                                }, 300);
+                            }
+                        });
+                    });
+                });
+
+                const tableRows = wrapper.querySelectorAll(".comparison-table tbody tr");
+                tableRows.forEach(row => {
+                    row.addEventListener("click", () => {
+                        row.classList.toggle("highlighted");
+                    });
+                });
+
+                // Simple scroll reveal effect for tips
+                const tipCards = wrapper.querySelectorAll(".tip-card");
+                const revealOnScroll = () => {
+                    const triggerBottom = window.innerHeight * 0.9;
+                    tipCards.forEach(card => {
+                        const cardTop = card.getBoundingClientRect().top;
+                        if (cardTop < triggerBottom) {
+                            card.style.opacity = "1";
+                            card.style.transform = "translateY(0)";
+                        }
+                    });
+                };
+
+                tipCards.forEach(card => {
+                    card.style.opacity = "0";
+                    card.style.transform = "translateY(20px)";
+                    card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+                });
+
+                window.addEventListener("scroll", revealOnScroll);
+                revealOnScroll();
+            });
+        })();
+    </script>
+</div>
