@@ -41,16 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const trackingString = trackingValues.join('|');
 
-    // 4. Update all outbound links to Legenda and Silverline (and other TourCMS partners)
+    // 4. Update all outbound links to Tiqets, Legenda, Silverline, etc.
     const links = document.querySelectorAll('a');
     
     links.forEach(link => {
         try {
             const url = new URL(link.href);
-            // Check if the link points to a partner site using TourCMS
-            if (url.hostname.includes('legenda.hu') || 
-                url.hostname.includes('budapestrivercruise.eu')) {
-                
+            if (url.hostname.includes('tiqets.com')) {
+                url.searchParams.set('subid', trackingString);
+                url.searchParams.set('click_id', trackingString);
+                link.href = url.toString();
+            } else if (url.hostname.includes('legenda.hu') || 
+                       url.hostname.includes('budapestrivercruise.eu')) {
                 // Append the tracking data as 'subid'
                 url.searchParams.set('subid', trackingString);
                 link.href = url.toString();

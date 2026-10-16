@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legenda Budapest Cruise | Fast Reserve</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    .hero-glow {
+      box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.4);
+    }
+    .badge-pulse {
+      animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse-ring {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased flex flex-col justify-between p-3 sm:p-5">
+
+  <main class="max-w-md mx-auto w-full my-auto space-y-4">
+
+    <!-- Card Wrapper -->
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl hero-glow">
+      
+      <!-- Hero Image Container with Badges -->
+      <div class="relative h-56 w-full bg-slate-800 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1549877452-9c387954fbc2?auto=format&fit=crop&w=800&q=80" 
+             alt="Budapest Parliament River Cruise" 
+             class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>
+
+        <!-- Top Live Status Pill -->
+        <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md border border-slate-700/60 px-3 py-1 rounded-full flex items-center space-x-2 text-xs">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 badge-pulse"></span>
+          <span class="text-slate-200 font-medium">Boats Departing Tonight</span>
+        </div>
+
+        <!-- Rating Badge -->
+        <div class="absolute bottom-3 left-3 bg-amber-500/90 text-slate-950 px-2.5 py-1 rounded-lg flex items-center space-x-1 font-bold text-xs shadow">
+          <span>★ 4.9</span>
+          <span class="text-slate-900/70 font-normal">(3,840+ reviews)</span>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="p-5 space-y-4">
+        <div>
+          <h1 class="text-xl font-black tracking-tight text-white">Legenda Sightseeing River Cruise</h1>
+          <p class="text-xs text-sky-400 font-medium mt-0.5">Budapest, Hungary • Danube River</p>
+        </div>
+
+        <!-- Option Selector Pills -->
+        <div class="grid grid-cols-2 gap-2 p-1 bg-slate-950 rounded-xl border border-slate-800">
+          <button id="opt-evening" onclick="selectOption('evening', 21.00)" class="p-2.5 rounded-lg text-left transition-all bg-sky-600 text-white font-semibold text-xs border border-sky-400/30 shadow">
+            <div class="flex justify-between items-center mb-0.5">
+              <span>🌃 Evening / Prosecco</span>
+              <span class="font-bold">€21.00</span>
+            </div>
+            <div class="text-[10px] text-sky-100 font-normal">Illuminated Parliament</div>
+          </button>
+
+          <button id="opt-day" onclick="selectOption('day', 15.50)" class="p-2.5 rounded-lg text-left transition-all text-slate-400 hover:text-white font-medium text-xs border border-transparent">
+            <div class="flex justify-between items-center mb-0.5">
+              <span>☀️ Daytime Cruise</span>
+              <span class="font-bold">€15.50</span>
+            </div>
+            <div class="text-[10px] text-slate-500 font-normal">Clear City Panorama</div>
+          </button>
+        </div>
+
+        <!-- Quick Value Proposition Checklist -->
+        <div class="space-y-2 text-xs text-slate-300 bg-slate-950/50 p-3.5 rounded-xl border border-slate-800/80">
+          <div class="flex items-start">
+            <span class="text-emerald-400 font-bold mr-2 text-sm">✓</span>
+            <span><strong>1 Free Drink Included</strong> (Glass of Prosecco, Wine, Beer, or Soft Drink)</span>
+          </div>
+          <div class="flex items-start">
+            <span class="text-emerald-400 font-bold mr-2 text-sm">✓</span>
+            <span><strong>30-Language Headset Guide</strong> with free Wi-Fi on board</span>
+          </div>
+          <div class="flex items-start">
+            <span class="text-emerald-400 font-bold mr-2 text-sm">✓</span>
+            <span><strong>Instant Mobile QR Ticket</strong> — Show directly on your phone</span>
+          </div>
+          <div class="flex items-start">
+            <span class="text-emerald-400 font-bold mr-2 text-sm">✓</span>
+            <span><strong>Free Cancellation</strong> up to 24 hours before your slot</span>
+          </div>
+        </div>
+
+        <!-- Primary Outbound CTA Button -->
+        <div class="space-y-2">
+          <a id="hero-cta" href="#" target="_blank" rel="noopener nofollow" 
+             class="block w-full py-4 px-6 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-black text-center text-base rounded-xl shadow-lg transition-all transform active:scale-95">
+            Check Available Times on Tiqets →
+          </a>
+          
+          <div class="flex items-center justify-between text-[11px] text-slate-400 px-1">
+            <span class="flex items-center"><span class="mr-1">🔒</span> Secure Checkout</span>
+            <span class="text-emerald-400 font-semibold">● Reserve Now, Pay Later</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CAPI Parameter Inspector Panel -->
+    <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-mono text-slate-400 space-y-1">
+      <div class="font-bold text-emerald-400 flex items-center justify-between text-[11px]">
+        <span>⚙️ Outbound CAPI Parameters</span>
+        <span class="bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded text-[10px]">Active</span>
+      </div>
+      <div class="text-[10px] break-all">
+        <div><strong>URL fbclid:</strong> <span id="debug-fbclid" class="text-amber-300">fbclid_sample_88234</span></div>
+        <div><strong>Decorated Target URL:</strong></div>
+        <div id="debug-url" class="text-slate-300 bg-slate-950 p-1.5 rounded mt-1 border border-slate-800">Loading link...</div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="max-w-md mx-auto w-full text-center text-[11px] text-slate-500 py-2">
+    The Cruise Detective • Official Tiqets Affiliate Integration
+  </footer>
+
+  <script>
+    // 1. Parse URL tracking parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const fbclid = urlParams.get('fbclid') || 'hero_card_fbclid_998877';
+    const gclid = urlParams.get('gclid') || '';
+
+    document.getElementById('debug-fbclid').textContent = fbclid;
+
+    // 2. Build tracking parameter
+    let subid = `fbclid:${fbclid}`;
+    if (gclid) subid += `|gclid:${gclid}`;
+
+    const urls = {
+      evening: "https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-budapest-evening-sightseeing-cruise-p1114614/",
+      day: "https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-budapest-sightseeing-cruise-p1114615/"
+    };
+    const partnerId = "thecruisedetective.com-176436";
+
+    let selectedOption = 'evening';
+
+    function updateCTA() {
+      const targetBase = urls[selectedOption];
+      const finalUrl = `${targetBase}?partner=${partnerId}&click_id=${encodeURIComponent(subid)}&subid=${encodeURIComponent(subid)}&tq_campaign=hero-card--${selectedOption}--${fbclid}`;
+      
+      const cta = document.getElementById('hero-cta');
+      cta.href = finalUrl;
+
+      document.getElementById('debug-url').textContent = finalUrl;
+    }
+
+    function selectOption(opt, price) {
+      selectedOption = opt;
+      const btnEvening = document.getElementById('opt-evening');
+      const btnDay = document.getElementById('opt-day');
+
+      if (opt === 'evening') {
+        btnEvening.className = "p-2.5 rounded-lg text-left transition-all bg-sky-600 text-white font-semibold text-xs border border-sky-400/30 shadow";
+        btnDay.className = "p-2.5 rounded-lg text-left transition-all text-slate-400 hover:text-white font-medium text-xs border border-transparent";
+      } else {
+        btnDay.className = "p-2.5 rounded-lg text-left transition-all bg-sky-600 text-white font-semibold text-xs border border-sky-400/30 shadow";
+        btnEvening.className = "p-2.5 rounded-lg text-left transition-all text-slate-400 hover:text-white font-medium text-xs border border-transparent";
+      }
+
+      updateCTA();
+    }
+
+    // Initialize on page load
+    updateCTA();
+  </script>
+
+</body>
+</html>
