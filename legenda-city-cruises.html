@@ -276,9 +276,9 @@
 
           <div class="flex flex-wrap items-center justify-between text-[11px] text-slate-400 pt-2 gap-2 border-t border-slate-800/80">
             <span class="flex items-center space-x-1.5">
-              <span>🔒 Direct Official Reservation</span>
+              <span>🔒 Official Direct Reservation</span>
               <span>•</span>
-              <span>Partner #38885</span>
+              <span>Instant QR Confirmation</span>
             </span>
             <span>💳 Visa / Mastercard / PayPal • Free 24h Cancellation</span>
           </div>
@@ -315,18 +315,29 @@
   <!-- Clean Footer -->
   <footer class="bg-slate-950 border-t border-slate-800/80 py-6 text-center text-xs text-slate-500">
     <div class="max-w-4xl mx-auto px-4 space-y-2">
-      <p>© 2026 Budapest Adventures. Official Authorized Ticket Partner for Legenda City Cruises (Partner ID: 38885).</p>
+      <p>© 2026 Budapest Adventures. Official Authorized Ticket Partner for Legenda City Cruises.</p>
       <p class="text-[11px] text-slate-600">All bookings are fulfilled securely by Legenda Kft. Prices include all local Hungarian taxes and VAT.</p>
     </div>
   </footer>
 
   <!-- Script Logic -->
   <script>
+    function getLocalDateString(d) {
+      const year = d.getFullYear();
+      const month = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    }
+
     const now = new Date();
-    const todayStr = now.toISOString().split('T')[0];
-    const tomorrow = new Date(now);
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    const tomorrowStr = tomorrow.toISOString().split('T')[0];
+    const todayStr = getLocalDateString(now);
+    const tomorrowObj = new Date(now);
+    tomorrowObj.setDate(tomorrowObj.getDate() + 1);
+    const tomorrowStr = getLocalDateString(tomorrowObj);
+
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const todayLabel = `Today (${monthNames[now.getMonth()]} ${now.getDate()})`;
+    const tomorrowLabel = `Tomorrow (${monthNames[tomorrowObj.getMonth()]} ${tomorrowObj.getDate()})`;
 
     const TOUR_CONFIG = {
       '2': {
@@ -416,6 +427,11 @@
     }
 
     function initUI() {
+      const btnToday = document.getElementById('btn-date-today');
+      const btnTomorrow = document.getElementById('btn-date-tomorrow');
+      if (btnToday) btnToday.textContent = todayLabel;
+      if (btnTomorrow) btnTomorrow.textContent = tomorrowLabel;
+
       const datePicker = document.getElementById('date-picker-input');
       datePicker.min = todayStr;
       datePicker.value = currentDate;
