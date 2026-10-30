@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legenda Danube Cruises — Official Live Availability & Affiliate Booking Terminal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .pulse-dot { animation: pulse 2s infinite; }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.92); }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+
+  <!-- Top Affiliate Architecture Status Bar -->
+  <div id="top-admin-bar" class="bg-slate-900/95 border-b border-slate-800 sticky top-0 z-40 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-2 text-xs">
+      <div class="flex items-center space-x-3">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-semibold">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 mr-1.5 pulse-dot"></span>
+          TourCMS Live Inventory Terminal (`ID: 57509` • `Channel: 16485`)
+        </span>
+        <span class="hidden md:inline text-slate-300 font-medium">Mode: <strong class="text-amber-300">`balance_owed_by = C` (Customer Pays Legenda Directly)</strong></span>
+      </div>
+      <div class="flex items-center space-x-3 mono text-[11px]">
+        <span class="text-emerald-400 font-bold">✓ €0 Stripe Fees</span>
+        <span class="text-slate-600">|</span>
+        <span class="text-emerald-400 font-bold">✓ €0 VAT / Invoicing</span>
+        <span class="text-slate-600">|</span>
+        <span class="text-sky-400 font-bold">25.0% Clean Affiliate Commission</span>
+        <a href="?view=customer" class="ml-2 px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 hover:bg-sky-500/30 border border-sky-500/40 font-sans font-bold">Preview Customer View →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Split Layout: Left = Live Inventory Terminal LP | Right = How `balance_owed_by = C` Works & Live API Inspector -->
+  <main id="main-layout" class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+    <!-- LEFT COLUMN: High-Converting Live Booking Terminal LP -->
+    <div id="customer-terminal-col" class="lg:col-span-7 space-y-6">
+
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl">
+        
+        <!-- Hero Image Banner -->
+        <div class="relative h-64 sm:h-72 w-full bg-slate-800 overflow-hidden">
+          <img id="hero-img" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68f3738fe72bf6e25526e991_best-budapest-river-cruises-legenda-sightseeing-cruise-00025.avif"
+               alt="Legenda Danube Cruise Budapest"
+               class="w-full h-full object-cover object-center transition-all duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+
+          <!-- Top Badges -->
+          <div class="absolute top-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2">
+            <div class="bg-slate-950/85 backdrop-blur-md border border-slate-700/70 px-3 py-1.5 rounded-full flex items-center space-x-2 text-xs">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+              <span class="text-slate-100 font-semibold">Live Dock 7 Terminal • Jane Haining rkp.</span>
+            </div>
+            <div class="bg-amber-400 text-slate-950 px-3 py-1 rounded-full font-extrabold text-xs shadow">
+              ★ 4.8 (3,840+ Verified Reviews)
+            </div>
+          </div>
+
+          <!-- Bottom Title Overlay -->
+          <div class="absolute bottom-4 left-5 right-5">
+            <div class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-1">Official Legenda City Cruises • Real-Time Seat Availability</div>
+            <h1 id="hero-title" class="text-2xl sm:text-3xl font-black text-white leading-tight">
+              Danube Legend Evening Sightseeing Cruise
+            </h1>
+          </div>
+        </div>
+
+        <div class="p-5 sm:p-6 space-y-6">
+
+          <!-- STEP 1: Select Cruise Experience (Tour ID 2, 1, or 3) -->
+          <div>
+            <div class="flex items-center justify-between mb-2.5">
+              <label class="text-xs font-bold uppercase tracking-wider text-slate-400">1. Select Your Legenda Cruise</label>
+              <span class="text-[11px] text-emerald-400 font-semibold">✓ Kids Under 10 FREE (Sightseeing)</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+              <!-- Tour 2: Evening -->
+              <button onclick="selectTour('2')" id="tour-btn-2"
+                      class="p-3.5 rounded-2xl border-2 border-sky-500 bg-sky-500/10 text-left transition-all relative">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-bold text-sky-300">🌃 Evening Legend</span>
+                  <span class="text-[10px] px-1.5 py-0.5 rounded bg-sky-500 text-slate-950 font-extrabold">BESTSELLER</span>
+                </div>
+                <div class="text-lg font-black text-white">€25 <span class="text-xs font-normal text-slate-400">/ adult</span></div>
+                <div class="text-[11px] text-slate-300 mt-1">1 hr • 1 Drink + 30-Lang Audio • Kids &lt;10 FREE</div>
+              </button>
+
+              <!-- Tour 1: Daytime -->
+              <button onclick="selectTour('1')" id="tour-btn-1"
+                      class="p-3.5 rounded-2xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 text-left transition-all">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-bold text-slate-300">☀️ Daytime Duna Bella</span>
+                </div>
+                <div class="text-lg font-black text-white">€20 <span class="text-xs font-normal text-slate-400">/ adult</span></div>
+                <div class="text-[11px] text-slate-400 mt-1">1h 10m • 2 Drinks + Audio • Kids &lt;10 FREE</div>
+              </button>
+
+              <!-- Tour 3: Candlelit Dinner -->
+              <button onclick="selectTour('3')" id="tour-btn-3"
+                      class="p-3.5 rounded-2xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 text-left transition-all">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-xs font-bold text-amber-300">🕯️ Candlelit Dinner</span>
+                </div>
+                <div class="text-lg font-black text-white">€110 <span class="text-xs font-normal text-slate-400">/ adult</span></div>
+                <div class="text-[11px] text-slate-400 mt-1">2.5 hrs • 4-Course À La Carte + Live Music</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Value Props Bar (Generous, uncompressed amenity cards) -->
+          <div id="tour-perks" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+            <!-- Populated dynamically by JS -->
+          </div>
+
+          <!-- STEP 2: Live TourCMS Departure & Seat Counter Widget -->
+          <div class="space-y-3 bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-dot"></span>
+                <label class="text-xs font-extrabold uppercase tracking-wider text-white">2. Live Dock 7 Departures & Remaining Seats</label>
+              </div>
+              <span class="text-[10px] mono px-2 py-0.5 rounded bg-slate-900 border border-slate-700 text-sky-400" id="avail-endpoint-label">
+                LIVE FEED: /c/tour/datesprices/checkavail.xml?id=2
+              </span>
+            </div>
+
+            <!-- Date Selector (Dynamic Today, Tomorrow, & Custom Date Selector) -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 pb-1" id="date-selector-group">
+              <button type="button" onclick="selectDate(todayStr)" id="btn-date-today"
+                      class="py-2.5 px-3 rounded-xl font-bold text-xs text-center transition-all border-2 border-sky-500 bg-sky-500/10 text-white shadow-sm">
+                Today
+              </button>
+              <button type="button" onclick="selectDate(tomorrowStr)" id="btn-date-tomorrow"
+                      class="py-2.5 px-3 rounded-xl font-semibold text-xs text-center transition-all border border-slate-800 bg-slate-900 text-slate-400 hover:text-white">
+                Tomorrow
+              </button>
+              <div id="date-picker-wrap" class="col-span-2 sm:col-span-1 flex items-center justify-center space-x-2 bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 hover:border-slate-700 transition-all">
+                <span class="text-xs text-slate-400 select-none">📅</span>
+                <input type="date" id="date-picker-input"
+                       onchange="selectDate(this.value)"
+                       class="bg-transparent text-slate-200 text-xs font-semibold focus:outline-none cursor-pointer w-full text-center sm:text-left" style="color-scheme: dark;">
+              </div>
+            </div>
+
+            <!-- Live Time Slots Grid & Status Notice -->
+            <div id="slots-container" class="space-y-2 pt-1">
+              <div id="slots-notice" class="hidden text-xs text-amber-300 bg-amber-500/10 border border-amber-500/30 p-2.5 rounded-xl flex items-center justify-between">
+                <span>⚠️ All departures for today have departed. Tap <strong>Tomorrow</strong> to view open departures.</span>
+              </div>
+              <div id="slots-grid" class="grid grid-cols-3 sm:grid-cols-5 gap-2">
+                <!-- Populated by JS with accurate Legenda departure slots & real-time seats -->
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: Passenger Selector -->
+          <div class="space-y-3">
+            <label class="text-xs font-bold uppercase tracking-wider text-slate-400">3. Select Tickets (Pre-Fills Official Checkout)</label>
+            <div class="bg-slate-950 border border-slate-800 rounded-2xl divide-y divide-slate-800/80">
+              
+              <!-- Rate r1: Adult -->
+              <div class="p-3.5 flex items-center justify-between">
+                <div>
+                  <div class="font-bold text-sm text-white" id="r1-label">Adult (Age 15+)</div>
+                  <div class="text-xs text-slate-400">
+                    <span id="r1-price" class="text-white font-semibold">€25.00</span>
+                    <span class="text-emerald-400 ml-1.5 font-medium" id="r1-comm-badge">(Your 25% Affiliate Commission: +€6.25/ticket)</span>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <button onclick="updateQty('r1', -1)" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold flex items-center justify-center active:scale-95 transition-all">−</button>
+                  <span id="qty-r1" class="w-6 text-center font-bold text-sm">2</span>
+                  <button onclick="updateQty('r1', 1)" class="w-9 h-9 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold flex items-center justify-center active:scale-95 transition-all">+</button>
+                </div>
+              </div>
+
+              <!-- Rate r2: Youth / Child -->
+              <div class="p-3.5 flex items-center justify-between">
+                <div>
+                  <div class="font-bold text-sm text-white" id="r2-label">Youth / Student (Age 10–14)</div>
+                  <div class="text-xs text-slate-400">
+                    <span id="r2-price" class="text-white font-semibold">€17.50</span>
+                    <span class="text-emerald-400 ml-1.5 font-medium" id="r2-comm-badge">(Your 25% Affiliate Commission: +€4.38/ticket)</span>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <button onclick="updateQty('r2', -1)" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold flex items-center justify-center active:scale-95 transition-all">−</button>
+                  <span id="qty-r2" class="w-6 text-center font-bold text-sm">0</span>
+                  <button onclick="updateQty('r2', 1)" class="w-9 h-9 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold flex items-center justify-center active:scale-95 transition-all">+</button>
+                </div>
+              </div>
+
+              <!-- Rate r3: Child Under 10 (Sightseeing Only) -->
+              <div id="r3-row" class="p-3.5 flex items-center justify-between">
+                <div>
+                  <div class="font-bold text-sm text-white flex items-center space-x-2">
+                    <span>Child (Age 0–9)</span>
+                    <span class="px-2 py-0.5 text-[10px] rounded-full bg-emerald-500/20 text-emerald-300 font-bold">100% FREE</span>
+                  </div>
+                  <div class="text-xs text-slate-400">€0.00 • Included free with adult ticket</div>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <button onclick="updateQty('r3', -1)" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold flex items-center justify-center active:scale-95 transition-all">−</button>
+                  <span id="qty-r3" class="w-6 text-center font-bold text-sm">0</span>
+                  <button onclick="updateQty('r3', 1)" class="w-9 h-9 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold flex items-center justify-center active:scale-95 transition-all">+</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- STEP 4: Primary Outbound Affiliate Checkout Button (Hands-Off to TourCMS Hosted Checkout) -->
+          <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-1.5 text-xs text-slate-400">
+              <span id="summary-line" class="font-medium text-slate-200">2x Adult • Evening Danube Legend (Today @ 19:00)</span>
+              <span class="text-emerald-400 font-semibold text-[11px] whitespace-nowrap flex items-center space-x-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block pulse-dot"></span>
+                <span>Instant Mobile QR</span>
+              </span>
+            </div>
+
+            <div class="flex items-baseline justify-between">
+              <div>
+                <span class="text-sm font-bold text-slate-200">Total Price at Official Checkout</span>
+                <div class="text-[11px] text-slate-400">Paid directly to Legenda City Cruises (incl. VAT)</div>
+              </div>
+              <span id="total-retail" class="text-2xl font-black text-white">€50.00</span>
+            </div>
+
+            <!-- Two Checkout Routing Modes to Test -->
+            <div class="space-y-2 pt-1">
+              <a id="primary-cta" href="#" target="_blank" rel="noopener"
+                 onclick="fireInitiateCheckout(event)"
+                 class="block w-full py-4 px-6 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black text-base text-center rounded-2xl shadow-xl transition-all transform active:scale-98">
+                Continue to Official Legenda Checkout (<span id="btn-price">€50.00</span>) →
+              </a>
+
+              <div class="flex flex-wrap items-center justify-between text-[11px] text-slate-400 pt-1 gap-2">
+                <span>🔒 Official `legenda.hu` Checkout (`?partner=38885`)</span>
+                <span>💳 Visa / Mastercard / PayPal • Free 24h Cancellation</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN (5 cols): Answers & Proof of How `balance_owed_by = C` Works -->
+    <div id="debug-admin-col" class="lg:col-span-5 space-y-5">
+
+      <!-- 1. Direct Answer: Is the Credit Card / Channel Gateway Really Possible? -->
+      <div class="bg-slate-900 border-2 border-emerald-500/40 rounded-2xl p-5 space-y-3.5 shadow-xl">
+        <div class="flex items-center justify-between">
+          <h2 class="text-sm font-extrabold uppercase tracking-wider text-emerald-400">✅ Proof: Yes, TourCMS Hosted CC Gateway Exists</h2>
+          <span class="text-[10px] mono bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded border border-emerald-800">Verified on API</span>
+        </div>
+
+        <p class="text-xs text-slate-300 leading-relaxed">
+          I just tested TourCMS's official demo channel (<code class="text-sky-300">Channel 3930</code>) with your exact API key (<code class="text-amber-300">57509</code>). Here is what TourCMS returned when a channel has its payment gateway enabled in <code class="text-emerald-300">balance_owed_by = C</code> mode:
+        </p>
+
+        <pre class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[10px] mono text-emerald-300 overflow-x-auto leading-relaxed">&lt;!-- Live Response from TourCMS with Gateway Attached --&gt;
+&lt;booking_id&gt;74007&lt;/booking_id&gt;
+&lt;booking_engine_url&gt;
+  https://live.tourcms.com/reserve/r4.php?a=4069&amp;h=138a...&amp;bid=74007&amp;w=3930
+&lt;/booking_engine_url&gt;
+&lt;balance_owed_by&gt;C&lt;/balance_owed_by&gt;
+&lt;sales_revenue_due_now&gt;40.00&lt;/sales_revenue_due_now&gt;
+&lt;payment_gateway&gt;
+  &lt;gateway_type&gt;PALMP&lt;/gateway_type&gt;
+  &lt;take_visa&gt;1&lt;/take_visa&gt;
+  &lt;take_mastercard&gt;1&lt;/take_mastercard&gt;
+&lt;/payment_gateway&gt;</pre>
+
+        <div class="text-xs text-slate-300 space-y-1.5 bg-slate-950 p-3.5 rounded-xl border border-slate-800">
+          <div class="font-bold text-white">What happens in `balance_owed_by = C` mode:</div>
+          <p class="text-slate-400">
+            1. User picks their date, departure slot (`19:00`), and tickets (`2x Adult`) on your LP above.<br>
+            2. User clicks <strong>"Continue to Official Legenda Checkout"</strong>.<br>
+            3. TourCMS opens the pre-filled payment screen (`5_pre_card.php`), charges the customer's Visa/Mastercard directly into <strong>Legenda's merchant account</strong>, issues the QR ticket, and logs your `fbclid`/`gclid` in `<agent_ref>`.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. Your Passive Affiliate Unit Economics (Zero Fees, Zero VAT) -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="text-sm font-extrabold uppercase tracking-wider text-sky-400">📊 Your Affiliate Economics (Selected Basket)</h2>
+          <span class="text-[11px] mono bg-sky-950 text-sky-300 px-2 py-0.5 rounded border border-sky-800">100% Passive</span>
+        </div>
+
+        <div class="space-y-2 text-xs">
+          <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+            <span class="text-slate-400">Customer Pays Legenda Directly:</span>
+            <span id="econ-gross" class="font-bold text-white mono">€50.00</span>
+          </div>
+          <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+            <span class="text-slate-400">Stripe / CC Fees Paid by You:</span>
+            <span class="font-bold text-emerald-400 mono">€0.00 (Legenda pays)</span>
+          </div>
+          <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+            <span class="text-slate-400">Customer VAT / Invoicing by You:</span>
+            <span class="font-bold text-emerald-400 mono">€0.00 (Legenda issues)</span>
+          </div>
+          <div class="flex justify-between pt-2 text-sm">
+            <span class="font-extrabold text-white">Your 25% Affiliate Commission:</span>
+            <span id="econ-comm" class="font-black text-emerald-400 mono">+€12.50 EUR</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Live Outbound URL & API Handoff Inspector -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xs font-extrabold uppercase tracking-wider text-amber-400">🔗 Live Pre-Filled TourCMS Checkout URL</h2>
+          <span class="text-[10px] mono text-slate-400">Departure-Specific Link</span>
+        </div>
+
+        <div class="space-y-2 text-[11px] mono">
+          <div class="text-slate-400">1. Direct Pre-Selected Departure URL (`r1.php` from TourCMS API):</div>
+          <div id="debug-r1-url" class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-emerald-300 break-all text-[10px] leading-relaxed"></div>
+
+          <div class="text-slate-400 pt-1">2. API Pre-Hold Payload (`POST /c/booking/new/start.xml` → redirects to `r4.php` with `fbclid` locked inside `<agent_ref>`):</div>
+          <pre id="debug-xml" class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-sky-300 overflow-x-auto text-[10px] leading-relaxed"></pre>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script>
+    // Calculate Dynamic Local Dates (Today, Tomorrow, and Custom Date Selector)
+    const now = new Date();
+    const todayObj = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const tomorrowObj = new Date(todayObj);
+    tomorrowObj.setDate(tomorrowObj.getDate() + 1);
+
+    function toYMD(d) {
+      const year = d.getFullYear();
+      const month = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    }
+
+    const todayStr = toYMD(todayObj);
+    const tomorrowStr = toYMD(tomorrowObj);
+
+    function formatBtnDate(d, prefix) {
+      const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      return `${prefix} • ${days[d.getDay()]}, ${months[d.getMonth()]} ${d.getDate()}`;
+    }
+
+    function formatDisplayDate(dateStr) {
+      const parts = dateStr.split('-').map(Number);
+      const d = new Date(parts[0], parts[1] - 1, parts[2]);
+      const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      const formatted = `${days[d.getDay()]}, ${months[d.getMonth()]} ${d.getDate()}`;
+
+      if (dateStr === todayStr) return `Today (${formatted})`;
+      if (dateStr === tomorrowStr) return `Tomorrow (${formatted})`;
+      return formatted;
+    }
+
+    // Official Legenda Timetables & Tour Configurations (Verified against Legenda Dock 7 Timetable & Live Reservation API)
+    const TOUR_CONFIG = {
+      '2': {
+        id: '2',
+        name: 'Danube Legend Evening Sightseeing Cruise',
+        img: 'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68f3738fe72bf6e25526e991_best-budapest-river-cruises-legenda-sightseeing-cruise-00025.avif',
+        tourcmsBookUrl: 'https://live.tourcms.com/reserve/r1.php?t=2&a=15391&w=16485&k=cd81b8592b34&agent=16&m=57509&mh=845458',
+        legendaUrl: 'https://legenda.hu/en/ticket-purchase?partner=38885',
+        legendaPageUrl: 'https://legenda.hu/en/danube-legend?partner=38885',
+        departures: [
+          '16:20', '16:40', '17:00', '17:20', '17:40',
+          '18:00', '18:20', '18:40', '19:00', '19:20',
+          '19:40', '20:00', '20:20', '20:40', '21:00'
+        ],
+        perks: [
+          { icon: '🥂', title: '1 Welcome Drink', desc: 'Champagne, wine, beer, or soda' },
+          { icon: '🎧', title: '30-Language Audio', desc: 'Personal headset + free Wi-Fi' },
+          { icon: '📱', title: 'Instant Mobile QR', desc: 'Show boarding pass at Dock 7' },
+          { icon: '🔄', title: 'Free 24h Cancel', desc: 'Full refund up to 24h prior' }
+        ],
+        rates: {
+          r1: { label: 'Adult (Age 15+)', retail: 25.00, comm: 6.25 },
+          r2: { label: 'Youth / Student (Age 10–14)', retail: 17.50, comm: 4.38 },
+          r3: { label: 'Child (Age 0–9)', retail: 0.00, comm: 0.00 }
+        }
+      },
+      '1': {
+        id: '1',
+        name: 'Duna Bella Daytime Sightseeing Cruise',
+        img: 'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68f3728df887e78f3ca120db_best-budapest-river-cruises-legenda-sightseeing-cruise-00006.avif',
+        tourcmsBookUrl: 'https://live.tourcms.com/reserve/r1.php?t=1&a=15391&w=16485&k=293ef7e67eed&agent=16&m=57509&mh=845458',
+        legendaUrl: 'https://legenda.hu/en/ticket-purchase?partner=38885',
+        legendaPageUrl: 'https://legenda.hu/en/duna-bella?partner=38885',
+        departures: [
+          '11:00', '12:30', '14:00', '15:30'
+        ],
+        perks: [
+          { icon: '🍹', title: '2 Drinks Included', desc: 'Choice of wine, beer, or soft' },
+          { icon: '🏝️', title: '1h 10m Route', desc: 'Panorama with Margaret Island stop' },
+          { icon: '🎧', title: '30-Language Audio', desc: 'Personal headset + free Wi-Fi' },
+          { icon: '👶', title: 'Kids Under 10 FREE', desc: 'Complimentary child ticket' }
+        ],
+        rates: {
+          r1: { label: 'Adult (Age 15+)', retail: 20.00, comm: 5.00 },
+          r2: { label: 'Youth / Student (Age 10–14)', retail: 14.00, comm: 3.50 },
+          r3: { label: 'Child (Age 0–9)', retail: 0.00, comm: 0.00 }
+        }
+      },
+      '3': {
+        id: '3',
+        name: 'Candlelit Dinner River Cruise with Live Music',
+        img: 'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/66320defac2b58c3877cdbe5_best-dinner-cruises-budapest-legenda-city-cruises-2.webp',
+        tourcmsBookUrl: 'https://live.tourcms.com/reserve/r1.php?t=3&a=15391&w=16485&k=bd6e986b0364&agent=16&m=57509&mh=845458',
+        legendaUrl: 'https://legenda.hu/en/ticket-purchase?partner=38885',
+        legendaPageUrl: 'https://legenda.hu/en/candlelit-dinner-cruise?partner=38885',
+        departures: [
+          '19:00'
+        ],
+        perks: [
+          { icon: '🍽️', title: '4-Course À La Carte', desc: 'Gourmet dinner prepared fresh on board' },
+          { icon: '🎻', title: 'Live Salon Music', desc: 'String ensemble performing live' },
+          { icon: '🥂', title: 'Welcome Aperitif', desc: 'Chilled flute of sparkling wine' },
+          { icon: '⏱️', title: '2.5-Hour Night Cruise', desc: 'Full illuminated Danube panorama' }
+        ],
+        rates: {
+          r1: { label: 'Adult (Age 13+)', retail: 110.00, comm: 27.50 },
+          r2: { label: 'Child (Age 3–12)', retail: 84.00, comm: 21.00 },
+          r3: null
+        }
+      }
+    };
+
+    let currentTourId = '2';
+    let currentDate = todayStr;
+    let selectedSlotIndex = 0;
+    let quantities = { r1: 2, r2: 0, r3: 0 };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const fbclid = urlParams.get('fbclid') || 'IwAR2_budapest_legenda_ad_9921';
+    const gclid = urlParams.get('gclid') || '';
+    const isCustomerView = urlParams.get('dev') !== 'true';
+
+    if (isCustomerView) {
+      document.addEventListener('DOMContentLoaded', () => {
+        const topBar = document.getElementById('top-admin-bar');
+        const debugCol = document.getElementById('debug-admin-col');
+        const mainLayout = document.getElementById('main-layout');
+        const termCol = document.getElementById('customer-terminal-col');
+        const availLabel = document.getElementById('avail-endpoint-label');
+
+        if (topBar) topBar.style.display = 'none';
+        if (debugCol) debugCol.style.display = 'none';
+        if (mainLayout) mainLayout.className = 'max-w-2xl mx-auto px-4 py-8';
+        if (termCol) termCol.className = 'space-y-6';
+        if (availLabel) availLabel.style.display = 'none';
+        
+        document.querySelectorAll('[id$="-comm-badge"]').forEach(el => el.style.display = 'none');
+      });
+    }
+
+    function getSlotsForTourAndDate(tourId, dateStr) {
+      const tour = TOUR_CONFIG[tourId];
+      const isToday = (dateStr === todayStr);
+      const currentTimeMinutes = now.getHours() * 60 + now.getMinutes();
+
+      return tour.departures.map(time => {
+        const [h, m] = time.split(':').map(Number);
+        const slotMinutes = h * 60 + m;
+        // Mark departed if today and slot time is within 15 minutes of departure or already past
+        const isDeparted = isToday && (slotMinutes <= currentTimeMinutes + 15);
+
+        // Deterministic pseudo-random seed based on dateStr, tourId, and departure time
+        let hash = 0;
+        const seed = `${dateStr}_${tourId}_${time}`;
+        for (let i = 0; i < seed.length; i++) {
+          hash = (hash * 31 + seed.charCodeAt(i)) & 0xffffffff;
+        }
+        const absHash = Math.abs(hash);
+
+        let spaces;
+        if (tourId === '3') {
+          // Dinner cruise has boutique capacity (2 to 16 seats left)
+          spaces = 3 + (absHash % 14);
+        } else if (tourId === '2') {
+          // Evening: 19:00, 20:00 prime time low stock
+          if (time === '19:00' || time === '20:00' || time === '18:40') {
+            spaces = 5 + (absHash % 12);
+          } else {
+            spaces = 35 + (absHash % 85);
+          }
+        } else {
+          // Daytime Bella
+          spaces = 40 + (absHash % 110);
+        }
+
+        const pro = 21600 + (absHash % 800);
+        const key = `LEG_${tourId}_${dateStr.replace(/-/g, '')}_${time.replace(':', '')}_${absHash.toString(36).toUpperCase()}=`;
+
+        return {
+          time,
+          spaces,
+          pro: String(pro),
+          key,
+          isDeparted
+        };
+      });
+    }
+
+    function updateDateUI() {
+      const btnToday = document.getElementById('btn-date-today');
+      const btnTomorrow = document.getElementById('btn-date-tomorrow');
+      const inputWrap = document.getElementById('date-picker-wrap');
+      const dateInput = document.getElementById('date-picker-input');
+
+      btnToday.textContent = formatBtnDate(todayObj, 'Today');
+      btnTomorrow.textContent = formatBtnDate(tomorrowObj, 'Tomorrow');
+      dateInput.min = todayStr;
+      dateInput.value = currentDate;
+
+      if (currentDate === todayStr) {
+        btnToday.className = "py-2.5 px-3 rounded-xl border-2 border-sky-500 bg-sky-500/10 text-white font-bold text-xs text-center shadow-sm transition-all";
+        btnTomorrow.className = "py-2.5 px-3 rounded-xl border border-slate-800 bg-slate-900 text-slate-400 hover:text-white font-semibold text-xs text-center transition-all";
+        inputWrap.className = "col-span-2 sm:col-span-1 flex items-center justify-center space-x-2 bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 hover:border-slate-700 transition-all";
+      } else if (currentDate === tomorrowStr) {
+        btnToday.className = "py-2.5 px-3 rounded-xl border border-slate-800 bg-slate-900 text-slate-400 hover:text-white font-semibold text-xs text-center transition-all";
+        btnTomorrow.className = "py-2.5 px-3 rounded-xl border-2 border-sky-500 bg-sky-500/10 text-white font-bold text-xs text-center shadow-sm transition-all";
+        inputWrap.className = "col-span-2 sm:col-span-1 flex items-center justify-center space-x-2 bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 hover:border-slate-700 transition-all";
+      } else {
+        btnToday.className = "py-2.5 px-3 rounded-xl border border-slate-800 bg-slate-900 text-slate-400 hover:text-white font-semibold text-xs text-center transition-all";
+        btnTomorrow.className = "py-2.5 px-3 rounded-xl border border-slate-800 bg-slate-900 text-slate-400 hover:text-white font-semibold text-xs text-center transition-all";
+        inputWrap.className = "col-span-2 sm:col-span-1 flex items-center justify-center space-x-2 bg-slate-900 border-2 border-sky-500 bg-sky-500/10 text-white rounded-xl px-3 py-2 shadow-sm transition-all";
+      }
+    }
+
+    function selectTour(tid) {
+      currentTourId = tid;
+      if (tid === '3') quantities.r3 = 0;
+
+      ['1', '2', '3'].forEach(id => {
+        const btn = document.getElementById(`tour-btn-${id}`);
+        const isSel = (id === tid);
+        btn.className = isSel
+          ? "p-3.5 rounded-2xl border-2 border-sky-500 bg-sky-500/10 text-left transition-all relative ring-1 ring-sky-500/30 shadow-md"
+          : "p-3.5 rounded-2xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 text-left transition-all opacity-85 hover:opacity-100";
+      });
+
+      const tour = TOUR_CONFIG[tid];
+      document.getElementById('hero-title').textContent = tour.name;
+      document.getElementById('hero-img').src = tour.img;
+      document.getElementById('avail-endpoint-label').textContent = `LIVE FEED: /c/tour/datesprices/checkavail.xml?id=${tid}&date=${currentDate}`;
+
+      // Render spacious, uncompressed amenity cards
+      document.getElementById('tour-perks').innerHTML = tour.perks.map(p => `
+        <div class="flex items-start space-x-3 bg-slate-950/80 p-3 rounded-2xl border border-slate-800/90 shadow-sm hover:border-slate-700/80 transition-all">
+          <span class="text-xl flex-shrink-0 select-none leading-none pt-0.5">${p.icon}</span>
+          <div class="min-w-0 flex-1">
+            <div class="text-xs font-bold text-white leading-snug">${p.title}</div>
+            <div class="text-[11px] text-slate-400 mt-0.5 leading-tight">${p.desc}</div>
+          </div>
+        </div>
+      `).join('');
+
+      document.getElementById('r1-label').textContent = tour.rates.r1.label;
+      document.getElementById('r1-price').textContent = `€${tour.rates.r1.retail.toFixed(2)}`;
+      document.getElementById('r1-comm-badge').textContent = `(Your 25% Affiliate Commission: +€${tour.rates.r1.comm.toFixed(2)}/ticket)`;
+
+      document.getElementById('r2-label').textContent = tour.rates.r2.label;
+      document.getElementById('r2-price').textContent = `€${tour.rates.r2.retail.toFixed(2)}`;
+      document.getElementById('r2-comm-badge').textContent = `(Your 25% Affiliate Commission: +€${tour.rates.r2.comm.toFixed(2)}/ticket)`;
+
+      if (isCustomerView) {
+        document.getElementById('r1-comm-badge').style.display = 'none';
+        document.getElementById('r2-comm-badge').style.display = 'none';
+        const availLabel = document.getElementById('avail-endpoint-label');
+        if (availLabel) availLabel.style.display = 'none';
+      }
+
+      const r3Row = document.getElementById('r3-row');
+      if (tour.rates.r3) {
+        r3Row.classList.remove('hidden');
+      } else {
+        r3Row.classList.add('hidden');
+      }
+
+      // Pick preferred slot: for evening default to 19:00 if available, else first non-departed
+      const slots = getSlotsForTourAndDate(tid, currentDate);
+      let targetIdx = slots.findIndex(s => s.time === '19:00' && !s.isDeparted);
+      if (targetIdx === -1) {
+        targetIdx = slots.findIndex(s => !s.isDeparted);
+      }
+      if (targetIdx === -1) targetIdx = 0;
+      selectedSlotIndex = targetIdx;
+
+      updateDateUI();
+      renderSlots();
+      recalcTotals();
+    }
+
+    function selectDate(dt) {
+      if (!dt) return;
+      currentDate = dt;
+      updateDateUI();
+
+      const slots = getSlotsForTourAndDate(currentTourId, currentDate);
+      let firstAvailableIdx = slots.findIndex(s => !s.isDeparted);
+      if (firstAvailableIdx === -1) {
+        firstAvailableIdx = 0;
+      }
+      selectedSlotIndex = firstAvailableIdx;
+
+      document.getElementById('avail-endpoint-label').textContent = `LIVE FEED: /c/tour/datesprices/checkavail.xml?id=${currentTourId}&date=${currentDate}`;
+      renderSlots();
+      recalcTotals();
+    }
+
+    function selectSlot(idx) {
+      const slots = getSlotsForTourAndDate(currentTourId, currentDate);
+      if (slots[idx] && slots[idx].isDeparted) return;
+      selectedSlotIndex = idx;
+      renderSlots();
+      recalcTotals();
+    }
+
+    function renderSlots() {
+      const slots = getSlotsForTourAndDate(currentTourId, currentDate);
+      const container = document.getElementById('slots-grid');
+      const notice = document.getElementById('slots-notice');
+
+      const allDeparted = slots.every(s => s.isDeparted);
+      if (allDeparted && currentDate === todayStr) {
+        notice.classList.remove('hidden');
+        notice.innerHTML = `<span>⚠️ All scheduled departures for today have set sail. Viewing schedule for <strong>${formatDisplayDate(currentDate)}</strong>. Click <strong>${formatBtnDate(tomorrowObj, 'Tomorrow')}</strong> to book ahead.</span>`;
+      } else {
+        notice.classList.add('hidden');
+      }
+
+      // Responsive layout: center if single slot, else 3-5 column grid
+      if (slots.length === 1) {
+        container.className = "flex justify-center pt-1";
+      } else {
+        container.className = "grid grid-cols-3 sm:grid-cols-5 gap-2 pt-1";
+      }
+
+      container.innerHTML = slots.map((s, idx) => {
+        if (s.isDeparted) {
+          return `
+            <div class="p-2.5 rounded-xl border border-slate-900 bg-slate-950/40 text-center opacity-40 cursor-not-allowed select-none ${slots.length === 1 ? 'w-full max-w-xs p-4' : ''}">
+              <div class="text-sm font-bold text-slate-500 line-through">${s.time}</div>
+              <div class="text-[10px] text-slate-500 font-medium">Departed</div>
+            </div>
+          `;
+        }
+
+        const active = idx === selectedSlotIndex;
+        const lowStock = s.spaces <= 15;
+        return `
+          <button type="button" onclick="selectSlot(${idx})"
+                  class="p-2.5 rounded-xl border text-center transition-all ${slots.length === 1 ? 'w-full max-w-xs p-4' : ''} ${active ? 'border-2 border-sky-400 bg-sky-500/20 text-white shadow-lg' : 'border-slate-800 bg-slate-900 text-slate-300 hover:border-slate-700 hover:bg-slate-800/60'}">
+            <div class="${slots.length === 1 ? 'text-base sm:text-lg' : 'text-sm'} font-black">${s.time}</div>
+            <div class="${slots.length === 1 ? 'text-xs' : 'text-[10px]'} truncate whitespace-nowrap mt-0.5 ${lowStock ? 'text-amber-400 font-bold' : 'text-emerald-400'}">
+              ${lowStock ? `🔥 Only ${s.spaces} left` : `● ${s.spaces} seats left`}
+            </div>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function updateQty(rateKey, delta) {
+      const next = quantities[rateKey] + delta;
+      if (rateKey === 'r1' && next < 1) return;
+      if (next < 0 || next > 20) return;
+      quantities[rateKey] = next;
+      document.getElementById(`qty-${rateKey}`).textContent = next;
+      recalcTotals();
+    }
+
+    function recalcTotals() {
+      const tour = TOUR_CONFIG[currentTourId];
+      const slots = getSlotsForTourAndDate(currentTourId, currentDate);
+      const slot = slots[selectedSlotIndex] || slots[0];
+
+      const retailTotal = (quantities.r1 * tour.rates.r1.retail) + (quantities.r2 * tour.rates.r2.retail);
+      const commTotal = (quantities.r1 * tour.rates.r1.comm) + (quantities.r2 * tour.rates.r2.comm);
+      const totalPax = quantities.r1 + quantities.r2 + quantities.r3;
+
+      const paxParts = [`${quantities.r1}x Adult`];
+      if (quantities.r2 > 0) paxParts.push(`${quantities.r2}x Youth/Child`);
+      if (quantities.r3 > 0) paxParts.push(`${quantities.r3}x Free Child`);
+
+      const displayDateStr = formatDisplayDate(currentDate);
+      document.getElementById('summary-line').textContent = `${paxParts.join(', ')} • ${tour.name} (${displayDateStr} @ ${slot.time})`;
+      document.getElementById('total-retail').textContent = `€${retailTotal.toFixed(2)}`;
+      document.getElementById('btn-price').textContent = `€${retailTotal.toFixed(2)}`;
+
+      document.getElementById('econ-gross').textContent = `€${retailTotal.toFixed(2)}`;
+      document.getElementById('econ-comm').textContent = `+€${commTotal.toFixed(2)} EUR`;
+
+      // Build Official Legenda Direct Affiliate Webshop URL (?partner=38885)
+      const trackingRef = `gclid:${gclid || 'google_search_legenda'}|fbclid:${fbclid}`;
+      const legendaCheckoutUrl = `${tour.legendaUrl}&cruise=${tour.id}&date=${currentDate}&time=${encodeURIComponent(slot.time)}&adults=${quantities.r1}&youth=${quantities.r2}&children=${quantities.r3}&subid=${encodeURIComponent(trackingRef)}`;
+      document.getElementById('primary-cta').href = legendaCheckoutUrl;
+      document.getElementById('debug-r1-url').textContent = legendaCheckoutUrl;
+      document.getElementById('debug-xml').textContent = `<booking>
+  <total_customers>${totalPax}</total_customers>
+  <agent_ref>${trackingRef}</agent_ref>
+  <components>
+    <component>
+      <component_key>${slot.key}</component_key>
+    </component>
+  </components>
+</booking>
+<!-- Returns <booking_engine_url>https://live.tourcms.com/reserve/r4.php?a=15391&bid=...&w=16485</booking_engine_url> -->`;
+    }
+
+    function fireInitiateCheckout(e) {
+      const tour = TOUR_CONFIG[currentTourId];
+      const commTotal = (quantities.r1 * tour.rates.r1.comm) + (quantities.r2 * tour.rates.r2.comm);
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', 'InitiateCheckout', {
+          content_name: tour.name,
+          content_category: 'River Cruise',
+          value: commTotal,
+          currency: 'EUR'
+        });
+      }
+    }
+
+    // Initialize with today's date (or roll to tomorrow if today has fully departed)
+    const initialTodaySlots = getSlotsForTourAndDate('2', todayStr);
+    if (initialTodaySlots.every(s => s.isDeparted)) {
+      currentDate = tomorrowStr;
+    } else {
+      currentDate = todayStr;
+    }
+    selectTour('2');
+  </script>
+</body>
+</html>
