@@ -10,6 +10,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+  <!-- Preload Tour Hero Images for Instant Zero-Latency Photo Switching -->
+  <link rel="preload" as="image" href="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68f3738fe72bf6e25526e991_best-budapest-river-cruises-legenda-sightseeing-cruise-00025.avif">
+  <link rel="preload" as="image" href="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68f3738fb13a0d71ea3326d2_best-budapest-river-cruises-legenda-sightseeing-cruise-00001.avif">
+  <link rel="preload" as="image" href="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/663224a0b9517f8a892517a9_best-dinner-cruises-budapest-legenda-city-cruises-11.webp">
+
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -362,7 +367,7 @@
       '1': {
         id: '1',
         name: 'Duna Bella Daytime Sightseeing Cruise',
-        heroImg: 'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68f3728df887e78f3ca120db_best-budapest-river-cruises-legenda-sightseeing-cruise-00006.avif',
+        heroImg: 'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68f3738fb13a0d71ea3326d2_best-budapest-river-cruises-legenda-sightseeing-cruise-00001.avif',
         duration: '1 Hour 10 Min',
         rates: {
           r1: { label: 'Adult (Age 15+)', price: 20.00 },
@@ -381,7 +386,7 @@
       '3': {
         id: '3',
         name: 'Candlelit Dinner Cruise With Live Music',
-        heroImg: 'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e632c49194b09a876c4f65_best-budapest-dinner-cruises-hero.avif',
+        heroImg: 'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/663224a0b9517f8a892517a9_best-dinner-cruises-budapest-legenda-city-cruises-11.webp',
         duration: '2.5 Hours',
         rates: {
           r1: { label: 'Adult (4-Course Gourmet Dinner)', price: 110.00 },
@@ -439,8 +444,20 @@
     }
 
     function selectTour(tourId) {
+      if (currentTourId === tourId) return;
       currentTourId = tourId;
       selectedSlotIndex = 0;
+
+      const heroImg = document.getElementById('hero-img');
+      const tour = TOUR_CONFIG[tourId];
+      if (heroImg && tour) {
+        heroImg.style.opacity = '0.2';
+        setTimeout(() => {
+          heroImg.src = tour.heroImg;
+          heroImg.style.opacity = '1';
+        }, 120);
+      }
+
       ['1', '2', '3'].forEach(id => {
         const btn = document.getElementById(`tour-btn-${id}`);
         if (id === tourId) {
@@ -449,7 +466,7 @@
           btn.className = 'p-3.5 rounded-2xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 text-left transition-all';
         }
       });
-      renderAll();
+      renderAll(false);
     }
 
     function selectDate(dateStr) {
@@ -491,9 +508,12 @@
       updateCheckoutData();
     }
 
-    function renderAll() {
+    function renderAll(updateImg = true) {
       const tour = TOUR_CONFIG[currentTourId];
-      document.getElementById('hero-img').src = tour.heroImg;
+      if (updateImg) {
+        const heroImg = document.getElementById('hero-img');
+        if (heroImg) heroImg.src = tour.heroImg;
+      }
       document.getElementById('hero-title').textContent = tour.name;
 
       // Perks Grid
