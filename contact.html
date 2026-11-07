@@ -12,9 +12,9 @@
   <link rel="canonical" href="https://www.budapestadventures.com/contact"/>
 
   <!-- Local Favicon Assets -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" href="/assets/budapest-adventures-logo.png"/>
+  <link rel="shortcut icon" type="image/png" href="/assets/budapest-adventures-logo.png"/>
+  <link rel="apple-touch-icon" href="/assets/budapest-adventures-logo.png"/>
 
   <link rel="stylesheet" href="/css/editorial-luxury.css"/>
 
@@ -717,11 +717,17 @@
   </main>
 
   <!-- 3. CANONICAL DARK LUXURY FOOTER -->
-  <footer class="footer-dark ltt-footer">
+    <!-- 6. CANONICAL DARK LUXURY FOOTER -->
+  <footer class="footer-dark ltt-footer" role="contentinfo">
     <div class="footer-wrapper">
       <div class="footer-content">
         <div>
-          <div class="footer-brand-title">BUDAPEST ADVENTURES</div>
+          <div class="footer-brand-title">
+            <a href="/" style="color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+              <img src="/assets/budapest-adventures-logo.png" alt="Budapest Adventures Logo" width="28" height="28" style="border-radius: 50%; display: inline-block; flex-shrink: 0;"/>
+              <span>BUDAPEST ADVENTURES</span>
+            </a>
+          </div>
           <p class="footer-brand-desc">
             Independent, undercover field testing of the Danube's premier sightseeing and dinner cruises. Based locally in Budapest, we pay our own fares, test audio guides, and inspect every pier dock so you avoid tourist traps.
           </p>
@@ -732,10 +738,13 @@
           <div class="footer-links-list">
             <a href="/best-budapest-river-cruises" class="footer-link-item">10 Best Danube River Cruises</a>
             <a href="/best-dinner-cruises-budapest" class="footer-link-item">7 Best Dinner Cruises in Budapest</a>
-            <a href="/best-night-cruises-budapest" class="footer-link-item">Best Night Cruises in Budapest</a>
-            <a href="/best-private-boat-tours-budapest" class="footer-link-item">Best Private Boat Tours</a>
-            <a href="/unlimited-prosecco-cruises-budapest" class="footer-link-item">Unlimited Prosecco Cruises</a>
+            <a href="/budapest-card-is-it-worth-it" class="footer-link-item">Budapest Card Value Calculator (2026)</a>
             <a href="/thermal-baths-budapest" class="footer-link-item">8 Best Budapest Thermal Baths</a>
+            <a href="/best-night-cruises-budapest" class="footer-link-item">Best Night Cruises in Budapest</a>
+            <a href="/unlimited-prosecco-cruises-budapest" class="footer-link-item">Unlimited Prosecco Cruises</a>
+            <a href="/best-private-boat-tours-budapest" class="footer-link-item">Best Private Boat Tours</a>
+            <a href="/best-walking-tours-budapest" class="footer-link-item">Best Walking Tours in Budapest</a>
+            <a href="/best-hostels-budapest" class="footer-link-item">Best Hostels in Budapest</a>
           </div>
         </div>
 
@@ -745,7 +754,7 @@
             <a href="/about" class="footer-link-item">About Adam Dimitrov</a>
             <a href="/about#ethics" class="footer-link-item">Our 5-Point Testing Ethics Charter</a>
             <a href="/about#manifesto" class="footer-link-item">The Anti-Influencer Manifesto</a>
-            <a href="/contact" class="footer-link-item" style="color: var(--gold-primary); font-weight: 700;">Contact Editorial Desk</a>
+            <a href="/contact" class="footer-link-item">Contact Editorial Desk</a>
           </div>
         </div>
       </div>
@@ -761,10 +770,9 @@
     </div>
   </footer>
 
-  <!-- INTERACTIVE LOGIC: NAVBAR, CAPTCHA & ASYNC SUBMIT -->
-  <script>
+    <script>
     (function() {
-      // 1. Mobile Drawer & Dropdown Logic
+      'use strict';
       var toggle = document.getElementById('lttNavToggle');
       var drawer = document.getElementById('lttMobileDrawer');
       var dropdown = document.getElementById('lttExploreDropdown');
@@ -774,105 +782,81 @@
         toggle.addEventListener('click', function(e) {
           e.stopPropagation();
           var isOpen = drawer.classList.contains('is-open');
-          drawer.classList.toggle('is-open', !isOpen);
-          toggle.classList.toggle('is-active', !isOpen);
-          toggle.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
-          drawer.setAttribute('aria-hidden', !isOpen ? 'false' : 'true');
+          if (isOpen) {
+            drawer.classList.remove('is-open');
+            toggle.classList.remove('is-active');
+            toggle.setAttribute('aria-expanded', 'false');
+            drawer.setAttribute('aria-hidden', 'true');
+          } else {
+            drawer.classList.add('is-open');
+            toggle.classList.add('is-active');
+            toggle.setAttribute('aria-expanded', 'true');
+            drawer.setAttribute('aria-hidden', 'false');
+          }
+        });
+
+        drawer.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            drawer.classList.remove('is-open');
+            toggle.classList.remove('is-active');
+            toggle.setAttribute('aria-expanded', 'false');
+            drawer.setAttribute('aria-hidden', 'true');
+          });
         });
       }
 
-      if (dropBtn && dropdown) {
-        dropBtn.addEventListener('click', function(e) {
-          e.stopPropagation();
-          dropdown.classList.toggle('is-open');
+      if (dropdown && !dropdown._bound) {
+        dropdown._bound = true;
+        var closeTimeout = null;
+
+        function openMenu() {
+          if (closeTimeout) {
+            clearTimeout(closeTimeout);
+            closeTimeout = null;
+          }
+          dropdown.classList.add('is-open');
+          if (dropBtn) dropBtn.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeMenuWithGrace(delay) {
+          if (closeTimeout) clearTimeout(closeTimeout);
+          closeTimeout = setTimeout(function() {
+            dropdown.classList.remove('is-open');
+            if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
+          }, delay !== undefined ? delay : 350);
+        }
+
+        dropdown.addEventListener('mouseenter', openMenu);
+        dropdown.addEventListener('mouseleave', function() {
+          closeMenuWithGrace(350);
         });
+
+        if (dropBtn) {
+          dropBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (dropdown.classList.contains('is-open')) {
+              closeMenuWithGrace(0);
+            } else {
+              openMenu();
+            }
+          });
+        }
       }
 
       document.addEventListener('click', function(e) {
         if (drawer && drawer.classList.contains('is-open') && !drawer.contains(e.target) && (!toggle || !toggle.contains(e.target))) {
           drawer.classList.remove('is-open');
-          if (toggle) toggle.classList.remove('is-active');
+          if (toggle) {
+            toggle.classList.remove('is-active');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+          drawer.setAttribute('aria-hidden', 'true');
         }
         if (dropdown && dropdown.classList.contains('is-open') && !dropdown.contains(e.target)) {
           dropdown.classList.remove('is-open');
+          if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
         }
       });
-
-      // 2. Dynamic Math Spam Captcha Generation
-      var num1 = Math.floor(Math.random() * 8) + 2; // 2 to 9
-      var num2 = Math.floor(Math.random() * 8) + 1; // 1 to 8
-      var expectedAnswer = num1 + num2;
-      var eqEl = document.getElementById('captchaEquation');
-      var ansEl = document.getElementById('captchaAnswer');
-      var errEl = document.getElementById('captchaError');
-      var formEl = document.getElementById('contact-form');
-      var submitBtn = document.getElementById('submitBtn');
-      var successEl = document.getElementById('formSuccess');
-      var failEl = document.getElementById('formError');
-
-      if (eqEl) {
-        eqEl.textContent = num1 + ' + ' + num2 + ' = ?';
-      }
-
-      if (ansEl && errEl) {
-        ansEl.addEventListener('input', function() {
-          if (errEl.style.display === 'block') {
-            errEl.style.display = 'none';
-          }
-        });
-      }
-
-      // 3. Form Submission Handling with Captcha Verification & FormSubmit AJAX
-      if (formEl) {
-        formEl.addEventListener('submit', function(e) {
-          e.preventDefault();
-
-          // Check Honeypot
-          var gotcha = formEl.querySelector('input[name="_gotcha"]');
-          if (gotcha && gotcha.value.trim() !== '') {
-            // Bot caught silently
-            formEl.style.display = 'none';
-            successEl.style.display = 'block';
-            return;
-          }
-
-          // Verify Math Captcha
-          var userAnswer = parseInt(ansEl.value, 10);
-          if (isNaN(userAnswer) || userAnswer !== expectedAnswer) {
-            errEl.style.display = 'block';
-            ansEl.focus();
-            return;
-          }
-
-          // Disable button during transit
-          submitBtn.disabled = true;
-          submitBtn.textContent = 'TRANSMITTING...';
-
-          var formData = new FormData(formEl);
-
-          // Transmit via FormSubmit AJAX endpoint
-          fetch('https://formsubmit.co/ajax/adam.dimitrov.business@gmail.com', {
-            method: 'POST',
-            body: formData,
-            headers: {
-              'Accept': 'application/json'
-            }
-          })
-          .then(function(response) {
-            if (response.ok) {
-              formEl.style.display = 'none';
-              successEl.style.display = 'block';
-              if (failEl) failEl.style.display = 'none';
-            } else {
-              throw new Error('Server returned non-200');
-            }
-          })
-          .catch(function(err) {
-            console.warn('AJAX submit fallback to standard POST:', err);
-            formEl.submit();
-          });
-        });
-      }
     })();
   </script>
 </body>
