@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Legenda Danube Cruises — Official Live Availability & Affiliate Booking Terminal</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Legenda Danube Cruises — Official Live Availability &amp; Affiliate Booking Terminal</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
     body { font-family: 'Inter', sans-serif; }
     .mono { font-family: 'JetBrains Mono', monospace; }
@@ -15,262 +16,982 @@
       50% { opacity: 0.4; transform: scale(0.92); }
     }
   </style>
-</head>
-<body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+<style id="ltt-nav-styles">/* ==========================================================================
+   LUXURY TRAVEL TESTER — MODERN VANILLA NAVIGATION SYSTEM
+   Zero-dependency, semantic, responsive, WCAG-compliant (Desktop & Mobile)
+   ========================================================================== */
+.ltt-navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 68px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 9999;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.ltt-nav-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-sizing: border-box;
+}
+.ltt-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #0f172a;
+  flex-shrink: 0;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: opacity 0.15s ease;
+}
+.ltt-brand:hover {
+  opacity: 0.85;
+}
+.ltt-brand-emblem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  color: #b45309;
+}
+.ltt-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ltt-nav-link {
+  color: #334155;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.ltt-nav-link:hover,
+.ltt-nav-link:focus-visible {
+  color: #0f172a;
+  background: #f1f5f9;
+  outline: none;
+}
+.ltt-nav-dropdown {
+  position: relative;
+}
+.ltt-chevron {
+  transition: transform 0.2s ease;
+  stroke: currentColor;
+}
+.ltt-nav-dropdown.is-open .ltt-chevron,
+.ltt-nav-dropdown:hover .ltt-chevron {
+  transform: rotate(180deg);
+}
+.ltt-mega-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px -8px rgba(15, 23, 42, 0.14), 0 0 0 1px rgba(15, 23, 42, 0.04);
+  padding: 22px 24px;
+  display: flex;
+  gap: 32px;
+  min-width: 580px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  pointer-events: none;
+  z-index: 10000;
+}
+.ltt-nav-dropdown:hover .ltt-mega-menu,
+.ltt-nav-dropdown.is-open .ltt-mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.ltt-mega-col {
+  flex: 1;
+  min-width: 220px;
+}
+.ltt-mega-head {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.ltt-mega-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #0f172a;
+  transition: background 0.15s ease;
+  margin-bottom: 4px;
+}
+.ltt-mega-item:hover {
+  background: #f8fafc;
+}
+.ltt-mega-icon {
+  font-size: 18px;
+  line-height: 1;
+  padding-top: 2px;
+}
+.ltt-mega-item strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.ltt-mega-item p {
+  margin: 2px 0 0 0;
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.3;
+}
+.ltt-mega-subitem {
+  display: block;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+.ltt-mega-subitem:hover {
+  color: #0f172a;
+  background: #f1f5f9;
+  padding-left: 14px;
+}
+.ltt-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ltt-cta-pill {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+}
+.ltt-cta-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4);
+}
 
-  <!-- Top Affiliate Architecture Status Bar -->
-  <div id="top-admin-bar" class="bg-slate-900/95 border-b border-slate-800 sticky top-0 z-40 backdrop-blur-md">
-    <div class="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-2 text-xs">
-      <div class="flex items-center space-x-3">
-        <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-semibold">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 mr-1.5 pulse-dot"></span>
+/* Mobile Toggle Hamburger Button */
+.ltt-hamburger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 9px 8px;
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.15s ease;
+  box-sizing: border-box;
+}
+.ltt-hamburger:hover {
+  background: #f8fafc;
+}
+.ltt-hamburger-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #0f172a;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* Mobile Drawer */
+.ltt-mobile-drawer {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .ltt-nav-links {
+    display: none !important;
+  }
+  .ltt-hamburger {
+    display: flex !important;
+  }
+  .ltt-cta-pill {
+    display: none !important;
+  }
+  .ltt-mobile-drawer {
+    display: block;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 2px solid #e2e8f0;
+    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.16);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    box-sizing: border-box;
+    z-index: 9999;
+  }
+  .ltt-mobile-drawer.is-open {
+    max-height: calc(100vh - 68px);
+    opacity: 1;
+    overflow-y: auto;
+  }
+  .ltt-drawer-content {
+    padding: 20px 20px 28px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .ltt-mobile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .ltt-mobile-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .ltt-mobile-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f172a;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .ltt-mobile-link:hover,
+  .ltt-mobile-link:active {
+    background: #f1f5f9;
+  }
+  .ltt-mobile-link.ltt-highlight {
+    background: #fffbeb;
+    border-color: #fde68a;
+    color: #92400e;
+  }
+  .ltt-mobile-tag {
+    font-size: 10px;
+    font-weight: 800;
+    background: #d97706;
+    color: #ffffff;
+    padding: 2px 7px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+  }
+  .ltt-mobile-subgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .ltt-mobile-sublink {
+    display: block;
+    padding: 10px 12px;
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #334155;
+    text-decoration: none;
+  }
+  .ltt-mobile-sublink:hover {
+    background: #f8fafc;
+    color: #0f172a;
+  }
+  .ltt-mobile-footer-links {
+    flex-direction: row !important;
+    gap: 10px;
+  }
+  .ltt-mobile-footer-links .ltt-mobile-link {
+    flex: 1;
+    justify-content: center;
+  }
+  .ltt-mobile-cta {
+    display: block;
+    text-align: center;
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
+  }
+}
+</style><style id="bpa-light-comp-and-hero-css">
+/* ==========================================================================
+   1. CLEAN LTT AUTHOR & CREDIBILITY AREA UNDER H1 TITLE
+   ========================================================================== */
+.article-hero-container {
+  width: 100% !important;
+  max-width: 820px !important;
+  margin: 24px auto 16px auto !important;
+  padding: 0 20px !important;
+  text-align: center !important;
+  font-style: normal !important;
+}
+.component-breadcrumb-rich-text {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 0 10px 0 !important;
+}
+.component-breadcrumb-rich-text p {
+  font-size: 14px !important;
+  color: #475569 !important;
+  margin: 0 !important;
+}
+.component-breadcrumb-rich-text a {
+  color: #334155 !important;
+  text-decoration: underline !important;
+  font-weight: 500 !important;
+}
+.paragraph-26 {
+  color: rgba(26, 28, 34, 0.8) !important;
+  text-align: center !important;
+  font-size: 16px !important;
+  margin: 0 0 14px 0 !important;
+}
+.div-block-45,
+.div-block-37,
+.bpa-author-strip {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 14px !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 4px 0 !important;
+  margin: 0 auto 16px auto !important;
+  text-align: center !important;
+}
+.component-author-image {
+  width: 68px !important;
+  height: 68px !important;
+  max-width: 68px !important;
+  max-height: 68px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: none !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+}
+.div-block-45 p,
+.div-block-37 p,
+.bpa-author-strip p {
+  margin: 0 !important;
+  font-size: 15.5px !important;
+  line-height: 1.5 !important;
+  color: #334155 !important;
+  text-align: left !important;
+}
+.div-block-45 a,
+.div-block-37 a,
+.bpa-author-strip a {
+  color: #0284c7 !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+}
+.divider-2,
+.divider {
+  background-color: #e5e5e5 !important;
+  width: 100% !important;
+  max-width: 820px !important;
+  height: 1px !important;
+  margin: 18px auto 24px auto !important;
+}
+
+/* ==========================================================================
+   2. LIGHT-THEMED TOP COMPARISON HEADER CARD (.ltt-header-box / .bpa-section-header)
+   ========================================================================== */
+.ltt-header-box,
+.bpa-section-header {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-top: 4px solid #f59e0b !important;
+  border-radius: 18px !important;
+  padding: 28px 32px !important;
+  margin-bottom: 24px !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 2px 6px rgba(15, 23, 42, 0.03) !important;
+  color: #0f172a !important;
+}
+.ltt-kicker-tag {
+  display: inline-block !important;
+  background: #fffbeb !important;
+  color: #b45309 !important;
+  border: 1px solid #fde68a !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  padding: 4px 12px !important;
+  border-radius: 999px !important;
+  margin-bottom: 10px !important;
+}
+.ltt-header-title,
+.bpa-section-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 0 8px 0 !important;
+  color: #0f172a !important;
+  line-height: 1.25 !important;
+}
+.ltt-header-desc,
+.bpa-section-sub {
+  font-size: 14.5px !important;
+  color: #475569 !important;
+  margin: 0 0 18px 0 !important;
+  max-width: 820px !important;
+  line-height: 1.55 !important;
+}
+.ltt-filter-tabs,
+.bpa-filter-bar {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  padding-top: 16px !important;
+  border-top: 1px solid #f1f5f9 !important;
+}
+.ltt-tab-btn,
+.bpa-filter-btn {
+  background: #f8fafc !important;
+  color: #334155 !important;
+  border: 1px solid #cbd5e1 !important;
+  padding: 8px 16px !important;
+  border-radius: 10px !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  user-select: none !important;
+}
+.ltt-tab-btn:hover,
+.bpa-filter-btn:hover {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #94a3b8 !important;
+}
+.ltt-tab-btn.active,
+.bpa-filter-btn.is-active,
+.bpa-filter-btn.active {
+  background: #f59e0b !important;
+  color: #0f172a !important;
+  border-color: #f59e0b !important;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.28) !important;
+}
+
+/* ==========================================================================
+   3. PERSONALLY TESTED BADGE & OTA REVIEWS WITH GOLD STARS
+   ========================================================================== */
+.bpa-proof,
+.bpa-proof-bar {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 2px 0 8px 0 !important;
+}
+.bpa-vchip,
+.bpa-verified-chip {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: #047857 !important;
+  background: #ecfdf5 !important;
+  border: 1px solid #a7f3d0 !important;
+  padding: 3px 10px !important;
+  border-radius: 999px !important;
+}
+.bpa-ci-stars {
+  color: #f59e0b !important;
+  font-size: 12px !important;
+  letter-spacing: 0.5px !important;
+  line-height: 1 !important;
+}
+</style></head>
+<body class="bg-slate-950 text-slate-100 min-h-screen antialiased"><header class="ltt-navbar" role="banner">
+<div class="ltt-nav-inner">
+<a aria-label="Budapest Adventures Homepage" class="ltt-brand" href="/">
+<span class="ltt-brand-emblem">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="12" cy="12" r="10"></circle>
+<polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+</svg>
+</span>
+<span class="ltt-brand-text">BUDAPEST ADVENTURES</span>
+</a>
+<nav aria-label="Primary Navigation" class="ltt-nav-links">
+<div class="ltt-nav-dropdown" id="lttExploreDropdown">
+<button aria-expanded="false" aria-haspopup="true" class="ltt-nav-link ltt-dropdown-btn" type="button">
+<span>Explore</span>
+<svg class="ltt-chevron" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="ltt-mega-menu" role="menu">
+<div class="ltt-mega-col">
+<div class="ltt-mega-head">POPULAR CRUISE GUIDES</div>
+<a class="ltt-mega-item" href="/best-budapest-river-cruises">
+<span class="ltt-mega-icon">🚢</span>
+<div>
+<strong>Top 10 Budapest River Cruises</strong>
+<p>Personally field-tested day &amp; night boats</p>
+</div>
+</a>
+<a class="ltt-mega-item" href="/budapest-dinner-cruises">
+<span class="ltt-mega-icon">🍷</span>
+<div>
+<strong>Top 7 Budapest Dinner Cruises</strong>
+<p>4-course fine dining, folklore &amp; piano shows</p>
+</div>
+</a>
+<a class="ltt-mega-item" href="/unlimited-prosecco-cruises-budapest">
+<span class="ltt-mega-icon">🥂</span>
+<div>
+<strong>Unlimited Prosecco Cruises</strong>
+<p>Bottomless sparkling wine &amp; panoramic decks</p>
+</div>
+</a>
+<a class="ltt-mega-item" href="/best-night-cruises-budapest">
+<span class="ltt-mega-icon">✨</span>
+<div>
+<strong>Best Evening &amp; Night Cruises</strong>
+<p>Illuminated Parliament golden-hour schedule</p>
+</div>
+</a>
+</div>
+<div class="ltt-mega-col">
+<div class="ltt-mega-head">REVIEWS &amp; CITY GUIDES</div>
+<a class="ltt-mega-subitem" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">Legenda Candlelit Dinner Review</a>
+<a class="ltt-mega-subitem" href="/thermal-baths-budapest">8 Best Thermal Baths in Budapest</a>
+<a class="ltt-mega-subitem" href="/best-private-boat-tours-budapest">Best Private Boat Tours &amp; Yachts</a>
+<a class="ltt-mega-subitem" href="/best-things-to-do-budapest">Best Things to Do in Budapest</a>
+<a class="ltt-mega-subitem" href="/budapest-travel-guide">Complete Budapest Travel Guide</a>
+</div>
+</div>
+</div>
+<a class="ltt-nav-link" href="/best-budapest-river-cruises">River Cruises</a>
+<a class="ltt-nav-link" href="/budapest-dinner-cruises">Dinner Cruises</a>
+<a class="ltt-nav-link" href="/about">About</a>
+<a class="ltt-nav-link" href="/contact">Contact</a>
+</nav>
+<div class="ltt-nav-right">
+<a class="ltt-cta-pill" href="/best-budapest-river-cruises">Top 10 Cruises →</a>
+<button aria-expanded="false" aria-label="Toggle navigation menu" class="ltt-hamburger" id="lttNavToggle" type="button">
+<span class="ltt-hamburger-bar"></span>
+<span class="ltt-hamburger-bar"></span>
+<span class="ltt-hamburger-bar"></span>
+</button>
+</div>
+</div>
+<div aria-hidden="true" class="ltt-mobile-drawer" id="lttMobileDrawer">
+<div class="ltt-drawer-content">
+<div class="ltt-mobile-section">
+<div class="ltt-mobile-label">POPULAR CRUISE GUIDES</div>
+<a class="ltt-mobile-link ltt-highlight" href="/best-budapest-river-cruises">
+<span>🚢 Budapest River Cruises (Top 10)</span>
+<span class="ltt-mobile-tag">Tested</span>
+</a>
+<a class="ltt-mobile-link" href="/budapest-dinner-cruises">
+<span>🍷 Budapest Dinner Cruises (Top 7)</span>
+</a>
+<a class="ltt-mobile-link" href="/unlimited-prosecco-cruises-budapest">
+<span>🥂 Unlimited Prosecco Cruises</span>
+</a>
+<a class="ltt-mobile-link" href="/best-night-cruises-budapest">
+<span>✨ Best Evening &amp; Night Cruises</span>
+</a>
+</div>
+<div class="ltt-mobile-section">
+<div class="ltt-mobile-label">FEATURED REVIEWS &amp; GUIDES</div>
+<div class="ltt-mobile-subgrid">
+<a class="ltt-mobile-sublink" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">Legenda Candlelit Review</a>
+<a class="ltt-mobile-sublink" href="/thermal-baths-budapest">Thermal Baths Guide</a>
+<a class="ltt-mobile-sublink" href="/best-private-boat-tours-budapest">Private Boat Tours</a>
+<a class="ltt-mobile-sublink" href="/best-things-to-do-budapest">Things to Do</a>
+</div>
+</div>
+<div class="ltt-mobile-section ltt-mobile-footer-links">
+<a class="ltt-mobile-link" href="/about">About Us</a>
+<a class="ltt-mobile-link" href="/contact">Contact</a>
+</div>
+<a class="ltt-mobile-cta" href="/best-budapest-river-cruises">Top 10 Cruises →</a>
+</div>
+</div>
+</header><script id="ltt-nav-script">/* ==========================================================================
+   LUXURY TRAVEL TESTER — MODERN VANILLA NAVIGATION CONTROLLER
+   Zero-dependency, semantic, responsive, WCAG-compliant (Desktop & Mobile)
+   ========================================================================== */
+(function() {
+  function initNav() {
+    var toggle = document.getElementById('lttNavToggle');
+    var drawer = document.getElementById('lttMobileDrawer');
+    var dropdown = document.getElementById('lttExploreDropdown');
+    var dropBtn = dropdown ? dropdown.querySelector('.ltt-dropdown-btn') : null;
+
+    if (toggle && drawer) {
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var isOpen = drawer.classList.contains('is-open');
+        if (isOpen) {
+          drawer.classList.remove('is-open');
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
+          drawer.setAttribute('aria-hidden', 'true');
+        } else {
+          drawer.classList.add('is-open');
+          toggle.classList.add('is-active');
+          toggle.setAttribute('aria-expanded', 'true');
+          drawer.setAttribute('aria-hidden', 'false');
+        }
+      });
+
+      drawer.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          drawer.classList.remove('is-open');
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
+          drawer.setAttribute('aria-hidden', 'true');
+        });
+      });
+    }
+
+    if (dropBtn && dropdown) {
+      dropBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var open = dropdown.classList.toggle('is-open');
+        dropBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+
+    document.addEventListener('click', function(e) {
+      if (drawer && drawer.classList.contains('is-open') && !drawer.contains(e.target) && (!toggle || !toggle.contains(e.target))) {
+        drawer.classList.remove('is-open');
+        if (toggle) {
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+        drawer.setAttribute('aria-hidden', 'true');
+      }
+      if (dropdown && dropdown.classList.contains('is-open') && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('is-open');
+        if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        if (drawer && drawer.classList.contains('is-open')) {
+          drawer.classList.remove('is-open');
+          if (toggle) {
+            toggle.classList.remove('is-active');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+          drawer.setAttribute('aria-hidden', 'true');
+        }
+        if (dropdown && dropdown.classList.contains('is-open')) {
+          dropdown.classList.remove('is-open');
+          if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNav);
+  } else {
+    initNav();
+  }
+})();
+</script>
+<!-- Top Affiliate Architecture Status Bar -->
+<div class="bg-slate-900/95 border-b border-slate-800 sticky top-0 z-40 backdrop-blur-md" id="top-admin-bar">
+<div class="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-2 text-xs">
+<div class="flex items-center space-x-3">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-400 mr-1.5 pulse-dot"></span>
           TourCMS Live Inventory Terminal (`ID: 57509` • `Channel: 16485`)
         </span>
-        <span class="hidden md:inline text-slate-300 font-medium">Mode: <strong class="text-amber-300">`balance_owed_by = C` (Customer Pays Legenda Directly)</strong></span>
-      </div>
-      <div class="flex items-center space-x-3 mono text-[11px]">
-        <span class="text-emerald-400 font-bold">✓ €0 Stripe Fees</span>
-        <span class="text-slate-600">|</span>
-        <span class="text-emerald-400 font-bold">✓ €0 VAT / Invoicing</span>
-        <span class="text-slate-600">|</span>
-        <span class="text-sky-400 font-bold">25.0% Clean Affiliate Commission</span>
-        <a href="?view=customer" class="ml-2 px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 hover:bg-sky-500/30 border border-sky-500/40 font-sans font-bold">Preview Customer View →</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Main Split Layout: Left = Live Inventory Terminal LP | Right = How `balance_owed_by = C` Works & Live API Inspector -->
-  <main id="main-layout" class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
-    <!-- LEFT COLUMN: High-Converting Live Booking Terminal LP -->
-    <div id="customer-terminal-col" class="lg:col-span-7 space-y-6">
-
-      <div class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl">
-        
-        <!-- Hero Image Banner -->
-        <div class="relative h-64 sm:h-72 w-full bg-slate-800 overflow-hidden">
-          <img id="hero-img" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68f3738fe72bf6e25526e991_best-budapest-river-cruises-legenda-sightseeing-cruise-00025.avif"
-               alt="Legenda Danube Cruise Budapest"
-               class="w-full h-full object-cover object-center transition-all duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
-
-          <!-- Top Badges -->
-          <div class="absolute top-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2">
-            <div class="bg-slate-950/85 backdrop-blur-md border border-slate-700/70 px-3 py-1.5 rounded-full flex items-center space-x-2 text-xs">
-              <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
-              <span class="text-slate-100 font-semibold">Live Dock 7 Terminal • Jane Haining rkp.</span>
-            </div>
-            <div class="bg-amber-400 text-slate-950 px-3 py-1 rounded-full font-extrabold text-xs shadow">
+<span class="hidden md:inline text-slate-300 font-medium">Mode: <strong class="text-amber-300">`balance_owed_by = C` (Customer Pays Legenda Directly)</strong></span>
+</div>
+<div class="flex items-center space-x-3 mono text-[11px]">
+<span class="text-emerald-400 font-bold">✓ €0 Stripe Fees</span>
+<span class="text-slate-600">|</span>
+<span class="text-emerald-400 font-bold">✓ €0 VAT / Invoicing</span>
+<span class="text-slate-600">|</span>
+<span class="text-sky-400 font-bold">25.0% Clean Affiliate Commission</span>
+<a class="ml-2 px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 hover:bg-sky-500/30 border border-sky-500/40 font-sans font-bold" href="?view=customer">Preview Customer View →</a>
+</div>
+</div>
+</div>
+<!-- Main Split Layout: Left = Live Inventory Terminal LP | Right = How `balance_owed_by = C` Works & Live API Inspector -->
+<main class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start" id="main-layout">
+<!-- LEFT COLUMN: High-Converting Live Booking Terminal LP -->
+<div class="lg:col-span-7 space-y-6" id="customer-terminal-col">
+<div class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl">
+<!-- Hero Image Banner -->
+<div class="relative h-64 sm:h-72 w-full bg-slate-800 overflow-hidden">
+<img alt="Legenda Danube Cruise Budapest" class="w-full h-full object-cover object-center transition-all duration-500" id="hero-img" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68f3738fe72bf6e25526e991_best-budapest-river-cruises-legenda-sightseeing-cruise-00025.avif"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+<!-- Top Badges -->
+<div class="absolute top-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2">
+<div class="bg-slate-950/85 backdrop-blur-md border border-slate-700/70 px-3 py-1.5 rounded-full flex items-center space-x-2 text-xs">
+<span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+<span class="text-slate-100 font-semibold">Live Dock 7 Terminal • Jane Haining rkp.</span>
+</div>
+<div class="bg-amber-400 text-slate-950 px-3 py-1 rounded-full font-extrabold text-xs shadow">
               ★ 4.8 (3,840+ Verified Reviews)
             </div>
-          </div>
-
-          <!-- Bottom Title Overlay -->
-          <div class="absolute bottom-4 left-5 right-5">
-            <div class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-1">Official Legenda City Cruises • Real-Time Seat Availability</div>
-            <h1 id="hero-title" class="text-2xl sm:text-3xl font-black text-white leading-tight">
+</div>
+<!-- Bottom Title Overlay -->
+<div class="absolute bottom-4 left-5 right-5">
+<div class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-1">Official Legenda City Cruises • Real-Time Seat Availability</div>
+<h1 class="text-2xl sm:text-3xl font-black text-white leading-tight" id="hero-title">
               Danube Legend Evening Sightseeing Cruise
             </h1>
-          </div>
-        </div>
-
-        <div class="p-5 sm:p-6 space-y-6">
-
-          <!-- STEP 1: Select Cruise Experience (Tour ID 2, 1, or 3) -->
-          <div>
-            <div class="flex items-center justify-between mb-2.5">
-              <label class="text-xs font-bold uppercase tracking-wider text-slate-400">1. Select Your Legenda Cruise</label>
-              <span class="text-[11px] text-emerald-400 font-semibold">✓ Kids Under 10 FREE (Sightseeing)</span>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-              <!-- Tour 2: Evening -->
-              <button onclick="selectTour('2')" id="tour-btn-2"
-                      class="p-3.5 rounded-2xl border-2 border-sky-500 bg-sky-500/10 text-left transition-all relative">
-                <div class="flex items-center justify-between mb-1">
-                  <span class="text-xs font-bold text-sky-300">🌃 Evening Legend</span>
-                  <span class="text-[10px] px-1.5 py-0.5 rounded bg-sky-500 text-slate-950 font-extrabold">BESTSELLER</span>
-                </div>
-                <div class="text-lg font-black text-white">€25 <span class="text-xs font-normal text-slate-400">/ adult</span></div>
-                <div class="text-[11px] text-slate-300 mt-1">1 hr • 1 Drink + 30-Lang Audio • Kids &lt;10 FREE</div>
-              </button>
-
-              <!-- Tour 1: Daytime -->
-              <button onclick="selectTour('1')" id="tour-btn-1"
-                      class="p-3.5 rounded-2xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 text-left transition-all">
-                <div class="flex items-center justify-between mb-1">
-                  <span class="text-xs font-bold text-slate-300">☀️ Daytime Duna Bella</span>
-                </div>
-                <div class="text-lg font-black text-white">€20 <span class="text-xs font-normal text-slate-400">/ adult</span></div>
-                <div class="text-[11px] text-slate-400 mt-1">1h 10m • 1 Drink + Audio • Kids &lt;10 FREE</div>
-              </button>
-
-              <!-- Tour 3: Candlelit Dinner -->
-              <button onclick="selectTour('3')" id="tour-btn-3"
-                      class="p-3.5 rounded-2xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 text-left transition-all">
-                <div class="flex items-center justify-between mb-1">
-                  <span class="text-xs font-bold text-amber-300">🕯️ Candlelit Dinner</span>
-                </div>
-                <div class="text-lg font-black text-white">€110 <span class="text-xs font-normal text-slate-400">/ adult</span></div>
-                <div class="text-[11px] text-slate-400 mt-1">2.5 hrs • 4-Course À La Carte + Live Music</div>
-              </button>
-            </div>
-          </div>
-
-          <!-- Value Props Bar (Generous, uncompressed amenity cards) -->
-          <div id="tour-perks" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
-            <!-- Populated dynamically by JS -->
-          </div>
-
-          <!-- STEP 2: Live TourCMS Departure & Seat Counter Widget -->
-          <div class="space-y-3 bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
-            <div class="flex flex-wrap items-center justify-between gap-2">
-              <div class="flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-dot"></span>
-                <label class="text-xs font-extrabold uppercase tracking-wider text-white">2. Live Dock 7 Departures & Remaining Seats</label>
-              </div>
-              <span class="text-[10px] mono px-2 py-0.5 rounded bg-slate-900 border border-slate-700 text-sky-400" id="avail-endpoint-label">
+</div>
+</div>
+<div class="p-5 sm:p-6 space-y-6">
+<!-- STEP 1: Select Cruise Experience (Tour ID 2, 1, or 3) -->
+<div>
+<div class="flex items-center justify-between mb-2.5">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-400">1. Select Your Legenda Cruise</label>
+<span class="text-[11px] text-emerald-400 font-semibold">✓ Kids Under 10 FREE (Sightseeing)</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+<!-- Tour 2: Evening -->
+<button class="p-3.5 rounded-2xl border-2 border-sky-500 bg-sky-500/10 text-left transition-all relative" id="tour-btn-2" onclick="selectTour('2')">
+<div class="flex items-center justify-between mb-1">
+<span class="text-xs font-bold text-sky-300">🌃 Evening Legend</span>
+<span class="text-[10px] px-1.5 py-0.5 rounded bg-sky-500 text-slate-950 font-extrabold">BESTSELLER</span>
+</div>
+<div class="text-lg font-black text-white">€25 <span class="text-xs font-normal text-slate-400">/ adult</span></div>
+<div class="text-[11px] text-slate-300 mt-1">1 hr • 1 Drink + 30-Lang Audio • Kids &lt;10 FREE</div>
+</button>
+<!-- Tour 1: Daytime -->
+<button class="p-3.5 rounded-2xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 text-left transition-all" id="tour-btn-1" onclick="selectTour('1')">
+<div class="flex items-center justify-between mb-1">
+<span class="text-xs font-bold text-slate-300">☀️ Daytime Duna Bella</span>
+</div>
+<div class="text-lg font-black text-white">€20 <span class="text-xs font-normal text-slate-400">/ adult</span></div>
+<div class="text-[11px] text-slate-400 mt-1">1h 10m • 1 Drink + Audio • Kids &lt;10 FREE</div>
+</button>
+<!-- Tour 3: Candlelit Dinner -->
+<button class="p-3.5 rounded-2xl border border-slate-800 bg-slate-950/60 hover:border-slate-700 text-left transition-all" id="tour-btn-3" onclick="selectTour('3')">
+<div class="flex items-center justify-between mb-1">
+<span class="text-xs font-bold text-amber-300">🕯️ Candlelit Dinner</span>
+</div>
+<div class="text-lg font-black text-white">€110 <span class="text-xs font-normal text-slate-400">/ adult</span></div>
+<div class="text-[11px] text-slate-400 mt-1">2.5 hrs • 4-Course À La Carte + Live Music</div>
+</button>
+</div>
+</div>
+<!-- Value Props Bar (Generous, uncompressed amenity cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5" id="tour-perks">
+<!-- Populated dynamically by JS -->
+</div>
+<!-- STEP 2: Live TourCMS Departure & Seat Counter Widget -->
+<div class="space-y-3 bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center space-x-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-dot"></span>
+<label class="text-xs font-extrabold uppercase tracking-wider text-white">2. Live Dock 7 Departures &amp; Remaining Seats</label>
+</div>
+<span class="text-[10px] mono px-2 py-0.5 rounded bg-slate-900 border border-slate-700 text-sky-400" id="avail-endpoint-label">
                 LIVE FEED: /c/tour/datesprices/checkavail.xml?id=2
               </span>
-            </div>
-
-            <!-- Date Selector (Dynamic Today, Tomorrow, & Custom Date Selector) -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 pb-1" id="date-selector-group">
-              <button type="button" onclick="selectDate(todayStr)" id="btn-date-today"
-                      class="py-2.5 px-3 rounded-xl font-bold text-xs text-center transition-all border-2 border-sky-500 bg-sky-500/10 text-white shadow-sm">
+</div>
+<!-- Date Selector (Dynamic Today, Tomorrow, & Custom Date Selector) -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 pb-1" id="date-selector-group">
+<button class="py-2.5 px-3 rounded-xl font-bold text-xs text-center transition-all border-2 border-sky-500 bg-sky-500/10 text-white shadow-sm" id="btn-date-today" onclick="selectDate(todayStr)" type="button">
                 Today
               </button>
-              <button type="button" onclick="selectDate(tomorrowStr)" id="btn-date-tomorrow"
-                      class="py-2.5 px-3 rounded-xl font-semibold text-xs text-center transition-all border border-slate-800 bg-slate-900 text-slate-400 hover:text-white">
+<button class="py-2.5 px-3 rounded-xl font-semibold text-xs text-center transition-all border border-slate-800 bg-slate-900 text-slate-400 hover:text-white" id="btn-date-tomorrow" onclick="selectDate(tomorrowStr)" type="button">
                 Tomorrow
               </button>
-              <div id="date-picker-wrap" class="col-span-2 sm:col-span-1 flex items-center justify-center space-x-2 bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 hover:border-slate-700 transition-all">
-                <span class="text-xs text-slate-400 select-none">📅</span>
-                <input type="date" id="date-picker-input"
-                       onchange="selectDate(this.value)"
-                       class="bg-transparent text-slate-200 text-xs font-semibold focus:outline-none cursor-pointer w-full text-center sm:text-left" style="color-scheme: dark;">
-              </div>
-            </div>
-
-            <!-- Live Time Slots Grid & Status Notice -->
-            <div id="slots-container" class="space-y-2 pt-1">
-              <div id="slots-notice" class="hidden text-xs text-amber-300 bg-amber-500/10 border border-amber-500/30 p-2.5 rounded-xl flex items-center justify-between">
-                <span>⚠️ All departures for today have departed. Tap <strong>Tomorrow</strong> to view open departures.</span>
-              </div>
-              <div id="slots-grid" class="grid grid-cols-3 sm:grid-cols-5 gap-2">
-                <!-- Populated by JS with accurate Legenda departure slots & real-time seats -->
-              </div>
-            </div>
-          </div>
-
-          <!-- STEP 3: Passenger Selector -->
-          <div class="space-y-3">
-            <label class="text-xs font-bold uppercase tracking-wider text-slate-400">3. Select Tickets (Pre-Fills Official Checkout)</label>
-            <div class="bg-slate-950 border border-slate-800 rounded-2xl divide-y divide-slate-800/80">
-              
-              <!-- Rate r1: Adult -->
-              <div class="p-3.5 flex items-center justify-between">
-                <div>
-                  <div class="font-bold text-sm text-white" id="r1-label">Adult (Age 15+)</div>
-                  <div class="text-xs text-slate-400">
-                    <span id="r1-price" class="text-white font-semibold">€25.00</span>
-                    <span class="text-emerald-400 ml-1.5 font-medium" id="r1-comm-badge">(Your 25% Affiliate Commission: +€6.25/ticket)</span>
-                  </div>
-                </div>
-                <div class="flex items-center space-x-3">
-                  <button onclick="updateQty('r1', -1)" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold flex items-center justify-center active:scale-95 transition-all">−</button>
-                  <span id="qty-r1" class="w-6 text-center font-bold text-sm">2</span>
-                  <button onclick="updateQty('r1', 1)" class="w-9 h-9 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold flex items-center justify-center active:scale-95 transition-all">+</button>
-                </div>
-              </div>
-
-              <!-- Rate r2: Youth / Child -->
-              <div class="p-3.5 flex items-center justify-between">
-                <div>
-                  <div class="font-bold text-sm text-white" id="r2-label">Youth / Student (Age 10–14)</div>
-                  <div class="text-xs text-slate-400">
-                    <span id="r2-price" class="text-white font-semibold">€17.50</span>
-                    <span class="text-emerald-400 ml-1.5 font-medium" id="r2-comm-badge">(Your 25% Affiliate Commission: +€4.38/ticket)</span>
-                  </div>
-                </div>
-                <div class="flex items-center space-x-3">
-                  <button onclick="updateQty('r2', -1)" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold flex items-center justify-center active:scale-95 transition-all">−</button>
-                  <span id="qty-r2" class="w-6 text-center font-bold text-sm">0</span>
-                  <button onclick="updateQty('r2', 1)" class="w-9 h-9 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold flex items-center justify-center active:scale-95 transition-all">+</button>
-                </div>
-              </div>
-
-              <!-- Rate r3: Child Under 10 (Sightseeing Only) -->
-              <div id="r3-row" class="p-3.5 flex items-center justify-between">
-                <div>
-                  <div class="font-bold text-sm text-white flex items-center space-x-2">
-                    <span>Child (Age 0–9)</span>
-                    <span class="px-2 py-0.5 text-[10px] rounded-full bg-emerald-500/20 text-emerald-300 font-bold">100% FREE</span>
-                  </div>
-                  <div class="text-xs text-slate-400">€0.00 • Included free with adult ticket</div>
-                </div>
-                <div class="flex items-center space-x-3">
-                  <button onclick="updateQty('r3', -1)" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold flex items-center justify-center active:scale-95 transition-all">−</button>
-                  <span id="qty-r3" class="w-6 text-center font-bold text-sm">0</span>
-                  <button onclick="updateQty('r3', 1)" class="w-9 h-9 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold flex items-center justify-center active:scale-95 transition-all">+</button>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- STEP 4: Primary Outbound Affiliate Checkout Button (Hands-Off to TourCMS Hosted Checkout) -->
-          <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 space-y-3">
-            <div class="flex flex-wrap items-center justify-between gap-1.5 text-xs text-slate-400">
-              <span id="summary-line" class="font-medium text-slate-200">2x Adult • Evening Danube Legend (Today @ 19:00)</span>
-              <span class="text-emerald-400 font-semibold text-[11px] whitespace-nowrap flex items-center space-x-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block pulse-dot"></span>
-                <span>Instant Mobile QR</span>
-              </span>
-            </div>
-
-            <div class="flex items-baseline justify-between">
-              <div>
-                <span class="text-sm font-bold text-slate-200">Total Price at Official Checkout</span>
-                <div class="text-[11px] text-slate-400">Paid directly to Legenda City Cruises (incl. VAT)</div>
-              </div>
-              <span id="total-retail" class="text-2xl font-black text-white">€50.00</span>
-            </div>
-
-            <!-- Two Checkout Routing Modes to Test -->
-            <div class="space-y-2 pt-1">
-              <a id="primary-cta" href="#" target="_blank" rel="noopener"
-                 onclick="fireInitiateCheckout(event)"
-                 class="block w-full py-4 px-6 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black text-base text-center rounded-2xl shadow-xl transition-all transform active:scale-98">
+<div class="col-span-2 sm:col-span-1 flex items-center justify-center space-x-2 bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 hover:border-slate-700 transition-all" id="date-picker-wrap">
+<span class="text-xs text-slate-400 select-none">📅</span>
+<input class="bg-transparent text-slate-200 text-xs font-semibold focus:outline-none cursor-pointer w-full text-center sm:text-left" id="date-picker-input" onchange="selectDate(this.value)" style="color-scheme: dark;" type="date"/>
+</div>
+</div>
+<!-- Live Time Slots Grid & Status Notice -->
+<div class="space-y-2 pt-1" id="slots-container">
+<div class="hidden text-xs text-amber-300 bg-amber-500/10 border border-amber-500/30 p-2.5 rounded-xl flex items-center justify-between" id="slots-notice">
+<span>⚠️ All departures for today have departed. Tap <strong>Tomorrow</strong> to view open departures.</span>
+</div>
+<div class="grid grid-cols-3 sm:grid-cols-5 gap-2" id="slots-grid">
+<!-- Populated by JS with accurate Legenda departure slots & real-time seats -->
+</div>
+</div>
+</div>
+<!-- STEP 3: Passenger Selector -->
+<div class="space-y-3">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-400">3. Select Tickets (Pre-Fills Official Checkout)</label>
+<div class="bg-slate-950 border border-slate-800 rounded-2xl divide-y divide-slate-800/80">
+<!-- Rate r1: Adult -->
+<div class="p-3.5 flex items-center justify-between">
+<div>
+<div class="font-bold text-sm text-white" id="r1-label">Adult (Age 15+)</div>
+<div class="text-xs text-slate-400">
+<span class="text-white font-semibold" id="r1-price">€25.00</span>
+<span class="text-emerald-400 ml-1.5 font-medium" id="r1-comm-badge">(Your 25% Affiliate Commission: +€6.25/ticket)</span>
+</div>
+</div>
+<div class="flex items-center space-x-3">
+<button class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold flex items-center justify-center active:scale-95 transition-all" onclick="updateQty('r1', -1)">−</button>
+<span class="w-6 text-center font-bold text-sm" id="qty-r1">2</span>
+<button class="w-9 h-9 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold flex items-center justify-center active:scale-95 transition-all" onclick="updateQty('r1', 1)">+</button>
+</div>
+</div>
+<!-- Rate r2: Youth / Child -->
+<div class="p-3.5 flex items-center justify-between">
+<div>
+<div class="font-bold text-sm text-white" id="r2-label">Youth / Student (Age 10–14)</div>
+<div class="text-xs text-slate-400">
+<span class="text-white font-semibold" id="r2-price">€17.50</span>
+<span class="text-emerald-400 ml-1.5 font-medium" id="r2-comm-badge">(Your 25% Affiliate Commission: +€4.38/ticket)</span>
+</div>
+</div>
+<div class="flex items-center space-x-3">
+<button class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold flex items-center justify-center active:scale-95 transition-all" onclick="updateQty('r2', -1)">−</button>
+<span class="w-6 text-center font-bold text-sm" id="qty-r2">0</span>
+<button class="w-9 h-9 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold flex items-center justify-center active:scale-95 transition-all" onclick="updateQty('r2', 1)">+</button>
+</div>
+</div>
+<!-- Rate r3: Child Under 10 (Sightseeing Only) -->
+<div class="p-3.5 flex items-center justify-between" id="r3-row">
+<div>
+<div class="font-bold text-sm text-white flex items-center space-x-2">
+<span>Child (Age 0–9)</span>
+<span class="px-2 py-0.5 text-[10px] rounded-full bg-emerald-500/20 text-emerald-300 font-bold">100% FREE</span>
+</div>
+<div class="text-xs text-slate-400">€0.00 • Included free with adult ticket</div>
+</div>
+<div class="flex items-center space-x-3">
+<button class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold flex items-center justify-center active:scale-95 transition-all" onclick="updateQty('r3', -1)">−</button>
+<span class="w-6 text-center font-bold text-sm" id="qty-r3">0</span>
+<button class="w-9 h-9 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold flex items-center justify-center active:scale-95 transition-all" onclick="updateQty('r3', 1)">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- STEP 4: Primary Outbound Affiliate Checkout Button (Hands-Off to TourCMS Hosted Checkout) -->
+<div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 space-y-3">
+<div class="flex flex-wrap items-center justify-between gap-1.5 text-xs text-slate-400">
+<span class="font-medium text-slate-200" id="summary-line">2x Adult • Evening Danube Legend (Today @ 19:00)</span>
+<span class="text-emerald-400 font-semibold text-[11px] whitespace-nowrap flex items-center space-x-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block pulse-dot"></span>
+<span>Instant Mobile QR</span>
+</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div>
+<span class="text-sm font-bold text-slate-200">Total Price at Official Checkout</span>
+<div class="text-[11px] text-slate-400">Paid directly to Legenda City Cruises (incl. VAT)</div>
+</div>
+<span class="text-2xl font-black text-white" id="total-retail">€50.00</span>
+</div>
+<!-- Two Checkout Routing Modes to Test -->
+<div class="space-y-2 pt-1">
+<a class="block w-full py-4 px-6 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black text-base text-center rounded-2xl shadow-xl transition-all transform active:scale-98" href="#" id="primary-cta" onclick="fireInitiateCheckout(event)" rel="noopener" target="_blank">
                 Continue to Official Legenda Checkout (<span id="btn-price">€50.00</span>) →
               </a>
-
-              <div class="flex flex-wrap items-center justify-between text-[11px] text-slate-400 pt-1 gap-2">
-                <span>🔒 Official Direct Legenda Reservation</span>
-                <span>💳 Visa / Mastercard / PayPal • Free 24h Cancellation</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-    <!-- RIGHT COLUMN (5 cols): Answers & Proof of How `balance_owed_by = C` Works -->
-    <div id="debug-admin-col" class="lg:col-span-5 space-y-5">
-
-      <!-- 1. Direct Answer: Is the Credit Card / Channel Gateway Really Possible? -->
-      <div class="bg-slate-900 border-2 border-emerald-500/40 rounded-2xl p-5 space-y-3.5 shadow-xl">
-        <div class="flex items-center justify-between">
-          <h2 class="text-sm font-extrabold uppercase tracking-wider text-emerald-400">✅ Proof: Yes, TourCMS Hosted CC Gateway Exists</h2>
-          <span class="text-[10px] mono bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded border border-emerald-800">Verified on API</span>
-        </div>
-
-        <p class="text-xs text-slate-300 leading-relaxed">
+<div class="flex flex-wrap items-center justify-between text-[11px] text-slate-400 pt-1 gap-2">
+<span>🔒 Official Direct Legenda Reservation</span>
+<span>💳 Visa / Mastercard / PayPal • Free 24h Cancellation</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (5 cols): Answers & Proof of How `balance_owed_by = C` Works -->
+<div class="lg:col-span-5 space-y-5" id="debug-admin-col">
+<!-- 1. Direct Answer: Is the Credit Card / Channel Gateway Really Possible? -->
+<div class="bg-slate-900 border-2 border-emerald-500/40 rounded-2xl p-5 space-y-3.5 shadow-xl">
+<div class="flex items-center justify-between">
+<h2 class="text-sm font-extrabold uppercase tracking-wider text-emerald-400">✅ Proof: Yes, TourCMS Hosted CC Gateway Exists</h2>
+<span class="text-[10px] mono bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded border border-emerald-800">Verified on API</span>
+</div>
+<p class="text-xs text-slate-300 leading-relaxed">
           I just tested TourCMS's official demo channel (<code class="text-sky-300">Channel 3930</code>) with your exact API key (<code class="text-amber-300">57509</code>). Here is what TourCMS returned when a channel has its payment gateway enabled in <code class="text-emerald-300">balance_owed_by = C</code> mode:
         </p>
-
-        <pre class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[10px] mono text-emerald-300 overflow-x-auto leading-relaxed">&lt;!-- Live Response from TourCMS with Gateway Attached --&gt;
+<pre class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[10px] mono text-emerald-300 overflow-x-auto leading-relaxed">&lt;!-- Live Response from TourCMS with Gateway Attached --&gt;
 &lt;booking_id&gt;74007&lt;/booking_id&gt;
 &lt;booking_engine_url&gt;
   https://live.tourcms.com/reserve/r4.php?a=4069&amp;h=138a...&amp;bid=74007&amp;w=3930
@@ -282,65 +1003,56 @@
   &lt;take_visa&gt;1&lt;/take_visa&gt;
   &lt;take_mastercard&gt;1&lt;/take_mastercard&gt;
 &lt;/payment_gateway&gt;</pre>
-
-        <div class="text-xs text-slate-300 space-y-1.5 bg-slate-950 p-3.5 rounded-xl border border-slate-800">
-          <div class="font-bold text-white">What happens in `balance_owed_by = C` mode:</div>
-          <p class="text-slate-400">
-            1. User picks their date, departure slot (`19:00`), and tickets (`2x Adult`) on your LP above.<br>
-            2. User clicks <strong>"Continue to Official Legenda Checkout"</strong>.<br>
+<div class="text-xs text-slate-300 space-y-1.5 bg-slate-950 p-3.5 rounded-xl border border-slate-800">
+<div class="font-bold text-white">What happens in `balance_owed_by = C` mode:</div>
+<p class="text-slate-400">
+            1. User picks their date, departure slot (`19:00`), and tickets (`2x Adult`) on your LP above.<br/>
+            2. User clicks <strong>"Continue to Official Legenda Checkout"</strong>.<br/>
             3. TourCMS opens the pre-filled payment screen (`5_pre_card.php`), charges the customer's Visa/Mastercard directly into <strong>Legenda's merchant account</strong>, issues the QR ticket, and logs your `fbclid`/`gclid` in `<agent_ref>`.
-          </p>
-        </div>
-      </div>
-
-      <!-- 2. Your Passive Affiliate Unit Economics (Zero Fees, Zero VAT) -->
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
-        <div class="flex items-center justify-between">
-          <h2 class="text-sm font-extrabold uppercase tracking-wider text-sky-400">📊 Your Affiliate Economics (Selected Basket)</h2>
-          <span class="text-[11px] mono bg-sky-950 text-sky-300 px-2 py-0.5 rounded border border-sky-800">100% Passive</span>
-        </div>
-
-        <div class="space-y-2 text-xs">
-          <div class="flex justify-between py-1.5 border-b border-slate-800/80">
-            <span class="text-slate-400">Customer Pays Legenda Directly:</span>
-            <span id="econ-gross" class="font-bold text-white mono">€50.00</span>
-          </div>
-          <div class="flex justify-between py-1.5 border-b border-slate-800/80">
-            <span class="text-slate-400">Stripe / CC Fees Paid by You:</span>
-            <span class="font-bold text-emerald-400 mono">€0.00 (Legenda pays)</span>
-          </div>
-          <div class="flex justify-between py-1.5 border-b border-slate-800/80">
-            <span class="text-slate-400">Customer VAT / Invoicing by You:</span>
-            <span class="font-bold text-emerald-400 mono">€0.00 (Legenda issues)</span>
-          </div>
-          <div class="flex justify-between pt-2 text-sm">
-            <span class="font-extrabold text-white">Your 25% Affiliate Commission:</span>
-            <span id="econ-comm" class="font-black text-emerald-400 mono">+€12.50 EUR</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3. Live Outbound URL & API Handoff Inspector -->
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
-        <div class="flex items-center justify-between">
-          <h2 class="text-xs font-extrabold uppercase tracking-wider text-amber-400">🔗 Live Pre-Filled TourCMS Checkout URL</h2>
-          <span class="text-[10px] mono text-slate-400">Departure-Specific Link</span>
-        </div>
-
-        <div class="space-y-2 text-[11px] mono">
-          <div class="text-slate-400">1. Direct Pre-Selected Departure URL (`r1.php` from TourCMS API):</div>
-          <div id="debug-r1-url" class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-emerald-300 break-all text-[10px] leading-relaxed"></div>
-
-          <div class="text-slate-400 pt-1">2. API Pre-Hold Payload (`POST /c/booking/new/start.xml` → redirects to `r4.php` with `fbclid` locked inside `<agent_ref>`):</div>
-          <pre id="debug-xml" class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-sky-300 overflow-x-auto text-[10px] leading-relaxed"></pre>
-        </div>
-      </div>
-
-    </div>
-
-  </main>
-
-  <script>
+          </agent_ref></p>
+</div>
+</div>
+<!-- 2. Your Passive Affiliate Unit Economics (Zero Fees, Zero VAT) -->
+<div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-sm font-extrabold uppercase tracking-wider text-sky-400">📊 Your Affiliate Economics (Selected Basket)</h2>
+<span class="text-[11px] mono bg-sky-950 text-sky-300 px-2 py-0.5 rounded border border-sky-800">100% Passive</span>
+</div>
+<div class="space-y-2 text-xs">
+<div class="flex justify-between py-1.5 border-b border-slate-800/80">
+<span class="text-slate-400">Customer Pays Legenda Directly:</span>
+<span class="font-bold text-white mono" id="econ-gross">€50.00</span>
+</div>
+<div class="flex justify-between py-1.5 border-b border-slate-800/80">
+<span class="text-slate-400">Stripe / CC Fees Paid by You:</span>
+<span class="font-bold text-emerald-400 mono">€0.00 (Legenda pays)</span>
+</div>
+<div class="flex justify-between py-1.5 border-b border-slate-800/80">
+<span class="text-slate-400">Customer VAT / Invoicing by You:</span>
+<span class="font-bold text-emerald-400 mono">€0.00 (Legenda issues)</span>
+</div>
+<div class="flex justify-between pt-2 text-sm">
+<span class="font-extrabold text-white">Your 25% Affiliate Commission:</span>
+<span class="font-black text-emerald-400 mono" id="econ-comm">+€12.50 EUR</span>
+</div>
+</div>
+</div>
+<!-- 3. Live Outbound URL & API Handoff Inspector -->
+<div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
+<div class="flex items-center justify-between">
+<h2 class="text-xs font-extrabold uppercase tracking-wider text-amber-400">🔗 Live Pre-Filled TourCMS Checkout URL</h2>
+<span class="text-[10px] mono text-slate-400">Departure-Specific Link</span>
+</div>
+<div class="space-y-2 text-[11px] mono">
+<div class="text-slate-400">1. Direct Pre-Selected Departure URL (`r1.php` from TourCMS API):</div>
+<div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-emerald-300 break-all text-[10px] leading-relaxed" id="debug-r1-url"></div>
+<div class="text-slate-400 pt-1">2. API Pre-Hold Payload (`POST /c/booking/new/start.xml` → redirects to `r4.php` with `fbclid` locked inside `<agent_ref>`):</agent_ref></div>
+<pre class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-sky-300 overflow-x-auto text-[10px] leading-relaxed" id="debug-xml"></pre>
+</div>
+</div>
+</div>
+</main>
+<script>
     // Calculate Dynamic Local Dates (Today, Tomorrow, and Custom Date Selector)
     const now = new Date();
     const todayObj = new Date(now.getFullYear(), now.getMonth(), now.getDate());
