@@ -379,10 +379,6 @@ def update_index_page():
                 <p class="ltt-guide-excerpt">
                   Calculate whether the official city card actually saves you money. Check your custom sightseeing itinerary against official 2026 museum and bath prices.
                 </p>
-                <div class="ltt-guide-specs">
-                  <span class="ltt-guide-sp">🧮 Live Value Calculator</span>
-                  <span class="ltt-guide-sp">🚇 Free Public Transit</span>
-                </div>
               </div>
               <div class="ltt-guide-footer">
                 <span class="ltt-guide-price">From €33 (24h–120h)</span>
@@ -404,10 +400,6 @@ def update_index_page():
                 <p class="ltt-guide-excerpt">
                   From social party hostels in District VII to boutique quiet pods for remote workers and solo travelers.
                 </p>
-                <div class="ltt-guide-specs">
-                  <span class="ltt-guide-sp">🔒 Safe Pods & Lockers</span>
-                  <span class="ltt-guide-sp">📍 District VII & V Mapped</span>
-                </div>
               </div>
               <div class="ltt-guide-footer">
                 <span class="ltt-guide-price">From €15 / night</span>
