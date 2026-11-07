@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>About Us &amp; Undercover Danube Cruise Testing Methodology — Budapest Adventures</title>
+  <meta content="Budapest Adventures was founded by Adam Dimitrov to bring undercover investigative auditing, verified pier maps, and seat-level reviews to Danube river cruises." name="description"/>
+  <meta content="About Us &amp; Undercover Danube Cruise Testing Methodology — Budapest Adventures" property="og:title"/>
+  <meta content="We pay our own fares, book anonymously, inspect seating sightlines, and tell the unvarnished truth about Danube river and dinner cruises in Budapest." property="og:description"/>
+  <meta content="https://www.budapestadventures.com/assets/adam-dimitrov.webp" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link rel="canonical" href="https://www.budapestadventures.com/about"/>
+
+  <!-- Local Favicon Assets -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+
+  <link rel="stylesheet" href="/css/editorial-luxury.css"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://www.budapestadventures.com/about#webpage",
+        "url": "https://www.budapestadventures.com/about",
+        "name": "About Budapest Adventures & Undercover Danube Cruise Testing Methodology",
+        "description": "Independent Danube river cruise and dinner cruise testing publication founded by Budapest-based tester Adam Dimitrov. Firsthand onboard inspections, dock maps, and verified comparisons.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://www.budapestadventures.com/#website",
+          "name": "Budapest Adventures",
+          "url": "https://www.budapestadventures.com/"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.budapestadventures.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About",
+              "item": "https://www.budapestadventures.com/about"
+            }
+          ]
+        },
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://www.budapestadventures.com/about#adam-dimitrov",
+          "name": "Adam Dimitrov",
+          "jobTitle": "Founder & Chief Danube River Cruise Tester",
+          "image": "https://www.budapestadventures.com/assets/adam-dimitrov.webp",
+          "url": "https://www.budapestadventures.com/about",
+          "sameAs": [
+            "https://www.thecruisedetective.com/",
+            "https://luxurytraveltester.com/"
+          ]
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.budapestadventures.com/#organization",
+        "name": "Budapest Adventures",
+        "url": "https://www.budapestadventures.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.budapestadventures.com/assets/apple-touch-icon.png"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style id="ltt-about-styles">
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --font-serif: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --navy-deep: #0a192f;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --ivory-warm: #faf8f5;
+      --ivory-pure: #ffffff;
+      --gold-primary: #dfa732;
+      --gold-hover: #b88214;
+      --gold-light: #fefce8;
+      --gold-border: rgba(223, 167, 50, 0.35);
+      --shadow-card: 0 10px 30px -8px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+    }
+
+    body {
+      font-family: var(--font-sans) !important;
+      color: var(--slate-900) !important;
+      background-color: var(--ivory-warm) !important;
+      margin: 0 !important;
+      line-height: 1.6 !important;
+      -webkit-font-smoothing: antialiased !important;
+    }
+
+    /* Navbar */
+    .ltt-navbar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 68px;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--slate-200);
+      z-index: 9999;
+      box-sizing: border-box;
+    }
+    .ltt-nav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 36px;
+      box-sizing: border-box;
+    }
+    .ltt-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--slate-900) !important;
+      flex-shrink: 0;
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .ltt-brand-logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+    .ltt-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .ltt-nav-link {
+      color: var(--slate-700);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: all 0.15s ease;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .ltt-nav-link:hover, .ltt-nav-link.active {
+      color: var(--slate-900);
+      background: var(--slate-100);
+    }
+    .ltt-nav-dropdown { position: relative; }
+    .ltt-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      background: #ffffff;
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+      box-shadow: 0 16px 36px -6px rgba(15, 23, 42, 0.14);
+      min-width: 250px;
+      padding: 8px;
+      display: none;
+      z-index: 10000;
+    }
+    .ltt-nav-dropdown.is-open .ltt-dropdown-menu { display: block; }
+    .ltt-dropdown-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--slate-700);
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .ltt-dropdown-item:hover {
+      background: var(--slate-100);
+      color: var(--slate-900);
+    }
+    .ltt-nav-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      margin-left: auto;
+      color: var(--slate-900);
+    }
+    .ltt-mobile-drawer {
+      display: none;
+      position: fixed;
+      top: 68px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 68px);
+      background: #ffffff;
+      border-top: 1px solid var(--slate-200);
+      padding: 24px 20px;
+      overflow-y: auto;
+      z-index: 9998;
+      box-sizing: border-box;
+    }
+    .ltt-mobile-drawer.is-open { display: block; }
+    @media (max-width: 900px) {
+      .ltt-nav-links { display: none; }
+      .ltt-nav-toggle { display: block; }
+    }
+
+    /* About Header */
+    .ltt-about-header {
+      padding: 64px 20px 54px 20px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 20%, rgba(223, 167, 50, 0.08) 0%, transparent 70%);
+    }
+    .ltt-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(223, 167, 50, 0.12);
+      border: 1px solid rgba(223, 167, 50, 0.35);
+      color: var(--gold-hover);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    .ltt-about-h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(32px, 4.5vw, 52px);
+      font-weight: 800;
+      color: var(--slate-900);
+      line-height: 1.15;
+      max-width: 900px;
+      margin: 0 auto 20px auto;
+      letter-spacing: -0.015em;
+    }
+    .ltt-about-sub {
+      font-size: clamp(16px, 2vw, 19px);
+      color: var(--slate-600);
+      max-width: 780px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Section Container */
+    .ltt-section {
+      max-width: 1100px;
+      margin: 0 auto 64px auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    .ltt-section-title {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .ltt-section-sub {
+      font-size: 16px;
+      color: var(--slate-600);
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 36px auto;
+    }
+
+    /* Reality Manifesto Cards */
+    .ltt-reality-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 860px) {
+      .ltt-reality-grid { grid-template-columns: 1fr; }
+    }
+    .ltt-reality-card {
+      background: #ffffff;
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow-card);
+    }
+    .ltt-reality-icon {
+      font-size: 32px;
+      margin-bottom: 14px;
+    }
+    .ltt-reality-title {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 10px;
+    }
+    .ltt-reality-body {
+      font-size: 14px;
+      color: var(--slate-600);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Founder Dossier Card */
+    .ltt-founder-card {
+      background: #ffffff;
+      border: 1px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: var(--shadow-card);
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .ltt-founder-card {
+        grid-template-columns: 1fr;
+        padding: 28px 20px;
+        text-align: center;
+      }
+    }
+    .ltt-founder-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 16px;
+      object-fit: cover;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+      border: 2px solid var(--slate-100);
+      margin: 0 auto;
+    }
+    .ltt-founder-name {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 6px;
+    }
+    .ltt-founder-role {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gold-hover);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+    }
+    .ltt-founder-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+      .ltt-founder-badges { justify-content: center; }
+    }
+    .ltt-founder-chip {
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+    }
+    .ltt-founder-bio {
+      font-size: 15px;
+      color: var(--slate-700);
+      line-height: 1.65;
+    }
+
+    /* Ethics Charter */
+    .ltt-ethics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .ltt-ethics-grid { grid-template-columns: 1fr; }
+    }
+    .ltt-ethic-card {
+      background: #ffffff;
+      border: 1px solid var(--slate-200);
+      border-left: 4px solid var(--gold-primary);
+      border-radius: 10px;
+      padding: 22px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    }
+    .ltt-ethic-num {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--gold-hover);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .ltt-ethic-title {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 8px;
+    }
+    .ltt-ethic-body {
+      font-size: 13.5px;
+      color: var(--slate-600);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* Canonical Dark Footer */
+    .footer-dark {
+      background-color: var(--navy-deep);
+      color: #ffffff;
+      padding: 64px 20px 32px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-family: var(--font-sans);
+    }
+    .footer-wrapper {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 800px) {
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+    .footer-brand-title {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    .footer-brand-desc {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      max-width: 380px;
+    }
+    .footer-col-title {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      margin-bottom: 16px;
+    }
+    .footer-links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-link-item {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    .footer-link-item:hover {
+      color: var(--gold-primary);
+    }
+    .grey-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.12);
+      margin: 32px 0 24px 0;
+    }
+    .legal-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. STICKY EDITORIAL NAVBAR -->
+  <header class="ltt-navbar">
+    <div class="ltt-nav-inner">
+      <a href="/" class="ltt-brand">
+        <img src="/assets/apple-touch-icon.png" alt="Budapest Adventures Emblem" class="ltt-brand-logo"/>
+        <span class="ltt-brand-text">BUDAPEST ADVENTURES</span>
+      </a>
+
+      <ul class="ltt-nav-links">
+        <li class="ltt-nav-dropdown" id="lttExploreDropdown">
+          <button type="button" class="ltt-nav-link ltt-dropdown-btn">
+            Cruises &amp; Tours
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="ltt-dropdown-menu">
+            <a href="/best-budapest-river-cruises" class="ltt-dropdown-item">Danube River Cruises</a>
+            <a href="/best-dinner-cruises-budapest" class="ltt-dropdown-item">Dinner Cruises</a>
+            <a href="/best-night-cruises-budapest" class="ltt-dropdown-item">Evening &amp; Night Cruises</a>
+            <a href="/best-private-boat-tours-budapest" class="ltt-dropdown-item">Private Boat Tours</a>
+            <a href="/unlimited-prosecco-cruises-budapest" class="ltt-dropdown-item">Unlimited Prosecco Cruises</a>
+            <a href="/thermal-baths-budapest" class="ltt-dropdown-item">Budapest Thermal Baths</a>
+          </div>
+        </li>
+        <li><a href="/best-budapest-river-cruises" class="ltt-nav-link">Danube Cruises</a></li>
+        <li><a href="/best-dinner-cruises-budapest" class="ltt-nav-link">Dinner Cruises</a></li>
+        <li><a href="/about" class="ltt-nav-link active">About</a></li>
+        <li><a href="/contact" class="ltt-nav-link">Contact</a></li>
+      </ul>
+
+      <button type="button" class="ltt-nav-toggle" id="lttNavToggle" aria-label="Toggle navigation drawer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="ltt-mobile-drawer" id="lttMobileDrawer" aria-hidden="true">
+    <div style="font-weight: 800; font-size: 13px; color: var(--gold-primary); text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.05em;">Featured Flagship Guides</div>
+    <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;">
+      <a href="/best-budapest-river-cruises" class="ltt-dropdown-item">Danube River Cruises</a>
+      <a href="/best-dinner-cruises-budapest" class="ltt-dropdown-item">Dinner Cruises</a>
+      <a href="/best-night-cruises-budapest" class="ltt-dropdown-item">Evening &amp; Night Cruises</a>
+      <a href="/best-private-boat-tours-budapest" class="ltt-dropdown-item">Private Boat Tours</a>
+      <a href="/unlimited-prosecco-cruises-budapest" class="ltt-dropdown-item">Unlimited Prosecco Cruises</a>
+      <a href="/thermal-baths-budapest" class="ltt-dropdown-item">Budapest Thermal Baths</a>
+    </div>
+    <div style="font-weight: 800; font-size: 13px; color: var(--slate-400); text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.05em;">Company</div>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <a href="/about" class="ltt-dropdown-item" style="color: var(--slate-900); font-weight: 700;">About Adam &amp; Methodology</a>
+      <a href="/contact" class="ltt-dropdown-item">Contact Editorial Desk</a>
+    </div>
+  </div>
+
+  <!-- 2. EDITORIAL ABOUT HEADER -->
+  <section class="ltt-about-header">
+    <span class="ltt-eyebrow">Undercover Danube Cruise Auditing • Budapest, Hungary</span>
+    <h1 class="ltt-about-h1">Undercover Danube River Auditing.<br/>Zero Sponsored Sugarcoating.</h1>
+    <p class="ltt-about-sub">Budapest Adventures was founded by Adam Dimitrov to bring rigorous, undercover investigative journalism and real seat-level audits to the Danube river. We buy our own tickets, test audio systems anonymously, and show you exactly what each cruise delivers.</p>
+  </section>
+
+  <!-- 3. TRAVEL REALITY MANIFESTO -->
+  <section class="ltt-section" id="manifesto">
+    <h2 class="ltt-section-title">Vacations Don't Have A Return Policy</h2>
+    <p class="ltt-section-sub">Why anonymous undercover field audits are essential for travelers visiting Budapest:</p>
+
+    <div class="ltt-reality-grid">
+      <div class="ltt-reality-card">
+        <div class="ltt-reality-icon">🛡️</div>
+        <h3 class="ltt-reality-title">The Missing Safety Net</h3>
+        <p class="ltt-reality-body">
+          If you book a disappointing €110 candlelit dinner cruise with muffled live music and obscured sightlines, you cannot get your evening back. Mainstream travel blogs recycle marketing copy without ever stepping on board.
+        </p>
+      </div>
+
+      <div class="ltt-reality-card">
+        <div class="ltt-reality-icon">🚫</div>
+        <h3 class="ltt-reality-title">The PR &amp; Influencer Blindspot</h3>
+        <p class="ltt-reality-body">
+          When boat operators host free influencer press sailings, they give them prime bow tables, complimentary champagne, and VIP treatment. Undercover passengers get the actual experience—which is what we document.
+        </p>
+      </div>
+
+      <div class="ltt-reality-card">
+        <div class="ltt-reality-icon">⚖️</div>
+        <h3 class="ltt-reality-title">Blended Review Aggregation</h3>
+        <p class="ltt-reality-body">
+          OTA platforms bundle €11 budget sightseeing hops with €150 prestige dinner cruises, hiding poor table spacing and slow catering behind blended 4.5-star averages. We separate every tier and test them individually.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. FOUNDER & HEAD TESTER DOSSIER -->
+  <section class="ltt-section">
+    <div class="ltt-founder-card">
+      <img src="/assets/adam-dimitrov.webp" alt="Adam Dimitrov — Budapest Adventures Founder" class="ltt-founder-img"/>
+      <div>
+        <h2 class="ltt-founder-name">Adam Dimitrov</h2>
+        <div class="ltt-founder-role">Founder &amp; Head Danube River Cruise Tester</div>
+        <div class="ltt-founder-badges">
+          <span class="ltt-founder-chip">✓ Undercover River Audits</span>
+          <span class="ltt-founder-chip">⚓ 40+ Budapest Cruises Tested</span>
+          <span class="ltt-founder-chip">📍 Budapest Resident</span>
+          <span class="ltt-founder-chip">💶 100% Out-of-Pocket</span>
+        </div>
+        <div class="ltt-founder-bio">
+          <p style="margin: 0 0 12px 0;">
+            Based in Budapest, Adam Dimitrov founded Budapest Adventures to replace sponsored influencer puffery with meticulous, candid consumer testing. Over multiple seasons on the Danube, he has personally inspected departure docks along Vigadó tér and Jane Haining rakpart, timed audio guide synchronization, tested dinner cruise food quality, and audited weather-protection on both enclosed glass salons and open-air rooftop decks.
+          </p>
+          <p style="margin: 0;">
+            His field testing methodology focuses on real passenger logistics: finding the exact boarding pontoon without getting lost, knowing whether a €11 ticket includes drinks, and warning travelers about crowded party boats when they seek a romantic evening.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FIVE NON-NEGOTIABLE ETHICS CHARTER -->
+  <section class="ltt-section" id="ethics">
+    <h2 class="ltt-section-title">The Five Non-Negotiable Ethics Charter</h2>
+    <p class="ltt-section-sub">Our binding editorial standards across every Budapest Adventures review:</p>
+
+    <div class="ltt-ethics-grid">
+      <div class="ltt-ethic-card">
+        <div class="ltt-ethic-num">01 / Independence</div>
+        <h3 class="ltt-ethic-title">100% Anonymous Booking</h3>
+        <p class="ltt-ethic-body">We reserve and board under standard consumer names with zero prior notice to boat operators or concierge desks. No VIP treatment, no special seating.</p>
+      </div>
+
+      <div class="ltt-ethic-card">
+        <div class="ltt-ethic-num">02 / Payment Integrity</div>
+        <h3 class="ltt-ethic-title">100% Out-of-Pocket Payment</h3>
+        <p class="ltt-ethic-body">We pay retail ticket prices directly out of our own budget. We strictly refuse sponsored press comps, free meal upgrades, and marketing retainers.</p>
+      </div>
+
+      <div class="ltt-ethic-card">
+        <div class="ltt-ethic-num">03 / Grounded Testing</div>
+        <h3 class="ltt-ethic-title">Seat Sightlines &amp; Freshness Audits</h3>
+        <p class="ltt-ethic-body">We test audio headsets in multiple languages, measure cabin window sightlines for Parliament photo angles, and verify whether meals are freshly cooked onboard or reheated banquet catering.</p>
+      </div>
+
+      <div class="ltt-ethic-card">
+        <div class="ltt-ethic-num">04 / Editorial Merit</div>
+        <h3 class="ltt-ethic-title">Zero Pay-for-Rank Placements</h3>
+        <p class="ltt-ethic-body">No boat company or tour operator can buy their way into our #1 Best Overall spot or pay to alter a negative review. Rankings reflect authentic test scores only.</p>
+      </div>
+
+      <div class="ltt-ethic-card">
+        <div class="ltt-ethic-num">05 / Radical Transparency</div>
+        <h3 class="ltt-ethic-title">Price-Transparency Anchoring</h3>
+        <p class="ltt-ethic-body">We disclose all hidden costs: dock fees, drink surcharges, audio guide handset deposits, and child discount policies so travelers know their real basket price before arriving at the pier.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CANONICAL DARK LUXURY FOOTER -->
+  <footer class="footer-dark ltt-footer">
+    <div class="footer-wrapper">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand-title">BUDAPEST ADVENTURES</div>
+          <p class="footer-brand-desc">
+            Independent, undercover field testing of the Danube's premier sightseeing and dinner cruises. Based locally in Budapest, we pay our own fares, test audio guides, and inspect every pier dock so you avoid tourist traps.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Flagship Budapest Guides</div>
+          <div class="footer-links-list">
+            <a href="/best-budapest-river-cruises" class="footer-link-item">10 Best Danube River Cruises</a>
+            <a href="/best-dinner-cruises-budapest" class="footer-link-item">7 Best Dinner Cruises in Budapest</a>
+            <a href="/best-night-cruises-budapest" class="footer-link-item">Best Night Cruises in Budapest</a>
+            <a href="/best-private-boat-tours-budapest" class="footer-link-item">Best Private Boat Tours</a>
+            <a href="/unlimited-prosecco-cruises-budapest" class="footer-link-item">Unlimited Prosecco Cruises</a>
+            <a href="/thermal-baths-budapest" class="footer-link-item">8 Best Budapest Thermal Baths</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Trust &amp; Company</div>
+          <div class="footer-links-list">
+            <a href="/about" class="footer-link-item" style="color: var(--gold-primary); font-weight: 700;">About Adam Dimitrov</a>
+            <a href="/about#ethics" class="footer-link-item">Our 5-Point Testing Ethics Charter</a>
+            <a href="/about#manifesto" class="footer-link-item">The Anti-Influencer Manifesto</a>
+            <a href="/contact" class="footer-link-item">Contact Editorial Desk</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="grey-divider"></div>
+
+      <div class="legal-wrapper">
+        <div>© 2026 BudapestAdventures.com. All rights reserved.</div>
+        <div style="color: rgba(255,255,255,0.45); font-size: 13px;">
+          Personally tested undercover in Budapest • 100% anonymous bookings • Zero sponsored PR sailings
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var toggle = document.getElementById('lttNavToggle');
+      var drawer = document.getElementById('lttMobileDrawer');
+      var dropdown = document.getElementById('lttExploreDropdown');
+      var dropBtn = dropdown ? dropdown.querySelector('.ltt-dropdown-btn') : null;
+
+      if (toggle && drawer) {
+        toggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var isOpen = drawer.classList.contains('is-open');
+          drawer.classList.toggle('is-open', !isOpen);
+          toggle.classList.toggle('is-active', !isOpen);
+        });
+      }
+
+      if (dropBtn && dropdown) {
+        dropBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          dropdown.classList.toggle('is-open');
+        });
+      }
+
+      document.addEventListener('click', function(e) {
+        if (drawer && drawer.classList.contains('is-open') && !drawer.contains(e.target) && (!toggle || !toggle.contains(e.target))) {
+          drawer.classList.remove('is-open');
+          if (toggle) toggle.classList.remove('is-active');
+        }
+        if (dropdown && dropdown.classList.contains('is-open') && !dropdown.contains(e.target)) {
+          dropdown.classList.remove('is-open');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
