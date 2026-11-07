@@ -395,8 +395,8 @@ def update_index_page():
             </div>
             <div class="ltt-guide-content">
               <div>
-                <div class="ltt-guide-kicker">Where to Stay • 8 Hostels Audited</div>
-                <h3 class="ltt-guide-title">8 Best Hostels in Budapest (Personally Tested)</h3>
+                <div class="ltt-guide-kicker">Where to Stay • 10 Hostels Audited</div>
+                <h3 class="ltt-guide-title">10 Best Hostels in Budapest (Personally Tested)</h3>
                 <p class="ltt-guide-excerpt">
                   From social party hostels in District VII to boutique quiet pods for remote workers and solo travelers.
                 </p>
