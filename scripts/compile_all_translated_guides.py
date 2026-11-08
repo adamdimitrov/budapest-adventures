@@ -11,6 +11,7 @@ Enforces 100% design parity with English Luxury Editorial System:
 - 4-Bento review cards, quick facts, photo sliders, mobile drawer
 - 100% affiliate tracking link preservation (partner=38585 / TourCMS / Tiqets)
 - Fast, pure static HTML on Vercel (Zero Webflow, Zero Linguana)
+- 100% native localization: ltt-buy-card, CSS review pseudo-elements, breakdown headings, proof chips, author box, and footer.
 """
 
 import os
@@ -19,6 +20,14 @@ import sys
 import json
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import scripts.build_hungarian_pages as bhp
+from scripts.i18n_translation_data import (
+    BUY_CARD_I18N,
+    REVIEW_TOGGLE_I18N,
+    BREAKDOWN_I18N,
+    AUTHOR_I18N,
+    FOOTER_I18N,
+    FILTER_TABS_I18N
+)
 from bs4 import BeautifulSoup
 
 BASE_DIR = '/Users/adamdimitrov/Development/budapest-adventures'
@@ -125,7 +134,7 @@ COMMON_UI = {
     'ro': {
         'btn_book': 'Rezervă acum →',
         'read_review': 'Citește recenzia ↓',
-        'per_adult': 'per adult',
+        'per_adult': 'pe adult',
         'trust_qr': 'Bilet electronic instant',
         'trust_cancel': 'Anulare gratuită 24h',
         'all_river': 'Toate cele 10 croaziere pe Dunăre',
@@ -363,6 +372,10 @@ def localize_guide_page_ui(soup, lang, cruise_type, total_count):
     sheet_title_text = get_ui(lang, 'sheet_river' if cruise_type == 'river' else 'sheet_dinner', 'Tested Budapest Cruises')
     verified_text = get_ui(lang, 'verified', 'Personally Tested')
 
+    buy_data = BUY_CARD_I18N.get(lang, BUY_CARD_I18N['de'])
+    toggle_data = REVIEW_TOGGLE_I18N.get(lang, REVIEW_TOGGLE_I18N['de'])
+    bd_data = BREAKDOWN_I18N.get(lang, BREAKDOWN_I18N['de'])
+
     # 1. Deck Cards
     for card in soup.find_all(class_='bpa-card'):
         btn = card.find(class_='bpa-btn')
@@ -384,17 +397,131 @@ def localize_guide_page_ui(soup, lang, cruise_type, total_count):
                 spans[0].string = trust_qr_text
                 spans[2].string = trust_cancel_text
 
-    # 2. Details Card Buy Cards
-    for cta in soup.find_all(class_='ltt-buy-cta-btn'):
-        cta.string = btn_book_text
+    # 1b. Filter Tabs (.ltt-tab-btn)
+    tab_data = FILTER_TABS_I18N.get(lang, {})
+    if tab_data:
+        for tab in soup.find_all(class_='ltt-tab-btn'):
+            cat = tab.get('data-cat')
+            if cruise_type == 'dinner':
+                if cat == 'tested' and 'tested_dinner' in tab_data:
+                    tab.string = tab_data['tested_dinner']
+                elif cat == 'drinks' and 'drinks_dinner' in tab_data:
+                    tab.string = tab_data['drinks_dinner']
+                elif cat in tab_data:
+                    tab.string = tab_data[cat]
+            else:
+                if cat in tab_data:
+                    tab.string = tab_data[cat]
 
-    # 3. Mobile Drawer
+    # 2. Details Card Buy Cards (.ltt-buy-card)
+    for bc in soup.find_all(class_='ltt-buy-card'):
+        # Badge
+        badge = bc.find(class_='ltt-buy-card-badge')
+        if badge:
+            for s in badge.find_all('span'):
+                if 'ltt-live-dot' not in s.get('class', []):
+                    s.string = buy_data['badge']
+                    break
+                    
+        # Price sub
+        psub = bc.find(class_='ltt-buy-price-sub')
+        if psub:
+            psub.string = buy_data['per_adult']
+            
+        # Perks
+        for perk in bc.find_all(class_='ltt-buy-perk'):
+            st = perk.find('strong')
+            if st:
+                txt = perk.get_text()
+                st_text = st.get_text(strip=True)
+                if any(k in txt.lower() for k in ['departure', 'départ', 'salida', 'partenza', 'vertrek', 'wypłynięcie', 'plecare', 'odjezd', 'polazak', 'отправление', 'αναχώρηση', 'отплаване', 'полазак', 'יציאה', 'partida', 'odchod', 'kalkış', 'відправлення', '出航', '출발', 'indulás', 'abfahrt']):
+                    perk.clear()
+                    perk.append(f"{buy_data['departure']} ")
+                    nst = soup.new_tag('strong')
+                    nst.string = st_text
+                    perk.append(nst)
+                elif any(k in txt.lower() for k in ['duration', 'durée', 'duración', 'durata', 'duur', 'czas trwania', 'durată', 'doba trvání', 'trajanje', 'продолжительность', 'διάρκεια', 'продължителност', 'трајање', 'משך', 'duração', 'trvanie', 'süre', 'тривалість', '所要時間', '운항 시간', 'időtartam', 'dauer']):
+                    perk.clear()
+                    perk.append(f"{buy_data['duration']} ")
+                    nst = soup.new_tag('strong')
+                    nst.string = st_text
+                    perk.append(nst)
+            else:
+                txt = perk.get_text().strip()
+                if any(k in txt.lower() for k in ['qr', 'smartphone', 'mobile', 'telefon', 'handy', 'celular', 'mobitel', 'телефон', 'κινητό', 'סמארטפון', 'telemóvel', 'smartfón', '스마트폰', 'スマホ']):
+                    perk.string = buy_data['qr']
+                elif any(k in txt.lower() for k in ['refund', '24h', 'remboursement', 'reembolso', 'rimborso', 'terugbetaling', 'zwrot', 'rambursare', 'vrácení', 'povrat', 'возврат', 'επιστροφή', 'възстановяване', 'повраћај', 'החזר', 'vrátenie', 'iade', 'повернення', '返金', '환불', 'lemondás', 'stornierung']):
+                    perk.string = buy_data['refund']
+                    
+        # CTA Button
+        cta = bc.find(class_='ltt-buy-cta-btn')
+        if cta:
+            spans = cta.find_all('span')
+            if spans:
+                btn_clean = btn_book_text.replace(' →', '').replace(' ->', '').replace(' ←', '').strip()
+                spans[0].string = btn_clean
+                if len(spans) > 1 and 'ltt-cta-arrow' in spans[1].get('class', []):
+                    spans[1].string = '←' if lang == 'he' else '→'
+            else:
+                cta.string = btn_book_text
+                
+        # Trust microcopy
+        trust = bc.find(class_='ltt-buy-card-trust')
+        if trust:
+            t_span = trust.find('span')
+            if t_span:
+                t_span.string = buy_data['trust']
+
+    # 3. Review Toggle CSS Pseudo-elements in <style>
+    collapse_str = toggle_data['collapse'].replace('"', '\\"')
+    read_str = toggle_data['read'].replace('"', '\\"')
+    for style in soup.find_all('style'):
+        if style.string and 'bpa-details-state-text::before' in style.string:
+            s = style.string
+            s = re.sub(
+                r'(\.bpa-details-card\[open\]\s*\.bpa-details-state-text::before\s*\{\s*content:\s*")[^"]*(";?\s*\})',
+                lambda m: m.group(1) + collapse_str + m.group(2),
+                s
+            )
+            s = re.sub(
+                r'(\.bpa-details-card:not\(\[open\]\)\s*\.bpa-details-state-text::before\s*\{\s*content:\s*")[^"]*(";?\s*\})',
+                lambda m: m.group(1) + read_str + m.group(2),
+                s
+            )
+            style.string = s
+
+    # 4. Breakdown Section Heading & Controls
+    heading_text = bd_data['river_title'] if cruise_type == 'river' else bd_data['dinner_title']
+    h2 = soup.find(class_='bpa-breakdown-heading')
+    if h2:
+        h2.string = heading_text
+        
+    sub = soup.find(class_='bpa-breakdown-sub')
+    if sub:
+        sub.string = bd_data['sub']
+        
+    for btn in soup.find_all(class_='bpa-acc-ctrl-btn'):
+        onclick = btn.get('onclick', '')
+        if 'true' in onclick:
+            btn.string = bd_data['expand']
+        elif 'false' in onclick:
+            btn.string = bd_data['collapse']
+
+    # 5. Proof Chips across all elements (.bpa-proof, .bpa-proof-mobile, .bpa-vchip)
+    for vchip in soup.find_all(class_='bpa-vchip'):
+        vchip.string = f"✓ {verified_text}"
+        
+    for proof in soup.find_all(class_=lambda c: c and ('bpa-proof' in c or 'bpa-proof-mobile' in c)):
+        if not proof.find(class_='bpa-vchip'):
+            proof.string = f"✓ {verified_text}"
+
+    # 6. Mobile Drawer
     drawer = soup.find(class_='bpa-mobile-drawer')
     if drawer:
         d_btn = drawer.find(class_='bpa-drawer-btn')
         if d_btn: d_btn.string = btn_book_text
 
-    # 4. Floating Bar
+    # 7. Floating Bar
     bar = soup.find(id='sticky-bar')
     if bar:
         toc_btn = bar.find(id='hybridTocBtn')
@@ -421,7 +548,7 @@ def localize_guide_page_ui(soup, lang, cruise_type, total_count):
         stitle = sheet.find(class_='hybrid-sheet-title')
         if stitle: stitle.string = sheet_title_text
 
-    # 5. window.LTT_PAGE_CONFIG
+    # 8. window.LTT_PAGE_CONFIG
     for s in soup.find_all('script'):
         if s.string and 'window.LTT_PAGE_CONFIG' in s.string:
             s_content = s.string
@@ -431,10 +558,38 @@ def localize_guide_page_ui(soup, lang, cruise_type, total_count):
                     cfg_obj = json.loads(match.group(1))
                     cfg_obj['pickLabel'] = pick_word
                     cfg_obj['btnText'] = btn_book_text
+                    cfg_obj['tocDeckLabel'] = bd_data['deck_river'] if cruise_type == 'river' else bd_data['deck_dinner']
+                    cfg_obj['tocBreakdownLabel'] = bd_data['toc_river'] if cruise_type == 'river' else bd_data['toc_dinner']
                     s.string = f"window.LTT_PAGE_CONFIG = {json.dumps(cfg_obj, ensure_ascii=False)};"
                 except Exception:
                     pass
             break
+
+def localize_author_box(soup, lang):
+    author_box = soup.find(class_='ltt-author-box')
+    if not author_box:
+        return
+    data = AUTHOR_I18N.get(lang, AUTHOR_I18N['de'])
+    
+    role = author_box.find(class_='ltt-author-role')
+    if role:
+        role.string = data['role']
+        
+    vbadges = author_box.find_all(class_='ltt-vbadge')
+    for idx, vb in enumerate(vbadges[:3]):
+        if idx < len(data['badges']):
+            vb.string = data['badges'][idx]
+            
+    bio = author_box.find(class_='ltt-author-bio')
+    if bio:
+        bio.string = data['bio']
+        
+    links_div = author_box.find(class_='ltt-author-links')
+    if links_div:
+        a = links_div.find('a')
+        if a:
+            a.string = data['link']
+            a['href'] = '/about'
 
 def extract_meta_and_headings(harvested_path):
     if not os.path.exists(harvested_path):
@@ -450,7 +605,6 @@ def extract_meta_and_headings(harvested_path):
     h1 = soup.find('h1')
     h1_text = h1.text.strip() if h1 else ''
     
-    # Extract headings
     h2s = [h2.text.strip() for h2 in soup.find_all('h2') if h2.text.strip()]
     return {
         'title': title,
@@ -459,8 +613,8 @@ def extract_meta_and_headings(harvested_path):
         'h2s': h2s
     }
 
-
 NAV_I18N = {
+    'hu': {'dropdown': 'Dunai Hajózás', 'head_cruises': 'DUNAI SÉTAHAJÓK', 'head_attractions': 'LÁTNIVALÓK ÉS FÜRDŐK', 'river': 'Dunai Sétahajók', 'dinner': 'Vacsorahajók', 'card': 'Budapest Kártya', 'about': 'Rólunk', 'contact': 'Kapcsolat', 'footer_flagship': 'Kiemelt Budapesti Kalauzok', 'footer_trust': 'Megbízhatóság és Vállalat', 'footer_copy': '© 2026 BudapestAdventures.com. Minden jog fenntartva.'},
     'de': {'dropdown': 'Donau-Schifffahrten', 'head_cruises': 'DONAU-SCHIFFFAHRTEN', 'head_attractions': 'SEHENSWÜRDIGKEITEN & BÄDER', 'river': 'Donau-Schifffahrten', 'dinner': 'Abendessen-Schifffahrten', 'card': 'Budapest Card', 'about': 'Über uns', 'contact': 'Kontakt', 'footer_flagship': 'Wichtige Budapest-Guides', 'footer_trust': 'Vertrauen & Unternehmen', 'footer_copy': '© 2026 BudapestAdventures.com. Alle Rechte vorbehalten.'},
     'fr': {'dropdown': 'Croisières Danube', 'head_cruises': 'CROISIÈRES SUR LE DANUBE', 'head_attractions': 'ATTRACTIONS & BAINS', 'river': 'Croisières Promenade', 'dinner': 'Dîners Croisières', 'card': 'Budapest Card', 'about': 'À propos', 'contact': 'Contact', 'footer_flagship': 'Guides Phares de Budapest', 'footer_trust': 'Confiance & Entreprise', 'footer_copy': '© 2026 BudapestAdventures.com. Tous droits réservés.'},
     'es': {'dropdown': 'Cruceros Danubio', 'head_cruises': 'CRUCEROS POR EL DANUBIO', 'head_attractions': 'ATRACCIONES Y BALNEARIOS', 'river': 'Cruceros Paseo', 'dinner': 'Cruceros con Cena', 'card': 'Budapest Card', 'about': 'Sobre nosotros', 'contact': 'Contacto', 'footer_flagship': 'Guías Principales de Budapest', 'footer_trust': 'Confianza y Empresa', 'footer_copy': '© 2026 BudapestAdventures.com. Todos los derechos reservados.'},
@@ -484,10 +638,15 @@ NAV_I18N = {
 }
 
 def localize_nav_and_footer_multilingual(soup, lang, slugs):
-    river_slug = slugs['river']
-    dinner_slug = slugs['dinner']
+    river_slug = slugs.get('river', 'best-budapest-river-cruises')
+    dinner_slug = slugs.get('dinner', 'best-dinner-cruises-budapest')
     
-    # 1. Update hrefs to point to localized slugs
+    # 0. Set HTML lang attribute
+    html_tag = soup.find('html')
+    if html_tag:
+        html_tag['lang'] = lang
+    
+    # 1. Update internal hrefs to point to localized slugs
     for a in soup.find_all('a', href=True):
         href = a['href']
         if href in ['/best-budapest-river-cruises', '/budapest-river-cruises']:
@@ -497,7 +656,7 @@ def localize_nav_and_footer_multilingual(soup, lang, slugs):
         elif href == '/':
             a['href'] = f'/{lang}/'
 
-    # 2. Localize text if in NAV_I18N
+    # 2. Localize Navigation
     i18n = NAV_I18N.get(lang)
     if i18n:
         dropdown_btn = soup.find('button', class_='ltt-dropdown-btn')
@@ -517,25 +676,71 @@ def localize_nav_and_footer_multilingual(soup, lang, slugs):
             if 'ltt-dropdown-btn' in nl.get('class', []):
                 continue
             txt = nl.text.strip().lower()
-            if 'river' in txt: nl.string = i18n.get('river', nl.text)
-            elif 'dinner' in txt: nl.string = i18n.get('dinner', nl.text)
-            elif 'card' in txt: nl.string = i18n.get('card', nl.text)
-            elif 'about' in txt: nl.string = i18n.get('about', nl.text)
-            elif 'contact' in txt: nl.string = i18n.get('contact', nl.text)
+            if 'river' in txt or 'sétahajó' in txt: nl.string = i18n.get('river', nl.text)
+            elif 'dinner' in txt or 'vacsorahajó' in txt: nl.string = i18n.get('dinner', nl.text)
+            elif 'card' in txt or 'kártya' in txt: nl.string = i18n.get('card', nl.text)
+            elif 'about' in txt or 'rólunk' in txt: nl.string = i18n.get('about', nl.text)
+            elif 'contact' in txt or 'kapcsolat' in txt: nl.string = i18n.get('contact', nl.text)
+
+    # 3. Localize Footer
+    footer = soup.find('footer') or soup.find(class_='footer-dark')
+    if footer:
+        f_data = FOOTER_I18N.get(lang, FOOTER_I18N['de'])
+        
+        # Brand Description
+        brand_desc = footer.find(class_='footer-brand-desc') or footer.find(class_='footer-paragraph')
+        if brand_desc:
+            brand_desc.string = f_data['desc']
             
-        footer = soup.find('footer') or soup.find(class_='footer-dark')
-        if footer:
-            col_titles = footer.find_all(class_=lambda c: c and ('footer-col-title' in c or 'footer-link-title' in c))
-            if len(col_titles) >= 1 and 'footer_flagship' in i18n:
-                col_titles[0].string = i18n['footer_flagship']
-            if len(col_titles) >= 2 and 'footer_trust' in i18n:
-                col_titles[1].string = i18n['footer_trust']
-            if 'footer_copy' in i18n:
-                legal = footer.find(class_='legal-wrapper')
-                if legal:
-                    divs = legal.find_all(class_='legal-text') or legal.find_all('div')
-                    if len(divs) >= 1:
-                        divs[0].string = i18n['footer_copy']
+        # Column Titles
+        col_titles = footer.find_all(class_=lambda c: c and ('footer-col-title' in c or 'footer-link-title' in c))
+        if len(col_titles) >= 1:
+            col_titles[0].string = f_data['flagship_title']
+        if len(col_titles) >= 2:
+            col_titles[1].string = f_data['trust_title']
+            
+        # Footer Links
+        link_map = f_data['links']
+        footer_links = footer.find_all('a', class_=lambda c: c and ('footer-link-item' in c or 'footer-link-3' in c))
+        for fl in footer_links:
+            href = fl.get('href', '')
+            if href in ['/best-budapest-river-cruises', f'/{lang}/{river_slug}'] or 'river' in href:
+                fl.string = link_map['river']
+                fl['href'] = f'/{lang}/{river_slug}'
+            elif href in ['/best-dinner-cruises-budapest', f'/{lang}/{dinner_slug}'] or 'dinner' in href:
+                fl.string = link_map['dinner']
+                fl['href'] = f'/{lang}/{dinner_slug}'
+            elif 'card' in href:
+                fl.string = link_map['card']
+            elif 'thermal' in href or 'baths' in href:
+                fl.string = link_map['baths']
+            elif 'night' in href:
+                fl.string = link_map['night']
+            elif 'prosecco' in href:
+                fl.string = link_map['prosecco']
+            elif 'private' in href:
+                fl.string = link_map['private']
+            elif 'walking' in href:
+                fl.string = link_map['walking']
+            elif 'hostels' in href:
+                fl.string = link_map['hostels']
+            elif href == '/about':
+                fl.string = link_map['about']
+            elif 'ethics' in href or 'methodology' in href:
+                fl.string = link_map['ethics']
+            elif 'manifesto' in href:
+                fl.string = link_map['manifesto']
+            elif 'contact' in href:
+                fl.string = link_map['contact']
+
+        # Legal Copyright and Subtitle
+        legal = footer.find(class_='legal-wrapper')
+        if legal:
+            divs = legal.find_all(class_='legal-text') or legal.find_all('div')
+            if len(divs) >= 1:
+                divs[0].string = f_data['copy']
+            if len(divs) >= 2:
+                divs[1].string = f_data['sub']
 
 def compile_pages():
     print(f"Starting compilation for {len(LANGS)} languages...")
@@ -547,19 +752,47 @@ def compile_pages():
     compiled_count = 0
     
     for lang in LANGS:
+        slugs = SLUG_MAP[lang]
+        river_slug = slugs['river']
+        dinner_slug = slugs['dinner']
+        lang_dir = os.path.join(BASE_DIR, lang)
+        os.makedirs(lang_dir, exist_ok=True)
+
         if lang == 'hu':
             bhp.build_hungarian_home()
             bhp.build_hungarian_river()
             bhp.build_hungarian_dinner()
+
+            # Post-process HU river guide for full parity (ltt-buy-card, CSS pseudo-elements, breakdown heading, proof chips)
+            hu_river_path = os.path.join(BASE_DIR, 'hu', 'setahajozas-a-dunan-budapest', 'index.html')
+            if os.path.exists(hu_river_path):
+                soup_hu_river = BeautifulSoup(open(hu_river_path, 'r', encoding='utf-8').read(), 'html.parser')
+                localize_guide_page_ui(soup_hu_river, 'hu', 'river', 10)
+                localize_nav_and_footer_multilingual(soup_hu_river, 'hu', slugs)
+                with open(hu_river_path, 'w', encoding='utf-8') as f:
+                    f.write(str(soup_hu_river))
+
+            # Post-process HU dinner guide
+            hu_dinner_path = os.path.join(BASE_DIR, 'hu', 'setahajozas-a-dunan-vacsoraval', 'index.html')
+            if os.path.exists(hu_dinner_path):
+                soup_hu_dinner = BeautifulSoup(open(hu_dinner_path, 'r', encoding='utf-8').read(), 'html.parser')
+                localize_guide_page_ui(soup_hu_dinner, 'hu', 'dinner', 7)
+                localize_nav_and_footer_multilingual(soup_hu_dinner, 'hu', slugs)
+                with open(hu_dinner_path, 'w', encoding='utf-8') as f:
+                    f.write(str(soup_hu_dinner))
+
+            # Post-process HU home
+            hu_home_path = os.path.join(BASE_DIR, 'hu', 'index.html')
+            if os.path.exists(hu_home_path):
+                soup_hu_home = BeautifulSoup(open(hu_home_path, 'r', encoding='utf-8').read(), 'html.parser')
+                localize_author_box(soup_hu_home, 'hu')
+                localize_nav_and_footer_multilingual(soup_hu_home, 'hu', slugs)
+                with open(hu_home_path, 'w', encoding='utf-8') as f:
+                    f.write(str(soup_hu_home))
+
             compiled_count += 3
-            print("✓ [HU] Compiled Hungarian home, river, and dinner using master Luxury Editorial compiler")
+            print(f"✓ [HU] Compiled Hungarian home, river ({river_slug}), and dinner ({dinner_slug}) with 100% native localization")
             continue
-        slugs = SLUG_MAP[lang]
-        river_slug = slugs['river']
-        dinner_slug = slugs['dinner']
-        
-        lang_dir = os.path.join(BASE_DIR, lang)
-        os.makedirs(lang_dir, exist_ok=True)
         
         # 1. COMPILE RIVER GUIDE
         river_dir = os.path.join(lang_dir, river_slug)
@@ -571,6 +804,10 @@ def compile_pages():
         
         soup_river = BeautifulSoup(en_river_html, 'html.parser')
         
+        # Set HTML lang
+        html_river = soup_river.find('html')
+        if html_river: html_river['lang'] = lang
+
         # Update canonical
         can = soup_river.find('link', {'rel': 'canonical'})
         if can:
@@ -589,7 +826,7 @@ def compile_pages():
             if h1:
                 h1.string = river_data['h1']
                 
-        # Localize CTAs and Floating Bar
+        # Localize CTAs, Buy Cards, Pseudo-elements, Breakdown, Proof Chips, and Floating Bar
         localize_guide_page_ui(soup_river, lang, 'river', 10)
                 
         # Localize nav & footer
@@ -608,6 +845,10 @@ def compile_pages():
         
         soup_dinner = BeautifulSoup(en_dinner_html, 'html.parser')
         
+        # Set HTML lang
+        html_dinner = soup_dinner.find('html')
+        if html_dinner: html_dinner['lang'] = lang
+
         can_dinner = soup_dinner.find('link', {'rel': 'canonical'})
         if can_dinner:
             can_dinner['href'] = f"https://www.budapestadventures.com/{lang}/{dinner_slug}"
@@ -624,7 +865,7 @@ def compile_pages():
             if h1:
                 h1.string = dinner_data['h1']
                 
-        # Localize CTAs and Floating Bar
+        # Localize CTAs, Buy Cards, Pseudo-elements, Breakdown, Proof Chips, and Floating Bar
         localize_guide_page_ui(soup_dinner, lang, 'dinner', 7)
                 
         # Localize nav & footer
@@ -639,6 +880,11 @@ def compile_pages():
         home_data = extract_meta_and_headings(harvested_home)
         
         soup_home = BeautifulSoup(en_home_html, 'html.parser')
+        
+        # Set HTML lang
+        html_home = soup_home.find('html')
+        if html_home: html_home['lang'] = lang
+
         can_home = soup_home.find('link', {'rel': 'canonical'})
         if can_home:
             can_home['href'] = f"https://www.budapestadventures.com/{lang}/"
@@ -657,6 +903,9 @@ def compile_pages():
                 a['href'] = f"/{lang}/{river_slug}"
             elif a['href'] in ['/best-dinner-cruises-budapest', '/budapest-dinner-cruises']:
                 a['href'] = f"/{lang}/{dinner_slug}"
+
+        # Localize Author Box
+        localize_author_box(soup_home, lang)
                 
         # Localize nav & footer
         localize_nav_and_footer_multilingual(soup_home, lang, slugs)

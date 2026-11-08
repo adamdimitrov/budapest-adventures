@@ -67,7 +67,7 @@ BUY_CARD_I18N = {
     },
     'ro': {
         'badge': 'Bilete oficiale și disponibilitate în timp real',
-        'per_adult': 'per adult',
+        'per_adult': 'pe adult',
         'qr': 'Voucher QR instant pe smartphone',
         'refund': 'Rambursare integrală cu până la 24h înainte',
         'departure': 'Plecare:',
@@ -1066,5 +1066,150 @@ FOOTER_I18N = {
             'manifesto': 'Függetlenségi Manifesztum',
             'contact': 'Kapcsolat a Szerkesztőséggel'
         }
+    }
+}
+
+
+# FILTER TABS LOCALIZATION
+FILTER_TABS_I18N = {
+    'hu': {
+        'all': 'Összes (10)',
+        'tested': '✓ Személyesen tesztelve (5)',
+        'under20': '🎧 Audio guide-dal (5)',
+        'drinks': '🥂 Üdvözlőitallal (6)',
+        'dining': '🍷 Korlátlan ital (3)',
+        'historic': '🏛️ Történelmi & Városnéző (4)',
+        'tested_dinner': '✓ Személyesen tesztelve (7)',
+        'alacarte': '🍽️ Felszolgált menü (6)',
+        'buffet': '🍱 Svédasztalos büfé (1)',
+        'show': '🎵 Élőzene és műsor (6)',
+        'drinks_dinner': '🍷 Korlátlan ital (1)',
+        'budget': '💶 80 € alatt (2)'
+    },
+    'de': {
+        'all': 'Alle (10)',
+        'tested': '✓ Vor Ort getestet (5)',
+        'under20': '🎧 Mit Audioguide (5)',
+        'drinks': '🥂 Mit Begrüßungsgetränk (6)',
+        'dining': '🍷 Unbegrenzte Getränke (3)',
+        'historic': '🏛️ Historisch & Sightseeing (4)',
+        'tested_dinner': '✓ Vor Ort getestet (7)',
+        'alacarte': '🍽️ Menüwahl (6)',
+        'buffet': '🍱 Buffet (1)',
+        'show': '🎵 Live-Musik & Show (6)',
+        'drinks_dinner': '🍷 Unbegrenzte Getränke (1)',
+        'budget': '💶 Unter 80 € (2)'
+    },
+    'fr': {
+        'all': 'Tous (10)',
+        'tested': '✓ Testé personnellement (5)',
+        'under20': '🎧 Avec audioguide (5)',
+        'drinks': '🥂 Verre de bienvenue (6)',
+        'dining': '🍷 Boissons à volonté (3)',
+        'historic': '🏛️ Historique & Découverte (4)',
+        'tested_dinner': '✓ Testé personnellement (7)',
+        'alacarte': '🍽️ Dîner à la carte (6)',
+        'buffet': '🍱 Buffet (1)',
+        'show': '🎵 Musique live & Spectacle (6)',
+        'drinks_dinner': '🍷 Boissons à volonté (1)',
+        'budget': '💶 Moins de 80 € (2)'
+    },
+    'es': {
+        'all': 'Todos (10)',
+        'tested': '✓ Probado personalmente (5)',
+        'under20': '🎧 Con audioguía (5)',
+        'drinks': '🥂 Copa de bienvenida (6)',
+        'dining': '🍷 Bebidas ilimitadas (3)',
+        'historic': '🏛️ Histórico & Panorámico (4)',
+        'tested_dinner': '✓ Probado personalmente (7)',
+        'alacarte': '🍽️ Menú servido (6)',
+        'buffet': '🍱 Bufé (1)',
+        'show': '🎵 Música en vivo & Show (6)',
+        'drinks_dinner': '🍷 Bebidas ilimitadas (1)',
+        'budget': '💶 Menos de 80 € (2)'
+    },
+    'it': {
+        'all': 'Tutti (10)',
+        'tested': '✓ Testato personalmente (5)',
+        'under20': '🎧 Con audioguida (5)',
+        'drinks': '🥂 Drink di benvenuto (6)',
+        'dining': '🍷 Bevande illimitate (3)',
+        'historic': '🏛️ Storico & Panoramico (4)',
+        'tested_dinner': '✓ Testato personalmente (7)',
+        'alacarte': '🍽️ Menù servito (6)',
+        'buffet': '🍱 Buffet (1)',
+        'show': '🎵 Musica dal vivo & Show (6)',
+        'drinks_dinner': '🍷 Bevande illimitate (1)',
+        'budget': '💶 Meno di 80 € (2)'
+    },
+    'nl': {
+        'all': 'Alles (10)',
+        'tested': '✓ Persoonlijk getest (5)',
+        'under20': '🎧 Met audiogids (5)',
+        'drinks': '🥂 Met welkomstdrankje (6)',
+        'dining': '🍷 Onbeperkt drinken (3)',
+        'historic': '🏛️ Historisch & Sightseeing (4)',
+        'tested_dinner': '✓ Persoonlijk getest (7)',
+        'alacarte': '🍽️ Geserveerd menu (6)',
+        'buffet': '🍱 Buffet (1)',
+        'show': '🎵 Livemuziek & Show (6)',
+        'drinks_dinner': '🍷 Onbeperkt drinken (1)',
+        'budget': '💶 Onder 80 € (2)'
+    },
+    'pl': {
+        'all': 'Wszystkie (10)',
+        'tested': '✓ Osobiście przetestowane (5)',
+        'under20': '🎧 Z audioprzewodnikiem (5)',
+        'drinks': '🥂 Z powitalnym drinkiem (6)',
+        'dining': '🍷 Nielimitowane napoje (3)',
+        'historic': '🏛️ Historyczne i widokowe (4)',
+        'tested_dinner': '✓ Osobiście przetestowane (7)',
+        'alacarte': '🍽️ Kolacja serwowana (6)',
+        'buffet': '🍱 Bufet (1)',
+        'show': '🎵 Muzyka na żywo i show (6)',
+        'drinks_dinner': '🍷 Nielimitowane napoje (1)',
+        'budget': '💶 Poniżej 80 € (2)'
+    },
+    'ro': {
+        'all': 'Toate (10)',
+        'tested': '✓ Testat personal (5)',
+        'under20': '🎧 Cu audioghid (5)',
+        'drinks': '🥂 Cu băutură inclusă (6)',
+        'dining': '🍷 Băuturi nelimitate (3)',
+        'historic': '🏛️ Istorice & Panoramice (4)',
+        'tested_dinner': '✓ Testat personal (7)',
+        'alacarte': '🍽️ Meniu servit (6)',
+        'buffet': '🍱 Bufet (1)',
+        'show': '🎵 Muzică live & Spectacol (6)',
+        'drinks_dinner': '🍷 Băuturi nelimitate (1)',
+        'budget': '💶 Sub 80 € (2)'
+    },
+    'cs': {
+        'all': 'Všechny (10)',
+        'tested': '✓ Osobně vyzkoušeno (5)',
+        'under20': '🎧 S audioprůvodcem (5)',
+        'drinks': '🥂 S welcome drinkem (6)',
+        'dining': '🍷 Neomezené nápoje (3)',
+        'historic': '🏛️ Historické & Vyhlídkové (4)',
+        'tested_dinner': '✓ Osobně vyzkoušeno (7)',
+        'alacarte': '🍽️ Servírované menu (6)',
+        'buffet': '🍱 Bufet (1)',
+        'show': '🎵 Živá hudba & Show (6)',
+        'drinks_dinner': '🍷 Neomezené nápoje (1)',
+        'budget': '💶 Do 80 € (2)'
+    },
+    'ru': {
+        'all': 'Все (10)',
+        'tested': '✓ Лично проверено (5)',
+        'under20': '🎧 С аудиогидом (5)',
+        'drinks': '🥂 С приветственным напитком (6)',
+        'dining': '🍷 Безлимитные напитки (3)',
+        'historic': '🏛️ Исторические & Обзорные (4)',
+        'tested_dinner': '✓ Лично проверено (7)',
+        'alacarte': '🍽️ С подачей блюд (6)',
+        'buffet': '🍱 Шведский стол (1)',
+        'show': '🎵 Живая музыка & Шоу (6)',
+        'drinks_dinner': '🍷 Безлимитные напитки (1)',
+        'budget': '💶 До 80 € (2)'
     }
 }
