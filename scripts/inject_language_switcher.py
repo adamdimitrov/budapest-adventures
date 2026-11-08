@@ -400,9 +400,9 @@ def get_page_info(rel_path):
         f = os.path.basename(rel_path)
         name = os.path.splitext(f)[0]
         if name in ['index']: return 'en', 'home'
-        if name in ['river']: return 'en', 'river'
-        if name in ['dinner']: return 'en', 'dinner'
-        if name in ['candlelit-dinner-cruise']: return 'en', 'candlelit'
+        if name in ['river', 'best-budapest-river-cruises', 'budapest-river-cruises']: return 'en', 'river'
+        if name in ['dinner', 'best-dinner-cruises-budapest', 'budapest-dinner-cruises']: return 'en', 'dinner'
+        if name in ['candlelit-dinner-cruise', 'candlelit-dinner-cruise-budapest']: return 'en', 'candlelit'
         if name in ['best-night-cruises-budapest']: return 'en', 'night'
         if name in ['unlimited-prosecco-cruises-budapest']: return 'en', 'prosecco'
         if name in ['best-private-boat-tours-budapest']: return 'en', 'private'
@@ -606,6 +606,11 @@ def main():
     # English core production pages
     en_pages = [
         'index.html', 'river.html', 'dinner.html', 'candlelit-dinner-cruise.html',
+        'best-budapest-river-cruises.html', 'budapest-river-cruises.html',
+        'best-dinner-cruises-budapest.html', 'budapest-dinner-cruises.html',
+        'best-budapest-river-cruises/index.html', 'budapest-river-cruises/index.html',
+        'best-dinner-cruises-budapest/index.html', 'budapest-dinner-cruises/index.html',
+        'best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest/index.html',
         'best-night-cruises-budapest.html', 'unlimited-prosecco-cruises-budapest.html',
         'best-private-boat-tours-budapest.html', 'best-walking-tours-budapest.html',
         'best-hostels-budapest.html', 'thermal-baths-budapest.html',
