@@ -293,8 +293,6 @@ CSS_STYLES_RAW = """
     display: flex !important;
     align-self: center !important;
     margin: 0 !important;
-    background: transparent !important;
-    border: none !important;
   }
   .ltt-lang-trigger {
     display: none !important;
@@ -560,12 +558,14 @@ def inject_language_switcher_into_file(file_path):
     desktop_tag = BeautifulSoup(desktop_html_str, 'html.parser').find('div', id='lttLangTrigger')
     mobile_tag = BeautifulSoup(mobile_html_str, 'html.parser').find('div', class_='ltt-mobile-lang-box')
 
-    # 2. Inject desktop trigger
+    # 2. Inject desktop trigger & guarantee hamburger button is nested inside nav_right
     nav_right = soup.find('div', class_='ltt-nav-right')
     hamburger = soup.find(id='lttNavToggle')
     if nav_right:
-        if hamburger and hamburger.parent == nav_right:
-            hamburger.insert_before(desktop_tag)
+        if hamburger:
+            hamburger.extract()
+            nav_right.append(desktop_tag)
+            nav_right.append(hamburger)
         else:
             nav_right.append(desktop_tag)
     else:
@@ -588,7 +588,23 @@ def inject_language_switcher_into_file(file_path):
         if t_menu:
             t_menu.append(mobile_tag)
 
-    # 4. Inject CSS in <head>
+    # 4. Deduplicate hamburger scripts to prevent open/close race conditions
+    scripts_with_toggle = [
+        s for s in soup.find_all('script')
+        if s.text and ('document.getElementById(\'lttNavToggle\')' in s.text or 'document.getElementById(\"lttNavToggle\")' in s.text)
+    ]
+    if len(scripts_with_toggle) > 1:
+        has_named = any(s.get('id') == 'ltt-nav-script' for s in scripts_with_toggle)
+        if has_named:
+            for s in scripts_with_toggle:
+                if s.get('id') != 'ltt-nav-script':
+                    s.decompose()
+        else:
+            for s in scripts_with_toggle[:-1]:
+                s.decompose()
+            scripts_with_toggle[-1]['id'] = 'ltt-nav-script'
+
+    # 5. Inject CSS in <head>
     head = soup.find('head')
     if head:
         style_tag = soup.new_tag('style', id='ltt-language-switcher-styles')

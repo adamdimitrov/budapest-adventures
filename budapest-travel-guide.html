@@ -2324,7 +2324,6 @@ div[id],
   line-height: 1 !important;
 }
 </style>
-
 <style id="ltt-language-switcher-styles">
 /* ==========================================================================
    CANONICAL LANGUAGE SWITCHER SYSTEM — BUDAPEST ADVENTURES
@@ -2548,8 +2547,6 @@ div[id],
     display: flex !important;
     align-self: center !important;
     margin: 0 !important;
-    background: transparent !important;
-    border: none !important;
   }
   .ltt-lang-trigger {
     display: none !important;
@@ -2736,21 +2733,12 @@ div[id],
 </a>
 </div>
 </div>
-</div></div>
+</div><button aria-expanded="false" aria-label="Toggle navigation menu" class="ltt-hamburger" id="lttNavToggle" type="button">
+<span class="ltt-hamburger-bar"></span>
+<span class="ltt-hamburger-bar"></span>
+<span class="ltt-hamburger-bar"></span>
+</button></div>
 </div>
-
-
-
-
-
-
-
-<button aria-expanded="false" aria-label="Toggle navigation menu" class="ltt-hamburger" id="lttNavToggle" type="button">
-<span class="ltt-hamburger-bar"></span>
-<span class="ltt-hamburger-bar"></span>
-<span class="ltt-hamburger-bar"></span>
-</button>
-
 
 <div aria-hidden="true" class="ltt-mobile-drawer" id="lttMobileDrawer">
 <div class="ltt-drawer-content">
@@ -2881,12 +2869,7 @@ div[id],
 </div>
 </div></div>
 </div>
-
-
 <!-- MOBILE DRAWER LANGUAGE SECTION -->
-
-
-
 </header><script id="ltt-nav-script">/* ==========================================================================
    LUXURY TRAVEL TESTER — MODERN VANILLA NAVIGATION CONTROLLER
    Zero-dependency, semantic, responsive, WCAG-compliant (Desktop & Mobile)
@@ -3622,272 +3605,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", hideTip, { passive: true });
 })();
-</script><script id="bpa-toc-scroll-engine">
-(function() {
-  var _activeScrollId = null;
-  var _activeCleanup = null;
-  var _pinnedTocId = null;
-
-  function highlightTocId(activeId) {
-    if (!activeId) return;
-    document.querySelectorAll('#toc .tocitem, .toc .tocitem').forEach(function(link) {
-      var match = (link.getAttribute('href') === '#' + activeId);
-      link.classList.toggle('active', match);
-      link.classList.toggle('is-active', match);
-    });
-  }
-
-  function eagerLoadImagesAbove(target) {
-    try {
-      var imgs = document.querySelectorAll('.content-right_blog img[loading="lazy"], details.bpa-details-card img[loading="lazy"]');
-      imgs.forEach(function(img) {
-        if ((img.compareDocumentPosition(target) & Node.DOCUMENT_POSITION_FOLLOWING) || target.contains(img)) {
-          img.loading = 'eager';
-        }
-      });
-    } catch (err) {}
-  }
-
-  function unlockAndCloseSheets() {
-    if (typeof window.closeHybridSheet === 'function') {
-      try { window.closeHybridSheet(); } catch (err) {}
-    }
-    var backdrop = document.getElementById('hybridBackdrop');
-    if (backdrop) backdrop.classList.remove('is-open');
-    var sheet = document.getElementById('hybridSheet');
-    if (sheet) sheet.classList.remove('is-open');
-    document.body.style.overflow = '';
-    document.documentElement.style.overflow = '';
-  }
-
-  function smoothScrollToElement(target, offset) {
-    if (!target) return;
-    offset = (typeof offset === 'number') ? offset : 85;
-
-    var details = target.closest('details');
-    if (details) details.open = true;
-    if (target.tagName && target.tagName.toUpperCase() === 'DETAILS') {
-      target.open = true;
-    }
-
-    eagerLoadImagesAbove(target);
-
-    if (_activeScrollId) {
-      cancelAnimationFrame(_activeScrollId);
-      _activeScrollId = null;
-    }
-    if (_activeCleanup) {
-      _activeCleanup();
-      _activeCleanup = null;
-    }
-
-    _pinnedTocId = target.id || null;
-    if (_pinnedTocId) highlightTocId(_pinnedTocId);
-
-    var stopped = false;
-    var lastScrollY = -1;
-    var stuckFrames = 0;
-    var settlingFrames = 0;
-
-    function stopScroll() {
-      stopped = true;
-      _pinnedTocId = null;
-      if (_activeScrollId) {
-        cancelAnimationFrame(_activeScrollId);
-        _activeScrollId = null;
-      }
-      cleanup();
-    }
-
-    function onImgLoad() {
-      settlingFrames = 0;
-      stuckFrames = 0;
-    }
-
-    function cleanup() {
-      window.removeEventListener('wheel', stopScroll, { passive: true });
-      window.removeEventListener('touchmove', stopScroll, { passive: true });
-      window.removeEventListener('keydown', stopScroll, { passive: true });
-      document.removeEventListener('load', onImgLoad, true);
-      _activeCleanup = null;
-    }
-
-    _activeCleanup = cleanup;
-    window.addEventListener('wheel', stopScroll, { passive: true });
-    window.addEventListener('touchmove', stopScroll, { passive: true });
-    window.addEventListener('keydown', stopScroll, { passive: true });
-    document.addEventListener('load', onImgLoad, true);
-
-    function frame() {
-      if (stopped) return;
-      var rect = target.getBoundingClientRect();
-      var diff = rect.top - offset;
-
-      if (Math.abs(diff) <= 2) {
-        if (Math.abs(diff) > 0.5) {
-          window.scrollBy(0, diff);
-        }
-        settlingFrames++;
-        if (settlingFrames > 22) {
-          _activeScrollId = null;
-          _pinnedTocId = null;
-          cleanup();
-          return;
-        }
-        _activeScrollId = requestAnimationFrame(frame);
-        return;
-      }
-
-      settlingFrames = 0;
-      var absDiff = Math.abs(diff);
-      var speed;
-      if (absDiff > 25000) {
-        speed = Math.min(absDiff * 0.35, 4000);
-      } else if (absDiff > 5000) {
-        speed = Math.min(absDiff * 0.3, 2200);
-      } else if (absDiff > 1000) {
-        speed = Math.min(absDiff * 0.25, 900);
-      } else {
-        speed = Math.max(14, Math.min(absDiff * 0.2, 180));
-      }
-
-      var move = Math.sign(diff) * Math.min(absDiff, speed);
-      window.scrollBy(0, move);
-
-      if (window.scrollY === lastScrollY) {
-        stuckFrames++;
-        if (stuckFrames > 20) {
-          _activeScrollId = null;
-          _pinnedTocId = null;
-          cleanup();
-          return;
-        }
-      } else {
-        stuckFrames = 0;
-        lastScrollY = window.scrollY;
-      }
-
-      _activeScrollId = requestAnimationFrame(frame);
-    }
-
-    _activeScrollId = requestAnimationFrame(frame);
-  }
-
-  window.smoothScrollToElement = smoothScrollToElement;
-
-  document.addEventListener('click', function(e) {
-    var summaryLink = e.target.closest('summary a');
-    if (summaryLink) {
-      var h = summaryLink.getAttribute('href') || '';
-      if (h.indexOf('#') !== 0) {
-        e.stopPropagation();
-      }
-    }
-  }, true);
-
-  document.addEventListener('click', function(e) {
-    var drawer = document.getElementById('lttMobileDrawer');
-    var toggle = document.getElementById('lttNavToggle') || document.getElementById('lttBurgerBtn');
-    if (drawer && drawer.classList.contains('is-open')) {
-      if (e.target.closest('#lttMobileDrawer a')) {
-        drawer.classList.remove('is-open');
-        if (toggle) {
-          toggle.classList.remove('is-active');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-        drawer.setAttribute('aria-hidden', 'true');
-      }
-    }
-
-    var a = e.target.closest('a[href*="#"]');
-    if (!a) return;
-    var rawHref = a.getAttribute('href') || '';
-    var hashIdx = rawHref.indexOf('#');
-    if (hashIdx === -1) return;
-    var pathPart = rawHref.slice(0, hashIdx);
-    if (pathPart) {
-      try {
-        var resolved = new URL(rawHref, window.location.href);
-        if (resolved.origin !== window.location.origin ||
-            resolved.pathname.replace(/\.html$/, '').replace(/\/$/, '') !== window.location.pathname.replace(/\.html$/, '').replace(/\/$/, '')) {
-          return;
-        }
-      } catch (err) {
-        return;
-      }
-    }
-
-    var hash = rawHref.slice(hashIdx);
-    if (!hash || hash === '#' || hash === '#top') return;
-    var targetId = decodeURIComponent(hash.slice(1));
-    var target = document.getElementById(targetId);
-    if (!target && targetId === 'ltt-cards-deck') {
-      target = document.getElementById('dinner-cruises-list') || document.getElementById('river-cruises-quick-summary') || document.getElementById('comparison-quick-summary');
-    }
-    if (!target) return;
-
-    e.preventDefault();
-    e.stopPropagation();
-
-    unlockAndCloseSheets();
-    smoothScrollToElement(target, 85);
-    if (history.pushState) {
-      history.pushState(null, '', '#' + target.id);
-    }
-  }, true);
-
-  function initTocScrollSpy() {
-    var tocLinks = Array.from(document.querySelectorAll('#toc .tocitem, .toc .tocitem'));
-    if (!tocLinks.length) return;
-    var tocTargets = [];
-    tocLinks.forEach(function(link) {
-      var h = link.getAttribute('href') || '';
-      if (h.indexOf('#') === 0 && h.length > 1) {
-        var el = document.getElementById(h.slice(1));
-        if (el) tocTargets.push({ id: el.id, el: el, link: link });
-      }
-    });
-    if (!tocTargets.length) return;
-
-    function updateToc() {
-      if (_pinnedTocId) {
-        highlightTocId(_pinnedTocId);
-        return;
-      }
-      var sorted = tocTargets.slice().sort(function(a, b) {
-        return a.el.getBoundingClientRect().top - b.el.getBoundingClientRect().top;
-      });
-      var activeId = sorted[0].id;
-      for (var i = 0; i < sorted.length; i++) {
-        if (sorted[i].el.getBoundingClientRect().top <= 140) {
-          activeId = sorted[i].id;
-        }
-      }
-      highlightTocId(activeId);
-    }
-
-    var ticking = false;
-    window.addEventListener('scroll', function() {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(function() {
-          updateToc();
-          ticking = false;
-        });
-      }
-    }, { passive: true });
-
-    updateToc();
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initTocScrollSpy);
-  } else {
-    initTocScrollSpy();
-  }
-})();
 </script>
-
 <script id="ltt-language-switcher-logic">
 (function() {
   window.lttToggleLangDropdown = function() {
