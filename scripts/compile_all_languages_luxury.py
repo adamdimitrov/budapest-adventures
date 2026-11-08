@@ -59,39 +59,78 @@ SLUG_MAP = {
 with open(DICT_PATH, 'r', encoding='utf-8') as f:
     I18N = json.load(f)
 
-def extract_tour_content(harvested_path):
+def extract_tour_content(harvested_path, cruise_type='river'):
     """Extract all tours with titles, pros, cons, and summaries from harvested HTML."""
     if not os.path.exists(harvested_path):
         return []
     soup = BeautifulSoup(open(harvested_path, encoding='utf-8'), 'html.parser')
-    h2s = [h for h in soup.find_all('h2') if h.text.strip() and h.text.strip()[0].isdigit()]
-    
     tours = []
-    for h2 in h2s:
-        title = h2.text.strip()
-        # Clean leading numbering like "1. "
-        clean_title = re.sub(r'^\d+\.\s*', '', title)
-        
-        gp = h2.find_parent(class_='w-layout-grid') or h2.parent.parent.parent
-        pros = []
-        cons = []
-        for p in gp.find_all('p'):
-            ptxt = p.text.strip()
-            if '✔️' in ptxt or '✓' in ptxt:
-                pros.append(ptxt.replace('✔️', '').replace('✓', '').strip())
-            elif '❌' in ptxt or '✗' in ptxt:
-                cons.append(ptxt.replace('❌', '').replace('✗', '').strip())
+    
+    if cruise_type == 'river':
+        titles = soup.find_all(class_='coin-name-2')
+        if not titles:
+            titles = [h for h in soup.find_all(['h2', 'h3']) if h.text.strip() and re.match(r'^\d+\.', h.text.strip())]
+            
+        for t in titles:
+            raw_title = t.get_text(strip=True)
+            clean_title = re.sub(r'^\d+\.\s*', '', raw_title)
+            if ':' in clean_title:
+                clean_title = clean_title.split(':', 1)[1].strip()
+            elif '—' in clean_title:
+                clean_title = clean_title.split('—', 1)[1].strip()
                 
-        rich = gp.find(class_='rich-text-comparison-list')
-        sums = [p.text.strip() for p in rich.find_all('p') if p.text.strip()] if rich else []
-        
-        tours.append({
-            'full_title': title,
-            'clean_title': clean_title,
-            'pros': pros,
-            'cons': cons,
-            'summaries': sums
-        })
+            container = t.find_parent('div', class_='table-row-grey-3') or t.find_parent('div', class_='w-layout-grid') or t.parent.parent
+            pros = []
+            cons = []
+            sums = []
+            if container:
+                for p in container.find_all(['p', 'li']):
+                    txt = p.get_text(strip=True)
+                    if any(ch in txt for ch in ['✔️', '✓']):
+                        pros.append(txt.replace('✔️', '').replace('✓', '').strip())
+                    elif any(ch in txt for ch in ['❌', '✗']):
+                        cons.append(txt.replace('❌', '').replace('✗', '').strip())
+                    elif len(txt) > 30 and not any(ch in txt for ch in ['✔️', '✓', '❌', '✗']):
+                        if not any(k in txt for k in ['http', 'cookie', 'copyright', 'Gondel', 'Legenda / Donaulegende', 'Duna Bella']):
+                            sums.append(txt)
+            tours.append({
+                'full_title': raw_title,
+                'clean_title': clean_title,
+                'pros': pros,
+                'cons': cons,
+                'summaries': sums[:3]
+            })
+    else:  # dinner
+        h2s = soup.find_all('h2', class_='heading-33')
+        if not h2s:
+            blog = soup.find('div', class_='content-right_blog')
+            if blog:
+                h2s = blog.find_all('h2')
+                
+        for h2 in h2s:
+            raw_title = h2.get_text(strip=True)
+            clean_title = re.sub(r'^\d+\.\s*', '', raw_title)
+            container = h2.find_parent('div', class_='w-container') or h2.parent.parent
+            pros = []
+            cons = []
+            sums = []
+            if container:
+                for p in container.find_all(['p', 'li']):
+                    txt = p.get_text(strip=True)
+                    if any(ch in txt for ch in ['✔️', '✓']):
+                        pros.append(txt.replace('✔️', '').replace('✓', '').strip())
+                    elif any(ch in txt for ch in ['❌', '✗']):
+                        cons.append(txt.replace('❌', '').replace('✗', '').strip())
+                    elif len(txt) > 35 and not any(ch in txt for ch in ['✔️', '✓', '❌', '✗']):
+                        if not any(k in txt for k in ['Klicken Sie hier', 'Cliquez ici', 'Haga clic', 'Clicca qui']):
+                            sums.append(txt)
+            tours.append({
+                'full_title': raw_title,
+                'clean_title': clean_title,
+                'pros': pros,
+                'cons': cons,
+                'summaries': sums[:3]
+            })
     return tours
 
 def create_pro_con_html(soup, pros, cons, pros_label="Pros:", cons_label="Cons:"):
@@ -403,7 +442,7 @@ def compile_river_guide(lang, en_html):
     dinner_slug = slugs['dinner']
     
     harvested_river = os.path.join(CACHE_DIR, lang, 'river.html')
-    tours = extract_tour_content(harvested_river)
+    tours = extract_tour_content(harvested_river, 'river')
     
     soup = BeautifulSoup(en_html, 'html.parser')
     localize_universal_links(soup, lang, river_slug, dinner_slug)
@@ -427,7 +466,9 @@ def compile_river_guide(lang, en_html):
             
     # H1
     h1 = soup.find('h1')
-    if h_soup:
+    if data and 'cards' in data and len(data['cards']) > 0 and data['cards'][0].get('title'):
+        h1.string = data['cards'][0]['title']
+    elif h_soup:
         h_h1 = h_soup.find('h1')
         if h_h1 and h1: h1.string = h_h1.text.strip()
         
@@ -525,10 +566,9 @@ def compile_dinner_guide(lang, en_html):
     slugs = SLUG_MAP[lang]
     river_slug = slugs['river']
     dinner_slug = slugs['dinner']
-    dinner_slug = slugs['dinner']
     
     harvested_dinner = os.path.join(CACHE_DIR, lang, 'dinner.html')
-    tours = extract_tour_content(harvested_dinner)
+    tours = extract_tour_content(harvested_dinner, 'dinner')
     
     soup = BeautifulSoup(en_html, 'html.parser')
     localize_universal_links(soup, lang, river_slug, dinner_slug)
@@ -552,7 +592,9 @@ def compile_dinner_guide(lang, en_html):
             
     # H1
     h1 = soup.find('h1')
-    if h_soup:
+    if data and 'cards' in data and len(data['cards']) > 1 and data['cards'][1].get('title'):
+        h1.string = data['cards'][1]['title']
+    elif h_soup:
         h_h1 = h_soup.find('h1')
         if h_h1 and h1: h1.string = h_h1.text.strip()
         
@@ -653,6 +695,8 @@ def compile_all():
     success_count = 0
     
     for lang in LANGS:
+        if lang == 'hu':
+            continue
         slugs = SLUG_MAP[lang]
         river_slug = slugs['river']
         dinner_slug = slugs['dinner']

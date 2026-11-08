@@ -3,8 +3,8 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8"/>
-<title>Budapest Nehir Gezileri | Day, Night &amp; Dinner Tours from €14</title>
-<meta content="Explore Budapest's iconic landmarks on Danube river cruises. Day, night, dinner &amp; prosecco tours from €14. Audio guides in 30 languages. Book now!" name="description"/>
+<title>Independent, Field-Tested Reviews of Tuna Nehri Turları in Budapest | Budapest Adventures (2026)</title>
+<meta content="Firsthand evaluations of seating sightlines, audio guide translation clarity, and hidden cruise line fees. Tested undercover in Budapest by local reviewer Adam Dimitrov." name="description"/>
 <meta content="Budapest Adventures — Independent, Field-Tested Danube River &amp; Dinner Cruise Reviews (2026)" property="og:title"/>
 <meta content="Candid, undercover Danube river cruise reviews. Personally tested menus, seat views, and transparent pricing in Budapest by local tester Adam Dimitrov." property="og:description"/>
 <meta content="https://www.budapestadventures.com/assets/apple-touch-icon.png" property="og:image"/>
@@ -1330,6 +1330,75 @@
   white-space: nowrap;
 }
 
+/* Navigation & Mobile Drawer z-index hierarchy */
+.ltt-navbar {
+  z-index: 100000 !important;
+}
+.ltt-mobile-drawer {
+  z-index: 100000 !important;
+}
+.ltt-drawer-content {
+  padding-bottom: 50px !important;
+}
+
+/* Floating Sticky Bottom Bar z-index & Mobile Drawer conflict suppression */
+.hybrid-sticky-bar,
+.sticky-mobile-bar,
+#sticky-bar {
+  z-index: 9990 !important;
+}
+
+body.ltt-drawer-open #sticky-bar,
+body.ltt-drawer-open .hybrid-sticky-bar,
+body.ltt-drawer-open .sticky-mobile-bar,
+body:has(.ltt-mobile-drawer.is-open) #sticky-bar,
+body:has(.ltt-mobile-drawer.is-open) .hybrid-sticky-bar,
+body:has(.ltt-mobile-drawer.is-open) .sticky-mobile-bar {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  transform: translateY(150%) !important;
+}
+
+/* Mobile Toggle Hamburger Button & Symmetrical X Animation */
+.ltt-hamburger {
+  width: 42px !important;
+  height: 42px !important;
+  padding: 10px 8px !important;
+  background: transparent !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+.ltt-hamburger:hover {
+  background: #f8fafc !important;
+}
+.ltt-hamburger-bar {
+  display: block !important;
+  width: 22px !important;
+  height: 2px !important;
+  background: #0f172a !important;
+  border-radius: 2px !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease !important;
+  transform-origin: center !important;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg) !important;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(2) {
+  opacity: 0 !important;
+  transform: scaleX(0) !important;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg) !important;
+}
+
 /* Nav header alignments */
 .ltt-nav-right {
   margin-left: auto !important;
@@ -1378,14 +1447,14 @@
 <nav aria-label="Primary Navigation" class="ltt-nav-links">
 <div class="ltt-nav-dropdown" id="lttExploreDropdown">
 <button aria-expanded="false" aria-haspopup="true" class="ltt-nav-link ltt-dropdown-btn" type="button">
-<span>Tuna Nehri Turları</span>
+<span>Danube Cruises</span>
 <svg class="ltt-chevron" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12">
 <polyline points="6 9 12 15 18 9"></polyline>
 </svg>
 </button>
 <div class="ltt-mega-menu" role="menu">
 <div class="ltt-mega-col">
-<div class="ltt-mega-head">TUNA NEHRİ TURLARI</div>
+<div class="ltt-mega-head">TUNA NEHRI TURLARI</div>
 <a class="ltt-mega-item" href="/tr/nehir-yolculuklari-budapeste-tuna">
 <div>
 <strong>Top 10 River Cruises</strong>
@@ -1398,25 +1467,25 @@
 <p>4-course dining, folklore &amp; live piano</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/unlimited-prosecco-cruises-budapest">
+<a class="ltt-mega-item" href="/tr/unlimited-prosecco-cruises-budapest">
 <div>
 <strong>Unlimited Prosecco Cruises</strong>
 <p>Bottomless sparkling wine &amp; music</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/best-night-cruises-budapest">
+<a class="ltt-mega-item" href="/tr/best-night-cruises-budapest">
 <div>
 <strong>Best Night Cruises</strong>
 <p>Illuminated Parliament evening trips</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/best-private-boat-tours-budapest">
+<a class="ltt-mega-item" href="/tr/best-private-boat-tours-budapest">
 <div>
 <strong>Private Boat Tours</strong>
 <p>Exclusive Danube charters &amp; speedboats</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">
+<a class="ltt-mega-item" href="/tr/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">
 <div>
 <strong>Legenda Candlelit Review</strong>
 <p>In-depth test of Budapest's #1 dinner boat</p>
@@ -1424,26 +1493,26 @@
 </a>
 </div>
 <div class="ltt-mega-col">
-<div class="ltt-mega-head">GEZİLECEK YERLER VE KAPLICALAR</div>
-<a class="ltt-mega-item" href="/budapest-card-is-it-worth-it">
+<div class="ltt-mega-head">SPAS &amp; ATTRACTIONS</div>
+<a class="ltt-mega-item" href="/tr/budapest-card-is-it-worth-it">
 <div>
 <strong>Budapest Card Calculator</strong>
 <p>Interactive value audit across 94 sights</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/thermal-baths-budapest">
+<a class="ltt-mega-item" href="/tr/thermal-baths-budapest">
 <div>
 <strong>8 Best Thermal Baths</strong>
 <p>Széchenyi, Gellért, Rudas &amp; Lukács tested</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/best-walking-tours-budapest">
+<a class="ltt-mega-item" href="/tr/best-walking-tours-budapest">
 <div>
 <strong>Best Walking Tours</strong>
 <p>Castle District &amp; Jewish Quarter food walks</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/best-hostels-budapest">
+<a class="ltt-mega-item" href="/tr/best-hostels-budapest">
 <div>
 <strong>Best Hostels in Budapest</strong>
 <p>Social, boutique &amp; budget stays audited</p>
@@ -1452,11 +1521,11 @@
 </div>
 </div>
 </div>
-<a class="ltt-nav-link" href="/tr/nehir-yolculuklari-budapeste-tuna">Nehir Gezi Turları</a>
+<a class="ltt-nav-link" href="/tr/nehir-yolculuklari-budapeste-tuna">Tuna Nehri Turları</a>
 <a class="ltt-nav-link" href="/tr/aksam-yemegi-yolculuklari-budapeste-tuna">Akşam Yemekli Turlar</a>
-<a class="ltt-nav-link" href="/budapest-card-is-it-worth-it">Budapest Card</a>
-<a class="ltt-nav-link" href="/about">Hakkımızda</a>
-<a class="ltt-nav-link" href="/contact">İletişim</a>
+<a class="ltt-nav-link" href="/tr/budapest-card-is-it-worth-it">Budapest Card</a>
+<a class="ltt-nav-link" href="/tr/about">About</a>
+<a class="ltt-nav-link" href="/tr/contact">Contact</a>
 </nav>
 <div class="ltt-nav-right">
 <div class="ltt-lang-trigger" id="lttLangTrigger">
@@ -1578,49 +1647,47 @@
 <div class="ltt-mobile-section">
 <div class="ltt-mobile-label">Danube Cruises &amp; Guides</div>
 <a class="ltt-mobile-link" href="/tr/nehir-yolculuklari-budapeste-tuna">
-<span>Top 10 River Cruises</span>
+<span>Tuna Nehri Turları</span>
 <span style="font-size:10px; font-weight:800; background:#dfa732; color:#fff; padding:2px 7px; border-radius:9999px;">TOP PICK</span>
 </a>
 <a class="ltt-mobile-link" href="/tr/aksam-yemegi-yolculuklari-budapeste-tuna">
-<span>Top 7 Dinner Cruises</span>
+<span>Akşam Yemekli Turlar</span>
 </a>
-<a class="ltt-mobile-link" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">
+<a class="ltt-mobile-link" href="/tr/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">
 <span>Legenda Candlelit Review</span>
 </a>
-<a class="ltt-mobile-link" href="/unlimited-prosecco-cruises-budapest">
+<a class="ltt-mobile-link" href="/tr/unlimited-prosecco-cruises-budapest">
 <span>Unlimited Prosecco Cruises</span>
 </a>
-<a class="ltt-mobile-link" href="/best-night-cruises-budapest">
+<a class="ltt-mobile-link" href="/tr/best-night-cruises-budapest">
 <span>Best Night Cruises</span>
 </a>
-<a class="ltt-mobile-link" href="/best-private-boat-tours-budapest">
+<a class="ltt-mobile-link" href="/tr/best-private-boat-tours-budapest">
 <span>Private Boat Tours</span>
 </a>
 </div>
 <div class="ltt-mobile-section">
 <div class="ltt-mobile-label">City Attractions &amp; Spas</div>
-<a class="ltt-mobile-link" href="/budapest-card-is-it-worth-it">
+<a class="ltt-mobile-link" href="/tr/budapest-card-is-it-worth-it">
 <span>Budapest Card Calculator</span>
 <span style="font-size:10px; font-weight:800; background:#0284c7; color:#fff; padding:2px 7px; border-radius:9999px;">INTERACTIVE</span>
 </a>
-<a class="ltt-mobile-link" href="/thermal-baths-budapest">
+<a class="ltt-mobile-link" href="/tr/thermal-baths-budapest">
 <span>8 Best Thermal Baths</span>
 </a>
-<a class="ltt-mobile-link" href="/best-walking-tours-budapest">
+<a class="ltt-mobile-link" href="/tr/best-walking-tours-budapest">
 <span>Best Walking Tours</span>
 </a>
-<a class="ltt-mobile-link" href="/best-hostels-budapest">
+<a class="ltt-mobile-link" href="/tr/best-hostels-budapest">
 <span>Best Hostels in Budapest</span>
 </a>
 </div>
 <div class="ltt-mobile-section">
 <div class="ltt-mobile-label">Editorial</div>
-<a class="ltt-mobile-link" href="/about">
-<span>About &amp; Ethics</span>
+<a class="ltt-mobile-link" href="/tr/about">
+<span>About</span>
 </a>
-<a class="ltt-mobile-link" href="/contact">
-<span>Contact</span>
-</a>
+<a class="ltt-mobile-link" href="/tr/contact">Contact</a>
 </div>
 <div class="ltt-mobile-lang-box">
 <div class="ltt-mobile-lang-title">
@@ -1725,18 +1792,14 @@
 <!-- 2. HERO SECTION -->
 <section class="ltt-home-hero">
 <div class="ltt-container">
-<div class="ltt-hero-eyebrow">FIELD-TESTED DANUBE RIVER &amp; BUDAPEST TRAVEL GUIDES • 2026 SEASON</div>
-<h1 class="ltt-hero-title" style="color: #ffffff !important; font-family: var(--font-serif); font-size: clamp(32px, 5vw, 54px); font-weight: 800; line-height: 1.15; max-width: 960px; margin: 0 auto 20px auto; letter-spacing: -0.015em;">
-          Independent, Field-Tested Danube River Cruise Reviews for <span class="ltt-gold-text">Discerning Travelers</span>
-</h1>
-<p style="font-size: clamp(16px, 2.1vw, 20px); color: rgba(255, 255, 255, 0.82); max-width: 780px; margin: 0 auto 40px auto; line-height: 1.6;">
-          Firsthand evaluations of seating sightlines, audio guide translation clarity, departure dock logistics, and dining quality across Budapest's premier river vessels.
-        </p>
+<div class="ltt-hero-eyebrow">TUNA NEHRI TURLARI • BUDAPEST FIELD-TESTED REVIEWS (2026)</div>
+<h1 class="ltt-hero-title" style="color: #ffffff !important; font-family: var(--font-serif); font-size: clamp(32px, 5vw, 54px); font-weight: 800; line-height: 1.15; max-width: 960px; margin: 0 auto 20px auto; letter-spacing: -0.015em;">Independent, Field-Tested Reviews of Tuna Nehri Turları in Budapest</h1>
+<p style="font-size: clamp(16px, 2.1vw, 20px); color: rgba(255, 255, 255, 0.82); max-width: 780px; margin: 0 auto 40px auto; line-height: 1.6;">Firsthand evaluations of seating sightlines, audio guide translation clarity, and hidden cruise line fees. Tested undercover in Budapest by local reviewer Adam Dimitrov.</p>
 <!-- Stats Strip -->
 <div class="ltt-stats-strip">
 <div class="ltt-stat-card">
 <div class="ltt-stat-number">40+</div>
-<div class="ltt-stat-label">Danube Cruises Audited</div>
+<div class="ltt-stat-label">Cruises Audited</div>
 </div>
 <div class="ltt-stat-card">
 <div class="ltt-stat-number">100%</div>
@@ -1744,18 +1807,18 @@
 </div>
 <div class="ltt-stat-card">
 <div class="ltt-stat-number">Local</div>
-<div class="ltt-stat-label">Budapest Resident Testers</div>
+<div class="ltt-stat-label">Zero Sponsored Junkets</div>
 </div>
 </div>
 <!-- Quick Jump Pills -->
 <div class="ltt-quick-links">
-<a class="ltt-quick-btn" href="/tr/nehir-yolculuklari-budapeste-tuna">🚢 Danube Sightseeing</a>
-<a class="ltt-quick-btn" href="/tr/aksam-yemegi-yolculuklari-budapeste-tuna">🍷 Candlelit Dinner</a>
-<a class="ltt-quick-btn" href="/best-night-cruises-budapest">✨ Night Illumination</a>
-<a class="ltt-quick-btn" href="/best-private-boat-tours-budapest">🛥️ Private Boats</a>
-<a class="ltt-quick-btn" href="/unlimited-prosecco-cruises-budapest">🥂 Unlimited Prosecco</a>
-<a class="ltt-quick-btn" href="/thermal-baths-budapest">♨️ Thermal Baths</a>
-<a class="ltt-quick-btn" href="/budapest-card-is-it-worth-it">💳 Budapest Card Calculator</a>
+<a class="ltt-quick-btn" href="/tr/nehir-yolculuklari-budapeste-tuna">🚢 Tuna Nehri Turları</a>
+<a class="ltt-quick-btn" href="/tr/aksam-yemegi-yolculuklari-budapeste-tuna">🍷 Akşam Yemekli Turlar</a>
+<a class="ltt-quick-btn" href="/tr/best-night-cruises-budapest">✨ Night Illumination</a>
+<a class="ltt-quick-btn" href="/tr/best-private-boat-tours-budapest">🛥️ Private Boats</a>
+<a class="ltt-quick-btn" href="/tr/unlimited-prosecco-cruises-budapest">🥂 Unlimited Prosecco</a>
+<a class="ltt-quick-btn" href="/tr/thermal-baths-budapest">♨️ Thermal Baths</a>
+<a class="ltt-quick-btn" href="/tr/budapest-card-is-it-worth-it">💳 Budapest Card Calculator</a>
 </div>
 </div>
 </section>
@@ -1770,20 +1833,18 @@
 <!-- Spotlight Guide: 10 Best Danube River Cruises -->
 <a class="ltt-guide-featured" href="/tr/nehir-yolculuklari-budapeste-tuna">
 <div class="ltt-guide-img-wrap">
-<span class="ltt-guide-tag">🏆 FLAGSHIP GUIDE</span>
+<span class="ltt-guide-tag">🏆 TOP GUIDE</span>
 <img alt="Danube River Cruise passing Hungarian Parliament in Budapest" class="ltt-guide-img" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest.webp"/>
 </div>
 <div class="ltt-guide-content">
 <div>
-<div class="ltt-guide-kicker">Budapest Danube • 10 Operators Tested</div>
-<h3 class="ltt-guide-title">10 Best Danube River Cruises in Budapest (2026 Ranked &amp; Tested)</h3>
-<p class="ltt-guide-excerpt">
-                From Legenda City Cruises' flagship enclosed glass salons with 30-language audio guides to open-air boutique evening cruises. Complete with departure dock maps along Vigadó tér, drink inclusions, and side-by-side specs.
-              </p>
+<div class="ltt-guide-kicker">DANUBE • 10 OPERATORS TESTED</div>
+<h3 class="ltt-guide-title">10 Best Tuna Nehri Turları in Budapest (2026 Field Test)</h3>
+<p class="ltt-guide-excerpt">From Legenda City Cruises panoramic glass boats with 30-language audio guides to boutique evening cruises. Pier map at Vigadó tér, drink options, and transparent comparison.</p>
 </div>
 <div class="ltt-guide-footer">
 <span class="ltt-guide-price">From €11 / person</span>
-<span class="ltt-guide-btn">Read 10-Cruise Guide →</span>
+<span class="ltt-guide-btn">İncelemeyi oku ↓</span>
 </div>
 </div>
 </a>
@@ -1797,20 +1858,18 @@
 </div>
 <div class="ltt-guide-content">
 <div>
-<div class="ltt-guide-kicker">Evening Dining • 7 Vessels Tested</div>
-<h3 class="ltt-guide-title">7 Best Dinner Cruises in Budapest (Personally Tested)</h3>
-<p class="ltt-guide-excerpt">
-                  Legenda's 4-course candlelit lounge dining, Silverline live piano battle &amp; folklore operetta shows, and buffet cruises evaluated for dish quality and sightlines.
-                </p>
+<div class="ltt-guide-kicker">EVENING DINING • 7 BOATS TESTED</div>
+<h3 class="ltt-guide-title">7 Best Akşam Yemekli Turlar in Budapest (Personally Tested)</h3>
+<p class="ltt-guide-excerpt">From Legenda 4-course romantic candlelit lounge dining to Silverline piano battle and folklore show: food quality, seating views, and illuminated Parliament.</p>
 </div>
 <div class="ltt-guide-footer">
 <span class="ltt-guide-price">From €74 / person</span>
-<span class="ltt-guide-btn">Read Guide →</span>
+<span class="ltt-guide-btn">İncelemeyi oku ↓</span>
 </div>
 </div>
 </a>
 <!-- Guide 3: Night Cruises -->
-<a class="ltt-guide-card" href="/best-night-cruises-budapest">
+<a class="ltt-guide-card" href="/tr/best-night-cruises-budapest">
 <div class="ltt-guide-img-wrap">
 <span class="ltt-guide-tag">✨ NIGHT ILLUMINATION</span>
 <img alt="Budapest Night Cruise passing the illuminated Chain Bridge and Buda Castle" class="ltt-guide-img" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/650bf0d55ce40418f55b0094_best-night-cruises-hero.webp"/>
@@ -1830,7 +1889,7 @@
 </div>
 </a>
 <!-- Guide 4: Private Boat Tours -->
-<a class="ltt-guide-card" href="/best-private-boat-tours-budapest">
+<a class="ltt-guide-card" href="/tr/best-private-boat-tours-budapest">
 <div class="ltt-guide-img-wrap">
 <span class="ltt-guide-tag">🛥️ PRIVATE CHARTERS</span>
 <img alt="Private Venetian Water Taxi and Luxury Boat Tours on the Danube in Budapest" class="ltt-guide-img" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/648300a9bf64bb81db7000ea_0-Private-cruises-hero.webp"/>
@@ -1850,7 +1909,7 @@
 </div>
 </a>
 <!-- Guide 5: Unlimited Prosecco Cruises -->
-<a class="ltt-guide-card" href="/unlimited-prosecco-cruises-budapest">
+<a class="ltt-guide-card" href="/tr/unlimited-prosecco-cruises-budapest">
 <div class="ltt-guide-img-wrap">
 <span class="ltt-guide-tag">🥂 UNLIMITED PROSECCO</span>
 <img alt="Budapest Unlimited Prosecco cruise with illuminated night views" class="ltt-guide-img" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero.jpg"/>
@@ -1870,7 +1929,7 @@
 </div>
 </a>
 <!-- Guide 6: Thermal Baths -->
-<a class="ltt-guide-card" href="/thermal-baths-budapest">
+<a class="ltt-guide-card" href="/tr/thermal-baths-budapest">
 <div class="ltt-guide-img-wrap">
 <span class="ltt-guide-tag">♨️ HISTORIC SPAS</span>
 <img alt="Széchenyi and Gellért Thermal Baths in Budapest" class="ltt-guide-img" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64823ecaaa2f8fb97369b3fc_4-thermal-baths-budapest.webp"/>
@@ -1890,7 +1949,7 @@
 </div>
 </a>
 <!-- Guide 7: Walking Tours -->
-<a class="ltt-guide-card" href="/best-walking-tours-budapest">
+<a class="ltt-guide-card" href="/tr/best-walking-tours-budapest">
 <div class="ltt-guide-img-wrap">
 <span class="ltt-guide-tag">🚶 LOCAL TOURS</span>
 <img alt="Budapest Walking Tour in the Jewish Quarter and Castle District" class="ltt-guide-img" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64f8c324f5839b9f2092fef3_walking-tours-featured-image.webp"/>
@@ -1910,7 +1969,7 @@
 </div>
 </a>
 <!-- Guide 8: Budapest Card Calculator -->
-<a class="ltt-guide-card" href="/budapest-card-is-it-worth-it">
+<a class="ltt-guide-card" href="/tr/budapest-card-is-it-worth-it">
 <div class="ltt-guide-img-wrap">
 <span class="ltt-guide-tag">💳 VALUE CALCULATOR</span>
 <img alt="Official Budapest Card Pass with Free Public Transport &amp; Museums" class="ltt-guide-img" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64823741c9e79f16c66f949c_2-budapest-card.webp"/>
@@ -1930,7 +1989,7 @@
 </div>
 </a>
 <!-- Guide 9: Hostels -->
-<a class="ltt-guide-card" href="/best-hostels-budapest">
+<a class="ltt-guide-card" href="/tr/best-hostels-budapest">
 <div class="ltt-guide-img-wrap">
 <span class="ltt-guide-tag">🛏️ BUDGET &amp; SOCIAL</span>
 <img alt="Best Hostels in Budapest for Solo Travelers and Groups" class="ltt-guide-img" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/649187aa6fba10735a62132d_06-best-hostels-in-budapest.webp"/>
@@ -1990,7 +2049,7 @@
 </div>
 </div>
 <div style="text-align: center; margin-top: 36px;">
-<a class="ltt-guide-btn" href="/about">Read Our Full Editorial Methodology →</a>
+<a class="ltt-guide-btn" href="/tr/about">Read Our Full Editorial Methodology →</a>
 </div>
 </div>
 </section>
@@ -2003,15 +2062,15 @@
 </div>
 <div>
 <h3 class="ltt-author-name">Adam Dimitrov</h3>
-<div class="ltt-author-role">Kurucu ve Baş Tuna Nehri Turu Denetçisi</div>
+<div class="ltt-author-role">Founder &amp; Head Danube Cruise Auditor</div>
 <div class="ltt-vbadge-row">
-<span class="ltt-vbadge">✓ Nehirde bizzat denetim</span>
-<span class="ltt-vbadge">✓ Budapeşte’de 40+ test edilmiş tekne</span>
-<span class="ltt-vbadge">✓ Budapeşte’de yaşayan seyahat yazarı</span>
+<span class="ltt-vbadge">✓ Field Danube Audits</span>
+<span class="ltt-vbadge">✓ 40+ Budapest Cruises Tested</span>
+<span class="ltt-vbadge">✓ Budapest Native Travel Writer</span>
 </div>
-<p class="ltt-author-bio">Adam Dimitrov, gezginlere Tuna Nehri turları ve Budapeşte deneyimleri hakkında titiz, tarafsız ve bağımsız değerlendirmeler sunmak için Budapest Adventures’ı kurdu. Budapeşte’de yaşayarak masa düzenlerini, kalkış saatlerini, sesli rehberleri ve iskele lojistiğini bizzat test eder, böylece her zaman en doğru tekneyi seçersiniz.</p>
+<p class="ltt-author-bio">Adam Dimitrov founded Budapest Adventures to provide rigorous, independent evaluations of tuna nehri turları and Budapest travel experiences. Based in Budapest, he inspects seating sightlines, schedule reliability, audio commentary quality, and boarding logistics.</p>
 <div class="ltt-author-links">
-<a href="/about">Test metodolojimiz ve hikayemiz hakkında daha fazla bilgi edinin →</a>
+<a href="/tr/about">Learn more about our testing standards and background →</a>
 </div>
 </div>
 </div>
@@ -2030,127 +2089,115 @@
 <span>BUDAPEST ADVENTURES</span>
 </a>
 </div>
-<p class="footer-brand-desc">Tuna Nehri’ndeki en iyi gezi ve akşam yemekli tekne turlarının bağımsız, gizli saha testleri. Budapeşte’de yerleşik olarak biletlerimizi kendimiz ödüyor, sesli rehberleri test ediyor ve her iskeleyi inceliyoruz; böylece turist tuzaklarından uzak durursunuz.</p>
+<p class="footer-brand-desc">
+            Independent, undercover field testing of the Danube's premier sightseeing and dinner cruises. Based locally in Budapest, we pay our own fares, test audio guides, and inspect every pier dock so you avoid tourist traps.
+          </p>
 </div>
 <div>
-<div class="footer-col-title">Öne Çıkan Budapeşte Rehberleri</div>
+<div class="footer-col-title">Flagship Budapest Guides</div>
 <div class="footer-links-list">
-<a class="footer-link-item" href="/tr/nehir-yolculuklari-budapeste-tuna">En İyi 10 Tuna Nehri Turu</a>
-<a class="footer-link-item" href="/tr/aksam-yemegi-yolculuklari-budapeste-tuna">En İyi 7 Akşam Yemekli Tur</a>
-<a class="footer-link-item" href="/budapest-card-is-it-worth-it">Budapeşte Kart Hesaplayıcı (2026)</a>
-<a class="footer-link-item" href="/thermal-baths-budapest">Budapeşte’nin En İyi 8 Termal Kaplıcası</a>
-<a class="footer-link-item" href="/best-night-cruises-budapest">En İyi Gece Turları</a>
-<a class="footer-link-item" href="/unlimited-prosecco-cruises-budapest">Sınırsız Prosecco Turları</a>
-<a class="footer-link-item" href="/best-private-boat-tours-budapest">En İyi Özel Tekne Turları</a>
-<a class="footer-link-item" href="/best-walking-tours-budapest">Budapeşte’de En İyi Yürüyüş Turları</a>
-<a class="footer-link-item" href="/best-hostels-budapest">Budapeşte’nin En İyi Hostelleri</a>
+<a class="footer-link-item" href="/tr/nehir-yolculuklari-budapeste-tuna">10 Best Danube River Cruises</a>
+<a class="footer-link-item" href="/tr/aksam-yemegi-yolculuklari-budapeste-tuna">7 Best Dinner Cruises in Budapest</a>
+<a class="footer-link-item" href="/tr/budapest-card-is-it-worth-it">Budapest Card Value Calculator (2026)</a>
+<a class="footer-link-item" href="/tr/thermal-baths-budapest">8 Best Budapest Thermal Baths</a>
+<a class="footer-link-item" href="/tr/best-night-cruises-budapest">Best Night Cruises in Budapest</a>
+<a class="footer-link-item" href="/tr/unlimited-prosecco-cruises-budapest">Unlimited Prosecco Cruises</a>
+<a class="footer-link-item" href="/tr/best-private-boat-tours-budapest">Best Private Boat Tours</a>
+<a class="footer-link-item" href="/tr/best-walking-tours-budapest">Best Walking Tours in Budapest</a>
+<a class="footer-link-item" href="/tr/best-hostels-budapest">Best Hostels in Budapest</a>
 </div>
 </div>
 <div>
-<div class="footer-col-title">Güvenilirlik ve Şirket</div>
+<div class="footer-col-title">Trust &amp; Company</div>
 <div class="footer-links-list">
-<a class="footer-link-item" href="/about">Adam Dimitrov Hakkında</a>
-<a class="footer-link-item" href="/about#ethics">5 Maddelik Test Etiği Şartımız</a>
-<a class="footer-link-item" href="/about#manifesto">Anti-Influencer Manifestosu</a>
-<a class="footer-link-item" href="/contact">Yazı İşleri ile İletişim</a>
+<a class="footer-link-item" href="/tr/about">About Adam Dimitrov</a>
+<a class="footer-link-item" href="/tr/about#ethics">Our 5-Point Testing Ethics Charter</a>
+<a class="footer-link-item" href="/tr/about#manifesto">The Anti-Influencer Manifesto</a>
+<a class="footer-link-item" href="/tr/contact">Contact Editorial Desk</a>
 </div>
 </div>
 </div>
 <div class="grey-divider"></div>
 <div class="legal-wrapper">
-<div>© 2026 BudapestAdventures.com. Tüm hakları saklıdır.</div>
-
+<div>© 2026 BudapestAdventures.com. All rights reserved.</div>
 </div>
 </div>
 </footer>
-<script id="ltt-nav-script">
-/* ==========================================================================
-   LUXURY EDITORIAL SYSTEM — MODERN VANILLA NAVIGATION CONTROLLER
-   Zero-dependency, semantic, responsive, WCAG-compliant (Desktop & Mobile)
-   ========================================================================== */
-(function() {
-  function initNav() {
-    var toggle = document.getElementById('lttNavToggle');
-    var drawer = document.getElementById('lttMobileDrawer');
-    var dropdown = document.getElementById('lttDestinationsDropdown') || document.getElementById('lttExploreDropdown');
-    var dropBtn = dropdown ? dropdown.querySelector('.ltt-dropdown-btn') : null;
+<script id="ltt-nav-script">(function() {
+  var toggle = document.getElementById('lttNavToggle');
+  var drawer = document.getElementById('lttMobileDrawer');
+  var dropdown = document.getElementById('lttExploreDropdown');
+  var dropBtn = dropdown ? dropdown.querySelector('.ltt-dropdown-btn') : null;
 
-    if (toggle && drawer) {
-      toggle.addEventListener('click', function(e) {
-        e.stopPropagation();
-        var isOpen = drawer.classList.contains('is-open');
-        if (isOpen) {
-          drawer.classList.remove('is-open');
-          toggle.classList.remove('is-active');
-          toggle.setAttribute('aria-expanded', 'false');
-          drawer.setAttribute('aria-hidden', 'true');
-        } else {
-          drawer.classList.add('is-open');
-          toggle.classList.add('is-active');
-          toggle.setAttribute('aria-expanded', 'true');
-          drawer.setAttribute('aria-hidden', 'false');
-        }
-      });
-
-      drawer.querySelectorAll('a').forEach(function(link) {
-        link.addEventListener('click', function() {
-          drawer.classList.remove('is-open');
-          toggle.classList.remove('is-active');
-          toggle.setAttribute('aria-expanded', 'false');
-          drawer.setAttribute('aria-hidden', 'true');
-        });
-      });
-    }
-
-    if (dropBtn && dropdown) {
-      dropBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        var open = dropdown.classList.toggle('is-open');
-        dropBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
-
-    document.addEventListener('click', function(e) {
-      if (drawer && drawer.classList.contains('is-open') && !drawer.contains(e.target) && (!toggle || !toggle.contains(e.target))) {
+  if (toggle && drawer && !toggle._lttBound) {
+    toggle._lttBound = true;
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = drawer.classList.contains('is-open');
+      if (isOpen) {
         drawer.classList.remove('is-open');
-        if (toggle) {
-          toggle.classList.remove('is-active');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
+        toggle.classList.remove('is-active');
+        toggle.setAttribute('aria-expanded', 'false');
         drawer.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('ltt-drawer-open');
+      } else {
+        drawer.classList.add('is-open');
+        toggle.classList.add('is-active');
+        toggle.setAttribute('aria-expanded', 'true');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('ltt-drawer-open');
       }
-      if (dropdown && dropdown.classList.contains('is-open') && !dropdown.contains(e.target)) {
+    });
+
+    drawer.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        drawer.classList.remove('is-open');
+        toggle.classList.remove('is-active');
+        toggle.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('ltt-drawer-open');
+      });
+    });
+  }
+
+  if (dropdown && !dropdown._bound) {
+    dropdown._bound = true;
+    var closeTimeout = null;
+
+    function openMenu() {
+      if (closeTimeout) {
+        clearTimeout(closeTimeout);
+        closeTimeout = null;
+      }
+      dropdown.classList.add('is-open');
+      if (dropBtn) dropBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenuWithDelay() {
+      closeTimeout = setTimeout(function() {
         dropdown.classList.remove('is-open');
         if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
+      }, 120);
+    }
 
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        if (drawer && drawer.classList.contains('is-open')) {
-          drawer.classList.remove('is-open');
-          if (toggle) {
-            toggle.classList.remove('is-active');
-            toggle.setAttribute('aria-expanded', 'false');
-          }
-          drawer.setAttribute('aria-hidden', 'true');
-        }
-        if (dropdown && dropdown.classList.contains('is-open')) {
+    dropdown.addEventListener('mouseenter', openMenu);
+    dropdown.addEventListener('mouseleave', closeMenuWithDelay);
+
+    if (dropBtn) {
+      dropBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var isOpen = dropdown.classList.contains('is-open');
+        if (isOpen) {
           dropdown.classList.remove('is-open');
-          if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
+          dropBtn.setAttribute('aria-expanded', 'false');
+        } else {
+          dropdown.classList.add('is-open');
+          dropBtn.setAttribute('aria-expanded', 'true');
         }
-      }
-    });
+      });
+    }
   }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initNav);
-  } else {
-    initNav();
-  }
-})();
-
-</script>
+})();</script>
 <script id="ltt-language-switcher-logic">
 (function() {
   window.lttToggleLangDropdown = function() {

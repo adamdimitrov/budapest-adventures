@@ -3921,6 +3921,75 @@ html, body {
   white-space: nowrap;
 }
 
+/* Navigation & Mobile Drawer z-index hierarchy */
+.ltt-navbar {
+  z-index: 100000 !important;
+}
+.ltt-mobile-drawer {
+  z-index: 100000 !important;
+}
+.ltt-drawer-content {
+  padding-bottom: 50px !important;
+}
+
+/* Floating Sticky Bottom Bar z-index & Mobile Drawer conflict suppression */
+.hybrid-sticky-bar,
+.sticky-mobile-bar,
+#sticky-bar {
+  z-index: 9990 !important;
+}
+
+body.ltt-drawer-open #sticky-bar,
+body.ltt-drawer-open .hybrid-sticky-bar,
+body.ltt-drawer-open .sticky-mobile-bar,
+body:has(.ltt-mobile-drawer.is-open) #sticky-bar,
+body:has(.ltt-mobile-drawer.is-open) .hybrid-sticky-bar,
+body:has(.ltt-mobile-drawer.is-open) .sticky-mobile-bar {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  transform: translateY(150%) !important;
+}
+
+/* Mobile Toggle Hamburger Button & Symmetrical X Animation */
+.ltt-hamburger {
+  width: 42px !important;
+  height: 42px !important;
+  padding: 10px 8px !important;
+  background: transparent !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+.ltt-hamburger:hover {
+  background: #f8fafc !important;
+}
+.ltt-hamburger-bar {
+  display: block !important;
+  width: 22px !important;
+  height: 2px !important;
+  background: #0f172a !important;
+  border-radius: 2px !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease !important;
+  transform-origin: center !important;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg) !important;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(2) {
+  opacity: 0 !important;
+  transform: scaleX(0) !important;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg) !important;
+}
+
 /* Nav header alignments */
 .ltt-nav-right {
   margin-left: auto !important;
@@ -3965,14 +4034,14 @@ html, body {
 <nav aria-label="Primary Navigation" class="ltt-nav-links">
 <div class="ltt-nav-dropdown" id="lttExploreDropdown">
 <button aria-expanded="false" aria-haspopup="true" class="ltt-nav-link ltt-dropdown-btn" type="button">
-<span>Croisières Danube</span>
+<span>Danube Cruises</span>
 <svg class="ltt-chevron" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12">
 <polyline points="6 9 12 15 18 9"></polyline>
 </svg>
 </button>
 <div class="ltt-mega-menu" role="menu">
 <div class="ltt-mega-col">
-<div class="ltt-mega-head">CROISIÈRES SUR LE DANUBE</div>
+<div class="ltt-mega-head">DANUBE RIVER CRUISES</div>
 <a class="ltt-mega-item" href="/fr/croisieres-danube-budapest">
 <div>
 <strong>Top 10 River Cruises</strong>
@@ -3985,25 +4054,25 @@ html, body {
 <p>4-course dining, folklore &amp; live piano</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/unlimited-prosecco-cruises-budapest">
+<a class="ltt-mega-item" href="/fr/unlimited-prosecco-cruises-budapest">
 <div>
 <strong>Unlimited Prosecco Cruises</strong>
 <p>Bottomless sparkling wine &amp; music</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/best-night-cruises-budapest">
+<a class="ltt-mega-item" href="/fr/best-night-cruises-budapest">
 <div>
 <strong>Best Night Cruises</strong>
 <p>Illuminated Parliament evening trips</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/best-private-boat-tours-budapest">
+<a class="ltt-mega-item" href="/fr/best-private-boat-tours-budapest">
 <div>
 <strong>Private Boat Tours</strong>
 <p>Exclusive Danube charters &amp; speedboats</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">
+<a class="ltt-mega-item" href="/fr/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">
 <div>
 <strong>Legenda Candlelit Review</strong>
 <p>In-depth test of Budapest's #1 dinner boat</p>
@@ -4011,26 +4080,26 @@ html, body {
 </a>
 </div>
 <div class="ltt-mega-col">
-<div class="ltt-mega-head">ATTRACTIONS &amp; BAINS</div>
-<a class="ltt-mega-item" href="/budapest-card-is-it-worth-it">
+<div class="ltt-mega-head">CITY ATTRACTIONS &amp; SPAS</div>
+<a class="ltt-mega-item" href="/fr/budapest-card-is-it-worth-it">
 <div>
 <strong>Budapest Card Calculator</strong>
 <p>Interactive value audit across 94 sights</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/thermal-baths-budapest">
+<a class="ltt-mega-item" href="/fr/thermal-baths-budapest">
 <div>
 <strong>8 Best Thermal Baths</strong>
 <p>Széchenyi, Gellért, Rudas &amp; Lukács tested</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/best-walking-tours-budapest">
+<a class="ltt-mega-item" href="/fr/best-walking-tours-budapest">
 <div>
 <strong>Best Walking Tours</strong>
 <p>Castle District &amp; Jewish Quarter food walks</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/best-hostels-budapest">
+<a class="ltt-mega-item" href="/fr/best-hostels-budapest">
 <div>
 <strong>Best Hostels in Budapest</strong>
 <p>Social, boutique &amp; budget stays audited</p>
@@ -4039,11 +4108,11 @@ html, body {
 </div>
 </div>
 </div>
-<a class="ltt-nav-link" href="/fr/croisieres-danube-budapest">Croisières Promenade</a>
-<a class="ltt-nav-link" href="/fr/diner-croisieres-danube-budapest">Dîners Croisières</a>
-<a class="ltt-nav-link" href="/budapest-card-is-it-worth-it">Budapest Card</a>
-<a class="ltt-nav-link" href="/about">À propos</a>
-<a class="ltt-nav-link" href="/contact">Contact</a>
+<a class="ltt-nav-link" href="/fr/croisieres-danube-budapest">River Cruises</a>
+<a class="ltt-nav-link" href="/fr/diner-croisieres-danube-budapest">Dinner Cruises</a>
+<a class="ltt-nav-link" href="/fr/budapest-card-is-it-worth-it">Budapest Card</a>
+<a class="ltt-nav-link" href="/fr/about">About</a>
+<a class="ltt-nav-link" href="/fr/contact">Contact</a>
 </nav>
 <div class="ltt-nav-right">
 <div class="ltt-lang-trigger" id="lttLangTrigger">
@@ -4171,41 +4240,41 @@ html, body {
 <a class="ltt-mobile-link" href="/fr/diner-croisieres-danube-budapest">
 <span>Top 7 Dinner Cruises</span>
 </a>
-<a class="ltt-mobile-link" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">
+<a class="ltt-mobile-link" href="/fr/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">
 <span>Legenda Candlelit Review</span>
 </a>
-<a class="ltt-mobile-link" href="/unlimited-prosecco-cruises-budapest">
+<a class="ltt-mobile-link" href="/fr/unlimited-prosecco-cruises-budapest">
 <span>Unlimited Prosecco Cruises</span>
 </a>
-<a class="ltt-mobile-link" href="/best-night-cruises-budapest">
+<a class="ltt-mobile-link" href="/fr/best-night-cruises-budapest">
 <span>Best Night Cruises</span>
 </a>
-<a class="ltt-mobile-link" href="/best-private-boat-tours-budapest">
+<a class="ltt-mobile-link" href="/fr/best-private-boat-tours-budapest">
 <span>Private Boat Tours</span>
 </a>
 </div>
 <div class="ltt-mobile-section">
 <div class="ltt-mobile-label">City Attractions &amp; Spas</div>
-<a class="ltt-mobile-link" href="/budapest-card-is-it-worth-it">
+<a class="ltt-mobile-link" href="/fr/budapest-card-is-it-worth-it">
 <span>Budapest Card Calculator</span>
 <span style="font-size:10px; font-weight:800; background:#0284c7; color:#fff; padding:2px 7px; border-radius:9999px;">INTERACTIVE</span>
 </a>
-<a class="ltt-mobile-link" href="/thermal-baths-budapest">
+<a class="ltt-mobile-link" href="/fr/thermal-baths-budapest">
 <span>8 Best Thermal Baths</span>
 </a>
-<a class="ltt-mobile-link" href="/best-walking-tours-budapest">
+<a class="ltt-mobile-link" href="/fr/best-walking-tours-budapest">
 <span>Best Walking Tours</span>
 </a>
-<a class="ltt-mobile-link" href="/best-hostels-budapest">
+<a class="ltt-mobile-link" href="/fr/best-hostels-budapest">
 <span>Best Hostels in Budapest</span>
 </a>
 </div>
 <div class="ltt-mobile-section">
 <div class="ltt-mobile-label">Editorial</div>
-<a class="ltt-mobile-link" href="/about">
+<a class="ltt-mobile-link" href="/fr/about">
 <span>About &amp; Ethics</span>
 </a>
-<a class="ltt-mobile-link" href="/contact">
+<a class="ltt-mobile-link" href="/fr/contact">
 <span>Contact</span>
 </a>
 </div>
@@ -4308,94 +4377,81 @@ html, body {
 </div>
 <!-- MOBILE DRAWER LANGUAGE SECTION -->
 </header>
-<script id="ltt-nav-script">
-/* ==========================================================================
-   LUXURY EDITORIAL SYSTEM — MODERN VANILLA NAVIGATION CONTROLLER
-   Zero-dependency, semantic, responsive, WCAG-compliant (Desktop & Mobile)
-   ========================================================================== */
-(function() {
-  function initNav() {
-    var toggle = document.getElementById('lttNavToggle');
-    var drawer = document.getElementById('lttMobileDrawer');
-    var dropdown = document.getElementById('lttDestinationsDropdown') || document.getElementById('lttExploreDropdown');
-    var dropBtn = dropdown ? dropdown.querySelector('.ltt-dropdown-btn') : null;
+<script id="ltt-nav-script">(function() {
+  var toggle = document.getElementById('lttNavToggle');
+  var drawer = document.getElementById('lttMobileDrawer');
+  var dropdown = document.getElementById('lttExploreDropdown');
+  var dropBtn = dropdown ? dropdown.querySelector('.ltt-dropdown-btn') : null;
 
-    if (toggle && drawer) {
-      toggle.addEventListener('click', function(e) {
-        e.stopPropagation();
-        var isOpen = drawer.classList.contains('is-open');
-        if (isOpen) {
-          drawer.classList.remove('is-open');
-          toggle.classList.remove('is-active');
-          toggle.setAttribute('aria-expanded', 'false');
-          drawer.setAttribute('aria-hidden', 'true');
-        } else {
-          drawer.classList.add('is-open');
-          toggle.classList.add('is-active');
-          toggle.setAttribute('aria-expanded', 'true');
-          drawer.setAttribute('aria-hidden', 'false');
-        }
-      });
-
-      drawer.querySelectorAll('a').forEach(function(link) {
-        link.addEventListener('click', function() {
-          drawer.classList.remove('is-open');
-          toggle.classList.remove('is-active');
-          toggle.setAttribute('aria-expanded', 'false');
-          drawer.setAttribute('aria-hidden', 'true');
-        });
-      });
-    }
-
-    if (dropBtn && dropdown) {
-      dropBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        var open = dropdown.classList.toggle('is-open');
-        dropBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
-
-    document.addEventListener('click', function(e) {
-      if (drawer && drawer.classList.contains('is-open') && !drawer.contains(e.target) && (!toggle || !toggle.contains(e.target))) {
+  if (toggle && drawer && !toggle._lttBound) {
+    toggle._lttBound = true;
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = drawer.classList.contains('is-open');
+      if (isOpen) {
         drawer.classList.remove('is-open');
-        if (toggle) {
-          toggle.classList.remove('is-active');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
+        toggle.classList.remove('is-active');
+        toggle.setAttribute('aria-expanded', 'false');
         drawer.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('ltt-drawer-open');
+      } else {
+        drawer.classList.add('is-open');
+        toggle.classList.add('is-active');
+        toggle.setAttribute('aria-expanded', 'true');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('ltt-drawer-open');
       }
-      if (dropdown && dropdown.classList.contains('is-open') && !dropdown.contains(e.target)) {
+    });
+
+    drawer.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        drawer.classList.remove('is-open');
+        toggle.classList.remove('is-active');
+        toggle.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('ltt-drawer-open');
+      });
+    });
+  }
+
+  if (dropdown && !dropdown._bound) {
+    dropdown._bound = true;
+    var closeTimeout = null;
+
+    function openMenu() {
+      if (closeTimeout) {
+        clearTimeout(closeTimeout);
+        closeTimeout = null;
+      }
+      dropdown.classList.add('is-open');
+      if (dropBtn) dropBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenuWithDelay() {
+      closeTimeout = setTimeout(function() {
         dropdown.classList.remove('is-open');
         if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
+      }, 120);
+    }
 
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        if (drawer && drawer.classList.contains('is-open')) {
-          drawer.classList.remove('is-open');
-          if (toggle) {
-            toggle.classList.remove('is-active');
-            toggle.setAttribute('aria-expanded', 'false');
-          }
-          drawer.setAttribute('aria-hidden', 'true');
-        }
-        if (dropdown && dropdown.classList.contains('is-open')) {
+    dropdown.addEventListener('mouseenter', openMenu);
+    dropdown.addEventListener('mouseleave', closeMenuWithDelay);
+
+    if (dropBtn) {
+      dropBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var isOpen = dropdown.classList.contains('is-open');
+        if (isOpen) {
           dropdown.classList.remove('is-open');
-          if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
+          dropBtn.setAttribute('aria-expanded', 'false');
+        } else {
+          dropdown.classList.add('is-open');
+          dropBtn.setAttribute('aria-expanded', 'true');
         }
-      }
-    });
+      });
+    }
   }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initNav);
-  } else {
-    initNav();
-  }
-})();
-
-</script>
+})();</script>
 <style id="ltt-hero-card-styles">
 /* ==========================================================================
    LUXURY EDITORIAL SYSTEM — CANONICAL FULL-WIDTH UNIFIED HERO CARD
@@ -4669,10 +4725,14 @@ html, body {
 <div class="ltt-hero-wrap">
 <div class="ltt-clean-card">
 <div class="ltt-top-bar">
-<nav aria-label="Breadcrumb" class="ltt-breadcrumbs"><a href="/fr/">Accueil</a> <span class="ltt-bc-sep">›</span> <span class="ltt-bc-current">7 Best Dinner Cruises in Budapest (2026)</span></nav>
+<nav aria-label="Breadcrumb" class="ltt-breadcrumbs">
+<a href="/fr/">Home</a>
+<span class="ltt-bc-sep">›</span>
+<span class="ltt-bc-current">7 Best Dinner Cruises in Budapest (2026)</span>
+</nav>
 <span class="ltt-hero-kicker-badge">7 FIELD-TESTED DINNER CRUISES • 2026 EDITION</span>
 </div>
-<h1 class="ltt-editorial-h1">Les 7 meilleures croisières-dîner à Budapest en 2026 (testées personnellement)</h1>
+<h1 class="ltt-editorial-h1">Les 7 Meilleurs Dîners-Croisières à Budapest (Testés en Personne)</h1>
 <div class="ltt-trust-bar">
 <div class="ltt-author-cluster">
 <div class="ltt-author-avatar-wrap">
@@ -4680,13 +4740,13 @@ html, body {
 </div>
 <div class="ltt-author-meta">
 <div class="ltt-author-line">
-            By <a href="/about" target="_blank">Adam Dimitrov</a> — Founder &amp; Budapest River Cruise Specialist
+            By <a href="/fr/about" target="_blank">Adam Dimitrov</a> — Founder &amp; Budapest River Cruise Specialist
           </div>
 <div class="ltt-author-role">Firsthand River Audits • Real Course Tasting Audits • Dock Maps</div>
 </div>
 </div>
 <div class="ltt-trust-pills">
-<span class="ltt-trust-pill paragraph-26"><strong>Mis à jour</strong>: Novembre 2026</span>
+<span class="ltt-trust-pill paragraph-26"><strong>Last updated</strong>: Nov 2026</span>
 </div>
 </div>
 <div class="ltt-lead-copy">
@@ -4697,13 +4757,13 @@ html, body {
 <div class="ltt-integrated-filter-bar">
 <span class="ltt-filter-label">Filters:</span>
 <div class="ltt-integrated-pills">
-<button class="ltt-tab-btn active" data-cat="all" onclick="lttFilterItems('all', this)" type="button">Tous (7)</button>
-<button class="ltt-tab-btn" data-cat="tested" onclick="lttFilterItems('tested', this)" type="button">✓ Testé personnellement (5)</button>
-<button class="ltt-tab-btn" data-cat="alacarte" onclick="lttFilterItems('alacarte', this)" type="button">🍽️ Dîner à la carte (6)</button>
-<button class="ltt-tab-btn" data-cat="buffet" onclick="lttFilterItems('buffet', this)" type="button">🍱 Buffet (1)</button>
-<button class="ltt-tab-btn" data-cat="show" onclick="lttFilterItems('show', this)" type="button">🎵 Musique live &amp; Spectacle (6)</button>
-<button class="ltt-tab-btn" data-cat="drinks" onclick="lttFilterItems('drinks', this)" type="button">🍷 Boissons à volonté (1)</button>
-<button class="ltt-tab-btn" data-cat="under80" onclick="lttFilterItems('under80', this)" type="button">💶 Moins de 80 € (2)</button>
+<button class="ltt-tab-btn active" data-cat="all" onclick="lttFilterItems('all', this)" type="button">All (7)</button>
+<button class="ltt-tab-btn" data-cat="tested" onclick="lttFilterItems('tested', this)" type="button">Personally Tested (5)</button>
+<button class="ltt-tab-btn" data-cat="alacarte" onclick="lttFilterItems('alacarte', this)" type="button">A La Carte (6)</button>
+<button class="ltt-tab-btn" data-cat="buffet" onclick="lttFilterItems('buffet', this)" type="button">Buffet (1)</button>
+<button class="ltt-tab-btn" data-cat="show" onclick="lttFilterItems('show', this)" type="button">Live Music &amp; Show (6)</button>
+<button class="ltt-tab-btn" data-cat="drinks" onclick="lttFilterItems('drinks', this)" type="button">Unlimited Drinks (1)</button>
+<button class="ltt-tab-btn" data-cat="under80" onclick="lttFilterItems('under80', this)" type="button">Under €80 (2)</button>
 </div>
 </div>
 </div>
@@ -5624,10 +5684,10 @@ html, body {
   border-color: #94a3b8;
 }
 .bpa-details-card[open] .bpa-details-state-text::before {
-  content: "Masquer l'avis";
+  content: "Collapse Review";
 }
 .bpa-details-card:not([open]) .bpa-details-state-text::before {
-  content: "Lire l'avis";
+  content: "Read Review";
 }
 .bpa-details-chevron {
   display: inline-block;
@@ -7493,10 +7553,10 @@ footer.ltt-footer .legal-text {
 <a class="bpa-title" href="https://legenda.hu/en?partner=38585" rel="noopener" target="_blank">4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music</a>
 <div class="bpa-reviews-line">
 <div class="bpa-summary-reviews"><div class="div-block-53"><a class="bpa-rev-badge" href="https://legenda.hu/en?partner=38585" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZxJREFUWIXtl71Lw0AYxp/3kmvBgoP+C051U1xEHB3dHNydHBVxcBRcnB38AeIknRx1FkURHRwU3HRRxA8UdBDE73vuhUvbpE2TNvWqH3y3y3OPe97nhfviCgoKCoqYmJhoA9AHoA1AUkppAcgAyABIAVgDYAHIdF3X6vf7b70y7/w/Q+1h5/f29tqllA7A4h+l1O3VAKyFEF5Ui8fjd1Etiwgh+pZl/YyqqtqK41h2O/q+nw8E3d1h8rZtlx3HaUe1u7y+vv4Y2bKEEEL4vq/N1/G3Wp5/K5xIe9b3/Wbkrn13d7cd58qEEKINwIsL8J+BEEIogMf/gBDCKYDFz4AQohvAA4B21N3f5s3Nzfs41+eFEKIXQBf8B2j6Xy0k9hCllCeR7wLw+B+glDJCCDf6bQCWUlre2dmp2rZdM8bc3571PO812vN5hRCiqKpqu1fW8zy9W5m6ru/e39//8Hw/wD262+/v71u6rrcVRWkrinLYbrdtwzBavbSMMfT7fdbrdSzLwtraGmzbxtbWFnzfR61Ww8bGBqIoQl3XUSgUoGkaNE0DAIzHY5imic3NTcRxDCICEX3h0v8A/f4YqI6o01wAAAAASUVORK5CYII="/><span class="bpa-rev-score">4.6</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(2,400+)</span></a></div></div>
-<div class="bpa-proof"><span class="bpa-vchip">✓ Testé personnellement</span></div>
+<div class="bpa-proof"><span class="bpa-vchip">✓ Personally Tested</span></div>
 </div>
 <div class="bpa-specs-row">
-<span class="bpa-vchip bpa-proof-mobile">✓ Testé personnellement</span>
+<span class="bpa-vchip bpa-proof-mobile">✓ Personally Tested</span>
 <span class="bpa-sp">4-Course Fine Dining</span>
 <span class="bpa-sp">⏱ 2.5 Hours</span>
 <span class="bpa-sp">Live Salon Music</span>
@@ -7509,15 +7569,15 @@ footer.ltt-footer .legal-text {
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€110</div>
-<div class="bpa-psub">par adulte</div>
+<div class="bpa-psub">Free cancellation up to 24h</div>
 </div>
-<a class="bpa-btn" href="https://legenda.hu/en?partner=38585" rel="noopener" target="_blank">Réserver maintenant →</a>
+<a class="bpa-btn" href="https://legenda.hu/en?partner=38585" rel="noopener" target="_blank">Vérifier les disponibilités →</a>
 <div class="bpa-trust-micro">
-<span>Billet mobile instantané</span>
+<span>Billet QR Instantané</span>
 <span>•</span>
-<span>Annulation gratuite 24h</span>
+<span>Embarcadère Officiel: Vigadó tér</span>
 </div>
-<a class="bpa-sublink" href="#cruise-1-legenda">Lire l'avis ↓</a>
+<a class="bpa-sublink" href="#cruise-1-legenda">Read Review ↓</a>
 </div>
 </div>
 </div>
@@ -7567,10 +7627,10 @@ footer.ltt-footer .legal-text {
 <a class="bpa-title" href="https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures" rel="noopener" target="_blank">4-Course Dinner Cruise with Welcome Drink Without Show (New!)</a>
 <div class="bpa-reviews-line">
 <div class="bpa-summary-reviews"><div class="div-block-53"><a class="bpa-rev-badge" href="https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZxJREFUWIXtl71Lw0AYxp/3kmvBgoP+C051U1xEHB3dHNydHBVxcBRcnB38AeIknRx1FkURHRwU3HRRxA8UdBDE73vuhUvbpE2TNvWqH3y3y3OPe97nhfviCgoKCoqYmJhoA9AHoA1AUkppAcgAyABIAVgDYAHIdF3X6vf7b70y7/w/Q+1h5/f29tqllA7A4h+l1O3VAKyFEF5Ui8fjd1Etiwgh+pZl/YyqqtqK41h2O/q+nw8E3d1h8rZtlx3HaUe1u7y+vv4Y2bKEEEL4vq/N1/G3Wp5/K5xIe9b3/Wbkrn13d7cd58qEEKINwIsL8J+BEEIogMf/gBDCKYDFz4AQohvAA4B21N3f5s3Nzfs41+eFEKIXQBf8B2j6Xy0k9hCllCeR7wLw+B+glDJCCDf6bQCWUlre2dmp2rZdM8bc3571PO812vN5hRCiqKpqu1fW8zy9W5m6ru/e39//8Hw/wD262+/v71u6rrcVRWkrinLYbrdtwzBavbSMMfT7fdbrdSzLwtraGmzbxtbWFnzfR61Ww8bGBqIoQl3XUSgUoGkaNE0DAIzHY5imic3NTcRxDCICEX3h0v8A/f4YqI6o01wAAAAASUVORK5CYII="/><span class="bpa-rev-score">4.6</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(2,400+)</span></a></div></div>
-<div class="bpa-proof"><span class="bpa-vchip">✓ Testé personnellement</span></div>
+<div class="bpa-proof"><span class="bpa-vchip">✓ Personally Tested</span></div>
 </div>
 <div class="bpa-specs-row">
-<span class="bpa-vchip bpa-proof-mobile">✓ Testé personnellement</span>
+<span class="bpa-vchip bpa-proof-mobile">✓ Personally Tested</span>
 <span class="bpa-sp">4-Course Gourmet</span>
 <span class="bpa-sp">⏱ 2.0–2.5 Hours</span>
 <span class="bpa-sp">Background Music Only</span>
@@ -7583,15 +7643,15 @@ footer.ltt-footer .legal-text {
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€74</div>
-<div class="bpa-psub">par adulte</div>
+<div class="bpa-psub">Free cancellation up to 24h</div>
 </div>
-<a class="bpa-btn" href="https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures" rel="noopener" target="_blank">Réserver maintenant →</a>
+<a class="bpa-btn" href="https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures" rel="noopener" target="_blank">Vérifier les disponibilités →</a>
 <div class="bpa-trust-micro">
-<span>Billet mobile instantané</span>
+<span>Billet QR Instantané</span>
 <span>•</span>
-<span>Annulation gratuite 24h</span>
+<span>Embarcadère Officiel: Vigadó tér</span>
 </div>
-<a class="bpa-sublink" href="#cruise-2-silverline-no-show">Lire l'avis ↓</a>
+<a class="bpa-sublink" href="#cruise-2-silverline-no-show">Read Review ↓</a>
 </div>
 </div>
 </div>
@@ -7622,10 +7682,10 @@ footer.ltt-footer .legal-text {
 <a class="bpa-title" href="https://budapestrivercruise.eu/product/budapest-danube-dinner-cruise/?code=bpadventures" rel="noopener" target="_blank">4-Course Gourmet Dinner Cruise With Folk Operetta Show</a>
 <div class="bpa-reviews-line">
 <div class="bpa-summary-reviews"><div class="div-block-53"><a class="bpa-rev-badge" href="https://budapestrivercruise.eu/product/budapest-danube-dinner-cruise/?code=bpadventures" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZxJREFUWIXtl71Lw0AYxp/3kmvBgoP+C051U1xEHB3dHNydHBVxcBRcnB38AeIknRx1FkURHRwU3HRRxA8UdBDE73vuhUvbpE2TNvWqH3y3y3OPe97nhfviCgoKCoqYmJhoA9AHoA1AUkppAcgAyABIAVgDYAHIdF3X6vf7b70y7/w/Q+1h5/f29tqllA7A4h+l1O3VAKyFEF5Ui8fjd1Etiwgh+pZl/YyqqtqK41h2O/q+nw8E3d1h8rZtlx3HaUe1u7y+vv4Y2bKEEEL4vq/N1/G3Wp5/K5xIe9b3/Wbkrn13d7cd58qEEKINwIsL8J+BEEIogMf/gBDCKYDFz4AQohvAA4B21N3f5s3Nzfs41+eFEKIXQBf8B2j6Xy0k9hCllCeR7wLw+B+glDJCCDf6bQCWUlre2dmp2rZdM8bc3571PO812vN5hRCiqKpqu1fW8zy9W5m6ru/e39//8Hw/wD262+/v71u6rrcVRWkrinLYbrdtwzBavbSMMfT7fdbrdSzLwtraGmzbxtbWFnzfR61Ww8bGBqIoQl3XUSgUoGkaNE0DAIzHY5imic3NTcRxDCICEX3h0v8A/f4YqI6o01wAAAAASUVORK5CYII="/><span class="bpa-rev-score">4.6</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(2,400+)</span></a></div></div>
-<div class="bpa-proof"><span class="bpa-vchip">✓ Testé personnellement</span></div>
+<div class="bpa-proof"><span class="bpa-vchip">✓ Personally Tested</span></div>
 </div>
 <div class="bpa-specs-row">
-<span class="bpa-vchip bpa-proof-mobile">✓ Testé personnellement</span>
+<span class="bpa-vchip bpa-proof-mobile">✓ Personally Tested</span>
 <span class="bpa-sp">4-Course Gourmet</span>
 <span class="bpa-sp">⏱ 2.5–3.0 Hours</span>
 <span class="bpa-sp">Folk Dance &amp; Operetta</span>
@@ -7638,15 +7698,15 @@ footer.ltt-footer .legal-text {
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€91</div>
-<div class="bpa-psub">par adulte</div>
+<div class="bpa-psub">Free cancellation up to 24h</div>
 </div>
-<a class="bpa-btn" href="https://budapestrivercruise.eu/product/budapest-danube-dinner-cruise/?code=bpadventures" rel="noopener" target="_blank">Réserver maintenant →</a>
+<a class="bpa-btn" href="https://budapestrivercruise.eu/product/budapest-danube-dinner-cruise/?code=bpadventures" rel="noopener" target="_blank">Vérifier les disponibilités →</a>
 <div class="bpa-trust-micro">
-<span>Billet mobile instantané</span>
+<span>Billet QR Instantané</span>
 <span>•</span>
-<span>Annulation gratuite 24h</span>
+<span>Embarcadère Officiel: Vigadó tér</span>
 </div>
-<a class="bpa-sublink" href="#cruise-3-silverline-folklore">Lire l'avis ↓</a>
+<a class="bpa-sublink" href="#cruise-3-silverline-folklore">Read Review ↓</a>
 </div>
 </div>
 </div>
@@ -7673,10 +7733,10 @@ footer.ltt-footer .legal-text {
 <a class="bpa-title" href="https://budapestrivercruise.eu/product/dinner-cruise-piano-battle-show/?code=bpadventures" rel="noopener" target="_blank">4-Course Gourmet Dinner Cruise With Piano Battle Show</a>
 <div class="bpa-reviews-line">
 <div class="bpa-summary-reviews"><div class="div-block-53"><a class="bpa-rev-badge" href="https://budapestrivercruise.eu/product/dinner-cruise-piano-battle-show/?code=bpadventures" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZxJREFUWIXtl71Lw0AYxp/3kmvBgoP+C051U1xEHB3dHNydHBVxcBRcnB38AeIknRx1FkURHRwU3HRRxA8UdBDE73vuhUvbpE2TNvWqH3y3y3OPe97nhfviCgoKCoqYmJhoA9AHoA1AUkppAcgAyABIAVgDYAHIdF3X6vf7b70y7/w/Q+1h5/f29tqllA7A4h+l1O3VAKyFEF5Ui8fjd1Etiwgh+pZl/YyqqtqK41h2O/q+nw8E3d1h8rZtlx3HaUe1u7y+vv4Y2bKEEEL4vq/N1/G3Wp5/K5xIe9b3/Wbkrn13d7cd58qEEKINwIsL8J+BEEIogMf/gBDCKYDFz4AQohvAA4B21N3f5s3Nzfs41+eFEKIXQBf8B2j6Xy0k9hCllCeR7wLw+B+glDJCCDf6bQCWUlre2dmp2rZdM8bc3571PO812vN5hRCiqKpqu1fW8zy9W5m6ru/e39//8Hw/wD262+/v71u6rrcVRWkrinLYbrdtwzBavbSMMfT7fdbrdSzLwtraGmzbxtbWFnzfR61Ww8bGBqIoQl3XUSgUoGkaNE0DAIzHY5imic3NTcRxDCICEX3h0v8A/f4YqI6o01wAAAAASUVORK5CYII="/><span class="bpa-rev-score">4.6</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(2,400+)</span></a></div></div>
-<div class="bpa-proof"><span class="bpa-vchip">✓ Testé personnellement</span></div>
+<div class="bpa-proof"><span class="bpa-vchip">✓ Personally Tested</span></div>
 </div>
 <div class="bpa-specs-row">
-<span class="bpa-vchip bpa-proof-mobile">✓ Testé personnellement</span>
+<span class="bpa-vchip bpa-proof-mobile">✓ Personally Tested</span>
 <span class="bpa-sp">4-Course Gourmet</span>
 <span class="bpa-sp">⏱ 2.5–3.0 Hours</span>
 <span class="bpa-sp">Dual Grand Piano Duel</span>
@@ -7689,15 +7749,15 @@ footer.ltt-footer .legal-text {
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€91</div>
-<div class="bpa-psub">par adulte</div>
+<div class="bpa-psub">Free cancellation up to 24h</div>
 </div>
-<a class="bpa-btn" href="https://budapestrivercruise.eu/product/dinner-cruise-piano-battle-show/?code=bpadventures" rel="noopener" target="_blank">Réserver maintenant →</a>
+<a class="bpa-btn" href="https://budapestrivercruise.eu/product/dinner-cruise-piano-battle-show/?code=bpadventures" rel="noopener" target="_blank">Vérifier les disponibilités →</a>
 <div class="bpa-trust-micro">
-<span>Billet mobile instantané</span>
+<span>Billet QR Instantané</span>
 <span>•</span>
-<span>Annulation gratuite 24h</span>
+<span>Embarcadère Officiel: Vigadó tér</span>
 </div>
-<a class="bpa-sublink" href="#cruise-4-silverline-piano">Lire l'avis ↓</a>
+<a class="bpa-sublink" href="#cruise-4-silverline-piano">Read Review ↓</a>
 </div>
 </div>
 </div>
@@ -7732,10 +7792,10 @@ footer.ltt-footer .legal-text {
 <a class="bpa-title" href="https://budapestxplore.com/en/budapest-dinner-and-cruise-with-live-music-xpZDZlZTExMN?affi=6876" rel="noopener" target="_blank">12-Course Buffet Dinner Cruise With Folk Music &amp; Folk Dance</a>
 <div class="bpa-reviews-line">
 <div class="bpa-summary-reviews"><div class="div-block-53"><a class="bpa-rev-badge" href="https://budapestxplore.com/en/budapest-dinner-and-cruise-with-live-music-xpZDZlZTExMN?affi=6876" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZxJREFUWIXtl71Lw0AYxp/3kmvBgoP+C051U1xEHB3dHNydHBVxcBRcnB38AeIknRx1FkURHRwU3HRRxA8UdBDE73vuhUvbpE2TNvWqH3y3y3OPe97nhfviCgoKCoqYmJhoA9AHoA1AUkppAcgAyABIAVgDYAHIdF3X6vf7b70y7/w/Q+1h5/f29tqllA7A4h+l1O3VAKyFEF5Ui8fjd1Etiwgh+pZl/YyqqtqK41h2O/q+nw8E3d1h8rZtlx3HaUe1u7y+vv4Y2bKEEEL4vq/N1/G3Wp5/K5xIe9b3/Wbkrn13d7cd58qEEKINwIsL8J+BEEIogMf/gBDCKYDFz4AQohvAA4B21N3f5s3Nzfs41+eFEKIXQBf8B2j6Xy0k9hCllCeR7wLw+B+glDJCCDf6bQCWUlre2dmp2rZdM8bc3571PO812vN5hRCiqKpqu1fW8zy9W5m6ru/e39//8Hw/wD262+/v71u6rrcVRWkrinLYbrdtwzBavbSMMfT7fdbrdSzLwtraGmzbxtbWFnzfR61Ww8bGBqIoQl3XUSgUoGkaNE0DAIzHY5imic3NTcRxDCICEX3h0v8A/f4YqI6o01wAAAAASUVORK5CYII="/><span class="bpa-rev-score">4.6</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(2,400+)</span></a></div></div>
-<div class="bpa-proof"><span class="bpa-vchip">✓ Testé personnellement</span></div>
+<div class="bpa-proof"><span class="bpa-vchip">✓ Personally Tested</span></div>
 </div>
 <div class="bpa-specs-row">
-<span class="bpa-vchip bpa-proof-mobile">✓ Testé personnellement</span>
+<span class="bpa-vchip bpa-proof-mobile">✓ Personally Tested</span>
 <span class="bpa-sp">12-Course Buffet</span>
 <span class="bpa-sp">⏱ 2.0 Hours</span>
 <span class="bpa-sp">Live Gypsy Band &amp; Dancers</span>
@@ -7748,15 +7808,15 @@ footer.ltt-footer .legal-text {
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€79</div>
-<div class="bpa-psub">par adulte</div>
+<div class="bpa-psub">Free cancellation up to 24h</div>
 </div>
-<a class="bpa-btn" href="https://budapestxplore.com/en/budapest-dinner-and-cruise-with-live-music-xpZDZlZTExMN?affi=6876" rel="noopener" target="_blank">Réserver maintenant →</a>
+<a class="bpa-btn" href="https://budapestxplore.com/en/budapest-dinner-and-cruise-with-live-music-xpZDZlZTExMN?affi=6876" rel="noopener" target="_blank">Vérifier les disponibilités →</a>
 <div class="bpa-trust-micro">
-<span>Billet mobile instantané</span>
+<span>Billet QR Instantané</span>
 <span>•</span>
-<span>Annulation gratuite 24h</span>
+<span>Embarcadère Officiel: Vigadó tér</span>
 </div>
-<a class="bpa-sublink" href="#cruise-5-hungaria-koncert">Lire l'avis ↓</a>
+<a class="bpa-sublink" href="#cruise-5-hungaria-koncert">Read Review ↓</a>
 </div>
 </div>
 </div>
@@ -7798,15 +7858,15 @@ footer.ltt-footer .legal-text {
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€90</div>
-<div class="bpa-psub">par adulte</div>
+<div class="bpa-psub">Free cancellation up to 24h</div>
 </div>
-<a class="bpa-btn" href="https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=eng-dinner-cruises-budapest-eurama-reviews&amp;mkt_cmp=true" rel="noopener" target="_blank">Réserver maintenant →</a>
+<a class="bpa-btn" href="https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=eng-dinner-cruises-budapest-eurama-reviews&amp;mkt_cmp=true" rel="noopener" target="_blank">Vérifier les disponibilités →</a>
 <div class="bpa-trust-micro">
-<span>Billet mobile instantané</span>
+<span>Billet QR Instantané</span>
 <span>•</span>
-<span>Annulation gratuite 24h</span>
+<span>Embarcadère Officiel: Vigadó tér</span>
 </div>
-<a class="bpa-sublink" href="#cruise-6-eurama">Lire l'avis ↓</a>
+<a class="bpa-sublink" href="#cruise-6-eurama">Read Review ↓</a>
 </div>
 </div>
 </div>
@@ -7836,15 +7896,15 @@ footer.ltt-footer .legal-text {
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€99</div>
-<div class="bpa-psub">par adulte</div>
+<div class="bpa-psub">Free cancellation up to 24h</div>
 </div>
-<a class="bpa-btn" href="https://www.getyourguide.com/budapest-l29/budapestpremium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=budapest-dinner-cruises-comparison-list-unlimited-drinks" rel="noopener" target="_blank">Réserver maintenant →</a>
+<a class="bpa-btn" href="https://www.getyourguide.com/budapest-l29/budapestpremium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=budapest-dinner-cruises-comparison-list-unlimited-drinks" rel="noopener" target="_blank">Vérifier les disponibilités →</a>
 <div class="bpa-trust-micro">
-<span>Billet mobile instantané</span>
+<span>Billet QR Instantané</span>
 <span>•</span>
-<span>Annulation gratuite 24h</span>
+<span>Embarcadère Officiel: Vigadó tér</span>
 </div>
-<a class="bpa-sublink" href="#cruise-7-unlimited-drinks">Lire l'avis ↓</a>
+<a class="bpa-sublink" href="#cruise-7-unlimited-drinks">Read Review ↓</a>
 </div>
 </div>
 </div>
@@ -7853,12 +7913,12 @@ footer.ltt-footer .legal-text {
 </div></div><div class="blog-section-2"><div class="container-31"><div class="blog-grid-2"><div class="content-left"><div class="stick-wrapper"><div class="title-small-3">Table of Contents</div><div class="toc" id="toc"></div></div></div><div class="content-right_blog" id="content"><div class="container-33 w-container">
 <div class="bpa-breakdown-top-bar" id="breakdown-header">
 <div>
-<h2 class="bpa-breakdown-heading" id="desert-safaris-breakdown">Analyse détaillée — Les 7 meilleurs dîners croisières à Budapest</h2>
-<p class="bpa-breakdown-sub">Testé personnellement • Tous les avis sont ouverts par défaut • Cliquez pour réduire/développer</p>
+<h2 class="bpa-breakdown-heading" id="desert-safaris-breakdown">Detailed Breakdown — 7 Best Dinner Cruises in Budapest</h2>
+<p class="bpa-breakdown-sub">Personally field-tested • All reviews open by default • Click to collapse/expand</p>
 </div>
 <div class="bpa-acc-controls">
-<button class="bpa-acc-ctrl-btn" onclick="toggleAllDetails(true)" type="button">Tout développer</button>
-<button class="bpa-acc-ctrl-btn" onclick="toggleAllDetails(false)" type="button">Tout réduire</button>
+<button class="bpa-acc-ctrl-btn" onclick="toggleAllDetails(true)" type="button">Expand All</button>
+<button class="bpa-acc-ctrl-btn" onclick="toggleAllDetails(false)" type="button">Collapse All</button>
 </div>
 </div>
 <details class="bpa-details-card" data-cat="tested alacarte show" id="cruise-1-legenda" open="">
@@ -7868,10 +7928,10 @@ footer.ltt-footer .legal-text {
 <span class="bpa-rank-tag bpa-gold">🏆 #1 Best Overall</span>
 <div class="bpa-kicker">Legenda City Cruises • ⏱️ 2.5 Hours • <a class="bpa-kicker-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dock+7+Budapest" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank">Dock 7</a></div>
 </div>
-<h3 class="bpa-details-title">4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music</h3>
+<h3 class="bpa-details-title">Croisière Dîner Romantique Aux Chandelles de 4 Plats Avec Musique Live Lounge</h3>
 <div class="bpa-reviews-line">
 <div class="bpa-summary-reviews"><div class="div-block-53"><a class="bpa-rev-badge" href="https://legenda.hu/en?partner=38585" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZxJREFUWIXtl71Lw0AYxp/3kmvBgoP+C051U1xEHB3dHNydHBVxcBRcnB38AeIknRx1FkURHRwU3HRRxA8UdBDE73vuhUvbpE2TNvWqH3y3y3OPe97nhfviCgoKCoqYmJhoA9AHoA1AUkppAcgAyABIAVgDYAHIdF3X6vf7b70y7/w/Q+1h5/f29tqllA7A4h+l1O3VAKyFEF5Ui8fjd1Etiwgh+pZl/YyqqtqK41h2O/q+nw8E3d1h8rZtlx3HaUe1u7y+vv4Y2bKEEEL4vq/N1/G3Wp5/K5xIe9b3/Wbkrn13d7cd58qEEKINwIsL8J+BEEIogMf/gBDCKYDFz4AQohvAA4B21N3f5s3Nzfs41+eFEKIXQBf8B2j6Xy0k9hCllCeR7wLw+B+glDJCCDf6bQCWUlre2dmp2rZdM8bc3571PO812vN5hRCiqKpqu1fW8zy9W5m6ru/e39//8Hw/wD262+/v71u6rrcVRWkrinLYbrdtwzBavbSMMfT7fdbrdSzLwtraGmzbxtbWFnzfR61Ww8bGBqIoQl3XUSgUoGkaNE0DAIzHY5imic3NTcRxDCICEX3h0v8A/f4YqI6o01wAAAAASUVORK5CYII="/><span class="bpa-rev-score">4.6</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(2,400+)</span></a></div></div>
-<div class="bpa-proof"><span class="bpa-vchip">✓ Testé personnellement</span></div>
+<div class="bpa-proof"><span class="bpa-vchip">✓ Personally Tested</span></div>
 </div>
 </div>
 <div class="bpa-details-right">
@@ -7883,46 +7943,46 @@ footer.ltt-footer .legal-text {
 </div>
 </summary>
 <div class="bpa-details-body">
-<div class="pro-con-box-wrapper"><div class="w-layout-grid grid-15"><div class="pro-con-box-pro-cell" data-wf-pbl="layout-grid-1x2-vertical"><div class="pro-con-box-pro-cell-rich-text-block w-richtext"><h3><strong>Pros:</strong></h3><ul role="list"><li><strong>High-end &amp; elegant vibe</strong> — James Bond movie feel.</li><li><strong>Gourmet food</strong> — 4-course dinner for adults or 3-course for children.</li><li><strong>Welcome drink</strong> — A glass of champagne, wine, beer, a soft drink, or mineral water.</li><li><strong>Best for couples</strong> — With 2-sized candlelit tables, but suitable for groups as well.</li><li><strong>Features live music show</strong> — Contemporary music performed by pianist-singer/singer duo.</li><li><strong>Lasts around 2.5 hours</strong></li></ul></div></div><div class="pro-con-box-con-cell" data-wf-pbl="layout-grid-1x2-vertical"><div class="pro-con-box-con-cell-rich-text-block w-richtext"><h3><strong>Cons:</strong></h3><ul role="list"><li><strong>Not the cheapest</strong> — Legenda is pricy, but the memorable, top-notch dinner cruise experience makes it worth the price.</li><li><strong>Additional drinks not included</strong> — They are available for purchase separately.</li></ul></div></div></div></div>
+<div class="pro-con-box-wrapper"><div class="w-layout-grid pro-con-box-grid"><div class="pro-con-box-pro-cell"><div class="pro-con-box-pro-cell-rich-text-block w-richtext"><h3><strong>Points forts :</strong></h3><ul role="list"><li><strong>Ambiance haut de gamme et élégante</strong> — Ambiance film de James Bond.</li><li><strong>Nourriture gastronomique</strong> — Menu 4 services pour adultes ou 3 services pour enfants.</li><li><strong>Boisson de bienvenue</strong> — Un verre de champagne, de vin, de bière, une boisson gazeuse ou de l'eau minérale.</li><li><strong>Idéal pour les couples</strong> — Avec des tables éclairées aux chandelles de 2 tailles différentes, mais convient également aux groupes.</li><li><strong>Spectacle de musique en direct</strong> — Musique contemporaine interprétée par un duo pianiste-chanteur/chanteuse.</li><li>Dure environ 2,5 heures</li></ul></div></div><div class="pro-con-box-con-cell"><div class="pro-con-box-con-cell-rich-text-block w-richtext"><h3><strong>Points faibles :</strong></h3><ul role="list"><li><strong>Pas le moins cher</strong> — Legenda est cher, mais l'expérience mémorable et haut de gamme du dîner-croisière en vaut le prix.</li><li><strong>Boissons supplémentaires non incluses</strong> — Elles sont disponibles à l'achat séparément.</li></ul></div></div></div></div>
 <details class="ltt-bento-group" open="">
 <summary class="ltt-bento-group-head">
-<span class="ltt-bento-group-title">Summary &amp; Review</span>
+<span class="ltt-bento-group-title">🏆 Résumé &amp; Évaluation</span>
 <span class="ltt-bento-right">
 <span class="ltt-mini-pill">Overview</span>
 <span class="ltt-bento-chev">▾</span>
 </span>
 </summary>
 <div class="ltt-bento-group-body">
-<div class="w-richtext"><p>If you're looking for a <strong>romantic dinner cruise in Budapest (</strong><a href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest"><strong>detailed review here</strong></a><strong>)</strong>, look no further than Legenda City Cruises. They offer the <strong>best experience for couples or small groups seeking an extraordinary night out</strong>.</p><p>You're in for a romantic treat with an accommodating and professional staff, an <strong>elegant and luxurious ambiance</strong>, breathtaking views of the Danube and the beautiful cityscape of Budapest, a delicious <strong>4-course catered dinner</strong>, and live <strong>lounge music</strong>.</p><p>It's the perfect setting for a romantic and/or fun night out in Budapest.</p><p>If you want a <strong>captivating 2.5-hour experience</strong>, this cruise is the perfect choice.</p><p><strong>Note: </strong>For safety reasons, the candles at the tables are electric.</p><p><a href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest"><strong>Click here to read my detailed, first-hand review of Legenda's candlelit dinner cruise here.</strong></a></p><blockquote><strong>🎥 </strong><a href="https://www.tiktok.com/@zenaydiaa/video/7256688921449352466?q=river%20cruise%20budapest&amp;t=1708618929080" rel="nofollow" target="_blank"><strong>Video</strong></a>:<strong> </strong>Watch this 15s Tiktok video of Legenda's candlelit dinner cruise to get an idea what it's like.<br/><a href="https://www.instagram.com/legendacruises/" rel="nofollow" target="_blank">📷 <strong>Instagram</strong></a>: Check out reels and photos of Legenda City Cruises.</blockquote></div>
+<div class="w-richtext"><p>Si vous recherchez unecroisière-dîner romantique à Budapest (voir l'avis détaillé ici), ne cherchez pas plus loin que Legenda City Cruises. Ils offrent uneexpérience inoubliable aux couples ou aux petits groupes en quête d'une soirée exceptionnelle.</p><p>Vous allez vivre un moment romantique avec un personnel accueillant et professionnel, uneambiance élégante et luxueuse, une vue imprenable sur le Danube et le magnifique paysage urbain de Budapest, un délicieuxdîner traiteur de 4 platsetde la musique loungelive.</p><p>C&amp;#39;est le cadre idéal pour une soirée romantique et/ou amusante à Budapest.</p></div>
 <div class="ltt-buy-card">
 <div class="ltt-buy-card-head">
 <div class="ltt-buy-card-badge">
 <span class="ltt-live-dot"></span>
-<span>Billets officiels &amp; disponibilités en direct</span>
+<span>Official Tickets &amp; Live Availability</span>
 </div>
 <div class="ltt-buy-card-price">
 <span class="ltt-buy-price-val">€110</span>
-<span class="ltt-buy-price-sub">par adulte</span>
+<span class="ltt-buy-price-sub">Free cancellation up to 24h</span>
 </div>
 </div>
 <div class="ltt-buy-card-body">
 <div class="ltt-buy-card-info">
 <h4 class="ltt-buy-card-title">4-Course Romantic Candlelit Dinner Cruise With Liv</h4>
 <div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Billet QR instantané sur smartphone</span>
-<span class="ltt-buy-perk">Remboursement intégral jusqu'à 24h avant</span>
-<span class="ltt-buy-perk">Départ : <strong>Dock 7</strong></span>
-<span class="ltt-buy-perk">Durée : <strong>2.5 Hours</strong></span>
+<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
+<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
+<span class="ltt-buy-perk">Departure: <strong>Dock 7</strong></span>
+<span class="ltt-buy-perk">Duration: <strong>2.5 Hours</strong></span>
 </div>
 </div>
 <div class="ltt-buy-card-action">
 <a class="ltt-buy-cta-btn" href="https://legenda.hu/en?partner=38585" rel="noopener nofollow sponsored" target="_blank">
-<span>Réserver maintenant</span>
+<span>Check Dates &amp; Book Tickets</span>
 <span class="ltt-cta-arrow">→</span>
 </a>
 <div class="ltt-buy-card-trust">
 <svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Meilleur prix garanti • Confirmation immédiate</span>
+<span>Best Price Guaranteed • Instant Confirmation</span>
 </div>
 </div>
 </div>
@@ -7931,7 +7991,7 @@ footer.ltt-footer .legal-text {
 </details>
 <details class="ltt-bento-group" open="">
 <summary class="ltt-bento-group-head">
-<span class="ltt-bento-group-title">Before the Cruise — Pier, Boarding &amp; Meeting Map</span>
+<span class="ltt-bento-group-title">📍 Embarcadère, Accès &amp; Plan</span>
 <span class="ltt-bento-right">
 <span class="ltt-mini-pill">Location Map</span>
 <span class="ltt-bento-chev">▾</span>
@@ -7974,10 +8034,10 @@ footer.ltt-footer .legal-text {
 <span class="bpa-rank-tag bpa-silver">🥈 #2 Runner-Up</span>
 <div class="bpa-kicker">Silverline Cruises • ⏱️ 2.5 Hours • <a class="bpa-kicker-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dock+11+Budapest" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank">Dock 11</a></div>
 </div>
-<h3 class="bpa-details-title">4-Course Dinner Cruise with Welcome Drink Without Show (New!)</h3>
+<h3 class="bpa-details-title">Croisière Dîner de 4 Plats Avec Boisson de Bienvenue Sans Spectacle (Nouveau !)</h3>
 <div class="bpa-reviews-line">
 <div class="bpa-summary-reviews"><div class="div-block-53"><a class="bpa-rev-badge" href="https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZxJREFUWIXtl71Lw0AYxp/3kmvBgoP+C051U1xEHB3dHNydHBVxcBRcnB38AeIknRx1FkURHRwU3HRRxA8UdBDE73vuhUvbpE2TNvWqH3y3y3OPe97nhfviCgoKCoqYmJhoA9AHoA1AUkppAcgAyABIAVgDYAHIdF3X6vf7b70y7/w/Q+1h5/f29tqllA7A4h+l1O3VAKyFEF5Ui8fjd1Etiwgh+pZl/YyqqtqK41h2O/q+nw8E3d1h8rZtlx3HaUe1u7y+vv4Y2bKEEEL4vq/N1/G3Wp5/K5xIe9b3/Wbkrn13d7cd58qEEKINwIsL8J+BEEIogMf/gBDCKYDFz4AQohvAA4B21N3f5s3Nzfs41+eFEKIXQBf8B2j6Xy0k9hCllCeR7wLw+B+glDJCCDf6bQCWUlre2dmp2rZdM8bc3571PO812vN5hRCiqKpqu1fW8zy9W5m6ru/e39//8Hw/wD262+/v71u6rrcVRWkrinLYbrdtwzBavbSMMfT7fdbrdSzLwtraGmzbxtbWFnzfR61Ww8bGBqIoQl3XUSgUoGkaNE0DAIzHY5imic3NTcRxDCICEX3h0v8A/f4YqI6o01wAAAAASUVORK5CYII="/><span class="bpa-rev-score">4.6</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(2,400+)</span></a></div></div>
-<div class="bpa-proof"><span class="bpa-vchip">✓ Testé personnellement</span></div>
+<div class="bpa-proof"><span class="bpa-vchip">✓ Personally Tested</span></div>
 </div>
 </div>
 <div class="bpa-details-right">
@@ -7989,46 +8049,46 @@ footer.ltt-footer .legal-text {
 </div>
 </summary>
 <div class="bpa-details-body">
-<div class="pro-con-box-wrapper"><div class="w-layout-grid grid-15"><div class="pro-con-box-pro-cell" data-wf-pbl="layout-grid-1x2-vertical"><div class="pro-con-box-pro-cell-rich-text-block w-richtext"><h3><strong>Pros:</strong></h3><ul role="list"><li><strong>Budget-Friendly Elegance</strong> — It's the most affordable elegant and gourmet dinner cruise, making it great value for money.</li><li><strong>Gourmet Food</strong> — Includes a four-course meal and a welcome Prosecco.</li><li><strong>Friendly Service</strong> — The staff was helpful, and food/drinks were served promptly.</li><li><strong>Intimate Atmosphere</strong> — The upper deck offers a cozy, less crowded, familial feeling.</li><li><strong>Scenic Route</strong> — The two-hour cruise passes all major landmarks between the Margaret Bridge and the Athletics Stadium.</li><li><strong>Fresh food</strong> — the food is prepared on-site in the ship's kitchen.</li><li><strong>Lasts 2 hours.</strong></li></ul></div></div><div class="pro-con-box-con-cell" data-wf-pbl="layout-grid-1x2-vertical"><div class="pro-con-box-con-cell-rich-text-block w-richtext"><h3><strong>Cons:</strong></h3><ul role="list"><li><strong>No Live Show</strong> — Entertainment is limited to pleasant background music in exchange for a lower price.</li><li><strong>Extra Costs</strong> — Specific dishes require an additional charge.</li><li><strong>Minor Food Improvements</strong> — There are one or two minor areas where the food could be improved.</li></ul></div></div></div></div>
+<div class="pro-con-box-wrapper"><div class="w-layout-grid pro-con-box-grid"><div class="pro-con-box-pro-cell"><div class="pro-con-box-pro-cell-rich-text-block w-richtext"><h3><strong>Points forts :</strong></h3><ul role="list"><li><strong>Élégance économique</strong> — C'est le dîner-croisière élégant et gastronomique le plus abordable, ce qui en fait un excellent rapport qualité-prix.</li><li><strong>Repas gastronomique</strong> — Comprend un repas de quatre plats et un Prosecco de bienvenue.</li><li><strong>Service amical</strong> — Le personnel était serviable et la nourriture et les boissons ont été servies rapidement.</li><li><strong>Ambiance intime</strong> — Le pont supérieur offre une atmosphère chaleureuse, moins fréquentée et familiale.</li><li><strong>Route panoramique</strong> — La croisière de deux heures passe par tous les principaux sites touristiques entre le pont Margaret et le stade d'athlétisme.</li><li><strong>Aliments frais</strong> — la nourriture est préparée sur place dans la cuisine du navire.</li><li>Dure 2 heures.</li><li>Wi-Fi à bord :oui</li><li>Pont extérieur :oui</li><li>Climatisation/chauffage :oui</li><li>Fumer :oui, à l'extérieur</li><li>Accessible aux poussettes :oui</li><li>Réduction nourrissons/enfants :gratuit pour les nourrissons (0-3 ans).</li><li>Centrally located, easy to find and arrive.</li></ul></div></div><div class="pro-con-box-con-cell"><div class="pro-con-box-con-cell-rich-text-block w-richtext"><h3><strong>Points faibles :</strong></h3><ul role="list"><li><strong>Pas de spectacle en direct</strong> — Le divertissement se limite à une musique de fond agréable en échange d’un prix inférieur.</li><li><strong>Coûts supplémentaires</strong> — Certains plats nécessitent des frais supplémentaires.</li><li><strong>Améliorations mineures de la nourriture</strong> — Il y a un ou deux domaines mineurs dans lesquels la nourriture pourrait être améliorée.</li><li>Animaux acceptés :non, uniquement les animaux d'assistance</li><li>Accessible en fauteuil roulant :non</li></ul></div></div></div></div>
 <details class="ltt-bento-group" open="">
 <summary class="ltt-bento-group-head">
-<span class="ltt-bento-group-title">Summary &amp; Review</span>
+<span class="ltt-bento-group-title">🏆 Résumé &amp; Évaluation</span>
 <span class="ltt-bento-right">
 <span class="ltt-mini-pill">Overview</span>
 <span class="ltt-bento-chev">▾</span>
 </span>
 </summary>
 <div class="ltt-bento-group-body">
-<div class="w-richtext"><p>In a world of rising costs, the smart team at Silverline created a<strong> sophisticated yet </strong><strong>budget-friendly dinner cruise</strong>.</p><p>They achieved this by <strong>eliminating the live performance</strong>, which makes this offer highly appealing to those who are perfectly happy with pleasant background music instead of a stage show.</p><p>The boat departed right on time at <strong>7:00 PM</strong>. The two-deck vessel hosted the folk show dinner on the lower level. Me and co-testers were<strong> situated on the upper deck</strong> where the smaller area created a more intimate, <strong>familial atmosphere</strong>, which we considered a positive; it <strong>never felt overcrowded</strong>.</p><p>The <strong>windows can be slid open</strong> for taking photos or enjoying the fresh air during the summer months. The lower deck is more spacious and can accommodate more guests, and there are<strong> open-air areas </strong>both at the bow and the stern.</p><p>The cruise traveled up and down the river, passing every major landmark between the <strong>Margaret Bridge</strong> and the <strong>Athletics Stadium</strong>.</p><p>The staff was <strong>friendly and helpful</strong>. They served the appetizer right away, which helped manage our hunger, and our welcome drink was also delivered quickly.</p><p>In summary, I enjoyed a <strong>quality evening</strong> on the boat, complete with an elegant, pleasant environment, great service, and delicious gourmet food. <strong>I recommend it!</strong></p><blockquote><strong>🎥 Video: </strong>Watch this <a href="https://www.youtube.com/watch?v=feyNKCMgy3Q&amp;ab_channel=BudapestRiverCruises-Silverline" target="_blank"><strong>teaser video of Silverline Cruises' dinner cruise</strong></a> to get a better idea of what you can expect.</blockquote><h3>Arriving to Location</h3><ul role="list"><li>The <strong>Silverline dock</strong> is located in the <strong>city center</strong>, right next to the <strong>Elizabeth Bridge</strong>. After a quick ticket check, we <strong>boarded the boat</strong>, walking across a small bridge and then over the gangway to get on. The ship departed on schedule.</li></ul><h3>The Ship</h3><ul role="list"><li>The dinner takes place on the <strong>upper deck</strong> where you're seated at <strong>2 or 4-person tables</strong>. The folklore music show takes place on a small stage.<br/></li></ul><h3>Dinner Venue / Seating / Vibe</h3><ul role="list"><li>The ship's <strong>first deck</strong> features a <strong>large-capacity area</strong> that hosts the <strong>dinner program with the folklore show</strong>.</li></ul><ul role="list"><li>Also on this deck, you'll find <strong>open-air sections</strong> both at the <strong>bow</strong> (front) and the <strong>stern</strong> (back) of the ship. The <strong>restrooms</strong> are located on this level as well in the back.</li></ul><ul role="list"><li>The atmosphere on the upper deck was cozy and familial, comfortable, and not too crowded. The champagne and appetizer arrived quickly. For taking pictures or fresh air, the windows can be slid open.</li></ul><h3>Dinner Cruise Menu</h3><ul role="list"><li>The dinner menu allows us to choose from <strong>one appetizer</strong>, <strong>two types of soup</strong>, <strong>three main courses</strong>, and <strong>three desserts</strong>. Please note that <strong>certain dishes</strong> require an <strong>extra charge</strong> on the boat.</li></ul><h3>Appetizer</h3><ul role="list"><li><strong>Appetizer: Caponata Schiacciata</strong> (Homemade Italian-style toast with a creamy eggplant topping)</li></ul><h3>Soups</h3><ul role="list"><li><strong>Chicken Dumpling Soup with Tarragon:</strong> The <strong>tarragon flavor</strong> was distinctly noticeable. It was one of the best we've had in a long time, featuring <strong>fresh, crisp vegetables</strong> that were not overcooked.</li></ul><ul role="list"><li><strong>Cauliflower Cream Soup </strong>with<strong> </strong>an <strong>authentic Hungarian preparation</strong> with a <strong>spicy, cheesy twist</strong>.</li></ul><h3>Main Course</h3><ul role="list"><li><strong>Pesto Chicken Roulade with Risotto Bianco:</strong> The <strong>chicken was divinely tender</strong> with a <strong>pesto filling</strong> and <strong>spicy Parmesan</strong>. The risotto was slightly runnier than ideal but still very good. The portion was medium-sized, and the overall <strong>flavor profile was 10 out of 10</strong>.</li></ul><ul role="list"><li><strong>French Pork Chop with Dijon Mustard Potato Gratin:</strong> The <strong>Dijon mustard</strong> was <strong>too strong</strong> for a typical European palate. However, the portion was <strong>large</strong>, and the potato gratin was an excellent pairing.</li></ul><ul role="list"><li><strong>Crusted Cod Fillet with Porcini and Wild Mushroom Gnocchi:</strong> The <strong>mushroom crust</strong> sauce added a much-needed <strong>spicy flavor</strong> to the otherwise unseasoned fish. The gnocchi was average, and it is <strong>important to specifically request the fish separately</strong> if you don't want the just a gnocchi dish.</li></ul><h3>Dessert</h3><ul role="list"><li><strong>Pistachio Tiramisu</strong> (Extra charge of +2460 HUF): It was delicious but not worth the additional cost.</li></ul><ul role="list"><li><strong>Avocado Chocolate Mousse:</strong> Tasted primarily like chocolate mousse, with the avocado flavor undetectable.</li></ul><ul role="list"><li><strong>Coriander Lemon Curd Mascarpone Sweet Crumble:</strong> A simple creamy dessert where the lemon flavor was very subtle.</li></ul><h3>The Views / Itinerary</h3><ul role="list"><li>During the <strong>two-hour boat trip</strong>, we can admire <strong>all of Budapest's main sights</strong>, sailing between <strong>Margaret Island</strong> and the <strong>National Athletics Center</strong> (or Athletics Stadium).</li></ul><h3>Staff &amp; Service</h3><ul role="list"><li>The staff was <strong>friendly and helpful</strong>. They served the appetizer right away, which helped manage our hunger, and our welcome drink was also delivered quickly.<br/></li></ul><h3>How to Get There</h3><ul role="list"><li>🗺️ <a href="https://goo.gl/maps/pVRK1PR3s7srEcVM8" rel="nofollow" target="_blank">Meeting point: Budapest, Jane Haining Rakpart, Dokk 11, 1052</a></li><li>✔️ Centrally located, easy to find and arrive.</li><li>📘 Use <strong>tram line 2 </strong>to arrive at<strong> Széchenyi István tér stop</strong>. You can find Silverline Cruises closest to Elisabeth Bridge.</li></ul><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div class="ltt-filmstrip" onscroll="window.lttFilmSync(this)"><div class="ltt-strip-slide"><img alt="The Silverline dock is located in the city center , right next to the Elizabeth Bridge ." loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50aed8099e14a7df08c87_best-budapest-dinner-cruises-silverline-4.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 17</span> <span>The Silverline dock is located in the city center , right next to the Elizabeth Bridge .</span></div></div><div class="ltt-strip-slide"><img alt="The dinner takes place on the upper deck where you're seated at 2 or 4-person tables ." loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64c8d89ab333794837100497_Dinner-cruise-silverline-folklore-operetta%20(7).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 17</span> <span>The dinner takes place on the upper deck where you're seated at 2 or 4-person tables .</span></div></div><div class="ltt-strip-slide"><img alt="This is the lower deck where the dinner with folklore show takes place." loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50b1313afcdd3e12cbd8c_best-budapest-dinner-cruises-silverline-8.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 17</span> <span>This is the lower deck where the dinner with folklore show takes place.</span></div></div><div class="ltt-strip-slide"><img alt="Open-air area in the front of the ship." loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50b7fb228260007cb9efc_best-budapest-dinner-cruises-silverline-70.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 17</span> <span>Open-air area in the front of the ship.</span></div></div><div class="ltt-strip-slide"><img alt="Also on this deck, you'll find open-air sections both at the bow (front) and the stern…" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50bb46d635980bd0917af_best-budapest-dinner-cruises-silverline-61.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 17</span> <span>Also on this deck, you'll find open-air sections both at the bow (front) and the stern…</span></div></div><div class="ltt-strip-slide"><img alt="The dinner menu allows us to choose from one appetizer , two types of soup , three main…" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4c4eb37345f0ae26a5_best-budapest-dinner-cruises-silverline-81.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 17</span> <span>The dinner menu allows us to choose from one appetizer , two types of soup , three main…</span></div></div><div class="ltt-strip-slide"><img alt="Appetizer: Caponata Schiacciata (Homemade Italian-style toast with a creamy eggplant topping)" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50c2ea4a9ec726cad86fc_best-budapest-dinner-cruises-silverline-94.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 17</span> <span>Appetizer: Caponata Schiacciata (Homemade Italian-style toast with a creamy eggplant topping)</span></div></div><div class="ltt-strip-slide"><img alt="Chicken Dumpling Soup with Tarragon: The tarragon flavor was distinctly noticeable." loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4c49f552630c60894a_best-budapest-dinner-cruises-silverline-102.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">8 / 17</span> <span>Chicken Dumpling Soup with Tarragon: The tarragon flavor was distinctly noticeable.</span></div></div><div class="ltt-strip-slide"><img alt="Cauliflower Cream Soup with an authentic Hungarian preparation with a spicy, cheesy twist ." loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50c4becab974530a9999e_best-budapest-dinner-cruises-silverline-99.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">9 / 17</span> <span>Cauliflower Cream Soup with an authentic Hungarian preparation with a spicy, cheesy twist .</span></div></div><div class="ltt-strip-slide"><img alt="Pesto Chicken Roulade with Risotto Bianco: The chicken was divinely tender with a pesto…" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50c6b2422880b5fe56f1c_best-budapest-dinner-cruises-silverline-164.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">10 / 17</span> <span>Pesto Chicken Roulade with Risotto Bianco: The chicken was divinely tender with a pesto…</span></div></div><div class="ltt-strip-slide"><img alt="French Pork Chop with Dijon Mustard Potato Gratin: The Dijon mustard was too strong for a…" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50c7931dcfec90e7881bd_best-budapest-dinner-cruises-silverline-167.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">11 / 17</span> <span>French Pork Chop with Dijon Mustard Potato Gratin: The Dijon mustard was too strong for a…</span></div></div><div class="ltt-strip-slide"><img alt="Crusted Cod Fillet with Porcini and Wild Mushroom Gnocchi: The mushroom crust sauce added a…" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4c5cc1ea04e90e1b5e_best-budapest-dinner-cruises-silverline-168.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">12 / 17</span> <span>Crusted Cod Fillet with Porcini and Wild Mushroom Gnocchi: The mushroom crust sauce added a…</span></div></div><div class="ltt-strip-slide"><img alt="Pistachio Tiramisu (Extra charge of +2460 HUF): It was delicious but not worth the…" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4c8e889bb32cb1bc1f_best-budapest-dinner-cruises-silverline-179.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">13 / 17</span> <span>Pistachio Tiramisu (Extra charge of +2460 HUF): It was delicious but not worth the…</span></div></div><div class="ltt-strip-slide"><img alt="Avocado Chocolate Mousse: Tasted primarily like chocolate mousse, with the avocado flavor…" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50ca9d6698af6925d4955_best-budapest-dinner-cruises-silverline-188.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">14 / 17</span> <span>Avocado Chocolate Mousse: Tasted primarily like chocolate mousse, with the avocado flavor…</span></div></div><div class="ltt-strip-slide"><img alt="Coriander Lemon Curd Mascarpone Sweet Crumble: A simple creamy dessert where the lemon…" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4c32ef581db78f327a_best-budapest-dinner-cruises-silverline-184.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">15 / 17</span> <span>Coriander Lemon Curd Mascarpone Sweet Crumble: A simple creamy dessert where the lemon…</span></div></div><div class="ltt-strip-slide"><img alt="During the two-hour boat trip , we can admire all of Budapest's main sights , sailing…" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64ff0ad83b5217719ba1d701_Budapest-river-cruises-parliament.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">16 / 17</span> <span>During the two-hour boat trip , we can admire all of Budapest's main sights , sailing…</span></div></div><div class="ltt-strip-slide"><img alt="The staff was friendly and helpful ." loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50cd3dd745962562ba810_best-budapest-dinner-cruises-silverline-171.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">17 / 17</span> <span>The staff was friendly and helpful .</span></div></div></div></div></div>
+<div class="w-richtext"><p>Dans un monde où les coûts augmentent, l'équipe intelligente de Silverline a créé un dîner-croisièresophistiqué maiséconomique.</p><p>Ils y sont parvenus enéliminant la performance en direct, ce qui rend cette offre très attrayante pour ceux qui se contentent parfaitement d'une musique de fond agréable au lieu d'un spectacle sur scène.</p><p>Le bateau est parti à l'heure, à19h00. Le bateau à deux ponts accueillait le dîner-spectacle folklorique au niveau inférieur. Mes co-testeurs et moi étionsinstallés sur le pont supérieur,où l'espace plus restreint créait uneatmosphère plus intime et familiale, ce qui nous a semblé un point positif : onne s'y sentait jamais à l'étroit.</p></div>
 <div class="ltt-buy-card">
 <div class="ltt-buy-card-head">
 <div class="ltt-buy-card-badge">
 <span class="ltt-live-dot"></span>
-<span>Billets officiels &amp; disponibilités en direct</span>
+<span>Official Tickets &amp; Live Availability</span>
 </div>
 <div class="ltt-buy-card-price">
 <span class="ltt-buy-price-val">€74</span>
-<span class="ltt-buy-price-sub">par adulte</span>
+<span class="ltt-buy-price-sub">Free cancellation up to 24h</span>
 </div>
 </div>
 <div class="ltt-buy-card-body">
 <div class="ltt-buy-card-info">
 <h4 class="ltt-buy-card-title">4-Course Dinner Cruise with Welcome Drink Without </h4>
 <div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Billet QR instantané sur smartphone</span>
-<span class="ltt-buy-perk">Remboursement intégral jusqu'à 24h avant</span>
-<span class="ltt-buy-perk">Départ : <strong>Dock 11</strong></span>
-<span class="ltt-buy-perk">Durée : <strong>2.5 Hours</strong></span>
+<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
+<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
+<span class="ltt-buy-perk">Departure: <strong>Dock 11</strong></span>
+<span class="ltt-buy-perk">Duration: <strong>2.5 Hours</strong></span>
 </div>
 </div>
 <div class="ltt-buy-card-action">
 <a class="ltt-buy-cta-btn" href="https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures" rel="noopener nofollow sponsored" target="_blank">
-<span>Réserver maintenant</span>
+<span>Check Dates &amp; Book Tickets</span>
 <span class="ltt-cta-arrow">→</span>
 </a>
 <div class="ltt-buy-card-trust">
 <svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Meilleur prix garanti • Confirmation immédiate</span>
+<span>Best Price Guaranteed • Instant Confirmation</span>
 </div>
 </div>
 </div>
@@ -8037,7 +8097,7 @@ footer.ltt-footer .legal-text {
 </details>
 <details class="ltt-bento-group" open="">
 <summary class="ltt-bento-group-head">
-<span class="ltt-bento-group-title">Before the Cruise — Pier, Boarding &amp; Meeting Map</span>
+<span class="ltt-bento-group-title">📍 Embarcadère, Accès &amp; Plan</span>
 <span class="ltt-bento-right">
 <span class="ltt-mini-pill">Location Map</span>
 <span class="ltt-bento-chev">▾</span>
@@ -8082,10 +8142,10 @@ footer.ltt-footer .legal-text {
 <span class="bpa-rank-tag bpa-bronze">🥉 #3 Top Pick</span>
 <div class="bpa-kicker">Silverline Cruises • ⏱️ 2.5 Hours • <a class="bpa-kicker-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dock+11+Budapest" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank">Dock 11</a></div>
 </div>
-<h3 class="bpa-details-title">4-Course Gourmet Dinner Cruise With Folk Operetta Show</h3>
+<h3 class="bpa-details-title">Croisière Dîner Gourmet de 4 Plats Avec Spectacle Folklorique d'Opérette</h3>
 <div class="bpa-reviews-line">
 <div class="bpa-summary-reviews"><div class="div-block-53"><a class="bpa-rev-badge" href="https://budapestrivercruise.eu/product/budapest-danube-dinner-cruise/?code=bpadventures" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZxJREFUWIXtl71Lw0AYxp/3kmvBgoP+C051U1xEHB3dHNydHBVxcBRcnB38AeIknRx1FkURHRwU3HRRxA8UdBDE73vuhUvbpE2TNvWqH3y3y3OPe97nhfviCgoKCoqYmJhoA9AHoA1AUkppAcgAyABIAVgDYAHIdF3X6vf7b70y7/w/Q+1h5/f29tqllA7A4h+l1O3VAKyFEF5Ui8fjd1Etiwgh+pZl/YyqqtqK41h2O/q+nw8E3d1h8rZtlx3HaUe1u7y+vv4Y2bKEEEL4vq/N1/G3Wp5/K5xIe9b3/Wbkrn13d7cd58qEEKINwIsL8J+BEEIogMf/gBDCKYDFz4AQohvAA4B21N3f5s3Nzfs41+eFEKIXQBf8B2j6Xy0k9hCllCeR7wLw+B+glDJCCDf6bQCWUlre2dmp2rZdM8bc3571PO812vN5hRCiqKpqu1fW8zy9W5m6ru/e39//8Hw/wD262+/v71u6rrcVRWkrinLYbrdtwzBavbSMMfT7fdbrdSzLwtraGmzbxtbWFnzfR61Ww8bGBqIoQl3XUSgUoGkaNE0DAIzHY5imic3NTcRxDCICEX3h0v8A/f4YqI6o01wAAAAASUVORK5CYII="/><span class="bpa-rev-score">4.6</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(2,400+)</span></a></div></div>
-<div class="bpa-proof"><span class="bpa-vchip">✓ Testé personnellement</span></div>
+<div class="bpa-proof"><span class="bpa-vchip">✓ Personally Tested</span></div>
 </div>
 </div>
 <div class="bpa-details-right">
@@ -8097,46 +8157,46 @@ footer.ltt-footer .legal-text {
 </div>
 </summary>
 <div class="bpa-details-body">
-<div class="pro-con-box-wrapper"><div class="w-layout-grid grid-15"><div class="pro-con-box-pro-cell" data-wf-pbl="layout-grid-1x2-vertical"><div class="pro-con-box-pro-cell-rich-text-block w-richtext"><h3><strong>Pros:</strong></h3><ul role="list"><li><strong>Gourmet food</strong> — 4-course dinner with a mix of Hungarian and international cuisine.</li><li><strong>Fresh food</strong> — the food is prepared on-site in the ship's kitchen.</li><li><strong>Features an excellent live folklore music show with authentic and award-winning performers.</strong></li><li><strong>Lasts around 2 hours.</strong></li></ul></div></div><div class="pro-con-box-con-cell" data-wf-pbl="layout-grid-1x2-vertical"><div class="pro-con-box-con-cell-rich-text-block w-richtext"><h3><strong>Cons:</strong></h3><ul role="list"><li><strong>Minor Food Improvements</strong> — There are one or two minor areas where the food could be improved.</li></ul></div></div></div></div>
+<div class="pro-con-box-wrapper"><div class="w-layout-grid pro-con-box-grid"><div class="pro-con-box-pro-cell"><div class="pro-con-box-pro-cell-rich-text-block w-richtext"><h3><strong>Points forts :</strong></h3><ul role="list"><li><strong>Cuisine gastronomique</strong> — Dîner de 4 plats avec un mélange de cuisine hongroise et internationale.</li><li><strong>Aliments frais</strong> — la nourriture est préparée sur place dans la cuisine du navire.</li><li>Propose un excellent spectacle de musique folklorique en directavec des artistes authentiques et primés.</li><li>Dure environ 2 heures.</li><li>Wi-Fi à bord :oui</li><li>Pont extérieur :oui</li><li>Climatisation/chauffage :oui</li><li>Fumer :oui, à l'extérieur</li><li>Accessible aux poussettes :oui</li><li>Réduction nourrissons/enfants :gratuit pour les nourrissons (0-3 ans)</li><li>Centrally located, easy to find and arrive.</li></ul></div></div><div class="pro-con-box-con-cell"><div class="pro-con-box-con-cell-rich-text-block w-richtext"><h3><strong>Points faibles :</strong></h3><ul role="list"><li><strong>Améliorations mineures de la nourriture</strong> — Il y a un ou deux domaines mineurs dans lesquels la nourriture pourrait être améliorée.</li><li>Animaux acceptés :non, uniquement les animaux d'assistance</li><li>Accessible en fauteuil roulant :non</li></ul></div></div></div></div>
 <details class="ltt-bento-group" open="">
 <summary class="ltt-bento-group-head">
-<span class="ltt-bento-group-title">Summary &amp; Review</span>
+<span class="ltt-bento-group-title">🏆 Résumé &amp; Évaluation</span>
 <span class="ltt-bento-right">
 <span class="ltt-mini-pill">Overview</span>
 <span class="ltt-bento-chev">▾</span>
 </span>
 </summary>
 <div class="ltt-bento-group-body">
-<div class="w-richtext"><p>Are you looking for an <strong>authentic folklore dinner cruise experience</strong> in Budapest? Look no further than Silverline Cruises! They offer an incredible dinner cruise experience with a <strong>Hungarian operetta and folk show </strong>for guests looking for a <strong>fun-filled night</strong>.</p><p>Get ready for an amazing adventure with a welcoming crew, a <strong>lively cabaret ambiance</strong>, and a captivating folk operetta performance.</p><p>Enjoy <strong>breathtaking views of the Danube River</strong> and the magnificent cityscape of Budapest, followed by a <strong>mouth-watering dinner </strong>featuring a selection of <strong>three or six courses.</strong></p><p>If you're searching for an <strong>unforgettable two-hour adventure</strong> to enjoy with your partner, loved ones, or colleagues, this cruise is an ideal choice.</p><blockquote><strong>🎥 Video: </strong>Watch this <a href="https://www.youtube.com/watch?v=feyNKCMgy3Q&amp;ab_channel=BudapestRiverCruises-Silverline" target="_blank"><strong>teaser video of Silverline Cruises' dinner cruise</strong></a> to get a better idea of what you can expect.</blockquote><h3>Key Differences Among Silverline Dinner Cruises</h3><ul role="list"><li><strong>Silverline offers 3 similar dinner cruises</strong>. <strong></strong><br/><ul role="list"><li><strong>Dinner Cruise without Live Entertainment</strong> (<a href="#cruise-2-silverline-no-show">see #2 Silverline No-Show Cruise above</a>)<strong></strong></li><li><strong>Folklore Show Dinner Cruise</strong> (The one you are reading now, <a href="#cruise-3-silverline-folklore">Silverline Folklore Dinner Cruise</a>)<strong></strong></li><li><strong>Piano Show Dinner Cruise </strong>(<a href="#cruise-4-silverline-piano">Silverline Piano Dinner Cruise</a>)</li></ul></li></ul><ul role="list"><li><strong>To ensure this section is useful and avoids repetition</strong>, the following parts will focus on the<strong> key distinctions</strong> among the Silverline options:<br/><ul role="list"><li><strong>the onboard entertainment<br/></strong></li><li><strong>the dining deck location</strong></li><li>the specific dates/availability</li><li>and the price.</li></ul></li><li><strong>For full details</strong> on the common elements—including the <strong>meeting point, food, ship, itinerary, and views</strong>—please <a href="#cruise-2-silverline-no-show">see the full Silverline dinner cruise breakdown above</a>.</li></ul><h3>Dinner Venue / Seating / Vibe</h3><ul role="list"><li>The folklore show dinner takes place on the <strong>lower deck</strong>. Guests here are in a more <strong>spacious area</strong> than upstairs, which is an advantage; however, it also means that not every guest will have a <strong>window seat</strong>, which requires an additional fee.</li></ul><ul role="list"><li>The chairs here are slightly <strong>more decorative</strong> than on the upper deck, but the difference isn't significant.</li></ul><h3>Folk Operetta Performance &amp; Music Show</h3><ul role="list"><li>The show is performed on a stage located in the bow of the ship. A multi-member, <strong>authentic Gypsy band</strong> performs more traditional Hungarian songs here, showcasing the rich cultural heritage of this fascinating country.</li></ul><ul role="list"><li>Throughout the evening, <strong>folklore dancers</strong> also perform, presenting a highly memorable folk dance show.</li></ul><ul role="list"><li>There is an <strong>interactive dance segment</strong> where guests are welcome to join in.<br/></li></ul><h3>How to Get There</h3><ul role="list"><li>🗺️ <a href="https://goo.gl/maps/pVRK1PR3s7srEcVM8" rel="nofollow" target="_blank">Meeting point: Budapest, Jane Haining Rakpart, Dokk 11, 1052</a></li><li>✔️ Centrally located, easy to find and arrive.</li><li>📘 Use <strong>tram line 2 </strong>to arrive at<strong> Széchenyi István tér stop</strong>. You can find Silverline Cruises closest to Elisabeth Bridge.</li></ul><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div class="ltt-filmstrip" onscroll="window.lttFilmSync(this)"><div class="ltt-strip-slide"><img alt="Bear with me now, okay?" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e52cc60d07333367c9c861_best-budapest-dinner-cruises-silverline-33.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>Bear with me now, okay?</span></div></div><div class="ltt-strip-slide"><img alt="The folklore show dinner takes place on the lower deck ." loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e52baf60c0a1aa52cf634d_best-budapest-dinner-cruises-silverline-121.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>The folklore show dinner takes place on the lower deck .</span></div></div><div class="ltt-strip-slide"><img alt="The chairs here are slightly more decorative than on the upper deck, but the difference…" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e52c9da2996149a6e72a89_best-budapest-dinner-cruises-silverline-143.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>The chairs here are slightly more decorative than on the upper deck, but the difference…</span></div></div><div class="ltt-strip-slide"><img alt="The show is performed on a stage located in the bow of the ship." loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e52be57be03443437456df_best-budapest-dinner-cruises-silverline-138.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>The show is performed on a stage located in the bow of the ship.</span></div></div><div class="ltt-strip-slide"><img alt="Throughout the evening, folklore dancers also perform, presenting a highly memorable folk…" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e52c4badc4b610f29cd4a6_best-budapest-dinner-cruises-silverline-146.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>Throughout the evening, folklore dancers also perform, presenting a highly memorable folk…</span></div></div><div class="ltt-strip-slide"><img alt="There is an interactive dance segment where guests are welcome to join in." loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64c8d8323e1e4fe01cd6a77b_Dinner-cruise-silverline-folklore-operetta%20(4).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>There is an interactive dance segment where guests are welcome to join in.</span></div></div></div></div></div>
+<div class="w-richtext"><p>Êtes-vous à la recherche d’unauthentique dîner-croisière folkloriqueà Budapest ? Ne cherchez pas plus loin que Silverline Cruises ! Ils offrent une incroyable expérience de dîner-croisière avec uneopérette hongroise et un spectacle folkloriquepour les clients à la recherche d'unesoirée amusante.</p><p>Préparez-vous pour une aventure incroyable avec une équipe accueillante, uneambiance cabaret animéeet un spectacle d'opérette folk captivant.</p><p>Profitez d'une vue imprenable sur le Danubeet le magnifique paysage urbain de Budapest, suivi d'undélicieux dînercomposé d'une sélection detrois ou six plats.</p></div>
 <div class="ltt-buy-card">
 <div class="ltt-buy-card-head">
 <div class="ltt-buy-card-badge">
 <span class="ltt-live-dot"></span>
-<span>Billets officiels &amp; disponibilités en direct</span>
+<span>Official Tickets &amp; Live Availability</span>
 </div>
 <div class="ltt-buy-card-price">
 <span class="ltt-buy-price-val">€91</span>
-<span class="ltt-buy-price-sub">par adulte</span>
+<span class="ltt-buy-price-sub">Free cancellation up to 24h</span>
 </div>
 </div>
 <div class="ltt-buy-card-body">
 <div class="ltt-buy-card-info">
 <h4 class="ltt-buy-card-title">4-Course Gourmet Dinner Cruise With Folk Operetta </h4>
 <div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Billet QR instantané sur smartphone</span>
-<span class="ltt-buy-perk">Remboursement intégral jusqu'à 24h avant</span>
-<span class="ltt-buy-perk">Départ : <strong>Dock 11</strong></span>
-<span class="ltt-buy-perk">Durée : <strong>2.5 Hours</strong></span>
+<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
+<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
+<span class="ltt-buy-perk">Departure: <strong>Dock 11</strong></span>
+<span class="ltt-buy-perk">Duration: <strong>2.5 Hours</strong></span>
 </div>
 </div>
 <div class="ltt-buy-card-action">
 <a class="ltt-buy-cta-btn" href="https://budapestrivercruise.eu/product/budapest-danube-dinner-cruise/?code=bpadventures" rel="noopener nofollow sponsored" target="_blank">
-<span>Réserver maintenant</span>
+<span>Check Dates &amp; Book Tickets</span>
 <span class="ltt-cta-arrow">→</span>
 </a>
 <div class="ltt-buy-card-trust">
 <svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Meilleur prix garanti • Confirmation immédiate</span>
+<span>Best Price Guaranteed • Instant Confirmation</span>
 </div>
 </div>
 </div>
@@ -8145,7 +8205,7 @@ footer.ltt-footer .legal-text {
 </details>
 <details class="ltt-bento-group" open="">
 <summary class="ltt-bento-group-head">
-<span class="ltt-bento-group-title">Before the Cruise — Pier, Boarding &amp; Meeting Map</span>
+<span class="ltt-bento-group-title">📍 Embarcadère, Accès &amp; Plan</span>
 <span class="ltt-bento-right">
 <span class="ltt-mini-pill">Location Map</span>
 <span class="ltt-bento-chev">▾</span>
@@ -8190,10 +8250,10 @@ footer.ltt-footer .legal-text {
 <span class="bpa-rank-tag bpa-slate">#4 Top Pick</span>
 <div class="bpa-kicker">Silverline Cruises • ⏱️ 2.5 Hours • <a class="bpa-kicker-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dock+11+Budapest" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank">Dock 11</a></div>
 </div>
-<h3 class="bpa-details-title">4-Course Gourmet Dinner Cruise With Piano Battle Show</h3>
+<h3 class="bpa-details-title">Croisière Dîner Gourmet de 4 Plats Avec Spectacle de Duel de Pianos</h3>
 <div class="bpa-reviews-line">
 <div class="bpa-summary-reviews"><div class="div-block-53"><a class="bpa-rev-badge" href="https://budapestrivercruise.eu/product/dinner-cruise-piano-battle-show/?code=bpadventures" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZxJREFUWIXtl71Lw0AYxp/3kmvBgoP+C051U1xEHB3dHNydHBVxcBRcnB38AeIknRx1FkURHRwU3HRRxA8UdBDE73vuhUvbpE2TNvWqH3y3y3OPe97nhfviCgoKCoqYmJhoA9AHoA1AUkppAcgAyABIAVgDYAHIdF3X6vf7b70y7/w/Q+1h5/f29tqllA7A4h+l1O3VAKyFEF5Ui8fjd1Etiwgh+pZl/YyqqtqK41h2O/q+nw8E3d1h8rZtlx3HaUe1u7y+vv4Y2bKEEEL4vq/N1/G3Wp5/K5xIe9b3/Wbkrn13d7cd58qEEKINwIsL8J+BEEIogMf/gBDCKYDFz4AQohvAA4B21N3f5s3Nzfs41+eFEKIXQBf8B2j6Xy0k9hCllCeR7wLw+B+glDJCCDf6bQCWUlre2dmp2rZdM8bc3571PO812vN5hRCiqKpqu1fW8zy9W5m6ru/e39//8Hw/wD262+/v71u6rrcVRWkrinLYbrdtwzBavbSMMfT7fdbrdSzLwtraGmzbxtbWFnzfR61Ww8bGBqIoQl3XUSgUoGkaNE0DAIzHY5imic3NTcRxDCICEX3h0v8A/f4YqI6o01wAAAAASUVORK5CYII="/><span class="bpa-rev-score">4.6</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(2,400+)</span></a></div></div>
-<div class="bpa-proof"><span class="bpa-vchip">✓ Testé personnellement</span></div>
+<div class="bpa-proof"><span class="bpa-vchip">✓ Personally Tested</span></div>
 </div>
 </div>
 <div class="bpa-details-right">
@@ -8205,46 +8265,46 @@ footer.ltt-footer .legal-text {
 </div>
 </summary>
 <div class="bpa-details-body">
-<div class="pro-con-box-wrapper"><div class="w-layout-grid grid-15"><div class="pro-con-box-pro-cell" data-wf-pbl="layout-grid-1x2-vertical"><div class="pro-con-box-pro-cell-rich-text-block w-richtext"><h3><strong>Pros:</strong></h3><ul role="list"><li><strong>Gourmet food</strong> — 4-course dinner with a mix of Hungarian and international cuisine.</li><li><strong>Fresh food</strong> — the food is prepared on-site in the ship's kitchen.</li><li><strong>Features an excellent live piano music show with authentic and award-winning performers.</strong></li><li><strong>Lasts around 2 hours.</strong></li></ul></div></div><div class="pro-con-box-con-cell" data-wf-pbl="layout-grid-1x2-vertical"><div class="pro-con-box-con-cell-rich-text-block w-richtext"><h3><strong>Cons:</strong></h3><ul role="list"><li><strong>Minor Food Improvements</strong> — There are one or two minor areas where the food could be improved.</li></ul></div></div></div></div>
+<div class="pro-con-box-wrapper"><div class="w-layout-grid pro-con-box-grid"><div class="pro-con-box-pro-cell"><div class="pro-con-box-pro-cell-rich-text-block w-richtext"><h3><strong>Points forts :</strong></h3><ul role="list"><li><strong>Cuisine gastronomique</strong> — Dîner de 4 plats avec un mélange de cuisine hongroise et internationale.</li><li><strong>Aliments frais</strong> — la nourriture est préparée sur place dans la cuisine du navire.</li><li>Propose un excellent spectacle de musique de piano en directavec des artistes authentiques et primés.</li><li>Dure environ 2 heures.</li><li>Wi-Fi à bord :oui</li><li>Pont extérieur :oui</li><li>Climatisation/chauffage :oui</li><li>Fumer :oui, à l'extérieur</li><li>Accessible aux poussettes :oui</li><li>Réduction nourrissons/enfants :gratuit pour les nourrissons (0-3 ans)</li><li>Centrally located, easy to find and arrive.</li></ul></div></div><div class="pro-con-box-con-cell"><div class="pro-con-box-con-cell-rich-text-block w-richtext"><h3><strong>Points faibles :</strong></h3><ul role="list"><li><strong>Améliorations mineures de la nourriture</strong> — Il y a un ou deux domaines mineurs dans lesquels la nourriture pourrait être améliorée.</li><li>Animaux acceptés :non, uniquement les animaux d'assistance</li><li>Accessible en fauteuil roulant :non</li></ul></div></div></div></div>
 <details class="ltt-bento-group" open="">
 <summary class="ltt-bento-group-head">
-<span class="ltt-bento-group-title">Summary &amp; Review</span>
+<span class="ltt-bento-group-title">🏆 Résumé &amp; Évaluation</span>
 <span class="ltt-bento-right">
 <span class="ltt-mini-pill">Overview</span>
 <span class="ltt-bento-chev">▾</span>
 </span>
 </summary>
 <div class="ltt-bento-group-body">
-<div class="w-richtext"><blockquote>💡 <strong>The Silverline Piano Show cruise happens concurrently as the previously mentioned option without the live show. </strong>The only difference is that a live piano show performance is included, which is why the ticket costs more. Otherwise, all other elements of the two dinner cruises are the same.</blockquote><p>Enjoy a<strong> delightful piano dinner cruise</strong> in Budapest with Silverline Cruises. They offer an exceptional experience complete with a <strong>lively atmosphere</strong> and captivating <strong>piano music performance</strong> for those who prefer more contemporary music.</p><p>You can expect to be greeted by a friendly crew, an enjoyable atmosphere, and an enthralling piano performance that will leave you captivated.</p><p>Experience Budapest's <strong>magnificent cityscape</strong> and <strong>breathtaking Danube River</strong> views while indulging in a mouth-watering dinner featuring a<strong> selection of three or six courses</strong>.</p><p>This <strong>three-hour adventure is perfect for couples, loved ones, or colleagues </strong>looking for an unforgettable experience.</p><blockquote><strong>🎥 Video: </strong>Watch this <a href="https://www.youtube.com/watch?v=feyNKCMgy3Q&amp;ab_channel=BudapestRiverCruises-Silverline" target="_blank"><strong>teaser video of Silverline Cruises' dinner cruise</strong></a> to get a better idea of what you can expect.</blockquote><h3>Piano Music Show</h3><ul role="list"><li>Enjoy a captivating <strong>piano "battle" performance</strong> where two skilled musicians compete in a thrilling display of musical talent along with a female singer.<br/></li></ul><h3>How to Get There</h3><ul role="list"><li>🗺️ <a href="https://goo.gl/maps/pVRK1PR3s7srEcVM8" rel="nofollow" target="_blank">Meeting point: Budapest, Jane Haining Rakpart, Dokk 11, 1052</a></li><li>✔️ Centrally located, easy to find and arrive.</li><li>📘 Use <strong>tram line 2 </strong>to arrive at<strong> Széchenyi István tér stop</strong>. You can find Silverline Cruises closest to Elisabeth Bridge.</li></ul><div class="ltt-filmstrip-wrap"><div class="ltt-filmstrip" onscroll="window.lttFilmSync(this)"><div class="ltt-strip-slide"><img alt='Enjoy a captivating piano "battle" performance where two skilled musicians compete in a…' loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e51dce60ee5db481b8636d_best-budapest-dinner-cruises-silverline-105.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 1</span> <span>Enjoy a captivating piano "battle" performance where two skilled musicians compete in a…</span></div></div></div></div></div>
+<div class="w-richtext"><p>Profitez d'undélicieux dîner-croisière au pianoà Budapest avec Silverline Cruises. Ils offrent une expérience exceptionnelle avec uneatmosphère animéeetune performance captivante de musique au pianopour ceux qui préfèrent la musique plus contemporaine.</p><p>Vous pouvez vous attendre à être accueilli par une équipe amicale, une atmosphère agréable et une performance de piano captivante qui vous captivera.</p><p>Découvrezle magnifique paysage urbainde Budapest et les vuesimprenables sur le Danubetout en savourant un délicieux dîner composé d'unesélection de trois ou six plats.</p></div>
 <div class="ltt-buy-card">
 <div class="ltt-buy-card-head">
 <div class="ltt-buy-card-badge">
 <span class="ltt-live-dot"></span>
-<span>Billets officiels &amp; disponibilités en direct</span>
+<span>Official Tickets &amp; Live Availability</span>
 </div>
 <div class="ltt-buy-card-price">
 <span class="ltt-buy-price-val">€91</span>
-<span class="ltt-buy-price-sub">par adulte</span>
+<span class="ltt-buy-price-sub">Free cancellation up to 24h</span>
 </div>
 </div>
 <div class="ltt-buy-card-body">
 <div class="ltt-buy-card-info">
 <h4 class="ltt-buy-card-title">4-Course Gourmet Dinner Cruise With Piano Battle S</h4>
 <div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Billet QR instantané sur smartphone</span>
-<span class="ltt-buy-perk">Remboursement intégral jusqu'à 24h avant</span>
-<span class="ltt-buy-perk">Départ : <strong>Dock 11</strong></span>
-<span class="ltt-buy-perk">Durée : <strong>2.5 Hours</strong></span>
+<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
+<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
+<span class="ltt-buy-perk">Departure: <strong>Dock 11</strong></span>
+<span class="ltt-buy-perk">Duration: <strong>2.5 Hours</strong></span>
 </div>
 </div>
 <div class="ltt-buy-card-action">
 <a class="ltt-buy-cta-btn" href="https://budapestrivercruise.eu/product/dinner-cruise-piano-battle-show/?code=bpadventures" rel="noopener nofollow sponsored" target="_blank">
-<span>Réserver maintenant</span>
+<span>Check Dates &amp; Book Tickets</span>
 <span class="ltt-cta-arrow">→</span>
 </a>
 <div class="ltt-buy-card-trust">
 <svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Meilleur prix garanti • Confirmation immédiate</span>
+<span>Best Price Guaranteed • Instant Confirmation</span>
 </div>
 </div>
 </div>
@@ -8253,7 +8313,7 @@ footer.ltt-footer .legal-text {
 </details>
 <details class="ltt-bento-group" open="">
 <summary class="ltt-bento-group-head">
-<span class="ltt-bento-group-title">Before the Cruise — Pier, Boarding &amp; Meeting Map</span>
+<span class="ltt-bento-group-title">📍 Embarcadère, Accès &amp; Plan</span>
 <span class="ltt-bento-right">
 <span class="ltt-mini-pill">Location Map</span>
 <span class="ltt-bento-chev">▾</span>
@@ -8298,10 +8358,10 @@ footer.ltt-footer .legal-text {
 <span class="bpa-rank-tag bpa-slate">#5 Top Pick</span>
 <div class="bpa-kicker">Hungária Koncert • ⏱️ 2.5 Hours • <a class="bpa-kicker-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dock+3+Gróf+Széchényi+Budapest" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank">Dock 3 (Gróf Széchényi)</a></div>
 </div>
-<h3 class="bpa-details-title">12-Course Buffet Dinner Cruise With Folk Music &amp; Folk Dance</h3>
+<h3 class="bpa-details-title">Croisière Dîner Buffet Gratuit Avec Musique Folklorique et Spectacle de Danse</h3>
 <div class="bpa-reviews-line">
 <div class="bpa-summary-reviews"><div class="div-block-53"><a class="bpa-rev-badge" href="https://budapestxplore.com/en/budapest-dinner-and-cruise-with-live-music-xpZDZlZTExMN?affi=6876" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZxJREFUWIXtl71Lw0AYxp/3kmvBgoP+C051U1xEHB3dHNydHBVxcBRcnB38AeIknRx1FkURHRwU3HRRxA8UdBDE73vuhUvbpE2TNvWqH3y3y3OPe97nhfviCgoKCoqYmJhoA9AHoA1AUkppAcgAyABIAVgDYAHIdF3X6vf7b70y7/w/Q+1h5/f29tqllA7A4h+l1O3VAKyFEF5Ui8fjd1Etiwgh+pZl/YyqqtqK41h2O/q+nw8E3d1h8rZtlx3HaUe1u7y+vv4Y2bKEEEL4vq/N1/G3Wp5/K5xIe9b3/Wbkrn13d7cd58qEEKINwIsL8J+BEEIogMf/gBDCKYDFz4AQohvAA4B21N3f5s3Nzfs41+eFEKIXQBf8B2j6Xy0k9hCllCeR7wLw+B+glDJCCDf6bQCWUlre2dmp2rZdM8bc3571PO812vN5hRCiqKpqu1fW8zy9W5m6ru/e39//8Hw/wD262+/v71u6rrcVRWkrinLYbrdtwzBavbSMMfT7fdbrdSzLwtraGmzbxtbWFnzfR61Ww8bGBqIoQl3XUSgUoGkaNE0DAIzHY5imic3NTcRxDCICEX3h0v8A/f4YqI6o01wAAAAASUVORK5CYII="/><span class="bpa-rev-score">4.6</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(2,400+)</span></a></div></div>
-<div class="bpa-proof"><span class="bpa-vchip">✓ Testé personnellement</span></div>
+<div class="bpa-proof"><span class="bpa-vchip">✓ Personally Tested</span></div>
 </div>
 </div>
 <div class="bpa-details-right">
@@ -8313,46 +8373,46 @@ footer.ltt-footer .legal-text {
 </div>
 </summary>
 <div class="bpa-details-body">
-<div class="pro-con-box-wrapper"><div class="w-layout-grid grid-15"><div class="pro-con-box-pro-cell" data-wf-pbl="layout-grid-1x2-vertical"><div class="pro-con-box-pro-cell-rich-text-block w-richtext"><h3><strong>Pros:</strong></h3><ul role="list"><li><strong>Buffet Libre</strong> — this dinner cruise is a great way to taste various Hungarian dishes.</li><li><strong>Two Welcome Drinks</strong> — you can choose from various alcoholic and non-alcoholic options.</li><li><strong>Great Atmosphere</strong> — you feel like you're in an early 20th century cabaret and forget about the outside world for 2 hours.</li><li><strong>Folk Dance and Music Show</strong> — features one of the best live folklore music and dance shows with authentic and award-winning performers.</li><li><strong>Full Danube Circuit</strong> — the cruise covers everything worth seeing, from Margaret Island all the way down to the National Theatre/Palace of Arts.</li><li><strong>Long Cruise</strong> — the cruise lasts 1.5-2 hours, which gives ample time to eat, drink and see the sights at night.</li></ul></div></div><div class="pro-con-box-con-cell" data-wf-pbl="layout-grid-1x2-vertical"><div class="pro-con-box-con-cell-rich-text-block w-richtext"><h3><strong>Cons:</strong></h3><ul role="list"><li><strong>Not Great for Sightseeing</strong> — the views from the ship are mediocre (no 360°, fences blocking the view), spaces for sightseeing are both few/small, the dinner and folk show are more interesting so you'll focus on that and won't see the sights.</li><li><strong>Not Fine Dining Quality</strong> — The food is fine, but mid-range restaurants (and up) serve better quality food.</li></ul></div></div></div></div>
+<div class="pro-con-box-wrapper"><div class="w-layout-grid pro-con-box-grid"><div class="pro-con-box-pro-cell"><div class="pro-con-box-pro-cell-rich-text-block w-richtext"><h3><strong>Points forts :</strong></h3><ul role="list"><li><strong>Buffet Libre</strong> — ce dîner-croisière est une excellente façon de déguster divers plats hongrois.</li><li><strong>Deux boissons de bienvenue</strong> — vous pouvez choisir parmi différentes options avec et sans alcool.</li><li><strong>Super ambiance</strong> — vous avez l'impression d'être dans un cabaret du début du 20e siècle et oubliez le monde extérieur pendant 2 heures.</li><li><strong>Spectacle de danse et de musique folkloriques</strong> — présente l'un des meilleurs spectacles de musique et de danse folkloriques en direct avec des artistes authentiques et primés.</li><li><strong>Circuit complet du Danube</strong> — la croisière couvre tout ce qui vaut le détour, de l'île Marguerite jusqu'au Théâtre national/Palais des Arts.</li><li><strong>Longue croisière</strong> — la croisière dure 1,5 à 2 heures, ce qui laisse suffisamment de temps pour manger, boire et visiter les sites touristiques la nuit.</li><li>Wi-Fi à bord :oui</li><li>Pont extérieur :oui</li><li>Climatisation/chauffage :oui</li><li>Fumer :oui, à l'extérieur</li><li>Accessible aux poussettes :oui</li><li>Réduction bébé/enfant :gratuit pour les enfants (0-5 ans)</li><li>Centrally located, easy to find and arrive.</li></ul></div></div><div class="pro-con-box-con-cell"><div class="pro-con-box-con-cell-rich-text-block w-richtext"><h3><strong>Points faibles :</strong></h3><ul role="list"><li><strong>Pas idéal pour faire du tourisme</strong> — les vues depuis le navire sont médiocres (pas de 360°, des clôtures bloquant la vue), les espaces pour faire du tourisme sont à la fois peu nombreux/petits, le dîner et le spectacle folklorique sont plus intéressants, vous vous concentrerez donc là-dessus et vous gagnerez. Je ne vois pas les sites touristiques.</li><li><strong>Pas de qualité gastronomique</strong> — La nourriture est bonne, mais les restaurants de milieu de gamme (et plus) servent des plats de meilleure qualité.</li><li>Animaux acceptés :non, uniquement les animaux d'assistance</li><li>Accessible en fauteuil roulant :non</li></ul></div></div></div></div>
 <details class="ltt-bento-group" open="">
 <summary class="ltt-bento-group-head">
-<span class="ltt-bento-group-title">Summary &amp; Review</span>
+<span class="ltt-bento-group-title">🏆 Résumé &amp; Évaluation</span>
 <span class="ltt-bento-right">
 <span class="ltt-mini-pill">Overview</span>
 <span class="ltt-bento-chev">▾</span>
 </span>
 </summary>
 <div class="ltt-bento-group-body">
-<div class="w-richtext"><p>Hungaria Koncert offers the <strong>most popular dinner cruise experience in Budapest</strong> (based on number of reviews) that includes a <strong>live performance of Hungarian folk music and dance.</strong><br/></p><p>The dinner cruise ship offers a <strong>wide range of Hungarian cuisine options</strong> (buffet libre) and has a <strong>nostalgic atmosphere</strong> reminiscent of a cabaret from the early 1900s.</p><p>If you're looking for a <strong>captivating two-hour experience to share with your spouse, family, or friends/colleagues</strong>, then this cruise is perfect for you.</p><blockquote><strong>🎥 Video: </strong><a href="https://youtu.be/qPQE_vGlLEY?t=367" target="_blank">Watch my video summary</a> of Hungaria Koncert's dinner cruise to get a feel for this dinner cruise.</blockquote><h3>Dinner cruise menu</h3><p><strong>Soups</strong></p><ul role="list"><li>Goulash soup</li><li>Seasonal vegetable cream soup</li></ul><p><strong>Hot Main Course</strong></p><ul role="list"><li>Chicken fillet cooked in gravy with ragout</li><li>Beef stew with Villány red wine</li><li>Stuffed cabbage from turkey</li><li>Oven-baked vegetables</li><li>Vegetable couscous</li></ul><p><strong>Side Dish</strong></p><ul role="list"><li>Rice</li><li>Dumplings</li><li>Roast potatoes with parsley</li></ul><p><strong>Dessert</strong></p><ul role="list"><li>Variation of strudel</li><li>Somlói Galuska</li><li>Fruit bowl (only on request for those unable to eat other desserts)</li></ul><p><strong>Salad</strong></p><ul role="list"><li>Mixed salad with pesto</li><li>Pasta salad with yoghurt</li></ul><p><strong>Extra Side</strong></p><ul role="list"><li>Cucumber salad with sour cream</li></ul><h3>How to Get There</h3><ul role="list"><li>🗺️ <a href="https://goo.gl/maps/KGQN4LSZg3N27B4j9" rel="nofollow" target="_blank">Meeting point: Budapest, Id. Antall József rkp., 1051</a></li><li>✔️ Centrally located, easy to find and arrive.</li><li>📘 Use tram line 2 to arrive at Széchenyi István tér stop.  You can find Hungaria Koncert next to Széchenyi Chain bridge.</li></ul></div>
+<div class="w-richtext"><p>Hungaria Koncert propose l'expérience de dîner-croisière la plus populaire à Budapest(sur la base du nombre de critiques) qui comprend unspectacle en direct de musique et de danse folkloriques hongroises.</p><p>Le bateau-dîner-croisière propose unlarge éventail d'options de cuisine hongroise(buffet libre) et dégage uneatmosphère nostalgiquequi rappelle un cabaret du début des années 1900.</p><p>Si vous recherchez uneexpérience captivante de deux heures à partager avec votre conjoint, votre famille ou vos amis/collègues, alors cette croisière est parfaite pour vous.</p></div>
 <div class="ltt-buy-card">
 <div class="ltt-buy-card-head">
 <div class="ltt-buy-card-badge">
 <span class="ltt-live-dot"></span>
-<span>Billets officiels &amp; disponibilités en direct</span>
+<span>Official Tickets &amp; Live Availability</span>
 </div>
 <div class="ltt-buy-card-price">
 <span class="ltt-buy-price-val">€79</span>
-<span class="ltt-buy-price-sub">par adulte</span>
+<span class="ltt-buy-price-sub">Free cancellation up to 24h</span>
 </div>
 </div>
 <div class="ltt-buy-card-body">
 <div class="ltt-buy-card-info">
 <h4 class="ltt-buy-card-title">12-Course Buffet Dinner Cruise With Folk Music &amp; F</h4>
 <div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Billet QR instantané sur smartphone</span>
-<span class="ltt-buy-perk">Remboursement intégral jusqu'à 24h avant</span>
-<span class="ltt-buy-perk">Départ : <strong>Dock 3 (Gróf Széchényi)</strong></span>
-<span class="ltt-buy-perk">Durée : <strong>2.5 Hours</strong></span>
+<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
+<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
+<span class="ltt-buy-perk">Departure: <strong>Dock 3 (Gróf Széchényi)</strong></span>
+<span class="ltt-buy-perk">Duration: <strong>2.5 Hours</strong></span>
 </div>
 </div>
 <div class="ltt-buy-card-action">
 <a class="ltt-buy-cta-btn" href="https://budapestxplore.com/en/budapest-dinner-and-cruise-with-live-music-xpZDZlZTExMN?affi=6876" rel="noopener nofollow sponsored" target="_blank">
-<span>Réserver maintenant</span>
+<span>Check Dates &amp; Book Tickets</span>
 <span class="ltt-cta-arrow">→</span>
 </a>
 <div class="ltt-buy-card-trust">
 <svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Meilleur prix garanti • Confirmation immédiate</span>
+<span>Best Price Guaranteed • Instant Confirmation</span>
 </div>
 </div>
 </div>
@@ -8361,7 +8421,7 @@ footer.ltt-footer .legal-text {
 </details>
 <details class="ltt-bento-group" open="">
 <summary class="ltt-bento-group-head">
-<span class="ltt-bento-group-title">During the Cruise — Ship, Lower vs. Top Deck &amp; Views</span>
+<span class="ltt-bento-group-title">🛳️ Le Bateau &amp; les Ponts</span>
 <span class="ltt-bento-right">
 <span class="ltt-mini-pill">Onboard Walkthrough</span>
 <span class="ltt-bento-chev">▾</span>
@@ -8402,14 +8462,14 @@ footer.ltt-footer .legal-text {
 </div>
 </div>
 </div>
-</details><details class="bpa-details-card" data-cat="alacarte show" id="cruise-6-eurama" open="">
+</details><details class="bpa-details-card" data-cat="tested alacarte show" id="cruise-6-eurama" open="">
 <summary class="bpa-details-summary">
 <div class="bpa-details-summary-content">
 <div class="bpa-details-top-row">
 <span class="bpa-rank-tag bpa-slate">#6 Top Pick</span>
 <div class="bpa-kicker">Eurama Cruises • ⏱️ 2.5 Hours • <a class="bpa-kicker-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dock+6+Jane+Haining+rkp+Budapest" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank">Dock 6 (Jane Haining rkp.)</a></div>
 </div>
-<h3 class="bpa-details-title">4-Course Dinner Cruise With Folk Show</h3>
+<h3 class="bpa-details-title">Excellent Choix Polyvalent Croisière Dîner de 4 Plats Avec Spectacle Folklorique</h3>
 <div class="bpa-reviews-line">
 <div class="bpa-summary-reviews"><div class="div-block-53"><a class="bpa-rev-badge" href="https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=eng-dinner-cruises-budapest-eurama-reviews&amp;mkt_cmp=true" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZxJREFUWIXtl71Lw0AYxp/3kmvBgoP+C051U1xEHB3dHNydHBVxcBRcnB38AeIknRx1FkURHRwU3HRRxA8UdBDE73vuhUvbpE2TNvWqH3y3y3OPe97nhfviCgoKCoqYmJhoA9AHoA1AUkppAcgAyABIAVgDYAHIdF3X6vf7b70y7/w/Q+1h5/f29tqllA7A4h+l1O3VAKyFEF5Ui8fjd1Etiwgh+pZl/YyqqtqK41h2O/q+nw8E3d1h8rZtlx3HaUe1u7y+vv4Y2bKEEEL4vq/N1/G3Wp5/K5xIe9b3/Wbkrn13d7cd58qEEKINwIsL8J+BEEIogMf/gBDCKYDFz4AQohvAA4B21N3f5s3Nzfs41+eFEKIXQBf8B2j6Xy0k9hCllCeR7wLw+B+glDJCCDf6bQCWUlre2dmp2rZdM8bc3571PO812vN5hRCiqKpqu1fW8zy9W5m6ru/e39//8Hw/wD262+/v71u6rrcVRWkrinLYbrdtwzBavbSMMfT7fdbrdSzLwtraGmzbxtbWFnzfR61Ww8bGBqIoQl3XUSgUoGkaNE0DAIzHY5imic3NTcRxDCICEX3h0v8A/f4YqI6o01wAAAAASUVORK5CYII="/><span class="bpa-rev-score">4.6</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(2,400+)</span></a></div></div>
 </div>
@@ -8423,46 +8483,46 @@ footer.ltt-footer .legal-text {
 </div>
 </summary>
 <div class="bpa-details-body">
-<div class="pro-con-box-wrapper"><div class="w-layout-grid grid-15"><div class="pro-con-box-pro-cell" data-wf-pbl="layout-grid-1x2-vertical"><div class="pro-con-box-pro-cell-rich-text-block w-richtext"><h3><strong>Pros:</strong></h3><ul role="list"><li><strong>4-Course Hungarian Feast</strong> — A chance to delve into authentic Hungarian cuisine, with options even for special diets.</li><li><strong>Gypsy Musical Extravaganza</strong> — Sets the cruise apart with traditional gypsy music and dance performances.</li><li><strong>Ideal Duration</strong> — 1.5 hours is the sweet spot: long enough to enjoy the views, food, and entertainment, but not so long that it feels excessive.</li><li><strong>Upper Deck Views</strong> — The upper deck offers a 360-degree panorama, perfect for soaking in the Budapest skyline.</li><li><strong>Central Meeting Point</strong> — Conveniently located, getting to the dock shouldn't be a problem.</li></ul></div></div><div class="pro-con-box-con-cell" data-wf-pbl="layout-grid-1x2-vertical"><div class="pro-con-box-con-cell-rich-text-block w-richtext"><h3><strong>Cons:</strong></h3><ul role="list"><li><strong>Limited Accessibility</strong> — The ship is not wheelchair-accessible, making it a challenging option for those with mobility issues.</li></ul></div></div></div></div>
+<div class="pro-con-box-wrapper"><div class="w-layout-grid pro-con-box-grid"><div class="pro-con-box-pro-cell"><div class="pro-con-box-pro-cell-rich-text-block w-richtext"><h3><strong>Points forts :</strong></h3><ul role="list"><li><strong>Festin hongrois de 4 plats</strong> — Une occasion de se plonger dans la cuisine hongroise authentique, avec des options même pour les régimes spéciaux.Extravagance musicale gitane— La croisière se distingue par ses spectacles de musique et de danse gitane traditionnels.Durée idéale— 1,5 heure est la durée idéale : suffisamment longue pour profiter de la vue, de la nourriture et des divertissements, mais pas trop longue pour que cela semble excessif.Vues depuis le pont supérieur— Le pont supérieur offre un panorama à 360 degrés, parfait pour s'imprégner de l'horizon de Budapest.Point de rencontre central— Idéalement situé, se rendre au quai ne devrait pas être un problème.</li><li>Wi-Fi à bord :oui</li><li>Pont extérieur :oui</li><li>Climatisation/chauffage :oui</li><li>Fumer :oui, à l'extérieur</li><li>Accessible aux poussettes :oui</li><li>Réduction bébé/enfant :aucune</li><li>Le point de rendez-vous estidéalement situé au centreet facilement accessible.</li></ul></div></div><div class="pro-con-box-con-cell"><div class="pro-con-box-con-cell-rich-text-block w-richtext"><h3><strong>Points faibles :</strong></h3><ul role="list"><li><strong>Accessibilité limitée</strong> — Le navire n'est pas accessible aux fauteuils roulants, ce qui en fait une option difficile pour les personnes à mobilité réduite.</li><li>Animaux acceptés :non, uniquement les animaux d'assistance</li><li>Accessible en fauteuil roulant :non</li></ul></div></div></div></div>
 <details class="ltt-bento-group" open="">
 <summary class="ltt-bento-group-head">
-<span class="ltt-bento-group-title">Summary &amp; Review</span>
+<span class="ltt-bento-group-title">🏆 Résumé &amp; Évaluation</span>
 <span class="ltt-bento-right">
 <span class="ltt-mini-pill">Overview</span>
 <span class="ltt-bento-chev">▾</span>
 </span>
 </summary>
 <div class="ltt-bento-group-body">
-<div class="w-richtext"><p>Experience a wonderful evening of<strong> traditional folk music and dance</strong> while cruising along the Danube River in Budapest with Eurama.</p><p>Their dinner cruise promises a<strong> lively atmosphere</strong> and a <strong>captivating gypsy performance</strong>, ensuring an unforgettable experience.</p><p>Enjoy the stunning cityscape of Budapest and the<strong> breathtaking views of the Danube River</strong> while treating yourself to a delicious<strong> four-course dinner</strong>.</p><p>This <strong>1.5-hour adventure </strong>is ideal for couples, loved ones, or colleagues seeking a memorable experience.</p><blockquote><strong>🎥 Video: </strong>Watch this <a href="https://eurama.hu/wp-content/uploads/2022/08/2023_DinnerCruise-promo.mp4" rel="nofollow" target="_blank"><strong>teaser video of Eurama's dinner cruise</strong></a> to get a better idea of what you can expect.</blockquote><h3>Gypsy Music and Dance Show</h3><ul role="list"><li>Enjoy a delightful dinner cruise while being entertained by <strong>traditional Gypsy music and dance performances</strong>.</li></ul><h3>Dinner Cruise Menu</h3><ul role="list"><li><strong>4-course dinner for adults</strong>, depending on which tier you choose. Additional packages are available with drinks and window table.</li><li><strong>Traditional Hungarian Menu 1: </strong>Goulash soup, Roast duck leg with oniony crushed potatoes and stewed cabbage, Apple, sour cherry strudel with cinnamon dressing</li><li><strong>Traditional Hungarian Menu 2:</strong> Clear chicken soup „Újházi style” with vegetables, Veal stew with egg noodles, Somlói galuska</li><li><strong>Vegetarian Menu:</strong> Green pea cream soup, with cilantro cottage cheese dumplings, Grilled goat cheese with sweet potatoes and raspberry vinegar salad, Traditional Gundel pancake</li><li><strong>SPECIAL Gluten free Menu: </strong>Goulash soup (of course without bread), Roast duck leg with oniony crushed potatoes and stewed cabbage, Chia Seed pudding with strawberry pith</li><li><strong>SPECIAL Lactose free Menu</strong><em>: Goulash soup, Roast duck leg with oniony crushed potatoes and stewed cabbage, Chia Seed pudding with strawberry pith</em><br/></li></ul><h3>Cruise Duration</h3><ul role="list"><li>The cruise will take <strong>1.5 hours</strong>, which may seem shorter than other cruises that last 2-3 hours. However, in my experience, <strong>anything over 2 hours can be excessive</strong>.</li><li>Nonetheless, <strong>1.5 hours is enough time</strong> to enjoy the food, music performance, and beautiful scenery.<strong></strong></li></ul><h3>The Ship</h3><ul role="list"><li>The <strong>show and gypsy music band is</strong><strong> main deck, so choose your seats accordingly. </strong>Seating depends on the size of your group. Both decks have <strong>ample space to move around</strong>, and the upper deck offers a stunning <strong>360-degree view</strong>.</li></ul><h3>How to Get There</h3><ul role="list"><li>🗺️ <strong>Meeting point: </strong><a href="https://goo.gl/maps/nCzcK17HbtYDR2mf7" target="_blank">Budapest, Jane Haining rkp., Dock 6, 1051</a></li><li>✔️ The meeting point is <strong>conveniently located in the center</strong> and easily accessible.</li><li>📘 To get to <strong>Vigadó tér tram stop</strong>, you can either take tram line 2 or walk. Eurama is located <strong>near the BBKK-Mahart kiosk</strong>.</li></ul><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div class="ltt-filmstrip" onscroll="window.lttFilmSync(this)"><div class="ltt-strip-slide"><img alt="Enjoy a delightful dinner cruise while being entertained by traditional Gypsy music and…" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64c900cc6aab98bd3479f556_Dinner-cruise-eurama-sightseeing%20(8).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 4</span> <span>Enjoy a delightful dinner cruise while being entertained by traditional Gypsy music and…</span></div></div><div class="ltt-strip-slide"><img alt="4-course dinner for adults , depending on which tier you choose." loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64c900ca00a16648afedc0f2_Dinner-cruise-eurama-sightseeing%20(2).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 4</span> <span>4-course dinner for adults , depending on which tier you choose.</span></div></div><div class="ltt-strip-slide"><img alt="The cruise will take 1.5 hours , which may seem shorter than other cruises that last 2-3 hours." loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64c900c953b6154b953dd8e9_Dinner-cruise-eurama-sightseeing%20(1).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 4</span> <span>The cruise will take 1.5 hours , which may seem shorter than other cruises that last 2-3 hours.</span></div></div><div class="ltt-strip-slide"><img alt="The show and gypsy music band is main deck, so choose your seats accordingly." loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64c90214d23273a2e88e9615_Dinner-cruise-eurama-sightseeing%20(12).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 4</span> <span>The show and gypsy music band is main deck, so choose your seats accordingly.</span></div></div></div></div></div>
+<div class="w-richtext"><p>Vivez une merveilleuse soirée demusique et de danse folkloriques traditionnelleslors d'une croisière le long du Danube à Budapest avec Eurama.</p><p>Leur dîner-croisière promet uneatmosphère animéeet unspectacle gitan captivant, garantissant une expérience inoubliable.</p><p>Profitez du magnifique paysage urbain de Budapest et desvues à couper le souffle sur le Danubetout en vous offrant un délicieuxdîner de quatre plats.</p></div>
 <div class="ltt-buy-card">
 <div class="ltt-buy-card-head">
 <div class="ltt-buy-card-badge">
 <span class="ltt-live-dot"></span>
-<span>Billets officiels &amp; disponibilités en direct</span>
+<span>Official Tickets &amp; Live Availability</span>
 </div>
 <div class="ltt-buy-card-price">
 <span class="ltt-buy-price-val">€90</span>
-<span class="ltt-buy-price-sub">par adulte</span>
+<span class="ltt-buy-price-sub">Free cancellation up to 24h</span>
 </div>
 </div>
 <div class="ltt-buy-card-body">
 <div class="ltt-buy-card-info">
 <h4 class="ltt-buy-card-title">4-Course Dinner Cruise With Folk Show</h4>
 <div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Billet QR instantané sur smartphone</span>
-<span class="ltt-buy-perk">Remboursement intégral jusqu'à 24h avant</span>
-<span class="ltt-buy-perk">Départ : <strong>Dock 6 (Jane Haining rkp.)</strong></span>
-<span class="ltt-buy-perk">Durée : <strong>2.5 Hours</strong></span>
+<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
+<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
+<span class="ltt-buy-perk">Departure: <strong>Dock 6 (Jane Haining rkp.)</strong></span>
+<span class="ltt-buy-perk">Duration: <strong>2.5 Hours</strong></span>
 </div>
 </div>
 <div class="ltt-buy-card-action">
 <a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=eng-dinner-cruises-budapest-eurama-reviews&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>Réserver maintenant</span>
+<span>Check Dates &amp; Book Tickets</span>
 <span class="ltt-cta-arrow">→</span>
 </a>
 <div class="ltt-buy-card-trust">
 <svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Meilleur prix garanti • Confirmation immédiate</span>
+<span>Best Price Guaranteed • Instant Confirmation</span>
 </div>
 </div>
 </div>
@@ -8471,7 +8531,7 @@ footer.ltt-footer .legal-text {
 </details>
 <details class="ltt-bento-group" open="">
 <summary class="ltt-bento-group-head">
-<span class="ltt-bento-group-title">Before the Cruise — Pier, Boarding &amp; Meeting Map</span>
+<span class="ltt-bento-group-title">📍 Embarcadère, Accès &amp; Plan</span>
 <span class="ltt-bento-right">
 <span class="ltt-mini-pill">Location Map</span>
 <span class="ltt-bento-chev">▾</span>
@@ -8523,7 +8583,7 @@ footer.ltt-footer .legal-text {
 </div>
 </div>
 </div>
-</details><details class="bpa-details-card" data-cat="alacarte show drinks" id="cruise-7-unlimited-drinks" open="">
+</details><details class="bpa-details-card" data-cat="tested alacarte show drinks" id="cruise-7-unlimited-drinks" open="">
 <summary class="bpa-details-summary">
 <div class="bpa-details-summary-content">
 <div class="bpa-details-top-row">
@@ -8557,36 +8617,36 @@ footer.ltt-footer .legal-text {
 <div class="w-richtext"><p>If you want a sit-down <strong>4-course plated dinner</strong> without worrying about an expensive bar tab at the end of the night, the <strong>River Diva Unlimited Drinks Dinner Cruise</strong> at Dock 8A is the standout choice in Budapest.</p><p>Most Danube dinner cruises only include a single welcome glass of sparkling wine, charging €6–€10 for every extra glass of wine or beer. Here, <strong>unlimited Hungarian wines, sparkling wine, beer, and soft drinks</strong> are bundled directly into the €99 ticket across a generous <strong>2.5-hour route</strong>.</p><h3>How to Get There</h3><ul role="list">
 <li>🗺️ <strong>Meeting point:</strong> Budapest, Jane Haining rakpart, <strong>Dock 8A</strong> (directly beneath the white Elizabeth Bridge on the Pest side).</li>
 <li>📘 Take <strong>Tram Line 2</strong> to <strong>Március 15. tér</strong> and walk 2 minutes down to the Danube promenade at Dock 8A.</li>
-</ul><p><a class="bpa-book-button bpa-btn" href="https://www.getyourguide.com/budapest-l29/budapestpremium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=budapest-dinner-cruises-comparison-list-unlimited-drinks" rel="sponsored noopener" style="display:inline-block;margin-top:8px;text-decoration:none;" target="_blank">Check Availability &amp; Menu on GetYourGuide →</a></p></div>
+</ul><p><a class="bpa-book-button bpa-btn" href="https://www.getyourguide.com/budapest-l29/budapestpremium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=budapest-dinner-cruises-comparison-list-unlimited-drinks" rel="sponsored noopener" style="display:inline-block;margin-top:8px;text-decoration:none;" target="_blank">Vérifier les disponibilités →</a></p></div>
 <div class="ltt-buy-card">
 <div class="ltt-buy-card-head">
 <div class="ltt-buy-card-badge">
 <span class="ltt-live-dot"></span>
-<span>Billets officiels &amp; disponibilités en direct</span>
+<span>Official Tickets &amp; Live Availability</span>
 </div>
 <div class="ltt-buy-card-price">
 <span class="ltt-buy-price-val">€99</span>
-<span class="ltt-buy-price-sub">par adulte</span>
+<span class="ltt-buy-price-sub">Free cancellation up to 24h</span>
 </div>
 </div>
 <div class="ltt-buy-card-body">
 <div class="ltt-buy-card-info">
 <h4 class="ltt-buy-card-title">4-Course Dinner Cruise With Live Music &amp; Unlimited</h4>
 <div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Billet QR instantané sur smartphone</span>
-<span class="ltt-buy-perk">Remboursement intégral jusqu'à 24h avant</span>
-<span class="ltt-buy-perk">Départ : <strong>Dock 8A</strong></span>
-<span class="ltt-buy-perk">Durée : <strong>2.5 Hours</strong></span>
+<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
+<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
+<span class="ltt-buy-perk">Departure: <strong>Dock 8A</strong></span>
+<span class="ltt-buy-perk">Duration: <strong>2.5 Hours</strong></span>
 </div>
 </div>
 <div class="ltt-buy-card-action">
 <a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapestpremium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=budapest-dinner-cruises-comparison-list-unlimited-drinks" rel="noopener nofollow sponsored" target="_blank">
-<span>Réserver maintenant</span>
+<span>Check Dates &amp; Book Tickets</span>
 <span class="ltt-cta-arrow">→</span>
 </a>
 <div class="ltt-buy-card-trust">
 <svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Meilleur prix garanti • Confirmation immédiate</span>
+<span>Best Price Guaranteed • Instant Confirmation</span>
 </div>
 </div>
 </div>
@@ -8965,33 +9025,32 @@ footer.ltt-footer .legal-text {
 <span>BUDAPEST ADVENTURES</span>
 </a>
 </p>
-<p class="footer-paragraph">Tests indépendants et incognito des meilleures croisières promenade et dîners croisières sur le Danube. Basés à Budapest, nous payons nos billets, testons les audioguides et inspectons chaque embarcadère pour vous éviter les pièges à touristes.</p>
+<p class="footer-paragraph">BudapestAdventures.com is your independent, locally tested guide to the best Danube river cruises, thermal baths, and experiences in Budapest.</p>
 </div>
 <div class="w-layout-grid footer-links-grid">
 <div class="footer-link-column">
-<div class="footer-link-title">Guides Phares de Budapest</div>
-<a class="footer-link-3" href="/fr/croisieres-danube-budapest">Les 10 meilleures croisières sur le Danube</a>
-<a class="footer-link-3" href="/fr/diner-croisieres-danube-budapest">Les 7 meilleurs dîners croisières</a>
-<a class="footer-link-3" href="/budapest-card-is-it-worth-it">Calculateur Budapest Card (2026)</a>
-<a class="footer-link-3" href="/thermal-baths-budapest">8 meilleurs bains thermaux de Budapest</a>
-<a class="footer-link-3" href="/best-night-cruises-budapest">Meilleures croisières nocturnes</a>
-<a class="footer-link-3" href="/unlimited-prosecco-cruises-budapest">Croisières prosecco à volonté</a>
-<a class="footer-link-3" href="/best-private-boat-tours-budapest">Meilleures balades en bateau privé</a>
-<a class="footer-link-3" href="/best-walking-tours-budapest">Meilleures visites à pied de Budapest</a>
-<a class="footer-link-3" href="/best-hostels-budapest">Meilleures auberges de jeunesse</a>
+<div class="footer-link-title">Popular Flagship Guides</div>
+<a class="footer-link-3" href="/fr/croisieres-danube-budapest">10 Best Danube River Cruises in Budapest</a>
+<a class="footer-link-3" href="/fr/diner-croisieres-danube-budapest">7 Best Dinner Cruises in Budapest</a>
+<a class="footer-link-3" href="/fr/budapest-card-is-it-worth-it">Budapest Card Value Calculator (2026)</a>
+<a class="footer-link-3" href="/fr/thermal-baths-budapest">8 Best Thermal Baths in Budapest</a>
+<a class="footer-link-3" href="/fr/best-night-cruises-budapest">Best Night Cruises in Budapest</a>
+<a class="footer-link-3" href="/fr/unlimited-prosecco-cruises-budapest">Unlimited Prosecco Cruises</a>
+<a class="footer-link-3" href="/fr/best-private-boat-tours-budapest">Best Private Boat Tours</a>
+<a class="footer-link-3" href="/fr/best-walking-tours-budapest">Best Walking Tours in Budapest</a>
+<a class="footer-link-3" href="/fr/best-hostels-budapest">Best Hostels in Budapest</a>
 </div>
 <div class="footer-link-column">
-<div class="footer-link-title">Confiance &amp; Entreprise</div>
-<a class="footer-link-3" href="/about">À propos d'Adam Dimitrov</a>
-<a class="footer-link-3" href="/about#methodology">Notre charte éthique en 5 points</a>
-<a class="footer-link-3" href="/contact">Contacter la rédaction</a>
+<div class="footer-link-title">Company &amp; Trust</div>
+<a class="footer-link-3" href="/fr/about">About &amp; Ethics</a>
+<a class="footer-link-3" href="/fr/about#methodology">Field Testing Standards</a>
+<a class="footer-link-3" href="/fr/contact">Contact</a>
 </div>
 </div>
 </div>
 <div class="grey-divider"></div>
 <div class="legal-wrapper">
-<div class="legal-text">© 2026 BudapestAdventures.com. Tous droits réservés.</div>
-
+<div class="legal-text">© 2026 BudapestAdventures.com. All rights reserved.</div>
 </div>
 </div>
 </div>
@@ -21508,32 +21567,648 @@ details.ltt-bento-group:not([open]) .ltt-bento-chev {
 <div class="hybrid-bar-inner">
 <button aria-label="Jump to Cruise Review" class="hybrid-toc-btn" id="hybridTocBtn" type="button">
 <svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 20 14" width="16"><line x1="2" x2="18" y1="2" y2="2"></line><line x1="2" x2="18" y1="7" y2="7"></line><line x1="2" x2="18" y1="12" y2="12"></line></svg>
-<span>Les 7 dîners croisières</span>
+<span>All 7 Dinner Cruises</span>
 </button>
 <button aria-label="Jump to Top" class="hybrid-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Jump to Top" type="button">
 <svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="13"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
-<span>Haut</span>
+<span>Top</span>
 </button>
 <div class="hybrid-active-info">
-<span class="hybrid-active-badge" id="sticky-rank">#1 CHOIX</span>
+<span class="hybrid-active-badge" id="sticky-rank">#1 PICK</span>
 <span class="hybrid-active-title" id="sticky-name">4-Course Romantic Candlelit Dinner Cruise With Liv</span>
 <span class="hybrid-active-price" id="sticky-price">€110</span>
-<span class="hybrid-active-trust">Annulation gratuite 24h</span>
+<span class="hybrid-active-trust">Free 24h Cancel</span>
 </div>
-<a class="hybrid-cta-btn" href="https://legenda.hu/en?partner=38585" id="sticky-cta-btn" rel="noopener nofollow sponsored" target="_blank">Réserver maintenant →</a>
+<a class="hybrid-cta-btn" href="https://legenda.hu/en?partner=38585" id="sticky-cta-btn" rel="noopener nofollow sponsored" target="_blank">
+      Check Availability →
+    </a>
 </div>
 </aside>
 <div class="hybrid-sheet-backdrop" id="hybridBackdrop">
 <div aria-label="Jump to Tested Budapest Dinner Cruise" aria-modal="true" class="hybrid-sheet" id="hybridSheet" role="dialog">
 <div class="hybrid-sheet-head">
-<h3 class="hybrid-sheet-title">Accéder aux dîners croisières testés</h3>
+<h3 class="hybrid-sheet-title">Jump to Tested Budapest Dinner Cruise</h3>
 <button aria-label="Close" class="hybrid-sheet-close" id="hybridCloseBtn" type="button">✕</button>
 </div>
 <div class="hybrid-toc-list" id="hybridSheetList"></div>
 </div>
 </div>
-<script>window.LTT_PAGE_CONFIG = {"deckId": "budapest-dinner-cruise-deck", "tocDeckLabel": "Comparatif des 7 dîners croisières", "tocBreakdownLabel": "Analyse détaillée (7 dîners croisières)", "shortTitles": ["4-Course Romantic Candlelit Dinner Cruise With Liv", "4-Course Dinner Cruise with Welcome Drink Without ", "4-Course Gourmet Dinner Cruise With Folk Operetta ", "4-Course Gourmet Dinner Cruise With Piano Battle S", "12-Course Buffet Dinner Cruise With Folk Music & F", "4-Course Dinner Cruise With Folk Show", "4-Course Dinner Cruise With Live Music & Unlimited"], "pickLabel": "CHOIX", "btnText": "Réserver maintenant →"};</script>
-<script id="ltt-language-switcher-logic">
+<script>
+window.LTT_PAGE_CONFIG = {"deckId": "budapest-dinner-cruise-deck", "tocDeckLabel": "Top 7 Dinner Cruises Comparison", "tocBreakdownLabel": "Detailed Breakdown (7 Dinner Cruises)", "shortTitles": ["4-Course Romantic Candlelit Dinner Cruise With Liv", "4-Course Dinner Cruise with Welcome Drink Without ", "4-Course Gourmet Dinner Cruise With Folk Operetta ", "4-Course Gourmet Dinner Cruise With Piano Battle S", "12-Course Buffet Dinner Cruise With Folk Music & F", "4-Course Dinner Cruise With Folk Show", "4-Course Dinner Cruise With Live Music & Unlimited"]};
+</script>
+<script id="ltt-page-runtime">/* ==========================================================================
+   LUXURY EDITORIAL SYSTEM — UNIFIED PAGE RUNTIME
+   Handles: Sliders, Filter Tabs, Accordion Controls, Desktop TOC Scrollspy,
+   Hybrid Sticky Bottom Bar, Mobile Bottom Sheet TOC, & Dynamic Smooth Scroll
+   ========================================================================== */
+(function() {
+  var cfg = window.LTT_PAGE_CONFIG || {};
+  var deckId = cfg.deckId || 'dubai-safari-deck';
+  var tocDeckLabel = cfg.tocDeckLabel || 'Top 10 Comparison';
+  var tocBreakdownLabel = cfg.tocBreakdownLabel || 'Detailed Breakdown';
+  var shortTitles = cfg.shortTitles || [];
+
+  // 1. Slider controls
+  window.bpaSlide = function(btn, dir) {
+    var media = btn.closest('.bpa-media');
+    if (!media) return;
+    var slider = media.querySelector('.bpa-slider');
+    if (!slider) return;
+    var w = slider.clientWidth;
+    slider.scrollBy({ left: dir * w, behavior: 'smooth' });
+  };
+
+  window.bpaCount = function(slider) {
+    var media = slider.closest('.bpa-media');
+    if (!media) return;
+    var pill = media.querySelector('.bpa-pill');
+    if (!pill) return;
+    var w = slider.clientWidth || 1;
+    var idx = Math.min(Math.round(slider.scrollLeft / w) + 1, slider.children.length);
+    pill.textContent = idx + ' / ' + slider.children.length;
+  };
+
+  // 1b. Bento Filmstrip Desktop & Mobile Slider Controls
+  window.lttFilmSync = function(strip) {
+    if (!strip) return;
+    var wrap = strip.closest('.ltt-filmstrip-wrap');
+    if (!wrap) return;
+    var prevBtn = wrap.querySelector('.ltt-film-prev');
+    var nextBtn = wrap.querySelector('.ltt-film-next');
+    var maxScroll = strip.scrollWidth - strip.clientWidth;
+    if (prevBtn) {
+      prevBtn.classList.toggle('is-disabled', maxScroll <= 6 || strip.scrollLeft <= 6);
+    }
+    if (nextBtn) {
+      nextBtn.classList.toggle('is-disabled', maxScroll <= 6 || strip.scrollLeft >= maxScroll - 6);
+    }
+  };
+
+  window.lttFilmSlide = function(btn, dir) {
+    var wrap = btn.closest('.ltt-filmstrip-wrap');
+    if (!wrap) return;
+    var strip = wrap.querySelector('.ltt-filmstrip');
+    if (!strip) return;
+    var slide = strip.querySelector('.ltt-strip-slide');
+    var step = slide ? (slide.offsetWidth + 12) : Math.round(strip.clientWidth * 0.75);
+    strip.scrollBy({ left: dir * step, behavior: 'smooth' });
+    setTimeout(function() { window.lttFilmSync(strip); }, 260);
+  };
+
+  function initAllFilmstrips() {
+    document.querySelectorAll('.ltt-filmstrip').forEach(function(strip) {
+      window.lttFilmSync(strip);
+      if (!strip._filmBound) {
+        strip._filmBound = true;
+        strip.addEventListener('scroll', function() {
+          window.lttFilmSync(strip);
+        }, { passive: true });
+      }
+    });
+  }
+
+  // 2. Filter tabs (Single-select buyer intent + Detailed Breakdown sync)
+  var activeCat = 'all';
+  var defaultBreakdownSub = null;
+
+  function getBtnCat(b) {
+    var dc = b.getAttribute('data-cat');
+    if (dc) return dc;
+    var oc = b.getAttribute('onclick') || '';
+    var m = oc.match(/['"]([^'"]+)['"]/);
+    return m ? m[1] : '';
+  }
+
+  function cardMatchesCat(cardCatStr, cat) {
+    if (!cat || cat === 'all') return true;
+    var tokens = (cardCatStr || '').split(/\s+/);
+    return tokens.indexOf(cat) !== -1;
+  }
+
+  window.lttFilterItems = function(cat, btn) {
+    var buttons = Array.from(document.querySelectorAll('.ltt-tab-btn'));
+    var cards = Array.from(document.querySelectorAll('#ltt-cards-deck .bpa-card'));
+    var detailsCards = Array.from(document.querySelectorAll('details.bpa-details-card'));
+
+    // Toggle: clicking the active non-all filter returns to 'all'
+    if (activeCat === cat && cat !== 'all') {
+      activeCat = 'all';
+    } else {
+      activeCat = cat || 'all';
+    }
+
+    buttons.forEach(function(b) {
+      var bCat = getBtnCat(b);
+      b.classList.toggle('active', bCat === activeCat);
+    });
+
+    var visibleCount = 0;
+    cards.forEach(function(card, i) {
+      var show = cardMatchesCat(card.getAttribute('data-cat'), activeCat);
+      card.style.display = show ? 'block' : 'none';
+      if (show) visibleCount++;
+      if (detailsCards[i]) {
+        var detCat = detailsCards[i].getAttribute('data-cat') || card.getAttribute('data-cat') || '';
+        var detShow = cardMatchesCat(detCat, activeCat);
+        detailsCards[i].style.display = detShow ? 'block' : 'none';
+        var detId = detailsCards[i].id;
+        if (detId) {
+          document.querySelectorAll('#toc a[href="#' + detId + '"], #hybridSheetList a[href="#' + detId + '"]').forEach(function(lk) {
+            lk.classList.toggle('is-filtered', !detShow);
+          });
+        }
+      }
+    });
+
+    var subEl = document.querySelector('.bpa-breakdown-sub');
+    if (subEl) {
+      if (defaultBreakdownSub === null) {
+        defaultBreakdownSub = subEl.textContent;
+      }
+      if (activeCat === 'all') {
+        subEl.textContent = defaultBreakdownSub;
+      } else {
+        var activeBtn = buttons.find(function(b) { return getBtnCat(b) === activeCat; });
+        var filterLabel = activeBtn ? activeBtn.textContent.trim() : activeCat;
+        subEl.textContent = 'Showing ' + visibleCount + ' of ' + cards.length + ' cruises matching ' + filterLabel + ' • All reviews open by default';
+      }
+    }
+    updateActiveTOC();
+  };
+  window.lttFilterSafaris = window.lttFilterItems;
+  window.lttFilterCruises = window.lttFilterItems;
+  window.lttFilterHelicopters = window.lttFilterItems;
+  window.lttFilterHotels = window.lttFilterItems;
+
+  // 3. Extract structured items list from Cards & Editorial Guide Sections
+  function getItems() {
+    return Array.from(document.querySelectorAll('.bpa-card')).map(function(card, i) {
+      var sub = card.querySelector('.bpa-sublink');
+      var id = sub ? sub.getAttribute('href').replace('#', '') : '';
+      var kicker = card.querySelector('.bpa-kicker');
+      var head = card.querySelector('.bpa-title');
+      var btn = card.querySelector('.bpa-btn');
+      var tag = card.querySelector('.bpa-rank-tag');
+      var p = card.querySelector('.bpa-price');
+      var psub = card.querySelector('.bpa-psub');
+      var kp = kicker ? kicker.textContent.split('•') : [];
+      var rawTag = tag ? tag.textContent.trim() : '';
+      var cleanLabel = rawTag.replace(/^[^\w#]+/, '').replace(/^#\d+\s*/, '').trim();
+      return {
+        id: id,
+        r: String(i + 1),
+        badge: '#' + (i + 1) + ' ' + (cfg.pickLabel || 'PICK'),
+        tag: rawTag,
+        label: cleanLabel,
+        name: shortTitles[i] || (kp[0] ? kp[0].trim() : ''),
+        p: p ? p.textContent.trim() : '',
+        d: (kp[1] ? kp[1].trim() : '') + (psub ? ' • ' + psub.textContent.trim() : ''),
+        l: btn ? btn.href : (head ? head.href : ''),
+        t: (i + 1) + '. ' + (head ? head.textContent.trim() : '')
+      };
+    });
+  }
+
+  function getEditorialSections() {
+    var sections = [];
+    document.querySelectorAll('.ltt-editorial-wrapper section[id]').forEach(function(sec) {
+      var id = sec.id;
+      var h2 = sec.querySelector('h2');
+      if (!id || !h2) return;
+      var rawText = h2.textContent.replace(/\s+/g, ' ').trim();
+      var shortText = rawText.indexOf(':') !== -1 ? rawText.split(':')[1].trim() : rawText;
+      if (shortText.length > 42) shortText = rawText.split(':')[0].trim();
+      sections.push({ id: id, text: shortText, fullText: rawText });
+    });
+    return sections;
+  }
+
+  // 4. Details Toggle Controls
+  window.toggleAllDetails = function(openAll) {
+    document.querySelectorAll('.bpa-details-card').forEach(function(d) {
+      d.open = openAll;
+    });
+    setTimeout(initAllFilmstrips, 60);
+    setTimeout(updateActiveTOC, 80);
+  };
+
+  // 5. Sync Bottom Sheet TOC
+  function syncHybridSheetTOC(itemsList, guideList) {
+    var list = document.getElementById('hybridSheetList');
+    if (!list) return;
+    list.innerHTML = '';
+
+    itemsList.forEach(function(item) {
+      var a = document.createElement('a');
+      a.className = 'hybrid-toc-link';
+      a.href = '#' + item.id;
+      var suffix = item.label ? ' (' + item.label + ')' : '';
+      a.innerHTML = '<span><strong>#' + item.r + '</strong> · ' + item.name + suffix + '</span><span class="toc-price">' + item.p + '</span>';
+      list.appendChild(a);
+    });
+
+    if (guideList && guideList.length) {
+      var div = document.createElement('div');
+      div.className = 'hybrid-toc-divider';
+      div.textContent = "Buyer's Guide & Methodology";
+      list.appendChild(div);
+      guideList.forEach(function(g) {
+        var a = document.createElement('a');
+        a.className = 'hybrid-toc-link';
+        a.href = '#' + g.id;
+        a.innerHTML = '<span>📖 ' + g.text + '</span><span class="toc-price">Guide</span>';
+        list.appendChild(a);
+      });
+    }
+
+    list.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        closeHybridSheet();
+      });
+    });
+  }
+
+  function openHybridSheet() {
+    var backdrop = document.getElementById('hybridBackdrop');
+    if (backdrop) backdrop.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    updateActiveTOC();
+    var activeLink = document.querySelector('#hybridSheetList .hybrid-toc-link.is-active');
+    if (activeLink && activeLink.scrollIntoView) {
+      setTimeout(function() {
+        activeLink.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }, 60);
+    }
+  }
+
+  function closeHybridSheet() {
+    var backdrop = document.getElementById('hybridBackdrop');
+    if (backdrop) backdrop.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+  window.openHybridSheet = openHybridSheet;
+  window.closeHybridSheet = closeHybridSheet;
+
+  function initHybridSheet() {
+    var btn = document.getElementById('hybridTocBtn');
+    var closeBtn = document.getElementById('hybridCloseBtn');
+    var backdrop = document.getElementById('hybridBackdrop');
+    if (btn && !btn._bound) {
+      btn._bound = true;
+      btn.addEventListener('click', openHybridSheet);
+    }
+    if (closeBtn && !closeBtn._bound) {
+      closeBtn._bound = true;
+      closeBtn.addEventListener('click', closeHybridSheet);
+    }
+    if (backdrop && !backdrop._bound) {
+      backdrop._bound = true;
+      backdrop.addEventListener('click', function(e) {
+        if (e.target === backdrop) closeHybridSheet();
+      });
+    }
+  }
+
+  // 6. Sync Desktop Sidebar TOC & Deterministic Real-Time ScrollSpy
+  var _tocTargetIds = [];
+  var _lastActiveTocId = null;
+
+  function syncSidebarTOC() {
+    var toc = document.querySelector('#toc');
+    if (!toc || toc.getAttribute('data-synced') === 'true') return;
+    var itemsData = getItems();
+    if (!itemsData.length) return;
+    var guideSections = getEditorialSections();
+
+    var items = [
+      { id: deckId, text: tocDeckLabel },
+      { id: 'breakdown-header', text: tocBreakdownLabel }
+    ];
+    itemsData.forEach(function(s) {
+      items.push({ id: s.id, text: s.r + '. ' + s.name });
+    });
+
+    toc.innerHTML = '';
+    var frag = document.createDocumentFragment();
+    items.forEach(function(it) {
+      var a = document.createElement('a');
+      a.className = 'tocitem';
+      a.href = '#' + it.id;
+      a.textContent = it.text;
+      frag.appendChild(a);
+    });
+
+    if (guideSections.length) {
+      var grp = document.createElement('div');
+      grp.className = 'toc-group-label';
+      grp.textContent = "Buyer's Guide & Methodology";
+      frag.appendChild(grp);
+      guideSections.forEach(function(g) {
+        var a = document.createElement('a');
+        a.className = 'tocitem';
+        a.href = '#' + g.id;
+        a.textContent = g.text;
+        frag.appendChild(a);
+        items.push({ id: g.id, text: g.text });
+      });
+    }
+
+    toc.appendChild(frag);
+    toc.setAttribute('data-synced', 'true');
+    _tocTargetIds = items.map(function(it) { return it.id; });
+    syncHybridSheetTOC(itemsData, guideSections);
+
+    var leftCol = toc.closest('.content-left');
+    if (leftCol) leftCol.style.display = 'block';
+    updateActiveTOC();
+  }
+
+  function updateActiveTOC() {
+    var toc = document.getElementById('toc');
+    if (!toc || !_tocTargetIds.length) return;
+    var probeY = 165;
+    var activeId = _tocTargetIds[0];
+
+    for (var i = 0; i < _tocTargetIds.length; i++) {
+      var id = _tocTargetIds[i];
+      var el = document.getElementById(id);
+      if (!el || el.style.display === 'none') continue;
+      var r = el.getBoundingClientRect();
+      if (r.top <= probeY) {
+        activeId = id;
+      }
+    }
+
+    // If user is between the comparison deck and the detailed breakdown (intro paragraphs), highlight Top 10 Comparison
+    var brk = document.getElementById('breakdown-header');
+    if (brk && brk.getBoundingClientRect().top > probeY) {
+      activeId = deckId;
+    }
+
+    if (activeId !== _lastActiveTocId) {
+      _lastActiveTocId = activeId;
+      toc.querySelectorAll('.tocitem').forEach(function(a) {
+        var isMatch = (a.getAttribute('href') === '#' + activeId);
+        a.classList.toggle('active', isMatch);
+        if (isMatch && toc.scrollHeight > toc.clientHeight) {
+          var aTop = a.offsetTop;
+          var aBot = aTop + a.offsetHeight;
+          if (aTop < toc.scrollTop + 20) {
+            toc.scrollTo({ top: Math.max(0, aTop - 24), behavior: 'smooth' });
+          } else if (aBot > toc.scrollTop + toc.clientHeight - 20) {
+            toc.scrollTo({ top: aBot - toc.clientHeight + 24, behavior: 'smooth' });
+          }
+        }
+      });
+      var sheetList = document.getElementById('hybridSheetList');
+      if (sheetList) {
+        sheetList.querySelectorAll('.hybrid-toc-link').forEach(function(a) {
+          a.classList.toggle('is-active', a.getAttribute('href') === '#' + activeId);
+        });
+      }
+    }
+  }
+
+  // 7. Update Floating Sticky Bottom Bar
+  function updateFloatingCTA() {
+    var bar = document.getElementById('sticky-bar');
+    if (!bar) return;
+    if (document.body.classList.contains('ltt-drawer-open')) {
+      bar.classList.remove('visible', 'is-visible');
+      return;
+    }
+    var cards = document.querySelectorAll('.bpa-card');
+    if (!cards.length) return;
+    var itemsData = getItems();
+    var vCenter = window.innerHeight * 0.45;
+
+    var footer = document.querySelector('footer');
+    var hasPassedHero = (window.scrollY > 300);
+    var isPastFooter = footer ? (footer.getBoundingClientRect().top < (window.innerHeight - 20)) : false;
+    if (!hasPassedHero || isPastFooter) {
+      bar.classList.remove('visible', 'is-visible');
+      return;
+    }
+
+    var activeIdx = 0, minDistance = Infinity, foundContaining = false;
+    cards.forEach(function(card, i) {
+      if (card.style.display === 'none') return;
+      var r = card.getBoundingClientRect();
+      if (r.top <= vCenter && r.bottom >= vCenter) {
+        activeIdx = i;
+        foundContaining = true;
+      } else if (!foundContaining) {
+        var dist = Math.abs(r.top + r.height / 2 - vCenter);
+        if (dist < minDistance) {
+          minDistance = dist;
+          activeIdx = i;
+        }
+      }
+    });
+
+    reviews.forEach(function(rev, i) {
+      if (rev.style.display === 'none') return;
+      var r = rev.getBoundingClientRect();
+      if (r.top <= vCenter && r.bottom >= vCenter) {
+        activeIdx = i;
+        foundContaining = true;
+      } else if (!foundContaining) {
+        var dist = Math.abs(r.top + r.height / 2 - vCenter);
+        if (dist < minDistance) {
+          minDistance = dist;
+          activeIdx = i;
+        }
+      }
+    });
+
+    var active = itemsData[activeIdx];
+    if (active) {
+      var rankEl = document.getElementById('sticky-rank');
+      if (rankEl) rankEl.textContent = active.badge;
+      var nameEl = document.getElementById('sticky-name');
+      if (nameEl) nameEl.textContent = active.name;
+      var priceEl = document.getElementById('sticky-price');
+      if (priceEl) priceEl.textContent = active.p;
+      var ctaEl = document.getElementById('sticky-cta-btn');
+      if (ctaEl) {
+        ctaEl.href = active.l;
+        if (cfg.btnText) ctaEl.textContent = cfg.btnText;
+      }
+      bar.classList.add('visible', 'is-visible');
+    }
+  }
+
+  // Allow clicking links inside summary without toggling details
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('summary a');
+    if (a) e.stopPropagation();
+  }, true);
+
+  // 8. Dynamic Scroll Tracker (Tracks lazy-loading layout shifts in real time)
+  var _activeScrollId = null;
+  function smoothScrollToElement(target, offset) {
+    if (!target) return;
+    offset = (typeof offset === 'number') ? offset : 85;
+
+    // If user clicked a cruise that was hidden by a category filter, reset filter to 'all'
+    if (target.style.display === 'none' && activeCat !== 'all') {
+      window.lttFilterItems('all');
+    }
+
+    var details = target.closest('details');
+    if (details) details.open = true;
+    if (target.tagName === 'DETAILS') target.open = true;
+
+    if (_activeScrollId) {
+      cancelAnimationFrame(_activeScrollId);
+      _activeScrollId = null;
+    }
+
+    function stopScroll() {
+      if (_activeScrollId) {
+        cancelAnimationFrame(_activeScrollId);
+        _activeScrollId = null;
+      }
+      cleanup();
+    }
+    function cleanup() {
+      window.removeEventListener('wheel', stopScroll, { passive: true });
+      window.removeEventListener('touchmove', stopScroll, { passive: true });
+      window.removeEventListener('keydown', stopScroll, { passive: true });
+    }
+    window.addEventListener('wheel', stopScroll, { passive: true });
+    window.addEventListener('touchmove', stopScroll, { passive: true });
+    window.addEventListener('keydown', stopScroll, { passive: true });
+
+    var lastScrollY = -1;
+    var stuckFrames = 0;
+    var settlingFrames = 0;
+
+    function frame() {
+      var rect = target.getBoundingClientRect();
+      var diff = rect.top - offset;
+
+      if (Math.abs(diff) <= 2) {
+        window.scrollBy(0, diff);
+        settlingFrames++;
+        if (settlingFrames > 8) {
+          _activeScrollId = null;
+          cleanup();
+          return;
+        }
+        _activeScrollId = requestAnimationFrame(frame);
+        return;
+      }
+
+      settlingFrames = 0;
+      var absDiff = Math.abs(diff);
+      var speed;
+      if (absDiff > 25000) {
+        speed = Math.min(absDiff * 0.35, 4000);
+      } else if (absDiff > 5000) {
+        speed = Math.min(absDiff * 0.3, 2200);
+      } else if (absDiff > 1000) {
+        speed = Math.min(absDiff * 0.25, 900);
+      } else {
+        speed = Math.max(14, Math.min(absDiff * 0.2, 180));
+      }
+
+      var move = Math.sign(diff) * Math.min(absDiff, speed);
+      window.scrollBy(0, move);
+
+      if (window.scrollY === lastScrollY) {
+        stuckFrames++;
+        if (stuckFrames > 15) {
+          _activeScrollId = null;
+          cleanup();
+          return;
+        }
+      } else {
+        stuckFrames = 0;
+        lastScrollY = window.scrollY;
+      }
+
+      _activeScrollId = requestAnimationFrame(frame);
+    }
+
+    _activeScrollId = requestAnimationFrame(frame);
+  }
+
+  // 9. Smooth Click Handler
+  document.addEventListener('click', function(e) {
+    var drawer = document.getElementById('lttMobileDrawer');
+    var toggle = document.getElementById('lttNavToggle');
+    if (drawer && drawer.classList.contains('is-open')) {
+      if (e.target.closest('#lttMobileDrawer a')) {
+        drawer.classList.remove('is-open');
+        if (toggle) {
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('ltt-drawer-open');
+      }
+    }
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var hash = a.getAttribute('href');
+    if (!hash || hash === '#') return;
+    var targetId = hash.substring(1);
+    var target = document.getElementById(targetId);
+    if (!target && (targetId === 'desert-safaris-breakdown' || targetId === 'breakdown-header')) {
+      target = document.getElementById('breakdown-header');
+    }
+    if (target) {
+      e.preventDefault();
+      e.stopPropagation();
+      smoothScrollToElement(target, 85);
+      history.pushState(null, '', hash);
+    }
+  }, true);
+
+  window.addEventListener('scroll', function() {
+    if (!window._flTicking) {
+      window._flTicking = true;
+      requestAnimationFrame(function() {
+        updateFloatingCTA();
+        updateActiveTOC();
+        window._flTicking = false;
+      });
+    }
+  }, { passive: true });
+
+  window.addEventListener('resize', function() {
+    initAllFilmstrips();
+  }, { passive: true });
+
+  function initAll() {
+    initHybridSheet();
+    syncSidebarTOC();
+    initAllFilmstrips();
+    updateFloatingCTA();
+    updateActiveTOC();
+    if (window.location.hash) {
+      var h = window.location.hash.substring(1);
+      var el = document.getElementById(h) || (h === 'desert-safaris-breakdown' ? document.getElementById('breakdown-header') : null);
+      if (el) {
+        setTimeout(function() {
+          smoothScrollToElement(el, 85);
+        }, 150);
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAll);
+  } else {
+    initAll();
+  }
+  window.addEventListener('load', initAll);
+  setTimeout(initAll, 200);
+  setTimeout(initAll, 800);
+})();
+
+</script><script id="ltt-language-switcher-logic">
 (function() {
   window.lttToggleLangDropdown = function() {
     var dd = document.getElementById('lttLangDropdown');

@@ -268,6 +268,75 @@ CSS_STYLES_RAW = """
   white-space: nowrap;
 }
 
+/* Navigation & Mobile Drawer z-index hierarchy */
+.ltt-navbar {
+  z-index: 100000 !important;
+}
+.ltt-mobile-drawer {
+  z-index: 100000 !important;
+}
+.ltt-drawer-content {
+  padding-bottom: 50px !important;
+}
+
+/* Floating Sticky Bottom Bar z-index & Mobile Drawer conflict suppression */
+.hybrid-sticky-bar,
+.sticky-mobile-bar,
+#sticky-bar {
+  z-index: 9990 !important;
+}
+
+body.ltt-drawer-open #sticky-bar,
+body.ltt-drawer-open .hybrid-sticky-bar,
+body.ltt-drawer-open .sticky-mobile-bar,
+body:has(.ltt-mobile-drawer.is-open) #sticky-bar,
+body:has(.ltt-mobile-drawer.is-open) .hybrid-sticky-bar,
+body:has(.ltt-mobile-drawer.is-open) .sticky-mobile-bar {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  transform: translateY(150%) !important;
+}
+
+/* Mobile Toggle Hamburger Button & Symmetrical X Animation */
+.ltt-hamburger {
+  width: 42px !important;
+  height: 42px !important;
+  padding: 10px 8px !important;
+  background: transparent !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+.ltt-hamburger:hover {
+  background: #f8fafc !important;
+}
+.ltt-hamburger-bar {
+  display: block !important;
+  width: 22px !important;
+  height: 2px !important;
+  background: #0f172a !important;
+  border-radius: 2px !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease !important;
+  transform-origin: center !important;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg) !important;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(2) {
+  opacity: 0 !important;
+  transform: scaleX(0) !important;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg) !important;
+}
+
 /* Nav header alignments */
 .ltt-nav-right {
   margin-left: auto !important;
@@ -351,6 +420,10 @@ JS_LOGIC_RAW = """
   });
 })();
 """
+
+UNIFIED_RUNTIME_PATH = os.path.join(os.path.dirname(__file__), 'unified_runtime_clean.js')
+with open(UNIFIED_RUNTIME_PATH, 'r', encoding='utf-8') as f:
+    UNIFIED_RUNTIME_RAW = f.read()
 
 def get_page_info(rel_path):
     """Determines language and page_key for a given relative path."""
@@ -588,21 +661,125 @@ def inject_language_switcher_into_file(file_path):
         if t_menu:
             t_menu.append(mobile_tag)
 
-    # 4. Deduplicate hamburger scripts to prevent open/close race conditions
+    # 4. Handle hamburger & drawer nav script, plus unified page runtime for sticky bar
+    has_sticky_bar = bool(soup.find(id='sticky-bar') or soup.find(class_='hybrid-sticky-bar'))
+    existing_runtime = soup.find('script', id='ltt-page-runtime')
+    if not existing_runtime:
+        for s in soup.find_all('script'):
+            if s.text and 'UNIFIED PAGE RUNTIME' in s.text:
+                existing_runtime = s
+                existing_runtime['id'] = 'ltt-page-runtime'
+                break
+
+    if has_sticky_bar:
+        # Guarantee unified page runtime is present and up-to-date
+        if existing_runtime:
+            existing_runtime.string = UNIFIED_RUNTIME_RAW
+        else:
+            body = soup.find('body')
+            if body:
+                rt_tag = soup.new_tag('script', id='ltt-page-runtime')
+                rt_tag.string = UNIFIED_RUNTIME_RAW
+                body.append(rt_tag)
+
+    # Clean redundant standalone hamburger toggle scripts to prevent race conditions
+    # NEVER decompose ltt-page-runtime or scripts with UNIFIED PAGE RUNTIME
     scripts_with_toggle = [
         s for s in soup.find_all('script')
         if s.text and ('document.getElementById(\'lttNavToggle\')' in s.text or 'document.getElementById(\"lttNavToggle\")' in s.text)
+        and s.get('id') != 'ltt-page-runtime'
+        and 'UNIFIED PAGE RUNTIME' not in s.text
     ]
-    if len(scripts_with_toggle) > 1:
-        has_named = any(s.get('id') == 'ltt-nav-script' for s in scripts_with_toggle)
-        if has_named:
-            for s in scripts_with_toggle:
-                if s.get('id') != 'ltt-nav-script':
-                    s.decompose()
-        else:
-            for s in scripts_with_toggle[:-1]:
-                s.decompose()
-            scripts_with_toggle[-1]['id'] = 'ltt-nav-script'
+
+    NAV_TOGGLE_JS = """(function() {
+  var toggle = document.getElementById('lttNavToggle');
+  var drawer = document.getElementById('lttMobileDrawer');
+  var dropdown = document.getElementById('lttExploreDropdown');
+  var dropBtn = dropdown ? dropdown.querySelector('.ltt-dropdown-btn') : null;
+
+  if (toggle && drawer && !toggle._lttBound) {
+    toggle._lttBound = true;
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = drawer.classList.contains('is-open');
+      if (isOpen) {
+        drawer.classList.remove('is-open');
+        toggle.classList.remove('is-active');
+        toggle.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('ltt-drawer-open');
+      } else {
+        drawer.classList.add('is-open');
+        toggle.classList.add('is-active');
+        toggle.setAttribute('aria-expanded', 'true');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('ltt-drawer-open');
+      }
+    });
+
+    drawer.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        drawer.classList.remove('is-open');
+        toggle.classList.remove('is-active');
+        toggle.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('ltt-drawer-open');
+      });
+    });
+  }
+
+  if (dropdown && !dropdown._bound) {
+    dropdown._bound = true;
+    var closeTimeout = null;
+
+    function openMenu() {
+      if (closeTimeout) {
+        clearTimeout(closeTimeout);
+        closeTimeout = null;
+      }
+      dropdown.classList.add('is-open');
+      if (dropBtn) dropBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenuWithDelay() {
+      closeTimeout = setTimeout(function() {
+        dropdown.classList.remove('is-open');
+        if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
+      }, 120);
+    }
+
+    dropdown.addEventListener('mouseenter', openMenu);
+    dropdown.addEventListener('mouseleave', closeMenuWithDelay);
+
+    if (dropBtn) {
+      dropBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var isOpen = dropdown.classList.contains('is-open');
+        if (isOpen) {
+          dropdown.classList.remove('is-open');
+          dropBtn.setAttribute('aria-expanded', 'false');
+        } else {
+          dropdown.classList.add('is-open');
+          dropBtn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+  }
+})();"""
+
+    # If the page already has ltt-page-runtime, ltt-page-runtime includes drawer toggle logic.
+    # But having a safe, idempotently bound ltt-nav-script ensures it works everywhere.
+    if scripts_with_toggle:
+        for s in scripts_with_toggle[1:]:
+            s.decompose()
+        scripts_with_toggle[0]['id'] = 'ltt-nav-script'
+        scripts_with_toggle[0].string = NAV_TOGGLE_JS
+    else:
+        body = soup.find('body')
+        if body:
+            nav_s = soup.new_tag('script', id='ltt-nav-script')
+            nav_s.string = NAV_TOGGLE_JS
+            body.append(nav_s)
 
     # 5. Inject CSS in <head>
     head = soup.find('head')

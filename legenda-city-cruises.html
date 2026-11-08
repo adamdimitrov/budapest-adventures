@@ -1089,6 +1089,75 @@ html, body {
   white-space: nowrap;
 }
 
+/* Navigation & Mobile Drawer z-index hierarchy */
+.ltt-navbar {
+  z-index: 100000 !important;
+}
+.ltt-mobile-drawer {
+  z-index: 100000 !important;
+}
+.ltt-drawer-content {
+  padding-bottom: 50px !important;
+}
+
+/* Floating Sticky Bottom Bar z-index & Mobile Drawer conflict suppression */
+.hybrid-sticky-bar,
+.sticky-mobile-bar,
+#sticky-bar {
+  z-index: 9990 !important;
+}
+
+body.ltt-drawer-open #sticky-bar,
+body.ltt-drawer-open .hybrid-sticky-bar,
+body.ltt-drawer-open .sticky-mobile-bar,
+body:has(.ltt-mobile-drawer.is-open) #sticky-bar,
+body:has(.ltt-mobile-drawer.is-open) .hybrid-sticky-bar,
+body:has(.ltt-mobile-drawer.is-open) .sticky-mobile-bar {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  transform: translateY(150%) !important;
+}
+
+/* Mobile Toggle Hamburger Button & Symmetrical X Animation */
+.ltt-hamburger {
+  width: 42px !important;
+  height: 42px !important;
+  padding: 10px 8px !important;
+  background: transparent !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+.ltt-hamburger:hover {
+  background: #f8fafc !important;
+}
+.ltt-hamburger-bar {
+  display: block !important;
+  width: 22px !important;
+  height: 2px !important;
+  background: #0f172a !important;
+  border-radius: 2px !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease !important;
+  transform-origin: center !important;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg) !important;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(2) {
+  opacity: 0 !important;
+  transform: scaleX(0) !important;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg) !important;
+}
+
 /* Nav header alignments */
 .ltt-nav-right {
   margin-left: auto !important;
@@ -1307,7 +1376,6 @@ html, body {
 <span class="ltt-hamburger-bar"></span>
 </button></div>
 </div>
-
 <div aria-hidden="true" class="ltt-mobile-drawer" id="lttMobileDrawer">
 <div class="ltt-drawer-content">
 <div class="ltt-mobile-section">
@@ -1438,92 +1506,81 @@ html, body {
 </div></div>
 </div>
 <!-- MOBILE DRAWER LANGUAGE SECTION -->
-</header><script id="ltt-nav-script">/* ==========================================================================
-   LUXURY TRAVEL TESTER — MODERN VANILLA NAVIGATION CONTROLLER
-   Zero-dependency, semantic, responsive, WCAG-compliant (Desktop & Mobile)
-   ========================================================================== */
-(function() {
-  function initNav() {
-    var toggle = document.getElementById('lttNavToggle');
-    var drawer = document.getElementById('lttMobileDrawer');
-    var dropdown = document.getElementById('lttExploreDropdown');
-    var dropBtn = dropdown ? dropdown.querySelector('.ltt-dropdown-btn') : null;
+</header><script id="ltt-nav-script">(function() {
+  var toggle = document.getElementById('lttNavToggle');
+  var drawer = document.getElementById('lttMobileDrawer');
+  var dropdown = document.getElementById('lttExploreDropdown');
+  var dropBtn = dropdown ? dropdown.querySelector('.ltt-dropdown-btn') : null;
 
-    if (toggle && drawer) {
-      toggle.addEventListener('click', function(e) {
-        e.stopPropagation();
-        var isOpen = drawer.classList.contains('is-open');
-        if (isOpen) {
-          drawer.classList.remove('is-open');
-          toggle.classList.remove('is-active');
-          toggle.setAttribute('aria-expanded', 'false');
-          drawer.setAttribute('aria-hidden', 'true');
-        } else {
-          drawer.classList.add('is-open');
-          toggle.classList.add('is-active');
-          toggle.setAttribute('aria-expanded', 'true');
-          drawer.setAttribute('aria-hidden', 'false');
-        }
-      });
-
-      drawer.querySelectorAll('a').forEach(function(link) {
-        link.addEventListener('click', function() {
-          drawer.classList.remove('is-open');
-          toggle.classList.remove('is-active');
-          toggle.setAttribute('aria-expanded', 'false');
-          drawer.setAttribute('aria-hidden', 'true');
-        });
-      });
-    }
-
-    if (dropBtn && dropdown) {
-      dropBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        var open = dropdown.classList.toggle('is-open');
-        dropBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
-
-    document.addEventListener('click', function(e) {
-      if (drawer && drawer.classList.contains('is-open') && !drawer.contains(e.target) && (!toggle || !toggle.contains(e.target))) {
+  if (toggle && drawer && !toggle._lttBound) {
+    toggle._lttBound = true;
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = drawer.classList.contains('is-open');
+      if (isOpen) {
         drawer.classList.remove('is-open');
-        if (toggle) {
-          toggle.classList.remove('is-active');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
+        toggle.classList.remove('is-active');
+        toggle.setAttribute('aria-expanded', 'false');
         drawer.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('ltt-drawer-open');
+      } else {
+        drawer.classList.add('is-open');
+        toggle.classList.add('is-active');
+        toggle.setAttribute('aria-expanded', 'true');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('ltt-drawer-open');
       }
-      if (dropdown && dropdown.classList.contains('is-open') && !dropdown.contains(e.target)) {
+    });
+
+    drawer.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        drawer.classList.remove('is-open');
+        toggle.classList.remove('is-active');
+        toggle.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('ltt-drawer-open');
+      });
+    });
+  }
+
+  if (dropdown && !dropdown._bound) {
+    dropdown._bound = true;
+    var closeTimeout = null;
+
+    function openMenu() {
+      if (closeTimeout) {
+        clearTimeout(closeTimeout);
+        closeTimeout = null;
+      }
+      dropdown.classList.add('is-open');
+      if (dropBtn) dropBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenuWithDelay() {
+      closeTimeout = setTimeout(function() {
         dropdown.classList.remove('is-open');
         if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
+      }, 120);
+    }
 
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        if (drawer && drawer.classList.contains('is-open')) {
-          drawer.classList.remove('is-open');
-          if (toggle) {
-            toggle.classList.remove('is-active');
-            toggle.setAttribute('aria-expanded', 'false');
-          }
-          drawer.setAttribute('aria-hidden', 'true');
-        }
-        if (dropdown && dropdown.classList.contains('is-open')) {
+    dropdown.addEventListener('mouseenter', openMenu);
+    dropdown.addEventListener('mouseleave', closeMenuWithDelay);
+
+    if (dropBtn) {
+      dropBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var isOpen = dropdown.classList.contains('is-open');
+        if (isOpen) {
           dropdown.classList.remove('is-open');
-          if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
+          dropBtn.setAttribute('aria-expanded', 'false');
+        } else {
+          dropdown.classList.add('is-open');
+          dropBtn.setAttribute('aria-expanded', 'true');
         }
-      }
-    });
+      });
+    }
   }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initNav);
-  } else {
-    initNav();
-  }
-})();
-</script>
+})();</script>
 <!-- Minimal Brand Header -->
 <header class="bg-slate-900/90 border-b border-slate-800 sticky top-0 z-50 backdrop-blur-md">
 <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">

@@ -91,11 +91,12 @@ def localize_html(raw_html, lang, page_slug):
             del html_tag['dir']
 
     # 2. Canonical URL
+    target_canon = f"https://www.budapestadventures.com/{lang}/{page_slug}" if lang == 'hu' else f"https://www.budapestadventures.com/{page_slug}"
     canon = soup.find('link', rel='canonical')
     if canon:
-        canon['href'] = f"https://www.budapestadventures.com/{lang}/{page_slug}"
+        canon['href'] = target_canon
     else:
-        new_canon = soup.new_tag('link', rel='canonical', href=f"https://www.budapestadventures.com/{lang}/{page_slug}")
+        new_canon = soup.new_tag('link', rel='canonical', href=target_canon)
         if soup.head:
             soup.head.append(new_canon)
 
