@@ -1918,7 +1918,9 @@ body:has(.ltt-mobile-drawer.is-open) .sticky-mobile-bar {
   border-left: 3px solid #0f172a !important;
 }
 </style>
-</head><body><header class="ltt-navbar" role="banner">
+<style>/* LTT_AGENTIC_DRAWER_ACCESSIBILITY_FIX */
+.ltt-mobile-drawer:not(.is-open){visibility:hidden !important;pointer-events:none !important;display:none !important;}
+.ltt-mobile-drawer.is-open{visibility:visible !important;pointer-events:auto !important;display:block !important;}</style></head><body><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/pl/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo.png" width="36"/>
@@ -2122,7 +2124,7 @@ body:has(.ltt-mobile-drawer.is-open) .sticky-mobile-bar {
 <span class="ltt-hamburger-bar"></span>
 </button></div>
 </div>
-<div aria-hidden="true" class="ltt-mobile-drawer" id="lttMobileDrawer">
+<div aria-hidden="true" inert class="ltt-mobile-drawer" id="lttMobileDrawer">
 <div class="ltt-drawer-content">
 <div class="ltt-mobile-section">
 <div class="ltt-mobile-label">Danube Cruises &amp; Guides</div>
@@ -2286,12 +2288,14 @@ body:has(.ltt-mobile-drawer.is-open) .sticky-mobile-bar {
         toggle.classList.remove('is-active');
         toggle.setAttribute('aria-expanded', 'false');
         drawer.setAttribute('aria-hidden', 'true');
+        drawer.setAttribute('inert', '');
         document.body.classList.remove('ltt-drawer-open');
       } else {
         drawer.classList.add('is-open');
         toggle.classList.add('is-active');
         toggle.setAttribute('aria-expanded', 'true');
         drawer.setAttribute('aria-hidden', 'false');
+        drawer.removeAttribute('inert');
         document.body.classList.add('ltt-drawer-open');
       }
     });
@@ -2302,6 +2306,7 @@ body:has(.ltt-mobile-drawer.is-open) .sticky-mobile-bar {
         toggle.classList.remove('is-active');
         toggle.setAttribute('aria-expanded', 'false');
         drawer.setAttribute('aria-hidden', 'true');
+        drawer.setAttribute('inert', '');
         document.body.classList.remove('ltt-drawer-open');
       });
     });

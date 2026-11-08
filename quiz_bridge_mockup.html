@@ -591,7 +591,9 @@
   letter-spacing: 0.5px !important;
   line-height: 1 !important;
 }
-</style></head>
+</style><style>/* LTT_AGENTIC_DRAWER_ACCESSIBILITY_FIX */
+.ltt-mobile-drawer:not(.is-open){visibility:hidden !important;pointer-events:none !important;display:none !important;}
+.ltt-mobile-drawer.is-open{visibility:visible !important;pointer-events:auto !important;display:block !important;}</style></head>
 <body class="gradient-bg text-slate-100 min-h-screen font-sans antialiased flex flex-col justify-between p-4 sm:p-6"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="Budapest Adventures Homepage" class="ltt-brand" href="/">
@@ -667,7 +669,7 @@
 </button>
 </div>
 </div>
-<div aria-hidden="true" class="ltt-mobile-drawer" id="lttMobileDrawer">
+<div aria-hidden="true" inert class="ltt-mobile-drawer" id="lttMobileDrawer">
 <div class="ltt-drawer-content">
 <div class="ltt-mobile-section">
 <div class="ltt-mobile-label">POPULAR CRUISE GUIDES</div>
