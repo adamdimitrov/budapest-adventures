@@ -24,7 +24,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       script.async = 1;
       script.src = 'https://emrld.cc/MjA0NDQy.js?t=204442';
       document.head.appendChild(script);
-  })();
+  
+  // CANONICAL ACTIVE PAGE HIGHLIGHTER
+  try {
+    var rawPath = (window.location.pathname || '/').replace(/\/$/, '') || '/';
+    var normPath = rawPath.replace(/\.html$/, '');
+    
+    var isRiver = (normPath.indexOf('river-cruise') !== -1 || normPath.indexOf('setahajozas-a-dunan-budapest') !== -1 || normPath.indexOf('bootsfahrten-dunau') !== -1 || normPath.indexOf('croisieres-danube') !== -1 || normPath.indexOf('riecne-plavby') !== -1 || normPath.indexOf('rejsy-dunaju') !== -1 || normPath.indexOf('rechnyye-kruizy') !== -1) && normPath.indexOf('dinner') === -1 && normPath.indexOf('vacsoraval') === -1 && normPath.indexOf('abendessen') === -1;
+    var isDinner = normPath.indexOf('dinner-cruise') !== -1 || normPath.indexOf('vacsoraval') !== -1 || normPath.indexOf('candlelit') !== -1 || normPath.indexOf('abendessen') !== -1 || normPath.indexOf('diner-croisiere') !== -1 || normPath.indexOf('cena-danubio') !== -1 || normPath.indexOf('kolacja') !== -1 || normPath.indexOf('vecera-plavby') !== -1;
+    var isCard = normPath.indexOf('budapest-card') !== -1;
+    var isAbout = normPath.indexOf('/about') !== -1 || normPath.indexOf('/rolunk') !== -1 || normPath.indexOf('/körülbelül') !== -1;
+    var isContact = normPath.indexOf('/contact') !== -1 || normPath.indexOf('/kapcsolat') !== -1 || normPath.indexOf('/érintkezés') !== -1;
+
+    var navLinks = document.querySelectorAll('.ltt-nav-links .ltt-nav-link:not(.ltt-dropdown-btn), .ltt-mobile-drawer .ltt-mobile-link');
+    navLinks.forEach(function(el) {
+      var href = el.getAttribute('href');
+      if (!href) return;
+      var hClean = href.replace(/\/$/, '').replace(/\.html$/, '') || '/';
+      
+      var match = false;
+      if (normPath === hClean) {
+        match = true;
+      } else if (isRiver && (hClean.indexOf('river-cruise') !== -1 || hClean.indexOf('setahajozas-a-dunan-budapest') !== -1 || hClean.indexOf('bootsfahrten-dunau') !== -1)) {
+        match = true;
+      } else if (isDinner && (hClean.indexOf('dinner-cruise') !== -1 || hClean.indexOf('setahajozas-a-dunan-vacsoraval') !== -1 || hClean.indexOf('bootsfahrten-mit-abendessen') !== -1)) {
+        match = true;
+      } else if (isCard && hClean.indexOf('budapest-card') !== -1) {
+        match = true;
+      } else if (isAbout && (hClean.indexOf('/about') !== -1 || hClean.indexOf('/rolunk') !== -1)) {
+        match = true;
+      } else if (isContact && (hClean.indexOf('/contact') !== -1 || hClean.indexOf('/kapcsolat') !== -1)) {
+        match = true;
+      }
+      
+      if (match) {
+        el.classList.add('active');
+        el.setAttribute('aria-current', 'page');
+      } else if (hClean !== '/' && !hClean.match(/^\/[a-z]{2}$/)) {
+        el.classList.remove('active');
+        el.removeAttribute('aria-current');
+      }
+    });
+  } catch(e) {}
+
+})();
 </script>
 <!-- Google tag (gtag.js) event - delayed navigation helper -->
 <script>
@@ -2903,7 +2946,41 @@ body:has(.ltt-mobile-drawer.is-open) .sticky-mobile-bar {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-</style></head><body id="top"><header class="ltt-navbar" role="banner">
+</style><style id="CANONICAL_NAVBAR_UNIFIED_FONTS">
+.ltt-navbar,
+.ltt-navbar button,
+.ltt-navbar a,
+.ltt-navbar span,
+.ltt-mobile-drawer,
+.ltt-mobile-drawer * {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ltt-nav-link {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 600 !important;
+}
+.ltt-nav-link.active,
+.ltt-nav-link[aria-current="page"] {
+  color: #0f172a !important;
+  background: #f1f5f9 !important;
+  font-weight: 700 !important;
+  box-shadow: inset 0 -2px 0 #0f172a !important;
+}
+.ltt-mobile-link {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 600 !important;
+}
+.ltt-mobile-link.active,
+.ltt-mobile-link[aria-current="page"] {
+  color: #0f172a !important;
+  background: #f1f5f9 !important;
+  font-weight: 700 !important;
+  border-left: 3px solid #0f172a !important;
+}
+</style>
+</head><body id="top"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="Budapest Adventures Homepage" class="ltt-brand" href="/">
 <span class="ltt-brand-emblem">
@@ -2964,7 +3041,7 @@ body:has(.ltt-mobile-drawer.is-open) .sticky-mobile-bar {
 </div>
 </div>
 </div>
-<a class="ltt-nav-link" href="/best-budapest-river-cruises">River Cruises</a>
+<a aria-current="page" class="ltt-nav-link active" href="/best-budapest-river-cruises">River Cruises</a>
 <a class="ltt-nav-link" href="/budapest-dinner-cruises">Dinner Cruises</a>
 <a class="ltt-nav-link" href="/about">About</a>
 <a class="ltt-nav-link" href="/contact">Contact</a>
@@ -3289,6 +3366,49 @@ body:has(.ltt-mobile-drawer.is-open) .sticky-mobile-bar {
       });
     }
   }
+
+  // CANONICAL ACTIVE PAGE HIGHLIGHTER
+  try {
+    var rawPath = (window.location.pathname || '/').replace(/\/$/, '') || '/';
+    var normPath = rawPath.replace(/\.html$/, '');
+    
+    var isRiver = (normPath.indexOf('river-cruise') !== -1 || normPath.indexOf('setahajozas-a-dunan-budapest') !== -1 || normPath.indexOf('bootsfahrten-dunau') !== -1 || normPath.indexOf('croisieres-danube') !== -1 || normPath.indexOf('riecne-plavby') !== -1 || normPath.indexOf('rejsy-dunaju') !== -1 || normPath.indexOf('rechnyye-kruizy') !== -1) && normPath.indexOf('dinner') === -1 && normPath.indexOf('vacsoraval') === -1 && normPath.indexOf('abendessen') === -1;
+    var isDinner = normPath.indexOf('dinner-cruise') !== -1 || normPath.indexOf('vacsoraval') !== -1 || normPath.indexOf('candlelit') !== -1 || normPath.indexOf('abendessen') !== -1 || normPath.indexOf('diner-croisiere') !== -1 || normPath.indexOf('cena-danubio') !== -1 || normPath.indexOf('kolacja') !== -1 || normPath.indexOf('vecera-plavby') !== -1;
+    var isCard = normPath.indexOf('budapest-card') !== -1;
+    var isAbout = normPath.indexOf('/about') !== -1 || normPath.indexOf('/rolunk') !== -1 || normPath.indexOf('/körülbelül') !== -1;
+    var isContact = normPath.indexOf('/contact') !== -1 || normPath.indexOf('/kapcsolat') !== -1 || normPath.indexOf('/érintkezés') !== -1;
+
+    var navLinks = document.querySelectorAll('.ltt-nav-links .ltt-nav-link:not(.ltt-dropdown-btn), .ltt-mobile-drawer .ltt-mobile-link');
+    navLinks.forEach(function(el) {
+      var href = el.getAttribute('href');
+      if (!href) return;
+      var hClean = href.replace(/\/$/, '').replace(/\.html$/, '') || '/';
+      
+      var match = false;
+      if (normPath === hClean) {
+        match = true;
+      } else if (isRiver && (hClean.indexOf('river-cruise') !== -1 || hClean.indexOf('setahajozas-a-dunan-budapest') !== -1 || hClean.indexOf('bootsfahrten-dunau') !== -1)) {
+        match = true;
+      } else if (isDinner && (hClean.indexOf('dinner-cruise') !== -1 || hClean.indexOf('setahajozas-a-dunan-vacsoraval') !== -1 || hClean.indexOf('bootsfahrten-mit-abendessen') !== -1)) {
+        match = true;
+      } else if (isCard && hClean.indexOf('budapest-card') !== -1) {
+        match = true;
+      } else if (isAbout && (hClean.indexOf('/about') !== -1 || hClean.indexOf('/rolunk') !== -1)) {
+        match = true;
+      } else if (isContact && (hClean.indexOf('/contact') !== -1 || hClean.indexOf('/kapcsolat') !== -1)) {
+        match = true;
+      }
+      
+      if (match) {
+        el.classList.add('active');
+        el.setAttribute('aria-current', 'page');
+      } else if (hClean !== '/' && !hClean.match(/^\/[a-z]{2}$/)) {
+        el.classList.remove('active');
+        el.removeAttribute('aria-current');
+      }
+    });
+  } catch(e) {}
+
 })();</script><div class="hero-image-wrapper"><img alt="A river boat sailing on the Danube in front of the illuminated Hungarian Parliament" class="hero-image" height="" sizes="(max-width: 1280px) 100vw, 1280px" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest.webp" srcset="/assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest-p-800.webp 800w, /assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest-p-1080.webp 1080w, /assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest.webp 1280w"/></div><div class="w-layout-blockcontainer container w-container"><div class="w-richtext"><h1>River Cruise Budapest Group Booking Form</h1><div aria-label="Editorial Testing Standards" class="bpa-hero-credibility-bar" role="region">
 <span class="bpa-cred-pill">📍 <strong>10+ Budapest Docks:</strong> Verified Maps &amp; Piers</span>
 <span class="bpa-cred-dot">•</span>
@@ -3868,6 +3988,49 @@ document.addEventListener("DOMContentLoaded", () => {
       if (history.pushState) history.pushState(null, null, href);
     }
   });
+
+  // CANONICAL ACTIVE PAGE HIGHLIGHTER
+  try {
+    var rawPath = (window.location.pathname || '/').replace(/\/$/, '') || '/';
+    var normPath = rawPath.replace(/\.html$/, '');
+    
+    var isRiver = (normPath.indexOf('river-cruise') !== -1 || normPath.indexOf('setahajozas-a-dunan-budapest') !== -1 || normPath.indexOf('bootsfahrten-dunau') !== -1 || normPath.indexOf('croisieres-danube') !== -1 || normPath.indexOf('riecne-plavby') !== -1 || normPath.indexOf('rejsy-dunaju') !== -1 || normPath.indexOf('rechnyye-kruizy') !== -1) && normPath.indexOf('dinner') === -1 && normPath.indexOf('vacsoraval') === -1 && normPath.indexOf('abendessen') === -1;
+    var isDinner = normPath.indexOf('dinner-cruise') !== -1 || normPath.indexOf('vacsoraval') !== -1 || normPath.indexOf('candlelit') !== -1 || normPath.indexOf('abendessen') !== -1 || normPath.indexOf('diner-croisiere') !== -1 || normPath.indexOf('cena-danubio') !== -1 || normPath.indexOf('kolacja') !== -1 || normPath.indexOf('vecera-plavby') !== -1;
+    var isCard = normPath.indexOf('budapest-card') !== -1;
+    var isAbout = normPath.indexOf('/about') !== -1 || normPath.indexOf('/rolunk') !== -1 || normPath.indexOf('/körülbelül') !== -1;
+    var isContact = normPath.indexOf('/contact') !== -1 || normPath.indexOf('/kapcsolat') !== -1 || normPath.indexOf('/érintkezés') !== -1;
+
+    var navLinks = document.querySelectorAll('.ltt-nav-links .ltt-nav-link:not(.ltt-dropdown-btn), .ltt-mobile-drawer .ltt-mobile-link');
+    navLinks.forEach(function(el) {
+      var href = el.getAttribute('href');
+      if (!href) return;
+      var hClean = href.replace(/\/$/, '').replace(/\.html$/, '') || '/';
+      
+      var match = false;
+      if (normPath === hClean) {
+        match = true;
+      } else if (isRiver && (hClean.indexOf('river-cruise') !== -1 || hClean.indexOf('setahajozas-a-dunan-budapest') !== -1 || hClean.indexOf('bootsfahrten-dunau') !== -1)) {
+        match = true;
+      } else if (isDinner && (hClean.indexOf('dinner-cruise') !== -1 || hClean.indexOf('setahajozas-a-dunan-vacsoraval') !== -1 || hClean.indexOf('bootsfahrten-mit-abendessen') !== -1)) {
+        match = true;
+      } else if (isCard && hClean.indexOf('budapest-card') !== -1) {
+        match = true;
+      } else if (isAbout && (hClean.indexOf('/about') !== -1 || hClean.indexOf('/rolunk') !== -1)) {
+        match = true;
+      } else if (isContact && (hClean.indexOf('/contact') !== -1 || hClean.indexOf('/kapcsolat') !== -1)) {
+        match = true;
+      }
+      
+      if (match) {
+        el.classList.add('active');
+        el.setAttribute('aria-current', 'page');
+      } else if (hClean !== '/' && !hClean.match(/^\/[a-z]{2}$/)) {
+        el.classList.remove('active');
+        el.removeAttribute('aria-current');
+      }
+    });
+  } catch(e) {}
+
 })();
 </script><script id="bpa-tooltip-controller">
 (function() {
@@ -3938,6 +4101,49 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { passive: true });
 
   window.addEventListener("scroll", hideTip, { passive: true });
+
+  // CANONICAL ACTIVE PAGE HIGHLIGHTER
+  try {
+    var rawPath = (window.location.pathname || '/').replace(/\/$/, '') || '/';
+    var normPath = rawPath.replace(/\.html$/, '');
+    
+    var isRiver = (normPath.indexOf('river-cruise') !== -1 || normPath.indexOf('setahajozas-a-dunan-budapest') !== -1 || normPath.indexOf('bootsfahrten-dunau') !== -1 || normPath.indexOf('croisieres-danube') !== -1 || normPath.indexOf('riecne-plavby') !== -1 || normPath.indexOf('rejsy-dunaju') !== -1 || normPath.indexOf('rechnyye-kruizy') !== -1) && normPath.indexOf('dinner') === -1 && normPath.indexOf('vacsoraval') === -1 && normPath.indexOf('abendessen') === -1;
+    var isDinner = normPath.indexOf('dinner-cruise') !== -1 || normPath.indexOf('vacsoraval') !== -1 || normPath.indexOf('candlelit') !== -1 || normPath.indexOf('abendessen') !== -1 || normPath.indexOf('diner-croisiere') !== -1 || normPath.indexOf('cena-danubio') !== -1 || normPath.indexOf('kolacja') !== -1 || normPath.indexOf('vecera-plavby') !== -1;
+    var isCard = normPath.indexOf('budapest-card') !== -1;
+    var isAbout = normPath.indexOf('/about') !== -1 || normPath.indexOf('/rolunk') !== -1 || normPath.indexOf('/körülbelül') !== -1;
+    var isContact = normPath.indexOf('/contact') !== -1 || normPath.indexOf('/kapcsolat') !== -1 || normPath.indexOf('/érintkezés') !== -1;
+
+    var navLinks = document.querySelectorAll('.ltt-nav-links .ltt-nav-link:not(.ltt-dropdown-btn), .ltt-mobile-drawer .ltt-mobile-link');
+    navLinks.forEach(function(el) {
+      var href = el.getAttribute('href');
+      if (!href) return;
+      var hClean = href.replace(/\/$/, '').replace(/\.html$/, '') || '/';
+      
+      var match = false;
+      if (normPath === hClean) {
+        match = true;
+      } else if (isRiver && (hClean.indexOf('river-cruise') !== -1 || hClean.indexOf('setahajozas-a-dunan-budapest') !== -1 || hClean.indexOf('bootsfahrten-dunau') !== -1)) {
+        match = true;
+      } else if (isDinner && (hClean.indexOf('dinner-cruise') !== -1 || hClean.indexOf('setahajozas-a-dunan-vacsoraval') !== -1 || hClean.indexOf('bootsfahrten-mit-abendessen') !== -1)) {
+        match = true;
+      } else if (isCard && hClean.indexOf('budapest-card') !== -1) {
+        match = true;
+      } else if (isAbout && (hClean.indexOf('/about') !== -1 || hClean.indexOf('/rolunk') !== -1)) {
+        match = true;
+      } else if (isContact && (hClean.indexOf('/contact') !== -1 || hClean.indexOf('/kapcsolat') !== -1)) {
+        match = true;
+      }
+      
+      if (match) {
+        el.classList.add('active');
+        el.setAttribute('aria-current', 'page');
+      } else if (hClean !== '/' && !hClean.match(/^\/[a-z]{2}$/)) {
+        el.classList.remove('active');
+        el.removeAttribute('aria-current');
+      }
+    });
+  } catch(e) {}
+
 })();
 </script>
 <script id="ltt-language-switcher-logic">
@@ -3984,5 +4190,48 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+
+  // CANONICAL ACTIVE PAGE HIGHLIGHTER
+  try {
+    var rawPath = (window.location.pathname || '/').replace(/\/$/, '') || '/';
+    var normPath = rawPath.replace(/\.html$/, '');
+    
+    var isRiver = (normPath.indexOf('river-cruise') !== -1 || normPath.indexOf('setahajozas-a-dunan-budapest') !== -1 || normPath.indexOf('bootsfahrten-dunau') !== -1 || normPath.indexOf('croisieres-danube') !== -1 || normPath.indexOf('riecne-plavby') !== -1 || normPath.indexOf('rejsy-dunaju') !== -1 || normPath.indexOf('rechnyye-kruizy') !== -1) && normPath.indexOf('dinner') === -1 && normPath.indexOf('vacsoraval') === -1 && normPath.indexOf('abendessen') === -1;
+    var isDinner = normPath.indexOf('dinner-cruise') !== -1 || normPath.indexOf('vacsoraval') !== -1 || normPath.indexOf('candlelit') !== -1 || normPath.indexOf('abendessen') !== -1 || normPath.indexOf('diner-croisiere') !== -1 || normPath.indexOf('cena-danubio') !== -1 || normPath.indexOf('kolacja') !== -1 || normPath.indexOf('vecera-plavby') !== -1;
+    var isCard = normPath.indexOf('budapest-card') !== -1;
+    var isAbout = normPath.indexOf('/about') !== -1 || normPath.indexOf('/rolunk') !== -1 || normPath.indexOf('/körülbelül') !== -1;
+    var isContact = normPath.indexOf('/contact') !== -1 || normPath.indexOf('/kapcsolat') !== -1 || normPath.indexOf('/érintkezés') !== -1;
+
+    var navLinks = document.querySelectorAll('.ltt-nav-links .ltt-nav-link:not(.ltt-dropdown-btn), .ltt-mobile-drawer .ltt-mobile-link');
+    navLinks.forEach(function(el) {
+      var href = el.getAttribute('href');
+      if (!href) return;
+      var hClean = href.replace(/\/$/, '').replace(/\.html$/, '') || '/';
+      
+      var match = false;
+      if (normPath === hClean) {
+        match = true;
+      } else if (isRiver && (hClean.indexOf('river-cruise') !== -1 || hClean.indexOf('setahajozas-a-dunan-budapest') !== -1 || hClean.indexOf('bootsfahrten-dunau') !== -1)) {
+        match = true;
+      } else if (isDinner && (hClean.indexOf('dinner-cruise') !== -1 || hClean.indexOf('setahajozas-a-dunan-vacsoraval') !== -1 || hClean.indexOf('bootsfahrten-mit-abendessen') !== -1)) {
+        match = true;
+      } else if (isCard && hClean.indexOf('budapest-card') !== -1) {
+        match = true;
+      } else if (isAbout && (hClean.indexOf('/about') !== -1 || hClean.indexOf('/rolunk') !== -1)) {
+        match = true;
+      } else if (isContact && (hClean.indexOf('/contact') !== -1 || hClean.indexOf('/kapcsolat') !== -1)) {
+        match = true;
+      }
+      
+      if (match) {
+        el.classList.add('active');
+        el.setAttribute('aria-current', 'page');
+      } else if (hClean !== '/' && !hClean.match(/^\/[a-z]{2}$/)) {
+        el.classList.remove('active');
+        el.removeAttribute('aria-current');
+      }
+    });
+  } catch(e) {}
+
 })();
 </script></body></html>
