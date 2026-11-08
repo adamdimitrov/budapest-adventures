@@ -60,7 +60,7 @@ SWITCHER_I18N = {
     'hr': {'title': 'Odaberite jezik', 'available': '● 22 DOSTUPNO', 'mobile': 'Jezik'},
     'sr': {'title': 'Изаберите језик', 'available': '● 22 ДОСТУПНО', 'mobile': 'Језик'},
     'bg': {'title': 'Изберете език', 'available': '● 22 НАЛИЧНИ', 'mobile': 'Език'},
-    'ru': {'title': 'Выберите язык', 'available': '● 22 ДОСТУПНО', 'mobile': 'Язык'},
+    'ru': {'title': 'Выберите язык', 'available': '● 22 ДОСТUPНО', 'mobile': 'Язык'},
     'uk': {'title': 'Оберіть мову', 'available': '● 22 ДОСТУПНО', 'mobile': 'Мова'},
     'el': {'title': 'Επιλέξτε γλώσσα', 'available': '● 22 ΔΙΑΘΕΣΙΜΕΣ', 'mobile': 'Γλώσσα'},
     'tr': {'title': 'Dil seçin', 'available': '● 22 MEVCUT', 'mobile': 'Dil'},
@@ -70,8 +70,7 @@ SWITCHER_I18N = {
     'ko': {'title': '언어 선택', 'available': '● 22개 지원', 'mobile': '언어'},
 }
 
-CSS_STYLES = """
-<style id="ltt-language-switcher-styles">
+CSS_STYLES_RAW = """
 /* ==========================================================================
    CANONICAL LANGUAGE SWITCHER SYSTEM — BUDAPEST ADVENTURES
    ========================================================================== */
@@ -203,10 +202,17 @@ CSS_STYLES = """
   background: #dfa732;
   color: #ffffff;
 }
+
+/* Mobile drawer language section */
 .ltt-mobile-lang-box {
   margin-top: 20px;
   padding-top: 16px;
   border-top: 1px solid #e2e8f0;
+}
+@media (min-width: 992px) {
+  .ltt-mobile-lang-box {
+    display: none !important;
+  }
 }
 .ltt-mobile-lang-title {
   font-size: 10px;
@@ -261,6 +267,8 @@ CSS_STYLES = """
   font-weight: 500;
   white-space: nowrap;
 }
+
+/* Nav header alignments */
 .ltt-nav-right {
   margin-left: auto !important;
   display: flex !important;
@@ -285,6 +293,8 @@ CSS_STYLES = """
     display: flex !important;
     align-self: center !important;
     margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
   }
   .ltt-lang-trigger {
     display: none !important;
@@ -295,11 +305,9 @@ CSS_STYLES = """
     grid-template-columns: repeat(3, 1fr);
   }
 }
-</style>
 """
 
-JS_LOGIC = """
-<script id="ltt-language-switcher-logic">
+JS_LOGIC_RAW = """
 (function() {
   window.lttToggleLangDropdown = function() {
     var dd = document.getElementById('lttLangDropdown');
@@ -344,14 +352,13 @@ JS_LOGIC = """
     }
   });
 })();
-</script>
 """
 
 def get_page_info(rel_path):
     """Determines language and page_key for a given relative path."""
     p = rel_path.strip('/')
     parts = p.split('/')
-    if p == 'index.html':
+    if p in ['index.html', '']:
         return 'en', 'home'
     if parts[0] in LANGS:
         lang = parts[0]
@@ -399,7 +406,13 @@ def get_page_info(rel_path):
         # English root pages
         f = os.path.basename(rel_path)
         name = os.path.splitext(f)[0]
-        if name in ['index']: return 'en', 'home'
+        parent = os.path.dirname(rel_path)
+        if name in ['index']:
+            if parent in ['', '.']: return 'en', 'home'
+            if 'best-budapest-river-cruises' in parent or 'budapest-river-cruises' in parent: return 'en', 'river'
+            if 'best-dinner-cruises-budapest' in parent or 'budapest-dinner-cruises' in parent:
+                if 'candlelit' in parent: return 'en', 'candlelit'
+                return 'en', 'dinner'
         if name in ['river', 'best-budapest-river-cruises', 'budapest-river-cruises']: return 'en', 'river'
         if name in ['dinner', 'best-dinner-cruises-budapest', 'budapest-dinner-cruises']: return 'en', 'dinner'
         if name in ['candlelit-dinner-cruise', 'candlelit-dinner-cruise-budapest']: return 'en', 'candlelit'
@@ -526,76 +539,71 @@ def build_switcher_dom(current_lang, page_key):
     return desktop_html, mobile_html
 
 def inject_language_switcher_into_file(file_path):
-    """Processes an HTML file and injects the language switcher if not already present."""
+    """Processes an HTML file with BeautifulSoup to guarantee 100% accurate DOM tree placement."""
     rel_path = os.path.relpath(file_path, BASE_DIR)
     current_lang, page_key = get_page_info(rel_path)
 
     with open(file_path, 'r', encoding='utf-8') as f:
-        html = f.read()
+        soup = BeautifulSoup(f.read(), 'html.parser')
 
-    # Clean existing language switcher if present to allow idempotent re-runs
-    if 'id="ltt-language-switcher-styles"' in html:
-        html = re.sub(r'<style id="ltt-language-switcher-styles">.*?</style>', '', html, flags=re.DOTALL)
-    if 'id="ltt-language-switcher-logic"' in html:
-        html = re.sub(r'<script id="ltt-language-switcher-logic">.*?</script>', '', html, flags=re.DOTALL)
-    if 'id="lttLangTrigger"' in html:
-        html = re.sub(r'<!-- DESKTOP LANGUAGE SWITCHER -->\s*<div class="ltt-lang-trigger" id="lttLangTrigger">.*?</div>\s*</div>', '</div>', html, flags=re.DOTALL)
-        html = re.sub(r'<div class="ltt-lang-trigger" id="lttLangTrigger">.*?</div>\s*</div>', '</div>', html, flags=re.DOTALL)
-    if 'class="ltt-mobile-lang-box"' in html:
-        html = re.sub(r'<!-- MOBILE DRAWER LANGUAGE SECTION -->\s*<div class="ltt-mobile-lang-box">.*?</div>\s*</div>', '</div>', html, flags=re.DOTALL)
-        html = re.sub(r'<div class="ltt-mobile-lang-box">.*?</div>\s*</div>', '</div>', html, flags=re.DOTALL)
+    # 1. Clean existing language switcher elements if present to allow idempotent re-runs
+    for s in soup.find_all('style', id='ltt-language-switcher-styles'):
+        s.decompose()
+    for s in soup.find_all('script', id='ltt-language-switcher-logic'):
+        s.decompose()
+    for el in soup.find_all(id='lttLangTrigger'):
+        el.decompose()
+    for el in soup.find_all(class_='ltt-mobile-lang-box'):
+        el.decompose()
 
-    desktop_html, mobile_html = build_switcher_dom(current_lang, page_key)
+    desktop_html_str, mobile_html_str = build_switcher_dom(current_lang, page_key)
+    desktop_tag = BeautifulSoup(desktop_html_str, 'html.parser').find('div', id='lttLangTrigger')
+    mobile_tag = BeautifulSoup(mobile_html_str, 'html.parser').find('div', class_='ltt-mobile-lang-box')
 
-    # 1. Inject desktop trigger
-    if 'class="ltt-hamburger"' in html and 'id="lttLangTrigger"' not in html:
-        # Place before ltt-hamburger button
-        html = re.sub(
-            r'(<button[^>]*class="[^"]*ltt-hamburger[^"]*"[^>]*>)',
-            desktop_html + '\n        \\1',
-            html,
-            count=1
-        )
-    elif 'class="ltt-nav-right"' in html and 'id="lttLangTrigger"' not in html:
-        html = re.sub(
-            r'(<div[^>]*class="[^"]*ltt-nav-right[^"]*"[^>]*>)',
-            '\\1\n' + desktop_html,
-            html,
-            count=1
-        )
-    elif 'class="t-navigation-menu-button' in html and 'id="lttLangTrigger"' not in html:
-        # Secondary pages with t-navigation Webflow navbar
-        html = re.sub(
-            r'(<div[^>]*class="[^"]*t-navigation-menu-button[^"]*"[^>]*>)',
-            desktop_html + '\n\\1',
-            html,
-            count=1
-        )
-
-    # 2. Inject mobile drawer section
-    if 'id="lttMobileDrawer"' in html and 'class="ltt-mobile-lang-box"' not in html:
-        # Place inside ltt-drawer-content at the very bottom
-        # Look for closing of ltt-drawer-content
-        pattern = r'(</div>\s*</div>\s*</header>)'
-        if re.search(pattern, html):
-            html = re.sub(pattern, mobile_html + '\n</div>\n</div>\n</header>', html, count=1)
+    # 2. Inject desktop trigger
+    nav_right = soup.find('div', class_='ltt-nav-right')
+    hamburger = soup.find(id='lttNavToggle')
+    if nav_right:
+        if hamburger and hamburger.parent == nav_right:
+            hamburger.insert_before(desktop_tag)
         else:
-            # Fallback before closing </header>
-            html = re.sub(r'(</header>)', mobile_html + '\n\\1', html, count=1)
-    elif 'class="t-navigation-menu' in html and 'class="ltt-mobile-lang-box"' not in html:
-        # Secondary pages: append inside nav.t-navigation-menu
-        html = re.sub(r'(</nav>\s*<div[^>]*class="[^"]*t-navigation-menu-button)', mobile_html + '\n</nav>\\1', html, count=1)
+            nav_right.append(desktop_tag)
+    else:
+        # Secondary pages with t-navigation Webflow navbar
+        t_btn = soup.find(class_='t-navigation-menu-button')
+        if t_btn:
+            t_btn.insert_before(desktop_tag)
 
-    # 3. Inject CSS before </head>
-    if '</head>' in html and 'id="ltt-language-switcher-styles"' not in html:
-        html = html.replace('</head>', CSS_STYLES + '\n</head>')
+    # 3. Inject mobile drawer box strictly INSIDE drawer content
+    drawer = soup.find(id='lttMobileDrawer')
+    if drawer:
+        drawer_content = drawer.find(class_='ltt-drawer-content')
+        if drawer_content:
+            drawer_content.append(mobile_tag)
+        else:
+            drawer.append(mobile_tag)
+    else:
+        # Secondary pages with t-navigation
+        t_menu = soup.find(class_='t-navigation-menu')
+        if t_menu:
+            t_menu.append(mobile_tag)
 
-    # 4. Inject JS before </body>
-    if '</body>' in html and 'id="ltt-language-switcher-logic"' not in html:
-        html = html.replace('</body>', JS_LOGIC + '\n</body>')
+    # 4. Inject CSS in <head>
+    head = soup.find('head')
+    if head:
+        style_tag = soup.new_tag('style', id='ltt-language-switcher-styles')
+        style_tag.string = CSS_STYLES_RAW
+        head.append(style_tag)
+
+    # 5. Inject JS before </body>
+    body = soup.find('body')
+    if body:
+        script_tag = soup.new_tag('script', id='ltt-language-switcher-logic')
+        script_tag.string = JS_LOGIC_RAW
+        body.append(script_tag)
 
     with open(file_path, 'w', encoding='utf-8') as f:
-        f.write(html)
+        f.write(str(soup))
 
     return True
 
