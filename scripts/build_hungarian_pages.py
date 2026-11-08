@@ -2090,3 +2090,12 @@ if __name__ == '__main__':
     build_hungarian_home()
     build_hungarian_river()
     build_hungarian_dinner()
+    try:
+        from scripts.inject_language_switcher import inject_language_switcher_into_file
+        inject_language_switcher_into_file(os.path.join(BASE_DIR, 'hu', 'index.html'))
+        inject_language_switcher_into_file(os.path.join(BASE_DIR, 'hu', 'setahajozas-a-dunan-budapest', 'index.html'))
+        inject_language_switcher_into_file(os.path.join(BASE_DIR, 'hu', 'setahajozas-a-dunan-vacsoraval', 'index.html'))
+        print("✓ Injected canonical language switcher into Hungarian pages")
+    except Exception as e:
+        print(f"Warning: could not inject switcher: {e}")
+

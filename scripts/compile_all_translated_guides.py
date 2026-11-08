@@ -1012,6 +1012,13 @@ def compile_pages():
         print(f"✓ [{lang.upper()}] Compiled home, river ({river_slug}), and dinner ({dinner_slug})")
 
     print(f"\nCompilation Complete: {compiled_count} static pages compiled across {len(LANGS)} languages.")
+    try:
+        from scripts.inject_language_switcher import main as inject_main
+        print("\nInjecting canonical language switcher across all compiled pages...")
+        inject_main()
+    except Exception as e:
+        print(f"Warning: could not inject language switcher: {e}")
+
 
 if __name__ == '__main__':
     compile_pages()
