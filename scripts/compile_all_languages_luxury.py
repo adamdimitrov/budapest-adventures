@@ -152,25 +152,81 @@ def create_pro_con_html(soup, pros, cons, pros_label="Pros:", cons_label="Cons:"
     
     return wrapper
 
+def localize_universal_links(soup, lang, river_slug, dinner_slug):
+    """Rewrite all internal links so user stays in /{lang}/ across the whole site."""
+    for a in soup.find_all('a', href=True):
+        href = a['href']
+        if href.startswith(('http://', 'https://', 'mailto:', 'tel:', 'javascript:')):
+            if 'legenda.hu' in href and 'partner=38585' not in href:
+                sep = '&' if '?' in href else '?'
+                a['href'] = f"{href}{sep}partner=38585"
+            continue
+        if href.startswith('#'):
+            continue
+
+        clean = href
+        for l in LANGS:
+            if clean.startswith(f"/{l}/"):
+                clean = clean[len(l)+1:]
+                break
+            elif clean == f"/{l}":
+                clean = "/"
+                break
+
+        if clean in ['/best-budapest-river-cruises', '/budapest-river-cruises', '/river', 'best-budapest-river-cruises']:
+            a['href'] = f"/{lang}/{river_slug}"
+        elif clean in ['/best-dinner-cruises-budapest', '/budapest-dinner-cruises', '/dinner', 'best-dinner-cruises-budapest']:
+            a['href'] = f"/{lang}/{dinner_slug}"
+        elif clean in ['/', '']:
+            a['href'] = f"/{lang}/"
+        elif clean in ['/about', 'about']:
+            a['href'] = f"/{lang}/about"
+        elif clean.startswith('/about#'):
+            a['href'] = f"/{lang}/about{clean[6:]}"
+        elif clean in ['/contact', 'contact']:
+            a['href'] = f"/{lang}/contact"
+        elif clean in ['/thermal-baths-budapest', 'thermal-baths-budapest']:
+            a['href'] = f"/{lang}/thermal-baths-budapest"
+        elif clean in ['/best-night-cruises-budapest', 'best-night-cruises-budapest']:
+            a['href'] = f"/{lang}/best-night-cruises-budapest"
+        elif clean in ['/best-private-boat-tours-budapest', 'best-private-boat-tours-budapest']:
+            a['href'] = f"/{lang}/best-private-boat-tours-budapest"
+        elif clean in ['/unlimited-prosecco-cruises-budapest', 'unlimited-prosecco-cruises-budapest']:
+            a['href'] = f"/{lang}/unlimited-prosecco-cruises-budapest"
+        elif clean in ['/best-walking-tours-budapest', 'best-walking-tours-budapest']:
+            a['href'] = f"/{lang}/best-walking-tours-budapest"
+        elif clean in ['/best-hostels-budapest', 'best-hostels-budapest']:
+            a['href'] = f"/{lang}/best-hostels-budapest"
+        elif clean in ['/budapest-card-is-it-worth-it', 'budapest-card-is-it-worth-it']:
+            a['href'] = f"/{lang}/budapest-card-is-it-worth-it"
+        elif clean in ['/budapest-travel-guide', 'budapest-travel-guide']:
+            a['href'] = f"/{lang}/budapest-travel-guide"
+        elif clean in ['/budapest-airport-to-city-center', 'budapest-airport-to-city-center']:
+            a['href'] = f"/{lang}/budapest-airport-to-city-center"
+        elif clean in ['/budapest-attractions/budapest-parliament', '/budapest-parliament', 'budapest-parliament']:
+            a['href'] = f"/{lang}/budapest-attractions/budapest-parliament"
+        elif clean in ['/budapest-river-cruise-group-booking', 'budapest-river-cruise-group-booking']:
+            a['href'] = f"/{lang}/budapest-river-cruise-group-booking"
+        elif clean in ['/budapest-tourism-statistics', 'budapest-tourism-statistics']:
+            a['href'] = f"/{lang}/budapest-tourism-statistics"
+        elif clean in ['/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest', '/candlelit-dinner-cruise-budapest', 'candlelit-dinner-cruise-budapest']:
+            a['href'] = f"/{lang}/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest"
+        elif clean.startswith('/'):
+            a['href'] = f"/{lang}{clean}"
+        else:
+            a['href'] = f"/{lang}/{clean}"
+
 def compile_homepage(lang, en_html):
     """Compile localized homepage for a given language."""
     data = I18N.get(lang, I18N.get('en', {}))
     slugs = SLUG_MAP[lang]
     river_slug = slugs['river']
     dinner_slug = slugs['dinner']
+    dinner_slug = slugs['dinner']
     
     soup = BeautifulSoup(en_html, 'html.parser')
-    
-    # Universal link localization
-    dinner_slug = slugs['dinner']
-    for a in soup.find_all('a', href=True):
-        href = a['href']
-        if href in ['/best-budapest-river-cruises', '/budapest-river-cruises']:
-            a['href'] = f"/{lang}/{river_slug}"
-        elif href in ['/best-dinner-cruises-budapest', '/budapest-dinner-cruises']:
-            a['href'] = f"/{lang}/{dinner_slug}"
-        elif href == '/':
-            a['href'] = f"/{lang}/"
+    localize_universal_links(soup, lang, river_slug, dinner_slug)
+
     can = soup.find('link', {'rel': 'canonical'})
     if can: can['href'] = f"https://www.budapestadventures.com/{lang}/"
     html_tag = soup.find('html')
@@ -184,16 +240,6 @@ def compile_homepage(lang, en_html):
     m_desc = soup.find('meta', {'name': 'description'})
     if m_desc:
         m_desc['content'] = data['hero']['sub']
-        
-    # Universal link localization
-    for a in soup.find_all('a', href=True):
-        href = a['href']
-        if href in ['/best-budapest-river-cruises', '/budapest-river-cruises']:
-            a['href'] = f"/{lang}/{river_slug}"
-        elif href in ['/best-dinner-cruises-budapest', '/budapest-dinner-cruises']:
-            a['href'] = f"/{lang}/{dinner_slug}"
-        elif href == '/':
-            a['href'] = f"/{lang}/"
 
     # Navbar
     nav_data = data.get('nav', {})
@@ -354,22 +400,14 @@ def compile_river_guide(lang, en_html):
     ui = data.get('ui', {})
     slugs = SLUG_MAP[lang]
     river_slug = slugs['river']
+    dinner_slug = slugs['dinner']
     
     harvested_river = os.path.join(CACHE_DIR, lang, 'river.html')
     tours = extract_tour_content(harvested_river)
     
     soup = BeautifulSoup(en_html, 'html.parser')
-    
-    # Universal link localization
-    dinner_slug = slugs['dinner']
-    for a in soup.find_all('a', href=True):
-        href = a['href']
-        if href in ['/best-budapest-river-cruises', '/budapest-river-cruises']:
-            a['href'] = f"/{lang}/{river_slug}"
-        elif href in ['/best-dinner-cruises-budapest', '/budapest-dinner-cruises']:
-            a['href'] = f"/{lang}/{dinner_slug}"
-        elif href == '/':
-            a['href'] = f"/{lang}/"
+    localize_universal_links(soup, lang, river_slug, dinner_slug)
+
     can = soup.find('link', {'rel': 'canonical'})
     if can: can['href'] = f"https://www.budapestadventures.com/{lang}/{river_slug}"
     html_tag = soup.find('html')
@@ -487,22 +525,14 @@ def compile_dinner_guide(lang, en_html):
     slugs = SLUG_MAP[lang]
     river_slug = slugs['river']
     dinner_slug = slugs['dinner']
+    dinner_slug = slugs['dinner']
     
     harvested_dinner = os.path.join(CACHE_DIR, lang, 'dinner.html')
     tours = extract_tour_content(harvested_dinner)
     
     soup = BeautifulSoup(en_html, 'html.parser')
-    
-    # Universal link localization
-    dinner_slug = slugs['dinner']
-    for a in soup.find_all('a', href=True):
-        href = a['href']
-        if href in ['/best-budapest-river-cruises', '/budapest-river-cruises']:
-            a['href'] = f"/{lang}/{river_slug}"
-        elif href in ['/best-dinner-cruises-budapest', '/budapest-dinner-cruises']:
-            a['href'] = f"/{lang}/{dinner_slug}"
-        elif href == '/':
-            a['href'] = f"/{lang}/"
+    localize_universal_links(soup, lang, river_slug, dinner_slug)
+
     can = soup.find('link', {'rel': 'canonical'})
     if can: can['href'] = f"https://www.budapestadventures.com/{lang}/{dinner_slug}"
     html_tag = soup.find('html')

@@ -13,6 +13,7 @@ restores canonical Pros & Cons rich-text grid structure, and preserves 100% affi
 import os
 import sys
 import re
+import json
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -528,6 +529,118 @@ def build_hungarian_home():
 
 
 # DATA FOR 10 RIVER CRUISES
+# ==============================================================================
+# HUNGARIAN SPECS & FLOATING BAR LOCALIZATION
+# ==============================================================================
+HU_SPECS_MAP = {
+    '1 Welcome Drink': '🥂 1 üdvözlőital',
+    '30-Language Audio Guide': '🎧 30 nyelvű audioguide',
+    '30-Lang Audio': '🎧 30 nyelvű audioguide',
+    '60–70 Mins': '⏱️ 60–70 perc',
+    '75–85 Mins': '⏱️ 75–85 perc',
+    '60 Mins': '⏱️ 60 perc',
+    '75 Mins': '⏱️ 75 perc',
+    '80 Mins': '⏱️ 80 perc',
+    '90 Mins': '⏱️ 90 perc',
+    '120 Mins': '⏱️ 120 perc',
+    '135 Mins': '⏱️ 135 perc',
+    '150 Mins': '⏱️ 150 perc',
+    'Full Danube Circuit': '🏛️ Teljes dunai körút',
+    'Danube Loop': '🏛️ Teljes dunai körút',
+    'Open Top Deck': '🌤️ Nyitott fedélzet',
+    'Unlimited Prosecco': '🥂 Korlátlan prosecco',
+    'Upbeat Vibe': '✨ Koktélparti hangulat',
+    'Parliament Views': '🏛️ Parlamenti panoráma',
+    'Historic Steamer': '⚓ 19. századi gőzhajó',
+    'Paddle Wheel': '⚙️ Lapátkerekes meghajtás',
+    'Budget Friendly': '💶 Pénztárcabarát',
+    'Central Pier': '📍 Belvárosi kikötő',
+    '2 Fresh Cocktails': '🍸 2 prémium koktél',
+    'Sunset Timing': '🌅 Naplementés menetrend',
+    'Fresh Pizza': '🍕 Friss pizza',
+    'Unlimited Beer': '🍺 Korlátlan sör & üdítő',
+    '12-Course Buffet': '🍽️ 12 fogásos svédasztal',
+    'Live Gypsy Music': '🎻 Élő cigányzene & tánc',
+    'Wine & Beer Tasting': '🍷 Bor- és sörkóstolás',
+    'Folk Violin': '🎻 Élő népzene',
+    'Daytime Sightseeing': '☀️ Nappali városnézés',
+    '4-Course Dinner': '🍽️ 4 fogásos gyertyafényes vacsora',
+    'Live Piano Duel': '🎹 Élő zongorapárbaj show',
+    'Folklore & Operetta': '💃 Folklór és operett műsor',
+    'Candlelit Ambiance': '🕯️ Gyertyafényes hangulat',
+    'Private Table': '🥂 Privát asztal garantált'
+}
+
+HU_RIVER_SHORT_TITLES = [
+    "Legenda Városnéző Sétahajó 30 Nyelvű Audióval & Itallal",
+    "Rubin Group Korlátlan Prosecco & Aperol Hajóút",
+    "Kisfaludy Autentikus 19. Századi Lapátkerekes Gőzhajó",
+    "Portum Lines Modern Sétahajó + Üdvözlőital",
+    "Silverline Fapados Belvárosi Városnéző Hajóút",
+    "Silverline Naplementés Hajózás 2 Friss Koktéllal",
+    "Silverline Pizzás Hajózás Korlátlan Sörrel & Üdítővel",
+    "Hungária Koncert 12 Fogásos Büfévacsora & Folklór Show",
+    "Hungária Koncert Folklór Italos Hajóút Élő Hegedűvel",
+    "Mahart PassNave Hop-On Hop-Off Dunai Körjárat"
+]
+
+HU_DINNER_SHORT_TITLES = [
+    "Legenda 4 Fogásos Romantikus Gyertyafényes Vacsorahajó Élő Zenével",
+    "Silverline 4 Fogásos Vacsorahajó Élő Zene Nélkül",
+    "Silverline 4 Fogásos Vacsorahajó Folklór Operett Műsorral",
+    "Silverline 4 Fogásos Vacsorahajó Élő Zongorapárbaj Show-val",
+    "Hungária Koncert 12 Fogásos Svédasztalos Vacsorahajó & Folklór",
+    "Eurama 4 Fogásos Vacsorahajó Klasszikus Cigányzenével",
+    "Silverline 4 Fogásos Vacsorahajó Élőzenével és Korlátlan Itallal"
+]
+
+def localize_floating_bar(soup, cruise_type, total_count, short_titles, toc_deck_label, toc_breakdown_label):
+    bar = soup.find(id='sticky-bar')
+    if bar:
+        toc_btn = bar.find(id='hybridTocBtn')
+        if toc_btn:
+            span = toc_btn.find('span')
+            if span:
+                span.string = f"Mind a {total_count} dunai {'sétahajó' if cruise_type == 'river' else 'vacsorahajó'}"
+                
+        top_btn = bar.find(class_='hybrid-top-btn')
+        if top_btn:
+            span = top_btn.find('span')
+            if span: span.string = "Fel"
+            
+        s_rank = bar.find(id='sticky-rank')
+        if s_rank: s_rank.string = "#1 VÁLASZTÁS"
+        
+        s_name = bar.find(id='sticky-name')
+        if s_name and short_titles: s_name.string = short_titles[0]
+        
+        s_trust = bar.find(class_='hybrid-active-trust')
+        if s_trust: s_trust.string = "24 órás ingyenes lemondás"
+        
+        s_btn = bar.find(id='sticky-cta-btn')
+        if s_btn: s_btn.string = "Foglalás most →"
+        
+    sheet = soup.find(id='hybridSheet')
+    if sheet:
+        stitle = sheet.find(class_='hybrid-sheet-title')
+        if stitle:
+            stitle.string = f"Ugrás a tesztelt budapesti {'sétahajókhoz' if cruise_type == 'river' else 'vacsorahajókhoz'}"
+            
+    # Update window.LTT_PAGE_CONFIG script tag
+    for s in soup.find_all('script'):
+        if s.string and 'window.LTT_PAGE_CONFIG' in s.string:
+            cfg = {
+                "deckId": "budapest-river-cruise-deck" if cruise_type == 'river' else "budapest-dinner-cruise-deck",
+                "tocDeckLabel": toc_deck_label,
+                "tocBreakdownLabel": toc_breakdown_label,
+                "pickLabel": "VÁLASZTÁS",
+                "btnText": "Foglalás most →",
+                "shortTitles": short_titles
+            }
+            s.string = f"window.LTT_PAGE_CONFIG = {json.dumps(cfg, ensure_ascii=False)};"
+            break
+
+
 RIVER_PROS_CONS = [
     # Card 1 (Legenda)
     ([
@@ -774,9 +887,10 @@ def build_hungarian_river():
         "✓ Személyesen tesztelve (5)",
         "🎧 Audio guide-dal (5)",
         "🥂 Üdvözlőitallal (6)",
-        "🍷 Korlátlan ital (3)"
+        "🍷 Korlátlan ital (3)",
+        "🏛️ Történelmi & Városnéző (4)"
     ]
-    for idx, btn in enumerate(tab_btns[:5]):
+    for idx, btn in enumerate(tab_btns[:6]):
         btn.string = hu_tabs[idx]
         
     # 4. 10 Deck Cards Localization
@@ -872,11 +986,35 @@ def build_hungarian_river():
         price = card.find(class_='bpa-price')
         if price: price.string = f"{cdata['price']} / fő"
         
-        btn = card.find(class_='bpa-btn')
-        if btn: btn.string = "Szabad időpontok ellenőrzése →"
+        psub = card.find(class_='bpa-psub')
+        if psub: psub.string = "/ felnőtt"
         
-        jump = card.find(class_='bpa-jump-link')
-        if jump: jump.string = "Értékelés elolvasása ↓"
+        btn = card.find(class_='bpa-btn')
+        if btn: btn.string = "Foglalás most →"
+        
+        sublink = card.find(class_='bpa-sublink') or card.find(class_='bpa-jump-link')
+        if sublink: sublink.string = "Értékelés elolvasása ↓"
+        
+        vchip = card.find(class_='bpa-vchip')
+        if vchip: vchip.string = "✓ Személyesen tesztelve"
+        
+        trust = card.find(class_='bpa-trust-micro')
+        if trust:
+            trust.clear()
+            s1 = soup.new_tag('span')
+            s1.string = "Azonnali mobiljegy"
+            s2 = soup.new_tag('span')
+            s2.string = "•"
+            s3 = soup.new_tag('span')
+            s3.string = "24 órás ingyenes lemondás"
+            trust.extend([s1, s2, s3])
+            
+        for sp in card.find_all(class_='bpa-sp'):
+            stxt = sp.get_text(strip=True)
+            for eng_k, hu_v in HU_SPECS_MAP.items():
+                if eng_k in stxt:
+                    sp.string = hu_v
+                    break
         
     # 5. Table of Contents
     toc = soup.find(class_='ltt-toc-card')
@@ -972,7 +1110,7 @@ def build_hungarian_river():
             if mtxt in QF_BADGES_HU:
                 m_link.string = QF_BADGES_HU[mtxt]
         for cta in dcard.find_all(class_='ltt-buy-cta-btn'):
-            cta.string = "Szabad Időpontok és Jegyfoglalás →"
+            cta.string = "Foglalás most →"
 
         # Translate tips and blockquotes, remove English FAQ blockquotes
         for bq in dcard.find_all('blockquote'):
@@ -1016,7 +1154,10 @@ def build_hungarian_river():
         d_price = drawer.find(class_='bpa-drawer-price')
         if d_price: d_price.string = "€20-tól"
         d_btn = drawer.find(class_='bpa-drawer-btn')
-        if d_btn: d_btn.string = "Időpontok ellenőrzése →"
+        if d_btn: d_btn.string = "Foglalás most →"
+        
+    # 8b. Localized Floating Bar
+    localize_floating_bar(soup, 'river', 10, HU_RIVER_SHORT_TITLES, 'Top 10 Sétahajó Összehasonlítás', 'Részletes Elemzés (10 Sétahajó)')
         
     # 9. Localized Footer
     localize_footer(soup)
@@ -1304,11 +1445,35 @@ def build_hungarian_dinner():
         price = card.find(class_='bpa-price')
         if price: price.string = f"{cdata['price']} / fő"
         
-        btn = card.find(class_='bpa-btn')
-        if btn: btn.string = "Szabad időpontok ellenőrzése →"
+        psub = card.find(class_='bpa-psub')
+        if psub: psub.string = "/ felnőtt"
         
-        jump = card.find(class_='bpa-jump-link')
-        if jump: jump.string = "Értékelés elolvasása ↓"
+        btn = card.find(class_='bpa-btn')
+        if btn: btn.string = "Foglalás most →"
+        
+        sublink = card.find(class_='bpa-sublink') or card.find(class_='bpa-jump-link')
+        if sublink: sublink.string = "Értékelés elolvasása ↓"
+        
+        vchip = card.find(class_='bpa-vchip')
+        if vchip: vchip.string = "✓ Személyesen tesztelve"
+        
+        trust = card.find(class_='bpa-trust-micro')
+        if trust:
+            trust.clear()
+            s1 = soup.new_tag('span')
+            s1.string = "Azonnali mobiljegy"
+            s2 = soup.new_tag('span')
+            s2.string = "•"
+            s3 = soup.new_tag('span')
+            s3.string = "24 órás ingyenes lemondás"
+            trust.extend([s1, s2, s3])
+            
+        for sp in card.find_all(class_='bpa-sp'):
+            stxt = sp.get_text(strip=True)
+            for eng_k, hu_v in HU_SPECS_MAP.items():
+                if eng_k in stxt:
+                    sp.string = hu_v
+                    break
         
     # 5. Table of Contents
     toc = soup.find(class_='ltt-toc-card')
@@ -1400,7 +1565,7 @@ def build_hungarian_dinner():
             if mtxt in QF_BADGES_HU:
                 m_link.string = QF_BADGES_HU[mtxt]
         for cta in dcard.find_all(class_='ltt-buy-cta-btn'):
-            cta.string = "Szabad Időpontok és Jegyfoglalás →"
+            cta.string = "Foglalás most →"
 
         # Translate tips and blockquotes, remove English FAQ blockquotes
         for bq in dcard.find_all('blockquote'):
@@ -1423,7 +1588,10 @@ def build_hungarian_dinner():
         d_price = drawer.find(class_='bpa-drawer-price')
         if d_price: d_price.string = "€98-tól"
         d_btn = drawer.find(class_='bpa-drawer-btn')
-        if d_btn: d_btn.string = "Időpontok ellenőrzése →"
+        if d_btn: d_btn.string = "Foglalás most →"
+        
+    # 8b. Localized Floating Bar
+    localize_floating_bar(soup, 'dinner', 7, HU_DINNER_SHORT_TITLES, 'Top 7 Vacsorahajó Összehasonlítás', 'Részletes Elemzés (7 Vacsorahajó)')
         
     # 9. Localized Footer
     localize_footer(soup)

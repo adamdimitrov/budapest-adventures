@@ -52,20 +52,389 @@ SLUG_MAP = {
 
 # UI Microcopy
 COMMON_UI = {
-    'hu': {'btn_check': 'Szabad időpontok ellenőrzése →', 'read_review': 'Értékelés elolvasása ↓', 'best_overall': 'Legjobb Választás', 'pros': 'Előnyök:', 'cons': 'Hátrányok:', 'from_price': 'Ár:'},
-    'ro': {'btn_check': 'Verifică disponibilitatea →', 'read_review': 'Citește recenzia ↓', 'best_overall': 'Cea Mai Bună Alegere', 'pros': 'Pro:', 'cons': 'Contra:', 'from_price': 'De la'},
-    'it': {'btn_check': 'Verifica disponibilità →', 'read_review': 'Leggi recensione ↓', 'best_overall': 'Migliore Scelta', 'pros': 'Pro:', 'cons': 'Contro:', 'from_price': 'Da'},
-    'fr': {'btn_check': 'Vérifier les disponibilités →', 'read_review': 'Lire l\'avis ↓', 'best_overall': 'Meilleur Choix', 'pros': 'Points forts :', 'cons': 'Points faibles :', 'from_price': 'À partir de'},
-    'de': {'btn_check': 'Verfügbarkeit prüfen →', 'read_review': 'Rezension lesen ↓', 'best_overall': 'Gesamtsieger', 'pros': 'Vorteile:', 'cons': 'Nachteile:', 'from_price': 'Ab'},
-    'es': {'btn_check': 'Consultar disponibilidad →', 'read_review': 'Leer reseña ↓', 'best_overall': 'Mejor Opción', 'pros': 'Pros:', 'cons': 'Contras:', 'from_price': 'Desde'},
-    'pl': {'btn_check': 'Sprawdź dostępność →', 'read_review': 'Przeczytaj recenzję ↓', 'best_overall': 'Najlepszy Wybór', 'pros': 'Zalety:', 'cons': 'Wady:', 'from_price': 'Od'},
-    'cs': {'btn_check': 'Ověřit dostupnost →', 'read_review': 'Přečíst recenzi ↓', 'best_overall': 'Nejlepší Volba', 'pros': 'Klady:', 'cons': 'Zápory:', 'from_price': 'Od'},
-    'ja': {'btn_check': '空き状況を確認する →', 'read_review': 'レビューを読む ↓', 'best_overall': 'ベスト評価', 'pros': 'メリット:', 'cons': 'デメリット:', 'from_price': '料金:'},
-    'nl': {'btn_check': 'Beschikbaarheid controleren →', 'read_review': 'Lees beoordeling ↓', 'best_overall': 'Beste Keuze', 'pros': 'Voordelen:', 'cons': 'Nadelen:', 'from_price': 'Vanaf'}
+    'hu': {
+        'btn_book': 'Foglalás most →',
+        'read_review': 'Értékelés elolvasása ↓',
+        'per_adult': '/ felnőtt',
+        'trust_qr': 'Azonnali mobiljegy',
+        'trust_cancel': '24 órás ingyenes lemondás',
+        'all_river': 'Mind a 10 dunai sétahajó',
+        'all_dinner': 'Mind a 7 dunai vacsorahajó',
+        'top': 'Fel',
+        'pick': 'VÁLASZTÁS',
+        'sheet_river': 'Ugrás a tesztelt budapesti sétahajókhoz',
+        'sheet_dinner': 'Ugrás a tesztelt budapesti vacsorahajókhoz',
+        'verified': 'Személyesen tesztelve'
+    },
+    'de': {
+        'btn_book': 'Jetzt buchen →',
+        'read_review': 'Rezension lesen ↓',
+        'per_adult': 'pro Erwachsener',
+        'trust_qr': 'Sofortiges Smartphone-Ticket',
+        'trust_cancel': 'Kostenlose Stornierung bis 24 Std.',
+        'all_river': 'Alle 10 Donau-Schifffahrten',
+        'all_dinner': 'Alle 7 Abendessen-Schifffahrten',
+        'top': 'Nach oben',
+        'pick': 'TIPP',
+        'sheet_river': 'Zu den getesteten Donau-Schifffahrten',
+        'sheet_dinner': 'Zu den getesteten Abendessen-Schifffahrten',
+        'verified': 'Vor Ort getestet'
+    },
+    'fr': {
+        'btn_book': 'Réserver maintenant →',
+        'read_review': "Lire l'avis ↓",
+        'per_adult': 'par adulte',
+        'trust_qr': 'Billet mobile instantané',
+        'trust_cancel': 'Annulation gratuite 24h',
+        'all_river': 'Les 10 croisières sur le Danube',
+        'all_dinner': 'Les 7 dîners croisières',
+        'top': 'Haut',
+        'pick': 'CHOIX',
+        'sheet_river': 'Accéder aux croisières testées',
+        'sheet_dinner': 'Accéder aux dîners croisières testés',
+        'verified': 'Testé personnellement'
+    },
+    'es': {
+        'btn_book': 'Reservar ahora →',
+        'read_review': 'Leer reseña ↓',
+        'per_adult': 'por adulto',
+        'trust_qr': 'Ticket móvil instantáneo',
+        'trust_cancel': 'Cancelación gratuita 24h',
+        'all_river': 'Los 10 cruceros por el Danubio',
+        'all_dinner': 'Los 7 cruceros con cena',
+        'top': 'Arriba',
+        'pick': 'ELECCIÓN',
+        'sheet_river': 'Ir a los cruceros evaluados',
+        'sheet_dinner': 'Ir a los cruceros con cena evaluados',
+        'verified': 'Probado personalmente'
+    },
+    'it': {
+        'btn_book': 'Prenota ora →',
+        'read_review': 'Leggi recensione ↓',
+        'per_adult': 'per adulto',
+        'trust_qr': 'Biglietto su smartphone',
+        'trust_cancel': 'Cancellazione gratuita 24h',
+        'all_river': 'Tutte le 10 crociere sul Danubio',
+        'all_dinner': 'Tutte le 7 crociere con cena',
+        'top': 'In alto',
+        'pick': 'SCELTA',
+        'sheet_river': 'Vai alle crociere testate',
+        'sheet_dinner': 'Vai alle crociere con cena testate',
+        'verified': 'Testato di persona'
+    },
+    'ro': {
+        'btn_book': 'Rezervă acum →',
+        'read_review': 'Citește recenzia ↓',
+        'per_adult': 'per adult',
+        'trust_qr': 'Bilet electronic instant',
+        'trust_cancel': 'Anulare gratuită 24h',
+        'all_river': 'Toate cele 10 croaziere pe Dunăre',
+        'all_dinner': 'Toate cele 7 croaziere cu cină',
+        'top': 'Sus',
+        'pick': 'ALEGERE',
+        'sheet_river': 'Sari la croazierele testate',
+        'sheet_dinner': 'Sari la croazierele cu cină testate',
+        'verified': 'Testat personal'
+    },
+    'pl': {
+        'btn_book': 'Zarezerwuj teraz →',
+        'read_review': 'Przeczytaj recenzję ↓',
+        'per_adult': 'za osobę dorosłą',
+        'trust_qr': 'Bilet na telefon',
+        'trust_cancel': 'Bezpłatne anulowanie 24h',
+        'all_river': 'Wszystkie 10 rejsów po Dunaju',
+        'all_dinner': 'Wszystkie 7 rejsów z kolacją',
+        'top': 'Góra',
+        'pick': 'WYBÓR',
+        'sheet_river': 'Przejdź do przetestowanych rejsów',
+        'sheet_dinner': 'Przejdź do rejsów z kolacją',
+        'verified': 'Sprawdzone osobiście'
+    },
+    'cs': {
+        'btn_book': 'Rezervovat nyní →',
+        'read_review': 'Přečíst recenzi ↓',
+        'per_adult': 'za dospělého',
+        'trust_qr': 'Okamžitá mobilní vstupenka',
+        'trust_cancel': 'Zrušení zdarma do 24 hod.',
+        'all_river': 'Všech 10 plaveb po Dunaji',
+        'all_dinner': 'Všech 7 plaveb s večeří',
+        'top': 'Nahoru',
+        'pick': 'VOLBA',
+        'sheet_river': 'Přejít na testované plavby',
+        'sheet_dinner': 'Přejít na plavby s večeří',
+        'verified': 'Osobně otestováno'
+    },
+    'sk': {
+        'btn_book': 'Rezervovať teraz →',
+        'read_review': 'Prečítať recenziu ↓',
+        'per_adult': 'za dospelého',
+        'trust_qr': 'Okamžitý lístok v mobile',
+        'trust_cancel': 'Bezplatné zrušenie do 24h',
+        'all_river': 'Všetkých 10 plavieb po Dunaji',
+        'all_dinner': 'Všetkých 7 plavieb s večerou',
+        'top': 'Hore',
+        'pick': 'VOĽBA',
+        'sheet_river': 'Prejsť na testované plavby',
+        'sheet_dinner': 'Prejsť na plavby s večerou',
+        'verified': 'Osobne otestované'
+    },
+    'nl': {
+        'btn_book': 'Nu boeken →',
+        'read_review': 'Lees recensie ↓',
+        'per_adult': 'per volwassene',
+        'trust_qr': 'Direct digitaal ticket',
+        'trust_cancel': 'Gratis annuleren tot 24u',
+        'all_river': 'Alle 10 Donau-rondvaarten',
+        'all_dinner': 'Alle 7 diner-rondvaarten',
+        'top': 'Omhoog',
+        'pick': 'KEUZE',
+        'sheet_river': 'Naar geteste rondvaarten',
+        'sheet_dinner': 'Naar geteste dinervaarten',
+        'verified': 'Zelf getest'
+    },
+    'pt': {
+        'btn_book': 'Reservar agora →',
+        'read_review': 'Ler avaliação ↓',
+        'per_adult': 'por adulto',
+        'trust_qr': 'Bilhete digital no telemóvel',
+        'trust_cancel': 'Cancelamento gratuito até 24h',
+        'all_river': 'Todos os 10 cruzeiros no Danúbio',
+        'all_dinner': 'Todos os 7 cruzeiros com jantar',
+        'top': 'Topo',
+        'pick': 'ESCOLHA',
+        'sheet_river': 'Ir para os cruzeiros testados',
+        'sheet_dinner': 'Ir para cruzeiros com jantar',
+        'verified': 'Testado pessoalmente'
+    },
+    'hr': {
+        'btn_book': 'Rezervirajte sada →',
+        'read_review': 'Pročitajte recenziju ↓',
+        'per_adult': 'po odrasloj osobi',
+        'trust_qr': 'Instant karta na mobitelu',
+        'trust_cancel': 'Besplatno otkazivanje do 24h',
+        'all_river': 'Svih 10 krstarenja Dunavom',
+        'all_dinner': 'Svih 7 krstarenja s večerom',
+        'top': 'Vrh',
+        'pick': 'IZBOR',
+        'sheet_river': 'Idi na testirana krstarenja',
+        'sheet_dinner': 'Idi na krstarenja s večerom',
+        'verified': 'Osobno provjereno'
+    },
+    'sr': {
+        'btn_book': 'Резервиши сада →',
+        'read_review': 'Прочитајте рецензију ↓',
+        'per_adult': 'по одраслој особи',
+        'trust_qr': 'Инстант карта на телефону',
+        'trust_cancel': 'Бесплатно отказивање до 24ч',
+        'all_river': 'Свих 10 крстарења Дунавом',
+        'all_dinner': 'Свих 7 крстарења са вечером',
+        'top': 'Врх',
+        'pick': 'ИЗБОР',
+        'sheet_river': 'Пређи на тестирана крстарења',
+        'sheet_dinner': 'Пређи на крстарења са вечером',
+        'verified': 'Лично проверено'
+    },
+    'bg': {
+        'btn_book': 'Резервирайте сега →',
+        'read_review': 'Прочетете отзива ↓',
+        'per_adult': 'за възрастен',
+        'trust_qr': 'Мобилен билет на момента',
+        'trust_cancel': 'Безплатно анулиране до 24ч',
+        'all_river': 'Всички 10 круиза по Дунав',
+        'all_dinner': 'Всички 7 круиза с вечеря',
+        'top': 'Нагоре',
+        'pick': 'ИЗБОР',
+        'sheet_river': 'Към тестваните круизи',
+        'sheet_dinner': 'Към тестваните круизи с вечеря',
+        'verified': 'Лично тествано'
+    },
+    'ru': {
+        'btn_book': 'Забронировать сейчас →',
+        'read_review': 'Читать обзор ↓',
+        'per_adult': 'за взрослого',
+        'trust_qr': 'Электронный билет на телефон',
+        'trust_cancel': 'Бесплатная отмена за 24 ч.',
+        'all_river': 'Все 10 прогулок по Дунаю',
+        'all_dinner': 'Все 7 круизов с ужином',
+        'top': 'Наверх',
+        'pick': 'ВЫБОР',
+        'sheet_river': 'К проверенным круизам',
+        'sheet_dinner': 'К проверенным круизам с ужином',
+        'verified': 'Проверено лично'
+    },
+    'uk': {
+        'btn_book': 'Забронювати зараз →',
+        'read_review': 'Читати відгук ↓',
+        'per_adult': 'за дорослого',
+        'trust_qr': 'Квиток на смартфон',
+        'trust_cancel': 'Безкоштовне скасування за 24 год.',
+        'all_river': 'Усі 10 круїзів по Дунаю',
+        'all_dinner': 'Усі 7 круїзів з вечерею',
+        'top': 'Вгору',
+        'pick': 'ВИБІР',
+        'sheet_river': 'До перевірених круїзів',
+        'sheet_dinner': 'До перевірених круїзів з вечерею',
+        'verified': 'Перевірено особисто'
+    },
+    'el': {
+        'btn_book': 'Κράτηση τώρα →',
+        'read_review': 'Διαβάστε την αξιολόγηση ↓',
+        'per_adult': 'ανά ενήλικα',
+        'trust_qr': 'Άμεσο ψηφιακό εισιτήριο',
+        'trust_cancel': 'Δωρεάν ακύρωση έως 24 ώρες',
+        'all_river': 'Και οι 10 κρουαζιέρες στον Δούναβη',
+        'all_dinner': 'Και οι 7 κρουαζιέρες με δείπνο',
+        'top': 'Κορυφή',
+        'pick': 'ΕΠΙΛΟΓΗ',
+        'sheet_river': 'Μετάβαση στις κρουαζιέρες',
+        'sheet_dinner': 'Μετάβαση στις κρουαζιέρες με δείπνο',
+        'verified': 'Δοκιμασμένο προσωπικά'
+    },
+    'tr': {
+        'btn_book': 'Şimdi Rezervasyon Yapın →',
+        'read_review': 'İncelemeyi Oku ↓',
+        'per_adult': 'yetişkin başına',
+        'trust_qr': 'Anında mobil bilet',
+        'trust_cancel': '24 saate kadar ücretsiz iptal',
+        'all_river': 'Tüm 10 Tuna Gezisi',
+        'all_dinner': 'Tüm 7 Yemekli Tuna Turu',
+        'top': 'Yukarı',
+        'pick': 'SEÇİM',
+        'sheet_river': 'Test edilen turlara git',
+        'sheet_dinner': 'Test edilen akşam yemekli turlara git',
+        'verified': 'Bizzat test edildi'
+    },
+    'he': {
+        'btn_book': 'הזמן עכשיו ←',
+        'read_review': 'קרא ביקורת מלאה ↓',
+        'per_adult': 'למבוגר',
+        'trust_qr': 'כרטיס דיגיטלי מיידי',
+        'trust_cancel': 'ביטול חינם עד 24 שעות',
+        'all_river': 'כל 10 ההפלגות בדנובה',
+        'all_dinner': 'כל 7 הפלגות הערב עם ארוחה',
+        'top': 'למעלה',
+        'pick': 'בחירה',
+        'sheet_river': 'עבור להפלגות שנבדקו',
+        'sheet_dinner': 'עבור להפלגות ערב שנבדקו',
+        'verified': 'נבדק אישית'
+    },
+    'ja': {
+        'btn_book': '今すぐ予約する →',
+        'read_review': '詳細レビューを読む ↓',
+        'per_adult': '大人1名',
+        'trust_qr': '即時スマホQRバウチャー',
+        'trust_cancel': '24時間前までキャンセル無料',
+        'all_river': '全10のドナウ川クルーズ',
+        'all_dinner': '全7のディナークルーズ',
+        'top': 'トップへ',
+        'pick': 'おすすめ',
+        'sheet_river': '実走テスト済みクルーズ一覧',
+        'sheet_dinner': '実走テスト済みディナークルーズ一覧',
+        'verified': '現地で実走テスト済み'
+    },
+    'ko': {
+        'btn_book': '지금 예약하기 →',
+        'read_review': '상세 리뷰 보기 ↓',
+        'per_adult': '성인 1인',
+        'trust_qr': '스마트폰 즉시 QR 바우처',
+        'trust_cancel': '24시간 전까지 무료 취소',
+        'all_river': '다뉴브 유람선 10개 전체보기',
+        'all_dinner': '디너 크루즈 7개 전체보기',
+        'top': '맨 위로',
+        'pick': '추천',
+        'sheet_river': '검증된 다뉴브 크루즈 바로가기',
+        'sheet_dinner': '검증된 디너 크루즈 바로가기',
+        'verified': '직접 현장 검증'
+    }
 }
 
-def get_ui(lang, key, default):
+def get_ui(lang, key, default=''):
     return COMMON_UI.get(lang, {}).get(key, default)
+
+def localize_guide_page_ui(soup, lang, cruise_type, total_count):
+    btn_book_text = get_ui(lang, 'btn_book', 'Book Now →')
+    read_review_text = get_ui(lang, 'read_review', 'Read Review ↓')
+    per_adult_text = get_ui(lang, 'per_adult', '/ adult')
+    trust_qr_text = get_ui(lang, 'trust_qr', 'Instant Smartphone Ticket')
+    trust_cancel_text = get_ui(lang, 'trust_cancel', 'Free 24h Cancel')
+    all_cruises_text = get_ui(lang, 'all_river' if cruise_type == 'river' else 'all_dinner', f'All {total_count} Cruises')
+    top_text = get_ui(lang, 'top', 'Top')
+    pick_word = get_ui(lang, 'pick', 'PICK')
+    sheet_title_text = get_ui(lang, 'sheet_river' if cruise_type == 'river' else 'sheet_dinner', 'Tested Budapest Cruises')
+    verified_text = get_ui(lang, 'verified', 'Personally Tested')
+
+    # 1. Deck Cards
+    for card in soup.find_all(class_='bpa-card'):
+        btn = card.find(class_='bpa-btn')
+        if btn: btn.string = btn_book_text
+        
+        psub = card.find(class_='bpa-psub')
+        if psub: psub.string = per_adult_text
+        
+        sublink = card.find(class_='bpa-sublink') or card.find(class_='bpa-jump-link')
+        if sublink: sublink.string = read_review_text
+        
+        vchip = card.find(class_='bpa-vchip')
+        if vchip: vchip.string = f"✓ {verified_text}"
+        
+        trust = card.find(class_='bpa-trust-micro')
+        if trust:
+            spans = trust.find_all('span')
+            if len(spans) >= 3:
+                spans[0].string = trust_qr_text
+                spans[2].string = trust_cancel_text
+
+    # 2. Details Card Buy Cards
+    for cta in soup.find_all(class_='ltt-buy-cta-btn'):
+        cta.string = btn_book_text
+
+    # 3. Mobile Drawer
+    drawer = soup.find(class_='bpa-mobile-drawer')
+    if drawer:
+        d_btn = drawer.find(class_='bpa-drawer-btn')
+        if d_btn: d_btn.string = btn_book_text
+
+    # 4. Floating Bar
+    bar = soup.find(id='sticky-bar')
+    if bar:
+        toc_btn = bar.find(id='hybridTocBtn')
+        if toc_btn:
+            span = toc_btn.find('span')
+            if span: span.string = all_cruises_text
+            
+        top_btn = bar.find(class_='hybrid-top-btn')
+        if top_btn:
+            span = top_btn.find('span')
+            if span: span.string = top_text
+            
+        s_rank = bar.find(id='sticky-rank')
+        if s_rank: s_rank.string = f"#1 {pick_word}"
+        
+        s_trust = bar.find(class_='hybrid-active-trust')
+        if s_trust: s_trust.string = trust_cancel_text
+        
+        s_btn = bar.find(id='sticky-cta-btn')
+        if s_btn: s_btn.string = btn_book_text
+
+    sheet = soup.find(id='hybridSheet')
+    if sheet:
+        stitle = sheet.find(class_='hybrid-sheet-title')
+        if stitle: stitle.string = sheet_title_text
+
+    # 5. window.LTT_PAGE_CONFIG
+    for s in soup.find_all('script'):
+        if s.string and 'window.LTT_PAGE_CONFIG' in s.string:
+            s_content = s.string
+            match = re.search(r'window\.LTT_PAGE_CONFIG\s*=\s*(\{.*?\});', s_content)
+            if match:
+                try:
+                    cfg_obj = json.loads(match.group(1))
+                    cfg_obj['pickLabel'] = pick_word
+                    cfg_obj['btnText'] = btn_book_text
+                    s.string = f"window.LTT_PAGE_CONFIG = {json.dumps(cfg_obj, ensure_ascii=False)};"
+                except Exception:
+                    pass
+            break
 
 def extract_meta_and_headings(harvested_path):
     if not os.path.exists(harvested_path):
@@ -220,11 +589,8 @@ def compile_pages():
             if h1:
                 h1.string = river_data['h1']
                 
-        # Localize CTAs
-        btn_check_text = get_ui(lang, 'btn_check', 'Check Availability →')
-        for btn in soup_river.find_all(class_='bpa-btn'):
-            if 'Check Availability' in btn.text or '→' in btn.text:
-                btn.string = btn_check_text
+        # Localize CTAs and Floating Bar
+        localize_guide_page_ui(soup_river, lang, 'river', 10)
                 
         # Localize nav & footer
         localize_nav_and_footer_multilingual(soup_river, lang, slugs)
@@ -258,9 +624,8 @@ def compile_pages():
             if h1:
                 h1.string = dinner_data['h1']
                 
-        for btn in soup_dinner.find_all(class_='bpa-btn'):
-            if 'Check Availability' in btn.text or '→' in btn.text:
-                btn.string = btn_check_text
+        # Localize CTAs and Floating Bar
+        localize_guide_page_ui(soup_dinner, lang, 'dinner', 7)
                 
         # Localize nav & footer
         localize_nav_and_footer_multilingual(soup_dinner, lang, slugs)
