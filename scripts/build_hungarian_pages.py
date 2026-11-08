@@ -697,12 +697,12 @@ def build_hungarian_home():
         },
         {
             'tag': '🥂 KORLÁTLAN PROSECCO',
-            'kicker': 'KORLÁTLAN ITALFOGYASZTÁS • PROSECCO & SÖR',
-            'title': '4 Legjobb Korlátlan Prosecco Hajóút Budapesten',
-            'excerpt': "Kitöltési gyakoriság, italminőség és hangulat összehasonlítása a nyugodt naplementés városnézéstől a lendületes hétvégi bulihajókig.",
-            'price': '€22 / fő-től',
+            'kicker': 'KORLÁTLAN ITALOK • 4 HAJÓ TESZTELVE',
+            'title': 'Prosecco Hajó Budapest: A 4 Legjobb Korlátlan Italos Sétahajó',
+            'excerpt': "Kitöltési sebesség, itallimit és hangulat összehasonlítása: laza naplementés pezsgőzés, Aperol Spritz és éjszakai bulihajók őszinte tesztje.",
+            'price': '9 900 Ft / fő-től (€24)',
             'btn': 'Kalauz Elolvasása →',
-            'href': '/unlimited-prosecco-cruises-budapest'
+            'href': '/hu/korlátlan-prosecco-hajóutazások-budapest'
         },
         {
             'tag': '♨️ TÖRTÉNELMI FÜRDŐK',
