@@ -121,12 +121,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta content="DqJK5c3gLkpefB7jfbsh" name="linguana-site-verification"/>
 <script data-cfasync="false" data-noptimize="1" data-wpfc-render="false">
-  (function () {
-      var script = document.createElement("script");
-      script.async = 1;
-      script.src = 'https://emrld.cc/MjA0NDQy.js?t=204442';
-      document.head.appendChild(script);
-    })();
+window.addEventListener('load', function() {
+  function loadEmerald() {
+    if (window._emLoaded) return;
+    window._emLoaded = true;
+    var script = document.createElement('script');
+    script.async = 1;
+    script.src = 'https://emrld.cc/MjA0NDQy.js?t=204442';
+    document.head.appendChild(script);
+  }
+  ['scroll', 'touchstart', 'mousemove'].forEach(function(evt) {
+    window.addEventListener(evt, loadEmerald, { once: true, passive: true });
+  });
+  setTimeout(loadEmerald, 6000);
+});
 </script>
 <!-- Google tag (gtag.js) event - delayed navigation helper -->
 <script>
@@ -540,8 +548,8 @@ header.ltt-navbar .ltt-dropdown-menu {
 .main-buy-button {
   opacity: 1 !important;
 }
-</style><link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+</style>
+
 <style id="bpa-luxury-editorial-system">
 /* ==========================================================================
    1. HERO H1 CENTERING & CREDIBILITY STAT STRIP
@@ -1650,8 +1658,8 @@ header.ltt-navbar .ltt-dropdown-menu {
   padding: 28px 30px !important;
   margin: 28px 0 !important;
 }
-</style><link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+</style>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><style id="bpa-5-pillar-master-css">
 :root {
   --slate-900: #0f172a;
@@ -4428,12 +4436,28 @@ document.addEventListener("DOMContentLoaded", () => {
   var tocBreakdownLabel = cfg.tocBreakdownLabel || 'Detailed Breakdown';
   var shortTitles = cfg.shortTitles || [];
 
-  // 1. Slider controls
+  // 1. Slider controls with Progressive Lazy-Loading
+  function loadSliderImages(slider) {
+    if (!slider || slider._loaded) return;
+    slider._loaded = true;
+    var lazyImgs = slider.querySelectorAll('img[data-src]');
+    for (var i = 0; i < lazyImgs.length; i++) {
+      var img = lazyImgs[i];
+      if (img.getAttribute('data-srcset')) {
+        img.setAttribute('srcset', img.getAttribute('data-srcset'));
+        img.removeAttribute('data-srcset');
+      }
+      img.src = img.getAttribute('data-src');
+      img.removeAttribute('data-src');
+    }
+  }
+
   window.bpaSlide = function(btn, dir) {
     var media = btn.closest('.bpa-media');
     if (!media) return;
     var slider = media.querySelector('.bpa-slider');
     if (!slider) return;
+    loadSliderImages(slider);
     var w = slider.clientWidth;
     slider.scrollBy({ left: dir * w, behavior: 'smooth' });
   };

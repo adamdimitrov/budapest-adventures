@@ -18,12 +18,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta content="DqJK5c3gLkpefB7jfbsh" name="linguana-site-verification"/>
 <script data-cfasync="false" data-noptimize="1" data-wpfc-render="false">
-  (function () {
-      var script = document.createElement("script");
-      script.async = 1;
-      script.src = 'https://emrld.cc/MjA0NDQy.js?t=204442';
-      document.head.appendChild(script);
-    })();
+window.addEventListener('load', function() {
+  function loadEmerald() {
+    if (window._emLoaded) return;
+    window._emLoaded = true;
+    var script = document.createElement('script');
+    script.async = 1;
+    script.src = 'https://emrld.cc/MjA0NDQy.js?t=204442';
+    document.head.appendChild(script);
+  }
+  ['scroll', 'touchstart', 'mousemove'].forEach(function(evt) {
+    window.addEventListener(evt, loadEmerald, { once: true, passive: true });
+  });
+  setTimeout(loadEmerald, 6000);
+});
 </script>
 <!-- Google tag (gtag.js) event - delayed navigation helper -->
 <script>
@@ -82,8 +90,8 @@ header.ltt-navbar .ltt-dropdown-menu {
 .main-buy-button {
   opacity: 1 !important;
 }
-</style><link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+</style>
+
 <style id="bpa-luxury-editorial-system">
 /* ==========================================================================
    1. HERO H1 CENTERING & CREDIBILITY STAT STRIP
@@ -1192,8 +1200,8 @@ header.ltt-navbar .ltt-dropdown-menu {
   padding: 28px 30px !important;
   margin: 28px 0 !important;
 }
-</style><link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+</style>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><style id="bpa-5-pillar-master-css">
 :root {
   --slate-900: #0f172a;
@@ -2229,7 +2237,7 @@ html, body {
   }
 }
 </style>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
+
 <link href="/assets/cdn/67d02edca7795b0f57073b59/css/luxurytraveltester.webflow.shared.7843214d4.min.css" rel="stylesheet" type="text/css"/><meta content="https://www.budapestadventures.com/best-hostels-budapest" property="og:url"/><link href="/favicon.ico" rel="icon" type="image/x-icon"/>
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 <link href="/assets/apple-touch-icon.png" rel="apple-touch-icon"/><style id="ltt-nav-styles">
@@ -7575,11 +7583,11 @@ footer.ltt-footer .legal-text {
 <span class="bpa-pill">1 / 6</span>
 <div class="bpa-slider" onscroll="bpaCount(this)">
 <img alt="Maverick Urban Lodge" fetchpriority="high" loading="eager" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64a94406fe5dca443dcfeee5_03-maverick-urban-lodge-roof-terrace-area.webp"/>
-<img alt="Maverick Urban Lodge" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/303065/jajpcp0iarhgotku9pek.jpg"/>
-<img alt="Maverick Urban Lodge" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/303065/adgmw6kdre8ehk1xecia.jpg"/>
-<img alt="Maverick Urban Lodge" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/303065/kglzzl1rsq27inv6vsw6.jpg"/>
-<img alt="Maverick Urban Lodge" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/303065/r6ogrlsuvgkk2e0rpimf.jpg"/>
-<img alt="Maverick Urban Lodge" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/303065/aagscmijnsl5srgbkibq.jpg"/>
+<img alt="Maverick Urban Lodge" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/303065/jajpcp0iarhgotku9pek.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Maverick Urban Lodge" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/303065/adgmw6kdre8ehk1xecia.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Maverick Urban Lodge" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/303065/kglzzl1rsq27inv6vsw6.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Maverick Urban Lodge" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/303065/r6ogrlsuvgkk2e0rpimf.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Maverick Urban Lodge" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/303065/aagscmijnsl5srgbkibq.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
 </div>
 </div>
 <div class="bpa-info">
@@ -7625,11 +7633,11 @@ footer.ltt-footer .legal-text {
 <span class="bpa-pill">1 / 6</span>
 <div class="bpa-slider" onscroll="bpaCount(this)">
 <img alt="Hostel One" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/88908/lkb1ylhe0ecjo8mahhnf.jpg"/>
-<img alt="Hostel One" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/88908/mk9toprzlc75ikh5mqvb.jpg"/>
-<img alt="Hostel One" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/88908/65.jpg"/>
-<img alt="Hostel One" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/88908/lc3gvck7ngd0xhouurdn.jpg"/>
-<img alt="Hostel One" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/88908/glinzqeul2id2ofzohrq.jpg"/>
-<img alt="Hostel One" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/88908/kc0obaauloeedt6xifgv.jpg"/>
+<img alt="Hostel One" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/88908/mk9toprzlc75ikh5mqvb.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Hostel One" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/88908/65.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Hostel One" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/88908/lc3gvck7ngd0xhouurdn.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Hostel One" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/88908/glinzqeul2id2ofzohrq.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Hostel One" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/88908/kc0obaauloeedt6xifgv.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
 </div>
 </div>
 <div class="bpa-info">
@@ -7675,11 +7683,11 @@ footer.ltt-footer .legal-text {
 <span class="bpa-pill">1 / 6</span>
 <div class="bpa-slider" onscroll="bpaCount(this)">
 <img alt="Avenue Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/87612/45.jpg"/>
-<img alt="Avenue Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/87612/uzy6hfogsgeehji9iyb1.jpg"/>
-<img alt="Avenue Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/87612/23.jpg"/>
-<img alt="Avenue Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/87612/34.jpg"/>
-<img alt="Avenue Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/87612/40.jpg"/>
-<img alt="Avenue Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/87612/30.jpg"/>
+<img alt="Avenue Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/87612/uzy6hfogsgeehji9iyb1.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Avenue Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/87612/23.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Avenue Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/87612/34.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Avenue Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/87612/40.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Avenue Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/8/87612/30.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
 </div>
 </div>
 <div class="bpa-info">
@@ -7725,11 +7733,11 @@ footer.ltt-footer .legal-text {
 <span class="bpa-pill">1 / 6</span>
 <div class="bpa-slider" onscroll="bpaCount(this)">
 <img alt="Flow Spaces" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/271723/67.jpg"/>
-<img alt="Flow Spaces" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/271723/62.jpg"/>
-<img alt="Flow Spaces" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/271723/70.jpg"/>
-<img alt="Flow Spaces" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/271723/qst66s98u7czhgxm8vby.jpg"/>
-<img alt="Flow Spaces" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/271723/57.jpg"/>
-<img alt="Flow Spaces" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/271723/72.jpg"/>
+<img alt="Flow Spaces" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/271723/62.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Flow Spaces" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/271723/70.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Flow Spaces" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/271723/qst66s98u7czhgxm8vby.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Flow Spaces" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/271723/57.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Flow Spaces" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/271723/72.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
 </div>
 </div>
 <div class="bpa-info">
@@ -7775,11 +7783,11 @@ footer.ltt-footer .legal-text {
 <span class="bpa-pill">1 / 6</span>
 <div class="bpa-slider" onscroll="bpaCount(this)">
 <img alt="A&amp;O Budapest City Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/308080/xmzna6gknwte2h9ncikh.jpg"/>
-<img alt="A&amp;O Budapest City Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/308080/z5inwtjwicbfg2bpbdgu.jpg"/>
-<img alt="A&amp;O Budapest City Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/308080/qqzhf9ok9eebmsdtqx4o.jpg"/>
-<img alt="A&amp;O Budapest City Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/308080/k78iinlbxeqzdzc6ncvx.jpg"/>
-<img alt="A&amp;O Budapest City Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/308080/r4bu4jbyrz0mrlppwjd0.jpg"/>
-<img alt="A&amp;O Budapest City Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/308080/r8iqng39f2l3a712xpya.jpg"/>
+<img alt="A&amp;O Budapest City Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/308080/z5inwtjwicbfg2bpbdgu.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="A&amp;O Budapest City Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/308080/qqzhf9ok9eebmsdtqx4o.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="A&amp;O Budapest City Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/308080/k78iinlbxeqzdzc6ncvx.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="A&amp;O Budapest City Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/308080/r4bu4jbyrz0mrlppwjd0.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="A&amp;O Budapest City Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/308080/r8iqng39f2l3a712xpya.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
 </div>
 </div>
 <div class="bpa-info">
@@ -7825,11 +7833,11 @@ footer.ltt-footer .legal-text {
 <span class="bpa-pill">1 / 6</span>
 <div class="bpa-slider" onscroll="bpaCount(this)">
 <img alt="Wombat's City Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/5/56291/opggtya9mk4p7fnt1jfy.jpg"/>
-<img alt="Wombat's City Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/5/56291/wuk3oo0auvlzqnbazafu.jpg"/>
-<img alt="Wombat's City Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/5/56291/qciwklzskhs7hxhkfhks.jpg"/>
-<img alt="Wombat's City Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/5/56291/mgl2xgye5boxzlujbjmv.jpg"/>
-<img alt="Wombat's City Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/5/56291/kywc0tvvox49vm3eavge.jpg"/>
-<img alt="Wombat's City Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/5/56291/fqx6zgbld9wvoedlr9je.jpg"/>
+<img alt="Wombat's City Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/5/56291/wuk3oo0auvlzqnbazafu.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Wombat's City Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/5/56291/qciwklzskhs7hxhkfhks.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Wombat's City Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/5/56291/mgl2xgye5boxzlujbjmv.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Wombat's City Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/5/56291/kywc0tvvox49vm3eavge.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Wombat's City Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/5/56291/fqx6zgbld9wvoedlr9je.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
 </div>
 </div>
 <div class="bpa-info">
@@ -7875,11 +7883,11 @@ footer.ltt-footer .legal-text {
 <span class="bpa-pill">1 / 6</span>
 <div class="bpa-slider" onscroll="bpaCount(this)">
 <img alt="Zen Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/301885/zgdk98loqqlaoor0kvsy.jpg"/>
-<img alt="Zen Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/301885/mghxkygu3wf7xhwohl4i.jpg"/>
-<img alt="Zen Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/301885/tku5e4rl953qqwjwiptu.jpg"/>
-<img alt="Zen Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/301885/yoqwr2yyrxfwbbgyqfro.jpg"/>
-<img alt="Zen Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/301885/fwbhoiswtlhrsy3hdexr.jpg"/>
-<img alt="Zen Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/301885/j3bjris04zxa9fjklbes.jpg"/>
+<img alt="Zen Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/301885/mghxkygu3wf7xhwohl4i.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Zen Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/301885/tku5e4rl953qqwjwiptu.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Zen Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/301885/yoqwr2yyrxfwbbgyqfro.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Zen Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/301885/fwbhoiswtlhrsy3hdexr.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Zen Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/3/301885/j3bjris04zxa9fjklbes.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
 </div>
 </div>
 <div class="bpa-info">
@@ -7925,11 +7933,11 @@ footer.ltt-footer .legal-text {
 <span class="bpa-pill">1 / 6</span>
 <div class="bpa-slider" onscroll="bpaCount(this)">
 <img alt="Adagio Hostel 2.0 Basilica" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/7/72829/whd16ppcafg5one9poyl.jpg"/>
-<img alt="Adagio Hostel 2.0 Basilica" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/7/72829/113.jpg"/>
-<img alt="Adagio Hostel 2.0 Basilica" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/7/72829/xnbjwptjerfbzdequ8dg.jpg"/>
-<img alt="Adagio Hostel 2.0 Basilica" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/7/72829/afphaqext2njdtmhnels.jpg"/>
-<img alt="Adagio Hostel 2.0 Basilica" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/7/72829/gbqrgovdzpgrypajbqdr.jpg"/>
-<img alt="Adagio Hostel 2.0 Basilica" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/7/72829/howozmyd6pprjmm6xeng.jpg"/>
+<img alt="Adagio Hostel 2.0 Basilica" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/7/72829/113.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Adagio Hostel 2.0 Basilica" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/7/72829/xnbjwptjerfbzdequ8dg.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Adagio Hostel 2.0 Basilica" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/7/72829/afphaqext2njdtmhnels.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Adagio Hostel 2.0 Basilica" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/7/72829/gbqrgovdzpgrypajbqdr.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Adagio Hostel 2.0 Basilica" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/7/72829/howozmyd6pprjmm6xeng.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
 </div>
 </div>
 <div class="bpa-info">
@@ -7975,11 +7983,11 @@ footer.ltt-footer .legal-text {
 <span class="bpa-pill">1 / 6</span>
 <div class="bpa-slider" onscroll="bpaCount(this)">
 <img alt="Das Nest Budapest" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/4/47301/dgbeimv9mci07nqdk23g.jpg"/>
-<img alt="Das Nest Budapest" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/4/47301/ncj9to9kthpadumrbui2.jpg"/>
-<img alt="Das Nest Budapest" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/4/47301/khwlrm4hxiqd2ccjwxsn.jpg"/>
-<img alt="Das Nest Budapest" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/4/47301/j70j1mmvcdbjdibsvcwe.jpg"/>
-<img alt="Das Nest Budapest" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/4/47301/qbsfnblphjzb0utjfvux.jpg"/>
-<img alt="Das Nest Budapest" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/4/47301/bk6izaoimnbc5w1w59n8.jpg"/>
+<img alt="Das Nest Budapest" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/4/47301/ncj9to9kthpadumrbui2.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Das Nest Budapest" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/4/47301/khwlrm4hxiqd2ccjwxsn.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Das Nest Budapest" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/4/47301/j70j1mmvcdbjdibsvcwe.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Das Nest Budapest" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/4/47301/qbsfnblphjzb0utjfvux.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Das Nest Budapest" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/4/47301/bk6izaoimnbc5w1w59n8.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
 </div>
 </div>
 <div class="bpa-info">
@@ -8025,11 +8033,11 @@ footer.ltt-footer .legal-text {
 <span class="bpa-pill">1 / 6</span>
 <div class="bpa-slider" onscroll="bpaCount(this)">
 <img alt="Carpe Noctem Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/24308/1.jpg"/>
-<img alt="Carpe Noctem Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/24308/3.jpg"/>
-<img alt="Carpe Noctem Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/24308/4.jpg"/>
-<img alt="Carpe Noctem Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/24308/5.jpg"/>
-<img alt="Carpe Noctem Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/24308/9.jpg"/>
-<img alt="Carpe Noctem Hostel" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/24308/12.jpg"/>
+<img alt="Carpe Noctem Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/24308/3.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Carpe Noctem Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/24308/4.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Carpe Noctem Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/24308/5.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Carpe Noctem Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/24308/9.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
+<img alt="Carpe Noctem Hostel" data-src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1000/v1/propertyimages/2/24308/12.jpg" decoding="async" loading="lazy" sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"/>
 </div>
 </div>
 <div class="bpa-info">
@@ -17443,12 +17451,28 @@ window.LTT_PAGE_CONFIG = {"deckId": "budapest-hostels-deck", "tocDeckLabel": "To
   var tocBreakdownLabel = cfg.tocBreakdownLabel || 'Detailed Breakdown';
   var shortTitles = cfg.shortTitles || [];
 
-  // 1. Slider controls
+  // 1. Slider controls with Progressive Lazy-Loading
+  function loadSliderImages(slider) {
+    if (!slider || slider._loaded) return;
+    slider._loaded = true;
+    var lazyImgs = slider.querySelectorAll('img[data-src]');
+    for (var i = 0; i < lazyImgs.length; i++) {
+      var img = lazyImgs[i];
+      if (img.getAttribute('data-srcset')) {
+        img.setAttribute('srcset', img.getAttribute('data-srcset'));
+        img.removeAttribute('data-srcset');
+      }
+      img.src = img.getAttribute('data-src');
+      img.removeAttribute('data-src');
+    }
+  }
+
   window.bpaSlide = function(btn, dir) {
     var media = btn.closest('.bpa-media');
     if (!media) return;
     var slider = media.querySelector('.bpa-slider');
     if (!slider) return;
+    loadSliderImages(slider);
     var w = slider.clientWidth;
     slider.scrollBy({ left: dir * w, behavior: 'smooth' });
   };
@@ -18175,4 +18199,60 @@ window.LTT_PAGE_CONFIG = {"deckId": "budapest-hostels-deck", "tocDeckLabel": "To
   } catch(e) {}
 
 })();
-</script></body></html>
+</script><script id="bpa-slider-perf-runtime">
+(function() {
+  function loadSliderImages(slider) {
+    if (!slider || slider._loaded) return;
+    slider._loaded = true;
+    var lazyImgs = slider.querySelectorAll('img[data-src]');
+    for (var i = 0; i < lazyImgs.length; i++) {
+      var img = lazyImgs[i];
+      if (img.getAttribute('data-srcset')) {
+        img.setAttribute('srcset', img.getAttribute('data-srcset'));
+        img.removeAttribute('data-srcset');
+      }
+      img.src = img.getAttribute('data-src');
+      img.removeAttribute('data-src');
+    }
+  }
+  window._loadSliderImages = loadSliderImages;
+
+  document.addEventListener('click', function(e) {
+    var btn = e.target && e.target.closest && e.target.closest('.bpa-prev, .bpa-next, [onclick*="bpaSlide"]');
+    if (btn) {
+      var media = (btn.closest && btn.closest('.bpa-media, .bpa-slider-wrap, .bpa-gallery')) || btn.parentElement;
+      var slider = media ? media.querySelector('.bpa-slider') : null;
+      if (slider) loadSliderImages(slider);
+    }
+  }, true);
+
+  document.addEventListener('pointerenter', function(e) {
+    var target = e.target;
+    if (target && target.closest) {
+      var media = target.closest('.bpa-media, .bpa-slider');
+      if (media) {
+        var slider = media.classList.contains('bpa-slider') ? media : media.querySelector('.bpa-slider');
+        if (slider) loadSliderImages(slider);
+      }
+    }
+  }, true);
+
+  document.addEventListener('touchstart', function(e) {
+    var target = e.target;
+    if (target && target.closest) {
+      var media = target.closest('.bpa-media, .bpa-slider');
+      if (media) {
+        var slider = media.classList.contains('bpa-slider') ? media : media.querySelector('.bpa-slider');
+        if (slider) loadSliderImages(slider);
+      }
+    }
+  }, { passive: true, capture: true });
+
+  document.addEventListener('scroll', function(e) {
+    if (e.target && e.target.classList && e.target.classList.contains('bpa-slider')) {
+      loadSliderImages(e.target);
+    }
+  }, { passive: true, capture: true });
+})();
+</script>
+</body></html>
