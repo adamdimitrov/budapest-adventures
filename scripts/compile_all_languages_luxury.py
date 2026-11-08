@@ -654,11 +654,11 @@ def compile_dinner_guide(lang, en_html):
                     btxt = btitle.text.strip()
                     if 'Summary & Review' in btxt or 'Összegzés' in btxt or 'Summary' in btxt:
                         btitle.string = ui.get('bento_sum', '🏆 Summary & Review')
-                    elif 'Before the Cruise' in btxt or 'Pier' in btxt or 'Kikötő' in btxt:
+                    elif 'Before the Cruise' in btxt or 'Pier' in btxt or 'Kikötő' in btxt or 'Departure Pier' in btxt:
                         btitle.string = ui.get('bento_pier', '📍 Pier, Boarding & Map')
                     elif 'During the Cruise' in btxt or 'Ship' in btxt or 'Hajó' in btxt:
                         btitle.string = ui.get('bento_ship', '🛳️ The Ship & Deck')
-                    elif 'Menu' in btxt or 'Food' in btxt or 'Gastronomy' in btxt or 'Menü' in btxt:
+                    elif 'Menu' in btxt or 'Food' in btxt or 'Gastronomy' in btxt or 'Menü' in btxt or 'Buffet' in btxt or 'Gourmet' in btxt:
                         btitle.string = ui.get('bento_dinner_food', '🍽️ Menu & Gastronomy')
                         
             # Populate Bento 0 with translated summary paragraphs
@@ -676,6 +676,21 @@ def compile_dinner_guide(lang, en_html):
                         p = soup.new_tag('p')
                         p.string = p_text
                         rich.append(p)
+
+            # Localize buy cards
+            for bc in dcard.find_all(class_='ltt-buy-card'):
+                b_btn = bc.find(class_='ltt-buy-cta-btn')
+                if b_btn:
+                    sp = b_btn.find('span')
+                    if sp: sp.string = ui.get('btn_check', 'Check Dates & Book Tickets')
+                    else: b_btn.string = ui.get('btn_check', 'Check Dates & Book Tickets')
+                b_title = bc.find(class_='ltt-buy-card-title')
+                if b_title:
+                    b_title.string = tdata['clean_title']
+                for perk in bc.find_all(class_='ltt-buy-perk'):
+                    ptxt = perk.get_text()
+                    if 'Instant' in ptxt:
+                        perk.string = ui.get('instant_qr', 'Instant Smartphone QR Voucher')
                         
     # Ensure ALL Legenda links have partner=38585
     for a in soup.find_all('a', href=True):

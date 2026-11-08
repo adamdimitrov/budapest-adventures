@@ -1991,22 +1991,72 @@ def build_hungarian_dinner():
             pill = head.find(class_='ltt-mini-pill')
             if pill:
                 ptxt = pill.text.strip()
-                if ptxt == 'Overview': pill.string = 'Áttekintés'
-                elif ptxt == 'Location Map': pill.string = 'Kikötőtérkép'
-                elif ptxt == 'Onboard Walkthrough': pill.string = 'Fedélzeti Séta'
-                elif ptxt == 'Audio & Operator': pill.string = 'Gasztronómia & Részletek'
+                if ptxt in ['Overview', 'Áttekintés']: pill.string = 'Áttekintés'
+                elif ptxt in ['Location Map', 'Dock & Transit', 'Kikötőtérkép']: pill.string = 'Kikötőtérkép'
+                elif ptxt in ['Onboard Walkthrough', 'Ship & Decks', 'Vessel & Vibe', 'Music & Atmosphere', 'Fedélzeti Séta']: pill.string = 'Hajó & Fedélzet'
+                elif ptxt in ['Audio & Operator', 'Food & Wine', 'Buffet & Wine', 'Courses & Wine', 'Gasztronómia & Részletek']: pill.string = 'Ételek & Borok'
                 
             btitle = head.find(class_='ltt-bento-group-title')
             if btitle:
                 btxt = btitle.text.strip()
                 if 'Summary & Review' in btxt or 'Összegzés' in btxt:
-                    btitle.string = "🏆 Összegzés és Értékelés"
-                elif 'Before the Cruise' in btxt or 'Kikötő' in btxt:
+                    btitle.string = "📝 Összegzés és Értékelés"
+                elif 'Before the Cruise' in btxt or 'Kikötő' in btxt or 'Departure Pier' in btxt or 'Pier' in btxt:
                     btitle.string = "📍 Kikötő, Beszállás és Térkép"
-                elif 'During the Cruise' in btxt or 'A Hajó és' in btxt:
+                elif 'During the Cruise' in btxt or 'A Hajó és' in btxt or 'Ship' in btxt:
                     btitle.string = "🛳️ A Hajó és Fedélzet"
-                elif 'Audio Guide Tested' in btxt or 'Gasztronómia' in btxt:
-                    btitle.string = "🍽️ Menü és Szolgáltatások"
+                elif 'Audio Guide Tested' in btxt or 'Gasztronómia' in btxt or 'Menu' in btxt or 'Buffet' in btxt or 'Food' in btxt or 'Gourmet' in btxt:
+                    btitle.string = "🍽️ Menü és Gasztronómia"
+
+        # Localize mini-heads and filmstrip pills
+        for mhead in dcard.find_all(class_='ltt-sec-mini-head'):
+            spans = mhead.find_all('span')
+            if spans:
+                htxt = spans[0].text
+                if 'Video Preview' in htxt:
+                    spans[0].string = f"🎬 Videóelőzetes: {cdata['title']}"
+                elif 'Menu, Food & Drinks' in htxt:
+                    spans[0].string = "📸 Fedélzeti Képgaléria: Menü, Ételek és Borok"
+                elif 'Vessel, Decks & Views' in htxt:
+                    spans[0].string = "📸 Fedélzeti Képgaléria: Hajó, Fedélzetek és Kilátás"
+            if len(spans) > 1:
+                ptxt = spans[1].text
+                if '15s First-Hand Reel' in ptxt:
+                    spans[1].string = "15 mp Helyszíni Videó"
+                elif 'Swipe' in ptxt:
+                    spans[1].string = ptxt.replace('Swipe', 'Lapozzon').replace('Food Photos', 'Étel- és Borfotóért').replace('Photos', 'Fedélzeti Fotóért')
+
+        # Localize 2-column spec card headings
+        hu_sp_titles = {
+            'Starters & Soups': 'Előételek és Levesek',
+            'Main Course Selection': 'Főétel Választék',
+            'Dessert & Finishes': 'Desszert és Zárás',
+            'Dietary & Wine Selection': 'Speciális Étrend és Borok',
+            'Main Courses & Carvery': 'Meleg Főételek és Húsok',
+            'Side Dishes & Salads': 'Köretek és Saláták',
+            'Authentic Hungarian Desserts': 'Hagyományos Magyar Desszertek',
+            'Unlimited Drinks Package': 'Korlátlan Italfogyasztás',
+            'Panoramic Decks': 'Panoráma és Fedélzetek',
+            'Table Arrangement': 'Asztalkiosztás és Ülésrend',
+            'Live Entertainment': 'Élő Zene és Műsor',
+            'Landmark Views': 'Dunai Panoráma és Látnivalók',
+            'Catamaran Decks': 'Katamarán Fedélzetek',
+            'Sliding Windows': 'Nyitható Panorámaablakok',
+            'Relaxed Atmosphere': 'Meghitt Hangulat',
+            'Folklore Operetta Stage': 'Folklór Operett Színpad',
+            'Costumes & Dancers': 'Népviselet és Táncosok',
+            'Acoustic Piano Battle': 'Akusztikus Zongorapárbaj',
+            'Vocal Accompaniment': 'Énekes Kíséret',
+            'Historic Paddle Steamer': 'Történelmi Lapátkerekes Gőzhajó',
+            'Live Gypsy Orchestra': 'Élő Cigányzenekar',
+            'Sightseeing Decks': 'Városnéző Fedélzetek',
+            'Acoustic Guitar Duo': 'Akusztikus Gitárduó',
+            'River Diva Vessel': 'River Diva Panorámahajó'
+        }
+        for sp in dcard.find_all(class_='ltt-sp-card'):
+            h4 = sp.find('h4')
+            if h4 and h4.text.strip() in hu_sp_titles:
+                h4.string = hu_sp_titles[h4.text.strip()]
 
         # Populate Bento 0 (Summary) with authentic Hungarian text
         if len(bento_groups) >= 1 and idx in DINNER_SUMMARIES:
