@@ -664,7 +664,7 @@ def build_hungarian_home():
             'kicker': 'BUDAPESTI DUNA • 10 HAJÓTÁRSASÁG TESZTELVE',
             'title': '10 Legjobb Dunai Sétahajózás Budapesten (2026-os Részletes Teszt)',
             'excerpt': "A Legenda City Cruises üvegpanorámás, 30 nyelvű audio guide-os hajóitól a hangulatos esti boutique sétahajókig. Részletes indulási kikötőtérkép a Vigadó térnél, italfogyasztási opciók és objektív összehasonlítás.",
-            'price': '€14-tól',
+            'price': '€14 / fő-től',
             'btn': 'Kalauz Elolvasása →',
             'href': '/hu/setahajozas-a-dunan-budapest'
         },
@@ -673,7 +673,7 @@ def build_hungarian_home():
             'kicker': 'ESTI GASZTRO • 7 HAJÓ TESZTELVE',
             'title': '7 Legjobb Dunai Vacsorahajó Budapesten (Személyesen Tesztelve)',
             'excerpt': "A Legenda 4 fogásos gyertyafényes lounge vacsorájától a Silverline élő zongorapárbajos és folklór operett műsoráig: ételek minősége, menüválaszték és a kivilágított Parlament panorámája.",
-            'price': '€65-tól',
+            'price': '€74 / fő-től',
             'btn': 'Kalauz Elolvasása →',
             'href': '/hu/setahajozas-a-dunan-vacsoraval'
         },
@@ -682,7 +682,7 @@ def build_hungarian_home():
             'kicker': 'KIVILÁGÍTOTT DUNA • 10 ÚTVONAL TESZTELVE',
             'title': 'A 10 Legjobb Esti és Éjszakai Sétahajózás Budapesten',
             'excerpt': "Naplementére és az esti díszkivilágításra időzítve. Fűtött panorámaszalonok és nyitott felső fedélzetek a Budai Vár és a Parlament akadálytalan éjszakai fotózásához.",
-            'price': '€16-tól',
+            'price': '€14 / fő-től',
             'btn': 'Kalauz Elolvasása →',
             'href': '/best-night-cruises-budapest'
         },
@@ -691,7 +691,7 @@ def build_hungarian_home():
             'kicker': 'VIP & CSOPORTOK • 5 PRIVÁT HAJÓ ÉRTÉKELVE',
             'title': '5 Legjobb Privát Hajótúra és Vízi Taxi Budapesten',
             'excerpt': "Autentikus velencei stílusú mahagóni vízi taxiktól a luxus privát jachtokig saját kapitánnyal, nyitott pezsgőbárral és egyéni beszállási lehetőségekkel.",
-            'price': '€180-tól',
+            'price': '€180 / hajó-tól',
             'btn': 'Kalauz Elolvasása →',
             'href': '/best-private-boat-tours-budapest'
         },
@@ -700,7 +700,7 @@ def build_hungarian_home():
             'kicker': 'KORLÁTLAN ITALFOGYASZTÁS • PROSECCO & SÖR',
             'title': '4 Legjobb Korlátlan Prosecco Hajóút Budapesten',
             'excerpt': "Kitöltési gyakoriság, italminőség és hangulat összehasonlítása a nyugodt naplementés városnézéstől a lendületes hétvégi bulihajókig.",
-            'price': '€28-tól',
+            'price': '€22 / fő-től',
             'btn': 'Kalauz Elolvasása →',
             'href': '/unlimited-prosecco-cruises-budapest'
         },
@@ -709,7 +709,7 @@ def build_hungarian_home():
             'kicker': 'BUDAPESTI FÜRDŐK • 8 TESZTELT TERMÁL',
             'title': '8 Legjobb Budapesti Termálfürdő (Értékelve & Rangsorolva)',
             'excerpt': "A Széchenyi, Gellért, Rudas tetőtéri panorámamedencéje és a Lukács összehasonlítása: látogatottsági csúcsok, öltözők és jegyárak.",
-            'price': '€28-tól',
+            'price': '€28 / belépő-től',
             'btn': 'Kalauz Elolvasása →',
             'href': '/thermal-baths-budapest'
         },
@@ -718,7 +718,7 @@ def build_hungarian_home():
             'kicker': 'VÁROSNÉZÉS • 6 TÚRA ÉRTÉKELVE',
             'title': '6 Legjobb Budapesti Gyalogos és Zsidó Negyed Gasztrotúra',
             'excerpt': "Romkocsma kulináris kóstolóktól a Várnegyed történelmi építészeti sétáiig engedéllyel rendelkező helyi idegenvezetőkkel.",
-            'price': '€25-tól',
+            'price': '€20 / fő-től',
             'btn': 'Kalauz Elolvasása →',
             'href': '/best-walking-tours-budapest'
         },
@@ -727,7 +727,7 @@ def build_hungarian_home():
             'kicker': 'INTERAKTÍV ESZKÖZ • 94 LÁTNIVALÓ AUDITÁLVA',
             'title': 'Budapest Kártya: Megéri? (2026-os Interaktív Kalkulátor)',
             'excerpt': "Számolja ki, hogy a hivatalos városkártyával valóban spórol-e. Hasonlítsa össze egyéni városnéző útitervét a hivatalos 2026-os múzeum- és fürdőárakkal.",
-            'price': 'Ingyenes',
+            'price': '€33-tól (24h–120h)',
             'btn': 'Kalkulátor Megnyitása →',
             'href': '/budapest-card-is-it-worth-it'
         },
@@ -736,7 +736,7 @@ def build_hungarian_home():
             'kicker': 'SZÁLLÁSBUDAPEST • 10 HOSTEL AUDITÁLVA',
             'title': '10 Legjobb Hostel Budapesten (Személyesen Tesztelve)',
             'excerpt': "A VII. kerületi pörgős party hostelektől a digitális nomádoknak és egyéni utazóknak szánt csendes boutique kapszulahotelekig.",
-            'price': '€15-tól',
+            'price': '€15 / éj-től',
             'btn': 'Kalauz Elolvasása →',
             'href': '/best-hostels-budapest'
         }
@@ -759,7 +759,7 @@ def build_hungarian_home():
         excerpt = card.find(class_='ltt-guide-excerpt')
         if excerpt: excerpt.string = cdata['excerpt']
         
-        price = card.find(class_='ltt-guide-price-val')
+        price = card.find(class_='ltt-guide-price') or card.find(class_='ltt-guide-price-val')
         if price: price.string = cdata['price']
         
         price_label = card.find(class_='ltt-guide-price-label')
@@ -1049,7 +1049,7 @@ RIVER_PROS_CONS = [
     # Card 5 (Silverline No-Frills)
     ([
         ("Központi 11-es Kikötői Beszállás", "Közvetlenül az Erzsébet híd pesti lábánál, lépésekre a Váci utcától és a 2-es villamostól."),
-        ("Alacsony Jegyár", "Minden felesleges extrát elhagyva a 60 perces városnéző jegy már €13–15 között elérhető."),
+        ("Alacsony Jegyár", "Minden felesleges extrát elhagyva a 60 perces városnéző jegy már €12–14 között elérhető."),
         ("Sűrű Menetrend", "Egész nap folyamatosan indul 11:00 és 22:00 között."),
         ("Tágas Kétszintes Hajó", "Nagy befogadóképességű katamarán nyitott felső kilátófedélzettel.")
     ], [
@@ -1299,63 +1299,63 @@ def build_hungarian_river():
             'kicker': 'Rubin Group • ⏱️ 75–85 perc • Margit híd kikötő',
             'title': 'Budapesti Éjszakai Hajóút Korlátlan Italfogyasztással (Prosecco, Sör, Bor)',
             'best_for': '🎯 Ideális választás: Baráti társaságok és bulizni vágyók, akik korlátlan italokra vágynak naplemente után.',
-            'price': '€28–32'
+            'price': '€25'
         },
         {
             'rank': '⚓ #3 Történelmi Gőzhajó',
             'kicker': 'Dunai Sétahajózási Kft. • ⏱️ 60 perc • 10-es kikötő (Erzsébet híd)',
             'title': 'Budapesti Városnéző Sétahajózás egy 19. Századi Autentikus Gőzhajón',
             'best_for': '🎯 Ideális választás: Történelemkedvelők és a vintage hajózás szerelmesei.',
-            'price': '€18'
+            'price': '€10–32'
         },
         {
             'rank': '💶 #4 Legjobb Ár-Érték',
             'kicker': 'Portum Lines • ⏱️ 60 perc • 0-s kikötő (Szent Gellért tér)',
             'title': 'Budapesti Városnéző Hajóút Üdvözlőitallal (Portum Lines)',
             'best_for': '🎯 Ideális választás: Pénztárcabarát utazók, akik minőségi üdvözlőitalt keresnek.',
-            'price': '€14–16'
+            'price': '€14'
         },
         {
             'rank': '💰 #5 Fapados Hajózás',
             'kicker': 'Silverline Cruises • ⏱️ 75 perc • 11-es kikötő (Petőfi tér)',
             'title': 'Sallangmentes Budapesti Folyami Hajóút (Silverline)',
             'best_for': '🎯 Ideális választás: Utazók, akik csak a dunai panorámát keresik extra költségek nélkül.',
-            'price': '€13–15'
+            'price': '€12–14'
         },
         {
             'rank': '🍸 #6 Koktélos Hajóút',
             'kicker': 'Silverline Cruises • ⏱️ 80 perc • 11-es kikötő (Petőfi tér)',
             'title': 'Budapesti Városnéző Hajóút Két Prémium Koktéllal',
             'best_for': '🎯 Ideális választás: Koktélkedvelők és párok egy hangulatos esti Duna-parti koccintásra.',
-            'price': '€25–29'
+            'price': '€32–37'
         },
         {
             'rank': '🍕 #7 Pizzás Hajózás',
             'kicker': 'Silverline Cruises • ⏱️ 75 perc • 11-es kikötő (Petőfi tér)',
             'title': 'Budapesti Folyami Hajóút Friss Pizzával és Üdvözlőitallal',
             'best_for': '🎯 Ideális választás: Családok és barátok egy laza vacsorára a Dunán.',
-            'price': '€34–38'
+            'price': '€35–39'
         },
         {
             'rank': '🎻 #8 Büfévacsora & Folklór',
             'kicker': 'Hungaria Koncert • ⏱️ 90 perc • Akadémia kikötő',
-            'title': 'Ingyenes Büfévacsorás Hajóút Népzenei és Táncműsorral',
+            'title': 'Svédasztalos Vacsorahajó Élő Népzenével és Táncműsorral',
             'best_for': '🎯 Ideális választás: A magyar néptánc, élő cigányzene és a hagyományos ízek kedvelői.',
-            'price': '€68–75'
+            'price': '€89'
         },
         {
             'rank': '🍷 #9 Bor & Kézműves Sör',
             'kicker': 'Hungaria Koncert • ⏱️ 90 perc • Akadémia kikötő',
             'title': 'Budapesti Éjszakai Hajóút Koktélokkal, Kézműves Sörrel vagy Borral',
             'best_for': '🎯 Ideális választás: Élő népzenei hangulat és minőségi magyar bor- és sörkóstolás.',
-            'price': '€34–38'
+            'price': '€21–65'
         },
         {
             'rank': '🏷️ #10 Legolcsóbb Nappali Hajó',
             'kicker': 'Duna Cruises • ⏱️ 60 perc • Vigadó tér kikötő',
             'title': 'Budapesti Városnéző Hajóút Üdvözlőitallal (Duna Cruises)',
             'best_for': '🎯 Ideális választás: A legalacsonyabb jegyárat kereső nappali városnézők.',
-            'price': '€11–14'
+            'price': '€12–18'
         }
     ]
     
@@ -1837,49 +1837,49 @@ def build_hungarian_dinner():
             'kicker': 'Legenda City Cruises • ⏱️ 150 perc • 7-es kikötő (Vigadó tér)',
             'title': '4 Fogásos Romantikus Gyertyafényes Hajós Vacsora Élő Lounge Zenével',
             'best_for': '🎯 Ideális választás: Párok, évfordulók és romantikus alkalmak, ahol a prémium gasztronómia és a nyugodt hangulat a cél.',
-            'price': '€98–110'
+            'price': '€110'
         },
         {
             'rank': '🍽️ #2 Vacsora Show Nélkül',
             'kicker': 'Silverline Cruises • ⏱️ 135 perc • 11-es kikötő (Petőfi tér)',
             'title': '4 Fogásos Vacsorahajó Üdvözlőitallal, Show Nélkül',
             'best_for': '🎯 Ideális választás: Pénztárcabarát vacsorázók, akik csak a dunai panorámára és a finom ételekre vágynak műsor nélkül.',
-            'price': '€65–72'
+            'price': '€74'
         },
         {
             'rank': '🎭 #3 Folklór Operett Show',
             'kicker': 'Silverline Cruises • ⏱️ 135 perc • 11-es kikötő (Petőfi tér)',
             'title': '4 Fogásos Gourmet Vacsorahajó Folklór Operett Show-val',
             'best_for': '🎯 Ideális választás: A hagyományos magyar kultúra, operett és a dinamikus színpadi előadások kedvelői.',
-            'price': '€78–85'
+            'price': '€91'
         },
         {
             'rank': '🎹 #4 Zongorapárbaj Show',
             'kicker': 'Silverline Cruises • ⏱️ 135 perc • 11-es kikötő (Petőfi tér)',
             'title': '4 Fogásos Gourmet Vacsorahajó Zongorapárbaj Show-val és Énekessel',
             'best_for': '🎯 Ideális választás: Vidám párok és baráti társaságok, akik interaktív zenei élményre vágynak vacsora közben.',
-            'price': '€78–85'
+            'price': '€91'
         },
         {
             'rank': '🥗 #5 Svédasztalos Büfé',
             'kicker': 'Hungaria Koncert • ⏱️ 120 perc • Akadémia kikötő',
             'title': 'Svédasztalos Hajós Vacsora Magyaros Néptáncműsorral',
             'best_for': '🎯 Ideális választás: Nagy étvágyú utazók és családok, akik korlátlan svédasztalt és autentikus néptáncot keresnek.',
-            'price': '€78–82'
+            'price': '€79'
         },
         {
             'rank': '🎻 #6 Folklór & Cigányzene',
             'kicker': 'Eurama • ⏱️ 120 perc • Vigadó tér kikötő',
             'title': '4 Fogásos Vacsorahajó Folklór Show-val',
             'best_for': '🎯 Ideális választás: Turisták, akik kompakt 2 órás vacsorát és klasszikus cigányzenét szeretnének.',
-            'price': '€75–80'
+            'price': '€90'
         },
         {
             'rank': '🥂 #7 Korlátlan Ital & Élőzene',
             'kicker': 'Silverline Cruises • ⏱️ 135 perc • 11-es kikötő (Petőfi tér)',
             'title': '4 Fogásos Vacsorahajó Élőzenével és Korlátlan Italfogyasztással',
             'best_for': '🎯 Ideális választás: Társaságok és ünneplők, akik nem szeretnének az italok árával számolni a vacsora során.',
-            'price': '€99–105'
+            'price': '€99'
         }
     ]
     
@@ -2063,7 +2063,7 @@ def build_hungarian_dinner():
         d_name = drawer.find(class_='bpa-drawer-name')
         if d_name: d_name.string = "Legenda 4 Fogásos Gyertyafényes Vacsora"
         d_price = drawer.find(class_='bpa-drawer-price')
-        if d_price: d_price.string = "€98-tól"
+        if d_price: d_price.string = "€110"
         d_btn = drawer.find(class_='bpa-drawer-btn')
         if d_btn: d_btn.string = "Foglalás most →"
         
