@@ -21540,7 +21540,7 @@ window.LTT_PAGE_CONFIG = {"deckId": "budapest-dinner-cruise-deck", "tocDeckLabel
       return {
         id: id,
         r: String(i + 1),
-        badge: '#' + (i + 1) + ' PICK',
+        badge: '#' + (i + 1) + ' ' + (cfg.pickLabel || 'PICK'),
         tag: rawTag,
         label: cleanLabel,
         name: shortTitles[i] || (kp[0] ? kp[0].trim() : ''),
@@ -21811,7 +21811,10 @@ window.LTT_PAGE_CONFIG = {"deckId": "budapest-dinner-cruise-deck", "tocDeckLabel
       var priceEl = document.getElementById('sticky-price');
       if (priceEl) priceEl.textContent = active.p;
       var ctaEl = document.getElementById('sticky-cta-btn');
-      if (ctaEl) ctaEl.href = active.l;
+      if (ctaEl) {
+        ctaEl.href = active.l;
+        if (cfg.btnText) ctaEl.textContent = cfg.btnText;
+      }
       bar.classList.add('visible', 'is-visible');
     }
   }
