@@ -73,7 +73,9 @@ COMMON_UI = {
         'pick': 'VÁLASZTÁS',
         'sheet_river': 'Ugrás a tesztelt budapesti sétahajókhoz',
         'sheet_dinner': 'Ugrás a tesztelt budapesti vacsorahajókhoz',
-        'verified': 'Személyesen tesztelve'
+        'verified': 'Személyesen tesztelve',
+        'home': 'Főoldal',
+        'updated': 'Frissítve: 2026. november'
     },
     'de': {
         'btn_book': 'Jetzt buchen →',
@@ -87,7 +89,9 @@ COMMON_UI = {
         'pick': 'TIPP',
         'sheet_river': 'Zu den getesteten Donau-Schifffahrten',
         'sheet_dinner': 'Zu den getesteten Abendessen-Schifffahrten',
-        'verified': 'Vor Ort getestet'
+        'verified': 'Vor Ort getestet',
+        'home': 'Startseite',
+        'updated': 'Aktualisiert: November 2026'
     },
     'fr': {
         'btn_book': 'Réserver maintenant →',
@@ -101,7 +105,9 @@ COMMON_UI = {
         'pick': 'CHOIX',
         'sheet_river': 'Accéder aux croisières testées',
         'sheet_dinner': 'Accéder aux dîners croisières testés',
-        'verified': 'Testé personnellement'
+        'verified': 'Testé personnellement',
+        'home': 'Accueil',
+        'updated': 'Mis à jour : Novembre 2026'
     },
     'es': {
         'btn_book': 'Reservar ahora →',
@@ -115,7 +121,9 @@ COMMON_UI = {
         'pick': 'ELECCIÓN',
         'sheet_river': 'Ir a los cruceros evaluados',
         'sheet_dinner': 'Ir a los cruceros con cena evaluados',
-        'verified': 'Probado personalmente'
+        'verified': 'Probado personalmente',
+        'home': 'Inicio',
+        'updated': 'Actualizado: Noviembre 2026'
     },
     'it': {
         'btn_book': 'Prenota ora →',
@@ -129,7 +137,9 @@ COMMON_UI = {
         'pick': 'SCELTA',
         'sheet_river': 'Vai alle crociere testate',
         'sheet_dinner': 'Vai alle crociere con cena testate',
-        'verified': 'Testato di persona'
+        'verified': 'Testato di persona',
+        'home': 'Home',
+        'updated': 'Aggiornato: Novembre 2026'
     },
     'ro': {
         'btn_book': 'Rezervă acum →',
@@ -143,7 +153,9 @@ COMMON_UI = {
         'pick': 'ALEGERE',
         'sheet_river': 'Sari la croazierele testate',
         'sheet_dinner': 'Sari la croazierele cu cină testate',
-        'verified': 'Testat personal'
+        'verified': 'Testat personal',
+        'home': 'Acasă',
+        'updated': 'Actualizat: Noiembrie 2026'
     },
     'pl': {
         'btn_book': 'Zarezerwuj teraz →',
@@ -157,7 +169,9 @@ COMMON_UI = {
         'pick': 'WYBÓR',
         'sheet_river': 'Przejdź do przetestowanych rejsów',
         'sheet_dinner': 'Przejdź do rejsów z kolacją',
-        'verified': 'Sprawdzone osobiście'
+        'verified': 'Sprawdzone osobiście',
+        'home': 'Strona główna',
+        'updated': 'Zaktualizowano: Listopad 2026'
     },
     'cs': {
         'btn_book': 'Rezervovat nyní →',
@@ -171,7 +185,9 @@ COMMON_UI = {
         'pick': 'VOLBA',
         'sheet_river': 'Přejít na testované plavby',
         'sheet_dinner': 'Přejít na plavby s večeří',
-        'verified': 'Osobně otestováno'
+        'verified': 'Osobně otestováno',
+        'home': 'Domů',
+        'updated': 'Aktualizováno: Listopad 2026'
     },
     'sk': {
         'btn_book': 'Rezervovať teraz →',
@@ -185,7 +201,9 @@ COMMON_UI = {
         'pick': 'VOĽBA',
         'sheet_river': 'Prejsť na testované plavby',
         'sheet_dinner': 'Prejsť na plavby s večerou',
-        'verified': 'Osobne otestované'
+        'verified': 'Osobne otestované',
+        'home': 'Domov',
+        'updated': 'Aktualizované: November 2026'
     },
     'nl': {
         'btn_book': 'Nu boeken →',
@@ -199,7 +217,9 @@ COMMON_UI = {
         'pick': 'KEUZE',
         'sheet_river': 'Naar geteste rondvaarten',
         'sheet_dinner': 'Naar geteste dinervaarten',
-        'verified': 'Zelf getest'
+        'verified': 'Zelf getest',
+        'home': 'Home',
+        'updated': 'Bijgewerkt: November 2026'
     },
     'pt': {
         'btn_book': 'Reservar agora →',
@@ -213,7 +233,9 @@ COMMON_UI = {
         'pick': 'ESCOLHA',
         'sheet_river': 'Ir para os cruzeiros testados',
         'sheet_dinner': 'Ir para cruzeiros com jantar',
-        'verified': 'Testado pessoalmente'
+        'verified': 'Testado pessoalmente',
+        'home': 'Início',
+        'updated': 'Atualizado: Novembro 2026'
     },
     'hr': {
         'btn_book': 'Rezervirajte sada →',
@@ -227,7 +249,9 @@ COMMON_UI = {
         'pick': 'IZBOR',
         'sheet_river': 'Idi na testirana krstarenja',
         'sheet_dinner': 'Idi na krstarenja s večerom',
-        'verified': 'Osobno provjereno'
+        'verified': 'Osobno provjereno',
+        'home': 'Početna',
+        'updated': 'Ažurirano: Studeni 2026'
     },
     'sr': {
         'btn_book': 'Резервиши сада →',
@@ -241,7 +265,9 @@ COMMON_UI = {
         'pick': 'ИЗБОР',
         'sheet_river': 'Пређи на тестирана крстарења',
         'sheet_dinner': 'Пређи на крстарења са вечером',
-        'verified': 'Лично проверено'
+        'verified': 'Лично проверено',
+        'home': 'Почетна',
+        'updated': 'Ажурирано: Новембар 2026'
     },
     'bg': {
         'btn_book': 'Резервирайте сега →',
@@ -255,7 +281,9 @@ COMMON_UI = {
         'pick': 'ИЗБОР',
         'sheet_river': 'Към тестваните круизи',
         'sheet_dinner': 'Към тестваните круизи с вечеря',
-        'verified': 'Лично тествано'
+        'verified': 'Лично тествано',
+        'home': 'Начало',
+        'updated': 'Обновено: Ноември 2026'
     },
     'ru': {
         'btn_book': 'Забронировать сейчас →',
@@ -269,7 +297,9 @@ COMMON_UI = {
         'pick': 'ВЫБОР',
         'sheet_river': 'К проверенным круизам',
         'sheet_dinner': 'К проверенным круизам с ужином',
-        'verified': 'Проверено лично'
+        'verified': 'Проверено лично',
+        'home': 'Главная',
+        'updated': 'Обновлено: Ноябрь 2026'
     },
     'uk': {
         'btn_book': 'Забронювати зараз →',
@@ -283,7 +313,9 @@ COMMON_UI = {
         'pick': 'ВИБІР',
         'sheet_river': 'До перевірених круїзів',
         'sheet_dinner': 'До перевірених круїзів з вечерею',
-        'verified': 'Перевірено особисто'
+        'verified': 'Перевірено особисто',
+        'home': 'Головна',
+        'updated': 'Оновлено: Листопад 2026'
     },
     'el': {
         'btn_book': 'Κράτηση τώρα →',
@@ -297,7 +329,9 @@ COMMON_UI = {
         'pick': 'ΕΠΙΛΟΓΗ',
         'sheet_river': 'Μετάβαση στις κρουαζιέρες',
         'sheet_dinner': 'Μετάβαση στις κρουαζιέρες με δείπνο',
-        'verified': 'Δοκιμασμένο προσωπικά'
+        'verified': 'Δοκιμασμένο προσωπικά',
+        'home': 'Αρχική',
+        'updated': 'Ενημερώθηκε: Νοέμβριος 2026'
     },
     'tr': {
         'btn_book': 'Şimdi Rezervasyon Yapın →',
@@ -311,7 +345,9 @@ COMMON_UI = {
         'pick': 'SEÇİM',
         'sheet_river': 'Test edilen turlara git',
         'sheet_dinner': 'Test edilen akşam yemekli turlara git',
-        'verified': 'Bizzat test edildi'
+        'verified': 'Bizzat test edildi',
+        'home': 'Ana Sayfa',
+        'updated': 'Güncellendi: Kasım 2026'
     },
     'he': {
         'btn_book': 'הזמן עכשיו ←',
@@ -325,7 +361,9 @@ COMMON_UI = {
         'pick': 'בחירה',
         'sheet_river': 'עבור להפלגות שנבדקו',
         'sheet_dinner': 'עבור להפלגות ערב שנבדקו',
-        'verified': 'נבדק אישית'
+        'verified': 'נבדק אישית',
+        'home': 'דף הבית',
+        'updated': 'עודכן: נובמבר 2026'
     },
     'ja': {
         'btn_book': '今すぐ予約する →',
@@ -339,7 +377,9 @@ COMMON_UI = {
         'pick': 'おすすめ',
         'sheet_river': '実走テスト済みクルーズ一覧',
         'sheet_dinner': '実走テスト済みディナークルーズ一覧',
-        'verified': '現地で実走テスト済み'
+        'verified': '現地で実走テスト済み',
+        'home': 'ホーム',
+        'updated': '更新日: 2026年11月'
     },
     'ko': {
         'btn_book': '지금 예약하기 →',
@@ -353,7 +393,9 @@ COMMON_UI = {
         'pick': '추천',
         'sheet_river': '검증된 다뉴브 크루즈 바로가기',
         'sheet_dinner': '검증된 디너 크루즈 바로가기',
-        'verified': '직접 현장 검증'
+        'verified': '직접 현장 검증',
+        'home': '홈',
+        'updated': '업데이트: 2026년 11월'
     }
 }
 
@@ -376,8 +418,38 @@ def localize_guide_page_ui(soup, lang, cruise_type, total_count):
     toggle_data = REVIEW_TOGGLE_I18N.get(lang, REVIEW_TOGGLE_I18N['de'])
     bd_data = BREAKDOWN_I18N.get(lang, BREAKDOWN_I18N['de'])
 
+    # 0. Clean Breadcrumbs & Trust Pill
+    home_text = get_ui(lang, 'home', 'Home')
+    for bc in soup.find_all(class_='ltt-breadcrumbs'):
+        curr = bc.find(class_='ltt-bc-current')
+        curr_text = curr.get_text(strip=True) if curr else (bd_data['title_river'] if cruise_type == 'river' else bd_data['title_dinner'])
+        bc.clear()
+        home_a = soup.new_tag('a', href=f'/{lang}/' if lang != 'en' else '/')
+        home_a.string = home_text
+        sep = soup.new_tag('span', **{'class': 'ltt-bc-sep'})
+        sep.string = '›'
+        n_curr = soup.new_tag('span', **{'class': 'ltt-bc-current'})
+        n_curr.string = curr_text
+        bc.append(home_a)
+        bc.append(' ')
+        bc.append(sep)
+        bc.append(' ')
+        bc.append(n_curr)
+
+    updated_str = get_ui(lang, 'updated', 'Updated: November 2026')
+    tp = soup.find(class_='ltt-trust-pill')
+    if tp:
+        tp.clear()
+        parts = updated_str.split(':')
+        lbl = parts[0].strip()
+        val = parts[1].strip() if len(parts) > 1 else 'November 2026'
+        st = soup.new_tag('strong')
+        st.string = lbl
+        tp.append(st)
+        tp.append(f': {val}')
+
     # 1. Deck Cards
-    for card in soup.find_all(class_='bpa-card'):
+    for idx, card in enumerate(soup.find_all(class_='bpa-card')):
         btn = card.find(class_='bpa-btn')
         if btn: btn.string = btn_book_text
         
@@ -387,8 +459,17 @@ def localize_guide_page_ui(soup, lang, cruise_type, total_count):
         sublink = card.find(class_='bpa-sublink') or card.find(class_='bpa-jump-link')
         if sublink: sublink.string = read_review_text
         
-        vchip = card.find(class_='bpa-vchip')
-        if vchip: vchip.string = f"✓ {verified_text}"
+        if cruise_type == 'dinner' and idx in [5, 6]:
+            card['data-cat'] = card.get('data-cat', '').replace('tested', '').strip()
+            for p in card.find_all(class_='bpa-proof') + card.find_all(class_='bpa-proof-mobile') + card.find_all(class_='bpa-vchip'):
+                p.decompose()
+        elif cruise_type == 'river' and idx >= 6:
+            card['data-cat'] = card.get('data-cat', '').replace('tested', '').strip()
+            for p in card.find_all(class_='bpa-proof') + card.find_all(class_='bpa-proof-mobile') + card.find_all(class_='bpa-vchip'):
+                p.decompose()
+        else:
+            vchip = card.find(class_='bpa-vchip')
+            if vchip: vchip.string = f"✓ {verified_text}"
         
         trust = card.find(class_='bpa-trust-micro')
         if trust:
@@ -397,16 +478,31 @@ def localize_guide_page_ui(soup, lang, cruise_type, total_count):
                 spans[0].string = trust_qr_text
                 spans[2].string = trust_cancel_text
 
+    # Details Cards Proof Badges
+    for idx, dc in enumerate(soup.find_all('details', class_='bpa-details-card')):
+        if cruise_type == 'dinner' and idx in [5, 6]:
+            dc['data-cat'] = dc.get('data-cat', '').replace('tested', '').strip()
+            for p in dc.find_all(class_='bpa-proof') + dc.find_all(class_='bpa-vchip'):
+                p.decompose()
+        elif cruise_type == 'river' and idx >= 6:
+            dc['data-cat'] = dc.get('data-cat', '').replace('tested', '').strip()
+            for p in dc.find_all(class_='bpa-proof') + dc.find_all(class_='bpa-vchip'):
+                p.decompose()
+
     # 1b. Filter Tabs (.ltt-tab-btn)
     tab_data = FILTER_TABS_I18N.get(lang, {})
     if tab_data:
         for tab in soup.find_all(class_='ltt-tab-btn'):
             cat = tab.get('data-cat')
             if cruise_type == 'dinner':
-                if cat == 'tested' and 'tested_dinner' in tab_data:
+                if cat == 'all' and 'all' in tab_data:
+                    tab.string = tab_data['all'].replace('(10)', '(7)')
+                elif cat == 'tested' and 'tested_dinner' in tab_data:
                     tab.string = tab_data['tested_dinner']
                 elif cat == 'drinks' and 'drinks_dinner' in tab_data:
                     tab.string = tab_data['drinks_dinner']
+                elif cat == 'under80' and 'budget' in tab_data:
+                    tab.string = tab_data['budget']
                 elif cat in tab_data:
                     tab.string = tab_data[cat]
             else:

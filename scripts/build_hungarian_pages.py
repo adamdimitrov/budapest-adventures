@@ -349,6 +349,8 @@ def localize_buy_card(soup, buy_card, card_title=None):
         'Dock 11': '11-es kikötő',
         'Dock 3 (Gróf Széchényi)': '3-as kikötő (Gróf Széchenyi)',
         'Dock 6 (Jane Haining rkp.)': '6-os kikötő (Jane Haining rkp.)',
+        'Jane Haining Dock 6': '6-os kikötő (Jane Haining rakpart)',
+        'Dock 8A / Dock 11': '8A / 11-es kikötő',
         'Dock 8A': '8A kikötő'
     }
     
@@ -420,7 +422,7 @@ def localize_css_reviews(soup):
 
 def localize_proof_chips(soup):
     """Replaces ALL occurrences of 'Personally Tested' across proof badges, mobile chips, and text."""
-    for tag in soup.find_all(class_=['bpa-proof', 'bpa-proof-mobile', 'bpa-vchip']):
+    for tag in soup.find_all(class_=['bpa-vchip', 'bpa-proof-mobile']):
         if 'Personally Tested' in tag.get_text():
             tag.string = "✓ Személyesen tesztelve"
             
@@ -1210,15 +1212,19 @@ def build_hungarian_river():
     localize_navbar_and_menu(soup)
 
     # 3. Clean Card Hero
-    bc_links = soup.find_all(class_='ltt-breadcrumbs')
-    for bc in bc_links:
-        home_a = bc.find('a')
-        if home_a:
-            home_a.string = 'Főoldal'
-            home_a['href'] = '/hu/'
-        curr = bc.find(class_='ltt-bc-current')
-        if curr:
-            curr.string = 'Dunai Sétahajózás Budapesten'
+    for bc in soup.find_all(class_='ltt-breadcrumbs'):
+        bc.clear()
+        home_a = soup.new_tag('a', href='/hu/')
+        home_a.string = 'Főoldal'
+        sep = soup.new_tag('span', **{'class': 'ltt-bc-sep'})
+        sep.string = '›'
+        curr = soup.new_tag('span', **{'class': 'ltt-bc-current'})
+        curr.string = 'Dunai Sétahajózás Budapesten'
+        bc.append(home_a)
+        bc.append(' ')
+        bc.append(sep)
+        bc.append(' ')
+        bc.append(curr)
             
     badge = soup.find(class_='ltt-hero-kicker-badge')
     if badge:
@@ -1241,6 +1247,13 @@ def build_hungarian_river():
     if author_role:
         author_role.string = "Független helyszíni felmérések • Saját fotók és videók • Elfogulatlan értékelések"
         
+    tp = soup.find(class_='ltt-trust-pill')
+    if tp:
+        tp.clear()
+        st = soup.new_tag('strong')
+        st.string = 'Frissítve'
+        tp.append(st)
+        tp.append(': 2026. november')
     updated = soup.find(class_='ltt-updated-date')
     if updated:
         updated.string = "Utoljára frissítve: 2026. november"
@@ -1374,8 +1387,13 @@ def build_hungarian_river():
         sublink = card.find(class_='bpa-sublink') or card.find(class_='bpa-jump-link')
         if sublink: sublink.string = "Értékelés elolvasása ↓"
         
-        vchip = card.find(class_='bpa-vchip')
-        if vchip: vchip.string = "✓ Személyesen tesztelve"
+        if idx >= 6:
+            card['data-cat'] = card.get('data-cat', '').replace('tested', '').strip()
+            for p in card.find_all(class_='bpa-proof') + card.find_all(class_='bpa-proof-mobile') + card.find_all(class_='bpa-vchip'):
+                p.decompose()
+        else:
+            vchip = card.find(class_='bpa-vchip')
+            if vchip: vchip.string = "✓ Személyesen tesztelve"
         
         trust = card.find(class_='bpa-trust-micro')
         if trust:
@@ -1419,10 +1437,22 @@ def build_hungarian_river():
         # Summary bar
         d_title = dcard.find(class_='bpa-details-title')
         if d_title: d_title.string = cdata['title']
-        d_kicker = dcard.find(class_='bpa-details-kicker')
-        if d_kicker: d_kicker.string = cdata['kicker']
+        d_kicker = dcard.find(class_='bpa-kicker')
+        if d_kicker:
+            map_link = d_kicker.find(class_='bpa-kicker-map-link')
+            parts = cdata['kicker'].rsplit('•', 1)
+            if len(parts) == 2 and map_link:
+                d_kicker.clear()
+                d_kicker.append(parts[0].strip() + ' • ')
+                d_kicker.append(map_link)
+            else:
+                d_kicker.string = cdata['kicker']
         d_price = dcard.find(class_='bpa-details-price')
         if d_price: d_price.string = f"{cdata['price']} / fő"
+        
+        if idx >= 6:
+            for p in dcard.find_all(class_='bpa-proof') + dcard.find_all(class_='bpa-vchip'):
+                p.decompose()
         
         # RESTORE CANONICAL PROS & CONS STRUCTURE
         pros, cons = RIVER_PROS_CONS[idx]
@@ -1725,15 +1755,19 @@ def build_hungarian_dinner():
     localize_navbar_and_menu(soup)
 
     # 3. Clean Card Hero
-    bc_links = soup.find_all(class_='ltt-breadcrumbs')
-    for bc in bc_links:
-        home_a = bc.find('a')
-        if home_a:
-            home_a.string = 'Főoldal'
-            home_a['href'] = '/hu/'
-        curr = bc.find(class_='ltt-bc-current')
-        if curr:
-            curr.string = 'Dunai Vacsorahajózás Budapesten'
+    for bc in soup.find_all(class_='ltt-breadcrumbs'):
+        bc.clear()
+        home_a = soup.new_tag('a', href='/hu/')
+        home_a.string = 'Főoldal'
+        sep = soup.new_tag('span', **{'class': 'ltt-bc-sep'})
+        sep.string = '›'
+        curr = soup.new_tag('span', **{'class': 'ltt-bc-current'})
+        curr.string = 'Dunai Vacsorahajózás Budapesten'
+        bc.append(home_a)
+        bc.append(' ')
+        bc.append(sep)
+        bc.append(' ')
+        bc.append(curr)
             
     badge = soup.find(class_='ltt-hero-kicker-badge')
     if badge:
@@ -1756,6 +1790,13 @@ def build_hungarian_dinner():
     if author_role:
         author_role.string = "Független helyszíni felmérések • Saját fotók és videók • Elfogulatlan értékelések"
         
+    tp = soup.find(class_='ltt-trust-pill')
+    if tp:
+        tp.clear()
+        st = soup.new_tag('strong')
+        st.string = 'Frissítve'
+        tp.append(st)
+        tp.append(': 2026. november')
     updated = soup.find(class_='ltt-updated-date')
     if updated:
         updated.string = "Utoljára frissítve: 2026. november"
@@ -1775,15 +1816,19 @@ def build_hungarian_dinner():
         filter_label.string = "Szűrés:"
         
     tab_btns = soup.find_all(class_='ltt-tab-btn')
-    hu_tabs = [
-        "Összes (7)",
-        "✓ Személyesen tesztelve (4)",
-        "🎵 Élőzene (4)",
-        "💶 €75 alatt (3)",
-        "🍷 4 Fogásos Gourmet (4)"
-    ]
-    for idx, btn in enumerate(tab_btns[:5]):
-        btn.string = hu_tabs[idx]
+    hu_tab_map = {
+        'all': 'Összes (7)',
+        'tested': '✓ Személyesen tesztelve (5)',
+        'alacarte': '🍽️ Felszolgált menü (6)',
+        'buffet': '🍱 Svédasztalos büfé (1)',
+        'show': '🎵 Élőzene & Műsor (6)',
+        'drinks': '🍷 Korlátlan ital (1)',
+        'under80': '💶 80 € alatt (2)'
+    }
+    for btn in tab_btns:
+        cat = btn.get('data-cat')
+        if cat in hu_tab_map:
+            btn.string = hu_tab_map[cat]
         
     # 4. 7 Dinner Deck Cards Localization
     cards_hu = [
@@ -1866,8 +1911,13 @@ def build_hungarian_dinner():
         sublink = card.find(class_='bpa-sublink') or card.find(class_='bpa-jump-link')
         if sublink: sublink.string = "Értékelés elolvasása ↓"
         
-        vchip = card.find(class_='bpa-vchip')
-        if vchip: vchip.string = "✓ Személyesen tesztelve"
+        if idx in [5, 6]:
+            card['data-cat'] = card.get('data-cat', '').replace('tested', '').strip()
+            for p in card.find_all(class_='bpa-proof') + card.find_all(class_='bpa-proof-mobile') + card.find_all(class_='bpa-vchip'):
+                p.decompose()
+        else:
+            vchip = card.find(class_='bpa-vchip')
+            if vchip: vchip.string = "✓ Személyesen tesztelve"
         
         trust = card.find(class_='bpa-trust-micro')
         if trust:
@@ -1907,10 +1957,23 @@ def build_hungarian_dinner():
         cdata = cards_hu[idx]
         d_title = dcard.find(class_='bpa-details-title')
         if d_title: d_title.string = cdata['title']
-        d_kicker = dcard.find(class_='bpa-details-kicker')
-        if d_kicker: d_kicker.string = cdata['kicker']
+        d_kicker = dcard.find(class_='bpa-kicker')
+        if d_kicker:
+            map_link = d_kicker.find(class_='bpa-kicker-map-link')
+            parts = cdata['kicker'].rsplit('•', 1)
+            if len(parts) == 2 and map_link:
+                d_kicker.clear()
+                d_kicker.append(parts[0].strip() + ' • ')
+                d_kicker.append(map_link)
+            else:
+                d_kicker.string = cdata['kicker']
         d_price = dcard.find(class_='bpa-details-price')
         if d_price: d_price.string = f"{cdata['price']} / fő"
+        
+        if idx in [5, 6]:
+            dcard['data-cat'] = dcard.get('data-cat', '').replace('tested', '').strip()
+            for p in dcard.find_all(class_='bpa-proof') + dcard.find_all(class_='bpa-proof-mobile') + dcard.find_all(class_='bpa-vchip'):
+                p.decompose()
         
         # RESTORE CANONICAL PROS & CONS STRUCTURE
         pros, cons = DINNER_PROS_CONS[idx]
