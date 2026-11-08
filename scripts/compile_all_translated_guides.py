@@ -17,6 +17,8 @@ import os
 import re
 import sys
 import json
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import scripts.build_hungarian_pages as bhp
 from bs4 import BeautifulSoup
 
 BASE_DIR = '/Users/adamdimitrov/Development/budapest-adventures'
@@ -88,6 +90,84 @@ def extract_meta_and_headings(harvested_path):
         'h2s': h2s
     }
 
+
+NAV_I18N = {
+    'de': {'dropdown': 'Donau-Schifffahrten', 'head_cruises': 'DONAU-SCHIFFFAHRTEN', 'head_attractions': 'SEHENSWÜRDIGKEITEN & BÄDER', 'river': 'Donau-Schifffahrten', 'dinner': 'Abendessen-Schifffahrten', 'card': 'Budapest Card', 'about': 'Über uns', 'contact': 'Kontakt', 'footer_flagship': 'Wichtige Budapest-Guides', 'footer_trust': 'Vertrauen & Unternehmen', 'footer_copy': '© 2026 BudapestAdventures.com. Alle Rechte vorbehalten.'},
+    'fr': {'dropdown': 'Croisières Danube', 'head_cruises': 'CROISIÈRES SUR LE DANUBE', 'head_attractions': 'ATTRACTIONS & BAINS', 'river': 'Croisières Promenade', 'dinner': 'Dîners Croisières', 'card': 'Budapest Card', 'about': 'À propos', 'contact': 'Contact', 'footer_flagship': 'Guides Phares de Budapest', 'footer_trust': 'Confiance & Entreprise', 'footer_copy': '© 2026 BudapestAdventures.com. Tous droits réservés.'},
+    'es': {'dropdown': 'Cruceros Danubio', 'head_cruises': 'CRUCEROS POR EL DANUBIO', 'head_attractions': 'ATRACCIONES Y BALNEARIOS', 'river': 'Cruceros Paseo', 'dinner': 'Cruceros con Cena', 'card': 'Budapest Card', 'about': 'Sobre nosotros', 'contact': 'Contacto', 'footer_flagship': 'Guías Principales de Budapest', 'footer_trust': 'Confianza y Empresa', 'footer_copy': '© 2026 BudapestAdventures.com. Todos los derechos reservados.'},
+    'it': {'dropdown': 'Crociere Danubio', 'head_cruises': 'CROCIERE SUL DANUBIO', 'head_attractions': 'ATTRAZIONI E TERME', 'river': 'Crociere Panoramiche', 'dinner': 'Crociere con Cena', 'card': 'Budapest Card', 'about': 'Chi siamo', 'contact': 'Contatti', 'footer_flagship': 'Guide Principali di Budapest', 'footer_trust': 'Affidabilità & Azienda', 'footer_copy': '© 2026 BudapestAdventures.com. Tutti i diritti riservati.'},
+    'ro': {'dropdown': 'Croaziere Dunăre', 'head_cruises': 'CROAZIERE PE DUNĂRE', 'head_attractions': 'ATRACȚII & BĂI TERMALE', 'river': 'Croaziere pe Dunăre', 'dinner': 'Croaziere cu Cină', 'card': 'Budapest Card', 'about': 'Despre noi', 'contact': 'Contact', 'footer_flagship': 'Ghiduri de Top în Budapesta', 'footer_trust': 'Încredere & Companie', 'footer_copy': '© 2026 BudapestAdventures.com. Toate drepturile rezervate.'},
+    'pl': {'dropdown': 'Rejsy po Dunaju', 'head_cruises': 'REJSY PO DUNAJU', 'head_attractions': 'ATRAKCJE I TERMY', 'river': 'Rejsy Widokowe', 'dinner': 'Rejsy z Kolacją', 'card': 'Budapest Card', 'about': 'O nas', 'contact': 'Kontakt', 'footer_flagship': 'Główne Przewodniki po Budapeszcie', 'footer_trust': 'Zaufanie i Informacje', 'footer_copy': '© 2026 BudapestAdventures.com. Wszelkie prawa zastrzeżone.'},
+    'cs': {'dropdown': 'Plavby po Dunaji', 'head_cruises': 'PLAVBY PO DUNAJI', 'head_attractions': 'PAMÁTKY A LÁZNĚ', 'river': 'Vyhlídkové Plavby', 'dinner': 'Plavby s Večeří', 'card': 'Budapest Card', 'about': 'O nás', 'contact': 'Kontakt', 'footer_flagship': 'Hlavní Průvodci Budapeští', 'footer_trust': 'Důvěryhodnost a Společnost', 'footer_copy': '© 2026 BudapestAdventures.com. Všechna práva vyhrazena.'},
+    'sk': {'dropdown': 'Plavby po Dunaji', 'head_cruises': 'PLAVBY PO DUNAJI', 'head_attractions': 'PAMIATKY A KÚPELE', 'river': 'Vyhliadkové Plavby', 'dinner': 'Plavby s Večerou', 'card': 'Budapest Card', 'about': 'O nás', 'contact': 'Kontakt', 'footer_flagship': 'Hlavné Sprievodce Budapešťou', 'footer_trust': 'Dôveryhodnosť a Spoločnosť', 'footer_copy': '© 2026 BudapestAdventures.com. Všetky práva vyhradené.'},
+    'nl': {'dropdown': 'Donau Cruises', 'head_cruises': 'DONAU RIVIERCRUISES', 'head_attractions': 'ATTRACTIES & BADEN', 'river': 'Riviercruises', 'dinner': 'Diner Cruises', 'card': 'Budapest Card', 'about': 'Over ons', 'contact': 'Contact', 'footer_flagship': 'Belangrijkste Boedapest Gidsen', 'footer_trust': 'Vertrouwen & Bedrijf', 'footer_copy': '© 2026 BudapestAdventures.com. Alle rechten voorbehouden.'},
+    'pt': {'dropdown': 'Cruzeiros Danúbio', 'head_cruises': 'CRUZEIROS NO DANÚBIO', 'head_attractions': 'ATRAÇÕES E TERMAS', 'river': 'Cruzeiros no Danúbio', 'dinner': 'Cruzeiros com Jantar', 'card': 'Budapest Card', 'about': 'Sobre nós', 'contact': 'Contato', 'footer_flagship': 'Principais Guias de Budapeste', 'footer_trust': 'Confiança e Empresa', 'footer_copy': '© 2026 BudapestAdventures.com. Todos os direitos reservados.'},
+    'ja': {'dropdown': 'ドナウ川クルーズ', 'head_cruises': 'ドナウ川クルーズ', 'head_attractions': '観光名所＆温泉', 'river': 'リバークルーズ', 'dinner': 'ディナークルーズ', 'card': 'ブダペストカード', 'about': '運営情報', 'contact': 'お問い合わせ', 'footer_flagship': 'ブダペスト主要ガイド', 'footer_trust': '信頼と運営方針', 'footer_copy': '© 2026 BudapestAdventures.com. All rights reserved.'},
+    'hr': {'dropdown': 'Krstarenja Dunavom', 'head_cruises': 'KRSTARENJA DUNAVOM', 'head_attractions': 'ATRAKCIJE & TOPLICE', 'river': 'Panoramska Krstarenja', 'dinner': 'Krstarenja s Večerom', 'card': 'Budapest Card', 'about': 'O nama', 'contact': 'Kontakt', 'footer_flagship': 'Vodeći Vodiči kroz Budimpeštu', 'footer_trust': 'Povjerenje & Tvrtka', 'footer_copy': '© 2026 BudapestAdventures.com. Sva prava pridržana.'},
+    'ru': {'dropdown': 'Круизы по Дунаю', 'head_cruises': 'КРУИЗЫ ПО ДУНАЮ', 'head_attractions': 'ДОСТОПРИМЕЧАТЕЛЬНОСТИ И КУПАЛЬНИ', 'river': 'Прогулочные Круизы', 'dinner': 'Круизы с Ужином', 'card': 'Budapest Card', 'about': 'О нас', 'contact': 'Контакты', 'footer_flagship': 'Главные Гиды по Будапешту', 'footer_trust': 'Доверие и Компания', 'footer_copy': '© 2026 BudapestAdventures.com. Все права защищены.'},
+    'el': {'dropdown': 'Κρουαζιέρες Δούναβη', 'head_cruises': 'ΚΡΟΥΑΖΙΕΡΕΣ ΣΤΟΝ ΔΟΥΝΑΒΗ', 'head_attractions': 'ΑΞΙΟΘΕΑΤΑ & ΛΟΥΤΡΑ', 'river': 'Κρουαζιέρες Περιήγησης', 'dinner': 'Κρουαζιέρες με Δείπνο', 'card': 'Budapest Card', 'about': 'Σχετικά', 'contact': 'Επικοινωνία', 'footer_flagship': 'Κορυφαίοι Οδηγοί Βουδαπέστης', 'footer_trust': 'Εμπιστοσύνη & Εταιρεία', 'footer_copy': '© 2026 BudapestAdventures.com. Με επιφύλαξη παντός δικαιώματος.'},
+    'bg': {'dropdown': 'Круизи по Дунав', 'head_cruises': 'КРУИЗИ ПО ДУНАВ', 'head_attractions': 'ЗАБЕЛЕЖИТЕЛНОСТИ И БАНИ', 'river': 'Панорамни Круизи', 'dinner': 'Круизи с Вечеря', 'card': 'Budapest Card', 'about': 'За нас', 'contact': 'Контакти', 'footer_flagship': 'Водещи Пътеводители за Будапеща', 'footer_trust': 'Доверие и Компания', 'footer_copy': '© 2026 BudapestAdventures.com. Всички права запазени.'},
+    'sr': {'dropdown': 'Krstarenja Dunavom', 'head_cruises': 'KRSTARENJA DUNAVOM', 'head_attractions': 'ATRAKCIJE & BANJE', 'river': 'Panoramska Krstarenja', 'dinner': 'Krstarenja sa Večerom', 'card': 'Budapest Card', 'about': 'O nama', 'contact': 'Kontakt', 'footer_flagship': 'Glavni Vodiči kroz Budimpeštu', 'footer_trust': 'Poverenje & Kompanija', 'footer_copy': '© 2026 BudapestAdventures.com. Sva prava zadržana.'},
+    'he': {'dropdown': 'שייט על הדנובה', 'head_cruises': 'שייט על הדנובה', 'head_attractions': 'אטרקציות ומרחצאות', 'river': 'שייט סיור', 'dinner': 'שייט עם ארוחת ערב', 'card': 'כרטיס בודפשט', 'about': 'אודות', 'contact': 'צור קשר', 'footer_flagship': 'מדריכי הדגל של בודפשט', 'footer_trust': 'אמינות והחברה', 'footer_copy': '© 2026 BudapestAdventures.com. כל הזכויות שמורות.'},
+    'tr': {'dropdown': 'Tuna Nehri Turları', 'head_cruises': 'TUNA NEHRİ TURLARI', 'head_attractions': 'GEZİLECEK YERLER VE KAPLICALAR', 'river': 'Nehir Gezi Turları', 'dinner': 'Akşam Yemekli Turlar', 'card': 'Budapest Card', 'about': 'Hakkımızda', 'contact': 'İletişim', 'footer_flagship': 'Öne Çıkan Budapeşte Rehberleri', 'footer_trust': 'Güvenilirlik ve Şirket', 'footer_copy': '© 2026 BudapestAdventures.com. Tüm hakları saklıdır.'},
+    'uk': {'dropdown': 'Круїзи по Дунаю', 'head_cruises': 'КРУЇЗИ ПО ДУНАЮ', 'head_attractions': 'ВИЗНАЧНІ МІСЦЯ ТА КУПАЛЬНІ', 'river': 'Оглядові Круїзи', 'dinner': 'Круїзи з Вечерею', 'card': 'Budapest Card', 'about': 'Про нас', 'contact': 'Контакти', 'footer_flagship': 'Головні Гіди по Будапешту', 'footer_trust': 'Довіра та Компанія', 'footer_copy': '© 2026 BudapestAdventures.com. Всі права захищені.'},
+    'ko': {'dropdown': '다뉴브강 크루즈', 'head_cruises': '다뉴브강 유람선', 'head_attractions': '관광명소 & 온천', 'river': '유람선 투어', 'dinner': '디너 크루즈', 'card': '부다페스트 카드', 'about': '소개', 'contact': '문의하기', 'footer_flagship': '부다페스트 주요 여행 가이드', 'footer_trust': '신뢰 & 운영 정책', 'footer_copy': '© 2026 BudapestAdventures.com. All rights reserved.'}
+}
+
+def localize_nav_and_footer_multilingual(soup, lang, slugs):
+    river_slug = slugs['river']
+    dinner_slug = slugs['dinner']
+    
+    # 1. Update hrefs to point to localized slugs
+    for a in soup.find_all('a', href=True):
+        href = a['href']
+        if href in ['/best-budapest-river-cruises', '/budapest-river-cruises']:
+            a['href'] = f'/{lang}/{river_slug}'
+        elif href in ['/best-dinner-cruises-budapest', '/budapest-dinner-cruises']:
+            a['href'] = f'/{lang}/{dinner_slug}'
+        elif href == '/':
+            a['href'] = f'/{lang}/'
+
+    # 2. Localize text if in NAV_I18N
+    i18n = NAV_I18N.get(lang)
+    if i18n:
+        dropdown_btn = soup.find('button', class_='ltt-dropdown-btn')
+        if dropdown_btn:
+            span = dropdown_btn.find('span')
+            if span and 'dropdown' in i18n:
+                span.string = i18n['dropdown']
+                
+        mega_heads = soup.find_all(class_='ltt-mega-head')
+        if len(mega_heads) >= 1 and 'head_cruises' in i18n:
+            mega_heads[0].string = i18n['head_cruises']
+        if len(mega_heads) >= 2 and 'head_attractions' in i18n:
+            mega_heads[1].string = i18n['head_attractions']
+            
+        nav_links = soup.find_all(class_='ltt-nav-link')
+        for nl in nav_links:
+            if 'ltt-dropdown-btn' in nl.get('class', []):
+                continue
+            txt = nl.text.strip().lower()
+            if 'river' in txt: nl.string = i18n.get('river', nl.text)
+            elif 'dinner' in txt: nl.string = i18n.get('dinner', nl.text)
+            elif 'card' in txt: nl.string = i18n.get('card', nl.text)
+            elif 'about' in txt: nl.string = i18n.get('about', nl.text)
+            elif 'contact' in txt: nl.string = i18n.get('contact', nl.text)
+            
+        footer = soup.find('footer') or soup.find(class_='footer-dark')
+        if footer:
+            col_titles = footer.find_all(class_=lambda c: c and ('footer-col-title' in c or 'footer-link-title' in c))
+            if len(col_titles) >= 1 and 'footer_flagship' in i18n:
+                col_titles[0].string = i18n['footer_flagship']
+            if len(col_titles) >= 2 and 'footer_trust' in i18n:
+                col_titles[1].string = i18n['footer_trust']
+            if 'footer_copy' in i18n:
+                legal = footer.find(class_='legal-wrapper')
+                if legal:
+                    divs = legal.find_all(class_='legal-text') or legal.find_all('div')
+                    if len(divs) >= 1:
+                        divs[0].string = i18n['footer_copy']
+
 def compile_pages():
     print(f"Starting compilation for {len(LANGS)} languages...")
     
@@ -98,6 +178,13 @@ def compile_pages():
     compiled_count = 0
     
     for lang in LANGS:
+        if lang == 'hu':
+            bhp.build_hungarian_home()
+            bhp.build_hungarian_river()
+            bhp.build_hungarian_dinner()
+            compiled_count += 3
+            print("✓ [HU] Compiled Hungarian home, river, and dinner using master Luxury Editorial compiler")
+            continue
         slugs = SLUG_MAP[lang]
         river_slug = slugs['river']
         dinner_slug = slugs['dinner']
@@ -139,6 +226,8 @@ def compile_pages():
             if 'Check Availability' in btn.text or '→' in btn.text:
                 btn.string = btn_check_text
                 
+        # Localize nav & footer
+        localize_nav_and_footer_multilingual(soup_river, lang, slugs)
         with open(river_out, 'w', encoding='utf-8') as f:
             f.write(str(soup_river))
         compiled_count += 1
@@ -173,6 +262,8 @@ def compile_pages():
             if 'Check Availability' in btn.text or '→' in btn.text:
                 btn.string = btn_check_text
                 
+        # Localize nav & footer
+        localize_nav_and_footer_multilingual(soup_dinner, lang, slugs)
         with open(dinner_out, 'w', encoding='utf-8') as f:
             f.write(str(soup_dinner))
         compiled_count += 1
@@ -202,6 +293,8 @@ def compile_pages():
             elif a['href'] in ['/best-dinner-cruises-budapest', '/budapest-dinner-cruises']:
                 a['href'] = f"/{lang}/{dinner_slug}"
                 
+        # Localize nav & footer
+        localize_nav_and_footer_multilingual(soup_home, lang, slugs)
         with open(home_out, 'w', encoding='utf-8') as f:
             f.write(str(soup_home))
         compiled_count += 1

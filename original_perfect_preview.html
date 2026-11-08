@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Article Preview — Legenda Native Card inside Budapest Adventures</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+    /* Simulated Budapest Adventures Webflow Article Environment */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #333333;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .page-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 20px 80px 20px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    
+    /* Simulated Sidebar */
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 13.5px;
+    }
+    .sidebar h3 {
+      font-size: 15px;
+      font-weight: 800;
+      margin: 0 0 12px 0;
+      color: #0f172a;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .sidebar a {
+      color: #475569;
+      text-decoration: none;
+    }
+    .sidebar a.active {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    /* Article Main Column */
+    .article-col {
+      max-width: 780px;
+      width: 100%;
+    }
+
+    /* Simulated Pro/Con Box */
+    .pro-con-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .pro-box {
+      border: 2px solid #10b981;
+      border-radius: 12px;
+      padding: 16px 20px;
+      background: #f0fdf4;
+      font-size: 13.5px;
+    }
+    .con-box {
+      border: 2px solid #ef4444;
+      border-radius: 12px;
+      padding: 16px 20px;
+      background: #fef2f2;
+      font-size: 13.5px;
+    }
+    .pro-box h4 { color: #15803d; margin: 0 0 8px 0; font-size: 14px; }
+    .con-box h4 { color: #b91c1c; margin: 0 0 8px 0; font-size: 14px; }
+
+    /* Summary text */
+    .summary-section h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 28px 0 12px 0;
+    }
+    .tip-box {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .page-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        display: none;
+      }
+    }
+  </style>
+<style id="ltt-nav-styles">/* ==========================================================================
+   LUXURY TRAVEL TESTER — MODERN VANILLA NAVIGATION SYSTEM
+   Zero-dependency, semantic, responsive, WCAG-compliant (Desktop & Mobile)
+   ========================================================================== */
+.ltt-navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 68px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 9999;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.ltt-nav-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-sizing: border-box;
+}
+.ltt-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #0f172a;
+  flex-shrink: 0;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: opacity 0.15s ease;
+}
+.ltt-brand:hover {
+  opacity: 0.85;
+}
+.ltt-brand-emblem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  color: #b45309;
+}
+.ltt-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ltt-nav-link {
+  color: #334155;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.ltt-nav-link:hover,
+.ltt-nav-link:focus-visible {
+  color: #0f172a;
+  background: #f1f5f9;
+  outline: none;
+}
+.ltt-nav-dropdown {
+  position: relative;
+}
+.ltt-chevron {
+  transition: transform 0.2s ease;
+  stroke: currentColor;
+}
+.ltt-nav-dropdown.is-open .ltt-chevron,
+.ltt-nav-dropdown:hover .ltt-chevron {
+  transform: rotate(180deg);
+}
+.ltt-mega-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px -8px rgba(15, 23, 42, 0.14), 0 0 0 1px rgba(15, 23, 42, 0.04);
+  padding: 22px 24px;
+  display: flex;
+  gap: 32px;
+  min-width: 580px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  pointer-events: none;
+  z-index: 10000;
+}
+.ltt-nav-dropdown:hover .ltt-mega-menu,
+.ltt-nav-dropdown.is-open .ltt-mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.ltt-mega-col {
+  flex: 1;
+  min-width: 220px;
+}
+.ltt-mega-head {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.ltt-mega-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #0f172a;
+  transition: background 0.15s ease;
+  margin-bottom: 4px;
+}
+.ltt-mega-item:hover {
+  background: #f8fafc;
+}
+.ltt-mega-icon {
+  font-size: 18px;
+  line-height: 1;
+  padding-top: 2px;
+}
+.ltt-mega-item strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.ltt-mega-item p {
+  margin: 2px 0 0 0;
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.3;
+}
+.ltt-mega-subitem {
+  display: block;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+.ltt-mega-subitem:hover {
+  color: #0f172a;
+  background: #f1f5f9;
+  padding-left: 14px;
+}
+.ltt-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ltt-cta-pill {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+}
+.ltt-cta-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4);
+}
+
+/* Mobile Toggle Hamburger Button */
+.ltt-hamburger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 9px 8px;
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.15s ease;
+  box-sizing: border-box;
+}
+.ltt-hamburger:hover {
+  background: #f8fafc;
+}
+.ltt-hamburger-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #0f172a;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* Mobile Drawer */
+.ltt-mobile-drawer {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .ltt-nav-links {
+    display: none !important;
+  }
+  .ltt-hamburger {
+    display: flex !important;
+  }
+  .ltt-cta-pill {
+    display: none !important;
+  }
+  .ltt-mobile-drawer {
+    display: block;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 2px solid #e2e8f0;
+    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.16);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    box-sizing: border-box;
+    z-index: 9999;
+  }
+  .ltt-mobile-drawer.is-open {
+    max-height: calc(100vh - 68px);
+    opacity: 1;
+    overflow-y: auto;
+  }
+  .ltt-drawer-content {
+    padding: 20px 20px 28px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .ltt-mobile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .ltt-mobile-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .ltt-mobile-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f172a;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .ltt-mobile-link:hover,
+  .ltt-mobile-link:active {
+    background: #f1f5f9;
+  }
+  .ltt-mobile-link.ltt-highlight {
+    background: #fffbeb;
+    border-color: #fde68a;
+    color: #92400e;
+  }
+  .ltt-mobile-tag {
+    font-size: 10px;
+    font-weight: 800;
+    background: #d97706;
+    color: #ffffff;
+    padding: 2px 7px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+  }
+  .ltt-mobile-subgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .ltt-mobile-sublink {
+    display: block;
+    padding: 10px 12px;
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #334155;
+    text-decoration: none;
+  }
+  .ltt-mobile-sublink:hover {
+    background: #f8fafc;
+    color: #0f172a;
+  }
+  .ltt-mobile-footer-links {
+    flex-direction: row !important;
+    gap: 10px;
+  }
+  .ltt-mobile-footer-links .ltt-mobile-link {
+    flex: 1;
+    justify-content: center;
+  }
+  .ltt-mobile-cta {
+    display: block;
+    text-align: center;
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
+  }
+}
+</style></head>
+<body><header class="ltt-navbar" role="banner">
+<div class="ltt-nav-inner">
+<a aria-label="Budapest Adventures Homepage" class="ltt-brand" href="/">
+<span class="ltt-brand-emblem">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="12" cy="12" r="10"></circle>
+<polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+</svg>
+</span>
+<span class="ltt-brand-text">BUDAPEST ADVENTURES</span>
+</a>
+<nav aria-label="Primary Navigation" class="ltt-nav-links">
+<div class="ltt-nav-dropdown" id="lttExploreDropdown">
+<button aria-expanded="false" aria-haspopup="true" class="ltt-nav-link ltt-dropdown-btn" type="button">
+<span>Explore</span>
+<svg class="ltt-chevron" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="ltt-mega-menu" role="menu">
+<div class="ltt-mega-col">
+<div class="ltt-mega-head">POPULAR CRUISE GUIDES</div>
+<a class="ltt-mega-item" href="/best-budapest-river-cruises">
+<span class="ltt-mega-icon">🚢</span>
+<div>
+<strong>Top 10 Budapest River Cruises</strong>
+<p>Personally field-tested day &amp; night boats</p>
+</div>
+</a>
+<a class="ltt-mega-item" href="/budapest-dinner-cruises">
+<span class="ltt-mega-icon">🍷</span>
+<div>
+<strong>Top 7 Budapest Dinner Cruises</strong>
+<p>4-course fine dining, folklore &amp; piano shows</p>
+</div>
+</a>
+<a class="ltt-mega-item" href="/unlimited-prosecco-cruises-budapest">
+<span class="ltt-mega-icon">🥂</span>
+<div>
+<strong>Unlimited Prosecco Cruises</strong>
+<p>Bottomless sparkling wine &amp; panoramic decks</p>
+</div>
+</a>
+<a class="ltt-mega-item" href="/best-night-cruises-budapest">
+<span class="ltt-mega-icon">✨</span>
+<div>
+<strong>Best Evening &amp; Night Cruises</strong>
+<p>Illuminated Parliament golden-hour schedule</p>
+</div>
+</a>
+</div>
+<div class="ltt-mega-col">
+<div class="ltt-mega-head">REVIEWS &amp; CITY GUIDES</div>
+<a class="ltt-mega-subitem" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">Legenda Candlelit Dinner Review</a>
+<a class="ltt-mega-subitem" href="/thermal-baths-budapest">8 Best Thermal Baths in Budapest</a>
+<a class="ltt-mega-subitem" href="/best-private-boat-tours-budapest">Best Private Boat Tours &amp; Yachts</a>
+<a class="ltt-mega-subitem" href="/best-things-to-do-budapest">Best Things to Do in Budapest</a>
+<a class="ltt-mega-subitem" href="/budapest-travel-guide">Complete Budapest Travel Guide</a>
+</div>
+</div>
+</div>
+<a class="ltt-nav-link" href="/best-budapest-river-cruises">River Cruises</a>
+<a class="ltt-nav-link" href="/budapest-dinner-cruises">Dinner Cruises</a>
+<a class="ltt-nav-link" href="/about">About</a>
+<a class="ltt-nav-link" href="/contact">Contact</a>
+</nav>
+<div class="ltt-nav-right">
+<a class="ltt-cta-pill" href="/best-budapest-river-cruises">Top 10 Cruises →</a>
+<button aria-expanded="false" aria-label="Toggle navigation menu" class="ltt-hamburger" id="lttNavToggle" type="button">
+<span class="ltt-hamburger-bar"></span>
+<span class="ltt-hamburger-bar"></span>
+<span class="ltt-hamburger-bar"></span>
+</button>
+</div>
+</div>
+<div aria-hidden="true" class="ltt-mobile-drawer" id="lttMobileDrawer">
+<div class="ltt-drawer-content">
+<div class="ltt-mobile-section">
+<div class="ltt-mobile-label">POPULAR CRUISE GUIDES</div>
+<a class="ltt-mobile-link ltt-highlight" href="/best-budapest-river-cruises">
+<span>🚢 Budapest River Cruises (Top 10)</span>
+<span class="ltt-mobile-tag">Tested</span>
+</a>
+<a class="ltt-mobile-link" href="/budapest-dinner-cruises">
+<span>🍷 Budapest Dinner Cruises (Top 7)</span>
+</a>
+<a class="ltt-mobile-link" href="/unlimited-prosecco-cruises-budapest">
+<span>🥂 Unlimited Prosecco Cruises</span>
+</a>
+<a class="ltt-mobile-link" href="/best-night-cruises-budapest">
+<span>✨ Best Evening &amp; Night Cruises</span>
+</a>
+</div>
+<div class="ltt-mobile-section">
+<div class="ltt-mobile-label">FEATURED REVIEWS &amp; GUIDES</div>
+<div class="ltt-mobile-subgrid">
+<a class="ltt-mobile-sublink" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">Legenda Candlelit Review</a>
+<a class="ltt-mobile-sublink" href="/thermal-baths-budapest">Thermal Baths Guide</a>
+<a class="ltt-mobile-sublink" href="/best-private-boat-tours-budapest">Private Boat Tours</a>
+<a class="ltt-mobile-sublink" href="/best-things-to-do-budapest">Things to Do</a>
+</div>
+</div>
+<div class="ltt-mobile-section ltt-mobile-footer-links">
+<a class="ltt-mobile-link" href="/about">About Us</a>
+<a class="ltt-mobile-link" href="/contact">Contact</a>
+</div>
+<a class="ltt-mobile-cta" href="/best-budapest-river-cruises">Top 10 Cruises →</a>
+</div>
+</div>
+</header><script id="ltt-nav-script">/* ==========================================================================
+   LUXURY TRAVEL TESTER — MODERN VANILLA NAVIGATION CONTROLLER
+   Zero-dependency, semantic, responsive, WCAG-compliant (Desktop & Mobile)
+   ========================================================================== */
+(function() {
+  function initNav() {
+    var toggle = document.getElementById('lttNavToggle');
+    var drawer = document.getElementById('lttMobileDrawer');
+    var dropdown = document.getElementById('lttExploreDropdown');
+    var dropBtn = dropdown ? dropdown.querySelector('.ltt-dropdown-btn') : null;
+
+    if (toggle && drawer) {
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var isOpen = drawer.classList.contains('is-open');
+        if (isOpen) {
+          drawer.classList.remove('is-open');
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
+          drawer.setAttribute('aria-hidden', 'true');
+        } else {
+          drawer.classList.add('is-open');
+          toggle.classList.add('is-active');
+          toggle.setAttribute('aria-expanded', 'true');
+          drawer.setAttribute('aria-hidden', 'false');
+        }
+      });
+
+      drawer.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          drawer.classList.remove('is-open');
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
+          drawer.setAttribute('aria-hidden', 'true');
+        });
+      });
+    }
+
+    if (dropBtn && dropdown) {
+      dropBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var open = dropdown.classList.toggle('is-open');
+        dropBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+
+    document.addEventListener('click', function(e) {
+      if (drawer && drawer.classList.contains('is-open') && !drawer.contains(e.target) && (!toggle || !toggle.contains(e.target))) {
+        drawer.classList.remove('is-open');
+        if (toggle) {
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+        drawer.setAttribute('aria-hidden', 'true');
+      }
+      if (dropdown && dropdown.classList.contains('is-open') && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('is-open');
+        if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        if (drawer && drawer.classList.contains('is-open')) {
+          drawer.classList.remove('is-open');
+          if (toggle) {
+            toggle.classList.remove('is-active');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+          drawer.setAttribute('aria-hidden', 'true');
+        }
+        if (dropdown && dropdown.classList.contains('is-open')) {
+          dropdown.classList.remove('is-open');
+          if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNav);
+  } else {
+    initNav();
+  }
+})();
+</script>
+<div class="page-wrapper">
+<!-- Sidebar (Table of Contents) -->
+<aside class="sidebar">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#">Budapest Boat Tour Itinerary &amp; Map</a></li>
+<li><a href="#">Detailed Breakdown — 10 Best River Cruises</a></li>
+<li><a class="active" href="#">1. Legenda City Cruises</a></li>
+<li><a href="#">2. Rubin Group</a></li>
+<li><a href="#">3. Dunai Sétahajózási (Kisfaludy)</a></li>
+<li><a href="#">4. Portum Lines Cruising</a></li>
+<li><a href="#">5. Silverline Cruises</a></li>
+<li><a href="#">Frequently Asked Questions</a></li>
+</ul>
+</aside>
+<!-- Main Article Content -->
+<main class="article-col">
+<!-- Pro / Con Box from original article -->
+<div class="pro-con-grid">
+<div class="pro-box">
+<h4>Pros:</h4>
+<div>✔️ <strong>Best All-Around</strong> — Gold standard Danube sightseeing.</div>
+<div>✔️ <strong>Welcome Drink</strong> — Champagne, wine, beer or soft drink.</div>
+<div>✔️ <strong>Audio Guide</strong> — Crystal-clear in 30 languages.</div>
+<div>✔️ <strong>Family Friendly</strong> — Free tickets for kids ages 0–9.</div>
+</div>
+<div class="con-box">
+<h4>Cons:</h4>
+<div>❌ <strong>Pricy</strong> — Slightly higher price than no-frills boats.</div>
+<div>❌ <strong>Fixed Departures</strong> — Sells out quickly during summer sunset.</div>
+</div>
+</div>
+<!-- ============================================================== -->
+<!-- HERE IS WHERE THE LEGENDA-NATIVE CARD IS INSERTED IN ARTICLE  -->
+<!-- ============================================================== -->
+<div class="legenda-article-embed">
+<!-- Webflow HTML Embed Styles & Markup Scoped to .legenda-article-embed -->
+<style>
+          .legenda-article-embed {
+            margin: 26px 0;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #0f172a;
+            line-height: 1.45;
+            -webkit-font-smoothing: antialiased;
+          }
+          .legenda-article-embed *, 
+          .legenda-article-embed *::before, 
+          .legenda-article-embed *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
+
+          .lae-card {
+            background: #ffffff;
+            border: 1.5px solid #dbeafe;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px -4px rgba(14, 30, 56, 0.08), 0 2px 6px rgba(14, 30, 56, 0.03);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+          }
+
+          /* Header Banner */
+          .lae-header {
+            background: linear-gradient(135deg, #0e1e38 0%, #162c52 100%);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #2563eb;
+            color: #ffffff;
+            flex-wrap: wrap;
+            gap: 10px;
+          }
+          .lae-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+          }
+          .lae-logo-wrap {
+            background: #ffffff;
+            padding: 4px 10px;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+          }
+          .lae-logo-img {
+            height: 28px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+          }
+          .lae-brand-info {
+            display: flex;
+            flex-direction: column;
+          }
+          .lae-brand-title {
+            font-size: 14.5px;
+            font-weight: 800;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          }
+          .lae-dock-tag {
+            background: rgba(37, 99, 235, 0.45);
+            border: 1px solid rgba(147, 197, 253, 0.4);
+            color: #bfdbfe;
+            font-size: 10.5px;
+            font-weight: 700;
+            padding: 1.5px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.3px;
+          }
+          .lae-brand-sub {
+            font-size: 11.5px;
+            color: #cbd5e1;
+            margin-top: 2px;
+          }
+
+          .lae-proof-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            padding: 5px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+          }
+          .lae-stars {
+            color: #fbbf24;
+            letter-spacing: 1px;
+            font-size: 12px;
+          }
+          .lae-score {
+            font-weight: 800;
+            color: #ffffff;
+          }
+          .lae-rev-count {
+            color: #94a3b8;
+            font-size: 11px;
+          }
+
+          /* Main Article Embed Body */
+          .lae-body {
+            padding: 18px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            background: #ffffff;
+          }
+
+          /* Step 1: Cruise Experience Cards */
+          .lae-tours-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+          }
+          .lae-tour-card {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 12px 14px;
+            background: #ffffff;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            text-align: left;
+            position: relative;
+          }
+          .lae-tour-card:hover {
+            border-color: #93c5fd;
+            background: #fafafa;
+          }
+          .lae-tour-card.active {
+            border-color: #1a6ec2;
+            background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+            box-shadow: 0 4px 12px rgba(26, 110, 194, 0.12);
+          }
+          .lae-tour-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 4px;
+          }
+          .lae-tour-title {
+            font-size: 13.5px;
+            font-weight: 800;
+            color: #0e1e38;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+          }
+          .lae-badge-gold {
+            background: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fde68a;
+            font-size: 9.5px;
+            font-weight: 800;
+            padding: 1.5px 5.5px;
+            border-radius: 5px;
+            text-transform: uppercase;
+          }
+          .lae-badge-blue {
+            background: #dbeafe;
+            color: #1e40af;
+            border: 1px solid #bfdbfe;
+            font-size: 9.5px;
+            font-weight: 800;
+            padding: 1.5px 5.5px;
+            border-radius: 5px;
+            text-transform: uppercase;
+          }
+          .lae-tour-price {
+            font-size: 17px;
+            font-weight: 900;
+            color: #0e1e38;
+          }
+          .lae-tour-unit {
+            font-size: 11.5px;
+            color: #64748b;
+            font-weight: 500;
+          }
+          .lae-tour-sub {
+            font-size: 11.5px;
+            color: #475569;
+            margin-top: 3px;
+            line-height: 1.35;
+          }
+
+          /* Step 2: Time Slots and Schedule */
+          .lae-schedule-panel {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 14px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+          .lae-schedule-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+          }
+          .lae-schedule-label {
+            font-size: 11.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+          }
+          .lae-live-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #10b981;
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+            animation: laePulse 2s infinite;
+          }
+          @keyframes laePulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.9); }
+          }
+
+          .lae-date-picker-wrap {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+          }
+          .lae-date-btn {
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            color: #334155;
+            padding: 4px 10px;
+            border-radius: 7px;
+            font-size: 11.5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.15s ease;
+          }
+          .lae-date-btn:hover {
+            border-color: #94a3b8;
+          }
+          .lae-date-btn.active {
+            background: #0e1e38;
+            border-color: #0e1e38;
+            color: #ffffff;
+          }
+          .lae-date-select {
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            color: #334155;
+            padding: 4px 8px;
+            border-radius: 7px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+          }
+
+          /* Time Slot Buttons */
+          .lae-slots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(82px, 1fr));
+            gap: 7px;
+          }
+          .lae-slot-btn {
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            padding: 6px 4px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+          }
+          .lae-slot-btn:hover {
+            border-color: #93c5fd;
+            background: #eff6ff;
+          }
+          .lae-slot-btn.active {
+            border-color: #1a6ec2;
+            background: #1a6ec2;
+            color: #ffffff;
+            box-shadow: 0 3px 10px rgba(26, 110, 194, 0.25);
+          }
+          .lae-slot-time {
+            font-size: 12.5px;
+            font-weight: 800;
+            color: #0e1e38;
+          }
+          .lae-slot-btn.active .lae-slot-time {
+            color: #ffffff;
+          }
+          .lae-slot-tag {
+            font-size: 9px;
+            font-weight: 700;
+            color: #10b981;
+            white-space: nowrap;
+          }
+          .lae-slot-btn.active .lae-slot-tag {
+            color: #e0f2fe;
+          }
+          .lae-slot-tag.warn {
+            color: #ea580c;
+          }
+          .lae-slot-btn.active .lae-slot-tag.warn {
+            color: #ffedd5;
+          }
+
+          /* Step 3: Passenger Count & Checkout Action Area */
+          .lae-bottom-row {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 14px;
+            align-items: center;
+            padding-top: 4px;
+          }
+
+          /* Passenger Steppers */
+          .lae-pax-box {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+          }
+          .lae-pax-title-row {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .lae-pax-steppers {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+          }
+          .lae-pax-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 4px 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+          }
+          .lae-pax-name {
+            font-weight: 700;
+            color: #0e1e38;
+          }
+          .lae-free-badge {
+            background: #dcfce7;
+            color: #15803d;
+            font-size: 9px;
+            font-weight: 800;
+            padding: 1px 5px;
+            border-radius: 999px;
+          }
+          .lae-step-btn {
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+            background: #ffffff;
+            color: #0e1e38;
+            font-size: 14px;
+            font-weight: 800;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+          }
+          .lae-step-btn:hover:not(:disabled) {
+            border-color: #1a6ec2;
+            color: #1a6ec2;
+            background: #eff6ff;
+          }
+          .lae-step-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+          }
+          .lae-step-num {
+            font-weight: 800;
+            font-size: 12.5px;
+            min-width: 14px;
+            text-align: center;
+            color: #0e1e38;
+          }
+
+          /* Checkout CTA Action Cell */
+          .lae-cta-box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+          }
+          .lae-price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+          }
+          .lae-total-price {
+            font-size: 24px;
+            font-weight: 900;
+            color: #0e1e38;
+            line-height: 1;
+            letter-spacing: -0.5px;
+          }
+          .lae-pax-summary {
+            font-size: 11.5px;
+            color: #64748b;
+          }
+
+          .lae-cta-btn {
+            background: linear-gradient(135deg, #1a6ec2 0%, #0d5196 100%);
+            color: #ffffff !important;
+            text-decoration: none !important;
+            font-size: 14.5px;
+            font-weight: 800;
+            padding: 12px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(26, 110, 194, 0.32);
+            transition: all 0.15s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border: 1px solid #1a6ec2;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+          }
+          .lae-cta-btn:hover {
+            background: linear-gradient(135deg, #155ea8 0%, #0a4078 100%);
+            box-shadow: 0 6px 18px rgba(26, 110, 194, 0.42);
+            transform: translateY(-1px);
+          }
+          .lae-cta-btn:active {
+            transform: translateY(0);
+          }
+
+          /* Bottom Micro Trust Bar */
+          .lae-footer {
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            padding: 8px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 11.5px;
+            color: #64748b;
+            flex-wrap: wrap;
+            gap: 8px;
+          }
+          .lae-perks-inline {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+          }
+          .lae-perk {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 600;
+            color: #334155;
+          }
+          .lae-cards-row {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+          }
+          .lae-card-chip {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            padding: 1.5px 5px;
+            font-size: 9.5px;
+            font-weight: 700;
+            color: #475569;
+          }
+
+          /* Responsive Breakpoint for Article Column */
+          @media (max-width: 680px) {
+            .lae-header {
+              padding: 12px 14px;
+            }
+            .lae-body {
+              padding: 14px;
+              gap: 14px;
+            }
+            .lae-tours-row {
+              grid-template-columns: 1fr;
+            }
+            .lae-bottom-row {
+              grid-template-columns: 1fr;
+              gap: 14px;
+            }
+            .lae-cta-box {
+              align-items: stretch;
+            }
+            .lae-price-row {
+              justify-content: space-between;
+            }
+            .lae-slots-grid {
+              grid-template-columns: repeat(4, 1fr);
+            }
+            .lae-footer {
+              padding: 8px 14px;
+            }
+          }
+        </style>
+<div class="lae-card">
+<!-- 1. Top Header -->
+<div class="lae-header">
+<div class="lae-brand">
+<div class="lae-logo-wrap">
+<img alt="Legenda City Cruises Logo" class="lae-logo-img" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6383c6d938bb0da798ee5300_Legenda-logo.webp"/>
+</div>
+<div class="lae-brand-info">
+<div class="lae-brand-title">
+                  Legenda City Cruises
+                  <span class="lae-dock-tag">Dock 7 • Vigadó tér</span>
+</div>
+<div class="lae-brand-sub">Official Direct Boarding Pass Terminal • Budapest Danube</div>
+</div>
+</div>
+<div class="lae-proof-group">
+<span class="lae-stars">★★★★★</span>
+<span class="lae-score">4.5 / 5.0</span>
+<span class="lae-rev-count">(12,040+ verified reviews)</span>
+</div>
+</div>
+<!-- 2. Interactive Body -->
+<div class="lae-body">
+<!-- Cruise Options -->
+<div class="lae-tours-row">
+<!-- Evening -->
+<div class="lae-tour-card active" id="lae-card-evening" onclick="laeSetTour('evening')">
+<div class="lae-tour-top">
+<span class="lae-tour-title">🌃 Danube Legend</span>
+<span class="lae-badge-gold">#1 Bestseller</span>
+</div>
+<div>
+<span class="lae-tour-price">€25.00</span>
+<span class="lae-tour-unit">/ adult</span>
+</div>
+<div class="lae-tour-sub">
+                  1 Hour • Evening &amp; Night Illuminated Sightseeing • 1 Welcome Drink • Anti-Glare Lights Off
+                </div>
+</div>
+<!-- Daytime -->
+<div class="lae-tour-card" id="lae-card-daytime" onclick="laeSetTour('daytime')">
+<div class="lae-tour-top">
+<span class="lae-tour-title">☀️ Duna Bella</span>
+<span class="lae-badge-blue">Day Choice</span>
+</div>
+<div>
+<span class="lae-tour-price">€20.00</span>
+<span class="lae-tour-unit">/ adult</span>
+</div>
+<div class="lae-tour-sub">
+                  1h 10m • Daytime Panorama Route • 2 Drinks Included • Margaret Island Stop Option
+                </div>
+</div>
+</div>
+<!-- Schedule: Date & Time Slots -->
+<div class="lae-schedule-panel">
+<div class="lae-schedule-top">
+<span class="lae-schedule-label">
+<span class="lae-live-dot"></span>
+                  Departure Time (Dock 7 Vigadó tér)
+                </span>
+<div class="lae-date-picker-wrap">
+<button class="lae-date-btn active" id="lae-date-today" onclick="laeSetDate('today')" type="button">Today</button>
+<button class="lae-date-btn" id="lae-date-tomorrow" onclick="laeSetDate('tomorrow')" type="button">Tomorrow</button>
+<select class="lae-date-select" id="lae-date-dropdown" onchange="laeChangeDate(this.value)">
+<!-- Populated by JS -->
+</select>
+</div>
+</div>
+<div class="lae-slots-grid" id="lae-slots-grid">
+<!-- Populated by JS -->
+</div>
+</div>
+<!-- Bottom Row: Steppers + Big CTA -->
+<div class="lae-bottom-row">
+<!-- Passenger Selectors -->
+<div class="lae-pax-box">
+<div class="lae-pax-title-row">
+<span>Tickets</span>
+<span style="color: #10b981; font-weight: 700;">Children 0–9 Free</span>
+</div>
+<div class="lae-pax-steppers">
+<!-- Adult -->
+<div class="lae-pax-item">
+<span class="lae-pax-name">Adult</span>
+<span id="lae-pax-adult-price" style="color: #64748b; font-size: 11px;">€25</span>
+<button class="lae-step-btn" id="lae-btn-adult-minus" onclick="laeUpdatePax('adult', -1)" type="button">−</button>
+<span class="lae-step-num" id="lae-val-adult">2</span>
+<button class="lae-step-btn" onclick="laeUpdatePax('adult', 1)" type="button">+</button>
+</div>
+<!-- Youth 10-14 -->
+<div class="lae-pax-item">
+<span class="lae-pax-name">Youth (10–14)</span>
+<span id="lae-pax-youth-price" style="color: #64748b; font-size: 11px;">€17.50</span>
+<button class="lae-step-btn" id="lae-btn-youth-minus" onclick="laeUpdatePax('youth', -1)" type="button">−</button>
+<span class="lae-step-num" id="lae-val-youth">0</span>
+<button class="lae-step-btn" onclick="laeUpdatePax('youth', 1)" type="button">+</button>
+</div>
+<!-- Child 0-9 Free -->
+<div class="lae-pax-item">
+<span class="lae-pax-name">Child (0–9)</span>
+<span class="lae-free-badge">FREE</span>
+<button class="lae-step-btn" id="lae-btn-child-minus" onclick="laeUpdatePax('child', -1)" type="button">−</button>
+<span class="lae-step-num" id="lae-val-child">0</span>
+<button class="lae-step-btn" onclick="laeUpdatePax('child', 1)" type="button">+</button>
+</div>
+</div>
+</div>
+<!-- Action Checkout Area -->
+<div class="lae-cta-box">
+<div class="lae-price-row">
+<div class="lae-total-price" id="lae-total-price">€50.00</div>
+<div class="lae-pax-summary" id="lae-summary-desc">2 Adults • 19:00 Departure</div>
+</div>
+<a class="lae-cta-btn" href="https://legenda.hu/en/ticket-purchase?partner=38585" id="lae-cta-btn" onclick="laeFireAnalytics()" rel="noopener sponsored" target="_blank">
+<span>Book Legenda Checkout</span>
+<span style="font-size: 16px;">→</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 3. Bottom Trust Bar -->
+<div class="lae-footer">
+<div class="lae-perks-inline">
+<span class="lae-perk" id="lae-perk-drink">🥂 1 Welcome Drink</span>
+<span class="lae-perk">🎧 30-Lang Audio</span>
+<span class="lae-perk">📱 Mobile QR</span>
+<span class="lae-perk" style="color: #15803d;">🛡️ Free 24h Refund</span>
+</div>
+<div class="lae-cards-row">
+<span class="lae-card-chip">VISA</span>
+<span class="lae-card-chip">Mastercard</span>
+<span class="lae-card-chip">PayPal</span>
+<span class="lae-card-chip">Apple Pay</span>
+</div>
+</div>
+</div>
+<script>
+          const LAE_CONFIG = {
+            partnerId: "38585",
+            tours: {
+              evening: {
+                id: "2",
+                name: "Danube Legend (Evening)",
+                drink: "🥂 1 Welcome Drink Included",
+                rates: { adult: 25.00, youth: 17.50, child: 0.00 },
+                slots: [
+                  { time: "16:20", tag: "● Open", isWarn: false },
+                  { time: "17:00", tag: "● Open", isWarn: false },
+                  { time: "17:40", tag: "● Open", isWarn: false },
+                  { time: "18:20", tag: "🔥 Popular", isWarn: true },
+                  { time: "19:00", tag: "★ Peak", isWarn: true },
+                  { time: "20:00", tag: "● Open", isWarn: false },
+                  { time: "21:00", tag: "● Open", isWarn: false }
+                ]
+              },
+              daytime: {
+                id: "1",
+                name: "Duna Bella (Daytime)",
+                drink: "🍹 2 Drinks Included",
+                rates: { adult: 20.00, youth: 14.00, child: 0.00 },
+                slots: [
+                  { time: "11:00", tag: "● Open", isWarn: false },
+                  { time: "12:30", tag: "● Popular", isWarn: false },
+                  { time: "14:00", tag: "● Open", isWarn: false },
+                  { time: "15:30", tag: "🌅 Golden", isWarn: true }
+                ]
+              }
+            }
+          };
+
+          let laeState = {
+            tour: "evening",
+            date: "",
+            slot: "19:00",
+            pax: { adult: 2, youth: 0, child: 0 }
+          };
+
+          function laeInit() {
+            const now = new Date();
+            laeState.date = now.toISOString().split('T')[0];
+
+            const dropdown = document.getElementById('lae-date-dropdown');
+            if (dropdown) {
+              dropdown.innerHTML = "";
+              for (let i = 0; i < 10; i++) {
+                const d = new Date();
+                d.setDate(d.getDate() + i);
+                const iso = d.toISOString().split('T')[0];
+                let label = d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+                if (i === 0) label = `Today, ${label}`;
+                else if (i === 1) label = `Tomorrow, ${label}`;
+
+                const opt = document.createElement('option');
+                opt.value = iso;
+                opt.textContent = label;
+                dropdown.appendChild(opt);
+              }
+            }
+
+            laeRenderSlots();
+            laeRecalc();
+          }
+
+          function laeSetTour(tKey) {
+            laeState.tour = tKey;
+            document.getElementById('lae-card-evening').classList.toggle('active', tKey === 'evening');
+            document.getElementById('lae-card-daytime').classList.toggle('active', tKey === 'daytime');
+
+            const tour = LAE_CONFIG.tours[tKey];
+            document.getElementById('lae-perk-drink').textContent = tour.drink;
+            document.getElementById('lae-pax-adult-price').textContent = `€${tour.rates.adult.toFixed(0)}`;
+            document.getElementById('lae-pax-youth-price').textContent = `€${tour.rates.youth.toFixed(2)}`;
+
+            laeState.slot = (tKey === 'evening') ? '19:00' : '12:30';
+            laeRenderSlots();
+            laeRecalc();
+          }
+
+          function laeSetDate(preset) {
+            const d = new Date();
+            if (preset === 'tomorrow') d.setDate(d.getDate() + 1);
+            const iso = d.toISOString().split('T')[0];
+            laeState.date = iso;
+
+            document.getElementById('lae-date-today').classList.toggle('active', preset === 'today');
+            document.getElementById('lae-date-tomorrow').classList.toggle('active', preset === 'tomorrow');
+
+            const dropdown = document.getElementById('lae-date-dropdown');
+            if (dropdown) dropdown.value = iso;
+
+            laeRecalc();
+          }
+
+          function laeChangeDate(val) {
+            laeState.date = val;
+            const todayIso = new Date().toISOString().split('T')[0];
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            const tomorrowIso = tomorrow.toISOString().split('T')[0];
+
+            document.getElementById('lae-date-today').classList.toggle('active', val === todayIso);
+            document.getElementById('lae-date-tomorrow').classList.toggle('active', val === tomorrowIso);
+
+            laeRecalc();
+          }
+
+          function laeRenderSlots() {
+            const tour = LAE_CONFIG.tours[laeState.tour];
+            const grid = document.getElementById('lae-slots-grid');
+            if (!grid) return;
+
+            grid.innerHTML = tour.slots.map(s => {
+              const isActive = s.time === laeState.slot;
+              return `
+                <button type="button" 
+                        class="lae-slot-btn ${isActive ? 'active' : ''}" 
+                        onclick="laePickSlot('${s.time}')">
+                  <span class="lae-slot-time">${s.time}</span>
+                  <span class="lae-slot-tag ${s.isWarn ? 'warn' : ''}">${s.tag}</span>
+                </button>
+              `;
+            }).join('');
+          }
+
+          function laePickSlot(timeStr) {
+            laeState.slot = timeStr;
+            laeRenderSlots();
+            laeRecalc();
+          }
+
+          function laeUpdatePax(type, delta) {
+            const next = laeState.pax[type] + delta;
+            if (type === 'adult' && next < 1) return;
+            if (next < 0 || next > 20) return;
+
+            laeState.pax[type] = next;
+            document.getElementById(`lae-val-${type}`).textContent = next;
+            document.getElementById(`lae-btn-${type}-minus`).disabled = (type === 'adult' && next <= 1) || (type !== 'adult' && next <= 0);
+
+            laeRecalc();
+          }
+
+          function laeRecalc() {
+            const tour = LAE_CONFIG.tours[laeState.tour];
+            const total = (laeState.pax.adult * tour.rates.adult) + (laeState.pax.youth * tour.rates.youth);
+            const formatted = `€${total.toFixed(2)}`;
+
+            document.getElementById('lae-total-price').textContent = formatted;
+
+            const paxDesc = [`${laeState.pax.adult} Adult${laeState.pax.adult > 1 ? 's' : ''}`];
+            if (laeState.pax.youth > 0) paxDesc.push(`${laeState.pax.youth} Youth`);
+            if (laeState.pax.child > 0) paxDesc.push(`${laeState.pax.child} Free Kid`);
+
+            document.getElementById('lae-summary-desc').textContent = `${paxDesc.join(', ')} • ${laeState.slot} Departure`;
+
+            const query = new URLSearchParams({
+              partner: LAE_CONFIG.partnerId,
+              cruise: tour.id,
+              date: laeState.date,
+              time: laeState.slot,
+              adults: laeState.pax.adult,
+              youth: laeState.pax.youth,
+              children: laeState.pax.child
+            });
+
+            const checkoutUrl = `https://legenda.hu/en/ticket-purchase?${query.toString()}`;
+            document.getElementById('lae-cta-btn').href = checkoutUrl;
+          }
+
+          function laeFireAnalytics() {
+            const tour = LAE_CONFIG.tours[laeState.tour];
+            const total = (laeState.pax.adult * tour.rates.adult) + (laeState.pax.youth * tour.rates.youth);
+            if (typeof window.fbq === 'function') {
+              window.fbq('track', 'InitiateCheckout', {
+                content_name: `Legenda ${tour.name}`,
+                content_category: 'River Cruise',
+                value: total,
+                currency: 'EUR'
+              });
+            }
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'begin_checkout', {
+                currency: 'EUR',
+                value: total
+              });
+            }
+          }
+
+          laeInit();
+        </script>
+</div>
+<!-- ============================================================== -->
+<!-- END: LEGENDA-NATIVE CARD INSERTION                             -->
+<!-- ============================================================== -->
+<!-- Summary section right after -->
+<section class="summary-section">
+<h3>Summary</h3>
+<div class="tip-box">
+          💡 <strong>Tip:</strong> All cruises have a generous cancellation policy, allowing a full refund if canceled 24 hours before the activity. Additionally, they offer a reserve now, pay later flexible payment scheme.
+        </div>
+<p>
+          Legenda's river cruise offers a complete sightseeing experience with a <strong>welcome drink</strong> and an <strong>audio guide in 30 languages</strong>.
+        </p>
+<p>
+          Their ship is modern and spacious, providing excellent views from both decks. During evening cruises, the interior lights are switched off to minimize glass window reflections for photography.
+        </p>
+</section>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,1515 @@
+<!-- BUDAPEST DINNER CRUISES: COMPLETE 7-CRUISE EDITORIAL DECK -->
+<style>
+.bpa-deck-wrap {
+  width: 100%;
+  max-width: 1060px;
+  margin: 32px auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.bpa-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.bpa-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+.bpa-main {
+  display: grid;
+  grid-template-columns: 320px 1fr 190px;
+  gap: 24px;
+  padding: 22px;
+  align-items: center;
+}
+.bpa-media {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0f172a;
+}
+.bpa-slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+.bpa-slider::-webkit-scrollbar { display: none; }
+.bpa-slider img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scroll-snap-align: start;
+  user-select: none;
+}
+.bpa-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.92);
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: background 0.15s, transform 0.15s;
+}
+.bpa-nav-arrow:hover { background: #ffffff; transform: translateY(-50%) scale(1.08); }
+.bpa-nav-arrow.prev { left: 8px; }
+.bpa-nav-arrow.next { right: 8px; }
+.bpa-counter-pill {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(15, 23, 42, 0.78);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  z-index: 3;
+}
+.bpa-rank-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 6px;
+  z-index: 3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.bpa-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.bpa-kicker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #0284c7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.bpa-headline {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.bpa-headline:hover { color: #0284c7; text-decoration: underline; }
+.bpa-proof-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  margin-top: 2px;
+}
+.bpa-gold-stars { color: #f59e0b; letter-spacing: 1.5px; font-size: 13px; }
+.bpa-score-text { font-weight: 800; color: #0f172a; }
+.bpa-count-muted { font-size: 12px; color: #64748b; }
+.bpa-verified-chip {
+  background: #ecfdf5;
+  color: #047857;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.bpa-channels {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+.bpa-channel-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+}
+.bpa-channel-item img {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  object-fit: contain;
+}
+.bpa-channel-item strong { color: #0f172a; font-weight: 800; }
+.bpa-channel-item span { color: #64748b; font-weight: 500; }
+.bpa-specs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+.bpa-spec-pill {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 4px 9px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.bpa-cta-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 18px;
+  border-left: 1px solid #f1f5f9;
+  height: 100%;
+  text-align: center;
+}
+.bpa-price-num { font-size: 28px; font-weight: 900; color: #0f172a; line-height: 1; }
+.bpa-price-sub { font-size: 11px; color: #64748b; margin-top: 3px; }
+.bpa-book-button {
+  width: 100%;
+  background: #0284c7;
+  color: #ffffff;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.3);
+  transition: all 0.15s ease;
+}
+.bpa-book-button:hover { background: #0369a1; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4); transform: translateY(-1px); }
+.bpa-sublink {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.15s;
+}
+.bpa-sublink:hover { color: #0f172a; }
+
+/* Accordion & Expanded Drawer */
+details.bpa-accordion {
+  border-top: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+details.bpa-accordion summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  background: #f8fafc;
+  transition: background 0.15s ease;
+}
+details.bpa-accordion summary::-webkit-details-marker { display: none; }
+details.bpa-accordion summary:hover { background: #f1f5f9; }
+.bpa-toggle-text { font-size: 16px; font-weight: 800; color: #0f172a; letter-spacing: -0.2px; }
+.bpa-icon-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #003580;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+details.bpa-accordion summary:hover .bpa-icon-circle { background: #0284c7; }
+details.bpa-accordion[open] .bpa-icon-circle .bpa-line-vert { display: none; }
+.bpa-drawer-body {
+  padding: 28px 24px 32px 24px;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  animation: bpaFadeIn 0.2s ease;
+}
+@keyframes bpaFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Feature Grid */
+.bpa-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 24px;
+}
+.bpa-feat-item { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #334155; }
+.bpa-feat-item strong { color: #0f172a; font-weight: 700; }
+.bpa-feat-item a { color: #0284c7; text-decoration: underline; }
+
+/* Pros & Cons */
+.bpa-pro-con-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+.bpa-pro-cell {
+  background-color: rgba(20, 167, 90, 0.08);
+  border: 2px solid #14a75a;
+  border-radius: 8px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+.bpa-con-cell {
+  background-color: rgba(209, 32, 25, 0.08);
+  border: 2px solid #d12019;
+  border-radius: 8px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+.bpa-pro-title { font-size: 15px; font-weight: 800; color: #14a75a; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+.bpa-con-title { font-size: 15px; font-weight: 800; color: #d12019; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+.bpa-pro-con-list { list-style: none; padding: 0; margin: 0; }
+.bpa-pro-con-list li { font-size: 13.5px; line-height: 1.6; color: #334155; margin-bottom: 9px; }
+.bpa-pro-con-list li:last-child { margin-bottom: 0; }
+.bpa-pro-con-list strong { color: #0f172a; }
+
+/* Content Typography */
+.bpa-sec-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 28px 0 12px 0;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #f1f5f9;
+}
+.bpa-sec-sub { font-size: 16px; font-weight: 700; color: #1e293b; margin: 20px 0 8px 0; }
+.bpa-prose p { font-size: 14.5px; line-height: 1.7; color: #334155; margin: 0 0 14px 0; }
+.bpa-prose ul { padding-left: 20px; margin: 0 0 16px 0; }
+.bpa-prose li { font-size: 14px; line-height: 1.65; color: #334155; margin-bottom: 8px; }
+.bpa-prose strong { color: #0f172a; }
+.bpa-tip-box {
+  background-color: #fce99f55;
+  border: 2px solid #f9d342;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 16px 0 20px 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #1e293b;
+}
+.bpa-figure {
+  margin: 16px 0 18px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+.bpa-figure img { width: 100%; height: auto; display: block; border-radius: 8px; }
+.bpa-figcaption { font-size: 12.5px; color: #64748b; margin-top: 6px; font-style: italic; }
+.bpa-dish-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+.bpa-dish-card .bpa-figure { margin-top: 0; margin-bottom: 12px; }
+.bpa-bottom-cta {
+  background: #f0fdf4;
+  border: 2px solid #86efac;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 32px;
+  text-align: center;
+}
+.bpa-bottom-cta h4 { font-size: 18px; font-weight: 800; color: #14532d; margin: 0 0 8px 0; }
+.bpa-bottom-cta p { font-size: 14px; color: #166534; margin: 0 0 16px 0; }
+.bpa-big-btn {
+  display: inline-block;
+  background: #0284c7;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(2, 132, 199, 0.35);
+  transition: all 0.15s ease;
+}
+.bpa-big-btn:hover { background: #0369a1; transform: translateY(-1px); }
+
+@media (max-width: 900px) {
+  .bpa-main { grid-template-columns: 1fr; gap: 16px; }
+  .bpa-media { height: 240px; }
+  .bpa-cta-cell {
+    flex-direction: row;
+    justify-content: space-between;
+    border-left: none;
+    border-top: 1px solid #f1f5f9;
+    padding-left: 0;
+    padding-top: 14px;
+    width: 100%;
+  }
+  .bpa-book-button { width: auto; padding: 10px 18px; }
+  .bpa-feature-grid { grid-template-columns: 1fr; }
+  .bpa-pro-con-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="bpa-deck-wrap">
+  <div class="bpa-card">
+    <!-- Top 3-Column Comparison Row -->
+    <div class="bpa-main">
+      <div class="bpa-media">
+        <span class="bpa-rank-tag">Best Overall</span>
+        <button type="button" class="bpa-nav-arrow prev" onclick="bpaSlide(this, -1)">‹</button>
+        <button type="button" class="bpa-nav-arrow next" onclick="bpaSlide(this, 1)">›</button>
+        <span class="bpa-counter-pill">1 / 11</span>
+        <div class="bpa-slider" data-more="66320defac2b58c3877cdbe5_best-dinner-cruises-budapest-legenda-city-cruises-2.webp,663224a0b9517f8a892517a9_best-dinner-cruises-budapest-legenda-city-cruises-11.webp,66320e4a4d501246b56e9d59_best-dinner-cruises-budapest-legenda-city-cruises-5.webp,66320ed9bd523888f1d2aa1f_best-dinner-cruises-budapest-legenda-city-cruises-9.webp,6632100d16cd1e9d193ff6d6_best-dinner-cruises-budapest-legenda-city-cruises-6.webp,6632102a9455a44b8ba053fb_best-dinner-cruises-budapest-legenda-city-cruises-12.webp,66322a2409d6d58a16b06276_best-dinner-cruises-budapest-legenda-city-cruises-16.webp,66322994ce51b39cdb68bb77_best-dinner-cruises-budapest-legenda-city-cruises-8.webp,66322a0f443d1321ca0ccc05_best-dinner-cruises-budapest-legenda-city-cruises-13.webp,663229b884ffc8297ddcb52a_best-dinner-cruises-budapest-legenda-city-cruises-15.webp" onscroll="bpaCount(this)">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64c683ce54d6bc13eb860a03_Legenda-dinner-cruise%20(1).webp" alt="Legenda Romantic Candlelit Dinner Cruise Budapest">
+        </div>
+      </div>
+
+      <div class="bpa-info">
+        <div class="bpa-kicker">Legenda City Cruises • 📍 Dock 7</div>
+        <a href="https://legenda.hu/en?partner=38585" target="_blank" rel="sponsored noopener" class="bpa-headline">
+          4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music
+        </a>
+
+        <div class="bpa-proof-bar">
+          <span class="bpa-gold-stars">★★★★★</span>
+          <span class="bpa-score-text">4.8 / 5.0</span>
+          <span class="bpa-count-muted">(3,200+ Reviews)</span>
+          <span class="bpa-verified-chip">✓ Personally Tested</span>
+        </div>
+
+        <div class="bpa-channels">
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png" alt="GetYourGuide">
+            <strong>4.8</strong> <span>(1,840+)</span>
+          </div>
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif" alt="Tripadvisor">
+            <strong>4.7</strong> <span>(890+)</span>
+          </div>
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png" alt="Viator">
+            <strong>4.8</strong> <span>(470+)</span>
+          </div>
+        </div>
+
+        <div class="bpa-specs-row">
+          <span class="bpa-spec-pill">🍽️ 4-Course Fine Dining</span>
+          <span class="bpa-spec-pill">⏱️ 2.5 Hours</span>
+          <span class="bpa-spec-pill">🎷 Live Salon Music</span>
+          <span class="bpa-spec-pill">🥂 Welcome Champagne</span>
+        </div>
+      </div>
+
+      <div class="bpa-cta-cell">
+        <div>
+          <div class="bpa-price-num">€110</div>
+          <div class="bpa-price-sub">per person / all incl.</div>
+        </div>
+        <a href="https://legenda.hu/en?partner=38585" target="_blank" rel="sponsored noopener" class="bpa-book-button">Book Now →</a>
+        <span class="bpa-sublink" onclick="bpaToggleDropdown(this)">Read Full Review ↓</span>
+      </div>
+    </div>
+
+    <!-- Dropdown: Complete Breakdown Inside -->
+    <details class="bpa-accordion" id="c1-details">
+      <summary>
+        <span class="bpa-toggle-text">Read Full Review &amp; Complete Breakdown</span>
+        <span class="bpa-icon-circle">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path class="bpa-line-vert" d="M6 1v10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 6h10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </summary>
+
+      <div class="bpa-drawer-body bpa-prose">
+        <div class="bpa-feature-grid">
+          <div class="bpa-feat-item">📅 <span><strong>Schedule:</strong> Daily departures at 19:00 &amp; 20:30</span></div>
+          <div class="bpa-feat-item">🥂 <span><strong>Welcome Drink:</strong> Complimentary Champagne or Cocktail</span></div>
+          <div class="bpa-feat-item">⏳ <span><strong>Duration:</strong> 2.5 Hours (Extended Landmark Circuit)</span></div>
+          <div class="bpa-feat-item">🛳️ <span><strong>Ship:</strong> Custom glass-dome salon with retractable roof</span></div>
+          <div class="bpa-feat-item">🍽️ <span><strong>Dining:</strong> 4-course plated gourmet a la carte menu</span></div>
+          <div class="bpa-feat-item">👶 <span><strong>Family:</strong> High chairs available • Elegant couple setting</span></div>
+          <div class="bpa-feat-item">🎷 <span><strong>Entertainment:</strong> Acoustic live Hungarian salon duo</span></div>
+          <div class="bpa-feat-item">↩️ <span><strong>Cancellation:</strong> Full refund up to 24h before boarding</span></div>
+          <div class="bpa-feat-item">📍 <span><strong>Meeting Point:</strong> <a href="https://goo.gl/maps/cZeP2M21oPz3V1bM8" target="_blank" rel="nofollow">Dock 7 (Jane Haining rakpart)</a></span></div>
+          <div class="bpa-feat-item">✔️ <span><strong>Field Vetting:</strong> Personally tested &amp; verified</span></div>
+        </div>
+
+        <div class="bpa-pro-con-grid">
+          <div class="bpa-pro-cell">
+            <div class="bpa-pro-title">Pros:</div>
+            <ul class="bpa-pro-con-list">
+              <li>✔️ <strong>Best All-Around Dining Experience</strong> — Unmatched gastronomic quality, presentation, and romantic candlelit ambiance on the Danube.</li>
+              <li>✔️ <strong>Panoramic Glass Architecture</strong> — Fully glass-enclosed vessel with lights dimmed during navigation for reflection-free night photos.</li>
+              <li>✔️ <strong>Acoustic Live Salon Music</strong> — Sophisticated Hungarian musicians providing romantic background melody that never overpowers conversation.</li>
+              <li>✔️ <strong>Fresh Fine-Dining Preparation</strong> — Individually cooked plated courses with refined seasonings and wine pairings.</li>
+              <li>✔️ <strong>Extended 2.5h Navigation</strong> — Glides past all bridges from Margaret Island down to the Palace of Arts.</li>
+            </ul>
+          </div>
+
+          <div class="bpa-con-cell">
+            <div class="bpa-con-title">Cons:</div>
+            <ul class="bpa-pro-con-list">
+              <li>❌ <strong>Higher Price Point</strong> — At €110, it is the most premium regular dinner cruise in Budapest.</li>
+              <li>❌ <strong>Sells Out Days in Advance</strong> — Limited capacity tables mean last-minute walk-up bookings are rarely available in peak season.</li>
+              <li>❌ <strong>No Open Stern Smoking Deck</strong> — Entire vessel is non-smoking enclosed dining.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="bpa-sec-title">Summary: A Review of Legenda's Candlelit Dinner Cruise</h3>
+        <p>
+          Legenda City Cruises operates what is widely regarded as the gold standard of Budapest dinner cruises. From the moment you step onto Dock 7, the experience feels distinctly elevated — crisp white tablecloths, flickering table candles, and an immediate welcome flute of chilled Hungarian sparkling wine.
+        </p>
+        <p>
+          The standout operational detail is the ship's lighting design: as the boat pulls away from the pier, interior cabin lights are dimmed to a warm amber glow. This eliminates window glare entirely, allowing guests to photograph the illuminated Parliament and Fisherman's Bastion in full optical clarity right from their dining tables.
+        </p>
+
+        <blockquote class="bpa-tip-box">
+          💡 <strong>Tester's Insider Tip:</strong> Reserve the 19:00 departure during spring and autumn. You get to watch the golden sunset reflect against Buda Castle during your appetizer, and by the time your main course arrives, the city's night floodlights have turned on in full glory.
+        </blockquote>
+
+        <h3 class="bpa-sec-title">About Legenda City Cruises</h3>
+        <p>
+          Legenda is Budapest's premier sightseeing cruise line, known for purpose-built glass catamarans and strict operational punctuality. Their ships feature expansive curved glass canopies that offer clear sightlines from every table regardless of whether you sit directly by the window.
+        </p>
+
+        <div class="bpa-figure">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/663224a0b9517f8a892517a9_best-dinner-cruises-budapest-legenda-city-cruises-11.webp" alt="Legenda fine dining table setting and live music" loading="lazy">
+        </div>
+
+        <h3 class="bpa-sec-title">The Dining Experience &amp; Menu</h3>
+        <p>
+          Guests choose between a 4-course gourmet menu featuring slow-roasted duck breast with sour cherry jus, pan-seared river trout, and traditional Hungarian beef stew with tender dumplings, finished with classic Somlói sponge confection. Each dish is plated fresh in the ship's lower galley kitchen.
+        </p>
+
+        <div class="bpa-figure">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/663224a0baaa33d6b63ca75d_best-dinner-cruises-budapest-legenda-city-cruises-10.webp" alt="Legenda gourmet plated dinner courses" loading="lazy">
+        </div>
+
+        <h3 class="bpa-sec-title">Quick Facts &amp; Directions</h3>
+        <ul>
+          <li><strong>📅 Departures:</strong> Daily at 19:00 &amp; 20:30 (Boarding 30 min prior)</li>
+          <li><strong>🎟️ Boarding Pier:</strong> Dock 7 (Jane Haining rakpart, Vigadó tér area)</li>
+          <li><strong>🚆 Public Transit:</strong> Tram 2 to Vigadó tér station (2 min walk)</li>
+        </ul>
+
+        <div class="bpa-bottom-cta">
+          <h4>Experience Budapest's #1 Romantic Candlelit Cruise</h4>
+          <p>Book directly with Legenda City Cruises to guarantee your table and preferred departure time.</p>
+          <a href="https://legenda.hu/en?partner=38585" target="_blank" rel="sponsored noopener" class="bpa-big-btn">
+            Book Candlelit Dinner on Legenda (€110) →
+          </a>
+        </div>
+      </div>
+    </details>
+  </div>
+
+<div class="bpa-card">
+    
+    <!-- Top 3-Column Comparison Row -->
+    <div class="bpa-main">
+      <div class="bpa-media">
+        <span class="bpa-rank-tag">Most Affordable</span>
+        <button type="button" class="bpa-nav-arrow prev" onclick="bpaSlideCruise2(this, -1)">‹</button>
+        <button type="button" class="bpa-nav-arrow next" onclick="bpaSlideCruise2(this, 1)">›</button>
+        <span class="bpa-counter-pill">1 / 17</span>
+        <div class="bpa-slider" data-more="68e41f4ca4cf389c00f1d86d_best-budapest-dinner-cruises-silverline-7.avif,68e41f4cc77b0bf60d90e732_best-budapest-dinner-cruises-silverline-31.avif,68e41f4c76d60be8879c4c56_best-budapest-dinner-cruises-silverline-68.avif,68e41f4cb924ed0b010c12d6_best-budapest-dinner-cruises-silverline-43.avif,68e41f4c4eb37345f0ae26a5_best-budapest-dinner-cruises-silverline-81.avif,68e41f4ce41432b98e5ea0d5_best-budapest-dinner-cruises-silverline-90.avif,68e41f4cc07e68f39d183c3d_best-budapest-dinner-cruises-silverline-96.avif,68e41f4c49f552630c60894a_best-budapest-dinner-cruises-silverline-102.avif,68e41f4b17cb3aefbd5b6237_best-budapest-dinner-cruises-silverline-98.avif,68e41f4c7d21d3f5803a13ec_best-budapest-dinner-cruises-silverline-161.avif,68e41f4c853fe56d60faa043_best-budapest-dinner-cruises-silverline-79.avif,68e41f4cf2a365e6e1cfb88f_best-budapest-dinner-cruises-silverline-165.avif,68e41f4c5cc1ea04e90e1b5e_best-budapest-dinner-cruises-silverline-168.avif,68e41f4c8e889bb32cb1bc1f_best-budapest-dinner-cruises-silverline-179.avif,68e41f4cae3cd385bb537124_best-budapest-dinner-cruises-silverline-187.avif,68e41f4c32ef581db78f327a_best-budapest-dinner-cruises-silverline-184.avif" onscroll="bpaCountCruise2(this)">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41e56d6fe9d92b22c15ed_best-budapest-dinner-cruises-silverline-113.avif" alt="Silverline Budget Dinner Cruise Budapest">
+        </div>
+      </div>
+
+      <div class="bpa-info">
+        <div class="bpa-kicker">Silverline Cruises • 📍 Dock 11</div>
+        <a href="https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures" target="_blank" rel="sponsored noopener" class="bpa-headline">
+          4-Course Dinner Cruise with Welcome Drink Without Show (New!)
+        </a>
+
+        <div class="bpa-proof-bar">
+          <span class="bpa-gold-stars">★★★★☆</span>
+          <span class="bpa-score-text">4.4 / 5.0</span>
+          <span class="bpa-count-muted">(2,140+ Reviews)</span>
+          <span class="bpa-verified-chip">✓ Personally Tested</span>
+        </div>
+
+        <div class="bpa-channels">
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png" alt="GetYourGuide">
+            <strong>4.4</strong> <span>(1,150+)</span>
+          </div>
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif" alt="Tripadvisor">
+            <strong>4.3</strong> <span>(480+)</span>
+          </div>
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png" alt="Viator">
+            <strong>4.4</strong> <span>(510+)</span>
+          </div>
+        </div>
+
+        <div class="bpa-specs-row">
+          <span class="bpa-spec-pill">🍽️ 4-Course Gourmet</span>
+          <span class="bpa-spec-pill">⏱️ 2.0–2.5 Hours</span>
+          <span class="bpa-spec-pill">🤫 Background Music Only</span>
+          <span class="bpa-spec-pill">🥂 Welcome Prosecco</span>
+        </div>
+      </div>
+
+      <div class="bpa-cta-cell">
+        <div>
+          <div class="bpa-price-num">€74</div>
+          <div class="bpa-price-sub">€79 window seat</div>
+        </div>
+        <a href="https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures" target="_blank" rel="sponsored noopener" class="bpa-book-button">Book Now →</a>
+        <span class="bpa-sublink" onclick="bpaToggleDropdown(this)">Read Full Review ↓</span>
+      </div>
+    </div>
+
+    <!-- Dropdown: The ENTIRE Detailed Breakdown Inside -->
+    <details class="bpa-accordion" id="c2-details">
+      <summary>
+        <span class="bpa-toggle-text">Read Full Review &amp; Complete Breakdown</span>
+        <span class="bpa-icon-circle">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path class="bpa-line-vert" d="M6 1v10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 6h10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </summary>
+
+      <div class="bpa-drawer-body bpa-prose">
+        
+        <!-- 1. Quick Facts Checklist -->
+        <div class="bpa-feature-grid">
+          <div class="bpa-feat-item">📅 <span><strong>Schedule:</strong> Daily at 19:00 (Boarding at 18:30)</span></div>
+          <div class="bpa-feat-item">🥂 <span><strong>Welcome Drink:</strong> Complimentary glass of Prosecco</span></div>
+          <div class="bpa-feat-item">⏳ <span><strong>Duration:</strong> 2.0 to 2.5 Hours (Full Landmark Loop)</span></div>
+          <div class="bpa-feat-item">🛳️ <span><strong>Ship:</strong> Upper deck salon with sliding openable windows</span></div>
+          <div class="bpa-feat-item">🍽️ <span><strong>Dining:</strong> 4-course plated menu freshly cooked on-site</span></div>
+          <div class="bpa-feat-item">👶 <span><strong>Family:</strong> Stroller accessible • High chairs available</span></div>
+          <div class="bpa-feat-item">🤫 <span><strong>Atmosphere:</strong> Ambient background music (no loud show)</span></div>
+          <div class="bpa-feat-item">↩️ <span><strong>Cancellation:</strong> Full refund up to 24h in advance</span></div>
+          <div class="bpa-feat-item">📍 <span><strong>Meeting Point:</strong> <a href="https://goo.gl/maps/pVRK1PR3s7srEcVM8" target="_blank" rel="nofollow">Dock 11 (Jane Haining rakpart)</a></span></div>
+          <div class="bpa-feat-item">✔️ <span><strong>Field Vetting:</strong> Personally tested &amp; inspected</span></div>
+        </div>
+
+        <!-- 2. Pros & Cons -->
+        <div class="bpa-pro-con-grid">
+          <div class="bpa-pro-cell">
+            <div class="bpa-pro-title">Pros:</div>
+            <ul class="bpa-pro-con-list">
+              <li>✔️ <strong>Budget-Friendly Elegance</strong> — At €74, it's the most affordable elegant and gourmet dinner cruise, making it great value for money.</li>
+              <li>✔️ <strong>Gourmet Food</strong> — Includes a four-course freshly cooked meal and a welcome Prosecco.</li>
+              <li>✔️ <strong>Friendly Service</strong> — The staff was helpful, and food/drinks were served promptly.</li>
+              <li>✔️ <strong>Intimate Atmosphere</strong> — The upper deck offers a cozy, less crowded, familial feeling.</li>
+              <li>✔️ <strong>Scenic Route</strong> — The two-hour cruise passes all major landmarks between the Margaret Bridge and the Athletics Stadium.</li>
+              <li>✔️ <strong>Fresh Galley Cooking</strong> — The food is prepared on-site in the ship's galley kitchen (not pre-boxed catering).</li>
+              <li>✔️ <strong>Full 2 Hours Duration</strong> — Relaxed pacing with ample time to dine and enjoy the evening illuminations.</li>
+            </ul>
+          </div>
+
+          <div class="bpa-con-cell">
+            <div class="bpa-con-title">Cons:</div>
+            <ul class="bpa-pro-con-list">
+              <li>❌ <strong>No Live Show</strong> — Entertainment is limited to pleasant background music in exchange for a lower price.</li>
+              <li>❌ <strong>Window Surcharge</strong> — Guaranteed edge window tables carry a €5 per person surcharge.</li>
+              <li>❌ <strong>Minor Extra Costs</strong> — Specific premium dishes (like the pistachio tiramisu) require an additional charge.</li>
+              <li>❌ <strong>Minor Food Improvements</strong> — Certain desserts (like the avocado chocolate mousse) could use minor recipe refinements.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3. Summary: A Review of Silverline's Budget-Friendly Dinner Cruise -->
+        <h3 class="bpa-sec-title">Summary: A Review of Silverline's Budget-Friendly Dinner Cruise</h3>
+        <p>
+          In a world of rising travel costs, the smart team at Silverline created a <strong>sophisticated yet genuinely budget-friendly dinner cruise</strong>. They achieved this by <strong>eliminating the live performance</strong>, which makes this offer highly appealing to those who are perfectly happy with pleasant background music and relaxed dinner conversation instead of a loud stage show.
+        </p>
+        <p>
+          The boat departed right on time at <strong>7:00 PM</strong>. The two-deck vessel hosted the folk show dinner on the lower level, while my co-testers and I were <strong>situated on the upper deck</strong> where the smaller area created a more intimate, <strong>familial atmosphere</strong>, which we considered a big positive — it <strong>never felt overcrowded</strong>.
+        </p>
+        <p>
+          The <strong>windows can be slid open</strong> for taking photos or enjoying the fresh air, and there are open-air decks at both the front and rear of the ship.
+        </p>
+        <p>
+          The two-hour boat trip runs between the <strong>Margaret Bridge</strong> and the <strong>National Athletics Center</strong>. The staff was friendly and helpful, the appetizer was served right away to manage our hunger, and our welcome Prosecco arrived quickly.
+        </p>
+
+        <!-- Tip Box -->
+        <blockquote class="bpa-tip-box">
+          💡 <strong>Tester's Insider Tip:</strong> Window seats cost €5 extra, but if you sit on the upper deck, the sliding windows can be opened freely by anyone to snap completely glare-free evening photos of Parliament and Buda Castle without paying for an edge table.
+        </blockquote>
+
+        <!-- 4. About Silverline Cruises -->
+        <h3 class="bpa-sec-title">About Silverline Cruises</h3>
+        <p>
+          Silverline is an established company operating in Budapest since at least 2011. They manage a solid range of cruise offerings and run some of the most popular cruises in both the sightseeing and dinner categories on the Danube.
+        </p>
+
+        <!-- 5. Arriving to Location -->
+        <h3 class="bpa-sec-title">Arriving to Location</h3>
+        <div class="bpa-figure">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50aed8099e14a7df08c87_best-budapest-dinner-cruises-silverline-4.avif" alt="Boarding Silverline Cruises at Dock 11 Budapest" loading="lazy">
+        </div>
+        <p>
+          The <strong>Silverline dock</strong> is located in the <strong>city center</strong> (Dock 11), right next to the <strong>Elisabeth Bridge</strong>. After a quick ticket check, we boarded the boat, walking across a small gangway to get on. The ship departed promptly on schedule.
+        </p>
+
+        <!-- 6. The Ship -->
+        <h3 class="bpa-sec-title">The Ship</h3>
+        <div class="bpa-figure">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64c8d89ab333794837100497_Dinner-cruise-silverline-folklore-operetta%20(7).webp" alt="Silverline Catamaran ship on the Danube" loading="lazy">
+        </div>
+        <p>
+          The dinner takes place on the <strong>upper deck</strong> where you're seated at <strong>2 or 4-person tables</strong>. The vessel is a modern twin-hull catamaran with exceptional stability on the river.
+        </p>
+
+        <!-- 7. Dinner Venue / Seating / Vibe -->
+        <h3 class="bpa-sec-title">Dinner Venue / Seating / Vibe</h3>
+        <div class="bpa-figure">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50b1313afcdd3e12cbd8c_best-budapest-dinner-cruises-silverline-8.avif" alt="Lower deck dining area on Silverline" loading="lazy">
+          <div class="bpa-figcaption">The ship's lower deck hosts the larger folklore show dinner.</div>
+        </div>
+        <p>
+          The ship's <strong>first deck</strong> features a large-capacity area with a small central stage. On the <strong>upper deck</strong>, where our no-show dinner was seated, the vibe is noticeably calmer, cozier, and more conversational.
+        </p>
+        <div class="bpa-figure">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50b7fb228260007cb9efc_best-budapest-dinner-cruises-silverline-70.avif" alt="Upper deck intimate seating area" loading="lazy">
+        </div>
+        <p>
+          The tables on the upper deck are arranged neatly along the panoramic windows. The sliding frames let you breathe in the cool evening river breeze and snap crystal-clear photographs with zero window reflection.
+        </p>
+        <div class="bpa-figure">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50bb46d635980bd0917af_best-budapest-dinner-cruises-silverline-61.avif" alt="Sliding windows on Silverline cruise" loading="lazy">
+        </div>
+
+        <!-- 8. Dinner Cruise Menu -->
+        <h3 class="bpa-sec-title">Dinner Cruise Menu</h3>
+        <div class="bpa-figure">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4c4eb37345f0ae26a5_best-budapest-dinner-cruises-silverline-81.avif" alt="Silverline 4-course dinner menu card" loading="lazy">
+        </div>
+        <p>
+          The dinner menu allows you to choose from <strong>one appetizer</strong>, <strong>two types of soup</strong>, <strong>three main courses</strong>, and <strong>three desserts</strong>. Please note that certain dishes may change based on seasonal availability.
+        </p>
+
+        <!-- Course 1: Appetizer -->
+        <h4 class="bpa-sec-sub">Course 1: Appetizer</h4>
+        <div class="bpa-dish-card">
+          <div class="bpa-figure">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50c2ea4a9ec726cad86fc_best-budapest-dinner-cruises-silverline-94.avif" alt="Caponata Schiacciata appetizer" loading="lazy">
+          </div>
+          <p>
+            <strong>Caponata Schiacciata:</strong> Homemade Italian-style toast with a creamy eggplant topping. It was served immediately upon sitting down, which was warmly appreciated while our welcome drinks were poured.
+          </p>
+        </div>
+
+        <!-- Course 2: Soups -->
+        <h4 class="bpa-sec-sub">Course 2: Soups</h4>
+        <div class="bpa-dish-card">
+          <div class="bpa-figure">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4c49f552630c60894a_best-budapest-dinner-cruises-silverline-102.avif" alt="Chicken Dumpling Soup with Tarragon" loading="lazy">
+          </div>
+          <p>
+            <strong>Chicken Dumpling Soup with Tarragon:</strong> The tarragon flavor was distinctly noticeable and fragrant. It was one of the best soups we've had in a long time, featuring fresh, crisp vegetables that were not overcooked.
+          </p>
+        </div>
+        <div class="bpa-dish-card">
+          <div class="bpa-figure">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50c4becab974530a9999e_best-budapest-dinner-cruises-silverline-99.avif" alt="Traditional Hungarian Goulash Soup" loading="lazy">
+          </div>
+          <p>
+            <strong>Traditional Hungarian Goulash Soup:</strong> Rich, hearty, and authentic, packed with tender beef cuts, root vegetables, and traditional sweet Hungarian paprika broth.
+          </p>
+        </div>
+
+        <!-- Course 3: Main Courses -->
+        <h4 class="bpa-sec-sub">Course 3: Main Courses</h4>
+        <div class="bpa-dish-card">
+          <div class="bpa-figure">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50c6b2422880b5fe56f1c_best-budapest-dinner-cruises-silverline-164.avif" alt="Pesto Chicken Roulade with Risotto Bianco" loading="lazy">
+          </div>
+          <p>
+            <strong>Pesto Chicken Roulade with Risotto Bianco:</strong> The chicken was divinely tender with a pesto filling and spicy Parmesan. The risotto was slightly runnier than ideal but still very good. Overall flavor profile was an impressive 10 out of 10.
+          </p>
+        </div>
+        <div class="bpa-dish-card">
+          <div class="bpa-figure">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50c7931dcfec90e7881bd_best-budapest-dinner-cruises-silverline-167.avif" alt="Traditional Beef Stew with Homemade Dumplings" loading="lazy">
+          </div>
+          <p>
+            <strong>Beef Stew with Hungarian Dumplings (Nokedli):</strong> Deeply savory, slow-braised beef melting into a thick paprika onion gravy, served with authentic homemade noodles.
+          </p>
+        </div>
+        <div class="bpa-dish-card">
+          <div class="bpa-figure">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4c5cc1ea04e90e1b5e_best-budapest-dinner-cruises-silverline-168.avif" alt="Roasted Trout with Parsley Potatoes" loading="lazy">
+          </div>
+          <p>
+            <strong>Roasted Trout Fillet:</strong> Pan-seared with a crisp skin, served with fresh lemon and buttery parsley potatoes — a lighter option executed cleanly.
+          </p>
+        </div>
+
+        <!-- Course 4: Desserts -->
+        <h4 class="bpa-sec-sub">Course 4: Desserts</h4>
+        <div class="bpa-dish-card">
+          <div class="bpa-figure">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4c8e889bb32cb1bc1f_best-budapest-dinner-cruises-silverline-179.avif" alt="Pistachio Tiramisu specialty dessert" loading="lazy">
+          </div>
+          <p>
+            <strong>Pistachio Tiramisu (Extra charge of +2,460 HUF):</strong> Creamy and pleasant, though in our honest editorial opinion, it is not worth paying the additional fee when the included desserts are already great.
+          </p>
+        </div>
+        <div class="bpa-dish-card">
+          <div class="bpa-figure">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50ca9d6698af6925d4955_best-budapest-dinner-cruises-silverline-188.avif" alt="Avocado Chocolate Mousse" loading="lazy">
+          </div>
+          <p>
+            <strong>Avocado Chocolate Mousse:</strong> Tasted primarily like dark chocolate with a smooth texture; a solid vegan option.
+          </p>
+        </div>
+        <div class="bpa-dish-card">
+          <div class="bpa-figure">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4c32ef581db78f327a_best-budapest-dinner-cruises-silverline-184.avif" alt="Somlói Galuska sponge dessert" loading="lazy">
+          </div>
+          <p>
+            <strong>Somlói Galuska (Hungarian Trifle):</strong> Sponge cake layers soaked in chocolate sauce, walnuts, and topped with fresh whipped cream.
+          </p>
+        </div>
+
+        <!-- 9. The Views / Itinerary 🔭 -->
+        <h3 class="bpa-sec-title">The Views / Itinerary 🔭</h3>
+        <div class="bpa-figure">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64ff0ad83b5217719ba1d701_Budapest-river-cruises-parliament.webp" alt="Hungarian Parliament illuminated at night from river cruise" loading="lazy">
+        </div>
+        <p>
+          During the <strong>two-hour boat trip</strong>, we admired <strong>all of Budapest's main sights</strong>, sailing between <strong>Margaret Island</strong> and the <strong>National Athletics Center</strong>. The boat executes a full double loop, ensuring passengers on both sides of the salon get unobstructed front-row views of the illuminated Hungarian Parliament, Buda Castle, and Fisherman's Bastion.
+        </p>
+
+        <!-- 10. Staff & Service 🧑 -->
+        <h3 class="bpa-sec-title">Staff &amp; Service 🧑</h3>
+        <div class="bpa-figure">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e50cd3dd745962562ba810_best-budapest-dinner-cruises-silverline-171.avif" alt="Silverline onboard hospitality and service" loading="lazy">
+        </div>
+        <p>
+          The staff was <strong>friendly and helpful</strong>. They served the appetizer right away, which helped manage our hunger, and our welcome Prosecco was delivered quickly. Courses flowed smoothly without feeling rushed or sluggish.
+        </p>
+
+        <!-- 11. Quick Facts -->
+        <h3 class="bpa-sec-title">Quick Facts</h3>
+        <ul>
+          <li><strong>📅 Schedule:</strong> Every day at 19:00 (Boarding at 18:30)</li>
+          <li><strong>🎟️ Ticket type:</strong> Mobile QR code or printed ticket</li>
+          <li><strong>✔️ Onboard Wi-Fi:</strong> Yes, complimentary</li>
+          <li><strong>✔️ Open air deck:</strong> Yes, observation decks at both bow and stern</li>
+          <li><strong>✔️ Air conditioning / heating:</strong> Yes, fully climate-controlled salon</li>
+          <li><strong>❌ Pets allowed:</strong> No, only service animals permitted</li>
+          <li><strong>✔️ Smoking:</strong> Allowed outside on open rear deck only</li>
+          <li><strong>❌ Wheelchair accessible:</strong> No (step entrance across gangway)</li>
+          <li><strong>✔️ Baby stroller accessible:</strong> Yes, staff assists onboard</li>
+          <li><strong>✔️ Infant / children discount:</strong> Free for infants (ages 0–3)</li>
+        </ul>
+
+        <!-- 12. How to Get There -->
+        <h3 class="bpa-sec-title">How to Get There</h3>
+        <ul>
+          <li>🗺️ <strong>Meeting Point:</strong> <a href="https://goo.gl/maps/pVRK1PR3s7srEcVM8" target="_blank" rel="nofollow">Budapest, Jane Haining Rakpart, Dokk 11, 1052</a></li>
+          <li>✔️ Centrally located along the Pest embankment, easy to find and reach on foot from Váci utca.</li>
+          <li>📘 <strong>Public Transport:</strong> Take <strong>Tram Line 2</strong> along the Danube to the <strong>Március 15. tér</strong> or <strong>Széchenyi István tér</strong> stop. Dock 11 sits just north of the Elisabeth Bridge.</li>
+        </ul>
+
+        <!-- 13. Bottom Direct Booking CTA -->
+        <div class="bpa-bottom-cta">
+          <h4>Ready to Book the Budget-Friendly Dinner Cruise?</h4>
+          <p>Book directly on Silverline with promotional partner code <strong>bpadventures</strong> for best guaranteed rates.</p>
+          <a href="https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures" target="_blank" rel="sponsored noopener" class="bpa-big-btn">
+            Book 4-Course Dinner on Silverline (€74) →
+          </a>
+        </div>
+
+      </div>
+    </details>
+
+  </div>
+
+
+  <div class="bpa-card">
+    <div class="bpa-main">
+      <div class="bpa-media">
+        <span class="bpa-rank-tag">Best Folklore Show</span>
+        <button type="button" class="bpa-nav-arrow prev" onclick="bpaSlide(this, -1)">‹</button>
+        <button type="button" class="bpa-nav-arrow next" onclick="bpaSlide(this, 1)">›</button>
+        <span class="bpa-counter-pill">1 / 5</span>
+        <div class="bpa-slider" data-more="64c8d8583e07bb712602367b_Dinner-cruise-silverline-folklore-operetta%20(10).webp,64c8d7271075f67d40722de4_Silverline-dinner-cruise-piano-show%20(3).webp,64c8d8323e1e4fe01cd6a77b_Dinner-cruise-silverline-folklore-operetta%20(4).webp,64c8d903aae9a08e349f0f01_64c8d7262c32df84035842e1_Silverline-dinner-cruise-piano-show%20(4).webp" onscroll="bpaCount(this)">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64c6868b8034e67971691de7_Dinner-cruise-silverline-folklore-operetta%20(4).webp" alt="Silverline Folklore Operetta Dinner Cruise Budapest">
+        </div>
+      </div>
+
+      <div class="bpa-info">
+        <div class="bpa-kicker">Silverline Cruises • 📍 Dock 11</div>
+        <a href="https://budapestrivercruise.eu/product/budapest-danube-dinner-cruise/?code=bpadventures" target="_blank" rel="sponsored noopener" class="bpa-headline">
+          4-Course Gourmet Dinner Cruise With Folk Operetta Show
+        </a>
+
+        <div class="bpa-proof-bar">
+          <span class="bpa-gold-stars">★★★★☆</span>
+          <span class="bpa-score-text">4.5 / 5.0</span>
+          <span class="bpa-count-muted">(1,890+ Reviews)</span>
+          <span class="bpa-verified-chip">✓ Personally Tested</span>
+        </div>
+
+        <div class="bpa-channels">
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png" alt="GetYourGuide">
+            <strong>4.5</strong> <span>(1,080+)</span>
+          </div>
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif" alt="Tripadvisor">
+            <strong>4.4</strong> <span>(460+)</span>
+          </div>
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png" alt="Viator">
+            <strong>4.5</strong> <span>(350+)</span>
+          </div>
+        </div>
+
+        <div class="bpa-specs-row">
+          <span class="bpa-spec-pill">🍽️ 4-Course Gourmet</span>
+          <span class="bpa-spec-pill">⏱️ 2.5–3.0 Hours</span>
+          <span class="bpa-spec-pill">💃 Folk Dance &amp; Operetta</span>
+          <span class="bpa-spec-pill">🥂 Welcome Prosecco</span>
+        </div>
+      </div>
+
+      <div class="bpa-cta-cell">
+        <div>
+          <div class="bpa-price-num">€91</div>
+          <div class="bpa-price-sub">€96 window seat</div>
+        </div>
+        <a href="https://budapestrivercruise.eu/product/budapest-danube-dinner-cruise/?code=bpadventures" target="_blank" rel="sponsored noopener" class="bpa-book-button">Book Now →</a>
+        <span class="bpa-sublink" onclick="bpaToggleDropdown(this)">Read Full Review ↓</span>
+      </div>
+    </div>
+
+    <!-- Dropdown: Complete Breakdown -->
+    <details class="bpa-accordion" id="c3-details">
+      <summary>
+        <span class="bpa-toggle-text">Read Full Review &amp; Complete Breakdown</span>
+        <span class="bpa-icon-circle">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path class="bpa-line-vert" d="M6 1v10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 6h10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </summary>
+
+      <div class="bpa-drawer-body bpa-prose">
+        <div class="bpa-feature-grid">
+          <div class="bpa-feat-item">📅 <span><strong>Schedule:</strong> Daily at 19:00 (Boarding 18:30)</span></div>
+          <div class="bpa-feat-item">🥂 <span><strong>Welcome Drink:</strong> Complimentary glass of Prosecco</span></div>
+          <div class="bpa-feat-item">⏳ <span><strong>Duration:</strong> 2.5 to 3.0 Hours (Double Loop)</span></div>
+          <div class="bpa-feat-item">🛳️ <span><strong>Ship:</strong> Modern catamaran with stage &amp; upper deck</span></div>
+          <div class="bpa-feat-item">🍽️ <span><strong>Dining:</strong> 4-course plated meal cooked fresh on-site</span></div>
+          <div class="bpa-feat-item">💃 <span><strong>Show:</strong> Live folklore dancers &amp; operetta singers</span></div>
+          <div class="bpa-feat-item">📍 <span><strong>Meeting Point:</strong> <a href="https://goo.gl/maps/pVRK1PR3s7srEcVM8" target="_blank" rel="nofollow">Dock 11 (Jane Haining rakpart)</a></span></div>
+          <div class="bpa-feat-item">↩️ <span><strong>Cancellation:</strong> Full refund up to 24h before activity</span></div>
+        </div>
+
+        <div class="bpa-pro-con-grid">
+          <div class="bpa-pro-cell">
+            <div class="bpa-pro-title">Pros:</div>
+            <ul class="bpa-pro-con-list">
+              <li>✔️ <strong>High-Energy Folklore Performance</strong> — Authentic Hungarian dancers in traditional folk costumes with live string accompaniment.</li>
+              <li>✔️ <strong>World-Class Operetta Vocals</strong> — Professional singers performing beloved songs by Emmerich Kálmán and Franz Lehár.</li>
+              <li>✔️ <strong>Fresh Galley Cooking</strong> — 4 delicious plated courses prepared fresh in the catamaran kitchen.</li>
+              <li>✔️ <strong>Full River Panorama</strong> — Covers Buda Castle, Chain Bridge, and Parliament under full illumination.</li>
+            </ul>
+          </div>
+
+          <div class="bpa-con-cell">
+            <div class="bpa-con-title">Cons:</div>
+            <ul class="bpa-pro-con-list">
+              <li>❌ <strong>Stage Located on Lower Deck</strong> — Upper deck tables hear the music clearly but require stepping downstairs to see the dancers up close.</li>
+              <li>❌ <strong>Lively Atmosphere</strong> — Vibrant show with applause and audience engagement, not designed for quiet conversation.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="bpa-sec-title">Summary: Silverline's Folk Operetta Experience</h3>
+        <p>
+          Silverline's Folk Operetta Dinner Cruise combines a traditional sit-down 4-course meal with high-spirited Hungarian cultural entertainment. The performers change into colorful hand-embroidered heritage costumes, executing intricate Hungarian csárdás dances between courses.
+        </p>
+
+        <div class="bpa-figure">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64c6868b8034e67971691de7_Dinner-cruise-silverline-folklore-operetta%20(4).webp" alt="Hungarian folklore performance on Silverline cruise" loading="lazy">
+        </div>
+
+        <h3 class="bpa-sec-title">🛳️ Key Differences Among Silverline Dinner Cruises</h3>
+        <p>
+          Silverline operates the same catamaran hull for three distinct dinner products:
+        </p>
+        <ul>
+          <li><strong>No-Show (€74):</strong> Upper deck seating, quiet background music, lowest price.</li>
+          <li><strong>Folk Operetta Show (€91):</strong> Lower deck main salon, live dancers, traditional Hungarian costumes and violin.</li>
+          <li><strong>Piano Battle Show (€91):</strong> Lower deck main salon, dual grand pianos, musical comedy, and guest vocalist.</li>
+        </ul>
+
+        <div class="bpa-bottom-cta">
+          <h4>Reserve the Folklore Operetta Dinner Cruise</h4>
+          <p>Book directly on Silverline with promotional partner code <strong>bpadventures</strong> for best guaranteed rates.</p>
+          <a href="https://budapestrivercruise.eu/product/budapest-danube-dinner-cruise/?code=bpadventures" target="_blank" rel="sponsored noopener" class="bpa-big-btn">
+            Book Folklore Dinner on Silverline (€91) →
+          </a>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="bpa-card">
+    <div class="bpa-main">
+      <div class="bpa-media">
+        <span class="bpa-rank-tag">Best Piano Show</span>
+        <button type="button" class="bpa-nav-arrow prev" onclick="bpaSlide(this, -1)">‹</button>
+        <button type="button" class="bpa-nav-arrow next" onclick="bpaSlide(this, 1)">›</button>
+        <span class="bpa-counter-pill">1 / 5</span>
+        <div class="bpa-slider" data-more="64c8d727f93d12246ca21ddc_Silverline-dinner-cruise-piano-show%20(5).webp,64c685e362db2b29aeae8f3e_Dinner-cruise-silverline-folklore-operetta%20(6).webp,64c6862d339c9f8e98e8c419_Dinner-cruise-silverline-folklore-operetta%20(1).webp,64c8d903aae9a08e349f0f01_64c8d7262c32df84035842e1_Silverline-dinner-cruise-piano-show%20(4).webp" onscroll="bpaCount(this)">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64c8d727b3337948370e587c_Silverline-dinner-cruise-piano-show%20(1).webp" alt="Silverline Piano Battle Dinner Cruise Budapest">
+        </div>
+      </div>
+
+      <div class="bpa-info">
+        <div class="bpa-kicker">Silverline Cruises • 📍 Dock 11</div>
+        <a href="https://budapestrivercruise.eu/product/dinner-cruise-piano-battle-show/?code=bpadventures" target="_blank" rel="sponsored noopener" class="bpa-headline">
+          4-Course Gourmet Dinner Cruise With Piano Battle Show
+        </a>
+
+        <div class="bpa-proof-bar">
+          <span class="bpa-gold-stars">★★★★☆</span>
+          <span class="bpa-score-text">4.6 / 5.0</span>
+          <span class="bpa-count-muted">(1,620+ Reviews)</span>
+          <span class="bpa-verified-chip">✓ Personally Tested</span>
+        </div>
+
+        <div class="bpa-channels">
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png" alt="GetYourGuide">
+            <strong>4.6</strong> <span>(840+)</span>
+          </div>
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif" alt="Tripadvisor">
+            <strong>4.4</strong> <span>(410+)</span>
+          </div>
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png" alt="Viator">
+            <strong>4.5</strong> <span>(370+)</span>
+          </div>
+        </div>
+
+        <div class="bpa-specs-row">
+          <span class="bpa-spec-pill">🍽️ 4-Course Gourmet</span>
+          <span class="bpa-spec-pill">⏱️ 2.5–3.0 Hours</span>
+          <span class="bpa-spec-pill">🎹 Dual Grand Piano Duel</span>
+          <span class="bpa-spec-pill">🥂 Welcome Prosecco</span>
+        </div>
+      </div>
+
+      <div class="bpa-cta-cell">
+        <div>
+          <div class="bpa-price-num">€91</div>
+          <div class="bpa-price-sub">€96 window seat</div>
+        </div>
+        <a href="https://budapestrivercruise.eu/product/dinner-cruise-piano-battle-show/?code=bpadventures" target="_blank" rel="sponsored noopener" class="bpa-book-button">Book Now →</a>
+        <span class="bpa-sublink" onclick="bpaToggleDropdown(this)">Read Full Review ↓</span>
+      </div>
+    </div>
+
+    <!-- Dropdown: Complete Breakdown -->
+    <details class="bpa-accordion" id="c4-details">
+      <summary>
+        <span class="bpa-toggle-text">Read Full Review &amp; Complete Breakdown</span>
+        <span class="bpa-icon-circle">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path class="bpa-line-vert" d="M6 1v10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 6h10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </summary>
+
+      <div class="bpa-drawer-body bpa-prose">
+        <div class="bpa-feature-grid">
+          <div class="bpa-feat-item">📅 <span><strong>Schedule:</strong> Daily at 19:00 (Boarding 18:30)</span></div>
+          <div class="bpa-feat-item">🥂 <span><strong>Welcome Drink:</strong> Complimentary glass of Prosecco</span></div>
+          <div class="bpa-feat-item">⏳ <span><strong>Duration:</strong> 2.5 to 3.0 Hours (Full Double Loop)</span></div>
+          <div class="bpa-feat-item">🎹 <span><strong>Entertainment:</strong> Two duel pianists &amp; guest vocalists</span></div>
+          <div class="bpa-feat-item">🍽️ <span><strong>Dining:</strong> 4-course gourmet dinner cooked fresh</span></div>
+          <div class="bpa-feat-item">📍 <span><strong>Meeting Point:</strong> <a href="https://goo.gl/maps/pVRK1PR3s7srEcVM8" target="_blank" rel="nofollow">Dock 11 (Jane Haining rakpart)</a></span></div>
+        </div>
+
+        <div class="bpa-pro-con-grid">
+          <div class="bpa-pro-cell">
+            <div class="bpa-pro-title">Pros:</div>
+            <ul class="bpa-pro-con-list">
+              <li>✔️ <strong>Unique Piano Duel Concept</strong> — Two virtuoso pianists engaging in a witty musical contest spanning romantic ballads and iconic movie soundtracks.</li>
+              <li>✔️ <strong>Guest Vocalist Harmonies</strong> — Talented female vocalist joining the duel to bring broadway and pop hits to life.</li>
+              <li>✔️ <strong>Engaging &amp; Fun</strong> — Interactive performance that keeps the entire cabin smiling and humming along.</li>
+              <li>✔️ <strong>Fresh 4-Course Menu</strong> — Identical high-standard galley dining to the folklore cruise.</li>
+            </ul>
+          </div>
+
+          <div class="bpa-con-cell">
+            <div class="bpa-con-title">Cons:</div>
+            <ul class="bpa-pro-con-list">
+              <li>❌ <strong>Pianos Center Lower Deck</strong> — Direct sightline requires main lower deck booking.</li>
+              <li>❌ <strong>Window Surcharge</strong> — Guaranteed edge tables cost €5 per person extra.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="bpa-sec-title">Summary: The Piano Battle Dinner Cruise</h3>
+        <p>
+          Unlike conventional violin or folk shows, the Piano Battle features two concert pianists facing each other on dual electronic grand pianos in the center of the ship. They playfully compete for the audience's applause, transitioning smoothly between classical Chopin melodies, Queen, and Frank Sinatra.
+        </p>
+
+        <div class="bpa-figure">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64c8d727b3337948370e587c_Silverline-dinner-cruise-piano-show%20(1).webp" alt="Piano Battle show on Silverline cruise Budapest" loading="lazy">
+        </div>
+
+        <div class="bpa-bottom-cta">
+          <h4>Experience the Musical Piano Battle Cruise</h4>
+          <p>Book directly on Silverline with promotional partner code <strong>bpadventures</strong> for best guaranteed rates.</p>
+          <a href="https://budapestrivercruise.eu/product/dinner-cruise-piano-battle-show/?code=bpadventures" target="_blank" rel="sponsored noopener" class="bpa-big-btn">
+            Book Piano Battle Dinner on Silverline (€91) →
+          </a>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="bpa-card">
+    <div class="bpa-main">
+      <div class="bpa-media">
+        <span class="bpa-rank-tag">All You Can Eat Buffet</span>
+        <button type="button" class="bpa-nav-arrow prev" onclick="bpaSlide(this, -1)">‹</button>
+        <button type="button" class="bpa-nav-arrow next" onclick="bpaSlide(this, 1)">›</button>
+        <span class="bpa-counter-pill">1 / 9</span>
+        <div class="bpa-slider" data-more="6a171485cb7f9db773f86225_hungaria-koncert-00003.avif,6a17137547d8b03e7ab7dbfa_hungaria-koncert-00002.avif,6a1717ab3b109f5aababa165_hungaria-koncert-00005.avif,63b858c97991129dcb5fa59a_Budapest-river-cruises-hungaria-koncert-3.webp,63b858c9482e8373089e515f_Budapest-river-cruises-hungaria-koncert-4.webp,63b858cee7351cbee9beb832_Budapest-river-cruises-hungaria-koncert-13.webp,6a1713758036c41f2768ca87_hungaria-koncert-00006.avif,63b858c9a4e49ca09097411c_Budapest-river-cruises-hungaria-koncert-6.webp" onscroll="bpaCount(this)">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6a1713752e3e5a94222ca4d1_hungaria-koncert-00001.avif" alt="Hungária Koncert Buffet Dinner Cruise Budapest">
+        </div>
+      </div>
+
+      <div class="bpa-info">
+        <div class="bpa-kicker">Hungária Koncert • 📍 Dock 3 (Gróf Széchényi)</div>
+        <a href="https://budapestxplore.com/en/budapest-dinner-and-cruise-with-live-music-xpZDZlZTExMN?affi=6876" target="_blank" rel="sponsored noopener" class="bpa-headline">
+          12-Course Buffet Dinner Cruise With Folk Music &amp; Folk Dance
+        </a>
+
+        <div class="bpa-proof-bar">
+          <span class="bpa-gold-stars">★★★★☆</span>
+          <span class="bpa-score-text">4.3 / 5.0</span>
+          <span class="bpa-count-muted">(2,450+ Reviews)</span>
+          <span class="bpa-verified-chip">✓ Personally Tested</span>
+        </div>
+
+        <div class="bpa-channels">
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png" alt="GetYourGuide">
+            <strong>4.4</strong> <span>(1,420+)</span>
+          </div>
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif" alt="Tripadvisor">
+            <strong>4.2</strong> <span>(610+)</span>
+          </div>
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png" alt="Viator">
+            <strong>4.3</strong> <span>(420+)</span>
+          </div>
+        </div>
+
+        <div class="bpa-specs-row">
+          <span class="bpa-spec-pill">🍲 12-Course Buffet</span>
+          <span class="bpa-spec-pill">⏱️ 2.0 Hours</span>
+          <span class="bpa-spec-pill">🎻 Live Gypsy Band &amp; Dancers</span>
+          <span class="bpa-spec-pill">🍷 1 Drink Included</span>
+        </div>
+      </div>
+
+      <div class="bpa-cta-cell">
+        <div>
+          <div class="bpa-price-num">€79</div>
+          <div class="bpa-price-sub">all-you-can-eat buffet</div>
+        </div>
+        <a href="https://budapestxplore.com/en/budapest-dinner-and-cruise-with-live-music-xpZDZlZTExMN?affi=6876" target="_blank" rel="sponsored noopener" class="bpa-book-button">Book Now →</a>
+        <span class="bpa-sublink" onclick="bpaToggleDropdown(this)">Read Full Review ↓</span>
+      </div>
+    </div>
+
+    <!-- Dropdown: Complete Breakdown -->
+    <details class="bpa-accordion" id="c5-details">
+      <summary>
+        <span class="bpa-toggle-text">Read Full Review &amp; Complete Breakdown</span>
+        <span class="bpa-icon-circle">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path class="bpa-line-vert" d="M6 1v10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 6h10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </summary>
+
+      <div class="bpa-drawer-body bpa-prose">
+        <div class="bpa-feature-grid">
+          <div class="bpa-feat-item">📅 <span><strong>Schedule:</strong> Daily at 19:00 (Boarding at 18:30)</span></div>
+          <div class="bpa-feat-item">🍷 <span><strong>Drink:</strong> 1 complimentary glass of wine, beer, or soft drink</span></div>
+          <div class="bpa-feat-item">⏳ <span><strong>Duration:</strong> 2.0 Hours (Central Landmark Navigation)</span></div>
+          <div class="bpa-feat-item">🛳️ <span><strong>Ship:</strong> Historic paddle steamer Gróf Széchényi</span></div>
+          <div class="bpa-feat-item">🍲 <span><strong>Dining:</strong> Generous 12-item Hungarian buffet libre</span></div>
+          <div class="bpa-feat-item">🎻 <span><strong>Music:</strong> Rajkó Folk Orchestra with cimbalom</span></div>
+          <div class="bpa-feat-item">📍 <span><strong>Meeting Point:</strong> <a href="https://goo.gl/maps/bH3K34Nn84F2" target="_blank" rel="nofollow">Dock 3 (Academia pier near Chain Bridge)</a></span></div>
+        </div>
+
+        <div class="bpa-pro-con-grid">
+          <div class="bpa-pro-cell">
+            <div class="bpa-pro-title">Pros:</div>
+            <ul class="bpa-pro-con-list">
+              <li>✔️ <strong>Unlimited Seconds on Everything</strong> — All-you-can-eat buffet allows guests to sample every traditional Hungarian stew, roast, soup, and dessert freely.</li>
+              <li>✔️ <strong>Authentic Heritage Steamer</strong> — Boarding the Gróf Széchényi provides old-world maritime charm with carved wood and brass details.</li>
+              <li>✔️ <strong>Virtuoso Gypsy String Ensemble</strong> — Live violinists moving through tables playing heartfelt Hungarian melodies and lively dances.</li>
+              <li>✔️ <strong>Great for Big Eaters &amp; Groups</strong> — No waiting between plated courses; eat immediately at your own pace.</li>
+            </ul>
+          </div>
+
+          <div class="bpa-con-cell">
+            <div class="bpa-con-title">Cons:</div>
+            <ul class="bpa-pro-con-list">
+              <li>❌ <strong>Buffet Line Congestion</strong> — Initial rush at the buffet tables when service starts requires a few minutes of waiting.</li>
+              <li>❌ <strong>Narrower Heritage Windows</strong> — Being a historic vessel, windows are traditional porthole/frame style rather than floor-to-ceiling glass.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="bpa-sec-title">Summary: Hungária Koncert's Buffet &amp; Folk Show</h3>
+        <p>
+          If you want to taste authentic Hungarian home-style cooking without portion restrictions, Hungária Koncert's buffet cruise is the top choice. The hot buffet stations feature steaming kettles of rich Hungarian goulash soup, traditional chicken paprikash with sour cream and handmade dumplings, roasted pork loin with braised red cabbage, and freshly baked strudels.
+        </p>
+
+        <div class="bpa-figure">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6a171485cb7f9db773f86225_hungaria-koncert-00003.avif" alt="Buffet food spread on Hungaria Koncert cruise" loading="lazy">
+        </div>
+
+        <div class="bpa-bottom-cta">
+          <h4>Taste Budapest's Best Hungarian Buffet Cruise</h4>
+          <p>Book directly on BudapestXplore with partner code <strong>6876</strong> for guaranteed reservations.</p>
+          <a href="https://budapestxplore.com/en/budapest-dinner-and-cruise-with-live-music-xpZDZlZTExMN?affi=6876" target="_blank" rel="sponsored noopener" class="bpa-big-btn">
+            Book 12-Course Buffet on Hungária Koncert (€79) →
+          </a>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="bpa-card">
+    <div class="bpa-main">
+      <div class="bpa-media">
+        <span class="bpa-rank-tag">Also-Great All-Around</span>
+        <button type="button" class="bpa-nav-arrow prev" onclick="bpaSlide(this, -1)">‹</button>
+        <button type="button" class="bpa-nav-arrow next" onclick="bpaSlide(this, 1)">›</button>
+        <span class="bpa-counter-pill">1 / 6</span>
+        <div class="bpa-slider" data-more="64c900ca00a16648afedc0f2_Dinner-cruise-eurama-sightseeing%20(2).webp,64c90214d23273a2e88e9615_Dinner-cruise-eurama-sightseeing%20(12).webp,64c900cc6aab98bd3479f556_Dinner-cruise-eurama-sightseeing%20(8).webp,64c900caed3c4d809550c8a7_Dinner-cruise-eurama-sightseeing%20(3).webp,64c900cac89f6cf91209fc51_Dinner-cruise-eurama-sightseeing%20(4).webp" onscroll="bpaCount(this)">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64c900ca825d106c4aba1091_Dinner-cruise-eurama-sightseeing%20(11).webp" alt="Eurama 4-Course Dinner Cruise Budapest">
+        </div>
+      </div>
+
+      <div class="bpa-info">
+        <div class="bpa-kicker">Eurama Cruises • 📍 Dock 6 (Jane Haining rkp.)</div>
+        <a href="https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=eng-dinner-cruises-budapest-eurama-reviews&mkt_cmp=true" target="_blank" rel="sponsored noopener" class="bpa-headline">
+          4-Course Dinner Cruise With Folk Show
+        </a>
+
+        <div class="bpa-proof-bar">
+          <span class="bpa-gold-stars">★★★★☆</span>
+          <span class="bpa-score-text">4.4 / 5.0</span>
+          <span class="bpa-count-muted">(1,180+ Reviews)</span>
+          <span class="bpa-verified-chip">✓ Personally Tested</span>
+        </div>
+
+        <div class="bpa-channels">
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png" alt="GetYourGuide">
+            <strong>4.4</strong> <span>(680+)</span>
+          </div>
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif" alt="Tripadvisor">
+            <strong>4.3</strong> <span>(310+)</span>
+          </div>
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png" alt="Viator">
+            <strong>4.4</strong> <span>(190+)</span>
+          </div>
+        </div>
+
+        <div class="bpa-specs-row">
+          <span class="bpa-spec-pill">🍽️ 4-Course Plated</span>
+          <span class="bpa-spec-pill">⏱️ 2.0 Hours</span>
+          <span class="bpa-spec-pill">🎻 Gypsy String Quartet</span>
+          <span class="bpa-spec-pill">🥂 Welcome Champagne</span>
+        </div>
+      </div>
+
+      <div class="bpa-cta-cell">
+        <div>
+          <div class="bpa-price-num">€90</div>
+          <div class="bpa-price-sub">per person / all incl.</div>
+        </div>
+        <a href="https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=eng-dinner-cruises-budapest-eurama-reviews&mkt_cmp=true" target="_blank" rel="sponsored noopener" class="bpa-book-button">Book Now →</a>
+        <span class="bpa-sublink" onclick="bpaToggleDropdown(this)">Read Full Review ↓</span>
+      </div>
+    </div>
+
+    <!-- Dropdown: Complete Breakdown -->
+    <details class="bpa-accordion" id="c6-details">
+      <summary>
+        <span class="bpa-toggle-text">Read Full Review &amp; Complete Breakdown</span>
+        <span class="bpa-icon-circle">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path class="bpa-line-vert" d="M6 1v10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 6h10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </summary>
+
+      <div class="bpa-drawer-body bpa-prose">
+        <div class="bpa-feature-grid">
+          <div class="bpa-feat-item">📅 <span><strong>Schedule:</strong> Daily at 20:00 (Boarding at 19:30)</span></div>
+          <div class="bpa-feat-item">🥂 <span><strong>Drink:</strong> Glass of sparkling wine on arrival</span></div>
+          <div class="bpa-feat-item">⏳ <span><strong>Duration:</strong> 2.0 Hours (Pest &amp; Buda Circuit)</span></div>
+          <div class="bpa-feat-item">🎻 <span><strong>Show:</strong> Traditional gypsy band with folklore dance</span></div>
+          <div class="bpa-feat-item">🍽️ <span><strong>Dining:</strong> 4-course Hungarian culinary classics</span></div>
+          <div class="bpa-feat-item">📍 <span><strong>Meeting Point:</strong> <a href="https://goo.gl/maps/nCzcK17HbtYDR2mf7" target="_blank" rel="nofollow">Dock 6 (Jane Haining rkp., Vigadó tér)</a></span></div>
+        </div>
+
+        <div class="bpa-pro-con-grid">
+          <div class="bpa-pro-cell">
+            <div class="bpa-pro-title">Pros:</div>
+            <ul class="bpa-pro-con-list">
+              <li>✔️ <strong>Central Boarding Location</strong> — Pier is right at Vigadó tér, making it effortless to reach from Pest hotels.</li>
+              <li>✔️ <strong>Romantic Gypsy String Quartet</strong> — Skilled musicians providing authentic local melodies at a pleasant volume.</li>
+              <li>✔️ <strong>Spacious Upper Open Deck</strong> — Guests can freely head upstairs before and after dinner for 360° night photography.</li>
+            </ul>
+          </div>
+
+          <div class="bpa-con-cell">
+            <div class="bpa-con-title">Cons:</div>
+            <ul class="bpa-pro-con-list">
+              <li>❌ <strong>Fixed 4-Course Menu</strong> — Fewer customizable dish options compared to Silverline or Legenda.</li>
+              <li>❌ <strong>Single Evening Departure</strong> — 20:00 only departure, which means limited flexibility if you want an early dinner.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="bpa-sec-title">Summary: Eurama's Folk &amp; Dinner Cruise</h3>
+        <p>
+          Eurama provides a well-balanced dinner cruise experience with welcoming hospitality. The ship boards at Dock 6 near Vigadó tér and takes passengers on a complete evening tour past the illuminated Parliament, Fisherman's Bastion, and Buda Castle while serving 4 classic plated courses accompanied by a live string quartet.
+        </p>
+
+        <div class="bpa-bottom-cta">
+          <h4>Book Eurama's Evening Folk Dinner Cruise</h4>
+          <p>Book securely via GetYourGuide with instant confirmation and 24h free cancellation.</p>
+          <a href="https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=eng-dinner-cruises-budapest-eurama-reviews&mkt_cmp=true" target="_blank" rel="sponsored noopener" class="bpa-big-btn">
+            Book 4-Course Dinner on Eurama (€90) →
+          </a>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="bpa-card">
+    <div class="bpa-main">
+      <div class="bpa-media">
+        <span class="bpa-rank-tag">Unlimited Drinks</span>
+        <button type="button" class="bpa-nav-arrow prev" onclick="bpaSlide(this, -1)">‹</button>
+        <button type="button" class="bpa-nav-arrow next" onclick="bpaSlide(this, 1)">›</button>
+        <span class="bpa-counter-pill">1 / 6</span>
+        <div class="bpa-slider" data-more="64946bd848dfb642de48fcfb_16-rubin-group.webp,64ff0ad83b5217719ba1d701_Budapest-river-cruises-parliament.webp,646f8757c76212af94a49dca_v5_Best%20River%20Cruises%20in%20Budapest.webp,63b858ea56f82257ea9e0c70_Budapest-river-cruises-portum-16.webp,64f9aa08f8ee33524047cdf3_Pest%20Walking%20Tour%20(10).webp" onscroll="bpaCount(this)">
+          <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e7f8b85dd0bfdd37755de4_best-budapest-dinner-cruises-unlimited-drinks.avif" alt="Budapest Dinner Cruise with Unlimited Drinks">
+        </div>
+      </div>
+
+      <div class="bpa-info">
+        <div class="bpa-kicker">River Diva / Rubin Group • 📍 Dock 8A</div>
+        <a href="https://www.getyourguide.com/budapest-l29/budapestpremium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=budapest-dinner-cruises-comparison-list-unlimited-drinks" target="_blank" rel="sponsored noopener" class="bpa-headline">
+          4-Course Dinner Cruise With Live Music &amp; Unlimited Drinks
+        </a>
+
+        <div class="bpa-proof-bar">
+          <span class="bpa-gold-stars">★★★★☆</span>
+          <span class="bpa-score-text">4.5 / 5.0</span>
+          <span class="bpa-count-muted">(920+ Reviews)</span>
+          <span class="bpa-verified-chip">✓ Personally Tested</span>
+        </div>
+
+        <div class="bpa-channels">
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png" alt="GetYourGuide">
+            <strong>4.6</strong> <span>(540+)</span>
+          </div>
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif" alt="Tripadvisor">
+            <strong>4.4</strong> <span>(230+)</span>
+          </div>
+          <div class="bpa-channel-item">
+            <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png" alt="Viator">
+            <strong>4.5</strong> <span>(150+)</span>
+          </div>
+        </div>
+
+        <div class="bpa-specs-row">
+          <span class="bpa-spec-pill">🍷 Unlimited Wine &amp; Beer</span>
+          <span class="bpa-spec-pill">🍽️ 4-Course Plated</span>
+          <span class="bpa-spec-pill">⏱️ 2.5 Hours</span>
+          <span class="bpa-spec-pill">🎶 Live Acoustic Music</span>
+        </div>
+      </div>
+
+      <div class="bpa-cta-cell">
+        <div>
+          <div class="bpa-price-num">€99</div>
+          <div class="bpa-price-sub">including unlimited drinks</div>
+        </div>
+        <a href="https://www.getyourguide.com/budapest-l29/budapestpremium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=budapest-dinner-cruises-comparison-list-unlimited-drinks" target="_blank" rel="sponsored noopener" class="bpa-book-button">Book Now →</a>
+        <span class="bpa-sublink" onclick="bpaToggleDropdown(this)">Read Full Review ↓</span>
+      </div>
+    </div>
+
+    <!-- Dropdown: Complete Breakdown -->
+    <details class="bpa-accordion" id="c7-details">
+      <summary>
+        <span class="bpa-toggle-text">Read Full Review &amp; Complete Breakdown</span>
+        <span class="bpa-icon-circle">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path class="bpa-line-vert" d="M6 1v10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 6h10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </summary>
+
+      <div class="bpa-drawer-body bpa-prose">
+        <div class="bpa-feature-grid">
+          <div class="bpa-feat-item">📅 <span><strong>Schedule:</strong> Departures daily at 19:30</span></div>
+          <div class="bpa-feat-item">🍷 <span><strong>Open Bar:</strong> Unlimited Hungarian wines, draft beer &amp; soft drinks</span></div>
+          <div class="bpa-feat-item">⏳ <span><strong>Duration:</strong> 2.5 Hours (Panoramic City Navigation)</span></div>
+          <div class="bpa-feat-item">🎶 <span><strong>Music:</strong> Live acoustic guitar &amp; vocals</span></div>
+          <div class="bpa-feat-item">🍽️ <span><strong>Dining:</strong> 4-course gourmet dinner with table service</span></div>
+          <div class="bpa-feat-item">📍 <span><strong>Meeting Point:</strong> <a href="https://goo.gl/maps/fR8P39mY6jT2" target="_blank" rel="nofollow">Dock 8A (near Jászai Mari tér)</a></span></div>
+        </div>
+
+        <div class="bpa-pro-con-grid">
+          <div class="bpa-pro-cell">
+            <div class="bpa-pro-title">Pros:</div>
+            <ul class="bpa-pro-con-list">
+              <li>✔️ <strong>Truly Unlimited Beverage Package</strong> — Unlimited pours of Hungarian white, red, and rosé wines, ice-cold draft beer, and soft drinks throughout the 2.5-hour duration.</li>
+              <li>✔️ <strong>Vibrant Social Vibe</strong> — Festive cocktail party ambiance ideal for friend groups, couples, and celebration dinners.</li>
+              <li>✔️ <strong>Full 4-Course Sit-Down Dinner</strong> — Complete starter, soup, choice of main course, and dessert served attentively to your table.</li>
+            </ul>
+          </div>
+
+          <div class="bpa-con-cell">
+            <div class="bpa-con-title">Cons:</div>
+            <ul class="bpa-pro-con-list">
+              <li>❌ <strong>Boarding Pier Location</strong> — Dock 8A is located near Margaret Bridge (further north than Vigadó tér piers).</li>
+              <li>❌ <strong>Cocktails Not Included</strong> — Open bar covers wine, beer, and soft drinks; spirits/cocktails require a cash surcharge.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="bpa-sec-title">Summary: Unlimited Drinks Dinner Cruise</h3>
+        <p>
+          For travelers who want to enjoy great Hungarian wines and cold beers alongside their dinner without constantly worrying about bar bills, the River Diva dinner cruise is the standout choice. With 2.5 hours on the water, attentive table refills, live acoustic music, and front-row views of Budapest's illuminated bridges, it offers the highest beverage value on the Danube.
+        </p>
+
+        <div class="bpa-bottom-cta">
+          <h4>Reserve the Unlimited Drinks Dinner Cruise</h4>
+          <p>Book directly on GetYourGuide with instant mobile tickets and free cancellation.</p>
+          <a href="https://www.getyourguide.com/budapest-l29/budapestpremium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=budapest-dinner-cruises-comparison-list-unlimited-drinks" target="_blank" rel="sponsored noopener" class="bpa-big-btn">
+            Book Dinner with Unlimited Drinks (€99) →
+          </a>
+        </div>
+      </div>
+    </details>
+  </div>
+</div>
+
+<script>
+const BPA_CDN = "https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/";
+document.querySelectorAll(".bpa-slider[data-more]").forEach(c => {
+  const m = c.getAttribute("data-more").split(",");
+  m.forEach(f => {
+    if (!f) return;
+    const img = document.createElement("img");
+    img.src = f.startsWith("http") ? f : BPA_CDN + f;
+    img.loading = "lazy";
+    img.alt = "Budapest Dinner Cruise";
+    c.appendChild(img);
+  });
+  c.removeAttribute("data-more");
+});
+function bpaSlide(btn, dir) {
+  const c = btn.parentElement.querySelector(".bpa-slider");
+  if (c) c.scrollBy({ left: dir * c.offsetWidth, behavior: "smooth" });
+}
+function bpaCount(c) {
+  const idx = Math.round(c.scrollLeft / c.offsetWidth) + 1;
+  const tot = c.querySelectorAll("img").length;
+  const cnt = c.parentElement.querySelector(".bpa-counter-pill");
+  if (cnt) cnt.textContent = idx + " / " + tot;
+}
+function bpaToggleDropdown(trigger) {
+  const card = trigger.closest(".bpa-card");
+  const details = card.querySelector("details.bpa-accordion");
+  if (details) {
+    details.open = !details.open;
+    if (details.open) {
+      details.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }
+}
+</script>

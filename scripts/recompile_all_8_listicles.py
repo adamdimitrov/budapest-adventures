@@ -25,7 +25,10 @@ ARTICLES = [
 def main():
     print("Compiling all 8 listicles...")
     for cfg_name, html_name in ARTICLES:
-        src_path = ROOT / html_name
+        if html_name == "thermal-baths-budapest.html":
+            src_path = ROOT / "data" / "harvested_html" / "en_thermal_baths_webflow.html"
+        else:
+            src_path = ROOT / html_name
         cfg_path = CFG_DIR / cfg_name
         out_path = ROOT / html_name
         

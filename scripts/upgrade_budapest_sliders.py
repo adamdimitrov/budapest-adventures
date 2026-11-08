@@ -20,7 +20,7 @@ ARTICLES = [
     ('best-night-cruises-budapest.html', None, 'Night Cruises'),
     ('best-private-boat-tours-budapest.html', None, 'Private Boats'),
     ('unlimited-prosecco-cruises-budapest.html', None, 'Unlimited Prosecco'),
-    ('thermal-baths-budapest.html', None, 'Thermal Baths'),
+    ('thermal-baths-budapest.html', ROOT / 'data' / 'harvested_html' / 'en_thermal_baths_webflow.html', 'Thermal Baths'),
     ('best-walking-tours-budapest.html', None, 'Walking Tours'),
     ('best-hostels-budapest.html', None, 'Hostels')
 ]

@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Budapest River Cruise Group Bookings &amp; Private Charter | Instant Quote Estimator</title>
+<meta content="Direct group reservations &amp; private boat hire on the Danube for 15 to 250+ guests. Sightseeing, dinner cruises, open bar packages, and exclusive charters." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --navy: #0B192C;
+      --navy-deep: #050C16;
+      --navy-surface: #1E3E62;
+      --gold: #FFB703;
+      --gold-hover: #E09F00;
+      --accent-coral: #E85C0D;
+      --text-white: #FFFFFF;
+      --text-muted: #94A3B8;
+      --border-card: rgba(255, 255, 255, 0.12);
+      --card-bg: rgba(11, 25, 44, 0.75);
+      --card-hover: rgba(30, 62, 98, 0.5);
+      --success: #10B981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--navy-deep);
+      color: var(--text-white);
+      line-height: 1.5;
+      overflow-x: hidden;
+      padding-bottom: 90px;
+    }
+
+    /* Ambient Danube Gradient Background */
+    .hero-glow {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 600px;
+      background: radial-gradient(circle at 50% 15%, rgba(30, 62, 98, 0.6) 0%, rgba(5, 12, 22, 0) 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation */
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-card);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(5, 12, 22, 0.85);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-white);
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--gold);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy-deep);
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
+    .logo-text {
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-sub {
+      font-size: 0.72rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+
+    .nav-contact-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #34D399;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #10B981;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 56px 0 40px;
+      text-align: center;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 183, 3, 0.12);
+      border: 1px solid rgba(255, 183, 3, 0.3);
+      color: var(--gold);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 4.5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #FFB703 0%, #FFA200 50%, #FF7B00 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 32px;
+    }
+
+    /* Trust Stats Strip */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 18px 12px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+
+    .stat-number {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Calculator & Form Split Layout */
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .booking-grid {
+        grid-template-columns: 1fr;
+      }
+      .stats-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Left: Interactive Tier & Pricing Estimator */
+    .estimator-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border-card);
+      border-radius: 20px;
+      padding: 32px;
+      backdrop-filter: blur(12px);
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title .step-badge {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--navy-surface);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: 1px solid rgba(255, 183, 3, 0.4);
+    }
+
+    /* Headcount Slider */
+    .control-group {
+      margin-bottom: 28px;
+    }
+
+    .control-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 12px;
+    }
+
+    .control-label {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .pax-display {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--gold);
+    }
+
+    .pax-slider {
+      width: 100%;
+      height: 8px;
+      background: var(--navy-surface);
+      border-radius: 4px;
+      outline: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+
+    .pax-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 12px rgba(255, 183, 3, 0.6);
+      cursor: pointer;
+      border: 3px solid var(--navy-deep);
+      transition: transform 0.15s ease;
+    }
+
+    .pax-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+    }
+
+    .slider-markers {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Experience Tier Selector */
+    .tier-cards {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .tier-option {
+      background: rgba(30, 62, 98, 0.25);
+      border: 2px solid var(--border-card);
+      border-radius: 14px;
+      padding: 16px 18px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s ease;
+    }
+
+    .tier-option:hover {
+      border-color: rgba(255, 183, 3, 0.4);
+      background: rgba(30, 62, 98, 0.4);
+    }
+
+    .tier-option.active {
+      border-color: var(--gold);
+      background: rgba(255, 183, 3, 0.08);
+      box-shadow: 0 0 20px rgba(255, 183, 3, 0.15);
+    }
+
+    .tier-info {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .tier-name {
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .tier-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .tier-pricing {
+      text-align: right;
+    }
+
+    .tier-rate {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--gold);
+    }
+
+    .tier-unit {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Add-ons Checkboxes */
+    .addon-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 600px) {
+      .addon-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .addon-chip {
+      background: rgba(30, 62, 98, 0.2);
+      border: 1px solid var(--border-card);
+      border-radius: 10px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s;
+    }
+
+    .addon-chip input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--gold);
+      cursor: pointer;
+    }
+
+    .addon-chip label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .addon-chip label span {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    /* Summary Bar inside Estimator */
+    .live-cost-banner {
+      background: linear-gradient(135deg, var(--navy-surface) 0%, rgba(11, 25, 44, 0.95) 100%);
+      border: 1px solid rgba(255, 183, 3, 0.35);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .live-cost-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    .live-cost-figure {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #34D399;
+    }
+
+    .live-cost-breakdown {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Right: High-Intent Lead Dispatch Form */
+    .quote-form-card {
+      background: var(--navy);
+      border: 2px solid var(--border-card);
+      border-radius: 20px;
+      padding: 32px;
+      position: sticky;
+      top: 96px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-header {
+      margin-bottom: 24px;
+    }
+
+    .form-header h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .form-header p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #E2E8F0;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      background: rgba(5, 12, 22, 0.8);
+      border: 1px solid var(--border-card);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 0.92rem;
+      color: var(--text-white);
+      outline: none;
+      font-family: inherit;
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--gold);
+      color: var(--navy-deep);
+      border: none;
+      border-radius: 12px;
+      padding: 16px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+      margin-top: 8px;
+      box-shadow: 0 6px 20px rgba(255, 183, 3, 0.35);
+    }
+
+    .btn-submit:hover {
+      background: var(--gold-hover);
+      transform: translateY(-2px);
+    }
+
+    .security-note {
+      text-align: center;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* Comparison Table: Charter vs Group Tickets */
+    .compare-section {
+      margin-top: 64px;
+    }
+
+    .compare-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .comparison-table-wrapper {
+      background: var(--card-bg);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      overflow-x: auto;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    .comparison-table th, .comparison-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border-card);
+    }
+
+    .comparison-table th {
+      background: rgba(30, 62, 98, 0.4);
+      font-weight: 700;
+      color: var(--gold);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .check-icon {
+      color: #10B981;
+      font-weight: 800;
+    }
+
+    .cross-icon {
+      color: #EF4444;
+      font-weight: 800;
+    }
+
+    /* Direct WhatsApp Pill */
+    .whatsapp-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #050C16;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      margin-top: 14px;
+      transition: transform 0.2s;
+    }
+    .whatsapp-badge:hover {
+      transform: scale(1.03);
+    }
+  </style>
+<style id="ltt-nav-styles">/* ==========================================================================
+   LUXURY TRAVEL TESTER — MODERN VANILLA NAVIGATION SYSTEM
+   Zero-dependency, semantic, responsive, WCAG-compliant (Desktop & Mobile)
+   ========================================================================== */
+.ltt-navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 68px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 9999;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.ltt-nav-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-sizing: border-box;
+}
+.ltt-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #0f172a;
+  flex-shrink: 0;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: opacity 0.15s ease;
+}
+.ltt-brand:hover {
+  opacity: 0.85;
+}
+.ltt-brand-emblem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  color: #b45309;
+}
+.ltt-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ltt-nav-link {
+  color: #334155;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.ltt-nav-link:hover,
+.ltt-nav-link:focus-visible {
+  color: #0f172a;
+  background: #f1f5f9;
+  outline: none;
+}
+.ltt-nav-dropdown {
+  position: relative;
+}
+.ltt-chevron {
+  transition: transform 0.2s ease;
+  stroke: currentColor;
+}
+.ltt-nav-dropdown.is-open .ltt-chevron,
+.ltt-nav-dropdown:hover .ltt-chevron {
+  transform: rotate(180deg);
+}
+.ltt-mega-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px -8px rgba(15, 23, 42, 0.14), 0 0 0 1px rgba(15, 23, 42, 0.04);
+  padding: 22px 24px;
+  display: flex;
+  gap: 32px;
+  min-width: 580px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  pointer-events: none;
+  z-index: 10000;
+}
+.ltt-nav-dropdown:hover .ltt-mega-menu,
+.ltt-nav-dropdown.is-open .ltt-mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.ltt-mega-col {
+  flex: 1;
+  min-width: 220px;
+}
+.ltt-mega-head {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.ltt-mega-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #0f172a;
+  transition: background 0.15s ease;
+  margin-bottom: 4px;
+}
+.ltt-mega-item:hover {
+  background: #f8fafc;
+}
+.ltt-mega-icon {
+  font-size: 18px;
+  line-height: 1;
+  padding-top: 2px;
+}
+.ltt-mega-item strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.ltt-mega-item p {
+  margin: 2px 0 0 0;
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.3;
+}
+.ltt-mega-subitem {
+  display: block;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+.ltt-mega-subitem:hover {
+  color: #0f172a;
+  background: #f1f5f9;
+  padding-left: 14px;
+}
+.ltt-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ltt-cta-pill {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+}
+.ltt-cta-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4);
+}
+
+/* Mobile Toggle Hamburger Button */
+.ltt-hamburger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 9px 8px;
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.15s ease;
+  box-sizing: border-box;
+}
+.ltt-hamburger:hover {
+  background: #f8fafc;
+}
+.ltt-hamburger-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #0f172a;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* Mobile Drawer */
+.ltt-mobile-drawer {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .ltt-nav-links {
+    display: none !important;
+  }
+  .ltt-hamburger {
+    display: flex !important;
+  }
+  .ltt-cta-pill {
+    display: none !important;
+  }
+  .ltt-mobile-drawer {
+    display: block;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 2px solid #e2e8f0;
+    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.16);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    box-sizing: border-box;
+    z-index: 9999;
+  }
+  .ltt-mobile-drawer.is-open {
+    max-height: calc(100vh - 68px);
+    opacity: 1;
+    overflow-y: auto;
+  }
+  .ltt-drawer-content {
+    padding: 20px 20px 28px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .ltt-mobile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .ltt-mobile-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .ltt-mobile-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f172a;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .ltt-mobile-link:hover,
+  .ltt-mobile-link:active {
+    background: #f1f5f9;
+  }
+  .ltt-mobile-link.ltt-highlight {
+    background: #fffbeb;
+    border-color: #fde68a;
+    color: #92400e;
+  }
+  .ltt-mobile-tag {
+    font-size: 10px;
+    font-weight: 800;
+    background: #d97706;
+    color: #ffffff;
+    padding: 2px 7px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+  }
+  .ltt-mobile-subgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .ltt-mobile-sublink {
+    display: block;
+    padding: 10px 12px;
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #334155;
+    text-decoration: none;
+  }
+  .ltt-mobile-sublink:hover {
+    background: #f8fafc;
+    color: #0f172a;
+  }
+  .ltt-mobile-footer-links {
+    flex-direction: row !important;
+    gap: 10px;
+  }
+  .ltt-mobile-footer-links .ltt-mobile-link {
+    flex: 1;
+    justify-content: center;
+  }
+  .ltt-mobile-cta {
+    display: block;
+    text-align: center;
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
+  }
+}
+</style><style id="bpa-light-comp-and-hero-css">
+/* ==========================================================================
+   1. CLEAN LTT AUTHOR & CREDIBILITY AREA UNDER H1 TITLE
+   ========================================================================== */
+.article-hero-container {
+  width: 100% !important;
+  max-width: 820px !important;
+  margin: 24px auto 16px auto !important;
+  padding: 0 20px !important;
+  text-align: center !important;
+  font-style: normal !important;
+}
+.component-breadcrumb-rich-text {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 0 10px 0 !important;
+}
+.component-breadcrumb-rich-text p {
+  font-size: 14px !important;
+  color: #475569 !important;
+  margin: 0 !important;
+}
+.component-breadcrumb-rich-text a {
+  color: #334155 !important;
+  text-decoration: underline !important;
+  font-weight: 500 !important;
+}
+.paragraph-26 {
+  color: rgba(26, 28, 34, 0.8) !important;
+  text-align: center !important;
+  font-size: 16px !important;
+  margin: 0 0 14px 0 !important;
+}
+.div-block-45,
+.div-block-37,
+.bpa-author-strip {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 14px !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 4px 0 !important;
+  margin: 0 auto 16px auto !important;
+  text-align: center !important;
+}
+.component-author-image {
+  width: 68px !important;
+  height: 68px !important;
+  max-width: 68px !important;
+  max-height: 68px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: none !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+}
+.div-block-45 p,
+.div-block-37 p,
+.bpa-author-strip p {
+  margin: 0 !important;
+  font-size: 15.5px !important;
+  line-height: 1.5 !important;
+  color: #334155 !important;
+  text-align: left !important;
+}
+.div-block-45 a,
+.div-block-37 a,
+.bpa-author-strip a {
+  color: #0284c7 !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+}
+.divider-2,
+.divider {
+  background-color: #e5e5e5 !important;
+  width: 100% !important;
+  max-width: 820px !important;
+  height: 1px !important;
+  margin: 18px auto 24px auto !important;
+}
+
+/* ==========================================================================
+   2. LIGHT-THEMED TOP COMPARISON HEADER CARD (.ltt-header-box / .bpa-section-header)
+   ========================================================================== */
+.ltt-header-box,
+.bpa-section-header {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-top: 4px solid #f59e0b !important;
+  border-radius: 18px !important;
+  padding: 28px 32px !important;
+  margin-bottom: 24px !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 2px 6px rgba(15, 23, 42, 0.03) !important;
+  color: #0f172a !important;
+}
+.ltt-kicker-tag {
+  display: inline-block !important;
+  background: #fffbeb !important;
+  color: #b45309 !important;
+  border: 1px solid #fde68a !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  padding: 4px 12px !important;
+  border-radius: 999px !important;
+  margin-bottom: 10px !important;
+}
+.ltt-header-title,
+.bpa-section-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 0 8px 0 !important;
+  color: #0f172a !important;
+  line-height: 1.25 !important;
+}
+.ltt-header-desc,
+.bpa-section-sub {
+  font-size: 14.5px !important;
+  color: #475569 !important;
+  margin: 0 0 18px 0 !important;
+  max-width: 820px !important;
+  line-height: 1.55 !important;
+}
+.ltt-filter-tabs,
+.bpa-filter-bar {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  padding-top: 16px !important;
+  border-top: 1px solid #f1f5f9 !important;
+}
+.ltt-tab-btn,
+.bpa-filter-btn {
+  background: #f8fafc !important;
+  color: #334155 !important;
+  border: 1px solid #cbd5e1 !important;
+  padding: 8px 16px !important;
+  border-radius: 10px !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  user-select: none !important;
+}
+.ltt-tab-btn:hover,
+.bpa-filter-btn:hover {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #94a3b8 !important;
+}
+.ltt-tab-btn.active,
+.bpa-filter-btn.is-active,
+.bpa-filter-btn.active {
+  background: #f59e0b !important;
+  color: #0f172a !important;
+  border-color: #f59e0b !important;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.28) !important;
+}
+
+/* ==========================================================================
+   3. PERSONALLY TESTED BADGE & OTA REVIEWS WITH GOLD STARS
+   ========================================================================== */
+.bpa-proof,
+.bpa-proof-bar {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 2px 0 8px 0 !important;
+}
+.bpa-vchip,
+.bpa-verified-chip {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: #047857 !important;
+  background: #ecfdf5 !important;
+  border: 1px solid #a7f3d0 !important;
+  padding: 3px 10px !important;
+  border-radius: 999px !important;
+}
+.bpa-ci-stars {
+  color: #f59e0b !important;
+  font-size: 12px !important;
+  letter-spacing: 0.5px !important;
+  line-height: 1 !important;
+}
+</style></head>
+<body><header class="ltt-navbar" role="banner">
+<div class="ltt-nav-inner">
+<a aria-label="Budapest Adventures Homepage" class="ltt-brand" href="/">
+<span class="ltt-brand-emblem">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="12" cy="12" r="10"></circle>
+<polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+</svg>
+</span>
+<span class="ltt-brand-text">BUDAPEST ADVENTURES</span>
+</a>
+<nav aria-label="Primary Navigation" class="ltt-nav-links">
+<div class="ltt-nav-dropdown" id="lttExploreDropdown">
+<button aria-expanded="false" aria-haspopup="true" class="ltt-nav-link ltt-dropdown-btn" type="button">
+<span>Explore</span>
+<svg class="ltt-chevron" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="ltt-mega-menu" role="menu">
+<div class="ltt-mega-col">
+<div class="ltt-mega-head">POPULAR CRUISE GUIDES</div>
+<a class="ltt-mega-item" href="/best-budapest-river-cruises">
+<span class="ltt-mega-icon">🚢</span>
+<div>
+<strong>Top 10 Budapest River Cruises</strong>
+<p>Personally field-tested day &amp; night boats</p>
+</div>
+</a>
+<a class="ltt-mega-item" href="/budapest-dinner-cruises">
+<span class="ltt-mega-icon">🍷</span>
+<div>
+<strong>Top 7 Budapest Dinner Cruises</strong>
+<p>4-course fine dining, folklore &amp; piano shows</p>
+</div>
+</a>
+<a class="ltt-mega-item" href="/unlimited-prosecco-cruises-budapest">
+<span class="ltt-mega-icon">🥂</span>
+<div>
+<strong>Unlimited Prosecco Cruises</strong>
+<p>Bottomless sparkling wine &amp; panoramic decks</p>
+</div>
+</a>
+<a class="ltt-mega-item" href="/best-night-cruises-budapest">
+<span class="ltt-mega-icon">✨</span>
+<div>
+<strong>Best Evening &amp; Night Cruises</strong>
+<p>Illuminated Parliament golden-hour schedule</p>
+</div>
+</a>
+</div>
+<div class="ltt-mega-col">
+<div class="ltt-mega-head">REVIEWS &amp; CITY GUIDES</div>
+<a class="ltt-mega-subitem" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">Legenda Candlelit Dinner Review</a>
+<a class="ltt-mega-subitem" href="/thermal-baths-budapest">8 Best Thermal Baths in Budapest</a>
+<a class="ltt-mega-subitem" href="/best-private-boat-tours-budapest">Best Private Boat Tours &amp; Yachts</a>
+<a class="ltt-mega-subitem" href="/best-things-to-do-budapest">Best Things to Do in Budapest</a>
+<a class="ltt-mega-subitem" href="/budapest-travel-guide">Complete Budapest Travel Guide</a>
+</div>
+</div>
+</div>
+<a class="ltt-nav-link" href="/best-budapest-river-cruises">River Cruises</a>
+<a class="ltt-nav-link" href="/budapest-dinner-cruises">Dinner Cruises</a>
+<a class="ltt-nav-link" href="/about">About</a>
+<a class="ltt-nav-link" href="/contact">Contact</a>
+</nav>
+<div class="ltt-nav-right">
+<a class="ltt-cta-pill" href="/best-budapest-river-cruises">Top 10 Cruises →</a>
+<button aria-expanded="false" aria-label="Toggle navigation menu" class="ltt-hamburger" id="lttNavToggle" type="button">
+<span class="ltt-hamburger-bar"></span>
+<span class="ltt-hamburger-bar"></span>
+<span class="ltt-hamburger-bar"></span>
+</button>
+</div>
+</div>
+<div aria-hidden="true" class="ltt-mobile-drawer" id="lttMobileDrawer">
+<div class="ltt-drawer-content">
+<div class="ltt-mobile-section">
+<div class="ltt-mobile-label">POPULAR CRUISE GUIDES</div>
+<a class="ltt-mobile-link ltt-highlight" href="/best-budapest-river-cruises">
+<span>🚢 Budapest River Cruises (Top 10)</span>
+<span class="ltt-mobile-tag">Tested</span>
+</a>
+<a class="ltt-mobile-link" href="/budapest-dinner-cruises">
+<span>🍷 Budapest Dinner Cruises (Top 7)</span>
+</a>
+<a class="ltt-mobile-link" href="/unlimited-prosecco-cruises-budapest">
+<span>🥂 Unlimited Prosecco Cruises</span>
+</a>
+<a class="ltt-mobile-link" href="/best-night-cruises-budapest">
+<span>✨ Best Evening &amp; Night Cruises</span>
+</a>
+</div>
+<div class="ltt-mobile-section">
+<div class="ltt-mobile-label">FEATURED REVIEWS &amp; GUIDES</div>
+<div class="ltt-mobile-subgrid">
+<a class="ltt-mobile-sublink" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">Legenda Candlelit Review</a>
+<a class="ltt-mobile-sublink" href="/thermal-baths-budapest">Thermal Baths Guide</a>
+<a class="ltt-mobile-sublink" href="/best-private-boat-tours-budapest">Private Boat Tours</a>
+<a class="ltt-mobile-sublink" href="/best-things-to-do-budapest">Things to Do</a>
+</div>
+</div>
+<div class="ltt-mobile-section ltt-mobile-footer-links">
+<a class="ltt-mobile-link" href="/about">About Us</a>
+<a class="ltt-mobile-link" href="/contact">Contact</a>
+</div>
+<a class="ltt-mobile-cta" href="/best-budapest-river-cruises">Top 10 Cruises →</a>
+</div>
+</div>
+</header><script id="ltt-nav-script">/* ==========================================================================
+   LUXURY TRAVEL TESTER — MODERN VANILLA NAVIGATION CONTROLLER
+   Zero-dependency, semantic, responsive, WCAG-compliant (Desktop & Mobile)
+   ========================================================================== */
+(function() {
+  function initNav() {
+    var toggle = document.getElementById('lttNavToggle');
+    var drawer = document.getElementById('lttMobileDrawer');
+    var dropdown = document.getElementById('lttExploreDropdown');
+    var dropBtn = dropdown ? dropdown.querySelector('.ltt-dropdown-btn') : null;
+
+    if (toggle && drawer) {
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var isOpen = drawer.classList.contains('is-open');
+        if (isOpen) {
+          drawer.classList.remove('is-open');
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
+          drawer.setAttribute('aria-hidden', 'true');
+        } else {
+          drawer.classList.add('is-open');
+          toggle.classList.add('is-active');
+          toggle.setAttribute('aria-expanded', 'true');
+          drawer.setAttribute('aria-hidden', 'false');
+        }
+      });
+
+      drawer.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          drawer.classList.remove('is-open');
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
+          drawer.setAttribute('aria-hidden', 'true');
+        });
+      });
+    }
+
+    if (dropBtn && dropdown) {
+      dropBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var open = dropdown.classList.toggle('is-open');
+        dropBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+
+    document.addEventListener('click', function(e) {
+      if (drawer && drawer.classList.contains('is-open') && !drawer.contains(e.target) && (!toggle || !toggle.contains(e.target))) {
+        drawer.classList.remove('is-open');
+        if (toggle) {
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+        drawer.setAttribute('aria-hidden', 'true');
+      }
+      if (dropdown && dropdown.classList.contains('is-open') && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('is-open');
+        if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        if (drawer && drawer.classList.contains('is-open')) {
+          drawer.classList.remove('is-open');
+          if (toggle) {
+            toggle.classList.remove('is-active');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+          drawer.setAttribute('aria-hidden', 'true');
+        }
+        if (dropdown && dropdown.classList.contains('is-open')) {
+          dropdown.classList.remove('is-open');
+          if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNav);
+  } else {
+    initNav();
+  }
+})();
+</script>
+<div class="hero-glow"></div>
+<!-- Header -->
+<header>
+<div class="container nav-wrapper">
+<a class="logo-container" href="/">
+<div class="logo-icon">⚓</div>
+<div>
+<div class="logo-text">BudapestAdventures</div>
+<div class="logo-sub">Group Cruise Desk</div>
+</div>
+</a>
+<div class="nav-contact-badge">
+<span class="pulse-dot"></span>
+<span>Quotes dispatched within 60 mins</span>
+</div>
+</div>
+</header>
+<main class="container">
+<!-- Hero Header -->
+<section class="hero">
+<div class="badge-pill">Direct Operator Access • Legenda &amp; Silverline Fleets</div>
+<h1>Budapest River Cruise <span>Group Bookings &amp; Private Boat Charters</span></h1>
+<p>Exclusive group rates, reserved dining tables, or full private vessel hire for 15 to 250+ guests on the Danube. No middleman markup.</p>
+<!-- Trust Stats -->
+<div class="stats-strip">
+<div class="stat-card">
+<div class="stat-number">15–250+</div>
+<div class="stat-label">Passenger Capacity</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">20–25%</div>
+<div class="stat-label">Operator Direct Rate</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">3 Piers</div>
+<div class="stat-label">Dock 7, 8 &amp; 11 Access</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">&lt; 60 min</div>
+<div class="stat-label">Official Quote Turnaround</div>
+</div>
+</div>
+</section>
+<!-- Two-Column Interactive Tool + Lead Dispatch -->
+<div class="booking-grid">
+<!-- Left Column: Estimator -->
+<div class="estimator-box">
+<div class="section-title">
+<div class="step-badge">1</div>
+<span>Select Group Size &amp; Requirements</span>
+</div>
+<!-- Headcount Slider -->
+<div class="control-group">
+<div class="control-header">
+<span class="control-label">Expected Number of Guests:</span>
+<span class="pax-display" id="paxValue">45 guests</span>
+</div>
+<input class="pax-slider" id="paxSlider" max="150" min="15" step="5" type="range" value="45"/>
+<div class="slider-markers">
+<span>15 pax (Minimum)</span>
+<span>50 pax (Medium)</span>
+<span>100 pax (Large)</span>
+<span>150+ pax (Full Charter)</span>
+</div>
+</div>
+<!-- Experience Tier Selector -->
+<div class="section-title">
+<div class="step-badge">2</div>
+<span>Choose Event Format</span>
+</div>
+<div class="tier-cards">
+<!-- Tier 1 -->
+<div class="tier-option active" data-rate="22" data-type="sightseeing" onclick="selectTier(this)">
+<div class="tier-info">
+<div class="tier-name">1. Sightseeing Cruise + Welcome Drink</div>
+<div class="tier-desc">Reserved block seating on scheduled sailing. 70-min audio guide or live commentary.</div>
+</div>
+<div class="tier-pricing">
+<div class="tier-rate">€22</div>
+<div class="tier-unit">per guest</div>
+</div>
+</div>
+<!-- Tier 2 -->
+<div class="tier-option" data-rate="79" data-type="dinner" onclick="selectTier(this)">
+<div class="tier-info">
+<div class="tier-name">2. 4-Course Candlelight Dinner Cruise</div>
+<div class="tier-desc">Reserved private panoramic table zone, plated warm dinner, live acoustic/piano music.</div>
+</div>
+<div class="tier-pricing">
+<div class="tier-rate">€79</div>
+<div class="tier-unit">per guest</div>
+</div>
+</div>
+<!-- Tier 3 -->
+<div class="tier-option" data-rate="105" data-type="dinner_openbar" onclick="selectTier(this)">
+<div class="tier-info">
+<div class="tier-name">3. Dinner Cruise + Unlimited Open Bar</div>
+<div class="tier-desc">Complete 4-course banquet with 2.5 hours unlimited wine, draft beer, and soft drinks.</div>
+</div>
+<div class="tier-pricing">
+<div class="tier-rate">€105</div>
+<div class="tier-unit">per guest</div>
+</div>
+</div>
+<!-- Tier 4 -->
+<div class="tier-option" data-fixed="1850" data-rate="0" data-type="charter" onclick="selectTier(this)">
+<div class="tier-info">
+<div class="tier-name">4. Exclusive Private Boat Charter (2 Hours)</div>
+<div class="tier-desc">Entire vessel private hire. Custom route, flexible departure time, custom sound system.</div>
+</div>
+<div class="tier-pricing">
+<div class="tier-rate">€1,850</div>
+<div class="tier-unit">vessel hire base</div>
+</div>
+</div>
+</div>
+<!-- Add-ons -->
+<div class="section-title">
+<div class="step-badge">3</div>
+<span>Optional Event Enhancements</span>
+</div>
+<div class="addon-row">
+<div class="addon-chip">
+<input id="addonWine" onchange="calculateQuote()" type="checkbox"/>
+<label for="addonWine">
+              Tokaji Wine Tasting
+              <span>+€12 / guest</span>
+</label>
+</div>
+<div class="addon-chip">
+<input id="addonFolk" onchange="calculateQuote()" type="checkbox"/>
+<label for="addonFolk">
+              Live Folk &amp; Operetta Trio
+              <span>+€280 flat</span>
+</label>
+</div>
+<div class="addon-chip">
+<input id="addonHostess" onchange="calculateQuote()" type="checkbox"/>
+<label for="addonHostess">
+              Private Tour Guide / Host
+              <span>+€120 flat</span>
+</label>
+</div>
+<div class="addon-chip">
+<input id="addonTransfer" onchange="calculateQuote()" type="checkbox"/>
+<label for="addonTransfer">
+              Hotel Coach Transfer (Dock)
+              <span>+€350 flat</span>
+</label>
+</div>
+</div>
+<!-- Live Estimate Total -->
+<div class="live-cost-banner">
+<div>
+<div class="live-cost-label">Estimated Package Value</div>
+<div class="live-cost-breakdown" id="estimateSummary">45 Guests • 4-Course Dinner</div>
+</div>
+<div class="live-cost-figure" id="totalEstimate">€3,555</div>
+</div>
+</div>
+<!-- Right Column: Lead Dispatch Form -->
+<div class="quote-form-card">
+<div class="form-header">
+<h3>Lock Date &amp; Request Formal Offer</h3>
+<p>We check live fleet berth availability with Legenda and Silverline within 60 minutes.</p>
+</div>
+<form id="groupQuoteForm" onsubmit="handleFormSubmit(event)">
+<div class="form-group">
+<label class="form-label" for="contactName">Organizer Full Name *</label>
+<input class="form-input" id="contactName" placeholder="e.g. Sarah Jenkins" required="" type="text"/>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label class="form-label" for="contactEmail">Corporate / Personal Email *</label>
+<input class="form-input" id="contactEmail" placeholder="s.jenkins@company.com" required="" type="email"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="contactPhone">WhatsApp / Mobile *</label>
+<input class="form-input" id="contactPhone" placeholder="+44 7700 900077" required="" type="tel"/>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label class="form-label" for="eventDate">Target Cruise Date *</label>
+<input class="form-input" id="eventDate" required="" type="date"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="departureTime">Preferred Time</label>
+<select class="form-select" id="departureTime">
+<option value="sunset">Sunset (19:00 - 20:00)</option>
+<option value="night">Night Parliament Illuminations (21:00)</option>
+<option value="afternoon">Afternoon (14:00 - 17:00)</option>
+<option value="lunch">Lunch Cruise (12:00 - 14:00)</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label" for="occasionType">Event Occasion</label>
+<select class="form-select" id="occasionType">
+<option value="corporate">Corporate Gala / Incentive Trip</option>
+<option value="wedding">Wedding Reception / Pre-Wedding Cruise</option>
+<option value="birthday">Milestone Birthday / Anniversary</option>
+<option value="stag_hen">Bachelor / Hen Party</option>
+<option value="tour_operator">Incoming Travel Agency / Tour Operator</option>
+</select>
+</div>
+<div class="form-group">
+<label class="form-label" for="specialNotes">Dietary Restrictions or Special Requests</label>
+<textarea class="form-textarea" id="specialNotes" placeholder="Vegetarian count, AV/presentation needs, speeches..."></textarea>
+</div>
+<button class="btn-submit" type="submit">
+<span>Get Official PDF Offer &amp; Berth Hold</span>
+<span>→</span>
+</button>
+<div class="security-note">
+            🔒 No upfront payment required. 48-hour option hold guaranteed.
+          </div>
+<div style="text-align: center; margin-top: 16px;">
+<a class="whatsapp-badge" href="https://wa.me/36300000000?text=Hi%2C%20I%20need%20a%20Budapest%20river%20cruise%20quote%20for%20a%20group" target="_blank">
+              💬 Instant WhatsApp Group Desk: +36 30 ...
+            </a>
+</div>
+</form>
+</div>
+</div>
+<!-- Comparison Section: Group Block vs Exclusive Charter -->
+<section class="compare-section">
+<h2 class="compare-title">Should You Book a Private Deck or Full Boat Charter?</h2>
+<div class="comparison-table-wrapper">
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Feature</th>
+<th>Reserved Tables on Scheduled Cruise</th>
+<th>Exclusive Upper Deck Hire</th>
+<th>Full Private Vessel Charter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Best Headcount</strong></td>
+<td>15 – 45 guests</td>
+<td>40 – 90 guests</td>
+<td>60 – 250+ guests</td>
+</tr>
+<tr>
+<td><strong>Cost Efficiency</strong></td>
+<td>Most budget-friendly (per-ticket pricing)</td>
+<td>Mid-tier (private space, shared boat)</td>
+<td>Highest prestige (flat hourly boat hire)</td>
+</tr>
+<tr>
+<td><strong>Schedule Flexibility</strong></td>
+<td>Fixed operator departure times</td>
+<td>Fixed departure, dedicated deck entry</td>
+<td>100% custom departure &amp; cruise duration</td>
+</tr>
+<tr>
+<td><strong>Music &amp; Microphones</strong></td>
+<td><span class="cross-icon">✕</span> Shared onboard audio</td>
+<td><span class="cross-icon">✕</span> Shared onboard audio</td>
+<td><span class="check-icon">✓</span> Private DJ / Mic for speeches allowed</td>
+</tr>
+<tr>
+<td><strong>Branding &amp; Banners</strong></td>
+<td><span class="cross-icon">✕</span> Not permitted</td>
+<td><span class="check-icon">✓</span> Table cards &amp; small pull-ups</td>
+<td><span class="check-icon">✓</span> Full vessel roll-ups, flags &amp; stage</td>
+</tr>
+<tr>
+<td><strong>Booking Deposit</strong></td>
+<td>20% deposit</td>
+<td>30% deposit</td>
+<td>50% deposit to lock vessel</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<script>
+    const slider = document.getElementById('paxSlider');
+    const paxValue = document.getElementById('paxValue');
+    const totalEstimate = document.getElementById('totalEstimate');
+    const estimateSummary = document.getElementById('estimateSummary');
+
+    let currentTier = {
+      type: 'dinner',
+      rate: 79,
+      fixed: 0,
+      name: '4-Course Candlelight Dinner'
+    };
+
+    slider.addEventListener('input', function() {
+      paxValue.innerText = this.value + ' guests';
+      calculateQuote();
+    });
+
+    function selectTier(el) {
+      document.querySelectorAll('.tier-option').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+
+      currentTier.type = el.getAttribute('data-type');
+      currentTier.rate = parseInt(el.getAttribute('data-rate')) || 0;
+      currentTier.fixed = parseInt(el.getAttribute('data-fixed')) || 0;
+      currentTier.name = el.querySelector('.tier-name').innerText.replace(/^[0-9]\.\s*/, '');
+
+      calculateQuote();
+    }
+
+    function calculateQuote() {
+      const pax = parseInt(slider.value);
+      let total = 0;
+
+      if (currentTier.fixed > 0) {
+        total = currentTier.fixed;
+      } else {
+        total = pax * currentTier.rate;
+      }
+
+      // Add-ons
+      if (document.getElementById('addonWine').checked) {
+        total += pax * 12;
+      }
+      if (document.getElementById('addonFolk').checked) {
+        total += 280;
+      }
+      if (document.getElementById('addonHostess').checked) {
+        total += 120;
+      }
+      if (document.getElementById('addonTransfer').checked) {
+        total += 350;
+      }
+
+      totalEstimate.innerText = '€' + total.toLocaleString();
+      estimateSummary.innerText = pax + ' Guests • ' + currentTier.name;
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const pax = slider.value;
+      const name = document.getElementById('contactName').value;
+      const email = document.getElementById('contactEmail').value;
+      const phone = document.getElementById('contactPhone').value;
+      const date = document.getElementById('eventDate').value;
+
+      alert(`Thank you ${name}! Your group inquiry for ${pax} guests on ${date} has been dispatched. Our team will send the official PDF option hold to ${email} within 60 minutes.`);
+    }
+
+    // Initialize default calculation
+    calculateQuote();
+  </script>
+</body>
+</html>

@@ -7,14 +7,308 @@ Translates and compiles 100% native Hungarian pages for Budapest Adventures:
 3. hu/setahajozas-a-dunan-vacsoraval/index.html (Dinner guide)
 
 Eliminates all English fragments, enforces Luxury Editorial System architecture,
-and preserves 100% affiliate tracking links (partner=38585).
+restores canonical Pros & Cons rich-text grid structure, and preserves 100% affiliate tracking links.
 """
 
 import os
+import sys
 import re
 from bs4 import BeautifulSoup
 
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from scripts.hungarian_subpoints_data import (
+    RIVER_SUBPOINTS,
+    DINNER_SUBPOINTS,
+    QF_LABELS_HU,
+    QF_CHIPS_HU,
+    QF_BADGES_HU,
+    QF_VALS_HU
+)
+
 BASE_DIR = '/Users/adamdimitrov/Development/budapest-adventures'
+
+def localize_navbar_and_menu(soup):
+    """Localizes the header, mega-menu dropdowns, direct links, and mobile drawer to Hungarian."""
+    # 1. Dropdown button
+    dropdown_btn = soup.find('button', class_='ltt-dropdown-btn')
+    if dropdown_btn:
+        span = dropdown_btn.find('span')
+        if span:
+            span.string = "Dunai Hajózás"
+            
+    # 2. Mega menu headers
+    mega_heads = soup.find_all(class_='ltt-mega-head')
+    if len(mega_heads) >= 1:
+        mega_heads[0].string = "DUNAI SÉTAHAJÓK"
+    if len(mega_heads) >= 2:
+        mega_heads[1].string = "LÁTNIVALÓK ÉS FÜRDŐK"
+        
+    # 3. Mega menu items
+    mega_items = soup.find_all(class_='ltt-mega-item')
+    mega_translations = {
+        '/best-budapest-river-cruises': ('10 Legjobb Dunai Sétahajó', 'Helyszínen tesztelt nappali és esti hajók', '/hu/setahajozas-a-dunan-budapest'),
+        '/best-dinner-cruises-budapest': ('7 Legjobb Vacsorahajó', '4 fogásos vacsorák, folklór és élő zongora', '/hu/setahajozas-a-dunan-vacsoraval'),
+        '/unlimited-prosecco-cruises-budapest': ('Korlátlan Prosecco Hajók', 'Korlátlan pezsgőfogyasztás és zene', '/unlimited-prosecco-cruises-budapest'),
+        '/best-night-cruises-budapest': ('Legjobb Éjszakai Hajók', 'Esti utak kivilágított Parlamenttel', '/best-night-cruises-budapest'),
+        '/best-private-boat-tours-budapest': ('Privát Hajóbérlés', 'Exkluzív dunai jachtok és vízi taxik', '/best-private-boat-tours-budapest'),
+        '/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest': ('Legenda Gyertyafényes Teszt', 'Budapest első számú vacsorahajója', '/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest'),
+        '/budapest-card-is-it-worth-it': ('Budapest Kártya Kalkulátor', 'Interaktív kalkulátor 94 látnivalóval', '/budapest-card-is-it-worth-it'),
+        '/thermal-baths-budapest': ('8 Legjobb Termálfürdő', 'Széchenyi, Gellért, Rudas és Lukács', '/thermal-baths-budapest'),
+        '/best-walking-tours-budapest': ('Legjobb Gyalogtúrák', 'Várnegyed és Zsidó Negyed gasztroséták', '/best-walking-tours-budapest'),
+        '/best-hostels-budapest': ('Legjobb Hostelek Budapesten', 'Közösségi és boutique szállások', '/best-hostels-budapest'),
+    }
+    
+    for item in mega_items:
+        href = item.get('href', '')
+        for k, (t_title, t_desc, t_href) in mega_translations.items():
+            if href == k or href == t_href:
+                item['href'] = t_href
+                st = item.find('strong')
+                if st: st.string = t_title
+                p = item.find('p')
+                if p: p.string = t_desc
+                break
+
+    # 4. Direct nav links
+    nav_links = soup.find_all(class_='ltt-nav-link')
+    for nl in nav_links:
+        if 'ltt-dropdown-btn' in nl.get('class', []):
+            continue
+        txt = nl.text.strip()
+        if txt in ['River Cruises', 'Dunai Sétahajók']:
+            nl.string = 'Dunai Sétahajók'
+            nl['href'] = '/hu/setahajozas-a-dunan-budapest'
+        elif txt in ['Dinner Cruises', 'Vacsorahajók']:
+            nl.string = 'Vacsorahajók'
+            nl['href'] = '/hu/setahajozas-a-dunan-vacsoraval'
+        elif txt in ['Budapest Card', 'Budapest Kártya']:
+            nl.string = 'Budapest Kártya'
+            nl['href'] = '/budapest-card-is-it-worth-it'
+        elif txt in ['About', 'Rólunk']:
+            nl.string = 'Rólunk'
+            nl['href'] = '/about'
+        elif txt in ['Contact', 'Kapcsolat']:
+            nl.string = 'Kapcsolat'
+            nl['href'] = '/contact'
+
+    # 5. Mobile Drawer
+    drawer = soup.find(class_='ltt-mobile-drawer')
+    if drawer:
+        labels = drawer.find_all(class_='ltt-mobile-label')
+        if len(labels) >= 1: labels[0].string = "Dunai Hajózás & Kalauzok"
+        if len(labels) >= 2: labels[1].string = "Látnivalók & Fürdők"
+        if len(labels) >= 3: labels[2].string = "Szerkesztőség"
+        
+        m_links = drawer.find_all(class_='ltt-mobile-link')
+        for ml in m_links:
+            href = ml.get('href', '')
+            span = ml.find('span')
+            
+            if '/best-budapest-river-cruises' in href or '/hu/setahajozas-a-dunan-budapest' in href:
+                ml['href'] = '/hu/setahajozas-a-dunan-budapest'
+                if span: span.string = '10 Legjobb Dunai Sétahajó'
+                b = ml.find_all('span')
+                if len(b) > 1: b[1].string = 'LEGJOBB'
+            elif '/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest' in href:
+                if span: span.string = 'Legenda Gyertyafényes Teszt'
+            elif '/best-dinner-cruises-budapest' in href or '/hu/setahajozas-a-dunan-vacsoraval' in href:
+                ml['href'] = '/hu/setahajozas-a-dunan-vacsoraval'
+                if span: span.string = '7 Legjobb Vacsorahajó'
+            elif '/unlimited-prosecco-cruises-budapest' in href:
+                if span: span.string = 'Korlátlan Prosecco Hajók'
+            elif '/best-night-cruises-budapest' in href:
+                if span: span.string = 'Legjobb Éjszakai Hajók'
+            elif '/best-private-boat-tours-budapest' in href:
+                if span: span.string = 'Privát Hajóbérlés'
+            elif '/budapest-card-is-it-worth-it' in href:
+                if span: span.string = 'Budapest Kártya Kalkulátor'
+                b = ml.find_all('span')
+                if len(b) > 1: b[1].string = 'INTERAKTÍV'
+            elif '/thermal-baths-budapest' in href:
+                if span: span.string = '8 Legjobb Termálfürdő'
+            elif '/best-walking-tours-budapest' in href:
+                if span: span.string = 'Legjobb Gyalogtúrák'
+            elif '/best-hostels-budapest' in href:
+                if span: span.string = 'Legjobb Hostelek Budapesten'
+            elif '/about' in href:
+                if span: span.string = 'Rólunk és Etikai Kódex'
+            elif '/contact' in href:
+                if span: span.string = 'Kapcsolat'
+
+
+def localize_footer(soup):
+    """Localizes the footer brand description, columns, popular links, copyright and taglines."""
+    footer = soup.find('footer') or soup.find(class_='footer-dark')
+    if not footer:
+        return
+        
+    brand_desc = footer.find(class_='footer-brand-desc') or footer.find(class_='footer-paragraph')
+    if brand_desc:
+        brand_desc.string = (
+            "A dunai sétahajók és vacsorahajók független, helyszíni tesztelése. "
+            "Budapesten élve saját költségünkön váltunk jegyet, teszteljük az audio guide-okat "
+            "és ellenőrizzük az összes kikötőt, hogy Ön elkerülje a turistacsapdákat."
+        )
+        
+    col_titles = footer.find_all(class_=lambda c: c and ('footer-col-title' in c or 'footer-link-title' in c))
+    if len(col_titles) >= 1:
+        col_titles[0].string = "Kiemelt Budapesti Kalauzok"
+    if len(col_titles) >= 2:
+        col_titles[1].string = "Megbízhatóság és Vállalat"
+        
+    footer_links = footer.find_all('a', class_=lambda c: c and ('footer-link-item' in c or 'footer-link-3' in c))
+    for fl in footer_links:
+        href = fl.get('href', '')
+        if href in ['/best-budapest-river-cruises', '/hu/setahajozas-a-dunan-budapest']:
+            fl.string = '10 Legjobb Dunai Sétahajózás'
+            fl['href'] = '/hu/setahajozas-a-dunan-budapest'
+        elif href in ['/best-dinner-cruises-budapest', '/hu/setahajozas-a-dunan-vacsoraval']:
+            fl.string = '7 Legjobb Dunai Vacsorahajó'
+            fl['href'] = '/hu/setahajozas-a-dunan-vacsoraval'
+        elif href == '/budapest-card-is-it-worth-it':
+            fl.string = 'Budapest Kártya Kalkulátor (2026)'
+        elif href == '/thermal-baths-budapest':
+            fl.string = '8 Legjobb Budapesti Termálfürdő'
+        elif href == '/best-night-cruises-budapest':
+            fl.string = 'Legjobb Éjszakai Sétahajók'
+        elif href == '/unlimited-prosecco-cruises-budapest':
+            fl.string = 'Korlátlan Prosecco Hajóutak'
+        elif href == '/best-private-boat-tours-budapest':
+            fl.string = 'Legjobb Privát Hajótúrák'
+        elif href == '/best-walking-tours-budapest':
+            fl.string = 'Legjobb Budapesti Gyalogtúrák'
+        elif href == '/best-hostels-budapest':
+            fl.string = 'Legjobb Hostelek Budapesten'
+        elif href == '/about':
+            fl.string = 'Adam Dimitrovról'
+        elif href in ['/about#ethics', '/about#methodology']:
+            fl.string = '5 Pontos Etikai Chartánk'
+        elif href == '/about#manifesto':
+            fl.string = 'Függetlenségi Manifesztum'
+        elif href == '/contact':
+            fl.string = 'Kapcsolat a Szerkesztőséggel'
+            
+    legal = footer.find(class_='legal-wrapper')
+    if legal:
+        divs = legal.find_all(class_='legal-text') or legal.find_all('div')
+        if len(divs) >= 1:
+            divs[0].string = "© 2026 BudapestAdventures.com. Minden jog fenntartva."
+        if len(divs) >= 2:
+            divs[1].string = "Személyesen, inkognitóban tesztelve Budapesten • 100% névtelen foglalások • Nulla szponzorált PR-út"
+
+
+def apply_qf_translations(soup, dcard):
+    """Localizes the Quick Facts widget, badge, labels, values, and amenity chips to Hungarian."""
+    for qf in dcard.find_all(class_='qf1-wrap'):
+        title = qf.find(class_='qf1-title')
+        if title:
+            title.string = "Gyors Tények — Helyszíni Adatlap"
+        badge = qf.find(class_='qf1-badge')
+        if badge:
+            btxt = badge.get_text(strip=True)
+            if btxt in QF_BADGES_HU:
+                badge.string = QF_BADGES_HU[btxt]
+        for row in qf.find_all(class_='qf1-row'):
+            lbl = row.find(class_='qf1-label')
+            if lbl:
+                ltxt = lbl.get_text(strip=True)
+                if ltxt in QF_LABELS_HU:
+                    lbl.string = QF_LABELS_HU[ltxt]
+            val = row.find(class_='qf1-val')
+            if val:
+                vtxt = val.get_text(strip=True)
+                if vtxt in QF_VALS_HU:
+                    val.string = QF_VALS_HU[vtxt]
+        for chip in qf.find_all(class_='qf1-chip'):
+            ctxt = chip.get_text(strip=True)
+            if ctxt in QF_CHIPS_HU:
+                chip.string = QF_CHIPS_HU[ctxt]
+
+
+def apply_subpoints_translations(soup, dcard, card_idx, subpoints_dict):
+    """Translates onboard walkthrough, audio guide, dining, and operator subpoints."""
+    if card_idx not in subpoints_dict:
+        return
+    c_dict = subpoints_dict[card_idx]
+    for sp in dcard.find_all(class_='ltt-sp-card'):
+        h4 = sp.find('h4')
+        h4_txt = h4.get_text(strip=True) if h4 else ''
+        if h4_txt in c_dict:
+            data = c_dict[h4_txt]
+            if h4:
+                h4.string = data.get('h4', h4_txt)
+            if 'lis' in data:
+                sp_lis = sp.find_all('li')
+                for i, (title, desc) in enumerate(data['lis']):
+                    if i < len(sp_lis):
+                        target_li = sp_lis[i]
+                        target_li.clear()
+                        st = soup.new_tag('strong')
+                        st.string = title
+                        target_li.append(st)
+                        target_li.append(f" {desc}")
+            if 'ps' in data:
+                sp_ps = sp.find_all('p')
+                for i, p_txt in enumerate(data['ps']):
+                    if i < len(sp_ps):
+                        sp_ps[i].string = p_txt
+                    else:
+                        new_p = soup.new_tag('p')
+                        new_p.string = p_txt
+                        sp.append(new_p)
+
+
+def create_pro_con_html(soup, pros_list, cons_list):
+    """Builds the canonical Luxury Editorial Pros & Cons grid box with .w-richtext and <ul><li>."""
+    wrapper = soup.new_tag('div', **{'class': 'pro-con-box-wrapper'})
+    grid = soup.new_tag('div', **{'class': 'w-layout-grid grid-15'})
+    wrapper.append(grid)
+    
+    # Pro Cell
+    pro_cell = soup.new_tag('div', **{'class': 'pro-con-box-pro-cell', 'data-wf-pbl': 'layout-grid-1x2-vertical'})
+    pro_rich = soup.new_tag('div', **{'class': 'pro-con-box-pro-cell-rich-text-block w-richtext'})
+    h3_pro = soup.new_tag('h3')
+    st_pro = soup.new_tag('strong')
+    st_pro.string = "Előnyök:"
+    h3_pro.append(st_pro)
+    pro_rich.append(h3_pro)
+    
+    ul_pro = soup.new_tag('ul', **{'role': 'list'})
+    for title, desc in pros_list:
+        li = soup.new_tag('li')
+        st = soup.new_tag('strong')
+        st.string = title
+        li.append(st)
+        li.append(f" — {desc}")
+        ul_pro.append(li)
+    pro_rich.append(ul_pro)
+    pro_cell.append(pro_rich)
+    grid.append(pro_cell)
+    
+    # Con Cell
+    con_cell = soup.new_tag('div', **{'class': 'pro-con-box-con-cell', 'data-wf-pbl': 'layout-grid-1x2-vertical'})
+    con_rich = soup.new_tag('div', **{'class': 'pro-con-box-con-cell-rich-text-block w-richtext'})
+    h3_con = soup.new_tag('h3')
+    st_con = soup.new_tag('strong')
+    st_con.string = "Hátrányok:"
+    h3_con.append(st_con)
+    con_rich.append(h3_con)
+    
+    ul_con = soup.new_tag('ul', **{'role': 'list'})
+    for title, desc in cons_list:
+        li = soup.new_tag('li')
+        st = soup.new_tag('strong')
+        st.string = title
+        li.append(st)
+        li.append(f" — {desc}")
+        ul_con.append(li)
+    con_rich.append(ul_con)
+    con_cell.append(con_rich)
+    grid.append(con_cell)
+    
+    return wrapper
+
 
 def build_hungarian_home():
     print("Compiling Hungarian Homepage (hu/index.html)...")
@@ -37,21 +331,8 @@ def build_hungarian_home():
     if html_tag:
         html_tag['lang'] = 'hu'
         
-    # 2. Navbar
-    for a in soup.find_all('a'):
-        txt = a.text.strip()
-        if txt == 'River Cruises':
-            a.string = 'Dunai Sétahajók'
-            a['href'] = '/hu/setahajozas-a-dunan-budapest'
-        elif txt == 'Dinner Cruises':
-            a.string = 'Vacsorahajók'
-            a['href'] = '/hu/setahajozas-a-dunan-vacsoraval'
-        elif txt == 'Night Cruises':
-            a.string = 'Éjszakai Hajók'
-        elif txt == 'Spas & Baths':
-            a.string = 'Termálfürdők'
-        elif txt == 'About':
-            a.string = 'Rólunk'
+    # 2. Navbar & Mega-Menu
+    localize_navbar_and_menu(soup)
             
     # 3. Hero
     eyebrow = soup.find(class_='ltt-hero-eyebrow')
@@ -84,7 +365,7 @@ def build_hungarian_home():
     if sec_sub:
         sec_sub.string = "Független, helyszínen felmért kalauzok a Duna hajózásához, gasztronómiájához és a város felfedezéséhez."
         
-    # 4. Guide Cards (9 Cards)
+    # 4. Guide Cards (9 Cards - enforce NO spec pills per directive!)
     cards_hu = [
         {
             'tag': '🏆 FŐ ÚTIKALAUZ',
@@ -206,40 +487,219 @@ def build_hungarian_home():
     if man_btn:
         man_btn.string = "Olvassa el teljes módszertanunkat →"
         
-    # 6. Author Bio Card
-    auth_name = soup.find(class_='ltt-author-name')
-    if auth_name:
-        auth_name.string = "Adam Dimitrov"
-    auth_title = soup.find(class_='ltt-author-title')
-    if auth_title:
-        auth_title.string = "Alapító & Helyi Utazási Szakértő"
-    auth_desc = soup.find(class_='ltt-author-desc')
-    if auth_desc:
-        auth_desc.string = "Budapesti születésű utazási szakíró. Több mint egy évtizede dokumentálja a Duna személyhajózását, hogy segítse az utazókat a megfelelő hajó kiválasztásában."
+    # 6. Author Bio Card (.ltt-author-box)
+    author_box = soup.find(class_='ltt-author-box')
+    if author_box:
+        auth_role = author_box.find(class_='ltt-author-role')
+        if auth_role:
+            auth_role.string = "Alapító & Vezető Dunai Hajózási Szakértő"
+            
+        vbadges = author_box.find_all(class_='ltt-vbadge')
+        badge_texts = [
+            "✓ Helyszíni Dunai Auditok",
+            "✓ 40+ Tesztelt Budapesti Hajó",
+            "✓ Budapesti Születésű Utazási Szakíró"
+        ]
+        for b_idx, vb in enumerate(vbadges[:3]):
+            vb.string = badge_texts[b_idx]
+            
+        bio = author_box.find(class_='ltt-author-bio')
+        if bio:
+            bio.string = (
+                "Adam Dimitrov azért alapította a Budapest Adventurest, hogy szigorú, "
+                "független értékeléseket nyújtson az utazóknak a dunai sétahajókról és budapesti élményekről. "
+                "Budapesten élve személyesen vizsgálja az asztalok elhelyezkedését, a menetrend megbízhatóságát, "
+                "az audiokommentár pontosságát és a beszállási logisztikát, hogy Ön minden alkalommal a megfelelő hajót válassza."
+            )
+            
+        links_div = author_box.find(class_='ltt-author-links')
+        if links_div:
+            a_link = links_div.find('a')
+            if a_link:
+                a_link.string = "Tudjon meg többet tesztelési módszertanunkról és történetünkről →"
+                a_link['href'] = "/about"
         
-    badges = soup.find_all(class_='ltt-author-badge')
-    b_texts = ["✓ 100+ Hajózási Audit", "✓ Budapesti Születésű", "✓ 100% Névtelen Foglalások"]
-    for idx, b in enumerate(badges[:3]):
-        b.string = b_texts[idx]
-        
-    # Footer
-    footer_tagline = soup.find(class_='ltt-footer-tagline')
-    if footer_tagline:
-        footer_tagline.string = "Független, helyszínen tesztelt dunai sétahajó és budapesti útikönyvek igényes utazóknak."
+    # 7. Localized Footer
+    localize_footer(soup)
         
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(str(soup))
     print(f"Hungarian Homepage saved to {out_path}")
 
 
+# DATA FOR 10 RIVER CRUISES
+RIVER_PROS_CONS = [
+    # Card 1 (Legenda)
+    ([
+        ("A Legjobb Összességében", "Ez a sétahajózás mindent tartalmaz a tökéletes városnézéshez."),
+        ("Üdvözlőital a Jegyárban", "Választható pezsgő, minőségi bor, sör, üdítő vagy ásványvíz."),
+        ("Kiváló Hajók", "Modern, tágas és kifogástalanul karbantartott hajók, mindkét fedélzetről páratlan kilátással."),
+        ("Prémium Audio Guide", "Kristálytiszta hangminőség egyéni fejhallgatón keresztül, 30 választható nyelven."),
+        ("Teljes Dunai Útvonal", "Lefedi az összes kiemelt látnivalót a Margitszigettől a Nemzeti Színházig és Művészetek Palotájáig."),
+        ("Családbarát Kedvezmények", "0–9 éves korig ingyenes, 10–14 éves korig 50% kedvezmény a jegyárból.")
+    ], [
+        ("Magasabb Árkategória", "Kissé drágább az átlagos hajójegyeknél, de a nyújtott prémium minőség és kényelem bőségesen kárpótol érte."),
+        ("Szezonális Ingyenes Limonádé", "Az ingyenes házi limonádé kizárólag a nyári főszezonban érhető el a felső teraszon."),
+        ("Fejhallgató Kényelem", "A vezetékes fejhallgatók zsinórja magas utasok számára néha feszes lehet ülve.")
+    ]),
+    # Card 2 (Rubin Group)
+    ([
+        ("#1 Legkedvezőbb Árú Korlátlan Italos Hajóút", "Budapest legköltséghatékonyabb korlátlan prosecco hajóútja a Dunán."),
+        ("Kiváló Rendezvényhajó", "Hangulatos szabadtéri felső kilátóterasz és két elegáns belső fedélzet koktélparti atmoszférával."),
+        ("Valóban Korlátlan Italfogyasztás", "A figyelmes felszolgálók folyamatosan újratöltik a minőségi proseccót és a frissítő limonádét."),
+        ("Kényelmes 75 Perces Menetidő", "Több mint elegendő idő az italok élvezetére és a kivilágított budapesti panoráma megcsodálására.")
+    ], [
+        ("Középszerű Opcionális Ételtál", "A 10 eurós feláras hidegtál minősége átlagos, nem éri el a gourmet színvonalat."),
+        ("Kiesőbb Kikötői Indulópont", "A Margit hídhoz közeli kikötő kissé távolabb esik a belvárosi Vigadó téri fő sétánytól."),
+        ("Hangszórós Audiokalauz Zaja", "A társasági zsongás és zene miatt a hangszórókból szóló ismertető nehezebben hallható.")
+    ]),
+    # Card 3 (Kisfaludy Steamboat)
+    ([
+        ("Autentikus 19. Századi Gőzhajó", "Az egyetlen történelmi stílusú, faborítású nosztalgiahajó a Dunán (az 1846-os Kisfaludy replikája)."),
+        ("Fedélzeti Múzeumi Kiállítás", "Az alsó szalonban gazdag kiállítás mutatja be a 19. századi dunai gőzhajózás aranykorát."),
+        ("Üdvözlőital a Jegyárban", "A jegy tartalmaz egy pohár pezsgőt, magyar bort, sört vagy üdítőt beszálláskor."),
+        ("Központi 10-es Kikötő", "Közvetlenül a fehér Erzsébet híd pesti hídfőjétől indul a Duna-korzón.")
+    ], [
+        ("Kisebb Nyitott Fedélzeti Férőhely", "A lapátkerekes kialakítás miatt a korlát melletti külső helyek gyorsabban megtelnek."),
+        ("Hangszórós Idegenvezetés", "A narráció a központi hangszórókból szól, nem egyéni fejhallgatón keresztül.")
+    ]),
+    # Card 4 (Portum Lines)
+    ([
+        ("Kiváló Ár-Érték Arány", "40–50%-kal kedvezőbb árú, mint a Legenda, miközben modern, tiszta és minőségi hajózási élményt nyújt."),
+        ("Fiatalos, Lendületes Légkör", "Kellemes, modern atmoszféra háttérzenével és barátságos kiszolgálással."),
+        ("Minőségi Üdvözlőital", "Választható behűtött prosecco, szezonális koktél, forralt bor vagy üdítő."),
+        ("Modern, Kétszintes Hajó", "Jól karbantartott belső panorámaszalon és tágas felső nyitott fedélzet.")
+    ], [
+        ("Szent Gellért Téri Indulás", "A budai 0-s kikötőből indul a Gellért térnél, így a pesti belvárosból át kell sétálni a Szabadság hídon."),
+        ("Csúcsidőben Zsúfolt Lehet", "Népszerű járatain a felső terasz hamar megtelik a főszezonban."),
+        ("Korlátozott Külső Asztalok", "A felső fedélzeti asztalok érkezési sorrendben foglalhatók el.")
+    ]),
+    # Card 5 (Silverline No-Frills)
+    ([
+        ("Központi 11-es Kikötői Beszállás", "Közvetlenül az Erzsébet híd pesti lábánál, lépésekre a Váci utcától és a 2-es villamostól."),
+        ("Alacsony Jegyár", "Minden felesleges extrát elhagyva a 60 perces városnéző jegy már €13–15 között elérhető."),
+        ("Sűrű Menetrend", "Egész nap folyamatosan indul 11:00 és 22:00 között."),
+        ("Tágas Kétszintes Hajó", "Nagy befogadóképességű katamarán nyitott felső kilátófedélzettel.")
+    ], [
+        ("Nincs Üdvözlőital", "Még az ásványvízért is külön fizetni kell a fedélzeti büfében."),
+        ("Csak Letölthető Applikációs Audio Guide", "Nincs beépített fejhallgató, az ismertető saját okostelefonon és mobilneten érhető el.")
+    ]),
+    # Card 6 (Silverline Cocktails)
+    ([
+        ("Két Teljes Méretű Koktél a Jegyben", "2 frissen kevert klasszikus koktél (Mojito, Pina Colada, Cuba Libre, Tequila Sunrise) jár személyenként."),
+        ("Teljes 60–80 Perces Útvonal", "A Margit hídtól a Nemzeti Színházig a teljes budapesti panorámaszakaszt bejárja."),
+        ("Kényelmes Katamarán Szalon", "Párnázott belső boxok és szellős nyitott felső terasz a kilátáshoz."),
+        ("Központi Petőfi Téri Kikötő", "Kényelmesen megközelíthető a belvárosból.")
+    ], [
+        ("Nincs Történelmi Idegenvezetés", "Kifejezetten hangulatos koktélozós, zenés estére tervezték, nem városnéző túrára."),
+        ("Nyitott Sorban Állás", "A 11-es ponton várakozóhelye eső és erős nap ellen nem fedett.")
+    ]),
+    # Card 7 (Silverline Pizza & Beer)
+    ([
+        ("Korlátlan Sör- és Üdítőfogyasztás", "A 75 perces út alatt korlátlan csapolt sör, Pepsi termékek és ásványvíz."),
+        ("Friss Meleg Pizza az Asztalhoz", "Választható sonkás, szalámis, négysajtos, magyaros vagy margherita pizza."),
+        ("Laza, Vidám Társasági Hangulat", "Kiváló baráti társaságoknak, egyetemistáknak és fiatal pároknak a vacsora előtti alapozáshoz.")
+    ], [
+        ("Kompakt Sütőben Melegített Pizza", "A hajókonyha kompakt villanysütőiben sül, nem fatüzelésű pizzériában."),
+        ("Belső Ablakoszlopok", "Néhány lenti asztal látószögét szerkezeti oszlopok zavarhatják; étkezés után érdemes a tetőre menni fotózni.")
+    ]),
+    # Card 8 (Hungaria Koncert Dinner Cruise)
+    ([
+        ("Gazdag Svédasztalos Büfékínálat", "Tradicionális magyaros melegételek és hidegtálak korlátlan fogyasztással."),
+        ("Két Ajándék Üdvözlőital", "Egy pohár pezsgő beszálláskor és egy választható ital az étkezéshez."),
+        ("Élő Folklórest & Cigányzene", "Elismert néptáncosok és autentikus hegedűművészek élő előadása a szalonban."),
+        ("Teljes Dunai Körút", "Hosszú, 90 perces menetidő a Margitszigettől a Művészetek Palotájáig.")
+    ], [
+        ("Kevésbé Ideális Fotózásra", "A belső szalonra és a műsorra fókuszál, a nyitott kilátóterület korlátozottabb."),
+        ("Büfé Jellegű Gasztronómia", "Bőséges és finom, de nem prémium fine dining tányérszerviz.")
+    ]),
+    # Card 9 (Hungaria Koncert Drinks Cruise)
+    ([
+        ("Élő Népi Hegedűtrió", "Autentikus magyar vonószene, a koncert végén közönségkérésekkel."),
+        ("Klasszikus Századfordulós Gőzös Hangulat", "A patinás Gróf Széchenyi díszes faborítású szalonjában hajózik."),
+        ("Változatos Itallehetőségek", "Választható borkóstoló, minőségi kézműves sörök vagy koktélok."),
+        ("Akadémia Kikötő a Parlament Mellett", "Közvetlenül a Lánchíd és az Országház közötti 3-as mólóról indul.")
+    ], [
+        ("Közös Hajó a Vacsorázó Vendégekkel", "A csak italt fogyasztó utasok az alsó fedélzeten ülnek, miközben a felső szinten vacsoráznak."),
+        ("90 Perces Menetidő", "Nyugodtabb, lassabb tempójú hajózás.")
+    ]),
+    # Card 10 (Duna Cruises / Mahart)
+    ([
+        ("A Legolcsóbb Dunai Hajójegy", "Ideális a legalacsonyabb költségvetéssel utazóknak."),
+        ("Központi Vigadó Téri Kikötés", "Közvetlenül a belvárosi pesti rakpartról indul."),
+        ("Egyszerű Panorámaút", "Alapszintű 60 perces városnézés felesleges sallangok nélkül.")
+    ], [
+        ("Puritán Fedélzeti Kényelem", "Egyszerű, kopottabb berendezés és kemény műanyag ülések."),
+        ("Nincs Ingyenes Ital vagy Audio Guide", "Semmilyen kiegészítő szolgáltatást nem tartalmaz a jegyár."),
+        ("Gyakran Zsúfolt Diákcsoportokkal", "A nagy befogadóképesség miatt gyakran iskolás csoportok töltik meg a fedélzetet.")
+    ])
+]
+
+
+# HARVESTED SUMMARY REVIEWS FOR RIVER CARDS
+RIVER_SUMMARIES = {
+    0: [ # Legenda
+        "A Legenda folyami hajóútja a legteljesebb és legkifinomultabb városnéző élményt nyújtja Budapesten, minőségi üdvözlőitallal és 30 nyelven elérhető professzionális audio guide-dal.",
+        "A hangos ismertető 30 nyelven érhető el: magyar, angol, német, francia, olasz, spanyol és számos egyéb nyelven. A hangminőség az egyéni fülhallgatóknak köszönhetően kristálytiszta.",
+        "Modern és tágas panorámahajóik mindkét fedélzetről kiváló kilátást biztosítanak. Az útvonal a Margitszigettől a Nemzeti Színházig és a Müpáig terjedő ikonikus látnivalók mindegyikét érinti.",
+        "A hajóút során a belső világítás le van kapcsolva, ami megszünteti a zavaró tükröződést a hatalmas panorámaüvegeken, így tökéletes éjszakai fotókat készíthet.",
+        "Bár a jegyár a magasabb kategóriába tartozik, a kimagasló szolgáltatás és a hibátlan szervezés teljes mértékben igazolja az árát."
+    ],
+    1: [ # Rubin Group
+        "A Rubin Group hajótúrája kiváló választás azoknak, akik megfizethető koktélparti hangulatot keresnek korlátlan prosecco és limonádé mellett. A figyelmes felszolgálók mindig készen állnak, hogy tele legyen a vendégek pohara.",
+        "A felső fedélzetről lélegzetelállító 360°-os kilátás nyílik a városra a 75 perces folyami hajóút alatt, míg a két fedett fedélzet hangulatos és hívogató hangulatot kínál.",
+        "Ami ennek a körútnak a kevésbé rózsás aspektusait illeti, az opcionális ételtál nem éri meg a 10 eurós felárat, és az audiokalauzt is nehezebb lehet hallani a társasági partizajtól. Ezenkívül a találkozási pont távolabb van a belvárosi Vigadó tértől, így az odajutás több időt igényelhet.",
+        "Összességében, ha egy kellemes, kötetlen dunai hajózásra vágyik korlátlan italokkal és lenyűgöző esti panorámával, a Rubin Group hajókirándulása kiemelkedő ár-érték arányú választás."
+    ],
+    2: [ # Kisfaludy
+        "Ez Budapest egyetlen sétahajózása, amely autentikus 19. századi történelmi élményt kínál az 1846-os Kisfaludy lapátkerekes gőzhajó hű replikájának fedélzetén.",
+        "A hajóút egy választott üdvözlőitalt és igényes angol nyelvű audiokommentárt tartalmaz. Az alsó fedélzeten egy lenyűgöző hajózástörténeti múzeumi kiállítás tekinthető meg a reformkori dunai gőzhajózásról.",
+        "A 60 perces út során kényelmesen megcsodálhatók a budapesti hidak és a Parlament a fa szalonok nosztalgikus eleganciájában."
+    ],
+    3: [ # Portum Lines
+        "A Portum Lines hajózása kiváló és megfizethető alternatívája a Legendának: modern, tiszta és fiatalos hajójukon minőségi városnézésben lehet része 40-50%-kal alacsonyabb áron.",
+        "A felszálláskor a vendégeket behűtött üdvözlőital fogadja (prosecco, forralt bor, koktél vagy üdítő). A kétszintes hajó tágas felső fedélzete nagyszerű kilátást biztosít a hidakra és a Várnegyedre.",
+        "Tökéletes kompromisszum azoknak az utazóknak, akik prémium hangulatra vágynak baráti áron."
+    ],
+    4: [ # Silverline No-Frills
+        "A Silverline fapados városnéző hajója kifejezetten a büdzsé-tudatos utazóknak készült: elhagyja a kötelező italokat és catering költségeket, így a legalacsonyabb áron kínál 75 perces dunai hajózást.",
+        "A központi 11-es kikötőből (Petőfi tér / Erzsébet híd) induló katamarán tágas felső terasszal rendelkezik, ahonnan akadálytalanul fotózható a kivilágított Parlament.",
+        "Ajánlott azoknak, akik egyszerűen csak a folyami panorámát szeretnék élvezni rejtett felárak nélkül."
+    ],
+    5: [ # Silverline Cocktails
+        "Két frissen kevert, prémium koktéllal a kézben hajózni a naplementében az egyik leghangulatosabb esti program a Duna fővárosi szakaszán.",
+        "A Silverline 80 perces koktélos hajóútja laza lounge zenével és kényelmes belső kanapékkal várja a párokat és társaságokat, miközben a Margit hídtól a Nemzeti Színházig bejárja a várost.",
+        "Kiváló felvezetés egy budapesti éjszakai szórakozáshoz vagy vacsorához."
+    ],
+    6: [ # Silverline Pizza & Beer
+        "Frissen sült meleg pizza az asztalhoz szervírozva, korlátlan csapolt sörrel és üdítővel kísérve: a Silverline pizzás hajója a laza, vidám társasági esték kedvence.",
+        "A 75 perces hajóút során 5 különböző pizzatípus közül választhat, miközben a hajó a kivilágított Országház és a Budai Vár előtt halad el.",
+        "Különösen népszerű egyetemisták, baráti társaságok és fiatal családok körében."
+    ],
+    7: [ # Hungaria Koncert Dinner
+        "A Hungaria Koncert gazdag büfévacsorás hajóútja a tradicionális magyar gasztronómia és a népművészet legjavát egyesíti.",
+        "Az utazók korlátlan svédasztalról válogathatnak a magyaros fogásokból (gulyásleves, pörköltek, rétesek), miközben díjnyertes néptáncosok és autentikus hegedűművészek élő műsorát élvezik.",
+        "Hosszú, 90 perces menetidővel garantálja a teljes kikapcsolódást és a gazdag élményt."
+    ],
+    8: [ # Hungaria Koncert Drinks & Violin
+        "Ha egy kellemes esti dunai hajózásra vágyik autentikus élő hegedűmuzsikával, de nem szeretne komplett vacsorát fogyasztani, ez a Hungaria Koncert italos hajótúra a legjobb választás.",
+        "A vendégek a patinás Gróf Széchenyi díszes, századfordulós fa szalonjában kóstolhatnak minőségi borokat vagy kézműves söröket, miközben a népzenei trió a legszebb melódiákat játssza.",
+        "Kifejezetten hangulatos, kulturális élmény a Parlament szomszédságából indulva."
+    ],
+    9: [ # Duna Cruises / Mahart
+        "Budapest legolcsóbb belépő szintű dunai városnéző sétahajója, amely a legegyszerűbb, sallangmentes panorámaélményt nyújtja a Vigadó térről.",
+        "Bár a fedélzeti kényelem és a felszereltség puritán, a 60 perces útvonal pontosan ugyanazokat az ikonikus látványosságokat mutatja meg, mint a drágább hajók.",
+        "Ideális választás a legszigorúbb költségvetésből gazdálkodó hátizsákos utazóknak."
+    ]
+}
+
+
 def build_hungarian_river():
     print("Compiling Hungarian River Guide (hu/setahajozas-a-dunan-budapest/index.html)...")
     en_path = os.path.join(BASE_DIR, 'river.html')
     out_path = os.path.join(BASE_DIR, 'hu', 'setahajozas-a-dunan-budapest', 'index.html')
-    harvested_path = os.path.join(BASE_DIR, 'data', 'harvested_html', 'hu', 'river.html')
     
     soup = BeautifulSoup(open(en_path, 'r', encoding='utf-8').read(), 'html.parser')
-    h_soup = BeautifulSoup(open(harvested_path, 'r', encoding='utf-8').read(), 'html.parser')
     
     # 1. Head Metadata
     if soup.title:
@@ -254,21 +714,8 @@ def build_hungarian_river():
     if html_tag:
         html_tag['lang'] = 'hu'
         
-    # 2. Navbar
-    for a in soup.find_all('a'):
-        txt = a.text.strip()
-        if txt == 'River Cruises':
-            a.string = 'Dunai Sétahajók'
-            a['href'] = '/hu/setahajozas-a-dunan-budapest'
-        elif txt == 'Dinner Cruises':
-            a.string = 'Vacsorahajók'
-            a['href'] = '/hu/setahajozas-a-dunan-vacsoraval'
-        elif txt == 'Night Cruises':
-            a.string = 'Éjszakai Hajók'
-        elif txt == 'Spas & Baths':
-            a.string = 'Termálfürdők'
-        elif txt == 'About':
-            a.string = 'Rólunk'
+    # 2. Navbar & Mega-Menu
+    localize_navbar_and_menu(soup)
 
     # 3. Clean Card Hero
     bc_links = soup.find_all(class_='ltt-breadcrumbs')
@@ -445,8 +892,7 @@ def build_hungarian_river():
     if breakdown_h2:
         breakdown_h2.string = "Részletes Elemzés — A 10 Legjobb Dunai Sétahajó Budapesten"
         
-    # 7. Details Cards (Bento & Pros/Cons in Hungarian)
-    faqs = h_soup.find_all('div', class_='faq-item')
+    # 7. Details Cards Localization (Pros/Cons & Bento content)
     details_cards = soup.find_all('details', class_='bpa-details-card')
     for idx, dcard in enumerate(details_cards[:10]):
         cdata = cards_hu[idx]
@@ -459,52 +905,110 @@ def build_hungarian_river():
         d_price = dcard.find(class_='bpa-details-price')
         if d_price: d_price.string = f"{cdata['price']} / fő"
         
-        # Pros & Cons
-        if idx < len(faqs):
-            h_faq = faqs[idx]
-            pros_el = h_faq.find('div', class_='pro-con-box-pro-cell-rich-text-block')
-            cons_el = h_faq.find('div', class_='pro-con-box-con-cell-rich-text-block')
+        # RESTORE CANONICAL PROS & CONS STRUCTURE
+        pros, cons = RIVER_PROS_CONS[idx]
+        old_pc = dcard.find(class_='pro-con-box-wrapper')
+        if old_pc:
+            new_pc = create_pro_con_html(soup, pros, cons)
+            old_pc.replace_with(new_pc)
             
-            d_pros = dcard.find(class_='pro-con-box-pro-cell')
-            if d_pros and pros_el:
-                d_pros.clear()
-                h3 = soup.new_tag('h3')
-                h3.string = "Előnyök:"
-                d_pros.append(h3)
-                for p in pros_el.find_all('p'):
-                    new_p = soup.new_tag('p')
-                    new_p.string = p.text.strip()
-                    d_pros.append(new_p)
-                    
-            d_cons = dcard.find(class_='pro-con-box-con-cell')
-            if d_cons and cons_el:
-                d_cons.clear()
-                h3 = soup.new_tag('h3')
-                h3.string = "Hátrányok:"
-                d_cons.append(h3)
-                for p in cons_el.find_all('p'):
-                    new_p = soup.new_tag('p')
-                    new_p.string = p.text.strip()
-                    d_cons.append(new_p)
-                    
-        # Bento group headings
-        bento_titles = [
-            "🏆 Összegzés és Értékelés",
-            "🛳️ A Hajó és Fedélzet",
-            "🔭 Városnézés és Panoráma",
-            "🎧 Audio Guide és Szolgáltatások"
-        ]
+        # Mini pills & bento head labels
         bento_groups = dcard.find_all('details', class_='ltt-bento-group')
-        for b_idx, bgroup in enumerate(bento_groups[:4]):
-            bsummary = bgroup.find('summary')
-            if bsummary:
-                b_span = bsummary.find('span')
-                if b_span:
-                    b_span.string = bento_titles[b_idx]
+        for bg in bento_groups:
+            head = bg.find('summary')
+            if not head: continue
+            
+            pill = head.find(class_='ltt-mini-pill')
+            if pill:
+                ptxt = pill.text.strip()
+                if ptxt == 'Overview': pill.string = 'Áttekintés'
+                elif ptxt == 'Location Map': pill.string = 'Kikötőtérkép'
+                elif ptxt == 'Onboard Walkthrough': pill.string = 'Fedélzeti Séta'
+                elif ptxt == 'Audio & Operator': pill.string = 'Audio & Hajótársaság'
+                
+            btitle = head.find(class_='ltt-bento-group-title')
+            if btitle:
+                btxt = btitle.text.strip()
+                if 'Summary & Review' in btxt or 'Összegzés' in btxt:
+                    btitle.string = "🏆 Összegzés és Értékelés"
+                elif 'Before the Cruise' in btxt or 'Kikötő' in btxt:
+                    btitle.string = "📍 Kikötő, Beszállás és Térkép"
+                elif 'During the Cruise' in btxt or 'A Hajó és' in btxt:
+                    btitle.string = "🛳️ A Hajó és Fedélzet"
+                elif 'Audio Guide Tested' in btxt or 'Audio Guide és' in btxt:
+                    btitle.string = "🎧 Audio Guide és Szolgáltatások"
+
+        # Populate Bento 0 (Summary) with authentic Hungarian text
+        if len(bento_groups) >= 1 and idx in RIVER_SUMMARIES:
+            b0_body = bento_groups[0].find(class_='ltt-bento-group-body')
+            if b0_body:
+                # Find or create w-richtext container
+                rich = b0_body.find(class_='w-richtext')
+                if not rich:
+                    rich = soup.new_tag('div', **{'class': 'w-richtext'})
+                    b0_body.clear()
+                    b0_body.append(rich)
                 else:
-                    bsummary.string = bento_titles[b_idx]
-                    
-    # 8. Mobile Drawer
+                    rich.clear()
+                
+                # Append authentic Hungarian paragraphs
+                for p_text in RIVER_SUMMARIES[idx]:
+                    new_p = soup.new_tag('p')
+                    new_p.string = p_text
+                    rich.append(new_p)
+
+        # Bento 0 title
+        if len(bento_groups) >= 1:
+            b0_h4 = bento_groups[0].find('h4')
+            if b0_h4: b0_h4.string = cdata['title']
+
+        # Apply comprehensive subpoints and Quick Facts translations
+        apply_subpoints_translations(soup, dcard, idx, RIVER_SUBPOINTS)
+        apply_qf_translations(soup, dcard)
+
+        # Localize buttons and map links
+        for m_link in dcard.find_all(class_='bpa-kicker-map-link'):
+            mtxt = m_link.get_text(strip=True)
+            if mtxt in QF_BADGES_HU:
+                m_link.string = QF_BADGES_HU[mtxt]
+        for cta in dcard.find_all(class_='ltt-buy-cta-btn'):
+            cta.string = "Szabad Időpontok és Jegyfoglalás →"
+
+        # Translate tips and blockquotes, remove English FAQ blockquotes
+        for bq in dcard.find_all('blockquote'):
+            btxt = bq.text.strip()
+            if 'All cruises have a generous cancellation policy' in btxt:
+                bq.clear()
+                bq.append("💡 ")
+                st = soup.new_tag('strong')
+                st.string = "Tipp:"
+                bq.append(st)
+                bq.append(" Minden hajóútra érvényes az ingyenes lemondási lehetőség, amellyel az indulás előtt 24 órával teljes visszatérítés igényelhető.")
+            elif 'For the best sightseeing and photo opportunities' in btxt:
+                bq.clear()
+                bq.append("💡 ")
+                st = soup.new_tag('strong')
+                st.string = "Tipp:"
+                bq.append(st)
+                bq.append(" A legjobb fotózáshoz válasszon tágas felső nyitott fedélzetű hajót, ahol nem zavarják oszlopok vagy ablakkeretek a kilátást.")
+            elif 'All the other cruises offer loudspeaker audio guides' in btxt:
+                bq.clear()
+                bq.append("💡 ")
+                st = soup.new_tag('strong')
+                st.string = "Tipp:"
+                bq.append(st)
+                bq.append(" A többi sétahajó hangszórós audiokalauzt használ, ami az utasok beszélgetése miatt gyakran nehezen érthető.")
+            elif 'The best open air seats go fast' in btxt:
+                bq.clear()
+                bq.append("💡 ")
+                st = soup.new_tag('strong')
+                st.string = "Tipp:"
+                bq.append(st)
+                bq.append(" A legjobb felső fedélzeti helyek gyorsan megtelnek! Érdemes 15-20 perccel indulás előtt a kikötőbe érkezni.")
+            elif '❓' in btxt and ('Is buying food' in btxt or 'Should I book' in btxt or 'Is it possible to reserve' in btxt):
+                bq.decompose()
+
+    # 8. Localized Mobile Drawer
     drawer = soup.find(class_='bpa-mobile-drawer')
     if drawer:
         d_name = drawer.find(class_='bpa-drawer-name')
@@ -514,19 +1018,142 @@ def build_hungarian_river():
         d_btn = drawer.find(class_='bpa-drawer-btn')
         if d_btn: d_btn.string = "Időpontok ellenőrzése →"
         
+    # 9. Localized Footer
+    localize_footer(soup)
+        
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(str(soup))
     print(f"Hungarian River Guide saved to {out_path}")
+
+
+# HARVESTED SUMMARY REVIEWS FOR DINNER CARDS
+
+# DATA FOR 7 DINNER CRUISES
+DINNER_PROS_CONS = [
+    # Card 1 (Legenda Dinner)
+    ([
+        ("Prémium és Elegáns Atmoszféra", "Exkluzív, James Bond hangulatú vacsora gyertyafénnyel és panorámaablakokkal."),
+        ("4 Fogásos Gourmet Vacsora", "Frissen tálalt ínyenc fogások felnőtteknek, 3 fogásos gyermekmenüvel."),
+        ("Üdvözlőital a Jegyárban", "Egy pohár pezsgő, minőségi bor, sör, üdítő vagy ásványvíz beszálláskor."),
+        ("Kiváló Pároknak és Évfordulókra", "Különálló 2 fős gyertyafényes asztalok közvetlenül a padlótól a mennyezetig érő ablakok mellett."),
+        ("Kellemes Élő Zenei Műsor", "Zongorista és énekes duó igényes élő lounge előadása vacsora közben."),
+        ("Bőséges 2,5 Órás Időtartam", "Kényelmes tempójú étkezés és teljes budapesti éjszakai dunai panoráma.")
+    ], [
+        ("Magasabb Árkategória", "A legdrágább vacsorahajó Budapesten, de a prémium minőség és élmény minden eurót megér."),
+        ("További Italok Külön Fizetendők", "Az üdvözlőitalon felüli italok a fedélzeti bárból rendelhetők éttermi árakon.")
+    ]),
+    # Card 2 (Silverline No Show)
+    ([
+        ("Pénztárcabarát Elegancia", "A legkedvezőbb árú minőségi, 4 fogásos vacsorahajó Budapesten, kimagasló ár-érték aránnyal."),
+        ("Gourmet Menüválaszték", "Kifinomult négyfogásos vacsora és egy pohár üdvözlő Prosecco."),
+        ("Figyelmes Személyzet", "Gyors és előzékeny felszolgálás a vacsora teljes ideje alatt."),
+        ("Meghitt, Nyugodt Hangulat", "A műsor hiánya miatt csendes, beszélgetésre és meghitt romantikára alkalmas légkör."),
+        ("Teljes Budapesti Útvonal", "2 órás esti hajóút a Margit híd és a Müpa között."),
+        ("Helyben Készített Friss Ételek", "Az ételeket a hajó saját konyhájában főzik.")
+    ], [
+        ("Nincs Élő Műsor", "Az alacsonyabb árért cserébe a szórakoztatást kellemes háttérzene adja élő előadás helyett."),
+        ("Bizonyos Fogások Felárasak", "Egyes prémium főételek kiegészítő felárat igényelnek a helyszínen."),
+        ("Kisebb Finomítási Lehetőségek", "Egyes köretek és desszertek minősége kissé elmarad a csúcsgasztronómiától.")
+    ]),
+    # Card 3 (Silverline Folk Operetta)
+    ([
+        ("4 Fogásos Gourmet Vacsora", "Hagyományos magyaros és nemzetközi fogások ízléses tálalásban."),
+        ("Helyszíni Hajókonyha", "Frissen elkészített meleg ételek az asztalhoz felszolgálva."),
+        ("Színvonalas Élő Folklór Műsor", "Autentikus néptáncosok és operetténekesek lendületes, díjnyertes színpadi előadása."),
+        ("Kényelmes 2 Órás Menetidő", "Tökéletes egyensúly az étkezés, a kulturális show és a kivilágított Parlament csodálata között.")
+    ], [
+        ("Feszesebb Ülésrend", "A műsor miatt a táncparkett körül sűrűbben helyezkednek el az asztalok."),
+        ("Hangosabb Műsoridőszak", "A dinamikus operettelőadás alatt a csendes beszélgetés kevésbé lehetséges.")
+    ]),
+    # Card 4 (Silverline Piano Battle)
+    ([
+        ("Gourmet 4 Fogásos Vacsora", "Ínyenc fogások választható húsos, halas és vegetáriánus menüvel."),
+        ("Friss Ételek a Hajókonyhából", "Közvetlenül tálalás előtt helyben főzött ételek."),
+        ("Látványos Élő Zongorapárbaj", "Két zongoraművész és énekes szórakoztató, humoros és lendületes zenei versengése."),
+        ("2 Órás Esti Panoráma", "Gyönyörű rálátás az éjszakai kivilágított Budai Várra és Parlamentre.")
+    ], [
+        ("Interaktív, Lendületes Hangerő", "A show interaktív és hangosabb, kevésbé alkalmas csendes, suttogó romantikára."),
+        ("Prémium Fogások Felára", "Egyes prémium ételek felárasak az étlapon.")
+    ]),
+    # Card 5 (Hungaria Koncert Buffet)
+    ([
+        ("Korlátlan Svédasztalos Büfé", "Bőséges választék klasszikus magyar ételekből (gulyás, pörkölt, rétes)."),
+        ("Két Ajándék Üdvözlőital", "Alkoholos és alkoholmentes italok közül választható kezdés."),
+        ("Autentikus Nosztalgikus Hangulat", "Századfordulós kabaré- és báltermi atmoszféra a Dunán."),
+        ("Élő Néptánc és Cigányzene", "Díjnyertes népművészek élő fellépése népviseletben."),
+        ("Teljes Dunai Útvonal", "A Margitszigettől a Nemzeti Színházig hajózik.")
+    ], [
+        ("Kevésbé Panorámafókuszú", "A szalon belső fókuszú, és a vacsorára valamint a műsorra összpontosít, kevesebb kilátóhellyel."),
+        ("Büfé Jellegű Ételminőség", "Bőséges és ízletes, de tömegétkeztetés jellegű, nem egyedi tányérszerviz.")
+    ]),
+    # Card 6 (Eurama Folk Show)
+    ([
+        ("4 Fogásos Tradicionális Lakoma", "Klasszikus magyar ízek, vegetáriánus és speciális étrendű opciókkal."),
+        ("Autentikus Cigányzenekar", "Hagyományos hegedű- és nagybőgőkíséret az asztalok között."),
+        ("Ideális 1,5–2 Órás Időtartam", "Kompakt, feszes esti program a városnézés mellé."),
+        ("360°-os Felső Kilátóterasz", "Kiváló fotózási pont az éjszakai városképhez."),
+        ("Központi Vigadó Téri Kikötő", "Közvetlenül a pesti belváros szívéből indul.")
+    ], [
+        ("Lépcsős Beszállás", "A hajó kialakítása miatt mozgáskorlátozott vendégek számára nehezebb a megközelítés.")
+    ]),
+    # Card 7 (Silverline Unlimited Drinks)
+    ([
+        ("Korlátlan Italfogyasztási Csomag", "Korlátlan minőségi magyar borok, pezsgő, csapolt sör, üdítők és kávé a teljes 2,5 órás hajóúton."),
+        ("Modern Panoráma Rendezvényhajó", "Hatalmas üvegablakok és tágas felső nyitott kilátóterasz a Parlament fotózásához."),
+        ("4 Fogásos Felszolgált Gourmet Menü", "Friss kacsamell, marhapofa, lazac vagy vegetáriánus fogások a fedélzeti konyhából."),
+        ("Elegáns Élő Akusztikus Zene", "Akusztikus gitár és ének duó kellemes, beszélgetést nem zavaró esti háttérzenével.")
+    ], [
+        ("Nincs Hagyományos Folklór Show", "Modern élőzenére fókuszál néptánc helyett."),
+        ("Tömények Külön Fizetendők", "A korlátlan csomag a borokra, pezsgőre, sörre és üdítőkre érvényes; a röviditalok külön fizetendők.")
+    ])
+]
+
+DINNER_SUMMARIES = {
+    0: [ # Legenda Candlelit Dinner
+        "Ha a legromantikusabb, legigényesebb vacsorás hajóutat keresi Budapesten, a Legenda City Cruises gyertyafényes estje a tökéletes választás. A hajótársaság kiemelkedő gasztronómiai élményt nyújt elegáns zongora- és énekkísérettel.",
+        "A 4 fogásos gourmet vacsorát frissen tálalják fel az asztalokhoz. A hatalmas üvegpanorámás ablakok mellett elhelyezett, privát gyertyafényes asztalok páratlan rálátást biztosítanak a díszkivilágításban ragyogó Országházra és a Budai Várra.",
+        "A bőséges 2,5 órás menetidő garantálja, hogy a vacsora ne legyen siettetve, és a vendégek meghitt hangulatban élvezhessék a főváros legszebb éjszakai látképét."
+    ],
+    1: [ # Silverline No Show Dinner
+        "A növekvő utazási költségek idején a Silverline egy kifejezetten pénztárcabarát, mégis elegáns 4 fogásos vacsorahajózást hozott létre.",
+        "Ezt úgy érték el, hogy a költséges színpadi műsor helyett kellemes háttérzenét biztosítanak, így a vendégek zavartalanul beszélgethetnek és élvezhetik a Dunára nyíló kilátást lényegesen alacsonyabb áron.",
+        "A 2 órás hajóút a Margit híd és az Atlétikai Stadion között halad végig, így az összes ikonikus látnivaló megcsodálható."
+    ],
+    2: [ # Silverline Folk Operetta
+        "Autentikus folklór vacsoraélményre vágyik a Dunán? A Silverline operett- és néptáncműsoros hajóútja kiváló kulturális szórakozást és ínyenc vacsorát kínál.",
+        "A díjnyertes magyar néptáncosok és operetténekesek dinamikus, látványos előadása különleges hangulatot teremt a modern panorámaszalonban.",
+        "A 4 fogásos gourmet menüben magyaros és nemzetközi ízek keverednek, amelyeket a hajókonyhán frissen készítenek el."
+    ],
+    3: [ # Silverline Piano Battle
+        "Élvezze a lendületes élő zongorapárbajt vacsora közben a Duna hullámain! A Silverline zongorás vacsorahajója két virtuóz zongorista és egy elbűvölő énekesnő interaktív előadásával teszi emlékezetessé az estét.",
+        "A humoros zenei csaták, a romantikus dallamok és az ismert világslágerek garantálják a jókedvet a 4 fogásos vacsora alatt.",
+        "Pároknak és baráti társaságoknak egyaránt kiváló választás egy szórakoztató budapesti estéhez."
+    ],
+    4: [ # Hungaria Koncert Buffet
+        "A Hungaria Koncert szervezi Budapest legnépszerűbb és legnagyobb forgalmú svédasztalos vacsorahajóját, amely élő népzenei és néptáncbemutatóval várja a vendégeket.",
+        "A gazdag büféasztalról korlátlanul kóstolhatók meg a klasszikus magyar fogások a gulyástól a marhapörköltön át a házi rétesig.",
+        "A szalonban elismert prímás vezette zenekar és hagyományos népviseletbe öltözött táncosok teremtenek békebeli magyaros mulatóhangulatot."
+    ],
+    5: [ # Eurama Gypsy Music
+        "Tapasztalja meg a hagyományos cigányzene varázsát egy 4 fogásos elegáns vacsora kíséretében az Eurama rendezvényhajóján.",
+        "A prímás és a vonószenekar közvetlenül az asztalok között játszik meghitt, autentikus dallamokat, miközben a hajó a pesti Vigadó térről indulva végighalad a kivilágított dunai szakaszon.",
+        "A 360 fokos felső kilátófedélzetről vacsora után lélegzetelállító panoráma nyílik a Lánchídra és a Parlamentre."
+    ],
+    6: [ # Silverline Unlimited Drinks
+        "Ha egy elegáns, 4 fogásos felszolgált vacsorára vágyik a Dunán anélkül, hogy az italok árával kellene számolnia, a Silverline korlátlan italos vacsorahajója az egyik legvonzóbb választás Budapesten.",
+        "A legtöbb budapesti vacsorás hajóút csupán egyetlen üdvözlőitalt tartalmaz a jegyárban, így az étkezés végén jelentős italszámla keletkezhet. Ez a hajóút a teljes 2,5 órás út során korlátlan minőségi magyar borokat, pezsgőt, sört, üdítőt és kávét kínál.",
+        "A River Diva modern rendezvényhajó hatalmas üvegpanorámás szalonja és tágas nyitott felső kilátóterasza akadálytalan kilátást nyújt a kivilágított Parlamentre és a dunai hidakra.",
+        "Az esti hangulatot akusztikus gitár és ének duó teszi teljessé, amely kellemes, elegáns atmoszférát biztosít a társasági beszélgetés zavarása nélkül."
+    ]
+}
 
 
 def build_hungarian_dinner():
     print("Compiling Hungarian Dinner Guide (hu/setahajozas-a-dunan-vacsoraval/index.html)...")
     en_path = os.path.join(BASE_DIR, 'dinner.html')
     out_path = os.path.join(BASE_DIR, 'hu', 'setahajozas-a-dunan-vacsoraval', 'index.html')
-    harvested_path = os.path.join(BASE_DIR, 'data', 'harvested_html', 'hu', 'dinner.html')
     
     soup = BeautifulSoup(open(en_path, 'r', encoding='utf-8').read(), 'html.parser')
-    h_soup = BeautifulSoup(open(harvested_path, 'r', encoding='utf-8').read(), 'html.parser')
     
     # 1. Head Metadata
     if soup.title:
@@ -541,21 +1168,8 @@ def build_hungarian_dinner():
     if html_tag:
         html_tag['lang'] = 'hu'
         
-    # 2. Navbar
-    for a in soup.find_all('a'):
-        txt = a.text.strip()
-        if txt == 'River Cruises':
-            a.string = 'Dunai Sétahajók'
-            a['href'] = '/hu/setahajozas-a-dunan-budapest'
-        elif txt == 'Dinner Cruises':
-            a.string = 'Vacsorahajók'
-            a['href'] = '/hu/setahajozas-a-dunan-vacsoraval'
-        elif txt == 'Night Cruises':
-            a.string = 'Éjszakai Hajók'
-        elif txt == 'Spas & Baths':
-            a.string = 'Termálfürdők'
-        elif txt == 'About':
-            a.string = 'Rólunk'
+    # 2. Navbar & Mega-Menu
+    localize_navbar_and_menu(soup)
 
     # 3. Clean Card Hero
     bc_links = soup.find_all(class_='ltt-breadcrumbs')
@@ -710,7 +1324,7 @@ def build_hungarian_dinner():
     if breakdown_h2:
         breakdown_h2.string = "Részletes Elemzés — A 7 Legjobb Dunai Vacsorahajó Budapesten"
         
-    # 7. Details Cards
+    # 7. Details Cards Localization (Pros/Cons & Bento content)
     details_cards = soup.find_all('details', class_='bpa-details-card')
     for idx, dcard in enumerate(details_cards[:7]):
         cdata = cards_hu[idx]
@@ -721,33 +1335,87 @@ def build_hungarian_dinner():
         d_price = dcard.find(class_='bpa-details-price')
         if d_price: d_price.string = f"{cdata['price']} / fő"
         
-        d_pros = dcard.find(class_='pro-con-box-pro-cell')
-        if d_pros:
-            h3 = d_pros.find('h3')
-            if h3: h3.string = "Előnyök:"
+        # RESTORE CANONICAL PROS & CONS STRUCTURE
+        pros, cons = DINNER_PROS_CONS[idx]
+        old_pc = dcard.find(class_='pro-con-box-wrapper')
+        if old_pc:
+            new_pc = create_pro_con_html(soup, pros, cons)
+            old_pc.replace_with(new_pc)
             
-        d_cons = dcard.find(class_='pro-con-box-con-cell')
-        if d_cons:
-            h3 = d_cons.find('h3')
-            if h3: h3.string = "Hátrányok:"
-            
-        bento_titles = [
-            "🏆 Összegzés és Értékelés",
-            "🍽️ Vacsora Menü és Gasztronómia",
-            "🔭 Panoráma és Ülőhelyek",
-            "🎭 Zenei Műsor és Hangulat"
-        ]
+        # Mini pills & bento head labels
         bento_groups = dcard.find_all('details', class_='ltt-bento-group')
-        for b_idx, bgroup in enumerate(bento_groups[:4]):
-            bsummary = bgroup.find('summary')
-            if bsummary:
-                b_span = bsummary.find('span')
-                if b_span:
-                    b_span.string = bento_titles[b_idx]
+        for bg in bento_groups:
+            head = bg.find('summary')
+            if not head: continue
+            
+            pill = head.find(class_='ltt-mini-pill')
+            if pill:
+                ptxt = pill.text.strip()
+                if ptxt == 'Overview': pill.string = 'Áttekintés'
+                elif ptxt == 'Location Map': pill.string = 'Kikötőtérkép'
+                elif ptxt == 'Onboard Walkthrough': pill.string = 'Fedélzeti Séta'
+                elif ptxt == 'Audio & Operator': pill.string = 'Gasztronómia & Részletek'
+                
+            btitle = head.find(class_='ltt-bento-group-title')
+            if btitle:
+                btxt = btitle.text.strip()
+                if 'Summary & Review' in btxt or 'Összegzés' in btxt:
+                    btitle.string = "🏆 Összegzés és Értékelés"
+                elif 'Before the Cruise' in btxt or 'Kikötő' in btxt:
+                    btitle.string = "📍 Kikötő, Beszállás és Térkép"
+                elif 'During the Cruise' in btxt or 'A Hajó és' in btxt:
+                    btitle.string = "🛳️ A Hajó és Fedélzet"
+                elif 'Audio Guide Tested' in btxt or 'Gasztronómia' in btxt:
+                    btitle.string = "🍽️ Menü és Szolgáltatások"
+
+        # Populate Bento 0 (Summary) with authentic Hungarian text
+        if len(bento_groups) >= 1 and idx in DINNER_SUMMARIES:
+            b0_body = bento_groups[0].find(class_='ltt-bento-group-body')
+            if b0_body:
+                rich = b0_body.find(class_='w-richtext')
+                if not rich:
+                    rich = soup.new_tag('div', **{'class': 'w-richtext'})
+                    b0_body.clear()
+                    b0_body.append(rich)
                 else:
-                    bsummary.string = bento_titles[b_idx]
-                    
-    # 8. Mobile Drawer
+                    rich.clear()
+                
+                for p_text in DINNER_SUMMARIES[idx]:
+                    new_p = soup.new_tag('p')
+                    new_p.string = p_text
+                    rich.append(new_p)
+
+        # Bento 0 title
+        if len(bento_groups) >= 1:
+            b0_h4 = bento_groups[0].find('h4')
+            if b0_h4: b0_h4.string = cdata['title']
+
+        # Apply comprehensive subpoints and Quick Facts translations
+        apply_subpoints_translations(soup, dcard, idx, DINNER_SUBPOINTS)
+        apply_qf_translations(soup, dcard)
+
+        # Localize buttons and map links
+        for m_link in dcard.find_all(class_='bpa-kicker-map-link'):
+            mtxt = m_link.get_text(strip=True)
+            if mtxt in QF_BADGES_HU:
+                m_link.string = QF_BADGES_HU[mtxt]
+        for cta in dcard.find_all(class_='ltt-buy-cta-btn'):
+            cta.string = "Szabad Időpontok és Jegyfoglalás →"
+
+        # Translate tips and blockquotes, remove English FAQ blockquotes
+        for bq in dcard.find_all('blockquote'):
+            btxt = bq.text.strip()
+            if 'All cruises have a generous cancellation policy' in btxt:
+                bq.clear()
+                bq.append("💡 ")
+                st = soup.new_tag('strong')
+                st.string = "Tipp:"
+                bq.append(st)
+                bq.append(" Minden hajóútra érvényes az ingyenes lemondási lehetőség, amellyel az indulás előtt 24 órával teljes visszatérítés igényelhető.")
+            elif '❓' in btxt and ('Is buying food' in btxt or 'Should I book' in btxt or 'Is it possible to reserve' in btxt):
+                bq.decompose()
+
+    # 8. Localized Mobile Drawer
     drawer = soup.find(class_='bpa-mobile-drawer')
     if drawer:
         d_name = drawer.find(class_='bpa-drawer-name')
@@ -757,9 +1425,13 @@ def build_hungarian_dinner():
         d_btn = drawer.find(class_='bpa-drawer-btn')
         if d_btn: d_btn.string = "Időpontok ellenőrzése →"
         
+    # 9. Localized Footer
+    localize_footer(soup)
+        
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(str(soup))
     print(f"Hungarian Dinner Guide saved to {out_path}")
+
 
 if __name__ == '__main__':
     build_hungarian_home()

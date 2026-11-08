@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Budapest Danube Cruise Decision Engine | Live Interactive Filter Mockup</title>
+<meta content="Compare all licensed Danube river cruises with real-time filters: departure time, pier dock, audio guide tech, and dining." name="description"/>
+<!-- Tailwind CSS & Fonts -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bpa: {
+              green: '#16c784',
+              greenDark: '#12a36c',
+              greenLight: '#e8fbf3',
+              gold: '#f59e0b',
+              goldLight: '#fef3c7',
+              charcoal: '#0f172a',
+              cardBg: '#ffffff',
+              border: '#e2e8f0',
+              muted: '#64748b',
+              surface: '#f8fafc',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    
+    /* Active filter pill */
+    .filter-pill.active {
+      background-color: #0f172a !important;
+      color: #ffffff !important;
+      border-color: #0f172a !important;
+    }
+    .filter-pill.active .pill-count {
+      background-color: rgba(255, 255, 255, 0.2) !important;
+      color: #ffffff !important;
+    }
+
+    /* Multi-channel icons */
+    .bpa-ci {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .bpa-ic-gyg { background-image: url("https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png"); }
+    .bpa-ic-ta { background-image: url("https://cdn.prod.website-files.com/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif"); }
+    .bpa-ic-viator { background-image: url("https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png"); }
+  </style>
+<style id="ltt-nav-styles">/* ==========================================================================
+   LUXURY TRAVEL TESTER — MODERN VANILLA NAVIGATION SYSTEM
+   Zero-dependency, semantic, responsive, WCAG-compliant (Desktop & Mobile)
+   ========================================================================== */
+.ltt-navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 68px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 9999;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.ltt-nav-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-sizing: border-box;
+}
+.ltt-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #0f172a;
+  flex-shrink: 0;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: opacity 0.15s ease;
+}
+.ltt-brand:hover {
+  opacity: 0.85;
+}
+.ltt-brand-emblem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  color: #b45309;
+}
+.ltt-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ltt-nav-link {
+  color: #334155;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.ltt-nav-link:hover,
+.ltt-nav-link:focus-visible {
+  color: #0f172a;
+  background: #f1f5f9;
+  outline: none;
+}
+.ltt-nav-dropdown {
+  position: relative;
+}
+.ltt-chevron {
+  transition: transform 0.2s ease;
+  stroke: currentColor;
+}
+.ltt-nav-dropdown.is-open .ltt-chevron,
+.ltt-nav-dropdown:hover .ltt-chevron {
+  transform: rotate(180deg);
+}
+.ltt-mega-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px -8px rgba(15, 23, 42, 0.14), 0 0 0 1px rgba(15, 23, 42, 0.04);
+  padding: 22px 24px;
+  display: flex;
+  gap: 32px;
+  min-width: 580px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  pointer-events: none;
+  z-index: 10000;
+}
+.ltt-nav-dropdown:hover .ltt-mega-menu,
+.ltt-nav-dropdown.is-open .ltt-mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.ltt-mega-col {
+  flex: 1;
+  min-width: 220px;
+}
+.ltt-mega-head {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.ltt-mega-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #0f172a;
+  transition: background 0.15s ease;
+  margin-bottom: 4px;
+}
+.ltt-mega-item:hover {
+  background: #f8fafc;
+}
+.ltt-mega-icon {
+  font-size: 18px;
+  line-height: 1;
+  padding-top: 2px;
+}
+.ltt-mega-item strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.ltt-mega-item p {
+  margin: 2px 0 0 0;
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.3;
+}
+.ltt-mega-subitem {
+  display: block;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+.ltt-mega-subitem:hover {
+  color: #0f172a;
+  background: #f1f5f9;
+  padding-left: 14px;
+}
+.ltt-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ltt-cta-pill {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+}
+.ltt-cta-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4);
+}
+
+/* Mobile Toggle Hamburger Button */
+.ltt-hamburger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 9px 8px;
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.15s ease;
+  box-sizing: border-box;
+}
+.ltt-hamburger:hover {
+  background: #f8fafc;
+}
+.ltt-hamburger-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #0f172a;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.ltt-hamburger.is-active .ltt-hamburger-bar:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* Mobile Drawer */
+.ltt-mobile-drawer {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .ltt-nav-links {
+    display: none !important;
+  }
+  .ltt-hamburger {
+    display: flex !important;
+  }
+  .ltt-cta-pill {
+    display: none !important;
+  }
+  .ltt-mobile-drawer {
+    display: block;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 2px solid #e2e8f0;
+    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.16);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    box-sizing: border-box;
+    z-index: 9999;
+  }
+  .ltt-mobile-drawer.is-open {
+    max-height: calc(100vh - 68px);
+    opacity: 1;
+    overflow-y: auto;
+  }
+  .ltt-drawer-content {
+    padding: 20px 20px 28px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .ltt-mobile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .ltt-mobile-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .ltt-mobile-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f172a;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .ltt-mobile-link:hover,
+  .ltt-mobile-link:active {
+    background: #f1f5f9;
+  }
+  .ltt-mobile-link.ltt-highlight {
+    background: #fffbeb;
+    border-color: #fde68a;
+    color: #92400e;
+  }
+  .ltt-mobile-tag {
+    font-size: 10px;
+    font-weight: 800;
+    background: #d97706;
+    color: #ffffff;
+    padding: 2px 7px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+  }
+  .ltt-mobile-subgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .ltt-mobile-sublink {
+    display: block;
+    padding: 10px 12px;
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #334155;
+    text-decoration: none;
+  }
+  .ltt-mobile-sublink:hover {
+    background: #f8fafc;
+    color: #0f172a;
+  }
+  .ltt-mobile-footer-links {
+    flex-direction: row !important;
+    gap: 10px;
+  }
+  .ltt-mobile-footer-links .ltt-mobile-link {
+    flex: 1;
+    justify-content: center;
+  }
+  .ltt-mobile-cta {
+    display: block;
+    text-align: center;
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
+  }
+}
+</style><style id="bpa-light-comp-and-hero-css">
+/* ==========================================================================
+   1. CLEAN LTT AUTHOR & CREDIBILITY AREA UNDER H1 TITLE
+   ========================================================================== */
+.article-hero-container {
+  width: 100% !important;
+  max-width: 820px !important;
+  margin: 24px auto 16px auto !important;
+  padding: 0 20px !important;
+  text-align: center !important;
+  font-style: normal !important;
+}
+.component-breadcrumb-rich-text {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 0 10px 0 !important;
+}
+.component-breadcrumb-rich-text p {
+  font-size: 14px !important;
+  color: #475569 !important;
+  margin: 0 !important;
+}
+.component-breadcrumb-rich-text a {
+  color: #334155 !important;
+  text-decoration: underline !important;
+  font-weight: 500 !important;
+}
+.paragraph-26 {
+  color: rgba(26, 28, 34, 0.8) !important;
+  text-align: center !important;
+  font-size: 16px !important;
+  margin: 0 0 14px 0 !important;
+}
+.div-block-45,
+.div-block-37,
+.bpa-author-strip {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 14px !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 4px 0 !important;
+  margin: 0 auto 16px auto !important;
+  text-align: center !important;
+}
+.component-author-image {
+  width: 68px !important;
+  height: 68px !important;
+  max-width: 68px !important;
+  max-height: 68px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: none !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+}
+.div-block-45 p,
+.div-block-37 p,
+.bpa-author-strip p {
+  margin: 0 !important;
+  font-size: 15.5px !important;
+  line-height: 1.5 !important;
+  color: #334155 !important;
+  text-align: left !important;
+}
+.div-block-45 a,
+.div-block-37 a,
+.bpa-author-strip a {
+  color: #0284c7 !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+}
+.divider-2,
+.divider {
+  background-color: #e5e5e5 !important;
+  width: 100% !important;
+  max-width: 820px !important;
+  height: 1px !important;
+  margin: 18px auto 24px auto !important;
+}
+
+/* ==========================================================================
+   2. LIGHT-THEMED TOP COMPARISON HEADER CARD (.ltt-header-box / .bpa-section-header)
+   ========================================================================== */
+.ltt-header-box,
+.bpa-section-header {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-top: 4px solid #f59e0b !important;
+  border-radius: 18px !important;
+  padding: 28px 32px !important;
+  margin-bottom: 24px !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 2px 6px rgba(15, 23, 42, 0.03) !important;
+  color: #0f172a !important;
+}
+.ltt-kicker-tag {
+  display: inline-block !important;
+  background: #fffbeb !important;
+  color: #b45309 !important;
+  border: 1px solid #fde68a !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  padding: 4px 12px !important;
+  border-radius: 999px !important;
+  margin-bottom: 10px !important;
+}
+.ltt-header-title,
+.bpa-section-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 0 8px 0 !important;
+  color: #0f172a !important;
+  line-height: 1.25 !important;
+}
+.ltt-header-desc,
+.bpa-section-sub {
+  font-size: 14.5px !important;
+  color: #475569 !important;
+  margin: 0 0 18px 0 !important;
+  max-width: 820px !important;
+  line-height: 1.55 !important;
+}
+.ltt-filter-tabs,
+.bpa-filter-bar {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  padding-top: 16px !important;
+  border-top: 1px solid #f1f5f9 !important;
+}
+.ltt-tab-btn,
+.bpa-filter-btn {
+  background: #f8fafc !important;
+  color: #334155 !important;
+  border: 1px solid #cbd5e1 !important;
+  padding: 8px 16px !important;
+  border-radius: 10px !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  user-select: none !important;
+}
+.ltt-tab-btn:hover,
+.bpa-filter-btn:hover {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #94a3b8 !important;
+}
+.ltt-tab-btn.active,
+.bpa-filter-btn.is-active,
+.bpa-filter-btn.active {
+  background: #f59e0b !important;
+  color: #0f172a !important;
+  border-color: #f59e0b !important;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.28) !important;
+}
+
+/* ==========================================================================
+   3. PERSONALLY TESTED BADGE & OTA REVIEWS WITH GOLD STARS
+   ========================================================================== */
+.bpa-proof,
+.bpa-proof-bar {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 2px 0 8px 0 !important;
+}
+.bpa-vchip,
+.bpa-verified-chip {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: #047857 !important;
+  background: #ecfdf5 !important;
+  border: 1px solid #a7f3d0 !important;
+  padding: 3px 10px !important;
+  border-radius: 999px !important;
+}
+.bpa-ci-stars {
+  color: #f59e0b !important;
+  font-size: 12px !important;
+  letter-spacing: 0.5px !important;
+  line-height: 1 !important;
+}
+</style></head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-bpa-green selection:text-white pb-32"><header class="ltt-navbar" role="banner">
+<div class="ltt-nav-inner">
+<a aria-label="Budapest Adventures Homepage" class="ltt-brand" href="/">
+<span class="ltt-brand-emblem">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="12" cy="12" r="10"></circle>
+<polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+</svg>
+</span>
+<span class="ltt-brand-text">BUDAPEST ADVENTURES</span>
+</a>
+<nav aria-label="Primary Navigation" class="ltt-nav-links">
+<div class="ltt-nav-dropdown" id="lttExploreDropdown">
+<button aria-expanded="false" aria-haspopup="true" class="ltt-nav-link ltt-dropdown-btn" type="button">
+<span>Explore</span>
+<svg class="ltt-chevron" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="ltt-mega-menu" role="menu">
+<div class="ltt-mega-col">
+<div class="ltt-mega-head">POPULAR CRUISE GUIDES</div>
+<a class="ltt-mega-item" href="/best-budapest-river-cruises">
+<span class="ltt-mega-icon">🚢</span>
+<div>
+<strong>Top 10 Budapest River Cruises</strong>
+<p>Personally field-tested day &amp; night boats</p>
+</div>
+</a>
+<a class="ltt-mega-item" href="/budapest-dinner-cruises">
+<span class="ltt-mega-icon">🍷</span>
+<div>
+<strong>Top 7 Budapest Dinner Cruises</strong>
+<p>4-course fine dining, folklore &amp; piano shows</p>
+</div>
+</a>
+<a class="ltt-mega-item" href="/unlimited-prosecco-cruises-budapest">
+<span class="ltt-mega-icon">🥂</span>
+<div>
+<strong>Unlimited Prosecco Cruises</strong>
+<p>Bottomless sparkling wine &amp; panoramic decks</p>
+</div>
+</a>
+<a class="ltt-mega-item" href="/best-night-cruises-budapest">
+<span class="ltt-mega-icon">✨</span>
+<div>
+<strong>Best Evening &amp; Night Cruises</strong>
+<p>Illuminated Parliament golden-hour schedule</p>
+</div>
+</a>
+</div>
+<div class="ltt-mega-col">
+<div class="ltt-mega-head">REVIEWS &amp; CITY GUIDES</div>
+<a class="ltt-mega-subitem" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">Legenda Candlelit Dinner Review</a>
+<a class="ltt-mega-subitem" href="/thermal-baths-budapest">8 Best Thermal Baths in Budapest</a>
+<a class="ltt-mega-subitem" href="/best-private-boat-tours-budapest">Best Private Boat Tours &amp; Yachts</a>
+<a class="ltt-mega-subitem" href="/best-things-to-do-budapest">Best Things to Do in Budapest</a>
+<a class="ltt-mega-subitem" href="/budapest-travel-guide">Complete Budapest Travel Guide</a>
+</div>
+</div>
+</div>
+<a class="ltt-nav-link" href="/best-budapest-river-cruises">River Cruises</a>
+<a class="ltt-nav-link" href="/budapest-dinner-cruises">Dinner Cruises</a>
+<a class="ltt-nav-link" href="/about">About</a>
+<a class="ltt-nav-link" href="/contact">Contact</a>
+</nav>
+<div class="ltt-nav-right">
+<a class="ltt-cta-pill" href="/best-budapest-river-cruises">Top 10 Cruises →</a>
+<button aria-expanded="false" aria-label="Toggle navigation menu" class="ltt-hamburger" id="lttNavToggle" type="button">
+<span class="ltt-hamburger-bar"></span>
+<span class="ltt-hamburger-bar"></span>
+<span class="ltt-hamburger-bar"></span>
+</button>
+</div>
+</div>
+<div aria-hidden="true" class="ltt-mobile-drawer" id="lttMobileDrawer">
+<div class="ltt-drawer-content">
+<div class="ltt-mobile-section">
+<div class="ltt-mobile-label">POPULAR CRUISE GUIDES</div>
+<a class="ltt-mobile-link ltt-highlight" href="/best-budapest-river-cruises">
+<span>🚢 Budapest River Cruises (Top 10)</span>
+<span class="ltt-mobile-tag">Tested</span>
+</a>
+<a class="ltt-mobile-link" href="/budapest-dinner-cruises">
+<span>🍷 Budapest Dinner Cruises (Top 7)</span>
+</a>
+<a class="ltt-mobile-link" href="/unlimited-prosecco-cruises-budapest">
+<span>🥂 Unlimited Prosecco Cruises</span>
+</a>
+<a class="ltt-mobile-link" href="/best-night-cruises-budapest">
+<span>✨ Best Evening &amp; Night Cruises</span>
+</a>
+</div>
+<div class="ltt-mobile-section">
+<div class="ltt-mobile-label">FEATURED REVIEWS &amp; GUIDES</div>
+<div class="ltt-mobile-subgrid">
+<a class="ltt-mobile-sublink" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">Legenda Candlelit Review</a>
+<a class="ltt-mobile-sublink" href="/thermal-baths-budapest">Thermal Baths Guide</a>
+<a class="ltt-mobile-sublink" href="/best-private-boat-tours-budapest">Private Boat Tours</a>
+<a class="ltt-mobile-sublink" href="/best-things-to-do-budapest">Things to Do</a>
+</div>
+</div>
+<div class="ltt-mobile-section ltt-mobile-footer-links">
+<a class="ltt-mobile-link" href="/about">About Us</a>
+<a class="ltt-mobile-link" href="/contact">Contact</a>
+</div>
+<a class="ltt-mobile-cta" href="/best-budapest-river-cruises">Top 10 Cruises →</a>
+</div>
+</div>
+</header><script id="ltt-nav-script">/* ==========================================================================
+   LUXURY TRAVEL TESTER — MODERN VANILLA NAVIGATION CONTROLLER
+   Zero-dependency, semantic, responsive, WCAG-compliant (Desktop & Mobile)
+   ========================================================================== */
+(function() {
+  function initNav() {
+    var toggle = document.getElementById('lttNavToggle');
+    var drawer = document.getElementById('lttMobileDrawer');
+    var dropdown = document.getElementById('lttExploreDropdown');
+    var dropBtn = dropdown ? dropdown.querySelector('.ltt-dropdown-btn') : null;
+
+    if (toggle && drawer) {
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var isOpen = drawer.classList.contains('is-open');
+        if (isOpen) {
+          drawer.classList.remove('is-open');
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
+          drawer.setAttribute('aria-hidden', 'true');
+        } else {
+          drawer.classList.add('is-open');
+          toggle.classList.add('is-active');
+          toggle.setAttribute('aria-expanded', 'true');
+          drawer.setAttribute('aria-hidden', 'false');
+        }
+      });
+
+      drawer.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          drawer.classList.remove('is-open');
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
+          drawer.setAttribute('aria-hidden', 'true');
+        });
+      });
+    }
+
+    if (dropBtn && dropdown) {
+      dropBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var open = dropdown.classList.toggle('is-open');
+        dropBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+
+    document.addEventListener('click', function(e) {
+      if (drawer && drawer.classList.contains('is-open') && !drawer.contains(e.target) && (!toggle || !toggle.contains(e.target))) {
+        drawer.classList.remove('is-open');
+        if (toggle) {
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+        drawer.setAttribute('aria-hidden', 'true');
+      }
+      if (dropdown && dropdown.classList.contains('is-open') && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('is-open');
+        if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        if (drawer && drawer.classList.contains('is-open')) {
+          drawer.classList.remove('is-open');
+          if (toggle) {
+            toggle.classList.remove('is-active');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+          drawer.setAttribute('aria-hidden', 'true');
+        }
+        if (dropdown && dropdown.classList.contains('is-open')) {
+          dropdown.classList.remove('is-open');
+          if (dropBtn) dropBtn.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNav);
+  } else {
+    initNav();
+  }
+})();
+</script>
+<!-- ==========================================
+       TOP NOTIFICATION BAR: THE REAL SERP VALUE
+       ========================================== -->
+<aside class="bg-bpa-charcoal text-white text-xs py-2 px-4 border-b border-slate-800">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded text-[11px] font-mono font-bold">
+<i class="fa-solid fa-moon"></i> PARLIAMENT LIGHTS ALERT
+        </span>
+<span class="hidden md:inline text-slate-300">
+          City energy ordinance: Parliament exterior lights shut off at <strong>23:00 sharp</strong>. For lit photos, choose departures between <strong>19:00 – 21:30</strong>.
+        </span>
+</div>
+<div class="flex items-center gap-4 text-[11px] font-mono text-slate-400">
+<span>📍 Vigadó tér Pier 7 Active</span>
+<span class="hidden sm:inline">🌊 Danube: Normal Navigation</span>
+</div>
+</div>
+</aside>
+<!-- ==========================================
+       MAIN HEADER / BRAND
+       ========================================== -->
+<header class="bg-white border-b border-bpa-border sticky top-0 z-30 shadow-xs">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-bpa-charcoal text-amber-400 flex items-center justify-center font-black text-sm">
+          ⚓
+        </div>
+<div>
+<span class="text-base font-extrabold tracking-tight text-bpa-charcoal">
+            BudapestAdventures<span class="text-xs px-2 py-0.5 ml-1.5 rounded bg-bpa-greenLight text-bpa-greenDark font-mono font-bold">DECISION ENGINE</span>
+</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="hidden sm:inline text-xs text-slate-500 font-mono">10 Verified Vessels Audited</span>
+<a class="text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg transition" href="#pier-map">
+<i class="fa-solid fa-map-pin mr-1 text-red-500"></i> Pier Map
+        </a>
+</div>
+</div>
+</header>
+<!-- ==========================================
+       HERO & VALUE PROP
+       ========================================== -->
+<section class="bg-white border-b border-bpa-border pt-8 pb-6">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold tracking-wide uppercase mb-3">
+<span class="w-2 h-2 rounded-full bg-bpa-green animate-pulse"></span>
+          Direct Local Operator Audit • 2026 Season
+        </div>
+<h1 class="text-2xl sm:text-4xl font-extrabold text-bpa-charcoal tracking-tight leading-tight">
+          Find the Right Danube Cruise <span class="text-slate-400 font-normal">Without Guessing Pier Numbers</span>
+</h1>
+<p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+          Filter by departure lighting (sunset vs night illuminations), dining format, audio guide quality, and exact pier locations (Dock 7 Vigadó tér vs Dock 11 Jane Haining).
+        </p>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       THE INTERACTIVE FILTER ENGINE COCKPIT
+       ========================================== -->
+<section class="bg-white border-b border-bpa-border sticky top-16 z-20 shadow-sm py-4">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+<!-- Primary Facet: Experience Category -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-wider shrink-0 mr-1 font-mono">Type:</span>
+<button class="filter-pill active px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-200 text-slate-700 hover:border-slate-900 transition flex items-center gap-1.5 whitespace-nowrap" onclick="setFilter('type', 'all', this)">
+          All Experiences <span class="pill-count bg-slate-100 text-slate-600 text-[10px] px-1.5 py-0.2 rounded font-mono">10</span>
+</button>
+<button class="filter-pill px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-200 text-slate-700 hover:border-slate-900 transition flex items-center gap-1.5 whitespace-nowrap" onclick="setFilter('type', 'sightseeing', this)">
+          🏛️ Sightseeing &amp; Audio <span class="pill-count bg-slate-100 text-slate-600 text-[10px] px-1.5 py-0.2 rounded font-mono">4</span>
+</button>
+<button class="filter-pill px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-200 text-slate-700 hover:border-slate-900 transition flex items-center gap-1.5 whitespace-nowrap" onclick="setFilter('type', 'drinks', this)">
+          🥂 Unlimited Drinks / Party <span class="pill-count bg-slate-100 text-slate-600 text-[10px] px-1.5 py-0.2 rounded font-mono">3</span>
+</button>
+<button class="filter-pill px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-200 text-slate-700 hover:border-slate-900 transition flex items-center gap-1.5 whitespace-nowrap" onclick="setFilter('type', 'dinner', this)">
+          🎻 Dinner Cruise (4-Course / Buffet) <span class="pill-count bg-slate-100 text-slate-600 text-[10px] px-1.5 py-0.2 rounded font-mono">2</span>
+</button>
+<button class="filter-pill px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-200 text-slate-700 hover:border-slate-900 transition flex items-center gap-1.5 whitespace-nowrap" onclick="setFilter('type', 'historic', this)">
+          🚢 Historic Steamer <span class="pill-count bg-slate-100 text-slate-600 text-[10px] px-1.5 py-0.2 rounded font-mono">1</span>
+</button>
+</div>
+<!-- Secondary Facets Row (Lighting + Pier + Must-Haves + Sort) -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 border-t border-slate-100">
+<!-- Lighting / Time Window -->
+<div>
+<label class="block text-[11px] font-bold text-slate-500 uppercase font-mono mb-1">Time &amp; Lighting</label>
+<select class="w-full text-xs font-medium bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-800 focus:outline-none focus:border-slate-900" id="filterTime" onchange="applyAllFilters()">
+<option value="all">Any Time of Day</option>
+<option value="day">☀️ Daytime (Best Photos)</option>
+<option value="sunset">🌅 Sunset (Golden Hour)</option>
+<option value="night">🌙 Night (Lit Parliament)</option>
+</select>
+</div>
+<!-- Pier / Operator Location -->
+<div>
+<label class="block text-[11px] font-bold text-slate-500 uppercase font-mono mb-1">Pier / Location</label>
+<select class="w-full text-xs font-medium bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-800 focus:outline-none focus:border-slate-900" id="filterPier" onchange="applyAllFilters()">
+<option value="all">All Piers</option>
+<option value="pier-7">Dock 7 Vigadó tér (Legenda)</option>
+<option value="pier-11">Dock 11 Jane Haining (Silverline)</option>
+<option value="pier-2">Dock 2 Parliament (Kossuth)</option>
+<option value="pier-8a">Dock 8A Petőfi (Portum)</option>
+</select>
+</div>
+<!-- Vessel Comfort Must-Haves -->
+<div>
+<label class="block text-[11px] font-bold text-slate-500 uppercase font-mono mb-1">Vessel Must-Have</label>
+<select class="w-full text-xs font-medium bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-800 focus:outline-none focus:border-slate-900" id="filterFeature" onchange="applyAllFilters()">
+<option value="all">Any Setup</option>
+<option value="opendeck">360° Open-Air Rooftop Deck</option>
+<option value="audio30">30-Language Headphone Audio</option>
+<option value="livemusic">Live Salon Music / Folk Band</option>
+<option value="drinkinc">Complimentary Drink Included</option>
+</select>
+</div>
+<!-- Sorting -->
+<div>
+<label class="block text-[11px] font-bold text-slate-500 uppercase font-mono mb-1">Sort Results By</label>
+<select class="w-full text-xs font-medium bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-800 focus:outline-none focus:border-slate-900" id="filterSort" onchange="sortCards()">
+<option value="recommend">Editor's Verified Pick</option>
+<option value="price-asc">Price: Lowest First (€)</option>
+<option value="price-desc">Price: Highest First (€)</option>
+<option value="rating">Highest Verified Score</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       RESULTS SUMMARY BAR (LIVE COUNTER + RESET)
+       ========================================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-900" id="resultCount">Showing 10 of 10 cruises</span>
+<span class="text-xs text-slate-400">•</span>
+<button class="text-xs text-bpa-greenDark hover:underline font-semibold hidden" id="resetBtn" onclick="resetFilters()">
+        Reset filters
+      </button>
+</div>
+<!-- Toggle View (Cards vs Table) -->
+<div class="flex items-center gap-1 bg-slate-200 p-0.5 rounded-lg text-xs font-bold">
+<button class="px-2.5 py-1 rounded bg-white shadow-xs text-slate-900" id="viewGridBtn" onclick="toggleView('grid')">
+<i class="fa-solid fa-table-cells mr-1"></i> Cards
+      </button>
+<button class="px-2.5 py-1 rounded text-slate-600 hover:text-slate-900" id="viewTableBtn" onclick="toggleView('table')">
+<i class="fa-solid fa-list mr-1"></i> Side-by-Side Spec Table
+      </button>
+</div>
+</section>
+<!-- ==========================================
+       CRUISE RESULTS CONTAINER (GRID / CARDS)
+       ========================================== -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- CARD LIST -->
+<div class="space-y-4" id="cruiseCardsGrid">
+<!-- ================= CARD 1: LEGENDA SIGHTSEEING ================= -->
+<article class="cruise-item bg-white border border-bpa-border rounded-2xl p-5 hover:border-slate-400 transition-all shadow-xs" data-audio30="true" data-drinkinc="true" data-livemusic="false" data-opendeck="true" data-pier="pier-7" data-price="21" data-rating="4.5" data-time="day sunset night" data-type="sightseeing">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
+<!-- Image Column -->
+<div class="lg:col-span-4 relative rounded-xl overflow-hidden h-48 bg-slate-100">
+<img alt="Legenda Sightseeing Cruise Dock 7" class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68f3738fe72bf6e25526e991_best-budapest-river-cruises-legenda-sightseeing-cruise-00025.avif"/>
+<div class="absolute top-2.5 left-2.5 flex flex-col gap-1">
+<span class="bg-amber-400 text-slate-900 text-[10px] font-black px-2 py-0.5 rounded shadow-xs uppercase tracking-wide">
+                🏆 #1 Editor's Pick
+              </span>
+<span class="bg-white/95 text-slate-800 text-[10px] font-mono px-2 py-0.5 rounded font-bold shadow-xs">
+                Dock 7 Vigadó tér
+              </span>
+</div>
+<div class="absolute bottom-2.5 right-2.5 bg-slate-900/90 text-white text-[11px] font-bold px-2 py-0.5 rounded">
+<i class="fa-solid fa-star text-amber-400 mr-1"></i>4.5/5
+            </div>
+</div>
+<!-- Specs Column -->
+<div class="lg:col-span-5 space-y-2.5">
+<div>
+<div class="flex items-center gap-2 text-xs font-mono text-slate-500">
+<span class="font-bold text-slate-900">Legenda City Cruises</span>
+<span>•</span>
+<span>Vessel: Duna Bella / Danube Legend</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mt-0.5 leading-snug">
+                Day or Night Sightseeing Cruise With 30-Language Audio &amp; Welcome Drink
+              </h3>
+</div>
+<!-- Review Proof Row -->
+<div class="flex items-center gap-2 text-xs">
+<span class="inline-flex items-center gap-1 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded text-[11px]">
+<i class="bpa-ci bpa-ic-gyg"></i> <strong>4.5</strong> (10,290)
+              </span>
+<span class="inline-flex items-center gap-1 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded text-[11px]">
+<i class="bpa-ci bpa-ic-viator"></i> <strong>4.5</strong> (3,950)
+              </span>
+<span class="inline-flex items-center gap-1 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded text-[11px]">
+<i class="bpa-ci bpa-ic-ta"></i> <strong>4.3</strong> (2,180)
+              </span>
+</div>
+<!-- Bullet Matrix -->
+<div class="grid grid-cols-2 gap-1.5 text-xs text-slate-600">
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-headphones text-emerald-600"></i>
+<span>30-language audio headsets</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-wine-glass text-emerald-600"></i>
+<span>1 Drink (Wine / Beer / Soda)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-temperature-arrow-up text-emerald-600"></i>
+<span>Climate-controlled glass salon</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-sun text-emerald-600"></i>
+<span>360° open-air rooftop deck</span>
+</div>
+</div>
+</div>
+<!-- Pricing & CTA Column -->
+<div class="lg:col-span-3 lg:border-l lg:border-slate-100 lg:pl-6 flex flex-col justify-between h-full space-y-3">
+<div>
+<span class="text-xs text-slate-400 line-through">€24.00</span>
+<div class="text-2xl font-black text-slate-900">
+                €21<span class="text-xs font-normal text-slate-500"> / adult</span>
+</div>
+<div class="text-[11px] text-emerald-700 font-medium mt-0.5">
+<i class="fa-solid fa-bolt mr-1"></i> Instant QR Ticket • Pier 7
+              </div>
+</div>
+<div class="space-y-1.5">
+<a class="block w-full text-center bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs py-2.5 px-3 rounded-xl transition shadow-xs" href="https://gyg.me/budapest-legenda-cruise" rel="noopener" target="_blank">
+                Check Dock 7 Times →
+              </a>
+<a class="block w-full text-center text-slate-500 hover:text-slate-800 text-[11px] font-medium py-1" href="/best-budapest-river-cruises#legenda-day-night">
+                Read Vessel Review &amp; Specs
+              </a>
+</div>
+</div>
+</div>
+</article>
+<!-- ================= CARD 2: SILVERLINE UNLIMITED PROSECCO ================= -->
+<article class="cruise-item bg-white border border-bpa-border rounded-2xl p-5 hover:border-slate-400 transition-all shadow-xs" data-audio30="false" data-drinkinc="true" data-livemusic="false" data-opendeck="true" data-pier="pier-11" data-price="29" data-rating="4.2" data-time="sunset night" data-type="drinks">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
+<div class="lg:col-span-4 relative rounded-xl overflow-hidden h-48 bg-slate-100">
+<img alt="Silverline Unlimited Prosecco Night Cruise Dock 11" class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero.jpg"/>
+<div class="absolute top-2.5 left-2.5 flex flex-col gap-1">
+<span class="bg-purple-600 text-white text-[10px] font-black px-2 py-0.5 rounded shadow-xs uppercase tracking-wide">
+                🥂 Best Drinks / Social
+              </span>
+<span class="bg-white/95 text-slate-800 text-[10px] font-mono px-2 py-0.5 rounded font-bold shadow-xs">
+                Dock 11 Jane Haining
+              </span>
+</div>
+<div class="absolute bottom-2.5 right-2.5 bg-slate-900/90 text-white text-[11px] font-bold px-2 py-0.5 rounded">
+<i class="fa-solid fa-star text-amber-400 mr-1"></i>4.2/5
+            </div>
+</div>
+<div class="lg:col-span-5 space-y-2.5">
+<div>
+<div class="flex items-center gap-2 text-xs font-mono text-slate-500">
+<span class="font-bold text-slate-900">Silverline Cruises</span>
+<span>•</span>
+<span>Pier 11 (Petőfi tér)</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mt-0.5 leading-snug">
+                Budapest Night Cruise with Unlimited Prosecco, Aperol Spritz &amp; Spritzer
+              </h3>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<span class="inline-flex items-center gap-1 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded text-[11px]">
+<i class="bpa-ci bpa-ic-gyg"></i> <strong>4.3</strong> (4,120)
+              </span>
+<span class="inline-flex items-center gap-1 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded text-[11px]">
+<i class="bpa-ci bpa-ic-viator"></i> <strong>4.2</strong> (1,840)
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-1.5 text-xs text-slate-600">
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-champagne-glasses text-purple-600"></i>
+<span>Bottomless Prosecco refills</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-regular fa-clock text-purple-600"></i>
+<span>75-Minute Duration</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-music text-purple-600"></i>
+<span>Lounge music background</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-ban text-slate-400"></i>
+<span>No audio commentary (Social)</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3 lg:border-l lg:border-slate-100 lg:pl-6 flex flex-col justify-between h-full space-y-3">
+<div>
+<div class="text-2xl font-black text-slate-900">
+                €29<span class="text-xs font-normal text-slate-500"> / adult</span>
+</div>
+<div class="text-[11px] text-purple-700 font-medium mt-0.5">
+<i class="fa-solid fa-wine-bottle mr-1"></i> Unlimited Refills Included
+              </div>
+</div>
+<div class="space-y-1.5">
+<a class="block w-full text-center bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs py-2.5 px-3 rounded-xl transition shadow-xs" href="https://gyg.me/budapest-silverline-prosecco" rel="noopener" target="_blank">
+                Check Dock 11 Times →
+              </a>
+<a class="block w-full text-center text-slate-500 hover:text-slate-800 text-[11px] font-medium py-1" href="/unlimited-prosecco-cruises-budapest">
+                View Drink Inclusions
+              </a>
+</div>
+</div>
+</div>
+</article>
+<!-- ================= CARD 3: LEGENDA 4-COURSE DINNER ================= -->
+<article class="cruise-item bg-white border border-bpa-border rounded-2xl p-5 hover:border-slate-400 transition-all shadow-xs" data-audio30="false" data-drinkinc="true" data-livemusic="true" data-opendeck="false" data-pier="pier-7" data-price="77" data-rating="4.7" data-time="night" data-type="dinner">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
+<div class="lg:col-span-4 relative rounded-xl overflow-hidden h-48 bg-slate-100">
+<img alt="Legenda Candlelit Dinner Cruise Budapest" class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e632c49194b09a876c4f65_best-budapest-dinner-cruises-hero.avif"/>
+<div class="absolute top-2.5 left-2.5 flex flex-col gap-1">
+<span class="bg-rose-700 text-white text-[10px] font-black px-2 py-0.5 rounded shadow-xs uppercase tracking-wide">
+                🌹 Best Fine Dining / Romance
+              </span>
+<span class="bg-white/95 text-slate-800 text-[10px] font-mono px-2 py-0.5 rounded font-bold shadow-xs">
+                Dock 7 Vigadó tér
+              </span>
+</div>
+<div class="absolute bottom-2.5 right-2.5 bg-slate-900/90 text-white text-[11px] font-bold px-2 py-0.5 rounded">
+<i class="fa-solid fa-star text-amber-400 mr-1"></i>4.7/5
+            </div>
+</div>
+<div class="lg:col-span-5 space-y-2.5">
+<div>
+<div class="flex items-center gap-2 text-xs font-mono text-slate-500">
+<span class="font-bold text-slate-900">Legenda City Cruises</span>
+<span>•</span>
+<span>A La Carte Plated Dining</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mt-0.5 leading-snug">
+                Candlelit 4-Course Dinner Cruise With Live Salon Music (No Buffet Lines)
+              </h3>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<span class="inline-flex items-center gap-1 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded text-[11px]">
+<i class="bpa-ci bpa-ic-gyg"></i> <strong>4.7</strong> (2,450)
+              </span>
+<span class="inline-flex items-center gap-1 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded text-[11px]">
+<i class="bpa-ci bpa-ic-ta"></i> <strong>4.6</strong> (980)
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-1.5 text-xs text-slate-600">
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-utensils text-rose-600"></i>
+<span>4-Course Served at Private Table</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-guitar text-rose-600"></i>
+<span>Live Hungarian Salon Duo</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-regular fa-clock text-rose-600"></i>
+<span>2.5 Hours (19:00 or 19:30)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-champagne-glasses text-rose-600"></i>
+<span>Welcome Champagne Included</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3 lg:border-l lg:border-slate-100 lg:pl-6 flex flex-col justify-between h-full space-y-3">
+<div>
+<div class="text-2xl font-black text-slate-900">
+                €77<span class="text-xs font-normal text-slate-500"> / adult</span>
+</div>
+<div class="text-[11px] text-rose-700 font-medium mt-0.5">
+<i class="fa-solid fa-check mr-1"></i> Private Table Guaranteed
+              </div>
+</div>
+<div class="space-y-1.5">
+<a class="block w-full text-center bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs py-2.5 px-3 rounded-xl transition shadow-xs" href="https://gyg.me/budapest-legenda-dinner" rel="noopener" target="_blank">
+                Reserve Dinner Table →
+              </a>
+<a class="block w-full text-center text-slate-500 hover:text-slate-800 text-[11px] font-medium py-1" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">
+                Read 4-Course Menu Review
+              </a>
+</div>
+</div>
+</div>
+</article>
+<!-- ================= CARD 4: PORTUM BUDGET SIGHTSEEING ================= -->
+<article class="cruise-item bg-white border border-bpa-border rounded-2xl p-5 hover:border-slate-400 transition-all shadow-xs" data-audio30="false" data-drinkinc="true" data-livemusic="false" data-opendeck="true" data-pier="pier-8a" data-price="14" data-rating="4.3" data-time="day sunset night" data-type="sightseeing">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
+<div class="lg:col-span-4 relative rounded-xl overflow-hidden h-48 bg-slate-100">
+<img alt="Portum Sightseeing Cruise Dock 8A" class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest.webp"/>
+<div class="absolute top-2.5 left-2.5 flex flex-col gap-1">
+<span class="bg-blue-600 text-white text-[10px] font-black px-2 py-0.5 rounded shadow-xs uppercase tracking-wide">
+                💰 Best Budget Sightseeing
+              </span>
+<span class="bg-white/95 text-slate-800 text-[10px] font-mono px-2 py-0.5 rounded font-bold shadow-xs">
+                Dock 8A Petőfi tér
+              </span>
+</div>
+<div class="absolute bottom-2.5 right-2.5 bg-slate-900/90 text-white text-[11px] font-bold px-2 py-0.5 rounded">
+<i class="fa-solid fa-star text-amber-400 mr-1"></i>4.3/5
+            </div>
+</div>
+<div class="lg:col-span-5 space-y-2.5">
+<div>
+<div class="flex items-center gap-2 text-xs font-mono text-slate-500">
+<span class="font-bold text-slate-900">Portum Lines</span>
+<span>•</span>
+<span>Pier 8A (Jane Haining)</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mt-0.5 leading-snug">
+                60-Minute Sightseeing Cruise With 1 Welcome Drink (Prosecco / Soda)
+              </h3>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<span class="inline-flex items-center gap-1 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded text-[11px]">
+<i class="bpa-ci bpa-ic-gyg"></i> <strong>4.4</strong> (3,200)
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-1.5 text-xs text-slate-600">
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-glass-water text-blue-600"></i>
+<span>1 Free Welcome Drink</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-regular fa-clock text-blue-600"></i>
+<span>60-Minute Loop</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-sun text-blue-600"></i>
+<span>Open Rooftop Observation Deck</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-wifi text-blue-600"></i>
+<span>Free Onboard Wi-Fi</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3 lg:border-l lg:border-slate-100 lg:pl-6 flex flex-col justify-between h-full space-y-3">
+<div>
+<div class="text-2xl font-black text-slate-900">
+                €14<span class="text-xs font-normal text-slate-500"> / adult</span>
+</div>
+<div class="text-[11px] text-blue-700 font-medium mt-0.5">
+<i class="fa-solid fa-tag mr-1"></i> Under €15 Value Pick
+              </div>
+</div>
+<div class="space-y-1.5">
+<a class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-2.5 px-3 rounded-xl transition shadow-xs" href="https://gyg.me/budapest-portum-cruise" rel="noopener" target="_blank">
+                Check Dock 8A Times →
+              </a>
+</div>
+</div>
+</div>
+</article>
+<!-- ================= CARD 5: KOSSUTH HISTORIC STEAMER ================= -->
+<article class="cruise-item bg-white border border-bpa-border rounded-2xl p-5 hover:border-slate-400 transition-all shadow-xs" data-audio30="false" data-drinkinc="false" data-livemusic="false" data-opendeck="true" data-pier="pier-2" data-price="15" data-rating="4.4" data-time="day sunset" data-type="historic sightseeing">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
+<div class="lg:col-span-4 relative rounded-xl overflow-hidden h-48 bg-slate-100">
+<img alt="Kossuth Historic Paddle Steamer Cruise" class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6482387c7208ad4d8e5a75fc_3-getting-from-budapest-airport-to-city-centre.webp"/>
+<div class="absolute top-2.5 left-2.5 flex flex-col gap-1">
+<span class="bg-amber-800 text-white text-[10px] font-black px-2 py-0.5 rounded shadow-xs uppercase tracking-wide">
+                🚢 Authentic 1913 Steamer
+              </span>
+<span class="bg-white/95 text-slate-800 text-[10px] font-mono px-2 py-0.5 rounded font-bold shadow-xs">
+                Dock 2 Parliament
+              </span>
+</div>
+<div class="absolute bottom-2.5 right-2.5 bg-slate-900/90 text-white text-[11px] font-bold px-2 py-0.5 rounded">
+<i class="fa-solid fa-star text-amber-400 mr-1"></i>4.4/5
+            </div>
+</div>
+<div class="lg:col-span-5 space-y-2.5">
+<div>
+<div class="flex items-center gap-2 text-xs font-mono text-slate-500">
+<span class="font-bold text-slate-900">Kossuth Steamer</span>
+<span>•</span>
+<span>Dock 2 (Directly at Parliament)</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mt-0.5 leading-snug">
+                Historic Danube Cruise on the Last Remaining 19th-Century Paddle Steamer
+              </h3>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<span class="inline-flex items-center gap-1 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded text-[11px]">
+<i class="bpa-ci bpa-ic-gyg"></i> <strong>4.4</strong> (1,150)
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-1.5 text-xs text-slate-600">
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-landmark text-amber-800"></i>
+<span>Departs directly opposite Parliament</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-gear text-amber-800"></i>
+<span>Restored steam engine on display</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-regular fa-clock text-amber-800"></i>
+<span>60-Minute Cruise</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-coffee text-amber-800"></i>
+<span>Onboard vintage cafe &amp; bar</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3 lg:border-l lg:border-slate-100 lg:pl-6 flex flex-col justify-between h-full space-y-3">
+<div>
+<div class="text-2xl font-black text-slate-900">
+                €15<span class="text-xs font-normal text-slate-500"> / adult</span>
+</div>
+<div class="text-[11px] text-amber-900 font-medium mt-0.5">
+<i class="fa-solid fa-ship mr-1"></i> Unique Heritage Vessel
+              </div>
+</div>
+<div class="space-y-1.5">
+<a class="block w-full text-center bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs py-2.5 px-3 rounded-xl transition shadow-xs" href="https://gyg.me/budapest-kossuth-steamer" rel="noopener" target="_blank">
+                Check Dock 2 Times →
+              </a>
+</div>
+</div>
+</div>
+</article>
+<!-- ================= CARD 6: SILVERLINE BUFFET FOLK SHOW ================= -->
+<article class="cruise-item bg-white border border-bpa-border rounded-2xl p-5 hover:border-slate-400 transition-all shadow-xs" data-audio30="false" data-drinkinc="true" data-livemusic="true" data-opendeck="true" data-pier="pier-11" data-price="68" data-rating="4.1" data-time="night" data-type="dinner">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
+<div class="lg:col-span-4 relative rounded-xl overflow-hidden h-48 bg-slate-100">
+<img alt="Buffet Dinner Cruise with Hungarian Folk Show" class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/650c1c6a1c0e949fdc670666_dinner-cruises-hero-image.webp"/>
+<div class="absolute top-2.5 left-2.5 flex flex-col gap-1">
+<span class="bg-indigo-600 text-white text-[10px] font-black px-2 py-0.5 rounded shadow-xs uppercase tracking-wide">
+                💃 Best Folk Show &amp; Buffet
+              </span>
+<span class="bg-white/95 text-slate-800 text-[10px] font-mono px-2 py-0.5 rounded font-bold shadow-xs">
+                Dock 11 Jane Haining
+              </span>
+</div>
+<div class="absolute bottom-2.5 right-2.5 bg-slate-900/90 text-white text-[11px] font-bold px-2 py-0.5 rounded">
+<i class="fa-solid fa-star text-amber-400 mr-1"></i>4.1/5
+            </div>
+</div>
+<div class="lg:col-span-5 space-y-2.5">
+<div>
+<div class="flex items-center gap-2 text-xs font-mono text-slate-500">
+<span class="font-bold text-slate-900">Silverline Cruises</span>
+<span>•</span>
+<span>Buffet Dining &amp; Entertainment</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mt-0.5 leading-snug">
+                All-You-Can-Eat Buffet Dinner Cruise With Live Folklore Music &amp; Dance Show
+              </h3>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<span class="inline-flex items-center gap-1 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded text-[11px]">
+<i class="bpa-ci bpa-ic-gyg"></i> <strong>4.2</strong> (3,800)
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-1.5 text-xs text-slate-600">
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-bowl-food text-indigo-600"></i>
+<span>Warm Hungarian Buffet (Goulash, Stews)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-person-dancing text-indigo-600"></i>
+<span>Costumed folklore dancers &amp; violin</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-regular fa-clock text-indigo-600"></i>
+<span>120-Minute Evening Cruise</span>
+</div>
+<div class="flex items-center gap-1.5">
+<i class="fa-solid fa-users text-indigo-600"></i>
+<span>Lively atmosphere for groups/families</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3 lg:border-l lg:border-slate-100 lg:pl-6 flex flex-col justify-between h-full space-y-3">
+<div>
+<div class="text-2xl font-black text-slate-900">
+                €68<span class="text-xs font-normal text-slate-500"> / adult</span>
+</div>
+<div class="text-[11px] text-indigo-700 font-medium mt-0.5">
+<i class="fa-solid fa-drumstick-bite mr-1"></i> Unlimited Warm Buffet
+              </div>
+</div>
+<div class="space-y-1.5">
+<a class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs py-2.5 px-3 rounded-xl transition shadow-xs" href="https://gyg.me/budapest-buffet-folk-cruise" rel="noopener" target="_blank">
+                Check Dock 11 Times →
+              </a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- ==========================================
+         SPEC MATRIX TABLE VIEW (HIDDEN BY DEFAULT)
+         ========================================== -->
+<div class="hidden overflow-x-auto bg-white border border-bpa-border rounded-2xl shadow-xs" id="cruiseTableView">
+<table class="w-full text-left text-xs text-slate-700">
+<thead class="bg-slate-100 text-[11px] uppercase font-mono text-slate-600 border-b border-bpa-border">
+<tr>
+<th class="py-3 px-4">Cruise &amp; Operator</th>
+<th class="py-3 px-3">Departure Pier</th>
+<th class="py-3 px-3">Type</th>
+<th class="py-3 px-3">Audio Guide</th>
+<th class="py-3 px-3">Drinks / Food</th>
+<th class="py-3 px-3">Open Deck</th>
+<th class="py-3 px-3">Score</th>
+<th class="py-3 px-3">Price</th>
+<th class="py-3 px-4 text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 font-medium">
+<tr class="hover:bg-slate-50">
+<td class="py-3 px-4 font-bold text-slate-900">Legenda Sightseeing</td>
+<td class="py-3 px-3 font-mono">Dock 7 Vigadó</td>
+<td class="py-3 px-3">Sightseeing</td>
+<td class="py-3 px-3 text-emerald-600 font-bold">30 Languages</td>
+<td class="py-3 px-3">1 Drink Included</td>
+<td class="py-3 px-3">Yes (360°)</td>
+<td class="py-3 px-3 font-bold text-amber-600">4.5 / 5</td>
+<td class="py-3 px-3 font-extrabold text-slate-900">€21</td>
+<td class="py-3 px-4 text-right"><a class="text-emerald-600 hover:underline font-bold" href="https://gyg.me/budapest-legenda-cruise">Times →</a></td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="py-3 px-4 font-bold text-slate-900">Silverline Unlimited Prosecco</td>
+<td class="py-3 px-3 font-mono">Dock 11 Petőfi</td>
+<td class="py-3 px-3">Party / Social</td>
+<td class="py-3 px-3 text-slate-400">None</td>
+<td class="py-3 px-3 text-purple-600 font-bold">Unlimited Refills</td>
+<td class="py-3 px-3">Yes</td>
+<td class="py-3 px-3 font-bold text-amber-600">4.2 / 5</td>
+<td class="py-3 px-3 font-extrabold text-slate-900">€29</td>
+<td class="py-3 px-4 text-right"><a class="text-purple-600 hover:underline font-bold" href="https://gyg.me/budapest-silverline-prosecco">Times →</a></td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="py-3 px-4 font-bold text-slate-900">Legenda Candlelit Dinner</td>
+<td class="py-3 px-3 font-mono">Dock 7 Vigadó</td>
+<td class="py-3 px-3">Plated Dining</td>
+<td class="py-3 px-3 text-slate-400">Live Salon Music</td>
+<td class="py-3 px-3 text-rose-600 font-bold">4-Course A La Carte</td>
+<td class="py-3 px-3">Glass Salon</td>
+<td class="py-3 px-3 font-bold text-amber-600">4.7 / 5</td>
+<td class="py-3 px-3 font-extrabold text-slate-900">€77</td>
+<td class="py-3 px-4 text-right"><a class="text-rose-600 hover:underline font-bold" href="https://gyg.me/budapest-legenda-dinner">Times →</a></td>
+</tr>
+<tr class="hover:bg-slate-50">
+<td class="py-3 px-4 font-bold text-slate-900">Portum Sightseeing</td>
+<td class="py-3 px-3 font-mono">Dock 8A Petőfi</td>
+<td class="py-3 px-3">Budget Sightseeing</td>
+<td class="py-3 px-3 text-slate-400">Wi-Fi Only</td>
+<td class="py-3 px-3">1 Welcome Drink</td>
+<td class="py-3 px-3">Yes</td>
+<td class="py-3 px-3 font-bold text-amber-600">4.3 / 5</td>
+<td class="py-3 px-3 font-extrabold text-slate-900">€14</td>
+<td class="py-3 px-4 text-right"><a class="text-blue-600 hover:underline font-bold" href="https://gyg.me/budapest-portum-cruise">Times →</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+<!-- ==========================================
+       VANILLA JS FILTER LOGIC (CLIENT-SIDE FAST)
+       ========================================== -->
+<script>
+    let activeType = 'all';
+
+    function setFilter(typeKey, typeValue, btn) {
+      activeType = typeValue;
+      document.querySelectorAll('.filter-pill').forEach(el => el.classList.remove('active'));
+      btn.classList.add('active');
+      applyAllFilters();
+    }
+
+    function applyAllFilters() {
+      const selectedTime = document.getElementById('filterTime').value;
+      const selectedPier = document.getElementById('filterPier').value;
+      const selectedFeature = document.getElementById('filterFeature').value;
+
+      const items = document.querySelectorAll('.cruise-item');
+      let visibleCount = 0;
+
+      items.forEach(card => {
+        const cType = card.getAttribute('data-type') || '';
+        const cTime = card.getAttribute('data-time') || '';
+        const cPier = card.getAttribute('data-pier') || '';
+        
+        let matchType = (activeType === 'all' || cType.includes(activeType));
+        let matchTime = (selectedTime === 'all' || cTime.includes(selectedTime));
+        let matchPier = (selectedPier === 'all' || cPier === selectedPier);
+        
+        let matchFeature = true;
+        if (selectedFeature === 'opendeck') matchFeature = (card.getAttribute('data-opendeck') === 'true');
+        if (selectedFeature === 'audio30') matchFeature = (card.getAttribute('data-audio30') === 'true');
+        if (selectedFeature === 'livemusic') matchFeature = (card.getAttribute('data-livemusic') === 'true');
+        if (selectedFeature === 'drinkinc') matchFeature = (card.getAttribute('data-drinkinc') === 'true');
+
+        if (matchType && matchTime && matchPier && matchFeature) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Update counter & reset button
+      document.getElementById('resultCount').innerText = `Showing ${visibleCount} of ${items.length} verified cruises`;
+      const isFiltered = (activeType !== 'all' || selectedTime !== 'all' || selectedPier !== 'all' || selectedFeature !== 'all');
+      document.getElementById('resetBtn').classList.toggle('hidden', !isFiltered);
+    }
+
+    function sortCards() {
+      const sortVal = document.getElementById('filterSort').value;
+      const grid = document.getElementById('cruiseCardsGrid');
+      const cards = Array.from(grid.querySelectorAll('.cruise-item'));
+
+      cards.sort((a, b) => {
+        const priceA = parseFloat(a.getAttribute('data-price'));
+        const priceB = parseFloat(b.getAttribute('data-price'));
+        const ratingA = parseFloat(a.getAttribute('data-rating'));
+        const ratingB = parseFloat(b.getAttribute('data-rating'));
+
+        if (sortVal === 'price-asc') return priceA - priceB;
+        if (sortVal === 'price-desc') return priceB - priceA;
+        if (sortVal === 'rating') return ratingB - ratingA;
+        return 0; // Default order
+      });
+
+      cards.forEach(card => grid.appendChild(card));
+    }
+
+    function resetFilters() {
+      activeType = 'all';
+      document.getElementById('filterTime').value = 'all';
+      document.getElementById('filterPier').value = 'all';
+      document.getElementById('filterFeature').value = 'all';
+      document.getElementById('filterSort').value = 'recommend';
+      
+      const pills = document.querySelectorAll('.filter-pill');
+      pills.forEach(p => p.classList.remove('active'));
+      pills[0].classList.add('active');
+
+      applyAllFilters();
+      sortCards();
+    }
+
+    function toggleView(view) {
+      const grid = document.getElementById('cruiseCardsGrid');
+      const table = document.getElementById('cruiseTableView');
+      const gridBtn = document.getElementById('viewGridBtn');
+      const tableBtn = document.getElementById('viewTableBtn');
+
+      if (view === 'grid') {
+        grid.classList.remove('hidden');
+        table.classList.add('hidden');
+        gridBtn.classList.add('bg-white', 'text-slate-900', 'shadow-xs');
+        gridBtn.classList.remove('text-slate-600');
+        tableBtn.classList.remove('bg-white', 'text-slate-900', 'shadow-xs');
+        tableBtn.classList.add('text-slate-600');
+      } else {
+        grid.classList.add('hidden');
+        table.classList.remove('hidden');
+        tableBtn.classList.add('bg-white', 'text-slate-900', 'shadow-xs');
+        tableBtn.classList.remove('text-slate-600');
+        gridBtn.classList.remove('bg-white', 'text-slate-900', 'shadow-xs');
+        gridBtn.classList.add('text-slate-600');
+      }
+    }
+  </script>
+</body>
+</html>
