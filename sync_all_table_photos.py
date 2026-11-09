@@ -2,7 +2,7 @@ import re
 import urllib.request
 import urllib.parse
 
-CDN = "https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/"
+CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/"
 
 # 1. Exact verified working photo lists from dinner.html original table
 dinner_photos = [

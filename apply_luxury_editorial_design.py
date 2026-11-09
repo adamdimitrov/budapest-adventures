@@ -388,9 +388,9 @@ h1.component-heading-1,
   vertical-align: middle;
 }
 
-.bpa-ic-gyg { background-image: url("https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png"); }
-.bpa-ic-ta { background-image: url("https://cdn.prod.website-files.com/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif"); }
-.bpa-ic-viator { background-image: url("https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png"); }
+.bpa-ic-gyg { background-image: url("/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png"); }
+.bpa-ic-ta { background-image: url("/assets/cdn/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif"); }
+.bpa-ic-viator { background-image: url("/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png"); }
 
 .bpa-ci strong,
 .bpa-channel-item strong {
@@ -1217,7 +1217,7 @@ def build_river_deck_and_sticky() -> str:
 
 <script>
 (function() {{
-  const BPA_CDN = "https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/";
+  const BPA_CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/";
   document.querySelectorAll(".bpa-slider[data-more]").forEach(c => {{
     const m = c.getAttribute("data-more").split(",");
     m.forEach(f => {{
@@ -1385,7 +1385,7 @@ def build_dinner_deck_and_sticky() -> str:
 
 <script>
 (function() {
-  const BPA_CDN = "https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/";
+  const BPA_CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/";
   document.querySelectorAll(".bpa-slider[data-more]").forEach(c => {
     const m = c.getAttribute("data-more").split(",");
     m.forEach(f => {

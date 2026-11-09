@@ -116,7 +116,7 @@ else:
 # Now replace the JS script block with bulletproof DOMContentLoaded + load + polling handler
 updated_js = """<script>
 (function() {
-  const BPA_CDN = "https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/";
+  const BPA_CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/";
   
   // 1. Slider lazy images & drag
   function initSliders() {

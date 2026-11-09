@@ -28,9 +28,9 @@ css = """<style>
 .bpa-channels{display:flex;align-items:center;gap:15px;flex-wrap:wrap}
 .bpa-ci{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:#475569}
 .bpa-ci i{display:inline-block;width:15px;height:15px;background-size:contain;background-repeat:no-repeat;background-position:center;border-radius:3px;vertical-align:middle}
-.bpa-ic-gyg{background-image:url("https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png")}
-.bpa-ic-ta{background-image:url("https://cdn.prod.website-files.com/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif")}
-.bpa-ic-viator{background-image:url("https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png")}
+.bpa-ic-gyg{background-image:url("/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png")}
+.bpa-ic-ta{background-image:url("/assets/cdn/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif")}
+.bpa-ic-viator{background-image:url("/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png")}
 .bpa-ci strong{color:#0f172a;font-weight:800}.bpa-ci span{color:#64748b;font-weight:500}
 .bpa-specs-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:3px}
 .bpa-sp{background:#f1f5f9;color:#475569;padding:4px 9px;border-radius:6px;font-size:11px;font-weight:600}
@@ -126,7 +126,7 @@ for s in sliders:
     imgs = re.findall(r"<img[^>]*src=\"([^\"]+)\"", s)
     cruises_imgs.append(imgs)
 
-BPA_CDN = "https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/"
+BPA_CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/"
 cleaned_imgs = []
 for group in cruises_imgs:
     grp_cleaned = []
@@ -181,7 +181,7 @@ deck_html = f"""<div class="bpa-deck-wrap"><div class="bpa-section-header"><h2 c
 # 3. Minified JS
 js = """<script>
 (function(){
-const BPA_CDN="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/";
+const BPA_CDN="/assets/cdn/60e43c7d6d05b671dff0dc1a/";
 function initSliders(){
 document.querySelectorAll(".bpa-slider[data-more]").forEach(c=>{
 const m=c.getAttribute("data-more").split(",");

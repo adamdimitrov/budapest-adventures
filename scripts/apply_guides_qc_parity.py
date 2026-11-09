@@ -983,7 +983,7 @@ def build_rev_badges_html(rev_nodes) -> str:
         a_tag = r.find("a", href=True)
         href = a_tag["href"] if a_tag else "#river-cruises-quick-summary"
         img_tag = r.find("img")
-        img_src = img_tag["src"] if img_tag and img_tag.get("src") else "https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png"
+        img_src = img_tag["src"] if img_tag and img_tag.get("src") else "/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png"
         score_el = r.select_one(".price-2-copy")
         score = score_el.get_text(strip=True) if score_el else "4.5"
         cnt_el = r.select_one(".price-5 span, .price-6 span")
@@ -1290,19 +1290,19 @@ def get_cruise_7_dinner_details_html() -> str:
       <div class="bpa-summary-reviews">
         <div class="div-block-53">
           <a class="bpa-rev-badge" href="{gyg_url}" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank">
-            <img alt="" class="bpa-rev-icon" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png"/>
+            <img alt="" class="bpa-rev-icon" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png"/>
             <span class="bpa-rev-score">4.6</span>
             <span class="bpa-rev-stars">★★★★★</span>
             <span class="bpa-rev-count">+540 reviews</span>
           </a>
           <a class="bpa-rev-badge" href="{gyg_url}" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank">
-            <img alt="" class="bpa-rev-icon" loading="lazy" src="https://cdn.prod.website-files.com/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif"/>
+            <img alt="" class="bpa-rev-icon" loading="lazy" src="/assets/cdn/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif"/>
             <span class="bpa-rev-score">4.4</span>
             <span class="bpa-rev-stars">★★★★☆</span>
             <span class="bpa-rev-count">+230 reviews</span>
           </a>
           <a class="bpa-rev-badge" href="{gyg_url}" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank">
-            <img alt="" class="bpa-rev-icon" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png"/>
+            <img alt="" class="bpa-rev-icon" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png"/>
             <span class="bpa-rev-score">4.5</span>
             <span class="bpa-rev-stars">★★★★★</span>
             <span class="bpa-rev-count">+150 reviews</span>
@@ -1317,7 +1317,7 @@ def get_cruise_7_dinner_details_html() -> str:
   </summary>
   <div class="bpa-details-body">
     <a id="cruise-7-grasham-palace" class="ltt-anchor-alias"></a>
-    <img alt="4-Course Dinner Cruise With Live Music &amp; Unlimited Drinks on River Diva" loading="lazy" src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e7f8b85dd0bfdd37755de4_best-budapest-dinner-cruises-unlimited-drinks.avif"/>
+    <img alt="4-Course Dinner Cruise With Live Music &amp; Unlimited Drinks on River Diva" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/68e7f8b85dd0bfdd37755de4_best-budapest-dinner-cruises-unlimited-drinks.avif"/>
     <div class="pro-con-box-wrapper">
       <div class="w-layout-grid grid-15">
         <div class="pro-con-box-pro-cell" data-wf-pbl="layout-grid-1x2-vertical">

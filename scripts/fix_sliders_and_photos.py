@@ -24,74 +24,74 @@ CFG_DIR = Path('/Users/adamdimitrov/.gemini/config/skills/luxury-editorial-syste
 
 # Curated Authentic Photo Collections
 RUBIN_PHOTOS = [
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858ea56f82257ea9e0c70_Budapest-river-cruises-portum-16.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858e8f731d90165d271cc_Budapest-river-cruises-portum-11.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858e9803ea5e532e13df1_Budapest-river-cruises-portum-15.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858e8a4e49cb177974356_Budapest-river-cruises-portum-14.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858eda4b537601bf3ceab_Budapest-river-cruises-portum-21.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858eb6b6209525005c772_Budapest-river-cruises-portum-17.webp'
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858ea56f82257ea9e0c70_Budapest-river-cruises-portum-16.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e8f731d90165d271cc_Budapest-river-cruises-portum-11.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e9803ea5e532e13df1_Budapest-river-cruises-portum-15.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e8a4e49cb177974356_Budapest-river-cruises-portum-14.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858eda4b537601bf3ceab_Budapest-river-cruises-portum-21.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858eb6b6209525005c772_Budapest-river-cruises-portum-17.webp'
 ]
 
 DINNER_PHOTOS = [
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e7f8b85dd0bfdd37755de4_best-budapest-dinner-cruises-unlimited-drinks.avif',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4cc77b0bf60d90e732_best-budapest-dinner-cruises-silverline-31.avif',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4cb924ed0b010c12d6_best-budapest-dinner-cruises-silverline-43.avif',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4c7d21d3f5803a13ec_best-budapest-dinner-cruises-silverline-161.avif',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4cf2a365e6e1cfb88f_best-budapest-dinner-cruises-silverline-165.avif',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4c4eb37345f0ae26a5_best-budapest-dinner-cruises-silverline-81.avif',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/68e41f4ca4cf389c00f1d86d_best-budapest-dinner-cruises-silverline-7.avif'
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/68e7f8b85dd0bfdd37755de4_best-budapest-dinner-cruises-unlimited-drinks.avif',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4cc77b0bf60d90e732_best-budapest-dinner-cruises-silverline-31.avif',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4cb924ed0b010c12d6_best-budapest-dinner-cruises-silverline-43.avif',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c7d21d3f5803a13ec_best-budapest-dinner-cruises-silverline-161.avif',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4cf2a365e6e1cfb88f_best-budapest-dinner-cruises-silverline-165.avif',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c4eb37345f0ae26a5_best-budapest-dinner-cruises-silverline-81.avif',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4ca4cf389c00f1d86d_best-budapest-dinner-cruises-silverline-7.avif'
 ]
 
 COCKTAIL_PHOTOS = [
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6638d3ec69d8d69f0271d0da_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-10.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6638d3ed86f3c86d86c9466b_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-11.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6638d3edd5cd846bb24b9410_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-6.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6638d3eb6ef3a0601bcec896_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-3.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6638d3e84e92f3c6c95eaece_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-7.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6638d3eb07cc7381da3f44f3_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-2.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6638d3ea5240bf0d972917c8_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-8.webp'
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3ec69d8d69f0271d0da_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-10.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3ed86f3c86d86c9466b_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-11.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3edd5cd846bb24b9410_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-6.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3eb6ef3a0601bcec896_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-3.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3e84e92f3c6c95eaece_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-7.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3eb07cc7381da3f44f3_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-2.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3ea5240bf0d972917c8_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-8.webp'
 ]
 
 PIZZA_PHOTOS = [
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6638d3eb7ec40d20901aa81e_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-9.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64957c0835b706f1aa44c299_1-pizza-beer-cruise.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64958a8b3e2fa8199f43a2a1_3-pizza-beer-cruise.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6638d3ecb963489a0ad4d4a7_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-5.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6638d3ea5240bf0d972917c8_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-8.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64958b013eea741396853973_4-pizza-beer-cruise.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/688ae4671ab9d4a938f7c715_felto%CC%88ltheto%CC%8B%20pizzalap%20angol.avif'
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3eb7ec40d20901aa81e_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-9.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/64957c0835b706f1aa44c299_1-pizza-beer-cruise.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/64958a8b3e2fa8199f43a2a1_3-pizza-beer-cruise.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3ecb963489a0ad4d4a7_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-5.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3ea5240bf0d972917c8_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-8.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/64958b013eea741396853973_4-pizza-beer-cruise.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/688ae4671ab9d4a938f7c715_felto%CC%88ltheto%CC%8B%20pizzalap%20angol.avif'
 ]
 
 BUFFET_DINNER_PHOTOS = [
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858cdb4ae8b9d0e597bf4_Budapest-river-cruises-hungaria-koncert-11.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858cdb4ae8b56a4597bf5_Budapest-river-cruises-hungaria-koncert-10.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858c9ab14b20add2d136a_Budapest-river-cruises-hungaria-koncert-8.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858c97991129dcb5fa59a_Budapest-river-cruises-hungaria-koncert-3.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858c9482e8373089e515f_Budapest-river-cruises-hungaria-koncert-4.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858c9a4e49ca09097411c_Budapest-river-cruises-hungaria-koncert-6.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858cee7351cbee9beb832_Budapest-river-cruises-hungaria-koncert-13.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858cff69a68768c2aa8c0_Budapest-river-cruises-hungaria-koncert-16.webp'
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858cdb4ae8b9d0e597bf4_Budapest-river-cruises-hungaria-koncert-11.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858cdb4ae8b56a4597bf5_Budapest-river-cruises-hungaria-koncert-10.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c9ab14b20add2d136a_Budapest-river-cruises-hungaria-koncert-8.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c97991129dcb5fa59a_Budapest-river-cruises-hungaria-koncert-3.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c9482e8373089e515f_Budapest-river-cruises-hungaria-koncert-4.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c9a4e49ca09097411c_Budapest-river-cruises-hungaria-koncert-6.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858cee7351cbee9beb832_Budapest-river-cruises-hungaria-koncert-13.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858cff69a68768c2aa8c0_Budapest-river-cruises-hungaria-koncert-16.webp'
 ]
 
 PARTY_PHOTOS = [
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6495916e3eea7413968d312b_5-party-boat-budapest.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6495939cad3aa0c1f3b92f13_6-party-boat-budapest.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6495939fd61fa22b4c82cd84_7-party-boat-budapest.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6638d3ec69d8d69f0271d0da_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-10.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6638d3ed86f3c86d86c9466b_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-11.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6638d3edd5cd846bb24b9410_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-6.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6638d3ea5240bf0d972917c8_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-8.webp'
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6495916e3eea7413968d312b_5-party-boat-budapest.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6495939cad3aa0c1f3b92f13_6-party-boat-budapest.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6495939fd61fa22b4c82cd84_7-party-boat-budapest.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3ec69d8d69f0271d0da_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-10.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3ed86f3c86d86c9466b_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-11.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3edd5cd846bb24b9410_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-6.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3ea5240bf0d972917c8_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-8.webp'
 ]
 
 FOLKLORE_DRINKS_PHOTOS = [
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858c9a4e49c05eb97411f_Budapest-river-cruises-hungaria-koncert-2.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858cff69a68768c2aa8c0_Budapest-river-cruises-hungaria-koncert-16.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858c9a4e49ca09097411c_Budapest-river-cruises-hungaria-koncert-6.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/6496b701c4e9164660d5a9d4_1-cabaret-cruise.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858c97991129dcb5fa59a_Budapest-river-cruises-hungaria-koncert-3.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858cdb4ae8b9d0e597bf4_Budapest-river-cruises-hungaria-koncert-11.webp',
-    'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/63b858cee7351cbee9beb832_Budapest-river-cruises-hungaria-koncert-13.webp'
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c9a4e49c05eb97411f_Budapest-river-cruises-hungaria-koncert-2.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858cff69a68768c2aa8c0_Budapest-river-cruises-hungaria-koncert-16.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c9a4e49ca09097411c_Budapest-river-cruises-hungaria-koncert-6.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/6496b701c4e9164660d5a9d4_1-cabaret-cruise.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c97991129dcb5fa59a_Budapest-river-cruises-hungaria-koncert-3.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858cdb4ae8b9d0e597bf4_Budapest-river-cruises-hungaria-koncert-11.webp',
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858cee7351cbee9beb832_Budapest-river-cruises-hungaria-koncert-13.webp'
 ]
 
 
@@ -181,7 +181,7 @@ def fix_prosecco_and_night_cruises():
     # Card 5 (Silverline No-Frills)
     c5_photos = [im['src'] for im in n_cards[4].select('.bpa-slider img') if '64946b4210f06faa6bdaf364' not in im.get('src', '')]
     if len(c5_photos) < 6:
-        c5_photos.append('https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64c8d89ab333794837100497_Dinner-cruise-silverline-folklore-operetta%20(7).webp')
+        c5_photos.append('/assets/cdn/60e43c7d6d05b671dff0dc1a/64c8d89ab333794837100497_Dinner-cruise-silverline-folklore-operetta%20(7).webp')
     update_card_slider(n_cards[4], c5_photos, n_cards[4].select_one('.bpa-title').text.strip())
     
     # Card 6 (Silverline Cocktails)

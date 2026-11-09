@@ -362,13 +362,13 @@ cruises = [
 ]
 
 ICON_URLS = {
-    "gyg": "https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png",
-    "ta": "https://cdn.prod.website-files.com/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif",
-    "viator": "https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png"
+    "gyg": "/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png",
+    "ta": "/assets/cdn/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif",
+    "viator": "/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png"
 }
 ICON_ALTS = {"gyg": "GetYourGuide", "ta": "Tripadvisor", "viator": "Viator"}
 
-CDN = "https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/"
+CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/"
 
 cards_html = []
 for c in cruises:
@@ -499,7 +499,7 @@ river_unwrap_css = """
 
 js_block = """<script>
 (function() {
-  const BPA_CDN = "https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/";
+  const BPA_CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/";
   
   // 1. Hydrate lazy images & desktop drag
   document.querySelectorAll(".bpa-slider[data-more]").forEach(c => {
@@ -639,9 +639,9 @@ with open(out_path, "r") as f:
 
 # 1. Replace repeated 14px channel icon URLs with compact CSS classes
 icon_css = """.bpa-channel-item i { display:inline-block; width:15px; height:15px; background-size:contain; background-repeat:no-repeat; background-position:center; border-radius:3px; vertical-align:middle; }
-.bpa-ic-gyg { background-image:url('https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png'); }
-.bpa-ic-ta { background-image:url('https://cdn.prod.website-files.com/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif'); }
-.bpa-ic-viator { background-image:url('https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png'); }
+.bpa-ic-gyg { background-image:url('/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3745_getyourguide-icon.png'); }
+.bpa-ic-ta { background-image:url('/assets/cdn/652d0405192ba076b04f74a3/68f64414502d0348145b678e_tripadvisor-icon.avif'); }
+.bpa-ic-viator { background-image:url('/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3747_viator-icon.png'); }
 """
 
 raw = raw.replace("</style>", icon_css + "</style>")

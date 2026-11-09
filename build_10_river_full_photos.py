@@ -9,7 +9,7 @@ for s in sliders:
     imgs = re.findall(r"<img[^>]*src=\"([^\"]+)\"", s)
     cruises_imgs.append(imgs)
 
-BPA_CDN = "https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/"
+BPA_CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/"
 cleaned_imgs = []
 for group in cruises_imgs:
     grp_cleaned = []

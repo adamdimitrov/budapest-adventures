@@ -226,7 +226,7 @@ else:
 
 # Replace JS with high-performance debounced scroll & mouse drag
 old_js = """<script>
-const BPA_CDN = "https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/";
+const BPA_CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/";
 document.querySelectorAll(".bpa-slider[data-more]").forEach(c => {
   const m = c.getAttribute("data-more").split(",");
   m.forEach(f => {
@@ -253,7 +253,7 @@ function bpaCount(c) {
 
 new_js = """<script>
 (function() {
-  const BPA_CDN = "https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/";
+  const BPA_CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/";
   
   // Hydrate lazy images
   document.querySelectorAll(".bpa-slider[data-more]").forEach(c => {

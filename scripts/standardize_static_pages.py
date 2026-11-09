@@ -338,7 +338,7 @@ def update_index_page():
     # Broken Walking Tours image
     html = html.replace(
         'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/60e557f1b50ff47e8fc4ca54_Webclip-8.png',
-        'https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64f8c324f5839b9f2092fef3_walking-tours-featured-image.webp'
+        '/assets/cdn/60e43c7d6d05b671dff0dc1a/64f8c324f5839b9f2092fef3_walking-tours-featured-image.webp'
     )
 
     # Remove conflicting inline navbar CSS (between "/* Navbar */" and "/* Hero */")
@@ -370,7 +370,7 @@ def update_index_page():
           <a href="/budapest-card-is-it-worth-it" class="ltt-guide-card">
             <div class="ltt-guide-img-wrap">
               <span class="ltt-guide-tag">💳 VALUE CALCULATOR</span>
-              <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/64823741c9e79f16c66f949c_2-budapest-card.webp" alt="Official Budapest Card Pass with Free Public Transport & Museums" class="ltt-guide-img" loading="lazy"/>
+              <img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64823741c9e79f16c66f949c_2-budapest-card.webp" alt="Official Budapest Card Pass with Free Public Transport & Museums" class="ltt-guide-img" loading="lazy"/>
             </div>
             <div class="ltt-guide-content">
               <div>
@@ -391,7 +391,7 @@ def update_index_page():
           <a href="/best-hostels-budapest" class="ltt-guide-card">
             <div class="ltt-guide-img-wrap">
               <span class="ltt-guide-tag">🛏️ BUDGET & SOCIAL</span>
-              <img src="https://cdn.prod.website-files.com/60e43c7d6d05b671dff0dc1a/649187aa6fba10735a62132d_06-best-hostels-in-budapest.webp" alt="Best Hostels in Budapest for Solo Travelers and Groups" class="ltt-guide-img" loading="lazy"/>
+              <img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/649187aa6fba10735a62132d_06-best-hostels-in-budapest.webp" alt="Best Hostels in Budapest for Solo Travelers and Groups" class="ltt-guide-img" loading="lazy"/>
             </div>
             <div class="ltt-guide-content">
               <div>
