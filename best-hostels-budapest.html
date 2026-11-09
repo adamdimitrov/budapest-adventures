@@ -4953,6 +4953,26 @@ footer.ltt-footer .legal-text {
   }
 }
 
+
+/* ==========================================================================
+   Webflow Branding Purge Directives
+   ========================================================================== */
+.w-webflow-badge,
+a.w-webflow-badge,
+[class*="w-webflow-badge"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0) !important;
+  z-index: -9999 !important;
+}
+
 </style>
 <div class="ltt-deck-container" id="budapest-hostels-deck">
 <div class="bpa-deck-wrap" id="ltt-cards-deck">
@@ -9069,6 +9089,18 @@ window.LTT_PAGE_CONFIG = {"deckId": "budapest-hostels-deck", "tocDeckLabel": "To
   var tocDeckLabel = cfg.tocDeckLabel || 'Top 10 Comparison';
   var tocBreakdownLabel = cfg.tocBreakdownLabel || 'Detailed Breakdown';
   var shortTitles = cfg.shortTitles || [];
+
+  // 0. Purge Webflow badge immediately
+  function purgeWebflowBadge() {
+    var badges = document.querySelectorAll('.w-webflow-badge, [class*="webflow-badge"], a[href*="webflow.com?utm_campaign=brandjs"]');
+    badges.forEach(function(el) { el.remove(); });
+  }
+  purgeWebflowBadge();
+  document.addEventListener('DOMContentLoaded', purgeWebflowBadge);
+  window.addEventListener('load', purgeWebflowBadge);
+  if (window.MutationObserver) {
+    new MutationObserver(purgeWebflowBadge).observe(document.documentElement, { childList: true, subtree: true });
+  }
 
   // 1. Slider controls
   window.bpaSlide = function(btn, dir) {
