@@ -30,134 +30,19 @@ from subpoint_headings_i18n import SUBPOINT_HEADINGS
 from i18n_translation_data import BUY_CARD_I18N
 from compile_all_languages_luxury import extract_tour_content, SLUG_MAP
 from quick_facts_i18n import QF_TITLES, QF_LABELS, QF_CHIPS, KICKER_UNITS
-
 from spec_chips_i18n import SPEC_CHIPS_I18N
+
+from river_walkthrough_data_i18n import (
+    TOC_I18N,
+    TIPS_EXTENDED_I18N,
+    MISSING_7_LIS_I18N,
+    ABOUT_PARAGRAPHS_I18N,
+    SHIP_CAPTIONS_I18N,
+    CARD_LEAF_INDEX_MAP
+)
 
 MASTER_DICT_PATH = os.path.join(BASE_DIR, 'data', 'i18n_master_dictionary.json')
 MASTER_DICT = json.load(open(MASTER_DICT_PATH, encoding='utf-8')) if os.path.exists(MASTER_DICT_PATH) else {}
-
-TIPS_TRANSLATIONS = {
-    'de': {
-        'cancellation': "Alle Schifffahrten bieten eine kulante Stornierungsregelung mit voller Rückerstattung bis zu 24 Stunden vor Abfahrt.",
-        'deck_view': "Für beste Sicht und Fotomotive begeben Sie sich direkt nach dem Einsteigen auf das offene Oberdeck.",
-        'headphones': "Kopfhörer für den Audioguide werden an Bord ausgegeben; Sie können auch eigene 3,5-mm-Klinkenkopfhörer verwenden.",
-        'arrival': "Kommen Sie 15–20 Minuten vor Abfahrt am Steg an, um sich die besten Plätze am Fenster oder auf dem Oberdeck zu sichern."
-    },
-    'fr': {
-        'cancellation': "Toutes les croisières bénéficient d'une annulation gratuite avec remboursement intégral jusqu'à 24 heures avant le départ.",
-        'deck_view': "Pour profiter des meilleures vues et photos, montez directement sur le pont supérieur découvert dès l'embarquement.",
-        'headphones': "Des écouteurs pour l'audioguide sont fournis à bord, mais vous pouvez également brancher vos propres écouteurs filaires jack 3,5 mm.",
-        'arrival': "Présentez-vous à l'embarcadère 15 à 20 minutes avant le départ pour choisir les meilleures places près des fenêtres ou sur le pont."
-    },
-    'es': {
-        'cancellation': "Todos los paseos cuentan con política de cancelación flexible con reembolso íntegro hasta 24 horas antes de la salida.",
-        'deck_view': "Para obtener las mejores fotos y vistas panorámicas, suba directamente a la cubierta superior abierta al embarcar.",
-        'headphones': "A bordo se proporcionan auriculares para el audioguía, aunque también puede usar sus propios auriculares con cable jack de 3,5 mm.",
-        'arrival': "Llegue al muelle 15 o 20 minutos antes de la salida para asegurarse los mejores asientos junto a las ventanas o en cubierta."
-    },
-    'it': {
-        'cancellation': "Tutte le crociere prevedono la cancellazione gratuita con rimborso completo fino a 24 ore prima della partenza.",
-        'deck_view': "Per le migliori viste e opportunità fotografiche, sali direttamente sul ponte superiore all'aperto al momento dell'imbarco.",
-        'headphones': "Le cuffie per l'audioguida sono fornite a bordo, ma puoi utilizzare anche i tuoi auricolari con jack da 3,5 mm.",
-        'arrival': "Arriva al molo 15-20 minuti prima della partenza per assicurarti i posti migliori vicino ai finestrini o sul ponte."
-    },
-    'nl': {
-        'cancellation': "Alle afvaarten hebben een soepel annuleringsbeleid met volledige terugbetaling tot 24 uur voor vertrek.",
-        'deck_view': "Ga direct na het instappen naar het open bovendek voor het beste uitzicht en de mooiste fotomomenten.",
-        'headphones': "Koptelefoons voor de audiogids worden aan boord verstrekt, maar u kunt ook uw eigen 3,5 mm oordopjes aansluiten.",
-        'arrival': "Zorg dat u 15 tot 20 minuten voor vertrek op de steiger bent om de beste stoelen aan het raam of op het dek te kiezen."
-    },
-    'pl': {
-        'cancellation': "Wszystkie rejsy oferują bezpłatne anulowanie z pełnym zwrotem kosztów do 24 godzin przed wypłynięciem.",
-        'deck_view': "Najlepsze widoki i kadry do zdjęć uzyskasz, wchodząc zaraz po wejściu na pokład na otwarty górny pokład.",
-        'headphones': "Słuchawki do audioprzewodnika są rozdawane na pokładzie, ale możesz też podłączyć własne słuchawki z wtykiem minijack 3,5 mm.",
-        'arrival': "Przybądź na przystań 15–20 minut przed rejsem, aby zająć najlepsze miejsca przy oknie lub na górnym pokładzie."
-    },
-    'ro': {
-        'cancellation': "Toate croazierele oferă anulare gratuită cu rambursare integrală cu până la 24 de ore înainte de plecare.",
-        'deck_view': "Pentru cele mai spectaculoase fotografii, urcați direct pe puntea superioară deschisă imediat după îmbarcare.",
-        'headphones': "Căștile pentru ghidul audio sunt puse la dispoziție la bord, dar puteți folosi și căștile personale cu mufă jack de 3,5 mm.",
-        'arrival': "Sosiți la ponton cu 15-20 de minute înainte de plecare pentru a prinde cele mai bune locuri la geam sau pe punte."
-    },
-    'cs': {
-        'cancellation': "Všechny plavby nabízejí bezplatné zrušení s plnou refundací až 24 hodin před vyplutím.",
-        'deck_view': "Pro nejlepší výhledy a fotografie zamiřte ihned po nalodění na otevřenou horní palubu.",
-        'headphones': "Sluchátka k audiosprůvodci obdržíte na palubě, můžete však použít i vlastní drátová sluchátka s 3,5mm jackem.",
-        'arrival': "Doražte k molu 15–20 minut předem, abyste si zajistili nejlepší místa u oken nebo na palubě."
-    },
-    'sk': {
-        'cancellation': "Všetky plavby ponúkajú bezplatné storno s plným vrátením peňazí až 24 hodín pred odchodom.",
-        'deck_view': "Pre najkrajšie výhľady a fotografie choďte hneď po nastúpení na otvorenú hornú palubu.",
-        'headphones': "Slúchadlá k audiosprievodcovi dostanete na palube, môžete však použiť aj vlastné s 3,5 mm jackom.",
-        'arrival': "Príďte k mólu 15 až 20 minút pred odchodom, aby ste si obsadili najlepšie miesta pri okne alebo na palube."
-    },
-    'hr': {
-        'cancellation': "Sva krstarenja nude besplatno otkazivanje uz puni povrat novca do 24 sata prije polaska.",
-        'deck_view': "Za najbolje vidike i fotografiranje uputite se odmah po ukrcaju na otvorenu gornju palubu.",
-        'headphones': "Slušalice za audio vodič dobivate na brodu, a možete koristiti i vlastite slušalice s priključkom od 3,5 mm.",
-        'arrival': "Dođite na dok 15-20 minuta prije polaska kako biste osigurali najbolja mjesta uz prozore ili na palubi."
-    },
-    'sr': {
-        'cancellation': "Сва крстарења нуде бесплатно отказивање уз пун повраћај новца до 24 сата пре поласка.",
-        'deck_view': "За најбоље погледе и фотографисање попните се одмах након укрцавања на отворену горњу палубу.",
-        'headphones': "Слушалице за аудио водич добијате на броду, а можете користити и сопствене слушалице од 3,5 мм.",
-        'arrival': "Дођите на док 15–20 минута раније како бисте заузели најбоља места поред прозора или на палуби."
-    },
-    'bg': {
-        'cancellation': "Всички круизи предлагат безплатно анулиране с пълно възстановяване на сумата до 24 часа преди часа на отплаване.",
-        'deck_view': "За най-красиви панорами и снимки се качете на откритата горна палуба веднага след качването на борда.",
-        'headphones': "Слушалките за аудиогида се предоставят на борда, но можете да използвате и свои собствени с 3,5 мм жак.",
-        'arrival': "Елате на кея 15–20 минути преди тръгване, за да заемете най-хубавите места до прозорците или на палубата."
-    },
-    'ru': {
-        'cancellation': "На всех круизах действует бесплатная отмена с полным возвратом стоимости за 24 часа до отправления.",
-        'deck_view': "Для лучших видов и фотографий сразу после посадки поднимайтесь на открытую верхнюю палубу.",
-        'headphones': "Наушники для аудиогида выдаются на борту, но вы также можете подключить свои наушники со стандартным разъемом 3,5 мм.",
-        'arrival': "Приходите на причал за 15–20 минут до отправления, чтобы занять лучшие места у окон или на палубе."
-    },
-    'uk': {
-        'cancellation': "Усі круїзи пропонують безкоштовне скасування з повним поверненням коштів за 24 години до відправлення.",
-        'deck_view': "Для найкращого огляду та фотозйомки піднімайтеся на відкриту верхню палубу одразу після посадки.",
-        'headphones': "Навушники для аудіогіда видаються на борту, але ви також можете підключити власні навушники з роз'ємом 3,5 мм.",
-        'arrival': "Приходьте на причал за 15–20 хвилин до відправлення, щоб зайняти найкращі місця біля вікон або на палубі."
-    },
-    'el': {
-        'cancellation': "Όλες οι κρουαζιέρες προσφέρουν δωρεάν ακύρωση με πλήρη επιστροφή χρημάτων έως και 24 ώρες πριν την αναχώρηση.",
-        'deck_view': "Για την καλύτερη θέα και φωτογράφιση, ανεβείτε απευθείας στο ανοιχτό επάνω κατάστρωμα κατά την επιβίβαση.",
-        'headphones': "Ακουστικά για τον ηχητικό οδηγό παρέχονται στο σκάφος, αλλά μπορείτε να χρησιμοποιήσετε και τα δικά σας με βύσμα 3,5 mm.",
-        'arrival': "Φτάστε στην αποβάθρα 15-20 λεπτά πριν από την αναχώρηση για να εξασφαλίσετε τις καλύτερες θέσεις."
-    },
-    'tr': {
-        'cancellation': "Tüm tekne turlarında kalkış saatinden 24 saat öncesine kadar ücretsiz iptal ve tam ücret iadesi geçerlidir.",
-        'deck_view': "En güzel manzara ve fotoğraf açıları için biner binmez doğrudan üst açık güverteye çıkın.",
-        'headphones': "Sesli rehber kulaklıkları teknede dağıtılır; dilerseniz kendi 3,5 mm kablolu kulaklığınızı da kullanabilirsiniz.",
-        'arrival': "Pencere kenarı veya açık güvertedeki en güzel koltukları kapmak için kalkıştan 15-20 dakika önce iskelede olun."
-    },
-    'pt': {
-        'cancellation': "Todos os passeios oferecem cancelamento gratuito com reembolso total até 24 horas antes do embarque.",
-        'deck_view': "Para as melhores fotos e vistas panorâmicas, dirija-se logo ao convés superior aberto assim que embarcar.",
-        'headphones': "São fornecidos auriculares a bordo para o audioguia, mas também pode utilizar os seus próprios auscultadores de 3,5 mm.",
-        'arrival': "Chegue ao cais 15 a 20 minutos antes da partida para garantir os melhores lugares junto às janelas ou no convés."
-    },
-    'he': {
-        'cancellation': "כל השייט כולל מדיניות ביטול גמישה עם החזר כספי מלא עד 24 שעות לפני מועד היציאה.",
-        'deck_view': "לתצפית ולצילומים הטובים ביותר, עלו ישירות לסיפון העליון הפתוח מיד עם העלייה לספינה.",
-        'headphones': "אוזניות למדריך הקולי מסופקות על הסיפון, אך ניתן להשתמש גם באוזניות חוטיות אישיות עם חיבור 3.5 מ\"מ.",
-        'arrival': "הגיעו לרציף 15-20 דקות לפני שעת היציאה כדי לתפוס את המקומות הטובים ביותר ליד החלונות או בסיפון."
-    },
-    'ja': {
-        'cancellation': "すべてのクルーズで出発24時間前までキャンセル料無料・全額返金に対応しています。",
-        'deck_view': "最高の景色と写真撮影を楽しむには、乗船後すぐに最上階のオープンデッキへお進みください。",
-        'headphones': "音声ガイド用のイヤホンは船内で配布されますが、ご自身の3.5mm有線イヤホンもご利用いただけます。",
-        'arrival': "窓際やデッキの見晴らしの良い席を確保するため、出航の15〜20分前には乗り場に到着することをおすすめします。"
-    },
-    'ko': {
-        'cancellation': "모든 크루즈는 출발 24시간 전까지 무료 취소 및 전액 환불이 보장됩니다.",
-        'deck_view': "가장 멋진 전망과 인생 사진을 남기시려면 탑승 직후 상층 오픈 덱으로 먼저 이동하세요.",
-        'headphones': "오디오 가이드 이어폰이 선내에서 제공되지만, 개인 3.5mm 유선 이어폰을 사용하셔도 됩니다.",
-        'arrival': "창가나 오픈 덱 명당자리를 선점하시려면 출발 15~20분 전까지 선착장에 여유 있게 도착하세요."
-    }
-}
 
 NL_HREFLANG_TAG = '<link href="https://www.budapestadventures.com/nl/beste-boedapest-riviercruises" hreflang="nl" rel="alternate"/>'
 
@@ -166,7 +51,6 @@ def ensure_nl_hreflang(soup):
     existing_nl = soup.find('link', rel='alternate', hreflang='nl')
     if not existing_nl:
         nl_link = soup.new_tag('link', rel='alternate', hreflang='nl', href='https://www.budapestadventures.com/nl/beste-boedapest-riviercruises')
-        # Insert before hu or at end of alternates
         hu_alt = soup.find('link', rel='alternate', hreflang='hu')
         if hu_alt:
             hu_alt.insert_before(nl_link)
@@ -176,35 +60,6 @@ def ensure_nl_hreflang(soup):
                 first_alt.insert_before(nl_link)
             elif soup.head:
                 soup.head.append(nl_link)
-
-def parse_harvested_subpoints(lang):
-    """Extracts subpoint texts between h4/h5 tags from harvested HTML."""
-    h_path = os.path.join(BASE_DIR, 'data', 'harvested_html', lang, 'river.html')
-    if not os.path.exists(h_path):
-        return []
-    soup = BeautifulSoup(open(h_path, encoding='utf-8'), 'html.parser')
-    h4_list = soup.find_all(['h4', 'h5'])
-    subpoints_extracted = []
-    
-    for i in range(len(h4_list)):
-        curr = h4_list[i]
-        nxt = h4_list[i+1] if i + 1 < len(h4_list) else None
-        
-        lis = []
-        node = curr.next_element
-        while node and node != nxt:
-            if hasattr(node, 'name') and node.name == 'li' and len(node.get_text(strip=True)) > 15:
-                t = node.get_text(' ', strip=True)
-                if t not in lis:
-                    lis.append(t)
-            node = node.next_element
-            
-        subpoints_extracted.append({
-            'raw_h4': curr.get_text(strip=True),
-            'lis': lis
-        })
-    return subpoints_extracted
-
 
 def cleanse_json_ld(soup, lang, pm, intro, canonical_url):
     """Cleanse all English leftovers from JSON-LD Schema objects."""
@@ -235,7 +90,6 @@ def cleanse_json_ld(soup, lang, pm, intro, canonical_url):
                         if pm.get('desc'): item['mainEntity']['description'] = pm['desc']
                         
                 s_out = json.dumps(data, ensure_ascii=False)
-                # Double safety replace on residual string
                 s_out = re.sub(r'Are you feeling overwhelmed[^"]+', pm.get('desc', ''), s_out)
                 s.string = s_out
             except Exception:
@@ -248,6 +102,7 @@ def cleanse_json_ld(soup, lang, pm, intro, canonical_url):
 
 def localize_sticky_bar(soup, lang, tours, buy_card_data, ui, rank_badges):
     """Localizes the mobile bottom sticky navigation bar."""
+    toc_data = TOC_I18N.get(lang, {})
     sticky_btn = soup.find(id='sticky-cta-btn')
     if sticky_btn and ui.get('btn_check'):
         sticky_btn.string = ui['btn_check']
@@ -256,13 +111,13 @@ def localize_sticky_bar(soup, lang, tours, buy_card_data, ui, rank_badges):
     if toc_btn:
         sp = toc_btn.find('span')
         if sp:
-            sp.string = f"{ui.get('overview', '10 Cruises')}"
+            sp.string = toc_data.get('all_cruises', f"{ui.get('overview', '10 Cruises')}")
             
     top_btn = soup.find(class_='hybrid-top-btn')
     if top_btn:
         sp = top_btn.find('span')
         if sp:
-            sp.string = ui.get('top_label', 'Top')
+            sp.string = toc_data.get('top', ui.get('top_label', 'Top'))
             
     rank_el = soup.find(id='sticky-rank')
     if rank_el and len(rank_badges) > 0:
@@ -293,21 +148,18 @@ def localize_navbar_and_menu(soup, lang, river_slug, dinner_slug):
     if not nav_data:
         return
         
-    # 1. Dropdown main button
     dropdown_btn = soup.find('button', class_='ltt-dropdown-btn')
     if dropdown_btn and nav_data.get('danube_cruises'):
         span = dropdown_btn.find('span')
         if span:
             span.string = nav_data['danube_cruises']
             
-    # 2. Mega menu headers
     mega_heads = soup.find_all(class_='ltt-mega-head')
     if len(mega_heads) >= 1 and nav_data.get('head_cruises'):
         mega_heads[0].string = nav_data['head_cruises']
     if len(mega_heads) >= 2 and nav_data.get('head_spas'):
         mega_heads[1].string = nav_data['head_spas']
         
-    # 3. Direct links in navbar
     for a in soup.find_all('a', class_='ltt-nav-link'):
         txt = a.get_text(strip=True)
         if 'River' in txt and nav_data.get('river'):
@@ -364,6 +216,176 @@ def localize_footer_section(soup, lang, river_slug, dinner_slug):
     disclaimer = footer.find(class_='footer-disclaimer') or footer.find(class_='footer-trust-micro')
     if disclaimer and f_data.get('disclaimer'):
         disclaimer.string = f_data['disclaimer']
+
+def localize_toc_and_config(soup, lang, tours, ui):
+    """Localizes Table of Contents title, mobile sheet, and client JS LTT_PAGE_CONFIG."""
+    toc_data = TOC_I18N.get(lang, {})
+    
+    # 1. Desktop sidebar title
+    for t_title in soup.find_all(class_='title-small-6'):
+        if 'Table of contents' in t_title.get_text():
+            t_title.string = toc_data.get('toc_title', 'Table of contents')
+            
+    # 2. Hybrid sheet title
+    sheet = soup.find(id='hybridSheet')
+    if sheet:
+        stitle = sheet.find(class_='hybrid-sheet-title')
+        if stitle and toc_data.get('sheet_title'):
+            stitle.string = toc_data['sheet_title']
+            
+    # 3. Hybrid TOC button
+    toc_btn = soup.find(id='hybridTocBtn')
+    if toc_btn:
+        sp = toc_btn.find('span')
+        if sp and toc_data.get('all_cruises'):
+            sp.string = toc_data['all_cruises']
+            
+    # 4. window.LTT_PAGE_CONFIG script
+    clean_short_titles = [t['clean_title'] for t in tours[:10]]
+    for s in soup.find_all('script'):
+        if s.string and 'window.LTT_PAGE_CONFIG' in s.string:
+            cfg = {
+                "deckId": "budapest-river-cruise-deck",
+                "tocDeckLabel": toc_data.get('deck_label', 'Top 10 Cruises Comparison'),
+                "tocBreakdownLabel": toc_data.get('breakdown_label', 'Detailed Breakdown (10 Cruises)'),
+                "pickLabel": toc_data.get('pick', 'PICK'),
+                "btnText": ui.get('btn_check', 'Check Availability →'),
+                "shortTitles": clean_short_titles
+            }
+            s.string = f"window.LTT_PAGE_CONFIG = {json.dumps(cfg, ensure_ascii=False)};"
+            break
+
+def localize_all_blockquotes(soup, lang, ui):
+    """Translates all tips/blockquotes and eliminates stray FAQ/video blockquotes."""
+    tips_data = TIPS_EXTENDED_I18N.get(lang, {})
+    tip_prefix = ui.get('tip_label', '💡 Tip: ')
+    
+    for bq in list(soup.find_all('blockquote')):
+        btxt = bq.get_text(strip=True)
+        if 'All cruises have a generous cancellation policy' in btxt or 'generous cancellation' in btxt.lower():
+            bq.clear()
+            bq.append(f"{tip_prefix}{tips_data.get('cancellation', '')}")
+        elif 'best sightseeing and photo opportunities' in btxt or 'photo opportunities' in btxt.lower():
+            bq.clear()
+            bq.append(f"{tip_prefix}{tips_data.get('deck_view', '')}")
+        elif 'loudspeaker audio' in btxt.lower() or 'All the other cruises offer loudspeaker' in btxt:
+            bq.clear()
+            bq.append(f"{tip_prefix}{tips_data.get('headphones', '')}")
+        elif 'best open air seats go fast' in btxt or '15–20 minutes' in btxt:
+            bq.clear()
+            bq.append(f"{tip_prefix}{tips_data.get('arrival', '')}")
+        elif 'share the same boat' in btxt.lower() or 'Pizza & Beer cruise and an Unlimited Drink cruise' in btxt:
+            bq.clear()
+            bq.append(f"{tip_prefix}{tips_data.get('silverline_shared', '')}")
+        elif '❓' in btxt and any(q in btxt for q in ['buying food', 'Should I book', 'possible to reserve']):
+            bq.decompose()
+        elif '🎥' in btxt or 'Virtual tour:' in btxt:
+            bq.decompose()
+
+def localize_walkthrough_subpoints(soup, lang, harvested_lis, harvested_li_tags):
+    """Deterministically translates all 10 cards' subpoint headings, leaf LIs, bios, and captions."""
+    sub_headings = SUBPOINT_HEADINGS.get(lang, {})
+    missing_lis = MISSING_7_LIS_I18N.get(lang, {})
+    about_bios = ABOUT_PARAGRAPHS_I18N.get(lang, {})
+    captions = SHIP_CAPTIONS_I18N.get(lang, {})
+    
+    details_cards = soup.find_all('details', class_='bpa-details-card')
+    
+    for c_idx, dcard in enumerate(details_cards):
+        if c_idx not in CARD_LEAF_INDEX_MAP:
+            continue
+        card_map = CARD_LEAF_INDEX_MAP[c_idx]
+        
+        for sp in dcard.find_all(class_='ltt-sp-card'):
+            h4 = sp.find('h4')
+            en_h4 = h4.get_text(strip=True) if h4 else ''
+            
+            # 1. Translate H4 heading
+            if h4 and en_h4 in sub_headings:
+                h4.string = sub_headings[en_h4]
+                
+            # 2. Translate leaf LIs
+            if en_h4 in card_map:
+                indices = card_map[en_h4]
+                leaf_lis = [li for li in sp.find_all('li') if not li.find('li')]
+                for l_idx, harv_idx in enumerate(indices):
+                    if l_idx < len(leaf_lis):
+                        target_li = leaf_lis[l_idx]
+                        if harv_idx in missing_lis:
+                            translated_text = missing_lis[harv_idx]
+                        elif harv_idx < len(harvested_lis):
+                            translated_text = harvested_lis[harv_idx]
+                        else:
+                            translated_text = None
+                            
+                        if translated_text:
+                            parts = translated_text.split(':', 1)
+                            if len(parts) == 2 and len(parts[0]) < 25 and not any(ch in parts[0] for ch in ['/', 'http']):
+                                target_li.clear()
+                                st = soup.new_tag('strong')
+                                st.string = f"{parts[0].strip()}:"
+                                target_li.append(st)
+                                target_li.append(f" {parts[1].strip()}")
+                            else:
+                                target_li.clear()
+                                target_li.string = translated_text
+                            
+                # Special handling for Card 1 The Ship(s) intro parent li
+                if c_idx == 0 and en_h4 == 'The Ship(s)':
+                    first_ul = sp.find('ul')
+                    if first_ul:
+                        parent_li = first_ul.find('li')
+                        if parent_li:
+                            nested_ul = parent_li.find('ul')
+                            if nested_ul:
+                                intro_text = ""
+                                if len(harvested_li_tags) > 2:
+                                    for ch in harvested_li_tags[2].children:
+                                        if getattr(ch, 'name', None) != 'ul':
+                                            intro_text += ch.get_text(' ', strip=True) + ' '
+                                intro_text = intro_text.strip()
+                                
+                                nested_ul.extract()
+                                parent_li.clear()
+                                st = soup.new_tag('strong')
+                                st.string = intro_text
+                                parent_li.append(st)
+                                parent_li.append(nested_ul)
+                            
+            # 3. Translate paragraphs and figcaptions
+            if 'About' in en_h4:
+                p_tag = sp.find('p')
+                if p_tag:
+                    if c_idx == 1 and 'rubin' in about_bios:
+                        p_tag.string = about_bios['rubin']
+                    elif c_idx == 2 and 'kisfaludy' in about_bios:
+                        p_tag.string = about_bios['kisfaludy']
+                    elif c_idx == 3 and 'portum' in about_bios:
+                        p_tag.string = about_bios['portum']
+                    elif c_idx in [4, 5, 6] and 'silverline' in about_bios:
+                        p_tag.string = about_bios['silverline']
+                    elif c_idx in [7, 8] and 'hungaria' in about_bios:
+                        p_tag.string = about_bios['hungaria']
+                        
+            # Ship prefixes in paragraphs (e.g. Ship: Gondola)
+            for p in sp.find_all('p'):
+                ptxt = p.get_text(strip=True)
+                if 'Ship:' in ptxt:
+                    ship_name = ptxt.replace('Ship:', '').strip()
+                    p.clear()
+                    st = soup.new_tag('strong')
+                    st.string = f"{captions.get('prefix', 'Ship: ')}{ship_name}"
+                    p.append(st)
+                    
+            # Figcaptions
+            for fc in sp.find_all('figcaption'):
+                fctxt = fc.get_text(strip=True)
+                if 'Gondola' in fctxt and captions.get('gondola'):
+                    fc.string = captions['gondola']
+                elif 'Danube Legend' in fctxt and captions.get('legenda'):
+                    fc.string = captions['legenda']
+                elif 'Duna Bella' in fctxt and captions.get('dunabella'):
+                    fc.string = captions['dunabella']
 
 def compile_language_river(lang, en_html):
     """Compiles a 100% localized river cruise page for a given language."""
@@ -460,7 +482,6 @@ def compile_language_river(lang, en_html):
     # 8. Lead Copy (3 Editorial Intro Paragraphs)
     lead = soup.find(class_='ltt-lead-copy')
     if lead and intro.get('p1'):
-        # Preserve figure (dinner callout) if present
         fig = lead.find('figure')
         lead.clear()
         for pkey in ['p1', 'p2', 'p3']:
@@ -511,10 +532,16 @@ def compile_language_river(lang, en_html):
         if ftabs.get(k):
             btn.string = ftabs[k]
 
-    # 11. Extract Harvested Tours & Subpoints
+    # 11. Extract Harvested Tours & Harvested LIs
     harvested_river_path = os.path.join(BASE_DIR, 'data', 'harvested_html', lang, 'river.html')
     tours = extract_tour_content(harvested_river_path, 'river')
-    subpoints_extracted = parse_harvested_subpoints(lang)
+    if os.path.exists(harvested_river_path):
+        h_soup = BeautifulSoup(open(harvested_river_path, encoding='utf-8'), 'html.parser')
+        harvested_li_tags = h_soup.find_all('li')
+        harvested_lis = [li.get_text(' ', strip=True) for li in harvested_li_tags]
+    else:
+        harvested_li_tags = []
+        harvested_lis = []
     
     ui = UI_COMMON.get(lang, {})
     best_fors = BEST_FOR_DATA.get(lang, [])
@@ -604,21 +631,12 @@ def compile_language_river(lang, en_html):
         elif 'Collapse All' in btxt and ui.get('collapse_all'):
             ctrl_btn.string = ui['collapse_all']
 
-    # Table of Contents
-    toc = soup.find(class_='ltt-toc-card')
-    if toc:
-        toc_title = toc.find(class_='ltt-toc-title')
-        if toc_title: toc_title.string = ui.get('overview', 'Table of Contents')
-        for idx, tlink in enumerate(toc.find_all('a')):
-            if idx < len(tours):
-                tlink.string = f"#{idx+1} {tours[idx]['clean_title']}"
+    # Table of Contents & window.LTT_PAGE_CONFIG
+    localize_toc_and_config(soup, lang, tours, ui)
 
-    # 14. 10 Details Cards (Pros, Cons, Bento tabs, Subpoints, Buy box, Tips)
+    # 14. 10 Details Cards (Pros, Cons, Bento tabs, Bento 0 body, Buy box)
     details_cards = soup.find_all('details', class_='bpa-details-card')
-    tips_data = TIPS_TRANSLATIONS.get(lang, {})
     buy_card_data = BUY_CARD_I18N.get(lang, {})
-    
-    sub_counter = 0
 
     for idx, dcard in enumerate(details_cards):
         if idx >= len(tours): break
@@ -748,24 +766,6 @@ def compile_language_river(lang, en_html):
                     p.string = p_text
                     rich.append(p)
 
-        # Subpoints Localization (Bento 1, 2, 3)
-        sp_headings_dict = SUBPOINT_HEADINGS.get(lang, {})
-        for sp in dcard.find_all(class_='ltt-sp-card'):
-            h4 = sp.find('h4')
-            if h4:
-                en_h4_text = h4.get_text(strip=True)
-                if en_h4_text in sp_headings_dict:
-                    h4.string = sp_headings_dict[en_h4_text]
-                    
-            if sub_counter < len(subpoints_extracted):
-                extracted = subpoints_extracted[sub_counter]
-                if extracted['lis']:
-                    sp_lis = sp.find_all('li')
-                    for l_idx, li_text in enumerate(extracted['lis']):
-                        if l_idx < len(sp_lis):
-                            sp_lis[l_idx].string = li_text
-            sub_counter += 1
-
         # Buy Box / Official Ticket Card Localization
         buy_card = dcard.find(class_='ltt-buy-card')
         if buy_card and buy_card_data:
@@ -816,26 +816,18 @@ def compile_language_river(lang, en_html):
                     st.string = strong_txt
                     perk.append(st)
 
-        # Tips Localization
-        for tip in dcard.find_all(class_='ltt-tip-box'):
-            tip_txt = tip.text
-            if tips_data.get('cancellation') and 'cancellation' in tip_txt.lower():
-                tip.string = f"{ui.get('tip_label', '💡 Tip: ')}{tips_data['cancellation']}"
-            elif tips_data.get('deck_view') and any(w in tip_txt.lower() for w in ['sightseeing', 'photo opportunities', 'top deck']):
-                tip.string = f"{ui.get('tip_label', '💡 Tip: ')}{tips_data['deck_view']}"
-            elif tips_data.get('headphones') and 'headphones' in tip_txt.lower():
-                tip.string = f"{ui.get('tip_label', '💡 Tip: ')}{tips_data['headphones']}"
-            elif tips_data.get('arrival') and '15–20 minutes' in tip_txt:
-                tip.string = f"{ui.get('tip_label', '💡 Tip: ')}{tips_data['arrival']}"
+    # 15. Deterministic Walkthrough Subpoints & Blockquotes Localization
+    localize_walkthrough_subpoints(soup, lang, harvested_lis, harvested_li_tags)
+    localize_all_blockquotes(soup, lang, ui)
 
-
+    # 16. Header, Specs, Sticky bar, Footer
     dinner_slug = SLUG_MAP[lang]['dinner']
     localize_navbar_and_menu(soup, lang, river_slug, dinner_slug)
     localize_specs_row(soup, lang, ui)
     localize_sticky_bar(soup, lang, tours, buy_card_data, ui, rank_badges)
     localize_footer_section(soup, lang, river_slug, dinner_slug)
 
-    # 15. Preserve Affiliate Links
+    # 17. Preserve Affiliate Links
     for a in soup.find_all('a', href=True):
         href = a['href']
         if 'legenda.hu' in href and 'partner=38585' not in href:
