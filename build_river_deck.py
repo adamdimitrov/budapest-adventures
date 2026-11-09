@@ -262,7 +262,7 @@ cruises = [
         "badge_cls": "bpa-blue",
         "kicker": "Hungária Koncert (Gróf Széchenyi) • 📍 Dock 3 (Akadémia)",
         "title": "All-You-Can-Eat Buffet Dinner Cruise With Folk Music & Dance Show",
-        "url": "https://budapestxplore.com/en/budapest-dinner-and-cruise-with-live-music-xpZDZlZTExMN?affi=6876",
+        "url": "https://www.getyourguide.com/budapest-l29/15-hour-danube-cruise-dinner-with-live-music-t1593/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=hungaria-koncert-dinner-folk",
         "score": "4.6 / 5.0",
         "stars": "★★★★★",
         "reviews": "(15,460+ Reviews)",

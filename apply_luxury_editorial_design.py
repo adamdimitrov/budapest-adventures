@@ -1434,7 +1434,7 @@ def build_dinner_deck_and_sticky() -> str:
     {id:"cruise-2-silverline-no-show",badge:"#2 VALUE",title:"Silverline 4-Course (No Show)",price:"€74",url:"https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures"},
     {id:"cruise-3-silverline-folklore",badge:"#3 FOLK SHOW",title:"Silverline Folklore & Operetta",price:"€91",url:"https://budapestrivercruise.eu/product/budapest-danube-dinner-cruise/?code=bpadventures"},
     {id:"cruise-4-silverline-piano",badge:"#4 PIANO DUEL",title:"Silverline Piano Battle Dinner",price:"€91",url:"https://budapestrivercruise.eu/product/dinner-cruise-piano-battle-show/?code=bpadventures"},
-    {id:"cruise-5-hungaria-koncert",badge:"#5 BUFFET",title:"Hungária Koncert 12-Course Buffet",price:"€79",url:"https://budapestxplore.com/en/budapest-dinner-and-cruise-with-live-music-xpZDZlZTExMN?affi=6876"},
+    {id:"cruise-5-hungaria-koncert",badge:"#5 BUFFET",title:"Hungária Koncert 12-Course Buffet",price:"€79",url:"https://www.getyourguide.com/budapest-l29/15-hour-danube-cruise-dinner-with-live-music-t1593/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=hungaria-koncert-dinner-folk"},
     {id:"cruise-6-eurama",badge:"#6 CENTRAL",title:"Eurama 4-Course Dinner & Folk",price:"€90",url:"https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=eng-dinner-cruises-budapest-eurama-reviews&mkt_cmp=true"}
   ];
 
