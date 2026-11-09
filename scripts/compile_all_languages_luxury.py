@@ -78,6 +78,8 @@ def extract_tour_content(harvested_path, cruise_type='river'):
                 clean_title = clean_title.split(':', 1)[1].strip()
             elif '—' in clean_title:
                 clean_title = clean_title.split('—', 1)[1].strip()
+            if clean_title:
+                clean_title = clean_title[0].upper() + clean_title[1:]
                 
             container = t.find_parent('div', class_='table-row-grey-3') or t.find_parent('div', class_='w-layout-grid') or t.parent.parent
             pros = []

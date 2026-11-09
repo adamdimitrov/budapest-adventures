@@ -106,7 +106,9 @@ def cleanse_json_ld(soup, lang, pm, intro, canonical_url, tours=None, best_fors=
                         if 'itemListElement' in item['mainEntity']:
                             for t_idx, l_item in enumerate(item['mainEntity']['itemListElement']):
                                 if t_idx < len(tours):
-                                    t_clean = tours[t_idx]['clean_title']
+                                    t_clean = tours[t_idx]['clean_title'] if tours[t_idx].get('clean_title') else ''
+                                    if t_clean:
+                                        t_clean = t_clean[0].upper() + t_clean[1:]
                                     t_desc = best_fors[t_idx] if t_idx < len(best_fors) else pm.get('desc', '')
                                     if 'item' in l_item and isinstance(l_item['item'], dict):
                                         p_obj = l_item['item']
@@ -262,7 +264,7 @@ def localize_toc_and_config(soup, lang, tours, ui):
             sp.string = toc_data['all_cruises']
             
     # 4. window.LTT_PAGE_CONFIG script
-    clean_short_titles = [t['clean_title'] for t in tours[:10]]
+    clean_short_titles = [((t['clean_title'][0].upper() + t['clean_title'][1:]) if t.get('clean_title') else '') for t in tours[:10]]
     for s in soup.find_all('script'):
         if s.string and 'window.LTT_PAGE_CONFIG' in s.string:
             cfg = {
@@ -595,9 +597,15 @@ def compile_language_river(lang, en_html):
             rank_badge.string = rank_badges[idx]
             
         # Clean title
+        clean_t = (tdata['clean_title'][0].upper() + tdata['clean_title'][1:]) if tdata.get('clean_title') else ''
         title_el = dcard.find(class_='bpa-title')
         if title_el:
-            title_el.string = tdata['clean_title']
+            title_el.string = clean_t
+            
+        for img in dcard.find_all('img'):
+            if img.get('alt') and img['alt'].strip():
+                alt_txt = img['alt'].strip()
+                img['alt'] = alt_txt[0].upper() + alt_txt[1:]
             
         # Best For
         bf_el = dcard.find(class_='bpa-best-for')
@@ -683,9 +691,15 @@ def compile_language_river(lang, en_html):
             rank_tag.string = badges[idx]
 
         # Details title
+        clean_t = (tdata['clean_title'][0].upper() + tdata['clean_title'][1:]) if tdata.get('clean_title') else ''
         d_title = dcard.find(class_='bpa-details-title')
         if d_title:
-            d_title.string = tdata['clean_title']
+            d_title.string = clean_t
+
+        for img in dcard.find_all('img'):
+            if img.get('alt') and img['alt'].strip():
+                alt_txt = img['alt'].strip()
+                img['alt'] = alt_txt[0].upper() + alt_txt[1:]
 
         # Kicker minutes & dock
         kicker = dcard.find(class_='bpa-kicker')
