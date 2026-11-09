@@ -30,7 +30,13 @@ best-walking-tours-budapest.html best-hostels-budapest.html
 budapest-card-is-it-worth-it.html budapest-travel-guide.html
 budapest-airport-to-city-center.html budapest-parliament.html
 budapest-river-cruise-group-booking.html budapest-tourism-statistics.html
-about.html contact.html""".split()
+about.html contact.html
+best-budapest-river-cruises.html best-dinner-cruises-budapest.html
+best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest/index.html""".split()
+# NB: with cleanUrls, Vercel serves an existing <slug>.html before applying a
+# rewrite, so /best-budapest-river-cruises is best-budapest-river-cruises.html
+# (not river.html) and /best-dinner-cruises-budapest is
+# best-dinner-cruises-budapest.html (not dinner.html). Both copies are covered.
 
 DEFER_EVENTS = "['scroll','touchstart','mousemove','click','keydown']"
 LOADER = (
@@ -262,7 +268,7 @@ def optimize_css(h, page):
         purged = purge_for_page(h, src)
         digest = hashlib.sha1(purged.encode()).hexdigest()[:10]
         base = os.path.basename(src).replace('.min.css', '')
-        out = f'css/purged/{page[:-5]}.{base}.{digest}.css'
+        out = f'css/purged/{page[:-5].replace("/", "--")}.{base}.{digest}.css'
         os.makedirs('css/purged', exist_ok=True)
         if not os.path.exists(out):
             open(out, 'w').write(purged)
