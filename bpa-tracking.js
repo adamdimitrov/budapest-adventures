@@ -24,6 +24,7 @@
   var TIQETS_PARTNER = 'budapestadventures';
   var SILVERLINE_PARTNER = 'budapestadventures';
   var NET_COMMISSION_RATE = 0.25;
+  var CLARITY_PROJECT_ID = 'zap3ccm9my';
 
   var TRACKED_PARAMS = [
     'gclid',
@@ -388,6 +389,19 @@
   }
 
   /**
+   * Ensure Microsoft Clarity (zap3ccm9my) is loaded if not already initialized by page head.
+   */
+  function ensureClarity() {
+    if (typeof window === 'undefined') return;
+    if (typeof window.clarity === 'function') return;
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", CLARITY_PROJECT_ID);
+  }
+
+  /**
    * Ensure Meta Pixel (1355732169631751) stub is available if not already initialized by page head.
    */
   function ensureMetaPixel() {
@@ -441,6 +455,7 @@
   var activeAttribution = loadAndSyncAttribution();
 
   function initTracking() {
+    ensureClarity();
     ensureMetaPixel();
     activeAttribution = loadAndSyncAttribution();
     decorateAllPageLinks(activeAttribution);
@@ -477,6 +492,11 @@
               currency: 'EUR'
             });
           }
+          if (typeof window.clarity === 'function') {
+            window.clarity('event', 'partner_outbound_click');
+            window.clarity('set', 'partner_operator', payload.content_name);
+            window.clarity('set', 'target_url', link.href);
+          }
         } catch (err) {
           // Ignore malformed URL errors on click
         }
@@ -490,6 +510,7 @@
     window.BPATracking = {
       STORAGE_KEY: STORAGE_KEY,
       META_PIXEL_ID: META_PIXEL_ID,
+      CLARITY_PROJECT_ID: CLARITY_PROJECT_ID,
       VIP_LEGENDA_PARTNER: VIP_LEGENDA_PARTNER,
       TIQETS_PARTNER: TIQETS_PARTNER,
       loadAndSyncAttribution: loadAndSyncAttribution,
