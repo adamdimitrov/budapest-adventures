@@ -116,7 +116,7 @@ def get_loc(en_slug, hub_key, lang):
         return f"https://www.budapestadventures.com/{en_slug}" if en_slug else "https://www.budapestadventures.com/"
     
     if hub_key == 'home':
-        return f"https://www.budapestadventures.com/{lang}/"
+        return f"https://www.budapestadventures.com/{lang}"
     
     if lang == 'hu':
         hu_slug = SLUG_MAP['hu'].get(hub_key, en_slug)
