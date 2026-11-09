@@ -286,7 +286,28 @@ LCP_HINTS = {
 }
 
 
+def responsive_preloads(h):
+    """An image preload without imagesrcset fetches the full-size file even when
+    the <img> it targets picks a smaller srcset candidate (double download on
+    mobile). Mirror the img's srcset/sizes onto the preload."""
+    def repl(m):
+        tag = m.group(0)
+        if 'imagesrcset' in tag:
+            return tag
+        href = re.search(r'href="([^"]+)"', tag).group(1)
+        img = re.search(r'<img\b[^>]*\ssrc="' + re.escape(href) + r'"[^>]*>', h)
+        if not img:
+            return tag
+        ss = re.search(r'\ssrcset="([^"]+)"', img.group(0))
+        sz = re.search(r'\ssizes="([^"]+)"', img.group(0))
+        if not (ss and sz):
+            return tag
+        return tag.replace(' rel="preload"', f' imagesizes="{sz.group(1)}" imagesrcset="{ss.group(1)}" rel="preload"')
+    return re.sub(r'<link as="image"[^>]*rel="preload"[^>]*/?>', repl, h)
+
+
 def optimize_lcp(h, page):
+    h = responsive_preloads(h)
     needle = LCP_HINTS.get(page)
     if not needle:
         return h
