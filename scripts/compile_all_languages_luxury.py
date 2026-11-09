@@ -745,6 +745,15 @@ def compile_all():
         
         print(f"✓ [{lang.upper()}] Compiled home, river ({river_slug}), and dinner ({dinner_slug})")
 
+    # 4. Private Boat Tours Guide across all 21 languages
+    try:
+        if BASE_DIR not in sys.path:
+            sys.path.insert(0, BASE_DIR)
+        from scripts.compile_all_private_boat_languages import main as compile_private_main
+        compile_private_main()
+    except Exception as e:
+        print(f"Note: Private boat compiler warning: {e}")
+
     print(f"\n Master Multilingual Luxury Compilation Complete: {success_count} static pages compiled across {len(LANGS)} languages.")
 
 if __name__ == '__main__':

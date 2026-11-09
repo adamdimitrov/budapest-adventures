@@ -65,7 +65,7 @@ PAGE_TARGETS = {
     'contact': 'contact',
     'thermal_baths': 'thermal-baths-budapest',
     'night_cruises': 'best-night-cruises-budapest',
-    'private_boats': 'best-private-boat-tours-budapest',
+    # 'private_boats': Promoted to master luxury compiler (compile_all_private_boat_languages.py)
     'unlimited_prosecco': 'unlimited-prosecco-cruises-budapest',
     'walking_tours': 'best-walking-tours-budapest',
     'hostels': 'best-hostels-budapest',
