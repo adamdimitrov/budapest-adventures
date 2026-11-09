@@ -99,6 +99,10 @@ def optimize_scripts(h):
         lambda m: f'<script>WebFontConfig={m.group(2)};</script><script async src="{m.group(1)}"></script>',
         h, flags=re.S)
 
+    # Google Fonts stylesheet still render-blocking on some pages -> async swap
+    h = re.sub(r'<link href="(https://fonts\.googleapis\.com/css2\?[^"]*)" rel="stylesheet"/>',
+               r'''<link href="\1" media="print" onload="this.media='all'" rel="stylesheet"/>''', h)
+
     # tourcms-sync.js: parser-blocking -> defer (handles readyState itself)
     h = h.replace('<script src="/tourcms-sync.js"></script>', '<script defer src="/tourcms-sync.js"></script>')
     return h
@@ -276,6 +280,20 @@ def optimize_css(h, page):
     return WF_CSS_RE.sub(repl, h)
 
 
+# LCP images (per PSI mobile) that lack a priority hint
+LCP_HINTS = {
+    'best-hostels-budapest.html': 'best-unlimited-prosecco-cruises-hero-p-500.webp',
+}
+
+
+def optimize_lcp(h, page):
+    needle = LCP_HINTS.get(page)
+    if not needle:
+        return h
+    return re.sub(r'<img (?![^>]*fetchpriority)(?=[^>]*src="[^"]*' + re.escape(needle) + '")',
+                  '<img fetchpriority="high" ', h, count=1)
+
+
 def main():
     check = '--check' in sys.argv
     ensure_logo()
@@ -291,6 +309,7 @@ def main():
         h = open(page).read()
         new = optimize_scripts(h)
         new = optimize_logo(new)
+        new = optimize_lcp(new, page)
         new = optimize_css(new, page)
         if new != h:
             print(('would update ' if check else 'updated ') + page)
