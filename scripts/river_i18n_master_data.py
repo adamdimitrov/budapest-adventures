@@ -562,7 +562,7 @@ UI_COMMON = {
         'audio_op': 'Audio i Armator'
     },
     'ro': {
-        'per_adult': 'per adult',
+        'per_adult': 'pe adult',
         'btn_check': 'Verifică disponibilitatea →',
         'instant_qr': 'Bilet instant pe telefon',
         'official_pier': 'Ponton oficial',

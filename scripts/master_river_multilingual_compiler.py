@@ -31,6 +31,7 @@ from i18n_translation_data import BUY_CARD_I18N
 from compile_all_languages_luxury import extract_tour_content, SLUG_MAP
 from quick_facts_i18n import QF_TITLES, QF_LABELS, QF_CHIPS, KICKER_UNITS
 from spec_chips_i18n import SPEC_CHIPS_I18N
+from river_pros_cons_expanded_i18n import EXPANDED_PROS_CONS_I18N
 
 from river_walkthrough_data_i18n import (
     TOC_I18N,
@@ -61,8 +62,10 @@ def ensure_nl_hreflang(soup):
             elif soup.head:
                 soup.head.append(nl_link)
 
-def cleanse_json_ld(soup, lang, pm, intro, canonical_url):
+def cleanse_json_ld(soup, lang, pm, intro, canonical_url, tours=None, best_fors=None):
     """Cleanse all English leftovers from JSON-LD Schema objects."""
+    if tours is None: tours = []
+    if best_fors is None: best_fors = []
     for s in soup.find_all('script', type='application/ld+json'):
         if s.string:
             try:
@@ -70,6 +73,18 @@ def cleanse_json_ld(soup, lang, pm, intro, canonical_url):
                 graphs = data.get('@graph', [data])
                 for item in graphs:
                     item['inLanguage'] = lang
+                    if item.get('@type') == 'BreadcrumbList':
+                        if 'itemListElement' in item:
+                            for b_idx, b_item in enumerate(item['itemListElement']):
+                                if b_idx == 0:
+                                    b_item['name'] = pm.get('bc_home', 'Home')
+                                    b_item['item'] = f"https://www.budapestadventures.com/{lang}"
+                                elif b_idx == 1:
+                                    b_item['name'] = pm.get('bc_curr', 'River Cruises')
+                                    b_item['item'] = canonical_url
+                                elif b_idx == 2:
+                                    b_item['name'] = pm.get('title', 'River Cruises')
+                                    b_item['item'] = canonical_url
                     if '@id' in item:
                         item['@id'] = item['@id'].replace('https://www.budapestadventures.com/best-budapest-river-cruises', canonical_url)
                     if 'mainEntityOfPage' in item:
@@ -88,17 +103,23 @@ def cleanse_json_ld(soup, lang, pm, intro, canonical_url):
                     if 'mainEntity' in item and isinstance(item['mainEntity'], dict):
                         if pm.get('title'): item['mainEntity']['name'] = pm['title']
                         if pm.get('desc'): item['mainEntity']['description'] = pm['desc']
-                        
-                s_out = json.dumps(data, ensure_ascii=False)
-                s_out = re.sub(r'Are you feeling overwhelmed[^"]+', pm.get('desc', ''), s_out)
-                s.string = s_out
+                        if 'itemListElement' in item['mainEntity']:
+                            for t_idx, l_item in enumerate(item['mainEntity']['itemListElement']):
+                                if t_idx < len(tours):
+                                    t_clean = tours[t_idx]['clean_title']
+                                    t_desc = best_fors[t_idx] if t_idx < len(best_fors) else pm.get('desc', '')
+                                    if 'item' in l_item and isinstance(l_item['item'], dict):
+                                        p_obj = l_item['item']
+                                        p_obj['name'] = t_clean
+                                        p_obj['description'] = t_desc
+                                        if 'review' in p_obj and isinstance(p_obj['review'], dict):
+                                            p_obj['review']['reviewBody'] = t_desc
+                                            p_obj['review'].pop('positiveNotes', None)
+                                            p_obj['review'].pop('negativeNotes', None)
+                                            
+                s.string = json.dumps(data, ensure_ascii=False)
             except Exception:
-                stxt = s.string
-                stxt = stxt.replace('"inLanguage": "en"', f'"inLanguage": "{lang}"')
-                stxt = stxt.replace('https://www.budapestadventures.com/best-budapest-river-cruises', canonical_url)
-                if pm.get('title'):
-                    stxt = stxt.replace("10 Best River Cruises in Budapest in 2026 (Personally Tested)", pm['title'])
-                s.string.replace_with(stxt)
+                pass
 
 def localize_sticky_bar(soup, lang, tours, buy_card_data, ui, rank_badges):
     """Localizes the mobile bottom sticky navigation bar."""
@@ -430,9 +451,33 @@ def compile_language_river(lang, en_html):
         tw_d = soup.find(tag_name, {prop_name: 'twitter:description'})
         if tw_d and pm.get('desc'): tw_d['content'] = pm['desc']
 
+    # 3.5. Extract Harvested Tours & Harvested LIs
+    harvested_river_path = os.path.join(BASE_DIR, 'data', 'harvested_html', lang, 'river.html')
+    tours = extract_tour_content(harvested_river_path, 'river')
+    if os.path.exists(harvested_river_path):
+        h_soup = BeautifulSoup(open(harvested_river_path, encoding='utf-8'), 'html.parser')
+        harvested_li_tags = h_soup.find_all('li')
+        harvested_lis = [li.get_text(' ', strip=True) for li in harvested_li_tags]
+    else:
+        harvested_li_tags = []
+        harvested_lis = []
+    
+    ui = UI_COMMON.get(lang, {})
+    best_fors = BEST_FOR_DATA.get(lang, [])
+    rank_badges = RANK_BADGES.get(lang, [])
+
+    # Localize CSS Pseudo-Elements (Read Review / Close Review)
+    style_tag = soup.find('style', id='ltt-dubai-safari-styles')
+    if style_tag and style_tag.string:
+        read_rev = ui.get('read_review', 'Read Review').replace(' ↓', '').replace('↓', '').strip()
+        close_rev = ui.get('collapse_all', 'Close Review').strip()
+        new_css = style_tag.string.replace('content:"Read Review"', f'content:"{read_rev}"')
+        new_css = new_css.replace('content:"Close Review"', f'content:"{close_rev}"')
+        style_tag.string = new_css
+
     # 4. JSON-LD Localization
     intro = INTRO_DATA.get(lang, {})
-    cleanse_json_ld(soup, lang, pm, intro, canonical_url)
+    cleanse_json_ld(soup, lang, pm, intro, canonical_url, tours, best_fors)
 
     # 5. Breadcrumbs
     for bc in soup.find_all(class_='ltt-breadcrumbs'):
@@ -532,21 +577,6 @@ def compile_language_river(lang, en_html):
         if ftabs.get(k):
             btn.string = ftabs[k]
 
-    # 11. Extract Harvested Tours & Harvested LIs
-    harvested_river_path = os.path.join(BASE_DIR, 'data', 'harvested_html', lang, 'river.html')
-    tours = extract_tour_content(harvested_river_path, 'river')
-    if os.path.exists(harvested_river_path):
-        h_soup = BeautifulSoup(open(harvested_river_path, encoding='utf-8'), 'html.parser')
-        harvested_li_tags = h_soup.find_all('li')
-        harvested_lis = [li.get_text(' ', strip=True) for li in harvested_li_tags]
-    else:
-        harvested_li_tags = []
-        harvested_lis = []
-    
-    ui = UI_COMMON.get(lang, {})
-    best_fors = BEST_FOR_DATA.get(lang, [])
-    rank_badges = RANK_BADGES.get(lang, [])
-
     # 12. Top Deck Summary Cards (10 Cards: div.bpa-card)
     deck_cards = soup.find_all(class_='bpa-card')
     tested_chip_label = re.sub(r'\s*\(\d+\)', '', ftabs.get('tested', '✓ Personally Tested'))
@@ -554,6 +584,10 @@ def compile_language_river(lang, en_html):
     for idx, dcard in enumerate(deck_cards):
         if idx >= len(tours): break
         tdata = tours[idx]
+        
+        # Image alt attributes
+        for img in dcard.find_all('img'):
+            img['alt'] = tdata['clean_title']
         
         # Rank badge
         rank_badge = dcard.find(class_='bpa-rank-tag')
@@ -684,9 +718,37 @@ def compile_language_river(lang, en_html):
                 if ctxt in chip_map:
                     chip.string = chip_map[ctxt]
             
-        # Pros & Cons replacement with native labels and content
-        pros = tdata['pros'] if tdata['pros'] else ["Tested and vetted experience."]
-        cons = tdata['cons'] if tdata['cons'] else ["Peak hours may sell out quickly."]
+        # Update images inside details card with localized subpoint headings
+        sub_headings = SUBPOINT_HEADINGS.get(lang, {})
+        for sp in dcard.find_all(class_='ltt-sp-card'):
+            h4 = sp.find('h4')
+            en_h4 = h4.get_text(strip=True) if h4 else ''
+            loc_h4 = sub_headings.get(en_h4, en_h4)
+            for img in sp.find_all('img'):
+                if loc_h4:
+                    img['alt'] = f"{tdata['clean_title']} — {loc_h4}"
+                else:
+                    img['alt'] = tdata['clean_title']
+
+        # Pros & Cons replacement with native labels and content (zero English specs leak)
+        exp_dict = EXPANDED_PROS_CONS_I18N.get(lang, {}).get(idx) or EXPANDED_PROS_CONS_I18N.get(lang, {}).get(str(idx))
+        if exp_dict:
+            pros = exp_dict['pros']
+            cons = exp_dict['cons']
+        else:
+            def is_spec(s):
+                sl = s.lower()
+                return any(k in sl for k in [
+                    'onboard wi-fi', 'wi-fi:', 'open air deck', 'deck:', 'air conditioning', 'conditioning:',
+                    'smoking:', 'wheelchair accessible', 'baby stroller', 'pets allowed',
+                    'discount:', 'centrally located'
+                ])
+            pros = [p for p in tdata['pros'] if not is_spec(p)]
+            cons = [c for c in tdata['cons'] if not is_spec(c)]
+            if not pros:
+                pros = [tdata['clean_title']]
+            if not cons:
+                cons = [ui.get('reserve_early', "Popular departures may sell out quickly.")]
         
         pro_con_box = dcard.find(class_='pro-con-box-wrapper')
         if pro_con_box:
@@ -827,7 +889,19 @@ def compile_language_river(lang, en_html):
     localize_sticky_bar(soup, lang, tours, buy_card_data, ui, rank_badges)
     localize_footer_section(soup, lang, river_slug, dinner_slug)
 
-    # 17. Preserve Affiliate Links
+    # 17. Sanitize Language-Specific Residual Phrases
+    leak_fixes = {
+        'cs': [('Welcome Drink', 'Uvítací nápoj'), ('welcome drink', 'uvítací nápoj')],
+        'sk': [('Welcome Drink', 'Uvítací nápoj'), ('welcome drink', 'uvítací nápoj')],
+        'ru': [("Silverline's audio guide", "аудиогид Silverline")],
+        'el': [("Inaudible Audio Guide", "Δυσδιάκριτος ακουστικός οδηγός")]
+    }
+    if lang in leak_fixes:
+        for old_t, new_t in leak_fixes[lang]:
+            for node in list(soup.find_all(text=lambda t: t and old_t in t)):
+                node.replace_with(node.replace(old_t, new_t))
+
+    # 18. Preserve Affiliate Links
     for a in soup.find_all('a', href=True):
         href = a['href']
         if 'legenda.hu' in href and 'partner=38585' not in href:
