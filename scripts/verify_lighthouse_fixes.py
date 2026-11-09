@@ -16,10 +16,6 @@ def apply_cleanups(html):
     # 4. WCAG AA Contrast replacements
     # #0284c7 (4.09:1) -> #026aa2 (4.6:1)
     html = html.replace('#0284c7', '#026aa2')
-    # #9f6e0d (4.45:1) -> #855a00 (5.2:1)
-    html = html.replace('#9f6e0d', '#855a00')
-    # #dfa732 text on white -> #855a00
-    html = re.sub(r'color:\s*#dfa732;', 'color: #855a00;', html)
     
     # 5. Deduplicate identical style blocks
     soup = BeautifulSoup(html, 'html.parser')
