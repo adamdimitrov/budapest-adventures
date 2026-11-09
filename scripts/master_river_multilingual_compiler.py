@@ -29,7 +29,7 @@ from river_i18n_master_data import (
 from subpoint_headings_i18n import SUBPOINT_HEADINGS
 from i18n_translation_data import BUY_CARD_I18N
 from compile_all_languages_luxury import extract_tour_content, SLUG_MAP
-
+from quick_facts_i18n import QF_TITLES, QF_LABELS, QF_CHIPS, KICKER_UNITS
 
 from spec_chips_i18n import SPEC_CHIPS_I18N
 
@@ -346,8 +346,14 @@ def localize_footer_section(soup, lang, river_slug, dinner_slug):
         href = a.get('href', '')
         if 'best-budapest-river-cruises' in href or 'setahajozas-a-dunan-budapest' in href or river_slug in href:
             a['href'] = f"/{lang}/{river_slug}"
+            pm_data = PAGE_META.get(lang, {})
+            if pm_data.get('title'):
+                a.string = pm_data['title'].split('(')[0].strip()
         elif 'best-dinner-cruises-budapest' in href or 'setahajozas-a-dunan-vacsoraval' in href or dinner_slug in href:
             a['href'] = f"/{lang}/{dinner_slug}"
+            intro_data = INTRO_DATA.get(lang, {})
+            if intro_data.get('dinner_title'):
+                a.string = intro_data['dinner_title'].split('(')[0].strip()
         elif 'about' in href and f_data.get('about'):
             a.string = f_data['about']
         elif 'ethics' in href and f_data.get('ethics'):
@@ -465,7 +471,25 @@ def compile_language_river(lang, en_html):
         if fig:
             lead.append(fig)
 
-    # 9. Dinner Guide Callout Box
+    # 9. Dinner Guide Callout Box & Editorial Bookmark Card
+    bookmark = soup.find(class_='cd-editorial-bookmark') or soup.find(class_='cd-bookmark-wrapper')
+    if bookmark:
+        a_tag = bookmark if bookmark.name == 'a' else bookmark.find('a')
+        if a_tag:
+            dinner_slug = SLUG_MAP.get(lang, {}).get('dinner', 'best-dinner-cruises-budapest')
+            a_tag['href'] = f"/{lang}/{dinner_slug}"
+        t_el = bookmark.find(class_='cd-editorial-title')
+        if t_el and intro.get('dinner_title'):
+            t_el.string = intro['dinner_title']
+        d_el = bookmark.find(class_='cd-editorial-desc')
+        if d_el and intro.get('dinner_desc'):
+            d_el.string = intro['dinner_desc']
+        thumb_img = bookmark.find(class_='cd-editorial-thumb')
+        if thumb_img:
+            img = thumb_img.find('img')
+            if img and intro.get('dinner_title'):
+                img['alt'] = intro['dinner_title']
+
     dinner_callout = soup.find(class_='ltt-dinner-callout') or soup.find(class_='ltt-dinner-crosslink') or soup.find(class_='ltt-dinner-banner')
     if dinner_callout and intro.get('dinner_title'):
         title_el = dinner_callout.find(class_='ltt-dinner-title') or dinner_callout.find('h3') or dinner_callout.find('strong')
@@ -498,6 +522,8 @@ def compile_language_river(lang, en_html):
 
     # 12. Top Deck Summary Cards (10 Cards: div.bpa-card)
     deck_cards = soup.find_all(class_='bpa-card')
+    tested_chip_label = re.sub(r'\s*\(\d+\)', '', ftabs.get('tested', '✓ Personally Tested'))
+
     for idx, dcard in enumerate(deck_cards):
         if idx >= len(tours): break
         tdata = tours[idx]
@@ -521,10 +547,29 @@ def compile_language_river(lang, en_html):
             bf_el.append(st)
             bf_el.append(best_fors[idx])
             
-        # Price label
-        psub = dcard.find(class_='bpa-card-price-sub')
+        # Price label: div.bpa-psub or .bpa-card-price-sub
+        psub = dcard.find(class_='bpa-psub') or dcard.find(class_='bpa-card-price-sub')
         if psub and ui.get('per_adult'):
             psub.string = ui['per_adult']
+
+        # Tested vchip badge
+        for vchip in dcard.find_all(class_='bpa-vchip'):
+            if 'Personally Tested' in vchip.get_text():
+                vchip.string = tested_chip_label
+
+        # Kicker minutes & dock
+        kicker = dcard.find(class_='bpa-kicker')
+        if kicker:
+            ku = KICKER_UNITS.get(lang, {})
+            if ku.get('mins'):
+                for child in list(kicker.children):
+                    if isinstance(child, str):
+                        new_child = child.replace(' Mins', ku['mins']).replace(' mins', ku['mins'])
+                        child.replace_with(new_child)
+            if ku.get('dock'):
+                klink = kicker.find(class_='bpa-kicker-map-link')
+                if klink and klink.string and 'Dock ' in klink.string:
+                    klink.string = klink.string.replace('Dock ', ku['dock'])
             
         # CTA button
         btn = dcard.find(class_='bpa-btn')
@@ -583,6 +628,43 @@ def compile_language_river(lang, en_html):
         d_title = dcard.find(class_='bpa-details-title')
         if d_title:
             d_title.string = tdata['clean_title']
+
+        # Tested vchip in details header
+        for vchip in dcard.find_all(class_='bpa-vchip'):
+            if 'Personally Tested' in vchip.get_text():
+                vchip.string = tested_chip_label
+                
+        # Quick Facts Section (.qf1-wrap)
+        qf_wrap = dcard.find(class_='qf1-wrap')
+        if qf_wrap:
+            qf_title = qf_wrap.find(class_='qf1-title')
+            if qf_title and lang in QF_TITLES:
+                qf_title.string = QF_TITLES[lang]
+                
+            qf_badge = qf_wrap.find(class_='qf1-badge')
+            if qf_badge and qf_badge.string:
+                ku = KICKER_UNITS.get(lang, {})
+                if ku.get('dock') and 'Dock ' in qf_badge.string:
+                    qf_badge.string = qf_badge.string.replace('Dock ', ku['dock'])
+                    
+            lbl_map = QF_LABELS.get(lang, {})
+            for row in qf_wrap.find_all(class_='qf1-row'):
+                lbl = row.find(class_='qf1-label')
+                if lbl:
+                    ltxt = lbl.get_text(strip=True)
+                    if ltxt in lbl_map:
+                        lbl.string = lbl_map[ltxt]
+                val = row.find(class_='qf1-val')
+                if val and val.string:
+                    ku = KICKER_UNITS.get(lang, {})
+                    if ku.get('mins'):
+                        val.string = val.string.replace(' Minutes', ku['mins']).replace(' minutes', ku['mins']).replace(' Mins', ku['mins'])
+                        
+            chip_map = QF_CHIPS.get(lang, {})
+            for chip in qf_wrap.find_all(class_='qf1-chip'):
+                ctxt = chip.get_text(strip=True)
+                if ctxt in chip_map:
+                    chip.string = chip_map[ctxt]
             
         # Pros & Cons replacement with native labels and content
         pros = tdata['pros'] if tdata['pros'] else ["Tested and vetted experience."]
