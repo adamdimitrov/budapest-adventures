@@ -19,6 +19,9 @@ BASE_DIR = '/Users/adamdimitrov/Development/budapest-adventures'
 sys.path.insert(0, BASE_DIR)
 
 from scripts.compile_all_translated_guides import SLUG_MAP, LANGS
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from fix_language_switcher_links import fix_switcher_html  # keeps switcher links = hreflang
 
 ALL_LANGS = [
     ('en', 'EN', 'English'),
@@ -796,7 +799,7 @@ def inject_language_switcher_into_file(file_path):
         body.append(script_tag)
 
     with open(file_path, 'w', encoding='utf-8') as f:
-        f.write(str(soup))
+        f.write(fix_switcher_html(str(soup), file_path))
 
     return True
 

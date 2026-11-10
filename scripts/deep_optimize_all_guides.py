@@ -10,6 +10,9 @@ import re
 import json
 import shutil
 from bs4 import BeautifulSoup
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from fix_language_switcher_links import fix_switcher_html  # keeps switcher links = hreflang
 
 BASE_DIR = '/Users/adamdimitrov/Development/budapest-adventures'
 
@@ -154,7 +157,7 @@ def optimize_file(file_path, cruise_type='river'):
     # 12. Save optimized file
     html_out = str(soup)
     with open(file_path, 'w', encoding='utf-8') as f:
-        f.write(html_out)
+        f.write(fix_switcher_html(html_out, file_path))
 
     orig_len = len(html)
     new_len = len(html_out)

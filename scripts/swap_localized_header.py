@@ -9,6 +9,9 @@ usage: python3 scripts/swap_localized_header.py <file> [<file> ...]
 import re
 import sys
 from urllib.parse import unquote, urlparse
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from fix_language_switcher_links import fix_switcher_html  # keeps switcher links = hreflang
 
 BASE = 'https://www.budapestadventures.com'
 NAV_STYLES = re.search(r'<style id="ltt-nav-styles">.*?</style>',
@@ -64,7 +67,7 @@ def swap(f):
     # nav controller must exist (all these pages already carry it; add if missing)
     if not block(s, 'ltt-nav-script', 'script') and nav_script:
         s = s.replace('</body>', nav_script + '</body>', 1)
-    open(f, 'w', encoding='utf-8').write(s)
+    open(f, 'w', encoding='utf-8').write(fix_switcher_html(s, f))
     return 'ok'
 
 
