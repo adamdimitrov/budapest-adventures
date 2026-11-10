@@ -59,6 +59,20 @@ SLUG_MAP = {
     'nl': {'river': 'beste-boedapest-riviercruises', 'dinner': 'beste-diner-cruises-boedapest'}
 }
 
+# Native ASCII slugs for pages that used to keep the English slug (data/localized_slugs.json).
+_KEY = {'best-night-cruises-budapest': 'night_cruises', 'thermal-baths-budapest': 'thermal_baths',
+        'best-private-boat-tours-budapest': 'private_boats', 'unlimited-prosecco-cruises-budapest': 'prosecco',
+        'best-walking-tours-budapest': 'walking_tours', 'best-hostels-budapest': 'hostels',
+        'budapest-card-is-it-worth-it': 'budapest_card', 'budapest-travel-guide': 'travel_guide',
+        'budapest-airport-to-city-center': 'airport', 'budapest-river-cruise-group-booking': 'group_booking',
+        'budapest-tourism-statistics': 'tourism_statistics'}
+import json as _json
+with open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'localized_slugs.json'), encoding='utf-8') as _f:
+    for _eng, _langs in _json.load(_f).items():
+        for _lang, _slug in _langs.items():
+            SLUG_MAP.setdefault(_lang, {})[_KEY[_eng]] = _slug
+
+
 CANDLELIT_MAP = {
     'hu': 'setahajozas-a-dunan-vacsoraval/gyertyafenyes-vacsora-a-dunan-budapest',
     'bg': 'най-добрата-вечеря-круизи-будапеща/круиз-с-вечеря-на-свещи-будапеща',
