@@ -863,8 +863,11 @@ def compile_language_dinner(lang, en_html, walkthrough_all):
         hero_kicker.string = intro['kicker']
         
     h1 = soup.find('h1')
-    if h1 and intro.get('h1'):
-        h1.string = intro['h1']
+    # No language defines intro['h1'], so fall back to the localized page title;
+    # otherwise the English template H1 leaks onto every translation.
+    h1_text = intro.get('h1') or pm.get('title')
+    if h1 and h1_text:
+        h1.string = h1_text
         
     author_name = soup.find(class_='author-name')
     if author_name and intro.get('author_title'):
