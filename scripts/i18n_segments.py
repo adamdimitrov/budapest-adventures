@@ -103,6 +103,50 @@ def segments2(s):
     return keep
 
 
+INLINE_TAGS = {'a', 'strong', 'b', 'em', 'i', 'span', 'br', 'small', 'sup', 'sub', 'u', 'mark', 'code', 'img'}
+TOKEN_RE = re.compile(r'<(/?)([a-zA-Z0-9]+)\b[^>]*?(/?)>|[^<]+', re.S)
+LABEL_RE = re.compile(r'\b(Summary|Overall|Impression|Location|Map|map|Video|Check|Book|Tickets?|Departure|Duration|Virtual|'
+                      r'tour|Tour|Area|from|reviews?|Watch|Perfect|Prices?|Best|Cruises?|Hostels?|Type|details|Your|Name|'
+                      r'Email|Message|Cons|Pros|Free|Walking|Cloakroom|Read|here|The|Gondola)\b')
+
+
+def segments3(s):
+    """Maximal runs of inline content (text + balanced inline tags) between block-level tags."""
+    clean = strip_code(s)
+    body = clean.find('<body')
+    runs, cur = [], None
+    for m in TOKEN_RE.finditer(clean, max(body, 0)):
+        tagname = (m.group(2) or '').lower()
+        is_inline = not m.group(2) or tagname in INLINE_TAGS
+        if is_inline:
+            if cur is None:
+                cur = [m.start(), m.end()]
+            cur[1] = m.end()
+        else:
+            if cur:
+                runs.append(tuple(cur))
+            cur = None
+    out = []
+    for a, b in runs:
+        raw = clean[a:b]
+        # trim to balanced inline tags: require each open inline tag to be closed inside the run
+        opens = [t.lower() for t in re.findall(r'<([a-zA-Z]+)\b(?![^>]*/>)', raw) if t.lower() not in ('br', 'img')]
+        closes = [t.lower() for t in re.findall(r'</([a-zA-Z]+)>', raw)]
+        if sorted(opens) != sorted(closes):
+            continue
+        t = text_of(raw)
+        if len(t) < 2 or not re.search(r'[A-Za-z]{2}', t):
+            continue
+        words = re.findall(r'\w+', t)
+        if is_english(t) or (len(words) <= 6 and LABEL_RE.search(t) and
+                             sum(1 for w in re.findall(r"[A-Za-z]+", t) if w.lower() in EN or LABEL_RE.fullmatch(w))
+                             >= max(1, len(words) * 0.5)):
+            lead = len(raw) - len(raw.lstrip())
+            trail = len(raw) - len(raw.rstrip())
+            out.append((a + lead, b - trail, s[a + lead:b - trail]))
+    return out
+
+
 def extract(outdir, pages, finder=None):
     finder = finder or segments
     os.makedirs(outdir, exist_ok=True)
@@ -159,5 +203,7 @@ if __name__ == '__main__':
         extract(sys.argv[2], sys.argv[3:])
     elif sys.argv[1] == 'extract2':
         extract(sys.argv[2], sys.argv[3:], finder=segments2)
+    elif sys.argv[1] == 'extract3':
+        extract(sys.argv[2], sys.argv[3:], finder=segments3)
     elif sys.argv[1] == 'apply':
         apply(sys.argv[2])
