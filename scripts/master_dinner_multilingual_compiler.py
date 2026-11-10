@@ -559,6 +559,10 @@ def localize_details_cards(soup, lang, tours, kickers, ui, walkthrough):
                 bento1_paras = walkthrough.get('bento1_paragraphs', [])
                 if bento1_paras and c_idx < len(bento1_paras):
                     c_paras = bento1_paras[c_idx]
+                    if isinstance(c_paras, str):
+                        raise ValueError(
+                            f"[{lang}] bento1_paragraphs[{c_idx}] is a string, expected a list of paragraphs "
+                            "(a flat list renders one character per <p>)")
                     rt = bg.find(class_='w-richtext')
                     if rt:
                         rt_ps = rt.find_all('p')
