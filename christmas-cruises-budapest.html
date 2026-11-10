@@ -533,7 +533,14 @@ window.addEventListener('load', function() {
 <link href="https://cdn.prod.website-files.com/67d02edca7795b0f57073b59/css/luxurytraveltester.webflow.shared.7843214d4.min.css" rel="stylesheet" type="text/css"/><link as="image" fetchpriority="high" href="/assets/xmas-2026/budapest-christmas-cruise-silverline-01.avif" rel="preload"/><style id="nye-options-css">
 .nye-opts{display:grid;gap:6px;margin-top:10px}
 .nye-opt{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:2px 12px;padding:8px 12px;border:1px solid #bae6fd;background:#f0f9ff;border-radius:10px;text-decoration:none!important;color:#0f172a}
-.nye-opt:hover{border-color:#0284c7}
+.nye-opt:hover,.nye-opt:focus{border-color:#0284c7!important;background:#e0f2fe!important;color:#0f172a!important;text-decoration:none!important;opacity:1!important}
+.nye-opt .nye-opt-name,.nye-opt:hover .nye-opt-name{color:#0f172a!important}.nye-opt .nye-opt-meta,.nye-opt:hover .nye-opt-meta{color:#475569!important}
+.nye-opt .nye-opt-price,.nye-opt:hover .nye-opt-price{color:#b88214!important}
+.nye-opt .nye-opt-price small,.nye-opt:hover .nye-opt-price small{color:#0369a1!important}
+.nye-carte .cta:hover{color:#fff!important;opacity:1!important;background:linear-gradient(135deg,#ca9325 0%,#9f6e0d 100%)!important}
+/* nye-hover-guard: neutralise legacy Webflow a:hover (opacity .75, coral colour, background reset) */
+.nye-food-btn:hover{color:#0284c7!important;opacity:1!important;background:none!important}
+.nye-modal-cta:hover{color:#fff!important;opacity:1!important;background:linear-gradient(135deg,#ca9325 0%,#9f6e0d 100%)!important}
 .nye-opt-name{font-weight:700;font-size:13.5px}
 .nye-opt-meta{grid-column:1;font-size:12px;color:#475569}
 .nye-opt-price{grid-row:1/span 2;grid-column:2;font-weight:800;font-size:16px;color:#b88214;white-space:nowrap}
