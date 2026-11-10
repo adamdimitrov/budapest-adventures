@@ -112,7 +112,9 @@ LABEL_RE = re.compile(r'\b(Summary|Overall|Impression|Location|Map|map|Video|Che
 
 def segments3(s):
     """Maximal runs of inline content (text + balanced inline tags) between block-level tags."""
-    clean = strip_code(s)
+    # scripts, styles and comments become same-length <hr ...> blocks so they always break a run
+    clean = re.sub(r'<(script|style)\b.*?</\1>|<!--.*?-->',
+                   lambda m: '<hr' + ' ' * (len(m.group(0)) - 4) + '>', s, flags=re.S)
     body = clean.find('<body')
     runs, cur = [], None
     for m in TOKEN_RE.finditer(clean, max(body, 0)):
