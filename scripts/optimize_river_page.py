@@ -11,6 +11,9 @@ import os
 import re
 import shutil
 from bs4 import BeautifulSoup
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from fix_language_switcher_links import fix_switcher_html  # keeps switcher links = hreflang
 
 BASE_DIR = '/Users/adamdimitrov/Development/budapest-adventures'
 RIVER_FILE = os.path.join(BASE_DIR, 'river.html')
@@ -217,7 +220,7 @@ def optimize_river():
 
     # Save to river.html
     with open(RIVER_FILE, 'w', encoding='utf-8') as f:
-        f.write(html_out)
+        f.write(fix_switcher_html(html_out, RIVER_FILE))
     print(f"✓ Saved optimized {RIVER_FILE}")
 
     # Synchronize to aliases

@@ -11,6 +11,9 @@ import os
 import re
 import sys
 from urllib.parse import unquote, urlparse
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from fix_language_switcher_links import fix_switcher_html  # keeps switcher links = hreflang
 
 BASE = 'https://www.budapestadventures.com'
 
@@ -66,7 +69,7 @@ def build(page, lang, indir):
         s = re.sub(r'<meta content="[^"]*" property="og:locale"/>', f'<meta content="{loc.group(1)}" property="og:locale"/>', s, count=1)
     out = path.strip('/') + '/index.html'
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    open(out, 'w', encoding='utf-8').write(s)
+    open(out, 'w', encoding='utf-8').write(fix_switcher_html(s, out))
     return out
 
 
