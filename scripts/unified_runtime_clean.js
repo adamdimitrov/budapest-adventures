@@ -380,6 +380,7 @@
       return;
     }
     var cards = document.querySelectorAll('.bpa-card');
+    var reviews = document.querySelectorAll('.bpa-details-card');
     if (!cards.length) return;
     var itemsData = getItems();
     var vCenter = window.innerHeight * 0.45;
