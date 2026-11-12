@@ -622,78 +622,7 @@ button.dc-c:hover,button.dc-c:focus-visible{border-color:#eadfca;background:#fff
 .dc-arrow{color:#d9c79e;font-weight:700;padding-bottom:3px}
 .nye-carte .sec{border-radius:6px;transition:background .6s}
 .nye-carte .sec.flash{background:#fdf3d8}
-</style><style id="bpa-lang-css">
-.bpa-lang{display:inline-flex;flex-wrap:wrap;gap:5px;flex-shrink:0}
-.bpa-lang[open]{flex-basis:100%}
-.bpa-lang>summary{list-style:none;cursor:pointer;user-select:none}
-.bpa-lang>summary::-webkit-details-marker{display:none}
-.bpa-lang>summary:hover{background:#e2e8f0 !important}
-.bpa-lang-chev{font-size:12px;line-height:1;opacity:.75;transition:transform .15s}
-.bpa-lang[open] .bpa-lang-chev{transform:rotate(180deg)}
-.bpa-lang.is-match>summary{background:#dcfce7 !important;color:#166534 !important}
-.bpa-lang-pop{flex-basis:100%;box-sizing:border-box;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.5;color:#334155;white-space:normal}
-.bpa-lang-pop strong{color:#0f172a}
-.bpa-lang-names b{color:#166534}
-.bpa-lang-note{display:block;margin-top:3px;color:#64748b;font-size:11px}
-/* With JS: the list floats over the card instead of pushing it down */
-html.bpa-lang-on .bpa-lang[open]{flex-basis:auto}
-html.bpa-lang-on .bpa-lang .bpa-lang-pop{display:none}
-html.bpa-lang-on .bpa-lang.is-open .bpa-lang-chev{transform:rotate(180deg)}
-html.bpa-lang-on .bpa-lang.is-open>summary{background:#e2e8f0 !important}
-html.bpa-lang-on .bpa-lang.is-match.is-open>summary{background:#bbf7d0 !important}
-#bpa-lang-float{position:absolute;z-index:9990;max-width:290px;box-sizing:border-box;background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 10px 30px rgba(15,23,42,.14);padding:10px 12px;font-size:12px;line-height:1.5;color:#334155;opacity:0;transform:translateY(-4px);transition:none;pointer-events:none}
-#bpa-lang-float.is-visible{opacity:1;transform:none;pointer-events:auto;transition:opacity .12s ease,transform .12s ease}
-#bpa-lang-float.is-above{transform:translateY(4px)}
-#bpa-lang-float.is-above.is-visible{transform:none}
-#bpa-lang-float strong{color:#0f172a}
-#bpa-lang-float .bpa-lang-names b{color:#166534}
-#bpa-lang-float::before{content:"";position:absolute;left:var(--ax,20px);top:-6px;width:10px;height:10px;background:#fff;border-left:1px solid #e2e8f0;border-top:1px solid #e2e8f0;transform:translateX(-50%) rotate(45deg)}
-#bpa-lang-float.is-above::before{top:auto;bottom:-6px;transform:translateX(-50%) rotate(225deg)}
-#bpa-lang-float::after{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
-#bpa-lang-float.is-above::after{top:auto;bottom:-12px}
-</style>
-<style id="bpa-card2-css">
-.bpa-stars{color: #dfa732;
-  letter-spacing: 1px;
-  font-size: 13px;}
-.bpa-lang-note a{color: #0369a1 !important; font-weight: 600; text-decoration: underline;}
-.bpa-rate{display: flex !important; align-items: center !important;}
-.bpa-rate-sum{display: inline-flex !important; align-items: center !important; gap: 6px !important; cursor: pointer; list-style: none; font-size: 12.5px !important; color: #0f172a !important; padding: 2px 6px 2px 0;}
-.bpa-rate-sum::-webkit-details-marker{display: none;}
-.bpa-rate-sum:hover .bpa-rate-meta, .bpa-rate-more.is-open .bpa-rate-meta{text-decoration: underline;}
-.bpa-rate-score{font-weight: 800 !important;}
-.bpa-rate-meta{color: #475569 !important;}
-.bpa-stars{position: relative; display: inline-block; font-size: 13px; line-height: 1; letter-spacing: 1px; color: #e2e8f0;}
-.bpa-stars::before{content: "\2605\2605\2605\2605\2605";}
-.bpa-stars::after{content: "\2605\2605\2605\2605\2605"; position: absolute; left: 0; top: 0; width: calc(var(--r) / 5 * 100%); overflow: hidden; white-space: nowrap; color: #f59e0b;}
-#bpa-lang-float .bpa-rate-list{display: flex; flex-direction: column; gap: 2px; margin-top: 6px;}
-#bpa-lang-float .bpa-rev-badge{display: flex !important; align-items: center !important; gap: 6px !important; padding: 4px 2px !important; border-bottom: 1px solid #f1f5f9; text-decoration: none !important; color: #0f172a !important; font-size: 12px !important; background: none !important;}
-#bpa-lang-float .bpa-rev-badge:last-child{border-bottom: 0;}
-#bpa-lang-float .bpa-rev-stars{display: none !important;}
-#bpa-lang-float .bpa-rev-icon{width: 16px !important; height: 16px !important;}
-#bpa-lang-float .bpa-rev-site{min-width: 92px; font-weight: 600;}
-#bpa-lang-float .bpa-rev-score{font-weight: 700 !important;}
-#bpa-lang-float .bpa-rev-count{color: #64748b !important; margin-left: auto;}
-#bpa-lang-float .bpa-rev-badge.is-link{cursor: pointer !important; border-radius: 6px; margin: 0 -4px; padding: 5px 4px !important;}
-#bpa-lang-float .bpa-rev-badge.is-link:hover{background: #f1f5f9 !important;}
-#bpa-lang-float .bpa-rev-badge.is-link .bpa-rev-site{text-decoration: underline; text-underline-offset: 2px; color: #0369a1;}
-#bpa-lang-float .bpa-rev-go{margin-left: 6px; color: #0369a1; font-weight: 700; font-size: 13px;}
-#bpa-lang-float .bpa-rev-badge.is-static, #bpa-lang-float .bpa-rev-badge.is-static *{cursor: default !important;}
-.bpa-tested > summary.bpa-vchip:hover, html.bpa-lang-on .bpa-lang.bpa-tested.is-open > summary.bpa-vchip{background: #d1fae5 !important; color: #047857 !important; text-decoration: underline; text-underline-offset: 2px;}
-.bpa-pickskip{line-height: 1.5 !important;}
-.bpa-pickskip .bpa-pick{color: #166534 !important; font-weight: 800 !important; white-space: nowrap;}
-.bpa-pickskip .bpa-skip{color: #9a3412 !important; font-weight: 800 !important; white-space: nowrap; margin-left: 2px;}
-@media (max-width: 767px){.bpa-card .bpa-rate-sum{ font-size: 13.5px !important; }.bpa-card .bpa-pickskip{ font-size: 13.5px !important; line-height: 1.5 !important; }.bpa-card .bpa-price + div, .bpa-card .bpa-via, .bpa-card .bpa-trust2, .bpa-card .bpa-was{ font-size: 12px !important; }}
-.bpa-was{font-size: 12px; color: #64748b; line-height: 1.2; margin-bottom: 2px;}
-.bpa-was s{text-decoration-thickness: 1.5px;}
-.bpa-was span{color: #b91c1c; font-weight: 800; margin-left: 2px;}
-.bpa-via{font-size: 11px; color: #64748b; margin-top: -2px;}
-.bpa-trust2{display: inline-flex; flex-direction: column; align-items: flex-start; gap: 2px; font-size: 11px; font-weight: 600; color: #166534; line-height: 1.3; text-align: left;}
-@media (max-width: 900px){.bpa-via{ width: 100%; text-align: right; margin-top: -4px; }.bpa-trust2{ flex-direction: row; flex-wrap: wrap; gap: 4px 12px; width: 100%; }}
-.bpa-time-flex > summary.bpa-sp:hover,
-html.bpa-lang-on .bpa-lang.bpa-time-flex.is-open > summary.bpa-sp{background: #bbf7d0 !important;}
-</style>
-</head><body id="top"><header class="ltt-navbar" role="banner">
+</style></head><body id="top"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='/assets/budapest-adventures-logo.png';}" src="assets/budapest-adventures-logo.png" width="36"/>
@@ -4159,7 +4088,6 @@ a.w-webflow-badge,
 <span class="bpa-sp">Midnight Toast</span>
 <span class="bpa-sp">Catamaran</span>
 </div>
-<div class="bpa-best-for bpa-pickskip"><span class="bpa-pick">✓ Pick it</span> for a choice between a seated gala dinner and a party with unlimited drinks. <span class="bpa-skip">✕ Skip it</span> if you want drinks included at the gala: only the welcome cocktail and midnight toast are.</div>
 <div class="nye-opts"><a class="nye-opt" href="https://www.tiqets.com/en/budapest-cruises-tickets-l205377/budapest-new-year-s-eve-cruise-2026-e92180/?partner=budapestadventures&amp;tq_campaign=nye-cruises-budapest-silverline-gala" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><span class="nye-opt-name">🥂 Gala Dinner &amp; Live Piano</span><span class="nye-opt-meta">20:00–01:00 • 5-course dinner • midnight toast at Parliament</span><span class="nye-opt-price">€340<small>Book →</small></span></a><a class="nye-opt" href="https://budapestrivercruise.eu/product/new-years-celebration-cruise/?code=bpadventures&amp;agent_ref=38585" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><span class="nye-opt-name">🎉 Celebration Party</span><span class="nye-opt-meta">22:00–01:00 • DJ • tapas • unlimited prosecco, wine &amp; beer</span><span class="nye-opt-price">€239<small>Book →</small></span></a></div><div class="nye-food"><div class="nye-food-head"><span class="nye-food-lbl">🍽️ Food</span><span aria-label="Food level 3 of 3" class="nye-meter" data-l="3"><i></i><i></i><i></i></span><span class="nye-food-lvl">Gala: seated 5 courses • Party: tapas</span><button aria-haspopup="dialog" class="nye-food-btn" data-nye-menu="nye-silverline" type="button">Full menu ↗</button></div><div class="nye-food-strip">Amuse-bouche<span class="sep">›</span>Starter<span class="sep">›</span>Soup<span class="sep">›</span>Main<span class="sep">›</span>Dessert<span class="mid">🕛 Sparkling toast</span></div><div class="dc-dna"><button class="dc-c" data-sec="amuse-bouche" type="button" aria-label="Amuse: 1 choice"><b>Amuse</b><span class="dc-dots"><i class=""></i></span><em>1</em></button><span class="dc-arrow">›</span><button class="dc-c" data-sec="starter" type="button" aria-label="Starter: 2 choices"><b>Starter</b><span class="dc-dots"><i class=""></i><i class=""></i></span><em>2</em></button><span class="dc-arrow">›</span><button class="dc-c" data-sec="soup" type="button" aria-label="Soup: 2 choices"><b>Soup</b><span class="dc-dots"><i class=""></i><i class="v"></i></span><em>2</em></button><span class="dc-arrow">›</span><button class="dc-c" data-sec="main-course" type="button" aria-label="Main: 6 choices"><b>Main</b><span class="dc-dots"><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class="v"></i></span><em>6</em></button><span class="dc-arrow">›</span><button class="dc-c" data-sec="dessert" type="button" aria-label="Dessert: 3 choices"><b>Dessert</b><span class="dc-dots"><i class=""></i><i class=""></i><i class="v"></i></span><em>3</em></button></div></div>
 </div>
 <div class="bpa-cta-cell">
@@ -4168,8 +4096,11 @@ a.w-webflow-badge,
 <div class="bpa-psub">2 options • €239 or €340</div>
 </div>
 <a class="bpa-btn" href="https://budapestrivercruise.eu/product/new-years-celebration-cruise/?code=bpadventures&amp;agent_ref=38585" rel="noopener" target="_blank">Check Availability →</a>
-<div class="bpa-via">Booked securely via Silverline Cruises</div>
-<div class="bpa-trust2"><span>✓ Instant mobile ticket</span><span>✓ Instant confirmation</span></div>
+<div class="bpa-trust-micro">
+<span>Instant QR</span>
+<span>•</span>
+<span>Instant Confirmation</span>
+</div>
 <a class="bpa-sublink" href="#nye-silverline">Read Review ↓</a>
 </div>
 </div>
@@ -4183,7 +4114,7 @@ a.w-webflow-badge,
 <div class="bpa-kicker">Hungaria Koncert • ⏱️ 6 Hours • <a class="bpa-kicker-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Akadémia+2+Budapest" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank">Akadémia 2</a></div>
 <a class="bpa-title" href="https://www.getyourguide.com/budapest-l29/budapest-new-year-s-eve-party-cruise-with-food-live-show-t818297/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-hk&amp;mkt_cmp=true" rel="noopener" target="_blank">New Year's Eve Gala Dinner Cruise With Folk Show &amp; Unlimited Drinks</a>
 <div class="bpa-reviews-line">
-<div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.06" aria-hidden="true"></span><b class="bpa-rate-score">4.1</b><span class="bpa-rate-meta">50+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-new-year-s-eve-party-cruise-with-food-live-show-t818297/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-hk&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.1</span><span class="bpa-rev-count">(50+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div>
+<div class="bpa-summary-reviews"><div class="div-block-53"><a class="bpa-rev-badge" href="https://www.getyourguide.com/budapest-l29/budapest-new-year-s-eve-party-cruise-with-food-live-show-t818297/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-hk&amp;mkt_cmp=true" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">4.1</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26ZM11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275L9.96191 9.695L5.12891 10.267L8.70191 13.572L7.75291 18.345L11.9999 15.968V15.968Z"></path></svg></span><span class="bpa-rev-count">(+52 reviews)</span></a></div></div>
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-sp">5-Course Gala</span>
@@ -4191,7 +4122,9 @@ a.w-webflow-badge,
 <span class="bpa-sp bpa-sp-inc">Unlimited Drinks</span>
 <span class="bpa-sp">Midnight Buffet</span>
 </div>
-<div class="bpa-best-for bpa-pickskip"><span class="bpa-pick">✓ Pick it</span> for a gala dinner with a Hungarian folk show and unlimited drinks. <span class="bpa-skip">✕ Skip it</span> on a budget: €360, and exact times are not published yet.</div><div class="nye-food"><div class="nye-food-head"><span class="nye-food-lbl">🍽️ Food</span><span aria-label="Food level 3 of 3" class="nye-meter" data-l="3"><i></i><i></i><i></i></span><span class="nye-food-lvl">Seated 5-course gala + midnight buffet</span><button aria-haspopup="dialog" class="nye-food-btn" data-nye-menu="nye-hungaria-koncert" type="button">Full menu ↗</button></div><div class="nye-food-strip">Duck &amp; apple pie<span class="sep">›</span>Chicken cocktail<span class="sep">›</span>Emperor's soup<span class="sep">›</span>Roast veal<span class="sep">›</span>Somlói galuska<span class="mid">🕛 Midnight buffet</span></div><div class="dc-dna"><button class="dc-c" data-sec="cold-appetiser" type="button" aria-label="Appetiser: 2 choices"><b>Appetiser</b><span class="dc-dots"><i class=""></i><i class="v"></i></span><em>2</em></button><span class="dc-arrow">›</span><button class="dc-c" data-sec="starter" type="button" aria-label="Starter: 2 choices"><b>Starter</b><span class="dc-dots"><i class=""></i><i class="v"></i></span><em>2</em></button><span class="dc-arrow">›</span><button class="dc-c" data-sec="soup" type="button" aria-label="Soup: 2 choices"><b>Soup</b><span class="dc-dots"><i class=""></i><i class="v"></i></span><em>2</em></button><span class="dc-arrow">›</span><button class="dc-c" data-sec="main-course" type="button" aria-label="Main: 3 choices"><b>Main</b><span class="dc-dots"><i class=""></i><i class=""></i><i class="v"></i></span><em>3</em></button><span class="dc-arrow">›</span><button class="dc-c" data-sec="dessert" type="button" aria-label="Dessert: 1 choice"><b>Dessert</b><span class="dc-dots"><i class=""></i></span><em>1</em></button><span class="dc-arrow">›</span><span class="dc-c dc-buf"><b>Midnight</b><span class="dc-dots"><i class="inf">∞</i></span></span></div></div>
+<div class="bpa-best-for">
+<strong>Best For:</strong> Travelers who want the most 'Hungarian' New Year's Eve: gala dinner, live folk music and dance.
+              </div><div class="nye-food"><div class="nye-food-head"><span class="nye-food-lbl">🍽️ Food</span><span aria-label="Food level 3 of 3" class="nye-meter" data-l="3"><i></i><i></i><i></i></span><span class="nye-food-lvl">Seated 5-course gala + midnight buffet</span><button aria-haspopup="dialog" class="nye-food-btn" data-nye-menu="nye-hungaria-koncert" type="button">Full menu ↗</button></div><div class="nye-food-strip">Duck &amp; apple pie<span class="sep">›</span>Chicken cocktail<span class="sep">›</span>Emperor's soup<span class="sep">›</span>Roast veal<span class="sep">›</span>Somlói galuska<span class="mid">🕛 Midnight buffet</span></div><div class="dc-dna"><button class="dc-c" data-sec="cold-appetiser" type="button" aria-label="Appetiser: 2 choices"><b>Appetiser</b><span class="dc-dots"><i class=""></i><i class="v"></i></span><em>2</em></button><span class="dc-arrow">›</span><button class="dc-c" data-sec="starter" type="button" aria-label="Starter: 2 choices"><b>Starter</b><span class="dc-dots"><i class=""></i><i class="v"></i></span><em>2</em></button><span class="dc-arrow">›</span><button class="dc-c" data-sec="soup" type="button" aria-label="Soup: 2 choices"><b>Soup</b><span class="dc-dots"><i class=""></i><i class="v"></i></span><em>2</em></button><span class="dc-arrow">›</span><button class="dc-c" data-sec="main-course" type="button" aria-label="Main: 3 choices"><b>Main</b><span class="dc-dots"><i class=""></i><i class=""></i><i class="v"></i></span><em>3</em></button><span class="dc-arrow">›</span><button class="dc-c" data-sec="dessert" type="button" aria-label="Dessert: 1 choice"><b>Dessert</b><span class="dc-dots"><i class=""></i></span><em>1</em></button><span class="dc-arrow">›</span><span class="dc-c dc-buf"><b>Midnight</b><span class="dc-dots"><i class="inf">∞</i></span></span></div></div>
 </div>
 <div class="bpa-cta-cell">
 <div>
@@ -4199,8 +4132,11 @@ a.w-webflow-badge,
 <div class="bpa-psub">6 Hours • Seated gala dinner</div>
 </div>
 <a class="bpa-btn" href="https://www.getyourguide.com/budapest-l29/budapest-new-year-s-eve-party-cruise-with-food-live-show-t818297/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-hk&amp;mkt_cmp=true" rel="noopener" target="_blank">Check Availability →</a>
-<div class="bpa-via">Booked securely via GetYourGuide</div>
-<div class="bpa-trust2"><span>✓ Instant mobile ticket</span><span>✓ Instant confirmation</span></div>
+<div class="bpa-trust-micro">
+<span>Instant QR</span>
+<span>•</span>
+<span>Instant Confirmation</span>
+</div>
 <a class="bpa-sublink" href="#nye-hungaria-koncert">Read Review ↓</a>
 </div>
 </div>
@@ -4217,7 +4153,7 @@ a.w-webflow-badge,
 <div class="bpa-kicker">Portum Lines • ⏱️ 2–4 Hours • <a class="bpa-kicker-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Dock+42+Budapest" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank">Dock 42</a></div>
 <a class="bpa-title" href="https://www.getyourguide.com/budapest-l29/budapest-3-hour-new-year-s-eve-boat-cruise-t132126/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-portum&amp;mkt_cmp=true" rel="noopener" target="_blank">New Year's Eve Cruise With Unlimited Wine, Champagne &amp; Beer</a>
 <div class="bpa-reviews-line">
-<div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.05" aria-hidden="true"></span><b class="bpa-rate-score">4.0</b><span class="bpa-rate-meta">100+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-3-hour-new-year-s-eve-boat-cruise-t132126/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-portum&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.0</span><span class="bpa-rev-count">(100+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div>
+<div class="bpa-summary-reviews"><div class="div-block-53"><a class="bpa-rev-badge" href="https://www.getyourguide.com/budapest-l29/budapest-3-hour-new-year-s-eve-boat-cruise-t132126/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-portum&amp;mkt_cmp=true" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">4.1</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26ZM11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275L9.96191 9.695L5.12891 10.267L8.70191 13.572L7.75291 18.345L11.9999 15.968V15.968Z"></path></svg></span><span class="bpa-rev-count">(+102 reviews)</span></a></div></div>
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-sp">2 NYE Options</span>
@@ -4225,7 +4161,6 @@ a.w-webflow-badge,
 <span class="bpa-sp">Champagne Toast</span>
 <span class="bpa-sp">48h Free Cancel</span>
 </div>
-<div class="bpa-best-for bpa-pickskip"><span class="bpa-pick">✓ Pick it</span> for unlimited drinks including champagne at a mid-range price. <span class="bpa-skip">✕ Skip it</span> if you want dinner: snacks only, and the pier is outside the centre.</div>
 <div class="nye-opts"><a class="nye-opt" href="https://www.getyourguide.com/budapest-l29/budapest-3-hour-new-year-s-eve-boat-cruise-t132126/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-portum&amp;mkt_cmp=true" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><span class="nye-opt-name">🍽️ Food &amp; Drinks</span><span class="nye-opt-meta">22:00–02:00 • snack buffet • unlimited drinks</span><span class="nye-opt-price">€230<small>Book →</small></span></a><a class="nye-opt" href="https://www.getyourguide.com/budapest-l29/budapest-3-hour-new-year-s-eve-boat-cruise-t132126/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-portum&amp;mkt_cmp=true" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><span class="nye-opt-name">🥂 Only Drinks</span><span class="nye-opt-meta">23:00–01:00 • unlimited drinks, no food</span><span class="nye-opt-price">See price<small>Book →</small></span></a></div><div class="nye-food"><div class="nye-food-head"><span class="nye-food-lbl">🍽️ Food</span><span aria-label="Food level 1 of 3" class="nye-meter" data-l="1"><i></i><i></i><i></i></span><span class="nye-food-lvl">Snack buffet (Food &amp; Drinks option only)</span></div><div class="nye-food-strip">Cold &amp; hot snacks<span class="sep">›</span>Vegan option<span class="mid">🕛 Glass of champagne</span></div></div>
 </div>
 <div class="bpa-cta-cell">
@@ -4234,8 +4169,11 @@ a.w-webflow-badge,
 <div class="bpa-psub">2 options • food or drinks only</div>
 </div>
 <a class="bpa-btn" href="https://www.getyourguide.com/budapest-l29/budapest-3-hour-new-year-s-eve-boat-cruise-t132126/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-portum&amp;mkt_cmp=true" rel="noopener" target="_blank">Check Availability →</a>
-<div class="bpa-via">Booked securely via GetYourGuide</div>
-<div class="bpa-trust2"><span>✓ Instant mobile ticket</span><span>✓ Instant confirmation</span></div>
+<div class="bpa-trust-micro">
+<span>Instant QR</span>
+<span>•</span>
+<span>Instant Confirmation</span>
+</div>
 <a class="bpa-sublink" href="#nye-portum">Read Review ↓</a>
 </div>
 </div>
@@ -4257,16 +4195,21 @@ a.w-webflow-badge,
 <span class="bpa-sp">Retro DJ</span>
 <span class="bpa-sp">Midnight Menu</span>
 </div>
-<div class="bpa-best-for bpa-pickskip"><span class="bpa-pick">✓ Pick it</span> for dinner and a DJ party on one ticket, from a central pier. <span class="bpa-skip">✕ Skip it</span> if you want reviews first: it is a new listing.</div><div class="nye-food"><div class="nye-food-head"><span class="nye-food-lbl">🍽️ Food</span><span aria-label="Food level 2 of 3" class="nye-meter" data-l="2"><i></i><i></i><i></i></span><span class="nye-food-lvl">Buffet dinner + midnight soup</span><button aria-haspopup="dialog" class="nye-food-btn" data-nye-menu="nye-todo-millennium" type="button">Full menu ↗</button></div><div class="nye-food-strip">Hungarian classics<span class="sep">›</span>Salads<span class="sep">›</span>Roast turkey<span class="sep">›</span>Duck confit<span class="sep">›</span>Desserts<span class="mid">🕛 Lentil soup &amp; sausages</span></div><div class="dc-dna"><span class="dc-c dc-buf"><b>Buffet</b><span class="dc-dots"><i class="inf">∞</i></span></span><span class="dc-arrow">›</span><button class="dc-c" data-sec="at-midnight" type="button" aria-label="Midnight: 1 choice"><b>Midnight</b><span class="dc-dots"><i class=""></i></span><em>1</em></button></div></div>
+<div class="bpa-best-for">
+<strong>Best For:</strong> Groups who want dinner and a lively international party on the same boat.
+              </div><div class="nye-food"><div class="nye-food-head"><span class="nye-food-lbl">🍽️ Food</span><span aria-label="Food level 2 of 3" class="nye-meter" data-l="2"><i></i><i></i><i></i></span><span class="nye-food-lvl">Buffet dinner + midnight soup</span><button aria-haspopup="dialog" class="nye-food-btn" data-nye-menu="nye-todo-millennium" type="button">Full menu ↗</button></div><div class="nye-food-strip">Hungarian classics<span class="sep">›</span>Salads<span class="sep">›</span>Roast turkey<span class="sep">›</span>Duck confit<span class="sep">›</span>Desserts<span class="mid">🕛 Lentil soup &amp; sausages</span></div><div class="dc-dna"><span class="dc-c dc-buf"><b>Buffet</b><span class="dc-dots"><i class="inf">∞</i></span></span><span class="dc-arrow">›</span><button class="dc-c" data-sec="at-midnight" type="button" aria-label="Midnight: 1 choice"><b>Midnight</b><span class="dc-dots"><i class=""></i></span><em>1</em></button></div></div>
 </div>
 <div class="bpa-cta-cell">
 <div>
-<div class="bpa-price">From €315</div>
+<div class="bpa-price">From €318</div>
 <div class="bpa-psub">5 Hours • Buffet + party</div>
 </div>
 <a class="bpa-btn" href="https://www.getyourguide.com/budapest-l29/budapest-new-year-s-eve-dinner-cruise-with-panoramic-views-t1170338/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-todo&amp;mkt_cmp=true" rel="noopener" target="_blank">Check Availability →</a>
-<div class="bpa-via">Booked securely via GetYourGuide</div>
-<div class="bpa-trust2"><span>✓ Instant mobile ticket</span><span>✓ Instant confirmation</span></div>
+<div class="bpa-trust-micro">
+<span>Instant QR</span>
+<span>•</span>
+<span>Instant Confirmation</span>
+</div>
 <a class="bpa-sublink" href="#nye-todo-millennium">Read Review ↓</a>
 </div>
 </div>
@@ -4283,7 +4226,7 @@ a.w-webflow-badge,
 <div class="bpa-kicker">Budapest Boat Party • ⏱️ 5 Hours • <a class="bpa-kicker-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Akadémia+2+Budapest" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank">Akadémia 2</a></div>
 <a class="bpa-title" href="https://www.getyourguide.com/budapest-l29/budapest-new-year-boat-party-cruises-with-unlimited-drinks-t1113543/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-boatparty&amp;mkt_cmp=true" rel="noopener" target="_blank">New Year's Eve Boat Party With Unlimited Drinks, DJ &amp; Midnight Buffet</a>
 <div class="bpa-reviews-line">
-<div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:3.78" aria-hidden="true"></span><b class="bpa-rate-score">3.8</b><span class="bpa-rate-meta">13 reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-new-year-boat-party-cruises-with-unlimited-drinks-t1113543/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-boatparty&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">3.8</span><span class="bpa-rev-count">(13)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div>
+<div class="bpa-summary-reviews"><div class="div-block-53"><a class="bpa-rev-badge" href="https://www.getyourguide.com/budapest-l29/budapest-new-year-boat-party-cruises-with-unlimited-drinks-t1113543/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-boatparty&amp;mkt_cmp=true" onclick="event.stopPropagation()" rel="noopener nofollow sponsored" target="_blank"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">3.8</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26ZM11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275L9.96191 9.695L5.12891 10.267L8.70191 13.572L7.75291 18.345L11.9999 15.968V15.968Z"></path></svg></span><span class="bpa-rev-count">(+13 reviews)</span></a></div></div>
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-sp bpa-sp-inc">Unlimited Drinks</span>
@@ -4291,7 +4234,9 @@ a.w-webflow-badge,
 <span class="bpa-sp">Midnight Buffet</span>
 <span class="bpa-sp">Photographer</span>
 </div>
-<div class="bpa-best-for bpa-pickskip"><span class="bpa-pick">✓ Pick it</span> for a proper party crowd, great for solo travelers. <span class="bpa-skip">✕ Skip it</span> if you want dinner: only a snack buffet, and reviews are mixed.</div><div class="nye-food"><div class="nye-food-head"><span class="nye-food-lbl">🍽️ Food</span><span aria-label="Food level 1 of 3" class="nye-meter" data-l="1"><i></i><i></i><i></i></span><span class="nye-food-lvl">No dinner — midnight snack buffet</span></div><div class="nye-food-strip">No dinner<span class="mid">🕛 Snack buffet</span></div></div>
+<div class="bpa-best-for">
+<strong>Best For:</strong> Solo travelers and groups in their 20s–30s who want a real party at midnight.
+              </div><div class="nye-food"><div class="nye-food-head"><span class="nye-food-lbl">🍽️ Food</span><span aria-label="Food level 1 of 3" class="nye-meter" data-l="1"><i></i><i></i><i></i></span><span class="nye-food-lvl">No dinner — midnight snack buffet</span></div><div class="nye-food-strip">No dinner<span class="mid">🕛 Snack buffet</span></div></div>
 </div>
 <div class="bpa-cta-cell">
 <div>
@@ -4299,8 +4244,11 @@ a.w-webflow-badge,
 <div class="bpa-psub">5 Hours • 18+ only</div>
 </div>
 <a class="bpa-btn" href="https://www.getyourguide.com/budapest-l29/budapest-new-year-boat-party-cruises-with-unlimited-drinks-t1113543/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-boatparty&amp;mkt_cmp=true" rel="noopener" target="_blank">Check Availability →</a>
-<div class="bpa-via">Booked securely via GetYourGuide</div>
-<div class="bpa-trust2"><span>✓ Instant mobile ticket</span><span>✓ Instant confirmation</span></div>
+<div class="bpa-trust-micro">
+<span>Instant QR</span>
+<span>•</span>
+<span>Instant Confirmation</span>
+</div>
 <a class="bpa-sublink" href="#nye-boat-party">Read Review ↓</a>
 </div>
 </div>
@@ -4322,7 +4270,9 @@ a.w-webflow-badge,
 <span class="bpa-sp">Midnight Lentils</span>
 <span class="bpa-sp">Dockside Party</span>
 </div>
-<div class="bpa-best-for bpa-pickskip"><span class="bpa-pick">✓ Pick it</span> for the lowest price with unlimited drinks and Hungarian midnight lentils. <span class="bpa-skip">✕ Skip it</span> if you want a long cruise: only 2 hours on the water, and snacks only.</div><div class="nye-food"><div class="nye-food-head"><span class="nye-food-lbl">🍽️ Food</span><span aria-label="Food level 1 of 3" class="nye-meter" data-l="1"><i></i><i></i><i></i></span><span class="nye-food-lvl">Snacks + midnight lentils</span></div><div class="nye-food-strip">Snacks<span class="mid">🕛 Lentils + champagne</span></div></div>
+<div class="bpa-best-for">
+<strong>Best For:</strong> Budget travelers who mainly want the party and a midnight toast, not a long cruise.
+              </div><div class="nye-food"><div class="nye-food-head"><span class="nye-food-lbl">🍽️ Food</span><span aria-label="Food level 1 of 3" class="nye-meter" data-l="1"><i></i><i></i><i></i></span><span class="nye-food-lvl">Snacks + midnight lentils</span></div><div class="nye-food-strip">Snacks<span class="mid">🕛 Lentils + champagne</span></div></div>
 </div>
 <div class="bpa-cta-cell">
 <div>
@@ -4330,8 +4280,11 @@ a.w-webflow-badge,
 <div class="bpa-psub">5 Hours • 2 hours sailing</div>
 </div>
 <a class="bpa-btn" href="https://www.getyourguide.com/budapest-l29/budapest-new-year-s-eve-party-cruise-with-unlimited-drinks-t1544608/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-dinnercruise&amp;mkt_cmp=true" rel="noopener" target="_blank">Check Availability →</a>
-<div class="bpa-via">Booked securely via GetYourGuide</div>
-<div class="bpa-trust2"><span>✓ Instant mobile ticket</span><span>✓ Instant confirmation</span></div>
+<div class="bpa-trust-micro">
+<span>Instant QR</span>
+<span>•</span>
+<span>Instant Confirmation</span>
+</div>
 <a class="bpa-sublink" href="#nye-dinner-cruise-budapest">Read Review ↓</a>
 </div>
 </div>
@@ -4353,16 +4306,21 @@ a.w-webflow-badge,
 <span class="bpa-sp">Dock Transfer</span>
 <span class="bpa-sp">Folk Show + DJ</span>
 </div>
-<div class="bpa-best-for bpa-pickskip"><span class="bpa-pick">✓ Pick it</span> for a fully arranged night: transfer, gala dinner and drinks. <span class="bpa-skip">✕ Skip it</span> on a budget: from €830, with only 2 hours of cruising.</div><div class="nye-food"><div class="nye-food-head"><span class="nye-food-lbl">🍽️ Food</span><span aria-label="Food level 3 of 3" class="nye-meter" data-l="3"><i></i><i></i><i></i></span><span class="nye-food-lvl">Served 5-course gala + midnight dinner</span></div><div class="nye-food-strip">5-course served gala dinner<span class="mid">🕛 Traditional midnight dinner</span></div></div>
+<div class="bpa-best-for">
+<strong>Best For:</strong> Travelers who want a fully packaged evening including transfer, and do not mind the price.
+              </div><div class="nye-food"><div class="nye-food-head"><span class="nye-food-lbl">🍽️ Food</span><span aria-label="Food level 3 of 3" class="nye-meter" data-l="3"><i></i><i></i><i></i></span><span class="nye-food-lvl">Served 5-course gala + midnight dinner</span></div><div class="nye-food-strip">5-course served gala dinner<span class="mid">🕛 Traditional midnight dinner</span></div></div>
 </div>
 <div class="bpa-cta-cell">
 <div>
-<div class="bpa-price">From €830</div>
+<div class="bpa-price">From €820</div>
 <div class="bpa-psub">6 Hours • 2 hours sailing</div>
 </div>
 <a class="bpa-btn" href="https://www.getyourguide.com/budapest-l29/budapest-2027-gala-nye-danube-cruise-with-dinner-drinks-t1391322/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-fattori&amp;mkt_cmp=true" rel="noopener" target="_blank">Check Availability →</a>
-<div class="bpa-via">Booked securely via GetYourGuide</div>
-<div class="bpa-trust2"><span>✓ Instant mobile ticket</span><span>✓ Instant confirmation</span></div>
+<div class="bpa-trust-micro">
+<span>Instant QR</span>
+<span>•</span>
+<span>Instant Confirmation</span>
+</div>
 <a class="bpa-sublink" href="#nye-fattori-gala">Read Review ↓</a>
 </div>
 </div>
@@ -7244,93 +7202,4 @@ function te(){if(y0===null)return;sheet.style.transition='transform .2s';if(dy>9
 })();</script><script id="dna-js">document.addEventListener('click',function(e){var c=e.target.closest&&e.target.closest('.dc-c[data-sec]');if(!c)return;e.preventDefault();e.stopPropagation();
 var f=c.closest('.nye-food'),b=f&&f.querySelector('[data-nye-menu]');if(!b)return;b.click();
 var bd=document.querySelector('#nye-modal .nye-modal-body'),sec=bd&&bd.querySelector('.sec[data-sec="'+c.dataset.sec+'"]');
-if(sec){bd.scrollTop=Math.max(0,sec.offsetTop-bd.offsetTop-20);sec.classList.add('flash');setTimeout(function(){sec.classList.remove('flash')},1400);}},true);</script><script id="bpa-lang-js">
-(function(){
-  var N={en:'English',fr:'French',es:'Spanish',de:'German',it:'Italian',pt:'Portuguese',nl:'Dutch',pl:'Polish',ru:'Russian',ar:'Arabic',hi:'Hindi',zh:'Chinese',ja:'Japanese',ko:'Korean'};
-  function init(){
-    var langs=[];
-    try{langs=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']);}catch(e){}
-    var code=String(langs[0]||'').slice(0,2).toLowerCase();
-    var boxes=document.querySelectorAll('.bpa-lang');
-    if(!boxes.length) return;
-    document.documentElement.classList.add('bpa-lang-on');
-
-    var pop=document.createElement('div');
-    pop.id='bpa-lang-float';
-    pop.setAttribute('role','tooltip');
-    document.body.appendChild(pop);
-    var current=null, pinned=false, hideTimer=null;
-    var canHover=window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-
-    function place(d){
-      var s=d.querySelector('summary').getBoundingClientRect();
-      var vw=document.documentElement.clientWidth, vh=window.innerHeight;
-      var w=Math.min(290, vw-16);
-      pop.style.width=w+'px';
-      var left=Math.max(8, Math.min(s.left, vw-w-8));
-      var h=pop.offsetHeight;
-      var above=(s.bottom+10+h>vh) && (s.top-10-h>0);
-      var top=above ? (s.top-10-h) : (s.bottom+10);
-      pop.classList.toggle('is-above', above);
-      pop.style.left=(left+window.scrollX)+'px';
-      pop.style.top=(top+window.scrollY)+'px';
-      pop.style.setProperty('--ax', Math.max(14, Math.min(w-14, s.left+Math.min(s.width,40)/2-left))+'px');
-    }
-    function show(d, pin){
-      clearTimeout(hideTimer);
-      if(current && current!==d) current.classList.remove('is-open');
-      current=d; pinned=!!pin;
-      pop.innerHTML=d.querySelector('.bpa-lang-pop').innerHTML;
-      d.classList.add('is-open');
-      d.querySelector('summary').setAttribute('aria-expanded','true');
-      place(d);
-      pop.classList.add('is-visible');
-    }
-    function hide(){
-      clearTimeout(hideTimer);
-      if(current){ current.classList.remove('is-open'); current.querySelector('summary').setAttribute('aria-expanded','false'); }
-      current=null; pinned=false;
-      pop.classList.remove('is-visible');
-    }
-    function softHide(e){
-      if(pinned) return;
-      var to=e && e.relatedTarget;
-      if(to && to.closest && (to.closest('#bpa-lang-float') || (current && current.contains(to)))) return;
-      hide();
-    }
-
-    boxes.forEach(function(d){
-      var sum=d.querySelector('summary');
-      sum.setAttribute('aria-expanded','false');
-      sum.addEventListener('click',function(e){
-        e.preventDefault();
-        if(current===d && pinned){ hide(); return; }
-        show(d,true);
-      });
-      if(canHover){
-        sum.addEventListener('mouseenter',function(){ if(!pinned||current!==d) show(d,false); });
-        sum.addEventListener('mouseleave',softHide);
-      }
-      if(!code||code==='en'||!N[code]) return;
-      var list=(d.getAttribute('data-langs')||'').split(',');
-      if(list.indexOf(code)===-1) return;
-      var label=d.querySelector('.bpa-lang-label');
-      if(label) label.textContent='Audio in '+N[code]+' \u2713';
-      d.classList.add('is-match');
-      var names=d.querySelector('.bpa-lang-names');
-      if(names) names.innerHTML=names.textContent.split(', ').map(function(n){return n===N[code]?'<b>'+n+'</b>':n;}).join(', ');
-    });
-    pop.addEventListener('mouseenter',function(){ clearTimeout(hideTimer); });
-    pop.addEventListener('mouseleave',softHide);
-    document.addEventListener('click',function(e){
-      if(!current) return;
-      if(e.target.closest && (e.target.closest('.bpa-lang') || e.target.closest('#bpa-lang-float'))) return;
-      hide();
-    });
-    document.addEventListener('keydown',function(e){ if(e.key==='Escape') hide(); });
-    window.addEventListener('resize',function(){ if(current) place(current); });
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
-})();
-</script>
-</body></html>
+if(sec){bd.scrollTop=Math.max(0,sec.offsetTop-bd.offsetTop-20);sec.classList.add('flash');setTimeout(function(){sec.classList.remove('flash')},1400);}},true);</script></body></html>
