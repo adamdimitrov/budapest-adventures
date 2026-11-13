@@ -5,7 +5,7 @@
  * Features covered:
  * - Feature 15: Authoritative Legenda VIP Partner ID (partner=38585; replaces legacy 38885)
  *   Standard link: https://legenda.hu/en?partner=38585
- * - Feature 16: Decision Hub & Multi-Operator Outbound Tracking (Legenda, TourCMS, Tiqets, Silverline)
+ * - Feature 16: Decision Hub & Multi-Operator Outbound Tracking (Legenda, Tiqets, Silverline)
  * - Feature 17: Inbound UTM & Click ID Capture (gclid, fbclid, _fbp, wbraid, gbraid, utm_*)
  * - Feature 18: Bidirectional Cookie + localStorage Persistence (bpa_attribution, 30-day TTL, Safari ITP/Private mode safe)
  * - Feature 19: Standardized Meta Pixel (1355732169631751) InitiateCheckout with 25% Net Commission Value in EUR
@@ -20,7 +20,6 @@
   var META_PIXEL_ID = '1355732169631751';
   var VIP_LEGENDA_PARTNER = '38585';
   var TYPO_LEGENDA_PARTNER = '38885';
-  var TOURCMS_AGENT_REF = '38585';
   var TIQETS_PARTNER = 'budapestadventures';
   var SILVERLINE_PARTNER = 'budapestadventures';
   var SILVERLINE_CODE = 'bpadventures';
@@ -42,7 +41,6 @@
 
   var PARTNER_DOMAINS = [
     'legenda.hu',
-    'tourcms.com',
     'budapestrivercruise.eu',
     'tiqets.com',
     'silver-line.hu'
@@ -248,43 +246,18 @@
         if (!existingPartner || existingPartner === TYPO_LEGENDA_PARTNER || existingPartner !== VIP_LEGENDA_PARTNER) {
           url.searchParams.set('partner', VIP_LEGENDA_PARTNER);
         }
-        if (subId) {
-          url.searchParams.set('subid', subId);
-        }
+        // Legenda links carry only partner=38585: no subid or agent_ref.
+        url.searchParams.delete('subid');
+        url.searchParams.delete('agent_ref');
         return url.toString();
       }
 
       // 2a. Silverline (budapestrivercruise.eu): our agent code is ?code=bpadventures.
-      //     agent_ref=38585 is the Legenda/TourCMS account and must not be sent here.
+      //     agent_ref=38585 is the Legenda account and must not be sent here.
       if (host.indexOf('budapestrivercruise.eu') !== -1) {
         url.searchParams.delete('agent_ref');
         if (url.searchParams.get('code') !== SILVERLINE_CODE) {
           url.searchParams.set('code', SILVERLINE_CODE);
-        }
-        return url.toString();
-      }
-
-      // 2b. TourCMS
-      if (host.indexOf('tourcms.com') !== -1) {
-        url.searchParams.set('agent_ref', TOURCMS_AGENT_REF);
-        if (subId) {
-          url.searchParams.set('subid', subId);
-        }
-        if (attr.gclid) {
-          url.searchParams.set('tc_gclid', attr.gclid);
-          url.searchParams.set('tc_gclid_type', 'gclid');
-        } else if (attr.wbraid) {
-          url.searchParams.set('tc_gclid', attr.wbraid);
-          url.searchParams.set('tc_gclid_type', 'wbraid');
-        } else if (attr.gbraid) {
-          url.searchParams.set('tc_gclid', attr.gbraid);
-          url.searchParams.set('tc_gclid_type', 'gbraid');
-        }
-        if (attr.fbclid) {
-          url.searchParams.set('tc_fbclid', attr.fbclid);
-        }
-        if (attr._fbp) {
-          url.searchParams.set('_fbp', attr._fbp);
         }
         return url.toString();
       }
