@@ -17,9 +17,9 @@ SRC = ROOT / "budapest-river-cruise-group-booking.html"
 CONTENT = ROOT / "scripts/group_booking/content.html"
 URL = "https://www.budapestadventures.com/budapest-river-cruise-group-booking"
 
-TITLE = "Budapest River Cruise Group Booking | Free Same-Day Quote"
+TITLE = "Budapest River Cruise Group Booking | Get a Free Quote"
 DESC = ("Planning a Danube cruise for 20 to 250+ people? Send your date and headcount "
-        "and get a free same-day quote for dinner, sightseeing or private boats.")
+        "and get a free quote for dinner, sightseeing or private boats.")
 OG_IMG = ("https://www.budapestadventures.com/assets/cdn/60e43c7d6d05b671dff0dc1a/"
           "6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest.webp")
 
@@ -39,7 +39,7 @@ def faq_schema(content: str) -> str:
              "provider": {"@type": "Organization", "name": "Budapest Adventures",
                           "url": "https://www.budapestadventures.com/"},
              "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR",
-                        "description": "Free group quote, no booking fee"}},
+                        "description": "Free group quote"}},
         ],
     }
     return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False) + "</script>"
@@ -68,7 +68,7 @@ def build(live: bool) -> Path:
                lambda m: f'<meta content="{TITLE}" {m.group(1)}/>', h)
     if 'rel="canonical"' not in h:
         h = h.replace("</title>", f'</title><link href="{URL}" rel="canonical"/>', 1)
-    h = re.sub(r'<script type="application/ld\+json" id="gb-schema">.*?</script>', "", h, flags=re.S)
+    h = re.sub(r'<script id="gb-schema"[^>]*>.*?</script>', "", h, flags=re.S)
     h = h.replace("</head>", faq_schema(content).replace("<script ", '<script id="gb-schema" ', 1) + "</head>", 1)
 
     # old Webflow content, or our own block when rebuilding an already-converted page
