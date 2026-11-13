@@ -11,11 +11,13 @@ Ratings, review counts and prices of GetYourGuide products were read from
 each product page's structured data on 2026-11-13. The Legenda rating is
 the 3-site figure already used on /best-budapest-river-cruises.
 
-Run: python3 scripts/build_ttd_table_test.py
+Run: python3 scripts/build_ttd_table_test.py          (test page)
+     python3 scripts/build_ttd_table_test.py --live   (one-shot: rewrites the live page)
 """
 import html
 import json
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -171,7 +173,8 @@ def main():
         m = re.search(r'<style id="%s">.*?</style>' % sid, src, re.S)
         assert m, sid
         s = s.replace("</head>", m.group(0) + "</head>", 1)
-    s = s.replace("</head>", CSS + '<meta name="robots" content="noindex, nofollow"/></head>', 1)
+    live = "--live" in sys.argv
+    s = s.replace("</head>", CSS + ("" if live else '<meta name="robots" content="noindex, nofollow"/>') + "</head>", 1)
 
     counts = {c: sum(1 for r in ROWS if c in r["cats"].split()) for c, _ in FILTERS if c != "all"}
     counts["all"] = len(ROWS)
@@ -196,8 +199,14 @@ def main():
     assert s.count(first) == 1
     s = s.replace(first, '<div id="breakdown-header"></div>' + first, 1)
     assert "—" not in deck
-    OUT.write_text(s)
-    print("wrote", OUT.name, len(s))
+    if live:
+        # dates: JSON-LD dateModified
+        s = re.sub(r'"dateModified":\s*"[0-9-]+"', '"dateModified":"2026-11-13"', s)
+        out = SRC
+    else:
+        out = OUT
+    out.write_text(s)
+    print("wrote", out.name, len(s))
 
 
 if __name__ == "__main__":
