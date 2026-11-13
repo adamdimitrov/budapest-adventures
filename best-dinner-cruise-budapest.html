@@ -216,7 +216,23 @@ html body .hybrid-active-trust{background:#f0fdf4!important;color:#166534!import
 .ltt-footer a.footer-link-item:hover{color:#dfa732 !important;}
 .ltt-footer .grey-divider{height:1px;background:rgba(255,255,255,0.12);margin:32px 0 24px;}
 .ltt-footer .legal-wrapper{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px;color:rgba(255,255,255,0.5);}
-</style></head><body><header class="ltt-navbar" role="banner">
+</style><style id="bpa-article-typography">
+/* Shared article look for main-template pages (hero card + breakdown + article).
+   Lives on the EN master; scripts/sync_layout.py copies it to every EN page.
+   Scoped to pages with .ltt-hero-wrap; product cards, FAQs and one-off components are left alone. */
+body:has(.ltt-hero-wrap){background-color:#f8fafc!important}
+body:has(.ltt-hero-wrap) h2.bpa-breakdown-heading{font-family:'Playfair Display',Georgia,'Times New Roman',serif!important;font-weight:700!important;font-size:24px!important;line-height:1.25!important;letter-spacing:normal!important;color:#0f172a!important}
+body:has(.ltt-hero-wrap) :is(.content-right_blog,.ltt-editorial-wrapper) :is(h2:not([class]),h2.ltt-sec-title,h2.heading-33):not(details *,.ltt-card *,.cf-faq-plus-card *,.ltt-hero-wrap *){font-family:'Playfair Display',Georgia,'Times New Roman',serif!important;font-weight:700!important;font-size:38px!important;line-height:1.2!important;letter-spacing:normal!important;color:#0f172a!important}
+body:has(.ltt-hero-wrap) :is(.content-right_blog,.ltt-editorial-wrapper) h3:not([class]):not(details *,.ltt-card *,.cf-faq-plus-card *,.ltt-hero-wrap *){font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif!important;font-weight:700!important;font-size:22px!important;line-height:1.35!important;color:#0f172a!important}
+body:has(.ltt-hero-wrap) :is(.content-right_blog,.ltt-editorial-wrapper) .w-richtext:not(.cf-faq-content-2) > p:not(details *,.ltt-card *,.cf-faq-plus-card *,.ltt-hero-wrap *),body:has(.ltt-hero-wrap) :is(.content-right_blog,.ltt-editorial-wrapper) .w-richtext:not(.cf-faq-content-2) > ul > li:not(details *,.ltt-card *,.cf-faq-plus-card *,.ltt-hero-wrap *),body:has(.ltt-hero-wrap) :is(.content-right_blog,.ltt-editorial-wrapper) .w-richtext:not(.cf-faq-content-2) > ol > li:not(details *,.ltt-card *,.cf-faq-plus-card *,.ltt-hero-wrap *){font-size:18px!important;line-height:1.7!important;color:#334155!important}
+body:has(.ltt-hero-wrap) .ltt-card-body p{font-size:16px!important;line-height:1.65!important;color:#334155!important}
+@media (max-width:767px){
+body:has(.ltt-hero-wrap) :is(.content-right_blog,.ltt-editorial-wrapper) :is(h2:not([class]),h2.ltt-sec-title,h2.heading-33):not(details *,.ltt-card *,.cf-faq-plus-card *,.ltt-hero-wrap *){font-size:28px!important}
+body:has(.ltt-hero-wrap) :is(.content-right_blog,.ltt-editorial-wrapper) h3:not([class]):not(details *,.ltt-card *,.cf-faq-plus-card *,.ltt-hero-wrap *){font-size:20px!important}
+body:has(.ltt-hero-wrap) h2.bpa-breakdown-heading{font-size:22px!important}
+}
+</style>
+</head><body><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
