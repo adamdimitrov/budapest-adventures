@@ -1,0 +1,76 @@
+{
+  "site": "https://www.budapestadventures.com",
+  "default_lang": "en",
+  "masters": {
+    "en": "budapest-tourism-statistics.html",
+    "hu": "hu/budapest-turizmus-statisztika/index.html",
+    "de": "de/tourismus-statistik-budapest/index.html",
+    "fr": "fr/statistiques-tourisme-budapest/index.html",
+    "it": "it/statistiche-turismo-budapest/index.html",
+    "es": "es/estadisticas-turismo-budapest/index.html",
+    "ro": "ro/statistici-turism-budapesta/index.html",
+    "pl": "pl/statystyki-turystyki-budapeszt/index.html",
+    "nl": "nl/toerisme-statistieken-boedapest/index.html",
+    "cs": "cs/statistiky-cestovniho-ruchu-budapest/index.html",
+    "sk": "sk/statistiky-cestovneho-ruchu-budapest/index.html",
+    "pt": "pt/estatisticas-turismo-budapeste/index.html",
+    "ru": "ru/statistika-turizma-budapesht/index.html",
+    "hr": "hr/statistika-turizma-budimpesta/index.html",
+    "sr": "sr/statistika-turizma-budimpesta/index.html",
+    "bg": "bg/statistika-turizam-budapeshta/index.html",
+    "el": "el/statistika-tourismou-voudapesti/index.html",
+    "tr": "tr/budapeste-turizm-istatistikleri/index.html",
+    "uk": "uk/statystyka-turyzmu-budapesht/index.html",
+    "he": "he/statistikat-tayarut-budapest/index.html",
+    "ja": "ja/budapesuto-kanko-tokei/index.html",
+    "ko": "ko/budapeseuteu-gwangwang-tonggye/index.html"
+  },
+  "footer_starts": [
+    "<footer class=\"footer-dark ltt-footer\"[^>]*>",
+    "<section class=\"footer-dark\"[^>]*>(?=\\s*<div class=\"footer-section\">)",
+    "<footer class=\"footer-dark\"[^>]*>"
+  ],
+  "footer_marker": "class=\"footer-dark",
+  "footer_link_class": "footer-link-3",
+  "sync_blocks": [
+    {
+      "name": "nav-css",
+      "open": "<style id=\"ltt-nav-styles\">",
+      "insert": "head"
+    },
+    {
+      "name": "nav-js",
+      "open": "<script id=\"ltt-nav-script\">",
+      "insert": "after-header",
+      "skip_if": [
+        "getElementById\\(['\"]lttNavToggle['\"]\\)",
+        "/js/ltt-nav\\.js"
+      ]
+    },
+    {
+      "name": "lang-css",
+      "open": "<style id=\"ltt-language-switcher-styles\">",
+      "insert": "head"
+    },
+    {
+      "name": "lang-js",
+      "open": "<script id=\"ltt-language-switcher-logic\">",
+      "insert": "body"
+    },
+    {
+      "name": "footer-css",
+      "open": "<style id=\"bpa-new-footer\">",
+      "insert": "head"
+    }
+  ],
+  "unlisted_ok": [
+    "404.html",
+    "embed/"
+  ],
+  "skip_dirs": [
+    "node_modules",
+    "test",
+    "reports",
+    "drafts"
+  ]
+}

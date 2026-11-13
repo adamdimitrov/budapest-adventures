@@ -76,7 +76,7 @@ window.addEventListener('load', function() {
 </a>
 <nav aria-label="Primary Navigation" class="ltt-nav-links">
 <div class="ltt-nav-dropdown" id="lttExploreDropdown">
-<button aria-expanded="false" aria-haspopup="true" aria-label="Navigation Dropdown Menu" class="ltt-nav-link ltt-dropdown-btn" type="button">
+<button aria-current="true" aria-expanded="false" aria-haspopup="true" aria-label="Navigation Dropdown Menu" class="ltt-nav-link ltt-dropdown-btn active" type="button">
 <span>Felfedezés</span>
 <svg class="ltt-chevron" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12">
 <polyline points="6 9 12 15 18 9"></polyline>
@@ -109,7 +109,7 @@ window.addEventListener('load', function() {
 <p>Exkluzív dunai jachtok és vízi taxik</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/hu/budapest-nagy-csoportos-hajokirandulas">
+<a aria-current="page" class="ltt-mega-item active" href="/hu/budapest-nagy-csoportos-hajokirandulas">
 <div>
 <strong>Csoportos Hajózás</strong>
 <p>Külön fedélzet és hajóbérlés (20 és 250+ fő között)</p>
@@ -189,6 +189,7 @@ window.addEventListener('load', function() {
 <a class="ltt-nav-link" href="/hu/setahajozas-a-dunan-vacsoraval">Vacsorahajók</a>
 </nav>
 <div class="ltt-nav-right">
+<button aria-label="Keresés" class="ltt-search-btn" data-ltt-search="" title="Keresés" type="button"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24" width="17"><circle cx="11" cy="11" r="7"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg></button>
 <div class="ltt-lang-trigger" id="lttLangTrigger">
 <button aria-expanded="false" aria-haspopup="true" aria-label="Select Language" class="ltt-lang-btn" id="lttLangBtn" onclick="window.lttToggleLangDropdown()" type="button">
 <svg class="ltt-lang-globe" fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="13">
@@ -320,7 +321,7 @@ window.addEventListener('load', function() {
 <a class="ltt-mobile-link" href="/hu/legjobb-privát-hajókirándulások-budapest">
 <span>Privát Hajóbérlés</span>
 </a>
-<a class="ltt-mobile-link" href="/hu/budapest-nagy-csoportos-hajokirandulas">
+<a aria-current="page" class="ltt-mobile-link active" href="/hu/budapest-nagy-csoportos-hajokirandulas">
 <span>Csoportos Hajózás</span>
 </a>
 </div>
@@ -471,6 +472,14 @@ window.addEventListener('load', function() {
 </div></div>
 </div>
 <!-- MOBILE DRAWER LANGUAGE SECTION -->
+<style id="ltt-search-btn-styles">
+.ltt-search-btn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;border-radius:9999px;border:1px solid #cbd5e1;background:#f8fafc;color:#0f172a;cursor:pointer;flex-shrink:0;transition:all .2s cubic-bezier(.16,1,.3,1)}
+.ltt-search-btn:hover,.ltt-search-btn:focus-visible{background:#fff;border-color:#dfa732;box-shadow:0 4px 12px rgba(223,167,50,.18);outline:none}
+.ltt-search-btn svg{color:#64748b}.ltt-search-btn:hover svg{color:#9f6e0d}
+@media (max-width:991px){.ltt-search-btn{width:42px;height:42px;border-radius:10px;border-color:#e2e8f0;background:transparent}}
+@media (max-width:420px){.ltt-search-btn{width:36px;height:36px}.ltt-nav-right{gap:8px!important}.ltt-brand{font-size:13px!important;letter-spacing:.02em!important;gap:8px!important}}
+</style>
+<script defer src="/js/site-search.js?v=20261113a"></script>
 </header><div class="hero-image-wrapper"><img alt="A Dunán hajózó folyami hajó a kivilágított Országház előtt" class="hero-image" fetchpriority="high" height="534" loading="eager" sizes="(max-width: 1280px) 100vw, 1280px" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest.webp" srcset="/assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest-p-800.webp 800w, /assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest-p-1080.webp 1080w, /assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest.webp 1280w" width="800"/></div><div class="w-layout-blockcontainer container w-container"><div class="w-richtext"><h1>Hajókirándulás Budapesten Csoportos Foglalási Űrlap</h1><blockquote>Ne zsonglőrködj a csoportos hajóutazási árajánlatokkal. Egy e-mail. Egy árajánlat. Kész.</blockquote><p><strong>Csoportos utazások tervezése káosz:</strong><br/>❌ Árajánlatok beszerzése 10 különböző cégtől <br/>❌ Aggódsz, hogy túl sokat fizetsz <br/>❌ Nem vagyok benne biztos, hogy melyik hajóút a jó <br/>❌ Több mint 30 ember preferenciáinak összehangolása</p><p><strong>Budapesti hajóutak specialistája</strong> vagyok, közvetlen partnerségben állok a Duna minden nagyobb hajózási társaságával.</p><p>Személyesen minden általam ajánlott hajóúton részt vettem.</p><p><strong>Így működik:</strong><br/>✅ Mondd el a csoport létszámát és a kívánt dátumot <br/>✅ Én intézem az összes logisztikát</p><p>Nincs stressz. Nincs találgatás. Csak egy tökéletes csoportos élmény a Dunán.</p><p><strong>Ingyenes árajánlatot szeretne kérni csoportja számára?</strong></p></div><div class="form-block w-form"><form action="https://formsubmit.co/adam.dimitrov.business@gmail.com" id="email-form" method="POST" name="email-form"><input autocomplete="off" name="_gotcha" style="position:absolute;left:-9999px;opacity:0;width:1px;height:1px" tabindex="-1" type="text"/><input name="_subject" type="hidden" value="[Budapest Adventures] Group cruise request (HU)"/><input name="_template" type="hidden" value="table"/><input name="_captcha" type="hidden" value="false"/><input name="language" type="hidden" value="hu"/><div class="field-wrap"><label class="display-normal" for="Name-Touch">Az Ön neve</label><input class="text-field-2 w-input" data-name="Name (Touch)" id="Name-Touch" maxlength="256" name="name" required="" placeholder="" type="text"/></div><div class="field-wrap"><label class="display-normal" for="Email-Touch">Az Ön e-mailje</label><input class="text-field-2 w-input" data-name="Email (Touch)" id="Email-Touch" maxlength="256" name="email" required="" placeholder="" type="email"/></div><div class="field-wrap"><label class="display-normal" for="Message-Touch">Az Ön üzenete</label><textarea class="text-field-large w-input" data-name="Message (Touch)" id="Message-Touch" maxlength="5000" name="message" required="" placeholder=""></textarea></div><div class="button-wrap-right"><input class="buy-button-2 w-button" data-wait="Kérem, várjon..." type="submit" value="ÜZENET KÜLDÉSE"/></div></form><div class="w-form-done"><div>Köszönöm! Beadványa megérkezett!</div></div><div class="w-form-fail"><div>Hoppá! Hiba történt az űrlap elküldésekor.</div></div></div></div><footer class="footer-dark ltt-footer" role="contentinfo">
 <div class="footer-wrapper">
 <div class="footer-content">

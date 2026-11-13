@@ -169,6 +169,7 @@
 <a class="ltt-nav-link" href="/hu/setahajozas-a-dunan-vacsoraval">Vacsorahajók</a>
 </nav>
 <div class="ltt-nav-right">
+<button aria-label="Keresés" class="ltt-search-btn" data-ltt-search="" title="Keresés" type="button"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24" width="17"><circle cx="11" cy="11" r="7"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg></button>
 <div class="ltt-lang-trigger" id="lttLangTrigger">
 <button aria-expanded="false" aria-haspopup="true" aria-label="Select Language" class="ltt-lang-btn" id="lttLangBtn" onclick="window.lttToggleLangDropdown()" type="button">
 <svg class="ltt-lang-globe" fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="13">
@@ -183,7 +184,7 @@
 </button>
 <div aria-label="Select Language" class="ltt-lang-dropdown" id="lttLangDropdown" role="menu">
 <div class="ltt-lang-dropdown-header">
-<span>Válasszon nyelvet</span>
+<span>Nyelvválasztás</span>
 <span style="font-size:9px; color:#10b981; font-weight:800;">● 22 ELÉRHETŐ</span>
 </div>
 <div class="ltt-lang-grid-menu">
@@ -346,7 +347,7 @@
 </div>
 <div class="ltt-mobile-section">
 <div class="ltt-mobile-label">Szerkesztőség</div>
-<a class="ltt-mobile-link" href="/hu/rolunk">
+<a aria-current="page" class="ltt-mobile-link active" href="/hu/rolunk">
 <span>Rólunk és Etikai Kódex</span>
 </a>
 <a class="ltt-mobile-link" href="/hu/kapcsolat">
@@ -451,6 +452,14 @@
 </div></div>
 </div>
 <!-- MOBILE DRAWER LANGUAGE SECTION -->
+<style id="ltt-search-btn-styles">
+.ltt-search-btn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;border-radius:9999px;border:1px solid #cbd5e1;background:#f8fafc;color:#0f172a;cursor:pointer;flex-shrink:0;transition:all .2s cubic-bezier(.16,1,.3,1)}
+.ltt-search-btn:hover,.ltt-search-btn:focus-visible{background:#fff;border-color:#dfa732;box-shadow:0 4px 12px rgba(223,167,50,.18);outline:none}
+.ltt-search-btn svg{color:#64748b}.ltt-search-btn:hover svg{color:#9f6e0d}
+@media (max-width:991px){.ltt-search-btn{width:42px;height:42px;border-radius:10px;border-color:#e2e8f0;background:transparent}}
+@media (max-width:420px){.ltt-search-btn{width:36px;height:36px}.ltt-nav-right{gap:8px!important}.ltt-brand{font-size:13px!important;letter-spacing:.02em!important;gap:8px!important}}
+</style>
+<script defer src="/js/site-search.js?v=20261113a"></script>
 </header>
 <!-- Mobile Drawer -->
 <div aria-hidden="true" class="ltt-mobile-drawer" id="lttMobileDrawer" inert="">
