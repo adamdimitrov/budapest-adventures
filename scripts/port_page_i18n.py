@@ -311,7 +311,9 @@ def translate(strings, lang, cache_path, dry_run):
 
 
 def tags_of(h):
-    return sorted(re.findall(r"<[^>]+>", h))
+    """Tags with translatable attribute values blanked, so translated tooltips/alt text still match."""
+    norm = lambda t: re.sub(r'\b(%s)="[^"]*"' % "|".join(ATTRS), r'\1=""', t)
+    return sorted(norm(t) for t in re.findall(r"<[^>]+>", h))
 
 
 # ---------------------------------------------------------------- build
