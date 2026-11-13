@@ -17,9 +17,8 @@ What it syncs on each published page (sitemap.xml URLs) of the given languages:
   * the footer (new <footer class="ltt-footer"> or the old Webflow
     <section class="footer-dark"><div class="footer-section">) plus the
     <style id="bpa-new-footer"> rules it needs
-The language switcher on each page keeps the master's languages (EN/HU), but
-its links point at that page's own EN/HU versions (from its hreflang tags),
-falling back to the language homepage.
+The language switcher on the tourism statistics pages keeps EN/HU only, while
+all other published pages retain their full 22-language switcher.
 """
 import argparse
 import json
@@ -39,6 +38,8 @@ PAT_SCRIPT = re.compile(r'<script id="ltt-nav-script">.*?</script>', re.S)
 PAT_FOOTER_NEW = re.compile(r'<footer class="footer-dark ltt-footer".*?</footer>', re.S)
 PAT_FOOTER_OLD = re.compile(r'<section class="footer-dark">\s*<div class="footer-section">.*?</section>', re.S)
 PAT_FOOTER_CSS = re.compile(r'<style id="bpa-new-footer">.*?</style>', re.S)
+DROP_PAT = re.compile(r'<div[^>]*id="lttLangDropdown"[^>]*>.*?</div>\s*</div>', re.S)
+BOX_PAT = re.compile(r'<div class="ltt-mobile-lang-box">.*?</div>\s*</div>', re.S)
 LINGUANA_CSS = '<link href="https://static.linguana.io/public/linguana_switcher.min.css" rel="stylesheet" type="text/css"/>'
 
 
@@ -89,14 +90,41 @@ def replace_once(s, pat, new):
     return s[:m.start()] + new + s[m.end():], True
 
 
-def sync_page(s, master, alt):
+def sync_page(s, master, alt, is_stats=False):
     changed = []
     for name, pat in (("nav-styles", PAT_STYLE), ("nav-script", PAT_SCRIPT)):
         s2, ok = replace_once(s, pat, pat.search(master).group())
         if ok and s2 != s:
             changed.append(name)
         s = s2
-    hdr = point_switcher(PAT_HEADER.search(master).group(), alt)
+
+    hdr = PAT_HEADER.search(master).group()
+    if is_stats:
+        hdr = point_switcher(hdr, alt)
+    else:
+        target_drop = DROP_PAT.search(s)
+        target_box = BOX_PAT.search(s)
+        if target_drop and target_box:
+            hdr = DROP_PAT.sub(lambda m: target_drop.group(0), hdr, count=1)
+            hdr = BOX_PAT.sub(lambda m: target_box.group(0), hdr, count=1)
+        else:
+            hdr = re.sub(
+                r'<div class="ltt-lang-trigger" id="lttLangTrigger">.*?</div>\s*</div>\s*</div><button',
+                '<button',
+                hdr, flags=re.S
+            )
+            hdr = re.sub(
+                r'<div class="ltt-nav-actions">.*?</div>\s*</div>\s*</div><button aria-controls="lttMobileDrawer"',
+                '<div class="ltt-nav-right">\n<button aria-controls="lttMobileDrawer"',
+                hdr, flags=re.S
+            )
+            hdr = re.sub(
+                r'<div class="ltt-mobile-lang-box">.*?<!-- MOBILE DRAWER LANGUAGE SECTION -->\s*</header>',
+                '</div>\n</div>\n</header>',
+                hdr, flags=re.S
+            )
+            hdr = BOX_PAT.sub('', hdr)
+
     s2, ok = replace_once(s, PAT_HEADER, hdr)
     if not ok:
         raise ValueError("no ltt-navbar header")
@@ -149,8 +177,9 @@ def main():
         lg = page_lang(s)
         if lg not in langs or f == MASTERS[lg]:
             continue
+        is_stats = "statisztik" in f or "statistics" in f
         try:
-            new, changed = sync_page(s, masters[lg], alternates(s))
+            new, changed = sync_page(s, masters[lg], alternates(s), is_stats=is_stats)
         except ValueError as e:
             errors.append(f"{f}: {e}")
             continue
