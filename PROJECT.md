@@ -4,7 +4,7 @@
 - **Staging Platform**: Dedicated branch `staging/static-overhaul`, configured for local Python-based preview and instant Vercel staging deployment. Live production DNS (`35.187.176.9` / Linguana / Webflow) remains 100% untouched.
 - **Routing Engine**: Modern `vercel.json` using `cleanUrls: true`, `trailingSlash: false`, explicit `redirects` (HTTP 301 for pruned Linguana zombie routes, old slugs), `rewrites` (serving core HTML money hubs at clean semantic paths), and strict security headers.
 - **Preview Engine**: Zero-dependency `preview_server.py` implementing exact `vercel.json` route resolution for instant local verification.
-- **Tracking Pipeline**: `bpa-tracking.js` capturing UTMs, `gclid`, `fbclid`, and `_fbp` into dual cookies + localStorage, universally decorating outbound TourCMS/Legenda (`agent_ref=38585`) and Tiqets (`budapestadventures`) links, and firing Meta Pixel (`1355732169631751`) `InitiateCheckout` events with 25% net commission value.
+- **Tracking Pipeline**: `bpa-tracking.js` capturing UTMs, `gclid`, `fbclid`, and `_fbp` into dual cookies + localStorage, decorating outbound Legenda (`partner=38585` only, no subid), Silverline (`code=bpadventures` only) and Tiqets (`budapestadventures`) links, and firing Meta Pixel (`1355732169631751`) `InitiateCheckout` events with 25% net commission value.
 - **SEO & Canonical Architecture**: Strict semantic HTML5 IDs, zero `#` fragments in canonical tags, self-referencing canonicals pointing to clean root URLs, and `sitemap.xml` strictly indexing canonical URLs across the 21 GSC active traffic languages (`en`, `hu`, `ro`, `ja`, `it`, `fr`, `pl`, `cs`, `hr`, `ru`, `el`, `bg`, `es`, `sr`, `he`, `pt`, `sk`, `tr`, `uk`, `de`, `ko`).
 
 ## Code Layout
