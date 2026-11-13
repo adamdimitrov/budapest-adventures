@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-FORMSUBMIT = "https://formsubmit.co/el/vojuru"
+FORMSUBMIT = "https://formsubmit.co/adam.dimitrov.business@gmail.com"
 PAGES = [
     "bg/grupovi-rezervatsii-kruiz-budapeshta", "cs/skupinova-rezervace-plavby-budapest",
     "de/gruppenbuchung-bootsfahrt-budapest", "el/omadikes-kratiseis-krouaziera-voudapesti",
