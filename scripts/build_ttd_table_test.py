@@ -140,6 +140,7 @@ def card(i, r):
 <div class="bpa-cta-cell">
 <div><div class="bpa-price">{esc(r["price"])}</div><div class="bpa-psub">{esc(r["psub"])}</div></div>
 <a class="bpa-btn" href="{esc(cta_url)}"{link_attrs(cta_url)}>{esc(cta_label)}</a>
+<a class="bpa-sublink" href="#{r["sid"]}" hidden aria-hidden="true" tabindex="-1"></a>
 <a class="bpa-sublink" href="{esc(sub_url)}"{link_attrs(sub_url)}>{esc(sub_label)}</a>
 </div>
 </div>
@@ -165,8 +166,9 @@ CSS = """<style id="ttd-deck-mock">
 def main():
     s = SRC.read_text()
     styles = STYLE_SRC.read_text()
-    for sid in ("ltt-hero-card-styles", "ltt-dubai-safari-styles"):
-        m = re.search(r'<style id="%s">.*?</style>' % sid, styles, re.S)
+    stats = (ROOT / "budapest-tourism-statistics.html").read_text()
+    for src, sid in ((stats, "ltt-hero-card-styles"), (styles, "ltt-dubai-safari-styles")):
+        m = re.search(r'<style id="%s">.*?</style>' % sid, src, re.S)
         assert m, sid
         s = s.replace("</head>", m.group(0) + "</head>", 1)
     s = s.replace("</head>", CSS + '<meta name="robots" content="noindex, nofollow"/></head>', 1)
@@ -176,20 +178,18 @@ def main():
     pills = "".join(
         f'<button class="ltt-tab-btn{" active" if c == "all" else ""}" data-cat="{c}" onclick="lttFilterItems(\'{c}\', this)" type="button">{l} ({counts[c]})</button>'
         for c, l in FILTERS)
-    deck = ('<div class="ttd-deck-head"><h2 id="compare-at-a-glance">Compare all 10 at a glance</h2>'
-            '<p>Cost, time needed, ratings and the best time to go, from my own visits. Filter by what fits your day.</p>'
-            f'<div class="ltt-integrated-filter-bar"><span class="ltt-filter-label">Filters:</span><div class="ltt-integrated-pills">{pills}</div></div></div>'
-            '<div class="comparison-table"><div class="container-27"><div class="ltt-deck-container" id="ttd-deck"><div class="bpa-deck-wrap" id="ltt-cards-deck">'
+    hero = f'''<div class="ltt-hero-wrap"> <div class="ltt-clean-card"> <div class="ltt-top-bar"> <nav aria-label="Breadcrumb" class="ltt-breadcrumbs"> <a href="/">Home</a> <span class="ltt-bc-sep">›</span> <span class="ltt-bc-current">Top 10 Things to Do in Budapest (2026)</span> </nav> <span class="ltt-hero-kicker-badge">Local's Guide · 10 Visited in Person</span> </div> <h1 class="ltt-editorial-h1"> Top 10 Best Things to Do in Budapest in 2026 <span class="ltt-h1-muted">(Local's Guide)</span> </h1> <div class="ltt-trust-bar"> <div class="ltt-author-cluster"> <div class="ltt-author-avatar-wrap"> <img alt="Adam Dimitrov" class="ltt-author-avatar" height="48" loading="eager" src="/assets/adam-dimitrov.webp" width="48"/> </div> <div class="ltt-author-meta"> <div class="ltt-author-line"> By <a href="/about" target="_blank">Adam Dimitrov</a> · Founder &amp; Local Budapest Guide </div> <div class="ltt-author-role">Every stop visited in person • Own photos • Booking ratings checked Nov 13, 2026</div> </div> </div> <div class="ltt-trust-pills"> <span class="ltt-trust-pill paragraph-26"><strong>Last updated</strong>: Nov 13, 2026</span> </div> </div> <div class="ltt-lead-copy"> <p>Feeling overwhelmed by endless lists of things to do in Budapest? This one is <strong>written by a local</strong>: I have spent years exploring my hometown and <strong>personally tested every attraction</strong> on it, with my own photos and practical tips.</p> <p>These are the <strong>10 I would pick for a first visit</strong>, ranked by quality, uniqueness and value for your time. Compare cost, time needed and ratings below, or filter for free sights, evening plans or a rainy day.</p> <p class="bprv-callout" style="margin:14px 0 4px 0 !important;padding:12px 16px !important;background:#fdfaf2 !important;border:1px solid #f2e0b6 !important;border-left:4px solid #dfa732 !important;border-radius:10px !important;font-size:15px !important;line-height:1.55 !important;color:#0f172a !important;"><strong>Only one evening?</strong> Take a Danube cruise after dark: Parliament, Buda Castle and the bridges lit up in about an hour. <a href="/best-budapest-river-cruises">Compare the 10 best river cruises →</a></p> <figure class="cd-bookmark-wrapper"> <a href="/budapest-attractions/budapest-parliament" class="cd-editorial-bookmark" target="_blank" rel="noopener"> <div class="cd-editorial-body"> <div> <div class="cd-editorial-title">Budapest Parliament Tour 2026 (Tickets, Prices &amp; Tips)</div> <div class="cd-editorial-desc">Official 2026 ticket prices, opening hours, tour languages and how to avoid sell-outs for the tour 700,000 people take each year, from my own visits.</div> </div> <div class="cd-editorial-meta"> <img class="cd-editorial-icon" src="/assets/budapest-adventures-logo-96.webp" alt="BUDAPEST ADVENTURES" width="18" height="18" /> <span class="cd-editorial-pub">BUDAPEST ADVENTURES</span> <span class="cd-editorial-dot">•</span> <span class="cd-editorial-author">Adam Dimitrov</span> </div> </div> <div class="cd-editorial-thumb"> <img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/650c1f90c059d2467627bad9_budapest-parliament-hero-image.webp" alt="Budapest Parliament Tour 2026" loading="lazy" /> </div> </a> </figure> </div> <div class="ltt-integrated-filter-bar"><span class="ltt-filter-label">Filters:</span><div class="ltt-integrated-pills">{pills}</div></div> </div> </div>'''
+    deck = ('<div class="comparison-table"><div class="container-27"><div class="ltt-deck-container" id="ttd-deck"><div class="bpa-deck-wrap" id="ltt-cards-deck">'
             + "".join(card(i + 1, r) for i, r in enumerate(ROWS)) + '</div></div></div></div>')
 
-    anchor = '<div class="blog-section">'
-    assert s.count(anchor) == 1
-    s = s.replace(anchor, deck + anchor, 1)
-    m = re.search(r'<div class="bpa-at-a-glance".*?</ol>\s*</div>', s, re.S)
-    assert m
-    s = s.replace(m.group(0), "", 1)
+    # new hero card + deck replace the old hero image, author block, intro and "At a glance" box
+    start = s.index('<div class="hero-image-wrapper">')
+    end = s.index('<div class="blog-section">')
+    old = s[start:end]
+    assert "bpa-at-a-glance" in old and "Are you feeling overwhelmed" in old
+    s = s[:start] + hero + deck + s[end:]
 
-    cfg = {"deckId": "compare-at-a-glance", "tocDeckLabel": "Compare all 10 at a glance",
+    cfg = {"deckId": "ttd-deck", "tocDeckLabel": "Compare all 10 at a glance",
            "tocBreakdownLabel": "The 10 in detail", "shortTitles": [r["name"] for r in ROWS]}
     s = s.replace("</head>", "<script>window.LTT_PAGE_CONFIG = " + json.dumps(cfg, ensure_ascii=False) + ";</script></head>", 1)
     first = '<details class="bpa-details-card" id="section-1-'
