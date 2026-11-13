@@ -29,7 +29,7 @@ Copy that file as the starting point for every new statistics page. Do not inven
 ## 2. Page structure (match the reference page)
 
 1. Header (menu) and footer: identical to the reference page. Copy them verbatim. Do not restyle, add CTAs or change links.
-   Standards: dropdown labelled "Explore" (HU: "Felfedezés"), language switcher EN and HU only,
+   Standards: dropdown labelled "Explore" (HU: "Felfedezés"), full 22-language switcher,
    no "Top 10 Cruises" button, footer = five cruise pages (river, dinner, night, prosecco, private boat tours) + About + Contact.
    If `scripts/sync_layout.py` exists on your branch, run `python3 scripts/sync_layout.py --langs en,hu` before finishing;
    `--check` must report no drift.
@@ -57,14 +57,20 @@ Copy that file as the starting point for every new statistics page. Do not inven
 - Add the new URL to `sitemap.xml` (both languages).
 - No console errors, no horizontal scroll on mobile (375px), all TOC links jump to the right section.
 
-## 4. Hungarian version
+## 4. Other languages
+
+The EN page is the source for the other 20 languages. After changing it, run
+`python3 scripts/build_stats_i18n.py extract`, translate the new or changed ids in
+`data/i18n/stats/<lang>.json` (`check` lists them), then `build` and `python3 scripts/build_stats_embeds.py`.
+
+## 5. Hungarian version
 
 - Write the HU page as a native Hungarian text, not a word-for-word translation. Numbers use Hungarian format
   (`4,68 millió`, `14,2%`, space as thousands separator: `1 234 567`).
 - HU URL lives under `hu/<hungarian-slug>/index.html`. Keep the same charts and tables, translate labels and the source notes.
 - Brand names stay in their original form (see rule 6).
 
-## 5. Workflow
+## 6. Workflow
 
 1. Work on a new branch in a git worktree, never directly on `main` and never in a checkout another session is using.
 2. Collect the data first: build a small table (figure, value, unit, period, source URL, table ID) and show it to the user

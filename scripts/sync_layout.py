@@ -17,8 +17,8 @@ What it syncs on each published page (sitemap.xml URLs) of the given languages:
   * the footer (new <footer class="ltt-footer"> or the old Webflow
     <section class="footer-dark"><div class="footer-section">) plus the
     <style id="bpa-new-footer"> rules it needs
-The language switcher on the tourism statistics pages keeps EN/HU only, while
-all other published pages retain their full 22-language switcher.
+Every page keeps its own 22-language switcher (the links point at that page's
+translations); only the rest of the menu comes from the master.
 """
 import argparse
 import json
@@ -177,7 +177,7 @@ def main():
         lg = page_lang(s)
         if lg not in langs or f == MASTERS[lg]:
             continue
-        is_stats = "statisztik" in f or "statistics" in f
+        is_stats = False  # stats pages keep their own 22-language switcher like every other page
         try:
             new, changed = sync_page(s, masters[lg], alternates(s), is_stats=is_stats)
         except ValueError as e:
