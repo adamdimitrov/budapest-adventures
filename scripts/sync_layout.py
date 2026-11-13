@@ -17,6 +17,8 @@ What it syncs on each published page (sitemap.xml URLs) of the given languages:
   * the footer (new <footer class="ltt-footer"> or the old Webflow
     <section class="footer-dark"><div class="footer-section">) plus the
     <style id="bpa-new-footer"> rules it needs
+  * <style id="ltt-language-switcher-styles"> (without it the language
+    dropdown renders as a raw list of 22 links in the header)
 Every page keeps its own 22-language switcher (the links point at that page's
 translations); only the rest of the menu comes from the master.
 """
@@ -38,6 +40,7 @@ PAT_SCRIPT = re.compile(r'<script id="ltt-nav-script">.*?</script>', re.S)
 PAT_FOOTER_NEW = re.compile(r'<footer class="footer-dark ltt-footer".*?</footer>', re.S)
 PAT_FOOTER_OLD = re.compile(r'<section class="footer-dark">\s*<div class="footer-section">.*?</section>', re.S)
 PAT_FOOTER_CSS = re.compile(r'<style id="bpa-new-footer">.*?</style>', re.S)
+PAT_LANG_CSS = re.compile(r'<style id="ltt-language-switcher-styles">.*?</style>', re.S)
 DROP_PAT = re.compile(r'<div[^>]*id="lttLangDropdown"[^>]*>.*?</div>\s*</div>', re.S)
 BOX_PAT = re.compile(r'<div class="ltt-mobile-lang-box">.*?</div>\s*</div>', re.S)
 LINGUANA_CSS = '<link href="https://static.linguana.io/public/linguana_switcher.min.css" rel="stylesheet" type="text/css"/>'
@@ -144,14 +147,16 @@ def sync_page(s, master, alt, is_stats=False):
         changed.append("footer")
     s = s2
 
-    css = PAT_FOOTER_CSS.search(master).group()
-    if PAT_FOOTER_CSS.search(s):
-        s2, _ = replace_once(s, PAT_FOOTER_CSS, css)
-    else:
-        s2 = s.replace("</head>", css + "</head>", 1)
-    if s2 != s:
-        changed.append("footer-css")
-    return s2, changed
+    for name, pat in (("footer-css", PAT_FOOTER_CSS), ("lang-css", PAT_LANG_CSS)):
+        css = pat.search(master).group()
+        if pat.search(s):
+            s2, _ = replace_once(s, pat, css)
+        else:
+            s2 = s.replace("</head>", css + "</head>", 1)
+        if s2 != s:
+            changed.append(name)
+        s = s2
+    return s, changed
 
 
 def main():
