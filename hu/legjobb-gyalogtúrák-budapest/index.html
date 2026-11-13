@@ -88,7 +88,7 @@ html body .reviews *,html body .reviews-4 *{white-space:normal!important}
 </a>
 <nav aria-label="Primary Navigation" class="ltt-nav-links">
 <div class="ltt-nav-dropdown" id="lttExploreDropdown">
-<button aria-expanded="false" aria-haspopup="true" aria-label="Navigation Dropdown Menu" class="ltt-nav-link ltt-dropdown-btn" type="button">
+<button aria-current="true" aria-expanded="false" aria-haspopup="true" aria-label="Navigation Dropdown Menu" class="ltt-nav-link ltt-dropdown-btn active" type="button">
 <span>Felfedezés</span>
 <svg class="ltt-chevron" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12">
 <polyline points="6 9 12 15 18 9"></polyline>
@@ -155,7 +155,7 @@ html body .reviews *,html body .reviews-4 *{white-space:normal!important}
 <p>Széchenyi, Gellért, Rudas és Lukács</p>
 </div>
 </a>
-<a class="ltt-mega-item" href="/hu/legjobb-gyalogtúrák-budapest">
+<a aria-current="page" class="ltt-mega-item active" href="/hu/legjobb-gyalogtúrák-budapest">
 <div>
 <strong>Legjobb Gyalogtúrák</strong>
 <p>Várnegyed és Zsidó Negyed gasztroséták</p>
@@ -201,6 +201,7 @@ html body .reviews *,html body .reviews-4 *{white-space:normal!important}
 <a class="ltt-nav-link" href="/hu/setahajozas-a-dunan-vacsoraval">Vacsorahajók</a>
 </nav>
 <div class="ltt-nav-right">
+<button aria-label="Keresés" class="ltt-search-btn" data-ltt-search="" title="Keresés" type="button"><svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24" width="17"><circle cx="11" cy="11" r="7"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg></button>
 <div class="ltt-lang-trigger" id="lttLangTrigger">
 <button aria-expanded="false" aria-haspopup="true" aria-label="Select Language" class="ltt-lang-btn" id="lttLangBtn" onclick="window.lttToggleLangDropdown()" type="button">
 <svg class="ltt-lang-globe" fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="13">
@@ -353,7 +354,7 @@ html body .reviews *,html body .reviews-4 *{white-space:normal!important}
 <a class="ltt-mobile-link" href="/hu/legjobb-termalfurdok-budapest">
 <span>8 Legjobb Termálfürdő</span>
 </a>
-<a class="ltt-mobile-link" href="/hu/legjobb-gyalogtúrák-budapest">
+<a aria-current="page" class="ltt-mobile-link active" href="/hu/legjobb-gyalogtúrák-budapest">
 <span>Legjobb Gyalogtúrák</span>
 </a>
 <a class="ltt-mobile-link" href="/hu/budapest-attractions/budapest-parlament">
@@ -483,6 +484,14 @@ html body .reviews *,html body .reviews-4 *{white-space:normal!important}
 </div></div>
 </div>
 <!-- MOBILE DRAWER LANGUAGE SECTION -->
+<style id="ltt-search-btn-styles">
+.ltt-search-btn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;border-radius:9999px;border:1px solid #cbd5e1;background:#f8fafc;color:#0f172a;cursor:pointer;flex-shrink:0;transition:all .2s cubic-bezier(.16,1,.3,1)}
+.ltt-search-btn:hover,.ltt-search-btn:focus-visible{background:#fff;border-color:#dfa732;box-shadow:0 4px 12px rgba(223,167,50,.18);outline:none}
+.ltt-search-btn svg{color:#64748b}.ltt-search-btn:hover svg{color:#9f6e0d}
+@media (max-width:991px){.ltt-search-btn{width:42px;height:42px;border-radius:10px;border-color:#e2e8f0;background:transparent}}
+@media (max-width:420px){.ltt-search-btn{width:36px;height:36px}.ltt-nav-right{gap:8px!important}.ltt-brand{font-size:13px!important;letter-spacing:.02em!important;gap:8px!important}}
+</style>
+<script defer src="/js/site-search.js?v=20261113a"></script>
 </header><div class="navigation-mob w-nav" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease-out" data-easing2="ease-out" role="banner"><div class="navigation-container-mob"><a class="w-nav-brand" href="/hu"><div class="logo-text">Budapesti <span class="text-span-3">kalandok</span></div></a><nav class="mobile-nav w-nav-menu" role="navigation"><a class="link-block-menu w-nav-link" href="/hu">Főoldal</a><div class="mobile-dropdown w-dropdown" data-delay="0" data-hover="false"><div class="dropdown-toggle-4 w-dropdown-toggle"><div class="chevron w-icon-dropdown-toggle"></div><div>Látniválók</div></div><nav class="dropdown-list w-dropdown-list"><a class="dropdown-link-mob link-block-2 link-block-3 w-inline-block" href="/hu/setahajozas-a-dunan-budapest"><div class="icon-square"><img alt="Fekete-fehér fénykép egy óratoronyról" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/635fe6f7d17a750a289da619_cruise-ship.webp"/></div><div class="nav-content-wrap-2"><div class="dropdown-title-2 colour-1">A 10 Legjobb Dunai Városnéző Sétahajó Budapesten</div><div class="nav-link-details">A látnivalók megtekintésének legjobb módja.</div></div></a></nav></div><a class="link-block-menu w-nav-link" href="#">Blog</a><a class="link-block-menu w-nav-link" href="/hu/rolunk">Körülbelül</a></nav><div class="menu-mob w-nav-button"><div class="icon-6 w-icon-nav-menu"></div></div></div></div><div class="navigation-4 w-nav" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner"><div class="navigation-container-2"><div class="navigation-left"><a class="brand-3 w-nav-brand" href="/hu"><div class="logo-text">Budapest <span class="text-span-3"></span></div></a><nav class="nav-menu-5 w-nav-menu" role="navigation"><a class="link-block-menu w-inline-block" href="/hu"><div>Főoldal</div></a><div class="dropdown-menu w-dropdown" data-delay="0" data-hover="true"><div class="dropdown-toggle-3 w-dropdown-toggle"><div class="chevron w-icon-dropdown-toggle"></div><div class="text-block-21">Tennivalók / Látnivalók</div></div><nav class="navigation-dropdown-2 w-dropdown-list"><div class="dropdown-pointer"><div class="dropdown-wrapper-2"><a class="dropdown-link-2 w-inline-block" href="/hu/setahajozas-a-dunan-budapest"><div class="icon-square"><img alt="Fekete-fehér fénykép egy óratoronyról" class="image-27" decoding="async" height="Auto" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/635fe6f7d17a750a289da619_cruise-ship.webp" width="Auto"/></div><div class="nav-content-wrap-2"><div class="dropdown-title-2 colour-1">A 10 Legjobb Dunai Városnéző Sétahajó Budapesten</div><div class="nav-link-details">A látnivalók megtekintésének legjobb módja.</div></div></a></div><div class="pointer-2"></div></div></nav></div><a class="link-block-menu w-inline-block" href="#"><div>Blog</div></a><a class="link-block-menu w-inline-block" href="/hu/rolunk"><div>Körülbelül</div></a></nav></div><div class="navigation-right-2"></div></div></div><div class="ps_outer"><div class="ps_container" ms-code-ps="container"><div class="ps_bar" ms-code-ps="bar"></div></div><div class="hide w-embed w-script"><!-- 💙 MEMBERSCRIPT #117 v0.1 💙 - PAGE SCROLL PROGRESS BAR -->
 <script>
   // Function to update the progress bar
