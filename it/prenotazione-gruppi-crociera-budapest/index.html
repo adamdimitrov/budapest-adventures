@@ -1025,10 +1025,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const btnEl = activeBlock.querySelector('.main-buy-button, .buy-button-2');
 
             if (nameEl && btnEl) {
-                const currentName = '👉 ' + nameEl.innerText;
+                const currentName = nameEl.innerText;
                 if (text.innerText !== currentName) {
                     text.innerText = currentName;
-                    btn.href = btnEl.href;
+                    btn.href = btnEl.href; var pl = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase(); if (pl !== 'en') { var bl = (btnEl.innerText || '').split(/[\u2192\u2190\n]/)[0].trim(); if (bl) btn.innerText = bl; }
                 }
                 if (!cta.classList.contains('visible')) {
                     cta.classList.add('visible');
