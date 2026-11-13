@@ -171,7 +171,7 @@ button.dc-c:hover,button.dc-c:focus-visible{border-color:#eadfca;background:#fff
 .dc-arrow{color:#d9c79e;font-weight:700;padding-bottom:3px}
 .nye-carte .sec{border-radius:6px;transition:background .6s}
 .nye-carte .sec.flash{background:#fdf3d8}
-.xmas-filter-bar .xmas-fl{margin-left:6px;white-space:nowrap;flex:0 0 auto}.xmas-filter-bar .ltt-tab-btn{white-space:nowrap;flex:0 0 auto}.xmas-filter-bar .ltt-cnt{opacity:.65;font-weight:600}.xmas-filter-bar .ltt-tab-btn.is-empty{opacity:.4 !important;cursor:default !important}.xmas-filter-bar .ltt-tab-btn.is-empty:hover{background:#f8fafc !important;border-color:#cbd5e1 !important}@media (max-width:767px){.xmas-filter-bar{overflow-x:visible}.xmas-filter-bar .ltt-integrated-pills{flex-wrap:wrap;gap:6px}.xmas-filter-bar .ltt-tab-btn{padding:6px 10px !important;font-size:12px !important}.xmas-filter-bar .xmas-fl{margin-left:2px;font-size:11px}}.xmas-also-head{font-family:'Playfair Display',Georgia,serif;font-size:26px;line-height:1.25;color:#0f172a;margin:34px 0 4px}
+.xmas-filter-bar .xmas-fl{margin-left:6px;white-space:nowrap;flex:0 0 auto}.xmas-filter-bar .ltt-tab-btn{white-space:nowrap;flex:0 0 auto}.xmas-filter-bar .ltt-cnt{opacity:.65;font-weight:600}.xmas-filter-bar .ltt-tab-btn.is-empty{opacity:.4 !important;cursor:default !important}.xmas-filter-bar .ltt-tab-btn.is-empty:hover{background:#f8fafc !important;border-color:#cbd5e1 !important}.xmas-filter-bar{overflow-x:visible}.xmas-filter-bar .xmas-break{flex-basis:100%;height:0}.xmas-filter-bar .xmas-fl{min-width:46px}.xmas-filter-bar .ltt-integrated-pills{flex-wrap:wrap;row-gap:8px}@media (max-width:767px){.xmas-filter-bar .ltt-integrated-pills{gap:6px}.xmas-filter-bar .ltt-tab-btn{padding:6px 10px !important;font-size:12px !important}.xmas-filter-bar .xmas-fl{margin-left:2px;font-size:11px}}.xmas-also-head{font-family:'Playfair Display',Georgia,serif;font-size:26px;line-height:1.25;color:#0f172a;margin:34px 0 4px}
 .xmas-also-sub{font-size:15px;line-height:1.55;color:#475569;margin:0 0 16px;max-width:760px}
 </style><style id="bpa-lang-css">
 .bpa-lang{display:inline-flex;flex-wrap:wrap;gap:5px;flex-shrink:0}
@@ -1019,10 +1019,11 @@ html body .hybrid-active-trust{background:#f0fdf4!important;color:#166534!import
 <button class="ltt-tab-btn" data-cat="d25" data-group="date" data-label="25 Dec" onclick="lttFilterItems('d25', this)" type="button">25 Dec <span class="ltt-cnt"></span></button>
 <button class="ltt-tab-btn" data-cat="d26" data-group="date" data-label="26 Dec" onclick="lttFilterItems('d26', this)" type="button">26 Dec <span class="ltt-cnt"></span></button>
 <button class="ltt-tab-btn" data-cat="advent" data-group="date" data-label="Before 24 Dec" onclick="lttFilterItems('advent', this)" type="button">Before 24 Dec <span class="ltt-cnt"></span></button>
-<span class="ltt-filter-label xmas-fl">Type:</span>
+<span class="xmas-break" aria-hidden="true"></span><span class="ltt-filter-label xmas-fl">Type:</span>
 <button class="ltt-tab-btn" data-cat="dinner" data-group="type" data-label="Dinner" onclick="lttFilterItems('dinner', this)" type="button">Dinner <span class="ltt-cnt"></span></button>
 <button class="ltt-tab-btn" data-cat="nodinner" data-group="type" data-label="No dinner" onclick="lttFilterItems('nodinner', this)" type="button">No dinner <span class="ltt-cnt"></span></button>
 <button class="ltt-tab-btn" data-cat="drinks" data-group="type" data-label="Unlimited drinks" onclick="lttFilterItems('drinks', this)" type="button">Unlimited drinks <span class="ltt-cnt"></span></button>
+<button class="ltt-tab-btn" data-cat="mulled" data-group="type" data-label="Mulled wine" onclick="lttFilterItems('mulled', this)" type="button">Mulled wine <span class="ltt-cnt"></span></button>
 <button class="ltt-tab-btn" data-cat="u50" data-group="type" data-label="Under €50" onclick="lttFilterItems('u50', this)" type="button">Under €50 <span class="ltt-cnt"></span></button>
 </div>
 </div>
@@ -3873,7 +3874,7 @@ a.w-webflow-badge,
 </div>
 
 <!-- #3: Christmas Market Cruise With Unlimited Mulled Wine, Prosecco & Aperol -->
-<div class="bpa-card" data-cat="nodinner drinks u50 d25 d26 advent" id="card-3">
+<div class="bpa-card" data-cat="nodinner drinks mulled u50 d25 d26 advent" id="card-3">
 <div class="bpa-main">
 <div class="bpa-media">
 <button aria-label="Previous photo" class="bpa-arrow prev" onclick="bpaSlide(this,-1)" type="button">‹</button><button aria-label="Next photo" class="bpa-arrow next" onclick="bpaSlide(this,1)" type="button">›</button><span class="bpa-pill">1 / 5</span><span class="bpa-rank-tag bpa-bronze">🎄 #3 Best Christmas Market Vibe</span>
@@ -4010,7 +4011,7 @@ a.w-webflow-badge,
 </div>
 
 <!-- #7: Sightseeing Cruise With Unlimited Mulled Wine -->
-<div class="bpa-card" data-cat="nodinner drinks u50 advent" id="card-7">
+<div class="bpa-card" data-cat="nodinner drinks mulled u50 advent" id="card-7">
 <div class="bpa-main">
 <div class="bpa-media">
 <button aria-label="Previous photo" class="bpa-arrow prev" onclick="bpaSlide(this,-1)" type="button">‹</button><button aria-label="Next photo" class="bpa-arrow next" onclick="bpaSlide(this,1)" type="button">›</button><span class="bpa-pill">1 / 13</span><span class="bpa-rank-tag bpa-slate">🍷 Also Sailing · Advent &amp; 27–31 Dec</span>
@@ -4044,7 +4045,7 @@ a.w-webflow-badge,
 </div>
 
 <!-- #8: Sightseeing Cruise With Unlimited Prosecco &amp; Mulled Wine -->
-<div class="bpa-card" data-cat="nodinner drinks u50 d25 d26 advent" id="card-8">
+<div class="bpa-card" data-cat="nodinner drinks mulled u50 d25 d26 advent" id="card-8">
 <div class="bpa-main">
 <div class="bpa-media">
 <button aria-label="Previous photo" class="bpa-arrow prev" onclick="bpaSlide(this,-1)" type="button">‹</button><button aria-label="Next photo" class="bpa-arrow next" onclick="bpaSlide(this,1)" type="button">›</button><span class="bpa-pill">1 / 5</span><span class="bpa-rank-tag bpa-slate">🥂 Also Sailing · 25 &amp; 26 Dec</span>
@@ -4201,7 +4202,7 @@ a.w-webflow-badge,
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts — Christmas 2026</h4><span class="qf1-badge">Vigadó tér 6</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Dates</div><div class="qf1-val">24 &amp; 25 Dec (the only bookable dates when checked)</div></div><div class="qf1-row"><div class="qf1-label">Duration</div><div class="qf1-val">2 Hours</div></div><div class="qf1-row"><div class="qf1-label">Meeting Point &amp; Pier</div><div class="qf1-val">Vigadó tér 6, 1051 Budapest (arrive 30 minutes early)</div></div><div class="qf1-row"><div class="qf1-label">Dinner</div><div class="qf1-val">Four-course festive Hungarian dinner (menu not published)</div></div><div class="qf1-row"><div class="qf1-label">Inclusions &amp; Drinks</div><div class="qf1-val">Welcome glass of sparkling wine; other drinks extra</div></div><div class="qf1-row"><div class="qf1-label">Entertainment</div><div class="qf1-val">Live Hungarian folk music + folk dance show</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Free up to 24 hours before</div></div><div class="qf1-row"><div class="qf1-label">Prices last checked</div><div class="qf1-val">Nov 10, 2026 (subject to change)</div></div></div></div>
 </div>
 </details>
-<details class="bpa-details-card" data-cat="nodinner drinks u50 d25 d26 advent" id="xmas-market-cruise" open="">
+<details class="bpa-details-card" data-cat="nodinner drinks mulled u50 d25 d26 advent" id="xmas-market-cruise" open="">
 <summary class="bpa-details-summary">
 <div class="bpa-details-summary-content">
 <div class="bpa-details-top-row">
@@ -4358,7 +4359,7 @@ a.w-webflow-badge,
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts — Christmas 2026</h4><span class="qf1-badge">Dock 7 (Vigadó tér)</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Dates</div><div class="qf1-val">25 &amp; 26 Dec (no evening cruise on 24 Dec)</div></div><div class="qf1-row"><div class="qf1-label">Schedule</div><div class="qf1-val">Departure 19:00</div></div><div class="qf1-row"><div class="qf1-label">Duration</div><div class="qf1-val">2.5 Hours</div></div><div class="qf1-row"><div class="qf1-label">Meeting Point &amp; Pier</div><div class="qf1-val">Dock 7, Jane Haining rakpart (Vigadó tér), 1052 Budapest</div></div><div class="qf1-row"><div class="qf1-label">Dinner</div><div class="qf1-val">4-course à la carte: 6 starters, 2 soups, 6 mains, 3 desserts</div></div><div class="qf1-row"><div class="qf1-label">Inclusions &amp; Drinks</div><div class="qf1-val">Welcome drink, live music, own table; other drinks extra</div></div><div class="qf1-row"><div class="qf1-label">Children</div><div class="qf1-val">Kids&#x27; Dinner Package (3–12 years): €84</div></div><div class="qf1-row"><div class="qf1-label">Prices last checked</div><div class="qf1-val">Nov 10, 2026 (subject to change)</div></div></div></div>
 </div>
 </details>
-<details class="bpa-details-card" data-cat="nodinner drinks u50 advent" id="xmas-mulled-wine" open="">
+<details class="bpa-details-card" data-cat="nodinner drinks mulled u50 advent" id="xmas-mulled-wine" open="">
 <summary class="bpa-details-summary">
 <div class="bpa-details-summary-content">
 <div class="bpa-details-top-row">
@@ -4397,7 +4398,7 @@ a.w-webflow-badge,
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts — Christmas 2026</h4><span class="qf1-badge">Dock 11 (Petőfi tér)</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Dates</div><div class="qf1-val">Advent season and 27–31 Dec; not sailing 24–26 Dec</div></div><div class="qf1-row"><div class="qf1-label">Duration</div><div class="qf1-val">1 Hour</div></div><div class="qf1-row"><div class="qf1-label">Meeting Point &amp; Pier</div><div class="qf1-val">Dock 11, Jane Haining rakpart, 1052 Budapest</div></div><div class="qf1-row"><div class="qf1-label">Inclusions &amp; Drinks</div><div class="qf1-val">Unlimited mulled wine (5 kinds) + 2 non-alcoholic hot drinks; audio guide app</div></div><div class="qf1-row"><div class="qf1-label">Food</div><div class="qf1-val">Not included</div></div><div class="qf1-row"><div class="qf1-label">Age</div><div class="qf1-val">Alcohol served 18+ only</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Free up to 24 hours before</div></div><div class="qf1-row"><div class="qf1-label">Prices last checked</div><div class="qf1-val">Nov 10, 2026 (subject to change)</div></div></div></div>
 </div>
 </details>
-<details class="bpa-details-card" data-cat="nodinner drinks u50 d25 d26 advent" id="xmas-mahart" open="">
+<details class="bpa-details-card" data-cat="nodinner drinks mulled u50 d25 d26 advent" id="xmas-mahart" open="">
 <summary class="bpa-details-summary">
 <div class="bpa-details-summary-content">
 <div class="bpa-details-top-row">
