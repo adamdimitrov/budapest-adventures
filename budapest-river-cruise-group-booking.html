@@ -100,6 +100,17 @@ body:has(.ltt-hero-wrap) .ltt-hero-wrap h1.ltt-editorial-h1{font-size:26px!impor
 article.review-article h2.adv-section-title{font-size:28px!important}
 article.review-article h3.adv-feature-subhead{font-size:20px!important}
 }
+/* Editorial pages (home, about, contact, Budapest Card): same background, fonts and sizes as the article pages */
+body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)){--ivory-warm:#f8fafc;--font-sans:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background-color:#f8fafc!important}
+body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) :is(h1.ltt-about-h1,h1.form-header-title),body:has(.calc-title) main.container h1{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif!important;font-weight:800!important;font-size:36px!important;line-height:1.2!important;letter-spacing:-0.01em!important;color:#0f172a!important}
+body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) h2.ltt-section-title,body:has(.calc-title) main.container h2{font-family:'Playfair Display',Georgia,'Times New Roman',serif!important;font-weight:700!important;font-size:38px!important;line-height:1.2!important;color:#0f172a!important}
+body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) :is(h3.ltt-guide-title,h3.ltt-reality-title,h3.ltt-ethic-title,.ltt-manifesto-card h3),body:has(.calc-title) main.container h3{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif!important;font-weight:700!important;font-size:20px!important;line-height:1.35!important;color:#0f172a!important}
+body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) :is(p.ltt-guide-excerpt,.ltt-manifesto-card p,p.ltt-reality-body,p.ltt-ethic-body,p.ltt-author-bio,p.form-header-sub,p.ltt-section-subtitle,p.ltt-section-sub,.ltt-founder-bio p),body:has(.calc-title) main.container section p{font-size:16px!important;line-height:1.65!important}
+body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) .ltt-yellow-callout-body,body:has(.calc-title) main.container section li{font-size:15px!important;line-height:1.6!important}
+@media (max-width:767px){
+body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) :is(h1.ltt-about-h1,h1.form-header-title),body:has(.calc-title) main.container h1{font-size:26px!important}
+body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) h2.ltt-section-title,body:has(.calc-title) main.container h2{font-size:28px!important}
+}
 </style>
 </head><body id="top"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
