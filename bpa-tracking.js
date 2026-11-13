@@ -23,6 +23,7 @@
   var TOURCMS_AGENT_REF = '38585';
   var TIQETS_PARTNER = 'budapestadventures';
   var SILVERLINE_PARTNER = 'budapestadventures';
+  var SILVERLINE_CODE = 'bpadventures';
   var NET_COMMISSION_RATE = 0.25;
   var CLARITY_PROJECT_ID = 'zap3ccm9my';
 
@@ -253,8 +254,18 @@
         return url.toString();
       }
 
-      // 2. TourCMS / BudapestRiverCruise.eu
-      if (host.indexOf('tourcms.com') !== -1 || host.indexOf('budapestrivercruise.eu') !== -1) {
+      // 2a. Silverline (budapestrivercruise.eu): our agent code is ?code=bpadventures.
+      //     agent_ref=38585 is the Legenda/TourCMS account and must not be sent here.
+      if (host.indexOf('budapestrivercruise.eu') !== -1) {
+        url.searchParams.delete('agent_ref');
+        if (url.searchParams.get('code') !== SILVERLINE_CODE) {
+          url.searchParams.set('code', SILVERLINE_CODE);
+        }
+        return url.toString();
+      }
+
+      // 2b. TourCMS
+      if (host.indexOf('tourcms.com') !== -1) {
         url.searchParams.set('agent_ref', TOURCMS_AGENT_REF);
         if (subId) {
           url.searchParams.set('subid', subId);
