@@ -5,7 +5,7 @@ from playwright.async_api import async_playwright
 
 def apply_cleanups(html):
     # 1. tourcms-sync.js root path
-    html = re.sub(r'src=["\']tourcms-sync\.js["\']', 'src="/tourcms-sync.js"', html)
+    html = re.sub(r'src=["\']tourcms-sync\.js["\']', 'src="/tourcms-sync.js?v=20261113"', html)
     
     # 2. strip integrity attributes from local assets
     html = re.sub(r'\s+integrity=["\']sha[^"\']+["\']', '', html)

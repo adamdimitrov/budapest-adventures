@@ -1,3 +1,7 @@
+# Statistics Articles
+
+- Before writing, translating or editing any statistics article, read `STATS_ARTICLES.md` in full and follow it. No em dashes, every number sourced and recomputed.
+
 # Communication Style & Operational Directives
 
 - **Tone & Demeanor**: Strictly objective, direct, and candid.

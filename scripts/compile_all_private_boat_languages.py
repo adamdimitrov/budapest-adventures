@@ -27,6 +27,9 @@ import re
 import sys
 import json
 from bs4 import BeautifulSoup
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from fix_language_switcher_links import fix_switcher_html  # keeps switcher links = hreflang
 
 BASE_DIR = '/Users/adamdimitrov/Development/budapest-adventures'
 CACHE_DIR = os.path.join(BASE_DIR, 'data', 'harvested_html')
@@ -489,7 +492,7 @@ def main():
         localized_html = compile_private_boats_guide(lang, en_html)
         
         with open(out_path, 'w', encoding='utf-8') as f:
-            f.write(localized_html)
+            f.write(fix_switcher_html(localized_html, out_path))
             
         compiled_count += 1
         print(f"✓ [{lang.upper()}] Compiled Luxury Private Boat Tours Guide -> {out_path}")

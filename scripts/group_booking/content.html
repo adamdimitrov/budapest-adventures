@@ -1,0 +1,277 @@
+<style>
+.gb{--navy:#0a192f;--navy-2:#13294b;--gold:#dfa732;--gold-d:#b88214;--gold-l:#fefce8;--ivory:#faf8f5;--ink:#1e293b;--muted:#475569;--line:#e7e2d8;--ok:#15803d;--err:#b91c1c;--sans:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--serif:'Playfair Display',Georgia,Cambria,'Times New Roman',serif;font-family:var(--sans);color:var(--ink);background:var(--ivory);line-height:1.6;font-size:16px}
+.gb *,.gb *::before,.gb *::after{box-sizing:border-box}
+.gb a{color:inherit}
+.gb-wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.gb h1,.gb h2,.gb h3{font-family:var(--serif);color:var(--navy);line-height:1.2;margin:0}
+:where(.gb) p{margin:0;color:inherit;font-family:inherit;font-size:inherit;line-height:inherit;max-width:none}
+:where(.gb) :is(h2,h3){text-align:left;text-transform:none;letter-spacing:0}
+:where(.gb) li{color:inherit;font-family:inherit;font-size:inherit;line-height:inherit}
+:where(.gb) label{text-transform:none;letter-spacing:0;line-height:1.4;margin:0;display:block}
+.gb-hero h1{color:#fff !important;font-size:clamp(32px,4.4vw,50px) !important;line-height:1.15 !important;max-width:none !important;margin:0 0 18px !important;text-align:left !important}
+/* hero */
+.gb-hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
+.gb-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32}
+.gb-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,25,47,.96) 0%,rgba(10,25,47,.82) 45%,rgba(10,25,47,.55) 100%)}
+.gb-hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;padding:56px 20px 64px}
+.gb-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.gb-eyebrow::before{content:"";width:22px;height:2px;background:var(--gold)}
+
+.gb-hero h1 em{font-style:italic;color:var(--gold)}
+.gb-lede{font-size:18px;color:rgba(255,255,255,.86);max-width:540px;margin-bottom:26px}
+.gb-promises{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:12px}
+.gb-promises li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:rgba(255,255,255,.92)}
+.gb-promises li strong{color:#fff}
+.gb-tick{flex:0 0 22px;height:22px;border-radius:50%;background:rgba(223,167,50,.18);color:var(--gold);display:grid;place-items:center;font-size:13px;font-weight:800;margin-top:1px}
+.gb-sign{display:flex;align-items:center;gap:12px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:14px;color:rgba(255,255,255,.75)}
+.gb-sign img{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold)}
+.gb-sign strong{color:#fff;display:block;font-size:15px}
+.gb-sign a{color:var(--gold);font-weight:700;text-decoration:none}
+/* form card */
+.gb-card{background:#fff;color:var(--ink);border-radius:18px;padding:28px;box-shadow:0 30px 60px -20px rgba(0,0,0,.45);scroll-margin-top:90px}
+.gb-card h2{font-size:24px;margin-bottom:4px}
+.gb-card-sub{font-size:14px;color:var(--muted);margin-bottom:20px}
+.gb-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.gb-f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.gb-f.full{grid-column:1/-1}
+.gb-f label{font-size:13px;font-weight:700;color:var(--navy)}
+.gb-f label .opt{font-weight:500;color:#94a3b8}
+.gb-f input,.gb-f select,.gb-f textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);background:#fff;border:1.5px solid #d6d3cc;border-radius:10px;padding:11px 12px;min-height:46px;transition:border-color .15s,box-shadow .15s}
+.gb-f textarea{min-height:84px;resize:vertical}
+.gb-f input:focus,.gb-f select:focus,.gb-f textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(223,167,50,.2)}
+.gb .gb-check{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--muted);margin-top:2px}
+.gb-check input{width:16px;height:16px;min-height:0;accent-color:var(--gold-d)}
+.gb .gb-human{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted);background:var(--ivory);border-radius:10px;padding:10px 12px}
+.gb-human input{width:72px;min-height:38px;padding:6px 10px}
+.gb-err{display:none;color:var(--err);font-size:13px;font-weight:600}
+.gb-err.show{display:block}
+.gb-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;border:0;border-radius:12px;background:var(--gold);color:var(--navy);font:inherit;font-weight:800;font-size:16.5px;padding:15px 20px;cursor:pointer;transition:background .15s,transform .15s;text-decoration:none}
+.gb-btn:hover{background:#e8b544;transform:translateY(-1px)}
+.gb-btn[disabled]{opacity:.7;cursor:wait}
+.gb-fine{font-size:12.5px;color:#64748b;text-align:center;margin-top:10px}
+.gb-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+/* sections */
+.gb-sec{padding:72px 0}
+.gb-sec.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gb-head{max-width:680px;margin-bottom:36px}
+.gb-head h2{font-size:clamp(26px,3vw,36px);margin-bottom:10px}
+.gb-head p{color:var(--muted);font-size:17px}
+.gb-kicker{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-d);margin-bottom:10px;display:block}
+/* formats */
+.gb-formats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.gb-fmt{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 22px;display:flex;flex-direction:column;gap:10px;box-shadow:0 10px 30px -12px rgba(15,23,42,.08)}
+.gb-fmt-ico{font-size:26px;line-height:1}
+.gb-fmt h3{font-size:19px}
+.gb-fmt p{font-size:14.5px;color:var(--muted)}
+.gb-fmt .gb-best{font-size:13px;color:var(--ink);background:var(--gold-l);border-radius:8px;padding:8px 10px}
+.gb-fmt a.gb-more{margin-top:auto;font-size:14px;font-weight:700;color:var(--gold-d);text-decoration:none}
+.gb-fmt a.gb-more:hover{text-decoration:underline}
+.gb-occ{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.gb-occ span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;color:var(--navy)}
+/* steps */
+.gb-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.gb-step{position:relative;padding:26px 24px;border-radius:16px;background:var(--ivory);border:1px solid var(--line)}
+.gb-step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--navy);color:var(--gold);font-family:var(--serif);font-weight:700;font-size:18px;margin-bottom:14px}
+.gb-step h3{font-size:19px;margin-bottom:8px}
+.gb-step p{font-size:15px;color:var(--muted)}
+/* why */
+.gb-why{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.gb-why-list{display:grid;gap:18px}
+.gb-why-item{display:flex;gap:14px}
+.gb-why-item .n{flex:0 0 auto;font-family:var(--serif);font-size:30px;font-weight:700;color:var(--gold);line-height:1;min-width:64px}
+.gb-why-item h3{font-size:17px;margin-bottom:4px;font-family:var(--sans);font-weight:800}
+.gb-why-item p{font-size:15px;color:var(--muted)}
+.gb-note{background:var(--navy);color:rgba(255,255,255,.88);border-radius:16px;padding:28px}
+.gb-note h3{color:#fff;font-size:20px;margin-bottom:12px}
+.gb-note ul{margin:0;padding-left:18px;display:grid;gap:10px;font-size:15px}
+.gb-note strong{color:var(--gold)}
+/* faq */
+.gb-faq{max-width:820px}
+.gb-faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.gb-faq summary{list-style:none;cursor:pointer;padding:16px 36px 16px 0;position:relative;font-weight:700;font-size:17px;color:var(--navy)}
+.gb-faq summary::-webkit-details-marker{display:none}
+.gb-faq summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:24px;color:var(--gold-d);font-weight:400}
+.gb-faq details[open] summary::after{content:"\2212"}
+.gb-faq details p{padding:0 0 18px;color:var(--muted);font-size:15.5px}
+.gb-faq a{color:var(--gold-d);font-weight:700}
+/* cta */
+.gb-cta{background:var(--navy);color:#fff;text-align:center;padding:64px 20px}
+.gb-cta h2{text-align:center;color:#fff;font-size:clamp(26px,3vw,36px);margin-bottom:12px}
+.gb-cta p{color:rgba(255,255,255,.8);margin:0 auto 26px;max-width:560px}
+.gb-cta .gb-btn{width:auto;padding:15px 32px}
+.gb-guides{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin-top:30px;font-size:14px}
+.gb-guides a{color:rgba(255,255,255,.75);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25)}
+.gb-guides a:hover{color:var(--gold);border-color:var(--gold)}
+/* sticky mobile cta */
+.gb-sticky{display:none}
+@media (max-width:960px){
+ .gb-hero-in{grid-template-columns:1fr;gap:32px;padding:40px 16px 48px}
+ .gb-formats{grid-template-columns:1fr 1fr}
+ .gb-why{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+ .gb-wrap{padding:0 16px}
+ .gb-lede{font-size:16.5px}
+ .gb-card{padding:22px 18px}
+ .gb-grid{grid-template-columns:1fr}
+ .gb-formats,.gb-steps{grid-template-columns:1fr}
+ .gb-sec{padding:52px 0}
+ .gb-sticky{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;transition:transform .2s,opacity .2s}
+ .gb-sticky.hide{transform:translateY(120%);opacity:0;pointer-events:none}
+ .gb-sticky .gb-btn{box-shadow:0 10px 30px rgba(0,0,0,.3)}
+}
+</style>
+<main class="gb" id="main">
+<section class="gb-hero">
+<img alt="A river boat sailing on the Danube in front of the illuminated Hungarian Parliament" class="gb-hero-img" fetchpriority="high" height="534" loading="eager" sizes="100vw" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest.webp" srcset="/assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest-p-800.webp 800w, /assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest-p-1080.webp 1080w, /assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest.webp 1280w" width="800"/>
+<div class="gb-wrap gb-hero-in">
+<div>
+<span class="gb-eyebrow">Group Cruise Desk</span>
+<h1>Budapest River Cruise Group Booking: <em>one request, the right boat</em></h1>
+<p class="gb-lede">Dinner cruises, sightseeing boats and private charters for groups of 20 to 250+. Send me your date and headcount, and I come back with the boats that actually fit your group and a quote.</p>
+<ul class="gb-promises">
+<li><span class="gb-tick">✓</span><span><strong>One request, several boats compared</strong> instead of emailing every operator</span></li>
+<li><span class="gb-tick">✓</span><span><strong>Help with the details:</strong> menus, dietary needs and the right boarding pier</span></li>
+<li><span class="gb-tick">✓</span><span><strong>Boats I have sailed on myself,</strong> so I can tell you which deck your group gets</span></li>
+</ul>
+<div class="gb-sign"><img alt="Adam Dimitrov" height="44" loading="lazy" src="/assets/adam-dimitrov.webp" style="object-fit:cover" width="44"/><span><strong>Adam Dimitrov, Budapest Adventures</strong>40+ Danube sailings field-tested. <a href="/about">How I test →</a></span></div>
+</div>
+<div class="gb-card" id="quote">
+<h2>Get a free group quote</h2>
+<p class="gb-card-sub">Takes about a minute.</p>
+<form action="https://formsubmit.co/adam.dimitrov.business@gmail.com" id="gb-form" method="POST" novalidate>
+<input autocomplete="off" class="gb-hp" name="_gotcha" tabindex="-1" type="text"/>
+<input name="_subject" type="hidden" value="[Budapest Adventures] Group cruise quote request"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<input id="gb-page" name="page" type="hidden" value=""/>
+<div class="gb-grid">
+<div class="gb-f"><label for="gb-date">Cruise date *</label><input id="gb-date" name="date" required type="date"/>
+<label class="gb-check"><input name="date_flexible" type="checkbox" value="yes"/> My date is flexible</label></div>
+<div class="gb-f"><label for="gb-size">Group size *</label><input id="gb-size" inputmode="numeric" max="2000" min="2" name="group_size" placeholder="e.g. 40" required type="number"/></div>
+<div class="gb-f"><label for="gb-type">Type of cruise</label>
+<select id="gb-type" name="cruise_type">
+<option value="Not sure yet">Not sure yet, recommend one</option>
+<option value="Dinner cruise">Dinner cruise</option>
+<option value="Sightseeing cruise">Sightseeing cruise</option>
+<option value="Drinks / party cruise">Drinks / party cruise</option>
+<option value="Private boat charter">Private boat (whole boat)</option>
+</select></div>
+<div class="gb-f"><label for="gb-occ">Occasion</label>
+<select id="gb-occ" name="occasion">
+<option value="Not specified">Choose one</option>
+<option value="Company event / team outing">Company event / team outing</option>
+<option value="Conference / incentive trip">Conference / incentive trip</option>
+<option value="Wedding / anniversary">Wedding / anniversary</option>
+<option value="Birthday">Birthday</option>
+<option value="Stag / hen party">Stag / hen party</option>
+<option value="School / student group">School / student group</option>
+<option value="Tour operator / travel agency">Tour operator / travel agency</option>
+<option value="Friends and family">Friends and family</option>
+</select></div>
+<div class="gb-f"><label for="gb-name">Your name *</label><input autocomplete="name" id="gb-name" name="name" required type="text"/></div>
+<div class="gb-f"><label for="gb-email">Email *</label><input autocomplete="email" id="gb-email" name="email" required type="email"/></div>
+<div class="gb-f full"><label for="gb-phone">WhatsApp / phone <span class="opt">(optional, for quick questions)</span></label><input autocomplete="tel" id="gb-phone" name="phone" type="tel"/></div>
+<div class="gb-f full"><label for="gb-msg">Anything else? <span class="opt">(budget, time of day, dietary needs)</span></label><textarea id="gb-msg" maxlength="5000" name="message" placeholder="e.g. Evening cruise for 40 colleagues, around €60 per person, 3 vegetarians"></textarea></div>
+<div class="gb-f full"><div class="gb-human"><label for="gb-sum" id="gb-q">Quick check: 3 + 4 =</label><input id="gb-sum" inputmode="numeric" required type="text"/></div></div>
+<p class="gb-err full" id="gb-err" role="alert"></p>
+<div class="gb-f full"><button class="gb-btn" id="gb-submit" type="submit">Send my group request <span aria-hidden="true">→</span></button>
+<p class="gb-fine">Free and no obligation. I only use your details to answer this request.</p></div>
+</div>
+</form>
+</div>
+</div>
+</section>
+
+<section class="gb-sec">
+<div class="gb-wrap">
+<div class="gb-head"><span class="gb-kicker">Pick a format</span><h2>Four ways to put a group on the Danube</h2><p>Not sure which one you need? Leave it on "recommend one" and tell me the occasion. Here is how the options differ.</p></div>
+<div class="gb-formats">
+<div class="gb-fmt"><span class="gb-fmt-ico">🍽️</span><h3>Dinner cruise</h3><p>Your group seated together on a scheduled evening dinner cruise, with a multi-course menu and live music or a folklore show depending on the boat.</p><p class="gb-best"><strong>Best for:</strong> company dinners, celebrations, conference evenings</p><a class="gb-more" href="/best-dinner-cruises-budapest">See the dinner cruises I tested →</a></div>
+<div class="gb-fmt"><span class="gb-fmt-ico">🏛️</span><h3>Sightseeing cruise</h3><p>A block of seats on a regular day or night cruise past Parliament, Buda Castle and the bridges. The simplest and most affordable option for big groups.</p><p class="gb-best"><strong>Best for:</strong> school trips, tour groups, a first evening in Budapest</p><a class="gb-more" href="/best-budapest-river-cruises">See the 10 cruises I tested →</a></div>
+<div class="gb-fmt"><span class="gb-fmt-ico">🥂</span><h3>Drinks cruise</h3><p>Unlimited prosecco or open-bar cruises with a livelier crowd. Good value when the point is a fun night out, not a quiet dinner.</p><p class="gb-best"><strong>Best for:</strong> stag and hen parties, students, friends</p><a class="gb-more" href="/unlimited-prosecco-cruises-budapest">See the drinks cruises I tested →</a></div>
+<div class="gb-fmt"><span class="gb-fmt-ico">⚓</span><h3>Private boat</h3><p>The whole boat for your group only, at a time you choose. From small private boats for a dozen guests to larger vessels for corporate events.</p><p class="gb-best"><strong>Best for:</strong> weddings, VIP and incentive groups, privacy</p><a class="gb-more" href="/best-private-boat-tours-budapest">See the private boats I tested →</a></div>
+</div>
+<div class="gb-occ" aria-label="Groups I plan for"><span>🏢 Company events</span><span>✈️ Incentive trips</span><span>💍 Weddings</span><span>🎂 Birthdays</span><span>🎉 Stag &amp; hen</span><span>🎒 School groups</span><span>🧳 Tour operators</span></div>
+</div>
+</section>
+
+<section class="gb-sec alt">
+<div class="gb-wrap">
+<div class="gb-head"><span class="gb-kicker">How it works</span><h2>From one form to a booked boat</h2></div>
+<div class="gb-steps">
+<div class="gb-step"><h3>Tell me the basics</h3><p>Date, headcount and the kind of evening you want. Budget and dietary needs help, but are optional.</p></div>
+<div class="gb-step"><h3>Get a shortlist and quote</h3><p>I check which boats can take your group on that date and send you a quote with the boarding pier and what is included.</p></div>
+<div class="gb-step"><h3>Pick your boat</h3><p>Choose the option you like and I help you lock it in, then stay in touch on menus and details until sailing day.</p></div>
+</div>
+</div>
+</section>
+
+<section class="gb-sec">
+<div class="gb-wrap gb-why">
+<div>
+<div class="gb-head"><span class="gb-kicker">Why ask me</span><h2>Why not just email the cruise companies?</h2><p>You can. But every operator will tell you their boat is the best one. I have no boat to sell.</p></div>
+<div class="gb-why-list">
+<div class="gb-why-item"><span class="n">40+</span><div><h3>Sailings tested in person</h3><p>I pay my own fares and review the boats, piers and food, so my shortlist is based on what I saw on board.</p></div></div>
+<div class="gb-why-item"><span class="n">1</span><div><h3>Request instead of five</h3><p>One form instead of chasing several operators, comparing menus and translating seating plans.</p></div></div>
+</div>
+</div>
+<div class="gb-note">
+<h3>The details a brochure leaves out</h3>
+<ul>
+<li>On some shared boats, <strong>drinks-only guests sit downstairs</strong> while dinner guests get the upper deck. Worth knowing before you book 40 seats.</li>
+<li>For photos, pick a boat with a <strong>large open-air top deck</strong> and 360° views, like Legenda, Rubin Group or Portum.</li>
+<li>Most dinner cruises I tested offer <strong>vegetarian, vegan, gluten-free and lactose-free</strong> menus, but only on advance request.</li>
+<li>Folklore shows often include a <strong>dance segment where guests join in</strong>. Great for a team night, less so for a quiet business dinner.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="gb-sec alt">
+<div class="gb-wrap">
+<div class="gb-head"><span class="gb-kicker">FAQ</span><h2>Group cruise questions</h2></div>
+<div class="gb-faq">
+<details open><summary>How much does a group cruise in Budapest cost?</summary><p>It depends on the boat, the format and the date. A seat on a sightseeing cruise costs far less than a dinner cruise or a private charter. Tell me your budget per person and I will only send options that fit it, with a quote for each.</p></details>
+<details><summary>Can the whole group sit together?</summary><p>That is one of the first things I check. On a dinner cruise the operator reserves tables for your group; for full privacy, a private boat is the only option where nobody else is on board.</p></details>
+<details><summary>Can you cater for dietary requirements?</summary><p>Yes. Most dinner cruises I have tested offer vegetarian, vegan, gluten-free and lactose-free options when they are requested in advance. Add the numbers in the form and I pass them on.</p></details>
+<details><summary>What about a small group, like 8 or 12 people?</summary><p>For small groups a private boat is often the easiest choice, and some take up to 12 guests. Compare them in my <a href="/best-private-boat-tours-budapest">private boat tour guide</a>, or send the form and I will suggest one.</p></details>
+<details><summary>Do you work with tour operators and travel agencies?</summary><p>Yes. If you bring groups to Budapest regularly, choose "Tour operator / travel agency" as the occasion and tell me roughly how many groups and dates you have.</p></details>
+</div>
+</div>
+</section>
+
+<section class="gb-cta">
+<h2>Ready to plan your group cruise?</h2>
+<p>Send your date and headcount. I will come back with a shortlist and a quote.</p>
+<a class="gb-btn" href="#quote">Get my free group quote <span aria-hidden="true">→</span></a>
+<div class="gb-guides"><a href="/best-budapest-river-cruises">10 best river cruises</a><a href="/best-dinner-cruises-budapest">Best dinner cruises</a><a href="/best-night-cruises-budapest">Night cruises</a><a href="/unlimited-prosecco-cruises-budapest">Prosecco cruises</a><a href="/best-private-boat-tours-budapest">Private boats</a></div>
+</section>
+<div class="gb-sticky" id="gb-sticky"><a class="gb-btn" href="#quote">Get a free group quote →</a></div>
+</main>
+<script>
+(function(){
+  var f=document.getElementById('gb-form');if(!f)return;
+  var d=document.getElementById('gb-date'),err=document.getElementById('gb-err'),btn=document.getElementById('gb-submit');
+  var a=2+Math.floor(Math.random()*6),b=1+Math.floor(Math.random()*6);
+  document.getElementById('gb-q').textContent='Quick check: '+a+' + '+b+' =';
+  try{d.min=new Date().toISOString().slice(0,10);}catch(e){}
+  document.getElementById('gb-page').value=location.pathname;
+  f.addEventListener('submit',function(e){
+    var msg='';
+    ['gb-date','gb-size','gb-name','gb-email'].forEach(function(id){var el=document.getElementById(id);if(!msg&&!el.checkValidity()){msg='Please fill in '+el.previousElementSibling.textContent.replace(' *','').toLowerCase()+'.';el.focus();}});
+    if(!msg&&parseInt(document.getElementById('gb-sum').value,10)!==a+b){msg='The quick check answer is not right. Please try again.';document.getElementById('gb-sum').focus();}
+    if(msg){e.preventDefault();err.textContent=msg;err.classList.add('show');return;}
+    err.classList.remove('show');btn.disabled=true;btn.firstChild.textContent='Sending… ';
+    var size=parseInt(document.getElementById('gb-size').value,10)||0;
+    try{if(window.fbq)fbq('track','Lead',{content_name:'group_booking',num_items:size});}catch(x){}
+    try{if(window.gtag)gtag('event','generate_lead',{form:'group_booking',group_size:size});}catch(x){}
+  });
+  var s=document.getElementById('gb-sticky'),q=document.getElementById('quote');
+  if(s&&q&&'IntersectionObserver' in window){
+    var vis={},foot=document.querySelector('footer'),cta=document.querySelector('.gb-cta');
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){vis[x.target.id||x.target.className]=x.isIntersecting;});
+      var any=false;for(var k in vis)if(vis[k])any=true;s.classList.toggle('hide',any);});
+    [q,foot,cta].forEach(function(el){if(el)io.observe(el);});}
+})();
+</script>

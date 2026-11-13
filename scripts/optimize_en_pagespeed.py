@@ -104,7 +104,7 @@ def optimize_scripts(h):
                r'''<link href="\1" media="print" onload="this.media='all'" rel="stylesheet"/>''', h)
 
     # tourcms-sync.js: parser-blocking -> defer (handles readyState itself)
-    h = h.replace('<script src="/tourcms-sync.js"></script>', '<script defer src="/tourcms-sync.js"></script>')
+    h = h.replace('<script src="/tourcms-sync.js?v=20261113"></script>', '<script defer src="/tourcms-sync.js?v=20261113"></script>')
     return h
 
 

@@ -38,7 +38,7 @@
       ]
     },
     {
-      "source": "/(.*)",
+      "source": "/((?!embed/).*)",
       "headers": [
         {
           "key": "X-Content-Type-Options",
@@ -51,6 +51,27 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/embed/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors *"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, follow"
         },
         {
           "key": "Referrer-Policy",
@@ -3722,6 +3743,14 @@
     {
       "source": "/best-night-cruises-budapest",
       "destination": "/best-night-cruises-budapest.html"
+    },
+    {
+      "source": "/best-dinner-cruise-budapest",
+      "destination": "/best-dinner-cruise-budapest.html"
+    },
+    {
+      "source": "/best-budapest-river-cruise",
+      "destination": "/best-budapest-river-cruise.html"
     },
     {
       "source": "/unlimited-prosecco-cruises-budapest",
