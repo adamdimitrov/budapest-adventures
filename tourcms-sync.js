@@ -111,11 +111,13 @@
                 url.searchParams.set('subid', trackingString);
                 url.searchParams.set('click_id', trackingString);
                 link.href = url.toString();
-            } else if (url.hostname.includes('legenda.hu') || url.hostname.includes('tourcms.com') || url.hostname.includes('budapestrivercruise.eu')) {
+            } else if (url.hostname.includes('legenda.hu') || url.hostname.includes('tourcms.com')) {
+                // subid only: partner=38585 / agent_ref=38585 are set by bpa-tracking.js
+                // and must never be overwritten with the tracking string.
                 url.searchParams.set('subid', trackingString);
-                url.searchParams.set('agent_ref', trackingString);
                 link.href = url.toString();
             }
+            // Silverline (budapestrivercruise.eu) links stay as ?code=bpadventures only.
         } catch (e) {
             // Ignore invalid URLs
         }

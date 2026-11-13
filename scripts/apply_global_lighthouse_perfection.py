@@ -12,7 +12,7 @@ def process_file(file_path):
 
     # 1. Fix tourcms-sync.js path
     if 'src="tourcms-sync.js"' in content or "src='tourcms-sync.js'" in content:
-        content = re.sub(r'src=["\']tourcms-sync\.js["\']', 'src="/tourcms-sync.js"', content)
+        content = re.sub(r'src=["\']tourcms-sync\.js["\']', 'src="/tourcms-sync.js?v=20261113"', content)
         changed = True
 
     # 2. Strip broken integrity attributes from local assets

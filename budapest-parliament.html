@@ -1016,10 +1016,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const btnEl = activeBlock.querySelector('.main-buy-button, .buy-button-2');
 
             if (nameEl && btnEl) {
-                const currentName = '👉 ' + nameEl.innerText;
+                const currentName = nameEl.innerText;
                 if (text.innerText !== currentName) {
                     text.innerText = currentName;
-                    btn.href = btnEl.href;
+                    btn.href = btnEl.href; var pl = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase(); if (pl !== 'en') { var bl = (btnEl.innerText || '').split(/[\u2192\u2190\n]/)[0].trim(); if (bl) btn.innerText = bl; }
                 }
                 if (!cta.classList.contains('visible')) {
                     cta.classList.add('visible');
@@ -1160,14 +1160,14 @@ document.addEventListener("DOMContentLoaded", () => {
 <line x1="2" x2="18" y1="7" y2="7"></line>
 <line x1="2" x2="18" y1="12" y2="12"></line>
 </svg>
-<span>Contents (1)</span>
+<span>Contents (10)</span>
 </button>
 <div class="hybrid-active-info">
-<span class="hybrid-active-badge" id="hybridActiveBadge">#1 PICK</span>
-<span class="hybrid-active-title" id="hybridActiveTitle">Legenda City Cruises (Dock 7)</span>
-<span class="hybrid-active-price" id="hybridActivePrice">From €20</span>
+<span class="hybrid-active-badge" id="hybridActiveBadge">OFFICIAL</span>
+<span class="hybrid-active-title" id="hybridActiveTitle">Parliament tour tickets</span>
+<span class="hybrid-active-price" id="hybridActivePrice">From HUF 7,000</span>
 </div>
-<a class="hybrid-cta-btn" href="https://legenda.hu/en?partner=38585" id="hybridActiveCta" rel="sponsored noopener" target="_blank">Check Availability →</a>
+<a class="hybrid-cta-btn" href="https://jegymester.hu/production/480000/hungarian-parliament-building-parliament-visit" id="hybridActiveCta" rel="nofollow noopener" target="_blank">See options →</a>
 </div>
 </aside>
 <div class="hybrid-sheet-backdrop hybrid-toc-overlay" id="hybridSheet" onclick="if(event.target===this)closeHybridSheet()">
@@ -1176,9 +1176,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <h3 class="hybrid-sheet-title">Table of Contents</h3>
 <button aria-label="Close" class="hybrid-sheet-close" onclick="closeHybridSheet()" type="button">✕</button>
 </div>
-<div class="hybrid-toc-list">
-<a class="hybrid-toc-link" href="#top" onclick="closeHybridSheet()"><span><strong>#1</strong> · Legenda City Cruises (Dock 7)</span><span class="toc-price">From €20</span></a>
-</div>
+<div class="hybrid-toc-list"><a class="hybrid-toc-link" href="#key-facts" onclick="closeHybridSheet()"><span>Key facts at a glance</span></a><a class="hybrid-toc-link" href="#tickets" onclick="closeHybridSheet()"><span>Ticket prices 2026</span></a><a class="hybrid-toc-link" href="#how-to-book" onclick="closeHybridSheet()"><span>How to book (and avoid sell-outs)</span></a><a class="hybrid-toc-link" href="#opening-hours" onclick="closeHybridSheet()"><span>Opening hours and closures</span></a><a class="hybrid-toc-link" href="#the-tour" onclick="closeHybridSheet()"><span>The guided tour: languages and route</span></a><a class="hybrid-toc-link" href="#security" onclick="closeHybridSheet()"><span>Security check and what to bring</span></a><a class="hybrid-toc-link" href="#getting-there" onclick="closeHybridSheet()"><span>How to get there</span></a><a class="hybrid-toc-link" href="#history" onclick="closeHybridSheet()"><span>History and architecture</span></a><a class="hybrid-toc-link" href="#best-views" onclick="closeHybridSheet()"><span>Best views of the Parliament</span></a><a class="hybrid-toc-link" href="#faq" onclick="closeHybridSheet()"><span>FAQ</span></a></div>
 </div>
 </div>
 <script id="bpa-hybrid-sticky-controller">
@@ -1191,7 +1189,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var s = document.getElementById("hybridSheet");
     if (s) s.classList.remove("is-open");
   };
-  var items = [{"id": "top", "badge": "#1 PICK", "title": "Legenda City Cruises (Dock 7)", "price": "From \u20ac20", "url": "https://legenda.hu/en?partner=38585"}];
+  var items = [{"id": "key-facts", "badge": "OFFICIAL", "title": "Parliament tour tickets", "price": "From HUF 7,000", "url": "https://jegymester.hu/production/480000/hungarian-parliament-building-parliament-visit"}, {"id": "best-views", "badge": "AFTER DARK", "title": "See it lit up from the Danube", "price": "Night cruises from \u20ac12", "url": "/best-night-cruises-budapest"}];
   function onScroll() {
     var bar = document.getElementById("hybridStickyBar");
     if (!bar) return;
@@ -1219,7 +1217,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (b) b.textContent = active.badge;
       if (t) t.textContent = active.title;
       if (p) p.textContent = active.price;
-      if (c && active.url) c.href = active.url;
+      if (c && active.url) { c.href = active.url; var ext = /^https?:/.test(active.url); c.target = ext ? "_blank" : ""; c.rel = ext ? "nofollow noopener" : ""; }
     }
   }
   window.addEventListener("scroll", onScroll, { passive: true });

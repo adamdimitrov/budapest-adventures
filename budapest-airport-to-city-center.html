@@ -1358,10 +1358,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const btnEl = activeBlock.querySelector('.main-buy-button, .buy-button-2');
 
             if (nameEl && btnEl) {
-                const currentName = '👉 ' + nameEl.innerText;
+                const currentName = nameEl.innerText;
                 if (text.innerText !== currentName) {
                     text.innerText = currentName;
-                    btn.href = btnEl.href;
+                    btn.href = btnEl.href; var pl = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase(); if (pl !== 'en') { var bl = (btnEl.innerText || '').split(/[\u2192\u2190\n]/)[0].trim(); if (bl) btn.innerText = bl; }
                 }
                 if (!cta.classList.contains('visible')) {
                     cta.classList.add('visible');
@@ -1507,9 +1507,9 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="hybrid-active-info">
 <span class="hybrid-active-badge" id="hybridActiveBadge">#1 PICK</span>
 <span class="hybrid-active-title" id="hybridActiveTitle">100E Airport Express Bus</span>
-<span class="hybrid-active-price" id="hybridActivePrice">From €18</span>
+<span class="hybrid-active-price" id="hybridActivePrice">2,500 HUF (about €6)</span>
 </div>
-<a class="hybrid-cta-btn" href="#item-1-100e" id="hybridActiveCta" rel="sponsored noopener" target="_blank">Check Availability →</a>
+<a class="hybrid-cta-btn" href="#item-1-100e" id="hybridActiveCta">Read more ↓</a>
 </div>
 </aside>
 <div class="hybrid-sheet-backdrop hybrid-toc-overlay" id="hybridSheet" onclick="if(event.target===this)closeHybridSheet()">
@@ -1518,9 +1518,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <h3 class="hybrid-sheet-title">Table of Contents</h3>
 <button aria-label="Close" class="hybrid-sheet-close" onclick="closeHybridSheet()" type="button">✕</button>
 </div>
-<div class="hybrid-toc-list">
-<a class="hybrid-toc-link" href="#item-1-100e" onclick="closeHybridSheet()"><span><strong>#1</strong> · 100E Airport Express Bus</span><span class="toc-price">From €18</span></a><a class="hybrid-toc-link" href="#item-2-minibud" onclick="closeHybridSheet()"><span><strong>#2</strong> · Minibud Private Transfer</span><span class="toc-price">12-15€</span></a><a class="hybrid-toc-link" href="#item-3-bolt" onclick="closeHybridSheet()"><span><strong>#3</strong> · Bolt (Uber Alternative)</span><span class="toc-price">30€</span></a><a class="hybrid-toc-link" href="#item-4-fotaxi" onclick="closeHybridSheet()"><span><strong>#4</strong> · Főtaxi (Taxi Service)</span><span class="toc-price">30€</span></a><a class="hybrid-toc-link" href="#item-5-200e-m3" onclick="closeHybridSheet()"><span><strong>#5</strong> · 200E Bus and M3 Metro</span><span class="toc-price">2-3€</span></a>
-</div>
+<div class="hybrid-toc-list"><a class="hybrid-toc-link" href="#item-1-100e" onclick="closeHybridSheet()"><span><strong>#1</strong> · 100E Airport Express Bus</span><span class="toc-price">2,500 HUF (about €6)</span></a><a class="hybrid-toc-link" href="#item-2-minibud" onclick="closeHybridSheet()"><span><strong>#2</strong> · Minibud Private Transfer</span><span class="toc-price">12-15€</span></a><a class="hybrid-toc-link" href="#item-3-bolt" onclick="closeHybridSheet()"><span><strong>#3</strong> · Bolt (Uber Alternative)</span><span class="toc-price">30€</span></a><a class="hybrid-toc-link" href="#item-4-fotaxi" onclick="closeHybridSheet()"><span><strong>#4</strong> · Főtaxi (Taxi Service)</span><span class="toc-price">30€</span></a><a class="hybrid-toc-link" href="#item-5-200e-m3" onclick="closeHybridSheet()"><span><strong>#5</strong> · 200E Bus and M3 Metro</span><span class="toc-price">2-3€</span></a></div>
 </div>
 </div>
 <script id="bpa-hybrid-sticky-controller">
@@ -1533,7 +1531,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var s = document.getElementById("hybridSheet");
     if (s) s.classList.remove("is-open");
   };
-  var items = [{"id": "item-1-100e", "badge": "#1 PICK", "title": "100E Airport Express Bus", "price": "From \u20ac18", "url": "#item-1-100e"}, {"id": "item-2-minibud", "badge": "#2 PICK", "title": "Minibud Private Transfer", "price": "12-15\u20ac", "url": "https://www.getyourguide.com/budapest-l29/budapest-shared-airport-shuttle-bus-transfer-t308473/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=airport-to-city-center-article-quick-summary-minibud&mkt_cmp=true"}, {"id": "item-3-bolt", "badge": "#3 PICK", "title": "Bolt (Uber Alternative)", "price": "30\u20ac", "url": "#item-3-bolt"}, {"id": "item-4-fotaxi", "badge": "#4 PICK", "title": "F\u0151taxi (Taxi Service)", "price": "30\u20ac", "url": "#item-4-fotaxi"}, {"id": "item-5-200e-m3", "badge": "#5 PICK", "title": "200E Bus and M3 Metro", "price": "2-3\u20ac", "url": "#item-5-200e-m3"}];
+  var items = [{"id": "item-1-100e", "badge": "#1 PICK", "title": "100E Airport Express Bus", "price": "2,500 HUF (about \u20ac6)", "url": "#item-1-100e", "cta": "Read more \u2193"}, {"id": "item-2-minibud", "badge": "#2 PICK", "title": "Minibud Private Transfer", "price": "12-15\u20ac", "url": "https://www.getyourguide.com/budapest-l29/budapest-shared-airport-shuttle-bus-transfer-t308473/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=airport-to-city-center-article-quick-summary-minibud&mkt_cmp=true"}, {"id": "item-3-bolt", "badge": "#3 PICK", "title": "Bolt (Uber Alternative)", "price": "30\u20ac", "url": "#item-3-bolt", "cta": "Read more \u2193"}, {"id": "item-4-fotaxi", "badge": "#4 PICK", "title": "F\u0151taxi (Taxi Service)", "price": "30\u20ac", "url": "#item-4-fotaxi", "cta": "Read more \u2193"}, {"id": "item-5-200e-m3", "badge": "#5 PICK", "title": "200E Bus and M3 Metro", "price": "2-3\u20ac", "url": "#item-5-200e-m3", "cta": "Read more \u2193"}];
   function onScroll() {
     var bar = document.getElementById("hybridStickyBar");
     if (!bar) return;
@@ -1561,7 +1559,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (b) b.textContent = active.badge;
       if (t) t.textContent = active.title;
       if (p) p.textContent = active.price;
-      if (c && active.url) c.href = active.url;
+      if (c && active.url) { c.href = active.url; var ext = /^https?:/.test(active.url); c.target = ext ? "_blank" : ""; c.rel = ext ? "sponsored noopener" : ""; c.textContent = active.cta || (ext ? "Check Availability \u2192" : "Read more \u2193"); }
     }
   }
   window.addEventListener("scroll", onScroll, { passive: true });

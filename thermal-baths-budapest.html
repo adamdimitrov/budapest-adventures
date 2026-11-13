@@ -1074,20 +1074,12 @@ html body .hybrid-active-trust{background:#f0fdf4!important;color:#166534!import
 <span class="bpa-sp">Historic Buda</span>
 </div>
 <div class="bpa-best-for">
-<strong>Best For:</strong> Travelers looking for a verified 1 hour experience with Király Thermal Baths.
+<strong>Note:</strong> Király is closed for renovation. For an Ottoman-era bath that is open, go to Rudas.
               </div>
 </div>
 <div class="bpa-cta-cell">
 <div>
-<div class="bpa-price">Renovation</div>
-<div class="bpa-psub">1 Hour experience • Free cancellation</div>
-</div>
-<a class="bpa-btn" href="https://www.budapestgyogyfurdoi.hu/kiraly" rel="noopener" target="_blank">Check Availability →</a>
-<div class="bpa-trust-micro">
-<span>Instant QR</span>
-<span>•</span>
-<span>Free 24h Cancellation</span>
-</div>
+<div class="bpa-price">Closed</div> <div class="bpa-psub">Under renovation, check before you go</div> </div> <a class="bpa-btn" href="https://www.budapestgyogyfurdoi.hu/kiraly" rel="noopener" target="_blank">Official site →</a>
 <a class="bpa-sublink" href="#item-8-kiraly">Read Review ↓</a>
 </div>
 </div>
@@ -2295,6 +2287,7 @@ window.LTT_PAGE_CONFIG = {"deckId": "budapest-thermal-baths-deck", "tocDeckLabel
         p: p ? p.textContent.trim() : '',
         d: (kp[1] ? kp[1].trim() : '') + (psub ? ' • ' + psub.textContent.trim() : ''),
         l: btn ? btn.href : (head ? head.href : ''),
+        bt: btn ? btn.textContent.trim() : '',
         t: (i + 1) + '. ' + (head ? head.textContent.trim() : '')
       };
     });
@@ -2562,10 +2555,7 @@ window.LTT_PAGE_CONFIG = {"deckId": "budapest-thermal-baths-deck", "tocDeckLabel
       var priceEl = document.getElementById('sticky-price');
       if (priceEl) priceEl.textContent = active.p;
       var ctaEl = document.getElementById('sticky-cta-btn');
-      if (ctaEl) {
-        ctaEl.href = active.l;
-        if (cfg.btnText) ctaEl.textContent = cfg.btnText;
-      }
+      if (ctaEl) { ctaEl.href = active.l; if (cfg.btnText) ctaEl.textContent = cfg.btnText; if (active.bt) ctaEl.textContent = active.bt; }
       bar.classList.add('visible', 'is-visible');
     }
   }
