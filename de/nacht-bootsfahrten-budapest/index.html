@@ -506,7 +506,19 @@ window.addEventListener('load', function() {
   }
 }
 
-</style><style id="ltt-nav-i18n-fit">.ltt-nav-link{white-space:nowrap}@media (min-width:992px){.ltt-nav-inner{gap:24px}.ltt-nav-links{gap:4px}}@media (min-width:1440px){.ltt-nav-inner{max-width:1340px}}@media (min-width:992px) and (max-width:1439px){.ltt-nav-links>a.ltt-nav-link:nth-of-type(-n+2){display:none}}</style></head><body><header class="ltt-navbar" role="banner">
+</style><style id="ltt-nav-i18n-fit">.ltt-nav-link{white-space:nowrap}@media (min-width:992px){.ltt-nav-inner{gap:24px}.ltt-nav-links{gap:4px}}@media (min-width:1440px){.ltt-nav-inner{max-width:1340px}}@media (min-width:992px) and (max-width:1439px){.ltt-nav-links>a.ltt-nav-link:nth-of-type(-n+2){display:none}}</style><style id="bpa-mobile-overflow">
+/* Mobile overflow fix: long translated words, nowrap buttons and review rows, wide tables */
+@media (max-width:767px){
+html body h1,html body h2,html body h3,html body h4{max-width:100%;overflow-wrap:break-word;-webkit-hyphens:auto;hyphens:auto}
+html body div:has(>table){max-width:100%!important;min-width:0!important;overflow-x:auto!important}
+html body .w-button{white-space:normal!important;max-width:100%!important;box-sizing:border-box!important}
+html body .div-block-27{flex-wrap:nowrap!important}
+html body .div-block-34-obsolete{flex-wrap:wrap!important}
+html body .reviews,html body .reviews-4{flex-wrap:wrap!important;max-width:100%!important;min-width:0!important}
+html body .reviews *,html body .reviews-4 *{white-space:normal!important}
+}
+</style>
+</head><body><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/de">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo.png" width="36"/>
