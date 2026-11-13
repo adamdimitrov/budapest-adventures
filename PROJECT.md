@@ -91,3 +91,11 @@
 - Meta Pixel:
   - Standardized Pixel ID: `1355732169631751`
   - Event: `fbq('track', 'InitiateCheckout', { content_name: '...', value: <25% net commission EUR>, currency: 'EUR' })`
+
+## Menu and footer (must stay identical site-wide)
+- The master menu (header + mobile drawer + nav styles/script) and footer live on the tourism statistics pages:
+  `budapest-tourism-statistics.html` (EN) and `hu/budapest-turizmus-statisztika/index.html` (HU).
+- Change them only on the master page, then run `python3 scripts/sync_layout.py --langs en,hu` to copy them to every EN/HU page in `sitemap.xml`.
+  `--check` reports pages that drifted (exit code 1) without writing.
+- The language switcher shows EN and HU only; the script points each page's switcher at that page's own EN/HU versions (hreflang).
+- The footer lists only the five cruise money pages plus About and Contact. Do not add other guides to it.
