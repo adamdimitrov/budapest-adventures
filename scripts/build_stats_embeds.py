@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Make the tourism statistics charts embeddable.
 
-For every <div class="bpa-chart" id="..."> on the EN and HU statistics pages:
+For every <div class="bpa-chart" id="..."> on the statistics page in every language:
   * writes a standalone embed page to embed/<page path>/<chart id>.html
     (served at /embed/<page path>/<chart id>, frameable from any site, noindex)
   * adds an "Embed this chart" button under the chart on the page itself, which
@@ -45,6 +45,49 @@ PAGES = [
         "note": "Szabadon felhasználható weboldalon, cikkben vagy riportban. Kérjük, a forráslinket hagyd meg.",
     },
 ]
+
+# Generated languages (scripts/build_stats_i18n.py). Labels: button, copy, copied, note, "Source", "by", credit.
+EMBED_I18N = {
+    "de": ("Grafik einbetten", "Code kopieren", "Kopiert!", "Frei nutzbar auf Ihrer Website, in Artikeln oder Berichten. Bitte den Quellenlink beibehalten.", "Quelle", "von Budapest Adventures, auf Basis von KSH-Daten", "Grafik: Budapest Adventures"),
+    "fr": ("Intégrer ce graphique", "Copier le code", "Copié !", "Libre d'utilisation sur votre site, article ou rapport. Merci de garder le lien source.", "Source", "par Budapest Adventures, d'après les données du KSH", "Graphique : Budapest Adventures"),
+    "it": ("Incorpora il grafico", "Copia il codice", "Copiato!", "Libero da usare su sito, articolo o report. Mantieni il link alla fonte.", "Fonte", "di Budapest Adventures, su dati KSH", "Grafico: Budapest Adventures"),
+    "es": ("Insertar este gráfico", "Copiar código", "¡Copiado!", "Uso libre en tu web, artículo o informe. Mantén el enlace a la fuente.", "Fuente", "de Budapest Adventures, con datos de la KSH", "Gráfico: Budapest Adventures"),
+    "ro": ("Încorporează graficul", "Copiază codul", "Copiat!", "Liber de folosit pe site, în articole sau rapoarte. Păstrează linkul către sursă.", "Sursa", "de la Budapest Adventures, pe baza datelor KSH", "Grafic: Budapest Adventures"),
+    "pl": ("Osadź wykres", "Kopiuj kod", "Skopiowano!", "Możesz go używać na stronie, w artykule lub raporcie. Zachowaj link do źródła.", "Źródło", "Budapest Adventures, na podstawie danych KSH", "Wykres: Budapest Adventures"),
+    "nl": ("Grafiek insluiten", "Code kopiëren", "Gekopieerd!", "Vrij te gebruiken op je site, in artikelen of rapporten. Laat de bronlink staan.", "Bron", "door Budapest Adventures, op basis van KSH-cijfers", "Grafiek: Budapest Adventures"),
+    "cs": ("Vložit graf", "Kopírovat kód", "Zkopírováno!", "Volně k použití na webu, v článku nebo zprávě. Ponechte prosím odkaz na zdroj.", "Zdroj", "Budapest Adventures, podle dat KSH", "Graf: Budapest Adventures"),
+    "sk": ("Vložiť graf", "Kopírovať kód", "Skopírované!", "Voľne na použitie na webe, v článku alebo správe. Ponechajte prosím odkaz na zdroj.", "Zdroj", "Budapest Adventures, podľa údajov KSH", "Graf: Budapest Adventures"),
+    "pt": ("Incorporar gráfico", "Copiar código", "Copiado!", "Uso livre no seu site, artigo ou relatório. Mantenha a ligação à fonte.", "Fonte", "de Budapest Adventures, com dados do KSH", "Gráfico: Budapest Adventures"),
+    "ru": ("Встроить график", "Скопировать код", "Скопировано!", "Можно свободно использовать на сайте, в статье или отчёте. Сохраните ссылку на источник.", "Источник", "Budapest Adventures, по данным KSH", "График: Budapest Adventures"),
+    "hr": ("Ugradi grafikon", "Kopiraj kod", "Kopirano!", "Slobodno za upotrebu na webu, u članku ili izvješću. Zadržite poveznicu na izvor.", "Izvor", "Budapest Adventures, prema podacima KSH-a", "Grafikon: Budapest Adventures"),
+    "sr": ("Угради графикон", "Копирај код", "Копирано!", "Слободно за употребу на сајту, у чланку или извештају. Задржите линк ка извору.", "Извор", "Budapest Adventures, према подацима KSH", "Графикон: Budapest Adventures"),
+    "bg": ("Вграждане на графиката", "Копирай кода", "Копирано!", "Свободна употреба на сайт, в статия или доклад. Моля, запазете връзката към източника.", "Източник", "Budapest Adventures, по данни на KSH", "Графика: Budapest Adventures"),
+    "el": ("Ενσωμάτωση γραφήματος", "Αντιγραφή κώδικα", "Αντιγράφηκε!", "Ελεύθερη χρήση σε ιστότοπο, άρθρο ή αναφορά. Διατηρήστε τον σύνδεσμο της πηγής.", "Πηγή", "από Budapest Adventures, με στοιχεία KSH", "Γράφημα: Budapest Adventures"),
+    "tr": ("Grafiği yerleştir", "Kodu kopyala", "Kopyalandı!", "Sitenizde, makalenizde veya raporunuzda serbestçe kullanabilirsiniz. Lütfen kaynak bağlantısını koruyun.", "Kaynak", "Budapest Adventures, KSH verilerine dayanır", "Grafik: Budapest Adventures"),
+    "uk": ("Вбудувати графік", "Скопіювати код", "Скопійовано!", "Можна вільно використовувати на сайті, у статті чи звіті. Збережіть посилання на джерело.", "Джерело", "Budapest Adventures, за даними KSH", "Графік: Budapest Adventures"),
+    "he": ("הטמעת התרשים", "העתקת הקוד", "הועתק!", "מותר לשימוש חופשי באתר, בכתבה או בדוח. נא לשמור על הקישור למקור.", "מקור", "מאת Budapest Adventures, על בסיס נתוני KSH", "תרשים: Budapest Adventures"),
+    "ja": ("グラフを埋め込む", "コードをコピー", "コピーしました", "サイト、記事、レポートで自由に使えます。出典リンクは残してください。", "出典", "Budapest Adventures（KSHデータに基づく）", "グラフ：Budapest Adventures"),
+    "ko": ("차트 삽입", "코드 복사", "복사됨!", "웹사이트, 기사, 보고서에서 자유롭게 사용할 수 있습니다. 출처 링크는 유지해 주세요.", "출처", "Budapest Adventures, KSH 데이터 기반", "차트: Budapest Adventures"),
+}
+
+
+def _generated_pages():
+    import json as _json
+    import sys as _sys
+    _sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import build_stats_i18n as b
+    alt = b.page_alternates()["/budapest-tourism-statistics"]
+    out = []
+    for lg, (btn, copy, copied, note, src, by, credit) in EMBED_I18N.items():
+        with open(os.path.join(ROOT, "data", "i18n", "stats", lg + ".json"), encoding="utf-8") as fh:
+            name = _json.load(fh)["s042"]
+        out.append({"file": b.stats_file(alt[lg]), "path": alt[lg], "lang": lg, "page_name": name,
+                    "source_tpl": src + ': <a href="{url}">{name}</a>, ' + by, "credit": credit,
+                    "btn": btn, "copy": copy, "copied": copied, "note": note})
+    return out
+
+
+PAGES += _generated_pages()
 
 MARK_START = "<!--bpa-embed-->"
 MARK_END = "<!--/bpa-embed-->"
