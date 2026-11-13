@@ -2287,6 +2287,7 @@ window.LTT_PAGE_CONFIG = {"deckId": "budapest-thermal-baths-deck", "tocDeckLabel
         p: p ? p.textContent.trim() : '',
         d: (kp[1] ? kp[1].trim() : '') + (psub ? ' • ' + psub.textContent.trim() : ''),
         l: btn ? btn.href : (head ? head.href : ''),
+        bt: btn ? btn.textContent.trim() : '',
         t: (i + 1) + '. ' + (head ? head.textContent.trim() : '')
       };
     });
@@ -2554,10 +2555,7 @@ window.LTT_PAGE_CONFIG = {"deckId": "budapest-thermal-baths-deck", "tocDeckLabel
       var priceEl = document.getElementById('sticky-price');
       if (priceEl) priceEl.textContent = active.p;
       var ctaEl = document.getElementById('sticky-cta-btn');
-      if (ctaEl) {
-        ctaEl.href = active.l;
-        if (cfg.btnText) ctaEl.textContent = cfg.btnText;
-      }
+      if (ctaEl) { ctaEl.href = active.l; if (cfg.btnText) ctaEl.textContent = cfg.btnText; if (active.bt) ctaEl.textContent = active.bt; }
       bar.classList.add('visible', 'is-visible');
     }
   }
