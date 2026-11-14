@@ -115,9 +115,20 @@ def media(i, c):
         b = balanced(src, a, "div")
         slider = src[a:b]
         imgs = re.findall(r"<img [^>]*>", slider)
-        if len(imgs) > 12:  # the reference keeps 8 to 12 photos per card
-            head = slider[:slider.find("<img ")]
-            slider = head + "\n".join(imgs[:12]) + "</div>"
+        if c.get("order"):  # lead with the most selling photo; drop logos and duplicates
+            imgs = [imgs[k - 1] for k in c["order"]]
+        imgs = imgs[:12]  # the reference keeps 8 to 12 photos per card
+        fixed = []
+        for k, im in enumerate(imgs):
+            real = (re.search(r'data-src="([^"]+)"', im) or re.search(r'src="([^"]+)"', im)).group(1)
+            alt = re.search(r'alt="([^"]*)"', im).group(1)
+            if k == 0:
+                fixed.append('<img alt="%s" fetchpriority="high" height="534" loading="eager" sizes="%s" src="%s" width="800"/>' % (alt, SIZES, real))
+            else:
+                fixed.append('<img alt="%s" data-src="%s" decoding="async" height="534" loading="lazy" sizes="%s" src="%s" width="800"/>'
+                             % (alt, real, SIZES, PLACEHOLDER))
+        head = slider[:slider.find("<img ")]
+        slider = head + "\n".join(fixed) + "</div>"
         n = len(re.findall(r"<img ", slider))
         slider = re.sub(r'aria-label="Photo gallery \d+"', 'aria-label="Photo gallery %d"' % i, slider)
     else:
@@ -143,7 +154,9 @@ def rate_block(c):
     for site, s, cnt, link in c["ratings"]:
         inner = ('%s<span class="bpa-rev-site">%s</span><span class="bpa-rev-score">%s</span><span class="bpa-rev-count">(%s)</span>'
                  % ("\n" + ICON[site], site, score1(s), fmt_count(cnt)))
-        if link == "gyg":
+        # OTA review entries link out only when the card has no direct operator booking link
+        # (Legenda / Silverline pay a higher commission, so their clicks stay on the CTA).
+        if link == "gyg" and c.get("book") == "gyg":
             badges.append('<a class="bpa-rev-badge is-link" href="%s" rel="noopener nofollow sponsored" target="_blank">%s'
                           '<span class="bpa-rev-go" aria-hidden="true">→</span></a>' % (gyg(c, "rating"), inner))
         else:
@@ -153,8 +166,6 @@ def rate_block(c):
     else:
         head = "Rating on %s" % c["ratings"][0][0]
     note = ""
-    if any(r[0] == "Viator" for r in c["ratings"]):
-        note = '<span class="bpa-lang-note">Viator&rsquo;s count includes Tripadvisor reviews.</span>'
     meta = "%s reviews · %d site%s" % (fmt_total(tot), nsites, "s" if nsites > 1 else "")
     return ('<div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum">'
             '<span class="bpa-stars" style="--r:%.2f" aria-hidden="true"></span><b class="bpa-rate-score">%s</b>'
@@ -206,11 +217,6 @@ def deck_html(i, c):
 
 # ── details card ─────────────────────────────────────────────────────────────────────
 def det_header(i, c):
-    badges = []
-    for site, s, cnt, _ in c["ratings"]:
-        badges.append('<span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="%s"/>'
-                      '<span class="bpa-rev-score">%s</span><span class="bpa-rev-stars">%s</span><span class="bpa-rev-count">(%s)</span></span>'
-                      % (DET_ICON[site], score1(s), stars(s), fmt_count(cnt)))
     proof = '\n<div class="bpa-proof"><span class="bpa-vchip">✓ Personally Tested</span></div>' if c["tested"] else ""
     return f'''<details class="bpa-details-card" data-cat="{c["cat"]}" id="{c["anchor"]}" open="">
 <summary class="bpa-details-summary">
@@ -221,7 +227,7 @@ def det_header(i, c):
 </div>
 <h3 class="bpa-details-title">{c["title"]}</h3>
 <div class="bpa-reviews-line">
-<div class="bpa-summary-reviews"><div class="div-block-53">{"".join(badges)}</div></div>{proof}
+{rate_block(c)}{proof}
 </div>
 </div>
 <div class="bpa-details-right">
@@ -458,6 +464,21 @@ def details_html(i, c):
 
 
 # ── text hygiene for everything we emit ──────────────────────────────────────────────
+AFF = re.compile(r'(getyourguide\.com|viator\.com|tripadvisor\.|tiqets\.com|legenda\.hu/[^"]*partner=|budapestrivercruise\.eu/[^"]*code=|fareharbor\.com)')
+
+
+def aff_rel(html):
+    """Every affiliate or OTA link gets rel="nofollow sponsored noopener" (keeps target=_blank)."""
+    def fix(m):
+        tag = m.group(0)
+        href = re.search(r'href="([^"]*)"', tag)
+        if not href or not AFF.search(href.group(1)):
+            return tag
+        tag = re.sub(r'\srel="[^"]*"', "", tag)
+        return tag[:-1] + ' rel="nofollow sponsored noopener">'
+    return re.sub(r"<a\b[^>]*>", fix, html)
+
+
 def no_em_dash(html):
     """Replace em dashes in visible text and attributes (scripts/styles untouched here)."""
     html = re.sub(r"\s*—\s*", ": ", html)
@@ -574,6 +595,7 @@ def main():
 
     # JSON-LD
     page = build_jsonld(page, cards, title, desc)
+    page = aff_rel(page)
     with open(PAGE, "w", encoding="utf-8") as f:
         f.write(page)
     print("wrote", PAGE, len(page))

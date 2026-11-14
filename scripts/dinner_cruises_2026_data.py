@@ -1,9 +1,10 @@
 """Card data for /best-dinner-cruises-budapest (EN), rebuilt 14 November 2026.
 
 Every price, rating, count, time and pier below was checked on the live listing in Chrome
-on 14 November 2026 (booking calendars for Saturday 28 November 2026). Viator's product
-pages say their totals already include Tripadvisor reviews, so Tripadvisor is not added
-on top (that would count the same reviews twice).
+on 14 November 2026 (booking calendars for Saturday 28 November 2026). GetYourGuide,
+Viator and Tripadvisor are shown as separate ratings (Tripadvisor counts as checked for the
+night cruises page on the same day). Hungária Koncert's Viator listing (5808DINNER) sells
+drinks or a buffet, not the served 4-course dinner, so it is not counted for card 3.
 
 The user personally tested cards 1 to 3 (Legenda, Silverline, Hungária Koncert). Cards 4
 to 6 are written from the live listings and their reviews, never in the first person.
@@ -48,7 +49,8 @@ CARDS.append(dict(
     title="4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music",
     short="Legenda Candlelit Dinner Cruise",
     gyg_slug="budapest-candlelit-dinner-river-cruise-with-live-music-t400893", book="legenda_dinner",
-    ratings=[("GetYourGuide", 4.712, 2432, "gyg"), ("Viator", 4.7, 2056, None)],
+    ratings=[("GetYourGuide", 4.712, 2432, "gyg"), ("Viator", 4.7, 2056, None), ("Tripadvisor", 4.6, 1005, None)],
+    order=[4, 1, 2, 6, 3, 13, 5, 7, 8, 10, 11, 9],
     price="110", psub="per adult · kids (3–12) €84", via="Legenda",
     trust=["✓ Instant mobile ticket", "✓ Free cancellation up to 24 hours before"],
     tested_pop="<strong>I rode this cruise myself.</strong> The photos and video in the review are my own.",
@@ -108,7 +110,7 @@ CARDS.append(dict(
     title="Silverline 4-Course Dinner Cruises: No Show, Folk &amp; Operetta or Piano Show",
     short="Silverline 4-Course Dinner Cruise",
     gyg_slug="dinner-lights-budapest-evening-cruise-t54081", book="silverline_dinner",
-    ratings=[("GetYourGuide", 4.428, 1479, "gyg"), ("Viator", 4.7, 577, None)],
+    ratings=[("GetYourGuide", 4.428, 1479, "gyg"), ("Viator", 4.7, 577, None), ("Tripadvisor", 4.7, 482, None)],
     price="77", psub="per adult", via="Silverline",
     trust=["✓ Mobile voucher", "✓ Free cancellation up to 24 hours before"],
     tested_pop="<strong>I rode this cruise myself.</strong> The photos and video in the review are my own.",
@@ -175,7 +177,8 @@ CARDS.append(dict(
     title="4-Course Hungarian Dinner Cruise With Rajkó Folk Music &amp; Dance",
     short="Hungária Koncert Dinner &amp; Folk Show",
     gyg_slug="15-hour-danube-cruise-dinner-with-live-music-t1593", book="gyg",
-    ratings=[("GetYourGuide", 4.383, 2254, "gyg"), ("Viator", 4.7, 7609, None)],
+    ratings=[("GetYourGuide", 4.383, 2254, "gyg")],
+    order=[5, 7, 10, 13, 4, 6, 3, 8, 9, 14, 15, 1],
     price="67", psub="per adult (was €79)", via="GetYourGuide",
     trust=["✓ Free cancellation up to 24 hours before", "✓ Reserve now, pay later"],
     tested_pop="<strong>I rode this cruise myself.</strong> The photos and video in the review are my own.",
@@ -308,7 +311,7 @@ CARDS.append(dict(
     title="Buffet Dinner Cruise With Live Music &amp; Unlimited Drinks",
     short="River Diva Buffet Dinner Cruise",
     gyg_slug="budapest-premium-dinner-cruise-live-music-unlimited-drinks-t494832", book="gyg",
-    ratings=[("GetYourGuide", 4.767, 2714, "gyg"), ("Viator", 4.7, 62, None)],
+    ratings=[("GetYourGuide", 4.767, 2714, "gyg"), ("Viator", 4.7, 62, None), ("Tripadvisor", 4.7, 35, None)],
     price="99", psub="per adult", via="GetYourGuide",
     trust=["✓ Free cancellation up to 24 hours before", "✓ Reserve now, pay later"],
     photos=NEW5, nphotos=12,
