@@ -191,7 +191,9 @@ def rate_block(c):
     for site, s, cnt, link in c["ratings"]:
         inner = ('%s<span class="bpa-rev-site">%s</span><span class="bpa-rev-score">%s</span><span class="bpa-rev-count">(%s)</span>'
                  % ("\n" + ICON[site], site, score1(s), fmt_count(cnt)))
-        if link == "gyg":
+        # OTA review entries link out only when the card has no direct/Tiqets booking link
+        # (direct links pay a higher commission, so their clicks must stay on the CTA).
+        if link == "gyg" and c.get("book") == "gyg":
             badges.append('<a class="bpa-rev-badge is-link" href="%s" rel="noopener nofollow sponsored" target="_blank">%s'
                           '<span class="bpa-rev-go" aria-hidden="true">→</span></a>' % (gyg(c, "rating"), inner))
         else:
