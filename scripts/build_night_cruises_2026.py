@@ -43,7 +43,7 @@ DET_ICON = {}
 for m in re.finditer(r'<span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="([^"]+)"/>', _ref_det):
     pass
 _icons_in_det = re.findall(r'<img alt="" class="bpa-rev-icon" loading="lazy" src="([^"]+)"/>', _ref_det)
-DET_ICON = {"GetYourGuide": _icons_in_det[0], "Viator": _icons_in_det[1]}
+DET_ICON = {"GetYourGuide": _icons_in_det[0], "Viator": _icons_in_det[1], "Tripadvisor": _icons_in_det[2]}
 LOCK_SVG = re.search(r'<svg fill="none"[^>]*>.*?</svg>', _ref_det, re.S).group(0)
 SIZES = "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
 PLACEHOLDER = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
@@ -105,6 +105,45 @@ def stars(s):
     return out
 
 
+# Slider order chosen to sell each card (1-based positions of the source slider):
+# lead with the shot that matches the card's promise, then boat, drinks/food, views, details.
+PHOTO_ORDER = {
+    "legenda-danube-legend": [1, 6, 7, 5, 4, 3, 8, 2],
+    "duna-weser-unlimited-prosecco": [5, 1, 2, 6, 3, 4, 7],
+    "kisfaludy-paddle-steamer": [1, 2, 8, 7, 5, 9, 3, 4, 6, 10],
+    "legenda-candlelit-dinner": [4, 1, 2, 6, 5, 3, 8, 11, 7, 10, 9, 12],
+    "river-diva-dinner": [5, 2, 1, 3, 4, 7, 6, 9, 8, 10, 11],
+    "silverline-dinner": [1, 5, 3, 8, 7, 11, 9, 10, 6, 12, 4, 2],
+    "silverline-unlimited-prosecco": [2, 1, 6, 3, 5, 4, 7, 8, 9, 11, 10],
+    "silverline-sightseeing": [5, 3, 2, 4, 1],
+}
+
+
+def reorder_slider(slider, key):
+    order = PHOTO_ORDER.get(key)
+    if not order:
+        return slider
+    imgs = re.findall(r"<img [^>]*>", slider)
+    assert sorted(order) == list(range(1, len(imgs) + 1)), (key, len(imgs))
+    def url(im):
+        m = re.search(r'data-src="([^"]+)"', im) or re.search(r' src="([^"]+)"', im)
+        return m.group(1)
+    def lazy(im):
+        if "data-src=" in im:
+            return im
+        return re.sub(r' src="([^"]+)"', lambda m: ' data-src="%s" decoding="async" src="%s"' % (m.group(1), PLACEHOLDER), im, count=1)
+    def eager(im):
+        u = url(im)
+        im = re.sub(r'\sdata-src="[^"]*"', "", im)
+        im = re.sub(r'\sdata-srcset="[^"]*"', "", im)
+        im = re.sub(r' src="[^"]*"', ' src="%s"' % u, im, count=1)
+        return im
+    new = [imgs[i - 1] for i in order]
+    new = [eager(new[0])] + [lazy(im) for im in new[1:]]
+    head = slider[:slider.find("<img ")]
+    return head + "\n".join(new) + "</div>"
+
+
 # ── deck card ────────────────────────────────────────────────────────────────────────
 def media(i, c):
     tag = '<span class="bpa-rank-tag %s">%s</span>' % (c["color"], c["rank"])
@@ -141,6 +180,7 @@ def media(i, c):
         n = len(imgs)
         slider = ('<div aria-label="Photo gallery %d" class="bpa-slider" onscroll="bpaCount(this)" tabindex="0">\n%s</div>'
                   % (i, "\n".join(imgs)))
+    slider = reorder_slider(slider, c["key"])
     return ('<div class="bpa-media">\n%s\n%s<span class="bpa-pill">1 / %d</span>%s\n</div>' % (tag, arrows, n, slider))
 
 
@@ -161,8 +201,6 @@ def rate_block(c):
     else:
         head = "Rating on %s" % c["ratings"][0][0]
     note = ""
-    if any(r[0] == "Viator" for r in c["ratings"]):
-        note = '<span class="bpa-lang-note">Viator&rsquo;s count includes Tripadvisor reviews.</span>'
     meta = "%s reviews · %d site%s" % (fmt_total(tot), nsites, "s" if nsites > 1 else "")
     return ('<div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum">'
             '<span class="bpa-stars" style="--r:%.2f" aria-hidden="true"></span><b class="bpa-rate-score">%s</b>'
@@ -399,6 +437,7 @@ def tested_body(c):
             k = body.find('<div class="ltt-buy-card">')
             body = body[:k] + '<div class="w-richtext">%s</div>\n' % getthere(c) + body[k:]
     body = FIXES[c["key"]](body)
+    body = re.sub(r'<a href="/best-night-cruises-budapest">([^<]*)</a>', r"\1", body)  # no self-links
     return body
 
 
