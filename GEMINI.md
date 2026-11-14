@@ -47,3 +47,33 @@
   - **Strictly No Mass Blasts / Cold Spam**: Mass emailing concierges or DMCs will burn the domain, trigger spam complaints, and alert Legenda to the leak, risking the termination of the €130k partnership.
   - **Play 1 (Concierge Private VIP Brokerage)**: Only reach out individually / in-person to chief concierges (*Les Clefs d'Or*) for high-ticket experiences that Legenda *cannot* offer (private boutique water taxis, luxury wine country chauffeurs).
   - **Play 2 (Legenda C-Suite Direct Channel)**: Use direct managing director contact details strictly to expand the existing Budapest Adventures performance partnership.
+
+# HARD RULES for editing site pages (read before touching any HTML)
+
+These override anything else in this file. Breaking one of them costs money or rankings.
+
+## Copy
+- **No em dashes (—) anywhere**: body copy, titles, meta descriptions, JSON-LD, alt text. Use a comma, colon, period or parentheses instead.
+- **Never translate brand names**: company, boat, venue and site names stay exactly as in English (Legenda, Silverline, Budapest Adventures, Duna Corso, etc.).
+- Translate naturally for a native reader. Keep prices, durations, ratings and review counts identical to the English source page; never invent facts. Statistics articles: follow `STATS_ARTICLES.md`.
+
+## Affiliate links (never change, add or remove booking URLs unless the English page has the same one)
+- **Legenda** (`legenda.hu`): only `?partner=38585`. No subid, no agent_ref, no TourCMS links.
+- **Silverline** (`budapestrivercruise.eu`): only `?code=bpadventures`. Never put 38585 on a Silverline link.
+- Keep every other affiliate parameter exactly as on the English page. Do not "clean up" query strings.
+- If a translated page needs a product link the English page does not have, stop and leave a note instead of guessing.
+
+## Layout (menu, drawer, footer)
+- Never hand-edit the header, mobile drawer or footer on individual pages. Each language has one MASTER page (the statistics page, see `masters` in `scripts/layout_config.json`). Edit the master, then run `python3 scripts/sync_layout.py`.
+- Language switcher is EN/HU style as on the masters; do not invent new menu groups or top-bar links.
+- Before every commit run `python3 scripts/sync_layout.py --check`. It must exit 0.
+
+## Caching gotchas
+- `.js` files and `/assets` images are cached 1 year immutable. Changed JS: bump its `?v=` everywhere it is loaded. Replaced image: new filename, never overwrite.
+- Do not touch `vercel.json`, analytics/tag snippets, or anything under `api/`.
+
+## Workflow
+- Branch from `origin/main`, never commit to `main`, never force-push.
+- One language per branch and per PR.
+- Before each PR: `sync_layout.py --check` passes, `grep -rn "—" <changed files>` returns nothing, changed pages load without console errors locally.
+- Do not merge PRs. Do not deploy to production.
