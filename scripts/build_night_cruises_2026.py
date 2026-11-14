@@ -408,6 +408,8 @@ def fix_prosecco(b):
                '<div class="ltt-sp-card"><h4>About Duna-Weser</h4><ul role="list"><li>This ticket is now run by <strong>Duna-Weser Kft.</strong>, '
                'which also runs the River Diva dinner cruise (#5 on this list). I tested the cruise when Rubin Group ran it.</li></ul></div>', b, flags=re.S)
     b = b.replace("isn't worth the 10€ price", "wasn't worth the money")
+    b = must(b, "Additionally, the <strong>meeting point</strong> is further from the city center, so getting there may take some extra time and effort.",
+             "Additionally, the <strong>meeting point</strong> I used, north of Margaret Bridge, is further from the city center; two of today's three docks are central.")
     b = b.replace("The optional <strong>assorted food platter</strong> for 10€<strong> </strong>wasn't what I was expecting.",
                   "The optional <strong>assorted food platter</strong> I ordered wasn't what I was expecting.")
     return b
@@ -418,6 +420,8 @@ def fix_kisfaludy(b):
              "an audio guide (via loudspeakers when I tested it; the current listing has a <strong>30-language online audio guide</strong> on your own phone)")
     b = re.sub(r"complimentary welcome drink\s*</strong>of your choice [—-] <strong>water, prosecco, orange juice or beer\.</strong>",
                "complimentary welcome drink</strong>. The current listing offers <strong>prosecco or orange juice</strong>.", b)
+    b = re.sub(r"<strong>The cruise includes a complimentary welcome drink of your choice</strong>\s*(?:—|:)\s*water, prosecco, orange juice or beer\.",
+                  "<strong>When I tested it, the welcome drink was water, prosecco, orange juice or beer.</strong> The current listing offers prosecco or orange juice.", b)
     b = re.sub(r'<div class="ltt-sp-card"><h4>About Dunai Sétahajózási Ltd\.</h4>.*?</div>',
                '<div class="ltt-sp-card"><h4>About Dunai Sétahajózási</h4><p>Dunai Sétahajózási (Duna Cruises) runs the Kisfaludy from Dock 10 by Elizabeth Bridge.</p></div>', b, flags=re.S)
     return b
@@ -427,6 +431,7 @@ def fix_legenda(b):
     b = b.replace("which is why it's number one on this list", "which is why it ranks so high on this list")
     b = re.sub(r"<li><strong>This boat is available from 16:30 onwards\.\s*</strong></li>", "", b)
     b = re.sub(r"<li>This boat is available from 16:30 onwards\.\s*</li>", "", b)
+    b = b.replace("<li><strong>This boat is <strong>available from 16:30</strong> onwards.</strong></li>", "")
     b = b.replace('href="#budapest-river-cruise-deck"', 'href="#budapest-night-cruise-deck"')
     b = b.replace("360° views like Legenda, Rubin Group, and Portum.", "360° views, like Legenda's.")
     return b
@@ -452,7 +457,8 @@ def fix_legenda_dinner(b):
 
 def fix_silverline_dinner(b):
     b = re.sub(r"\s*We used to rank Silverline's three dinner cruises separately \(#2–#4\)\.", "", b)
-    b = re.sub(r"Silverline is a solid company operating since 2011 with", "Silverline runs", b)
+    b = b.replace("Silverline is a solid company <strong>operating since 2011</strong> with a popular range of sightseeing and dining vessels on the Danube.",
+                  "Silverline runs sightseeing, dinner and drinks cruises from Dock 11 by Elizabeth Bridge.")
     return b
 
 
@@ -531,6 +537,8 @@ def main():
 <button class="ltt-tab-btn" data-cat="tested" onclick="lttFilterItems('tested', this)" type="button">Personally Tested ({cats["tested"]})</button>
 </div>''')
     page = swap_block(page, r'<div class="ltt-integrated-pills">', pills)
+    page = page.replace("Personally field-tested • All reviews open by default",
+                        "%d of 10 personally tested • All reviews open by default" % n_tested)
     page = re.sub(r'(<h2 class="bpa-breakdown-heading" id="desert-safaris-breakdown">)[^<]*(</h2>)',
                   r"\1Detailed Breakdown: 10 Best Night Cruises in Budapest\2", page)
 
@@ -548,6 +556,8 @@ def main():
     page = re.sub(r'(<span class="hybrid-active-price" id="sticky-price">)[^<]*(</span>)', r"\g<1>From €%s\2" % c1["price"], page, count=1)
     page = re.sub(r'(<a class="hybrid-cta-btn" href=")[^"]*(" id="sticky-cta-btn")', r"\g<1>%s\2" % book_url(c1, "sticky"), page, count=1)
 
+    page = re.sub(r'(<span class="hybrid-active-title" id="hybridActiveTitle">)[^<]*(</span>)', r"\g<1>%s\2" % c1["short"], page, count=1)
+    page = re.sub(r'(<span class="hybrid-active-price" id="hybridActivePrice">)[^<]*(</span>)', r"\g<1>From €%s\2" % c1["price"], page, count=1)
     page = re.sub(r'(<a class="hybrid-cta-btn" href=")[^"]*(" id="hybridActiveCta")', r"\g<1>%s\2" % book_url(c1, "sticky"), page, count=1)
 
     # JSON-LD
@@ -603,6 +613,10 @@ def build_jsonld(page, cards, title, desc):
             node["mainEntity"]["numberOfItems"] = len(cards)
             node["mainEntity"]["itemListElement"] = items
             node["image"] = [x for x in node.get("image", []) if "legenda-sightseeing" not in x] or node.get("image")
+        if node.get("@type") == "BreadcrumbList":
+            for it in node.get("itemListElement", []):
+                if "Night Cruises" in it.get("name", ""):
+                    it["name"] = "10 Best Night Cruises in Budapest (2026)"
     out = json.dumps(data, ensure_ascii=False, indent=1).replace("—", ":")
     return page[:a] + out + page[b:]
 
