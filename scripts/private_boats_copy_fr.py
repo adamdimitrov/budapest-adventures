@@ -56,7 +56,6 @@ COPY = {
         "lead": [
             "Un bateau privé est le seul moyen de profiter du panorama du Danube sans partager le pont avec 200 inconnus. Ce guide compare les <strong>4 bateaux privés de Budapest réservables en ligne aujourd'hui</strong>, du bateau à moteur pour 20 personnes dès 225 € à la limousine fluviale en bois de style vénitien.",
             "Nous les avons comparés selon le <strong>prix par bateau, le nombre de places, les vrais horaires du calendrier de réservation, les boissons incluses et les avis sur GetYourGuide et Viator</strong>. Nous n'avons pas navigué nous-mêmes sur ces quatre bateaux ; tout ce qui suit provient des offres en ligne et d'avis vérifiés.",
-            "Besoin d'un bateau pour plus de 20 personnes, d'un dîner à bord ou d'un itinéraire sur mesure ? <a href=\"/budapest-river-cruise-group-booking\"><strong>Demandez un devis de groupe</strong></a> et nous interrogerons les opérateurs pour vous.",
         ],
         "filters": [("all", "Tous (4)"), ("small", "Couples &amp; petits groupes (3)"), ("groups20", "Groupes jusqu'à 20+ (3)"), ("party", "EVJF &amp; EVG (2)")],
         "breakdown_h2": "Analyse détaillée : les 4 meilleures balades en bateau privé à Budapest",
@@ -64,6 +63,7 @@ COPY = {
         "sheet_title": "Aller à un bateau privé",
         "toc_deck": "Top 4 bateaux privés",
         "toc_breakdown": "Analyse détaillée (4 bateaux privés)",
+        "group_bookmark": {"title": 'Croisière en groupe à Budapest (devis gratuit)', "desc": 'Bateaux pour 20 à 250+ personnes, dîner à bord ou itinéraire sur mesure. Nous interrogeons les opérateurs pour vous.'},
         "group_cta": "<strong>👥 Groupe plus grand, dîner à bord ou itinéraire sur mesure ?</strong> Ces offres s'arrêtent à 10 à 35 personnes et une heure. <a href=\"/budapest-river-cruise-group-booking\">Demandez un devis sur notre page de réservation de groupe</a> et nous recueillerons les offres des opérateurs pour vous.",
         "og_image": "/assets/private-boats/dunarama-water-limo-1.webp",
     },
