@@ -59,7 +59,6 @@ COPY = {
         "lead": [
             "A private boat is the only way to see the Danube panorama without sharing the deck with 200 strangers. This guide compares the <strong>4 private boats in Budapest you can actually book online today</strong>, from a 20-guest motor boat for €225 to a Venetian-style wooden water limousine.",
             "We compared them on <strong>price per boat, how many guests fit, real start times on the booking calendar, what drinks are included and what guests say on GetYourGuide and Viator</strong>. We have not sailed on these four boats ourselves, so everything below comes from the live listings and verified reviews.",
-            "Need a boat for more than 20 people, a dinner on board or a custom route? <a href=\"/budapest-river-cruise-group-booking\"><strong>Request a group quote</strong></a> and we will ask the operators for you.",
         ],
         "filters": [("all", "All (4)"), ("small", "Couples &amp; Small Groups (3)"), ("groups20", "Groups up to 20+ (3)"), ("party", "Stag &amp; Hen (2)")],
         "breakdown_h2": "Detailed Breakdown: 4 Best Private Boat Tours in Budapest",
@@ -67,6 +66,7 @@ COPY = {
         "sheet_title": "Jump to a Private Boat",
         "toc_deck": "Top 4 Private Boats",
         "toc_breakdown": "Detailed Breakdown (4 Private Boats)",
+        "group_bookmark": {"title": 'Budapest River Cruise Group Booking (Free Quote)', "desc": 'Boats for 20 to 250+ guests, dinner on board or a custom route. We ask the operators for you.'},
         "group_cta": "<strong>👥 Bigger group, dinner on board or a custom route?</strong> These listings stop at 10 to 35 guests and one hour. <a href=\"/budapest-river-cruise-group-booking\">Request a quote on our group booking page</a> and we will collect offers from the operators for you.",
         "og_image": "/assets/private-boats/dunarama-water-limo-1.webp",
     },

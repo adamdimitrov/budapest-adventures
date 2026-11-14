@@ -27,6 +27,11 @@ PAGES = {
     "it": ("it/tour-barca-privata-budapest/index.html", "/it/tour-barca-privata-budapest", "/it/prenotazione-gruppi-crociera-budapest"),
     "es": ("es/paseos-barco-privado-budapest/index.html", "/es/paseos-barco-privado-budapest", "/es/reserva-grupos-cruceros-budapest"),
     "hu": ("hu/legjobb-privát-hajókirándulások-budapest/index.html", "/hu/legjobb-privát-hajókirándulások-budapest", "/hu/budapest-nagy-csoportos-hajokirandulas"),
+    "nl": ("nl/prive-boottocht-boedapest/index.html", "/nl/prive-boottocht-boedapest", "/nl/groepsboeking-cruise-boedapest"),
+    "pt": ("pt/passeio-barco-privado-budapeste/index.html", "/pt/passeio-barco-privado-budapeste", "/pt/reserva-grupo-cruzeiros-budapeste"),
+    "ro": ("ro/plimbari-barca-privata-budapesta/index.html", "/ro/plimbari-barca-privata-budapesta", "/ro/rezervari-grup-croaziere-budapesta"),
+    "hr": ("hr/privatni-izleti-brodom-budimpesta/index.html", "/hr/privatni-izleti-brodom-budimpesta", "/hr/grupne-rezervacije-krstarenja-budimpesta"),
+    "sr": ("sr/privatne-ture-brodom-budimpesta/index.html", "/sr/privatne-ture-brodom-budimpesta", "/sr/grupne-rezervacije-krstarenja-budimpesta"),
 }
 IMG_DIR = "/assets/private-boats/"
 SIZES = "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
@@ -47,6 +52,13 @@ PLACEHOLDER = re.search(r'data-src="[^"]+" decoding="async" loading="lazy" sizes
 
 
 def ref_block(tag, id_):
+    if id_ == "cd-editorial-base":
+        # base bookmark rules live inside the reference page's hero stylesheet
+        hero_css = ref_block("style", "ltt-hero-card-styles")
+        a = hero_css.index("/* Editorial Bookmark Cross-Link Card */")
+        b = hero_css.index("@media", a)
+        b = hero_css.index("}\n}", b) + 3
+        return '<style id="cd-editorial-base">\n%s\n</style>' % hero_css[a:b]
     m = re.search(r'<%s id="%s"[^>]*>.*?</%s>' % (tag, id_, tag), REF, re.S)
     return m.group(0)
 
@@ -294,8 +306,30 @@ def breakdown(i, p, c, ui, group_url, page):
 
 
 # ---------------------------------------------------------------- hero
+GROUP_THUMB = "/assets/cdn/60e43c7d6d05b671dff0dc1a/6482365138e2c970cdc10bc0_1-Best-River-Cruises-Budapest.webp"
+
+
+def group_bookmark(bm, group_url):
+    """Compact editorial bookmark to the group booking page (styled by #cd-bookmark-compact)."""
+    return f'''
+<figure class="cd-bookmark-wrapper">
+<a href="{group_url}" class="cd-editorial-bookmark">
+<div class="cd-editorial-body">
+<div>
+<div class="cd-editorial-title">{esc(bm["title"])}</div>
+<div class="cd-editorial-desc">{esc(bm["desc"])}</div>
+</div>
+</div>
+<div class="cd-editorial-thumb">
+<img src="{GROUP_THUMB}" alt="{esc(bm["title"])}" loading="lazy" width="64" height="64"/>
+</div>
+</a>
+</figure>'''
+
+
 def hero(page, ui, home, group_url):
     lead = "".join("<p>%s</p>" % x for x in page["lead"]).replace("/budapest-river-cruise-group-booking", group_url)
+    lead += group_bookmark(page["group_bookmark"], group_url)
     filters = "".join(
         '<button class="ltt-tab-btn%s" data-cat="%s" onclick="lttFilterItems(\'%s\', this)" type="button">%s</button>' % (
             " active" if cat == "all" else "", cat, cat, label) for cat, label in page["filters"])
@@ -392,7 +426,7 @@ def sub_once(pattern, repl, s, flags=0):
     return new
 
 
-PICK_LABEL = {"en": "PICK", "de": "TIPP", "fr": "CHOIX", "it": "SCELTA", "es": "OPCIÓN", "hu": "VÁLASZTÁS"}
+PICK_LABEL = {"en": "PICK", "de": "TIPP", "fr": "CHOIX", "it": "SCELTA", "es": "OPCIÓN", "hu": "VÁLASZTÁS", "nl": "KEUZE", "pt": "ESCOLHA", "ro": "ALEGERE", "hr": "IZBOR", "sr": "ИЗБОР"}
 
 HU_TEMPLATE = {
     "Inhaltsverzeichnis öffnen": "Tartalomjegyzék megnyitása",
@@ -442,10 +476,12 @@ def build(lang):
                '<link as="image" fetchpriority="high" href="%s%s" rel="preload" type="image/webp"/>' % (IMG_DIR, PRODUCTS[0]["images"][0]), s)
 
     # components from the reference page
-    for tag, id_ in (("style", "bpa-lang-css"), ("style", "bpa-card2-css")):
+    for tag, id_ in (("style", "bpa-lang-css"), ("style", "bpa-card2-css"), ("style", "cd-editorial-base"), ("style", "cd-bookmark-compact")):
         blk = ref_block(tag, id_)
         if 'id="%s"' % id_ in s:
             s = re.sub(r'<%s id="%s"[^>]*>.*?</%s>' % (tag, id_, tag), lambda m: blk, s, count=1, flags=re.S)
+        elif id_ == "cd-editorial-base" and '<style id="cd-bookmark-compact">' in s:
+            s = s.replace('<style id="cd-bookmark-compact">', blk + '<style id="cd-bookmark-compact">', 1)
         else:
             s = s.replace("</head>", blk + "</head>", 1)
     blk = ref_block("script", "bpa-lang-js")

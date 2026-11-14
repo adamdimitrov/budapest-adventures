@@ -56,7 +56,6 @@ COPY = {
         "lead": [
             "Ein privates Boot ist die einzige Möglichkeit, das Donau-Panorama zu genießen, ohne das Deck mit 200 Fremden zu teilen. Dieser Ratgeber vergleicht die <strong>4 privaten Boote in Budapest, die Sie heute online buchen können</strong>, vom Motorboot für 20 Gäste ab €225 bis zur venezianischen Holz-Wasserlimousine.",
             "Wir haben sie nach <strong>Preis pro Boot, Platz für Gäste, echten Startzeiten im Buchungskalender, inklusiven Getränken und den Bewertungen auf GetYourGuide und Viator</strong> verglichen. Wir sind mit diesen vier Booten nicht selbst gefahren; alles unten stammt aus den Live-Angeboten und verifizierten Bewertungen.",
-            "Sie brauchen ein Boot für mehr als 20 Personen, ein Abendessen an Bord oder eine eigene Route? <a href=\"/budapest-river-cruise-group-booking\"><strong>Fordern Sie ein Gruppenangebot an</strong></a>, und wir fragen die Anbieter für Sie an.",
         ],
         "filters": [("all", "Alle (4)"), ("small", "Paare &amp; kleine Gruppen (3)"), ("groups20", "Gruppen bis 20+ (3)"), ("party", "Junggesellenabschied (2)")],
         "breakdown_h2": "Detaillierte Übersicht: Die 4 besten privaten Bootstouren in Budapest",
@@ -64,6 +63,7 @@ COPY = {
         "sheet_title": "Zu einem Privatboot springen",
         "toc_deck": "Top 4 Privatboote",
         "toc_breakdown": "Detaillierte Übersicht (4 Privatboote)",
+        "group_bookmark": {"title": 'Gruppenbuchung Donau-Schifffahrt Budapest (kostenloses Angebot)', "desc": 'Schiffe für 20 bis 250+ Gäste, Abendessen an Bord oder eigene Route. Wir fragen die Anbieter für Sie an.'},
         "group_cta": "<strong>👥 Größere Gruppe, Abendessen an Bord oder eigene Route?</strong> Diese Angebote enden bei 10 bis 35 Gästen und einer Stunde. <a href=\"/budapest-river-cruise-group-booking\">Fordern Sie auf unserer Gruppenbuchungsseite ein Angebot an</a>, und wir holen die Angebote der Anbieter für Sie ein.",
         "og_image": "/assets/private-boats/dunarama-water-limo-1.webp",
     },
