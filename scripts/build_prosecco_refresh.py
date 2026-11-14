@@ -21,7 +21,7 @@ def _icon(alt):
     return m.group(1)
 
 
-ICON = {"GetYourGuide": _icon("GetYourGuide"), "Viator": _icon("Viator")}
+ICON = {"GetYourGuide": _icon("GetYourGuide"), "Viator": _icon("Viator"), "Tripadvisor": _icon("Tripadvisor")}
 STAR = re.search(r'(<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11\.9999[^"]+"></path></svg>)', REF).group(1)
 PH = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
 SIZES = "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
@@ -35,9 +35,19 @@ def kfmt(n):
     return f"{(n // 10) * 10}+" if n >= 100 else f"{n}"
 
 
+def counted(sites):
+    """Tripadvisor reviews are already inside Viator's total, so they never count twice."""
+    return [s for s in sites if s[3] != "ta"]
+
+
 def weighted(sites):
-    tot = sum(s[2] for s in sites)
-    return sum(s[1] * s[2] for s in sites) / tot, tot
+    cs = counted(sites)
+    tot = sum(s[2] for s in cs)
+    return sum(s[1] * s[2] for s in cs) / tot, tot
+
+
+def slider_photos(c):
+    return [c["photos"][k - 1] for k in c["order"]] if c.get("order") else c["photos"]
 
 
 def esc_attr(t):
@@ -61,7 +71,7 @@ class Builder:
         return viator(s[3].split(":", 1)[1], self.lang, c["slug"])
 
     def site_name(self, s):
-        return self.UI["viator_label"] if s[0] == "Viator" else s[0]
+        return s[0]
 
     def rating_block(self, c):
         U = self.UI
@@ -69,11 +79,14 @@ class Builder:
         n = len(c["sites"])
         meta = (U["reviews_sites"] if n > 1 else U["reviews_site"]).format(count=kfmt(tot), n=n)
         head = U["rate_head"].format(n=n) if n > 1 else U["rate_head_1"]
-        badges = "".join(
-            f'<a class="bpa-rev-badge is-link" href="{self.site_url(c, s).replace("&", "&amp;")}" rel="noopener nofollow sponsored" target="_blank">'
-            f'<img alt="{s[0]}" class="bpa-rev-icon" loading="lazy" src="{ICON[s[0]]}"/><span class="bpa-rev-site">{self.site_name(s)}</span>'
-            f'<span class="bpa-rev-score">{s[1]:.1f}</span><span class="bpa-rev-count">({kfmt(s[2])})</span><span class="bpa-rev-go" aria-hidden="true">→</span></a>'
-            for s in c["sites"])
+        def badge(s):
+            inner = (f'<img alt="{s[0]}" class="bpa-rev-icon" loading="lazy" src="{ICON[s[0]]}"/><span class="bpa-rev-site">{self.site_name(s)}</span>'
+                     f'<span class="bpa-rev-score">{s[1]:.1f}</span><span class="bpa-rev-count">({kfmt(s[2])})</span>')
+            if s[3] == "ta":
+                return f'<span class="bpa-rev-badge is-static">{inner}</span>'
+            return (f'<a class="bpa-rev-badge is-link" href="{self.site_url(c, s).replace("&", "&amp;")}" rel="noopener nofollow sponsored" target="_blank">'
+                    f'{inner}<span class="bpa-rev-go" aria-hidden="true">→</span></a>')
+        badges = "".join(badge(s) for s in c["sites"])
         return (f'<div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum">'
                 f'<span class="bpa-stars" style="--r:{avg:.2f}" aria-hidden="true"></span><b class="bpa-rate-score">{avg:.1f}</b>'
                 f'<span class="bpa-rate-meta">{meta}</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary>'
@@ -109,7 +122,7 @@ class Builder:
         U, T = self.UI, self.T[c["slug"]]
         alt = esc_attr(T["title"])
         imgs = []
-        for k, ph in enumerate(c["photos"]):
+        for k, ph in enumerate(slider_photos(c)):
             if k == 0:
                 imgs.append(f'<img alt="{alt}" height="534" loading="lazy" sizes="{SIZES}" src="{ph}" width="800"/>')
             else:
@@ -122,7 +135,7 @@ class Builder:
 <div class="bpa-main">
 <div class="bpa-media">
 <span class="bpa-rank-tag {c["rank_color"]}">{c["rank_emoji"]} {T["role"]}</span>
-<button aria-label="Previous photo" class="bpa-arrow prev" onclick="bpaSlide(this,-1)" type="button">‹</button><button aria-label="Next photo" class="bpa-arrow next" onclick="bpaSlide(this,1)" type="button">›</button><span class="bpa-pill">1 / {len(c["photos"])}</span><div aria-label="Photo gallery {i}" class="bpa-slider" onscroll="bpaCount(this)" tabindex="0">{"".join(imgs)}</div>
+<button aria-label="Previous photo" class="bpa-arrow prev" onclick="bpaSlide(this,-1)" type="button">‹</button><button aria-label="Next photo" class="bpa-arrow next" onclick="bpaSlide(this,1)" type="button">›</button><span class="bpa-pill">1 / {len(slider_photos(c))}</span><div aria-label="Photo gallery {i}" class="bpa-slider" onscroll="bpaCount(this)" tabindex="0">{"".join(imgs)}</div>
 </div>
 <div class="bpa-info">
 <div class="bpa-kicker">{c["operator"]} • ⏱️ {T["dur"]} • <a class="bpa-kicker-map-link" href="{c["pier_maps"]}" rel="nofollow noopener" target="_blank">{T["pier"]}</a></div>
@@ -274,7 +287,7 @@ class Builder:
 
     # ------------------------------------------------------------ page
     def total_reviews(self):
-        return sum(s[2] for c in CARDS for s in c["sites"])
+        return sum(s[2] for c in CARDS for s in counted(c["sites"]))
 
     def schema_itemlist(self, base_url):
         items = []
@@ -283,7 +296,7 @@ class Builder:
             avg, tot = weighted(c["sites"])
             items.append({"@type": "ListItem", "position": i, "item": {
                 "@type": "Product", "name": re.sub(r"<[^>]+>", "", T["title"]).replace("&amp;", "&"),
-                "image": "https://www.budapestadventures.com" + c["photos"][0],
+                "image": "https://www.budapestadventures.com" + slider_photos(c)[0],
                 "brand": {"@type": "Brand", "name": c["operator"]},
                 "aggregateRating": {"@type": "AggregateRating", "ratingValue": f"{avg:.1f}", "reviewCount": tot, "bestRating": "5"},
                 "offers": {"@type": "Offer", "price": c["price"], "priceCurrency": "EUR", "availability": "https://schema.org/InStock",
