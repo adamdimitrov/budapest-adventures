@@ -27,6 +27,11 @@ PAGES = {
     "it": ("it/tour-barca-privata-budapest/index.html", "/it/tour-barca-privata-budapest", "/it/prenotazione-gruppi-crociera-budapest"),
     "es": ("es/paseos-barco-privado-budapest/index.html", "/es/paseos-barco-privado-budapest", "/es/reserva-grupos-cruceros-budapest"),
     "hu": ("hu/legjobb-privát-hajókirándulások-budapest/index.html", "/hu/legjobb-privát-hajókirándulások-budapest", "/hu/budapest-nagy-csoportos-hajokirandulas"),
+    "nl": ("nl/prive-boottocht-boedapest/index.html", "/nl/prive-boottocht-boedapest", "/nl/groepsboeking-cruise-boedapest"),
+    "pt": ("pt/passeio-barco-privado-budapeste/index.html", "/pt/passeio-barco-privado-budapeste", "/pt/reserva-grupo-cruzeiros-budapeste"),
+    "ro": ("ro/plimbari-barca-privata-budapesta/index.html", "/ro/plimbari-barca-privata-budapesta", "/ro/rezervari-grup-croaziere-budapesta"),
+    "hr": ("hr/privatni-izleti-brodom-budimpesta/index.html", "/hr/privatni-izleti-brodom-budimpesta", "/hr/grupne-rezervacije-krstarenja-budimpesta"),
+    "sr": ("sr/privatne-ture-brodom-budimpesta/index.html", "/sr/privatne-ture-brodom-budimpesta", "/sr/grupne-rezervacije-krstarenja-budimpesta"),
 }
 IMG_DIR = "/assets/private-boats/"
 SIZES = "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
@@ -421,7 +426,7 @@ def sub_once(pattern, repl, s, flags=0):
     return new
 
 
-PICK_LABEL = {"en": "PICK", "de": "TIPP", "fr": "CHOIX", "it": "SCELTA", "es": "OPCIÓN", "hu": "VÁLASZTÁS"}
+PICK_LABEL = {"en": "PICK", "de": "TIPP", "fr": "CHOIX", "it": "SCELTA", "es": "OPCIÓN", "hu": "VÁLASZTÁS", "nl": "KEUZE", "pt": "ESCOLHA", "ro": "ALEGERE", "hr": "IZBOR", "sr": "ИЗБОР"}
 
 HU_TEMPLATE = {
     "Inhaltsverzeichnis öffnen": "Tartalomjegyzék megnyitása",
