@@ -34,8 +34,9 @@ def chip(text):
 
 
 def maps_link(q, text):
+    import urllib.parse
     return ('<a href="%s" rel="nofollow noopener" target="_blank">%s</a>'
-            % (MAPS.format(q=q.replace(" ", "+")).replace("&", "&amp;"), text))
+            % (MAPS.format(q=urllib.parse.quote_plus(q)).replace("&", "&amp;"), text))
 
 
 CARDS = []
@@ -214,7 +215,7 @@ CARDS.append(dict(
         ("Rooftop Panorama Pool", CDN + "64d4e6d882d74213380c1f24_Rudas-thermal-bath%20(11).webp",
          "The 36 °C rooftop pool looks over the Danube and Gellért Hill. Perfect when it is raining or snowing."),
         ("Turkish Bath", CDN + "64d4e674b2871f3b832c1681_Rudas-thermal-bath%20(15).webp",
-         "Six pools at 16, 28, 30, 33, 36 and 42 °C around the octagonal pool under the Ottoman dome. Check the men-only and women-only timetable before you go."),
+         "Six pools at 16, 28, 30, 33, 36 and 42 °C, including the octagonal pool under the Ottoman dome. Check the men-only and women-only timetable before you go."),
         ("Wellness Pools", CDN + "64d4e7021d502805c7a7c112_Rudas-thermal-bath%20(18).webp",
          "The wellness section has pools at 11, 32, 36 and 42 °C, and the swimming pool is 29 °C."),
         ("Saunas &amp; Steam", CDN + "64d4e74e82fd0ed0adc4f09c_Rudas-thermal-bath%20(2).webp",
@@ -283,7 +284,7 @@ CARDS.append(dict(
              "Children under 14 are not admitted. The wheelchair lifts are out of order for technical reasons, and the private tub service is closed for renovation.",
              "From lukacsfurdo.hu, 14 November 2026."),
     ],
-    pick="for a calm, local-feeling bath with strong medicinal pools, open until 22:00 on Tuesdays.",
+    pick="for a smaller bath with strong medicinal pools, open until 22:00 on Tuesdays.",
     skip="if you want grand architecture or a party feel, or if you travel with kids under 14.",
     pros=[("Medicinal pools", "Indoor pools at 32, 36 and 40 °C, with a cold pool and a Kneipp path at 20 °C."),
           ("Cabin or locker included", "The GetYourGuide ticket includes a cabin or a locker for the full day."),
@@ -375,7 +376,7 @@ CARDS.append(dict(
              "The Finnish sauna is out of service from 14 November 2026, and a broken lift at the main entrance means wheelchair users cannot be received for now.",
              "From palatinusstrand.hu, 14 November 2026."),
     ],
-    pick="for a summer day with kids: a wave pool, slides and lawns on car-free Margaret Island, with family tickets.",
+    pick="for a summer day with kids: a wave pool, slides and lawns on Margaret Island, with family tickets.",
     skip="if you visit in winter for a long soak: it closes at 16:00, and the slides and many outdoor pools are a summer thing.",
     pros=[("Made for families", "Kids' pools indoors and out, family tickets and a wave pool."),
           ("Margaret Island setting", "Lawns and trees on an island in the Danube; easy to combine with a walk around the park."),

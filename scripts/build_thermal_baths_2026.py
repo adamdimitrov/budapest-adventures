@@ -114,7 +114,8 @@ def price_txt(c):
 
 
 def maps(q):
-    return amp(D.MAPS.format(q=q.replace(" ", "+")))
+    import urllib.parse
+    return amp(D.MAPS.format(q=urllib.parse.quote_plus(q)))
 
 
 def stars(s):
@@ -456,7 +457,7 @@ def main():
     page = must_sub(r"<strong>Last updated</strong>: [^<]*<", "<strong>Last updated</strong>: Nov 14, 2026<", page)
     lead = f'''<div class="ltt-lead-copy">
 <p>Budapest is famous for its thermal baths, from neo-baroque palaces with steaming outdoor pools to <strong>Ottoman Turkish baths</strong> under stone domes. This guide compares the <strong>{n} best thermal baths</strong> that are open in 2026.</p>
-<p>I <strong>personally visited {n_tested} of these {n} baths</strong>. I compared the other {n - n_tested} using their official sites and <strong>{m_reviews} verified reviews</strong>. Every opening hour, desk price and pool temperature was checked on the official sites on 14 November 2026.</p>
+<p>I <strong>personally visited {n_tested} of these {n} baths</strong>. I compared the other {n - n_tested} using their official sites and <strong>{m_reviews} reviews</strong>. Every opening hour, desk price and pool temperature was checked on the official sites on 14 November 2026.</p>
 <p>Gellért (closed until 2028) and Király (closed indefinitely) are not in this list. Planning a full day? See the <a href="/best-things-to-do-budapest">best things to do in Budapest</a> and the <a href="/best-budapest-river-cruises">best Budapest river cruises</a>.</p>
 </div>'''
     page = swap_block(page, r'<div class="ltt-lead-copy">', lead)
@@ -503,6 +504,8 @@ def main():
     page = must_sub(r"<span>All 8 Thermal Baths</span>", "<span>All %d Thermal Baths</span>" % n, page)
     page = must_sub(r'<span class="hybrid-active-trust">Free 24h Cancellation</span>',
                     '<span class="hybrid-active-trust">Prices checked 14 Nov 2026</span>', page)
+    page = page.replace('aria-label="Jump to Cruise Review"', 'aria-label="Jump to Bath Review"')
+    page = page.replace('aria-label="Quick Cruise Navigation &amp; Booking"', 'aria-label="Quick Bath Navigation &amp; Booking"')
     page = build_jsonld(page, cards, title, desc)
     with open(PAGE, "w", encoding="utf-8") as f:
         f.write(page)
