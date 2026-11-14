@@ -114,7 +114,7 @@ CARDS.append(dict(
         "🎟️ Day tickets are sold and checked on the <strong>swimming-pool side</strong> (Állatkerti körút).",
     ],
     spcards=[
-        ("Entrance &amp; Tickets", CDN + "64b6a6449efb8b06f9af724c_01-Szechenyi-bath-entrance.webp",
+        ("Entrance &amp; Tickets", CDN + "64b6a69a5ab0f3b16f839aa2_02-Szechenyi-bath-ticket-office.webp",
          "Day tickets enter on the swimming-pool side. Booking-site tickets are validated at self-service machines at the entrance, so you skip the cashier queue."),
         ("Lockers &amp; Cabins", CDN + "64b7a540343999e752fcbdd0_05-Szechenyi-bath-locker-room.webp",
          "A standard ticket includes a locker in the gender-separated changing area. You get a plastic wristwatch that opens it (3,000 HUF if lost). A private cabin costs 1,000 HUF extra."),
@@ -214,11 +214,11 @@ CARDS.append(dict(
     spcards=[
         ("Rooftop Panorama Pool", CDN + "64d4e6d882d74213380c1f24_Rudas-thermal-bath%20(11).webp",
          "The 36 °C rooftop pool looks over the Danube and Gellért Hill. Perfect when it is raining or snowing."),
-        ("Turkish Bath", CDN + "64d4e674b2871f3b832c1681_Rudas-thermal-bath%20(15).webp",
+        ("Turkish Bath", CDN + "64d4e7021d502805c7a7c112_Rudas-thermal-bath%20(18).webp",
          "Six pools at 16, 28, 30, 33, 36 and 42 °C, including the octagonal pool under the Ottoman dome. Check the men-only and women-only timetable before you go."),
-        ("Wellness Pools", CDN + "64d4e7021d502805c7a7c112_Rudas-thermal-bath%20(18).webp",
+        ("Wellness Pools", CDN + "64d4e674b2871f3b832c1681_Rudas-thermal-bath%20(15).webp",
          "The wellness section has pools at 11, 32, 36 and 42 °C, and the swimming pool is 29 °C."),
-        ("Saunas &amp; Steam", CDN + "64d4e74e82fd0ed0adc4f09c_Rudas-thermal-bath%20(2).webp",
+        ("Saunas &amp; Steam", None,
          "Wellness side: two Finnish saunas (90–100 °C and 60–70 °C), an aroma sauna, a steam cabin and a salt room. Turkish side: three Finnish saunas and a steam room."),
         ("Lockers &amp; Cabins", CDN + "64d4e69c6efb73a26f9877f6_Rudas-thermal-bath%20(19).webp",
          "A regular ticket includes a locker. A private cabin costs 1,000 HUF extra at the desk."),
