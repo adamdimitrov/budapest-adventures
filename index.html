@@ -538,30 +538,33 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 </header>
 <main>
 <!-- 2. HERO SECTION -->
+<style id="hp-hero-compact">
+.ltt-home-hero{padding:40px 20px 34px!important}
+.ltt-home-hero .ltt-hero-eyebrow{margin-bottom:14px!important;font-size:11px!important;padding:5px 12px!important}
+.ltt-home-hero h1.ltt-hero-title{font-size:clamp(26px,4.2vw,42px)!important;line-height:1.15!important;margin:0 auto 12px!important;max-width:880px}
+.ltt-home-hero .hp-hero-sub{font-size:16px!important;line-height:1.55!important;color:rgba(255,255,255,.82)!important;max-width:660px;margin:0 auto 16px!important}
+.hp-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;list-style:none;margin:0 auto 20px;padding:0;font-size:13px;font-weight:600;color:#cbd5e1}
+.hp-trust li::before{content:"\2713";color:#dfa732;font-weight:800;margin-right:6px}
+.ltt-home-hero .ltt-quick-links{gap:8px!important}
+.ltt-home-hero .ltt-quick-btn{font-size:13px!important;padding:7px 14px!important}
+@media (max-width:700px){
+.ltt-home-hero{padding:26px 16px 22px!important}
+.ltt-home-hero .ltt-hero-eyebrow{font-size:10px!important;letter-spacing:1px!important;margin-bottom:10px!important}
+.ltt-home-hero .hp-hero-sub{font-size:15px!important;margin-bottom:12px!important}
+.hp-trust{font-size:12px;gap:4px 12px;margin-bottom:14px}
+.ltt-home-hero .ltt-quick-links{flex-wrap:nowrap!important;justify-content:flex-start!important;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -16px;padding:0 16px 2px}
+.ltt-home-hero .ltt-quick-links::-webkit-scrollbar{display:none}
+.ltt-home-hero .ltt-quick-btn{flex:0 0 auto;white-space:nowrap}
+}
+</style>
 <section class="ltt-home-hero">
 <div class="ltt-container">
-<div class="ltt-hero-eyebrow">FIELD-TESTED DANUBE RIVER &amp; BUDAPEST TRAVEL GUIDES • 2026 SEASON</div>
+<div class="ltt-hero-eyebrow">Field-tested Budapest guides • 2026</div>
 <h1 class="ltt-hero-title" style="color: #ffffff !important; font-family: var(--font-serif); font-size: clamp(32px, 5vw, 54px); font-weight: 800; line-height: 1.15; max-width: 960px; margin: 0 auto 20px auto; letter-spacing: -0.015em;">
           Field-Tested Danube River Cruise Reviews for <span class="ltt-gold-text">Discerning Travelers</span>
 </h1>
-<p style="font-size: clamp(16px, 2.1vw, 20px); color: rgba(255, 255, 255, 0.82); max-width: 780px; margin: 0 auto 40px auto; line-height: 1.6;">
-          Firsthand evaluations of <strong>seating sightlines</strong>, audio guide translation clarity, <strong>departure dock logistics</strong>, and dining quality across Budapest's premier river vessels.
-        </p>
-<!-- Stats Strip -->
-<div class="ltt-stats-strip">
-<div class="ltt-stat-card">
-<div class="ltt-stat-number">40+</div>
-<div class="ltt-stat-label">Danube Cruises Tested</div>
-</div>
-<div class="ltt-stat-card">
-<div class="ltt-stat-number">22</div>
-<div class="ltt-stat-label">Languages</div>
-</div>
-<div class="ltt-stat-card">
-<div class="ltt-stat-number">Local</div>
-<div class="ltt-stat-label">Budapest Resident Testers</div>
-</div>
-</div>
+<p class="ltt-hero-subtitle hp-hero-sub">Firsthand reviews of every major Danube cruise: seats and views, audio guides, departure docks and the food on board.</p>
+<ul class="hp-trust"><li>40+ Danube cruises tested</li><li>Local Budapest testers</li><li>22 languages</li></ul>
 <!-- Quick Jump Pills -->
 <div class="ltt-quick-links">
 <a class="ltt-quick-btn" href="/best-budapest-river-cruises">🚢 Danube Sightseeing</a>
