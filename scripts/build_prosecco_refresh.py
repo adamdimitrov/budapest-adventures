@@ -254,7 +254,7 @@ class Builder:
 </div>
 <h3 class="bpa-details-title">{T["title"]}</h3>
 <div class="bpa-reviews-line">
-{self.static_badges(c)}
+{self.rating_block(c)}
 {proof}</div>
 </div>
 <div class="bpa-details-right">
