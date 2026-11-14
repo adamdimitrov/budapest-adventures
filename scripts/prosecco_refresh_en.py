@@ -81,7 +81,7 @@ CARD_EN = {
              "<strong>Vigadó 8/A:</strong> 16:00, 19:30, 21:15, 23:00. <strong>Carl Lutz rakpart Dock 0:</strong> 16:30, 18:15, 18:45, 20:00, 20:30, 21:45. <strong>Akadémia 3:</strong> 16:45, 18:30, 19:00, 20:15, 20:45, 22:00.",
              "time"),
             ("🍾", "What's unlimited",
-             "<strong>Unlimited prosecco-style sparkling wine for all 75 minutes</strong> (the listing calls it Hungarian sparkling wine; dry, plus rosé or semi-sweet when available), self-service Aperol, Hugo, Rossini and Limoncello spritzers, beer at the bar, homemade lemonade and water.<span class=\"bpa-lang-note\">Keep your glass and take it to the bar for refills. Spirits and cocktails cost extra.</span>",
+             "<strong>Unlimited prosecco for all 75 minutes</strong> (listed as Hungarian sparkling wine; dry, plus rosé or semi-sweet when available), self-service Aperol, Hugo, Rossini and Limoncello spritzers, beer at the bar, homemade lemonade and water.<span class=\"bpa-lang-note\">Keep your glass and take it to the bar for refills. Spirits and cocktails cost extra.</span>",
              None),
             ("🍽️", "No food included",
              "<strong>Food is not included.</strong> Snacks can be bought at the cashless bar on board. Outside food and drinks are not allowed (birthday cakes are the exception).",

@@ -66,7 +66,7 @@ CARDS = [
         "price": "17.50", "price_label": "€17.50",
         "sites": [("GetYourGuide", 4.6, 1777, "gyg")],
         "rank_color": "bpa-emerald", "rank_emoji": "💶",
-        "photos": [f"/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-{i:02d}.webp" for i in range(1, 13)],
+        "photos": [f"/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-{i:02d}.avif" for i in range(1, 13)],
     },
     {
         "slug": "sip-and-sail", "anchor": "item-3-sip-and-sail", "tested": False,
@@ -79,7 +79,7 @@ CARDS = [
         "sites": [("GetYourGuide", 4.5, 920, "gyg"),
                   ("Viator", 4.6, 726, "viator:Budapest-Sunset-Danube-Cruise-with-Unlimited-Prosecco/d499-69242P4")],
         "rank_color": "bpa-blue", "rank_emoji": "🥂",
-        "photos": [f"/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-{i:02d}.webp" for i in range(1, 9)],
+        "photos": [f"/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-{i:02d}.avif" for i in range(1, 9)],
     },
     {
         "slug": "silverline-prosecco", "anchor": "item-4-silverline-prosecco", "tested": False,
@@ -92,7 +92,7 @@ CARDS = [
         "sites": [("GetYourGuide", 4.5, 1044, "gyg"),
                   ("Viator", 4.4, 123, "viator:Gin-Tonic-Cocktail-Lounge-Cruise/d499-15186P48")],
         "rank_color": "bpa-slate", "rank_emoji": "⏱️",
-        "photos": [f"/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-{i:02d}.webp" for i in range(1, 11)],
+        "photos": [f"/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-{i:02d}.avif" for i in range(1, 11)],
     },
     {
         "slug": "dinner-drinks", "anchor": "item-5-unlimited-drinks-dinner", "tested": False,
@@ -105,7 +105,7 @@ CARDS = [
         "sites": [("GetYourGuide", 4.8, 2714, "gyg"),
                   ("Viator", 4.7, 62, "viator:Budapest-Festive-Dinner-Cruise-River-Diva-Exclusive/d499-337865P6")],
         "rank_color": "bpa-gold", "rank_emoji": "🍽️",
-        "photos": [f"/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-{i:02d}.webp" for i in range(1, 13)],
+        "photos": [f"/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-{i:02d}.avif" for i in range(1, 13)],
         "mkt": True,
     },
     {
@@ -118,7 +118,7 @@ CARDS = [
         "price": "27", "price_label": "€27",
         "sites": [("GetYourGuide", 4.5, 1386, "gyg")],
         "rank_color": "bpa-slate", "rank_emoji": "🍹",
-        "photos": [f"/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-{i:02d}.webp" for i in range(1, 11)],
+        "photos": [f"/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-{i:02d}.avif" for i in range(1, 11)],
     },
     {
         "slug": "party-boat", "anchor": "item-7-party-boat", "tested": False,
@@ -131,7 +131,7 @@ CARDS = [
         "sites": [("GetYourGuide", 4.1, 1235, "gyg"),
                   ("Viator", 4.9, 755, "viator:Danube-Beat-Boat-Party-Cruise/d499-69242P1")],
         "rank_color": "bpa-slate", "rank_emoji": "🎉",
-        "photos": [f"/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-{i:02d}.webp" for i in range(1, 10)],
+        "photos": [f"/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-{i:02d}.avif" for i in range(1, 10)],
     },
 ]
 

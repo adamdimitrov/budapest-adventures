@@ -358,6 +358,8 @@ class Builder:
                 g["itemListElement"][-1]["name"] = P["breadcrumb"].replace("&amp;", "&")
         s = s[:m.start(2)] + json.dumps(d, ensure_ascii=False) + s[m.end(2):]
         s = re.sub(r'(<div class="ltt-author-line">)(.*?)(</div>)', lambda m: m.group(1) + m.group(2).replace(" — ", ", ").replace("—", ",") + m.group(3), s, 1, flags=re.S)
+        # drop the legacy duplicate sticky bar (stale "Contents (4)" / "Rubin Group 25€"); the reference page has only #sticky-bar
+        s = re.sub(r'<aside aria-label="[^"]*" class="hybrid-sticky-bar hybrid-toc-bar" id="hybridStickyBar">.*?</aside>', "", s, 1, flags=re.S)
         # drop legacy Webflow script that stamped "Personally Tested" on every row
         s = re.sub(r'<script>\s*document\.addEventListener\("DOMContentLoaded", \(\) => \{\s*const cruiseCards = document\.querySelectorAll\(\'\.table-row-grey-3.*?</script>', "", s, 1, flags=re.S)
         open(path, "w", encoding="utf-8").write(s)
