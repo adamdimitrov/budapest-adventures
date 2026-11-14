@@ -1364,7 +1364,7 @@ def get_cruise_7_dinner_details_html() -> str:
         <li>🗺️ <strong>Meeting point:</strong> Budapest, Jane Haining rakpart, <strong>Dock 8A</strong> (directly beneath the white Elizabeth Bridge on the Pest side).</li>
         <li>📘 Take <strong>Tram Line 2</strong> to <strong>Március 15. tér</strong> and walk 2 minutes down to the Danube promenade at Dock 8A.</li>
       </ul>
-      <p><a href="{gyg_url}" target="_blank" rel="sponsored noopener" class="bpa-book-button bpa-btn" style="display:inline-block;margin-top:8px;text-decoration:none;">Check Availability &amp; Menu on GetYourGuide →</a></p>
+      <p><a href="{gyg_url}" target="_blank" rel="nofollow sponsored noopener" class="bpa-book-button bpa-btn" style="display:inline-block;margin-top:8px;text-decoration:none;">Check Availability &amp; Menu on GetYourGuide →</a></p>
     </div>
   </div>
 </details>"""

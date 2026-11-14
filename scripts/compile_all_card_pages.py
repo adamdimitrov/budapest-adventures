@@ -362,7 +362,7 @@ def build_hungarian_pages():
                 </div>
                 <div>
                   <div style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">39 € (24h) és 69 € (72h) között</div>
-                  <a href="https://www.getyourguide.com/budapest-card-t187335/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=budapest-card-review&mkt_cmp=true" target="_blank" rel="noopener sponsored" class="b-btn" style="background: #0f172a; display: block; text-align: center; color: #fff; padding: 12px 18px; border-radius: 8px; font-weight: 700; text-decoration: none;">Budapest Kártya Foglalása a GYG-n →</a>
+                  <a href="https://www.getyourguide.com/budapest-card-t187335/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=budapest-card-review&mkt_cmp=true" target="_blank" rel="nofollow sponsored noopener" class="b-btn" style="background: #0f172a; display: block; text-align: center; color: #fff; padding: 12px 18px; border-radius: 8px; font-weight: 700; text-decoration: none;">Budapest Kártya Foglalása a GYG-n →</a>
                 </div>
               </div>
 
@@ -379,14 +379,14 @@ def build_hungarian_pages():
                         <div style="font-size: 13px; font-weight: 700; color: #0f172a;">Legenda Esti Kivilágított Hajózás</div>
                         <div style="font-size: 11px; color: #64748b;">#1 prémium panorámahajó, üdvözlőitallal</div>
                       </div>
-                      <a href="https://legenda.hu/en?partner=38585" target="_blank" rel="noopener sponsored" style="font-size: 12px; font-weight: 700; background: #0f172a; color: #fff; padding: 6px 12px; border-radius: 4px; text-decoration: none;">24 € Foglalás →</a>
+                      <a href="https://legenda.hu/en?partner=38585" target="_blank" rel="nofollow sponsored noopener" style="font-size: 12px; font-weight: 700; background: #0f172a; color: #fff; padding: 6px 12px; border-radius: 4px; text-decoration: none;">24 € Foglalás →</a>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; padding: 10px 14px; border-radius: 6px; border: 1px solid #e2e8f0;">
                       <div>
                         <div style="font-size: 13px; font-weight: 700; color: #0f172a;">Széchenyi Gyógyfürdő Soron Kívüli Belépő</div>
                         <div style="font-size: 11px; color: #64748b;">Egész napos kabinos / szekrényes jegy</div>
                       </div>
-                      <a href="https://www.getyourguide.com/budapest-szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=budapest-card-review&mkt_cmp=true" target="_blank" rel="noopener sponsored" style="font-size: 12px; font-weight: 700; background: #0f172a; color: #fff; padding: 6px 12px; border-radius: 4px; text-decoration: none;">35 € Foglalás →</a>
+                      <a href="https://www.getyourguide.com/budapest-szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=budapest-card-review&mkt_cmp=true" target="_blank" rel="nofollow sponsored noopener" style="font-size: 12px; font-weight: 700; background: #0f172a; color: #fff; padding: 6px 12px; border-radius: 4px; text-decoration: none;">35 € Foglalás →</a>
                     </div>
                   </div>
                 </div>

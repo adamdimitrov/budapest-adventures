@@ -229,7 +229,7 @@ def deck_html(i, c):
 {media(i, c)}
 <div class="bpa-info">
 <div class="bpa-kicker">{kicker}</div>
-<a class="bpa-title" href="{title_href}" rel="noopener" target="_blank">{c["title"]}</a>
+<a class="bpa-title" href="{title_href}" rel="nofollow sponsored noopener" target="_blank">{c["title"]}</a>
 <div class="bpa-reviews-line">
 {rate_block(c)}{proof}
 </div>
@@ -243,7 +243,7 @@ def deck_html(i, c):
 <div class="bpa-price">From €{c["price"]}</div>
 <div class="bpa-psub">{c["psub"]}</div>
 </div>
-<a class="bpa-btn" href="{book_url(c, "button")}" rel="noopener" target="_blank">Check Availability →</a>
+<a class="bpa-btn" href="{book_url(c, "button")}" rel="nofollow sponsored noopener" target="_blank">Check Availability →</a>
 <div class="bpa-via">Booked securely via {c["via"]}</div>
 <div class="bpa-trust2">{trust}</div>
 <a class="bpa-sublink" href="#{c["anchor"]}">Read Review ↓</a>
