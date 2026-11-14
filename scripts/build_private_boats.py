@@ -47,6 +47,13 @@ PLACEHOLDER = re.search(r'data-src="[^"]+" decoding="async" loading="lazy" sizes
 
 
 def ref_block(tag, id_):
+    if id_ == "cd-editorial-base":
+        # base bookmark rules live inside the reference page's hero stylesheet
+        hero_css = ref_block("style", "ltt-hero-card-styles")
+        a = hero_css.index("/* Editorial Bookmark Cross-Link Card */")
+        b = hero_css.index("@media", a)
+        b = hero_css.index("}\n}", b) + 3
+        return '<style id="cd-editorial-base">\n%s\n</style>' % hero_css[a:b]
     m = re.search(r'<%s id="%s"[^>]*>.*?</%s>' % (tag, id_, tag), REF, re.S)
     return m.group(0)
 
@@ -464,10 +471,12 @@ def build(lang):
                '<link as="image" fetchpriority="high" href="%s%s" rel="preload" type="image/webp"/>' % (IMG_DIR, PRODUCTS[0]["images"][0]), s)
 
     # components from the reference page
-    for tag, id_ in (("style", "bpa-lang-css"), ("style", "bpa-card2-css"), ("style", "cd-bookmark-compact")):
+    for tag, id_ in (("style", "bpa-lang-css"), ("style", "bpa-card2-css"), ("style", "cd-editorial-base"), ("style", "cd-bookmark-compact")):
         blk = ref_block(tag, id_)
         if 'id="%s"' % id_ in s:
             s = re.sub(r'<%s id="%s"[^>]*>.*?</%s>' % (tag, id_, tag), lambda m: blk, s, count=1, flags=re.S)
+        elif id_ == "cd-editorial-base" and '<style id="cd-bookmark-compact">' in s:
+            s = s.replace('<style id="cd-bookmark-compact">', blk + '<style id="cd-bookmark-compact">', 1)
         else:
             s = s.replace("</head>", blk + "</head>", 1)
     blk = ref_block("script", "bpa-lang-js")
