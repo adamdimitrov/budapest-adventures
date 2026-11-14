@@ -87,7 +87,7 @@ CARDS.append(dict(
         pill("🎉", "Sparty on Saturdays",
              "<strong>Sparty</strong> is the Saturday night pool party at Széchenyi: from €73 on GetYourGuide (start 21:30), "
              "or €100 with two drink coupons. 18+ only and <strong>non-refundable</strong>. "
-             "<a href=\"{sparty}\" rel=\"noopener nofollow sponsored\" target=\"_blank\">See Sparty tickets →</a>",
+             "<a href=\"{sparty}\" rel=\"nofollow sponsored noopener\" target=\"_blank\">See Sparty tickets →</a>",
              "Checked on the GetYourGuide calendar for Saturday 21 November 2026."),
     ],
     pick="for the classic Budapest bath: big outdoor pools in a yellow neo-baroque palace, open until 22:00 on Fridays.",

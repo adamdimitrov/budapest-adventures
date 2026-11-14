@@ -94,8 +94,16 @@ def book_url(c, placement):
     return amp(c["official_url"])
 
 
+AFF_REL = "nofollow sponsored noopener"
+
+
 def book_rel(c):
-    return "noopener nofollow sponsored" if c["book"] == "gyg" else "noopener"
+    return AFF_REL if c["book"] == "gyg" else "nofollow noopener"
+
+
+def rating_links(c):
+    """Rating entries link to the OTA listing only when the card has no Tiqets entry and no official booking link."""
+    return c["book"] == "gyg" and not any(r[0] == "Tiqets" for r in c["ratings"])
 
 
 def site_url(c, r):
@@ -150,9 +158,11 @@ def rate_block(c):
         site, s, cnt = r[0], r[1], r[2]
         inner = ('%s<span class="bpa-rev-site">%s</span><span class="bpa-rev-score">%s</span><span class="bpa-rev-count">(%s)</span>'
                  % ("\n" + ICON[site], site, score1(s), fmt_count(cnt)))
-        rel = "noopener nofollow" if site == "Google" else "noopener nofollow sponsored"
-        badges.append('<a class="bpa-rev-badge is-link" href="%s" rel="%s" target="_blank">%s'
-                      '<span class="bpa-rev-go" aria-hidden="true">→</span></a>' % (site_url(c, r), rel, inner))
+        if rating_links(c):
+            badges.append('<a class="bpa-rev-badge is-link" href="%s" rel="%s" target="_blank">%s'
+                          '<span class="bpa-rev-go" aria-hidden="true">→</span></a>' % (site_url(c, r), AFF_REL, inner))
+        else:
+            badges.append('<span class="bpa-rev-badge is-static">%s</span>' % inner)
     if nsites > 1:
         head = "Average of %d sites, weighted by number of reviews" % nsites
         meta = "%s reviews · %d sites" % (fmt_total(tot), nsites)
@@ -215,12 +225,6 @@ def deck_html(i, c):
 
 # ── details card ─────────────────────────────────────────────────────────────────────
 def det_header(i, c):
-    badges = []
-    for r in c["ratings"]:
-        site, s, cnt = r[0], r[1], r[2]
-        badges.append('<span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="%s"/>'
-                      '<span class="bpa-rev-score">%s</span><span class="bpa-rev-stars">%s</span><span class="bpa-rev-count">(%s)</span></span>'
-                      % (DET_ICON[site], score1(s), stars(s), fmt_count(cnt)))
     proof = '\n<div class="bpa-proof"><span class="bpa-vchip">✓ Personally Tested</span></div>' if c["tested"] else ""
     return f'''<details class="bpa-details-card" data-cat="{c["cat"]}" id="{c["anchor"]}" open="">
 <summary class="bpa-details-summary">
@@ -231,7 +235,7 @@ def det_header(i, c):
 </div>
 <h3 class="bpa-details-title">{c["title"]}</h3>
 <div class="bpa-reviews-line">
-<div class="bpa-summary-reviews"><div class="div-block-53">{"".join(badges)}</div></div>{proof}
+{rate_block(c)}{proof}
 </div>
 </div>
 <div class="bpa-details-right">
@@ -506,6 +510,7 @@ def main():
                     '<span class="hybrid-active-trust">Prices checked 14 Nov 2026</span>', page)
     page = page.replace('aria-label="Jump to Cruise Review"', 'aria-label="Jump to Bath Review"')
     page = page.replace('aria-label="Quick Cruise Navigation &amp; Booking"', 'aria-label="Quick Bath Navigation &amp; Booking"')
+    page = page.replace('rel="noopener nofollow sponsored"', 'rel="%s"' % AFF_REL)
     page = build_jsonld(page, cards, title, desc)
     with open(PAGE, "w", encoding="utf-8") as f:
         f.write(page)
