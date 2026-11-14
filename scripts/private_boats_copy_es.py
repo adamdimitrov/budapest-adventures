@@ -56,7 +56,6 @@ COPY = {
         "lead": [
             "Un barco privado es la única forma de disfrutar del panorama del Danubio sin compartir la cubierta con 200 desconocidos. Esta guía compara los <strong>4 barcos privados de Budapest que puedes reservar online hoy</strong>, desde una lancha para 20 personas por 225 € hasta una limusina acuática de madera de estilo veneciano.",
             "Los hemos comparado por <strong>precio por barco, plazas, horarios reales del calendario de reservas, bebidas incluidas y opiniones en GetYourGuide y Viator</strong>. No hemos navegado en estos cuatro barcos; todo lo que sigue procede de las ofertas en directo y de opiniones verificadas.",
-            "¿Necesitas un barco para más de 20 personas, una cena a bordo o una ruta a medida? <a href=\"/budapest-river-cruise-group-booking\"><strong>Pide un presupuesto para grupos</strong></a> y consultaremos a los operadores por ti.",
         ],
         "filters": [("all", "Todos (4)"), ("small", "Parejas &amp; grupos pequeños (3)"), ("groups20", "Grupos de hasta 20+ (3)"), ("party", "Despedidas (2)")],
         "breakdown_h2": "Análisis detallado: los 4 mejores paseos en barco privado en Budapest",
@@ -64,6 +63,7 @@ COPY = {
         "sheet_title": "Ir a un barco privado",
         "toc_deck": "Top 4 barcos privados",
         "toc_breakdown": "Análisis detallado (4 barcos privados)",
+        "group_bookmark": {"title": 'Reservas para grupos de cruceros en Budapest (presupuesto gratis)', "desc": 'Barcos para 20 a 250+ personas, cena a bordo o ruta a medida. Consultamos a los operadores por ti.'},
         "group_cta": "<strong>👥 ¿Grupo más grande, cena a bordo o ruta a medida?</strong> Estas ofertas llegan a 10-35 personas y una hora. <a href=\"/budapest-river-cruise-group-booking\">Pide presupuesto en nuestra página de reservas para grupos</a> y reuniremos las ofertas de los operadores por ti.",
         "og_image": "/assets/private-boats/dunarama-water-limo-1.webp",
     },

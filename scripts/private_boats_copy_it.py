@@ -56,7 +56,6 @@ COPY = {
         "lead": [
             "Una barca privata è l'unico modo per godersi il panorama del Danubio senza dividere il ponte con 200 sconosciuti. Questa guida confronta le <strong>4 barche private di Budapest che puoi prenotare online oggi</strong>, dalla barca a motore per 20 ospiti da €225 alla limousine d'acqua in legno in stile veneziano.",
             "Le abbiamo confrontate per <strong>prezzo a barca, numero di posti, orari reali del calendario di prenotazione, bevande incluse e recensioni su GetYourGuide e Viator</strong>. Non abbiamo navigato noi stessi su queste quattro barche: tutto ciò che segue proviene dalle offerte online e da recensioni verificate.",
-            "Ti serve una barca per più di 20 persone, una cena a bordo o un percorso su misura? <a href=\"/budapest-river-cruise-group-booking\"><strong>Richiedi un preventivo per gruppi</strong></a> e contatteremo noi gli operatori.",
         ],
         "filters": [("all", "Tutte (4)"), ("small", "Coppie &amp; piccoli gruppi (3)"), ("groups20", "Gruppi fino a 20+ (3)"), ("party", "Addio al celibato/nubilato (2)")],
         "breakdown_h2": "Analisi dettagliata: i 4 migliori tour in barca privata a Budapest",
@@ -64,6 +63,7 @@ COPY = {
         "sheet_title": "Vai a una barca privata",
         "toc_deck": "Top 4 barche private",
         "toc_breakdown": "Analisi dettagliata (4 barche private)",
+        "group_bookmark": {"title": 'Crociere sul Danubio per gruppi a Budapest (preventivo gratuito)', "desc": 'Barche per 20-250+ ospiti, cena a bordo o percorso su misura. Contattiamo noi gli operatori.'},
         "group_cta": "<strong>👥 Gruppo più grande, cena a bordo o percorso su misura?</strong> Queste offerte arrivano a 10-35 ospiti e un'ora. <a href=\"/budapest-river-cruise-group-booking\">Richiedi un preventivo nella nostra pagina per gruppi</a> e raccoglieremo noi le offerte degli operatori.",
         "og_image": "/assets/private-boats/dunarama-water-limo-1.webp",
     },

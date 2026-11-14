@@ -56,7 +56,6 @@ COPY = {
         "lead": [
             "Privát hajóval láthatod a dunai panorámát úgy, hogy nem kell 200 idegennel osztoznod a fedélzeten. Ez az útmutató a <strong>4 budapesti privát hajót hasonlítja össze, amelyet ma online lefoglalhatsz</strong>, a 20 fős motoros hajótól (225 €-tól) a velencei stílusú, fa vízi limuzinig.",
             "Összevetettük őket <strong>hajónkénti ár, férőhely, a foglalási naptár valós indulási időpontjai, a benne foglalt italok és a GetYourGuide és Viator értékelései</strong> alapján. Ezen a négy hajón személyesen nem utaztunk, ezért minden alábbi adat az élő ajánlatokból és ellenőrzött értékelésekből származik.",
-            "20 főnél nagyobb csoport, vacsora a fedélzeten vagy egyedi útvonal kellene? <a href=\"/budapest-river-cruise-group-booking\"><strong>Kérj csoportos ajánlatot</strong></a>, és mi bekérjük a hajózási cégektől.",
         ],
         "filters": [("all", "Mind (4)"), ("small", "Pároknak &amp; kis csoportoknak (3)"), ("groups20", "20+ fős csoportoknak (3)"), ("party", "Legény- &amp; lánybúcsú (2)")],
         "breakdown_h2": "Részletes leírás: a 4 legjobb privát hajóút Budapesten",
@@ -64,6 +63,7 @@ COPY = {
         "sheet_title": "Ugrás egy privát hajóhoz",
         "toc_deck": "Top 4 privát hajó",
         "toc_breakdown": "Részletes leírás (4 privát hajó)",
+        "group_bookmark": {"title": 'Csoportos dunai hajóút Budapesten (ingyenes ajánlat)', "desc": 'Hajók 20-250+ főre, vacsora a fedélzeten vagy egyedi útvonal. Mi bekérjük az ajánlatokat a cégektől.'},
         "group_cta": "<strong>👥 Nagyobb csoport, vacsora a fedélzeten vagy egyedi útvonal?</strong> Ezek az ajánlatok 10-35 főig és egy óráig szólnak. <a href=\"/budapest-river-cruise-group-booking\">Kérj ajánlatot a csoportos foglalási oldalunkon</a>, és mi összegyűjtjük a hajózási cégek ajánlatait.",
         "og_image": "/assets/private-boats/dunarama-water-limo-1.webp",
     },
