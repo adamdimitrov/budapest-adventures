@@ -29,7 +29,7 @@ CSS = """<style id="bpa-tickets-css">
 .lt-bc{margin:0;font-size:13px;color:#94a3b8}
 .lt-bc a{color:#94a3b8!important;text-decoration:none}
 .lt-bc a:hover{color:#fff!important}
-.lt-hero h1{margin:0!important;font-size:clamp(30px,4.4vw,48px)!important;line-height:1.1!important;font-weight:800!important;letter-spacing:-.02em;max-width:880px;color:#fff!important;-webkit-text-fill-color:#fff;background:none!important}
+.lt-hero h1{margin:0!important;font-size:clamp(30px,4.4vw,48px)!important;line-height:1.1!important;font-weight:800!important;letter-spacing:-.02em;max-width:880px;color:#fff!important;-webkit-text-fill-color:#fff;background:none!important;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif!important;text-align:left!important}
 .lt-pills{display:flex;flex-wrap:wrap;gap:10px;font-size:13px}
 .lt-pill{background:rgba(255,255,255,.08);color:#e2e8f0;padding:6px 12px;border-radius:999px}
 .lt-pill a{color:#e2e8f0!important}
@@ -43,7 +43,7 @@ CSS = """<style id="bpa-tickets-css">
 .lt-main{padding:48px 0 64px}
 .lt-main .lt-wrap{display:flex;flex-direction:column;gap:56px}
 .lt-sec{display:flex;flex-direction:column;gap:16px}
-.lt-sec h2{margin:0;font-size:28px;line-height:1.2;font-weight:800;letter-spacing:-.01em}
+.lt-sec h2{margin:0!important;font-size:28px!important;line-height:1.2!important;font-weight:800!important;letter-spacing:-.01em;text-align:left!important;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif!important}
 .lt-sec>p,.lt-lead{margin:0;color:#475569;font-size:15px;line-height:1.6}
 .lt-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none!important;text-align:center;line-height:1.2}
 .lt-btn-gold{background:#dfa732;color:#0a192f!important}.lt-btn-gold:hover{background:#b88214}
