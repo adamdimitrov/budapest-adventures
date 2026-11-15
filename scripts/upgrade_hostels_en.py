@@ -377,6 +377,10 @@ s = s[:fs] + '<div class="cf-faqs-container">\n' + ''.join(faq_card(i, q, a_) fo
 
 # ---------------------------------------------------------------- sticky bar
 s = re.sub(r'(<span class="hybrid-active-title" id="sticky-name">)[^<]*(</span>)', r'\g<1>%s\g<2>' % HOSTELS[0]['name'], s, count=1)
+s = re.sub(r'(<span class="hybrid-active-price" id="sticky-price">)[^<]*(</span>)', r'\g<1>From €%d\g<2>' % HOSTELS[0]['dorm'], s, count=1)
+s = s.replace('<span class="hybrid-active-trust">Free 24h Cancel</span>', '<span class="hybrid-active-trust">Dorm bed per night</span>')
+s = re.sub(r'(id="sticky-cta-btn"[^>]*>)\s*Check Availability →', r'\1\n      Check Prices →', s, count=1)
+s = s.replace('Jump to Tested Budapest Hostel', 'Jump to a Budapest Hostel')
 
 # ---------------------------------------------------------------- JSON-LD
 def strip(x):
