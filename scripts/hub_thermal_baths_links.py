@@ -67,6 +67,18 @@ def main():
         assert 0 < i < j
         page = page[:j] + html + "\n" + page[j:]
 
+    # 4b. "Why Visit" prose goes to the bottom, just before the FAQ (user request 15 Nov 2026)
+    a = page.find('<h2 id="why-you-should-visit">')
+    top = page.find('<div class="bpa-breakdown-top-bar"')
+    if 0 < a < top:
+        block = page[a:top]
+        assert block.endswith("</div></div>\n") or block.endswith("</div></div>"), block[-40:]
+        moved = block.rstrip("\n")[:-len("</div>")]          # keep the container's closing tag in place
+        page = page[:a] + "</div>\n" + page[top:]
+        f = page.find('<div class="cf-faq-container" id="faq">')
+        assert f > 0
+        page = page[:f] + moved + "\n" + page[f:]
+
     # 5. dates
     page = re.sub(r'(<meta content=")[^"]*(" property="article:modified_time"/>)', r"\g<1>%sT00:00:00+00:00\2" % TODAY, page)
     page = re.sub(r"<strong>Last updated</strong>: [^<]*<", "<strong>Last updated</strong>: Nov 15, 2026<", page, count=1)
