@@ -518,3 +518,125 @@ HOSTELS = [
     "tested": False,
   },
 ]
+
+# ---------------------------------------------------------------- street / zip for JSON-LD
+for _h in HOSTELS:
+    _parts = _h['address'].split(', ')
+    _h['street'] = _parts[0].replace(' (1st floor)', '')
+    _h['zip'] = _parts[-1].split(' ')[0]
+
+
+def _areas(H, a):
+    return (
+        '<h3>District VII (Jewish Quarter): for nightlife</h3>\n'
+        '<p>The ruin bars, Gozsdu Udvar and Szimpla Kert are here, and so are %s, %s and %s. Great for going out, <strong>worst for light sleepers</strong> on weekends.</p>\n'
+        '<h3>District VI (Király utca, Andrássy út, Oktogon): central and connected</h3>\n'
+        '<p>%s, %s and %s sit on the main boulevards with M1 and the 24 hour trams 4 and 6. Walkable to everything, but <strong>main-road traffic</strong> can be loud.</p>\n'
+        '<h3>District IX (Central Market Hall): calmer, by the river</h3>\n'
+        '<p>%s, %s and %s are next to the Central Market Hall, a few minutes from the Danube. My pick if you want <strong>quieter nights</strong> and still walk to the center.</p>\n'
+        '<p>Flying in? Here is <a href="/budapest-airport-to-city-center">how to get from the airport to the city center</a>: the 100E bus stops at Deák Ferenc tér, a short walk from the District VI and VII hostels.</p>'
+    ) % (a(H[2]), a(H[9]), a(H[10]), a(H[6]), a(H[8]), a(H[3]), a(H[1]), a(H[4]), a(H[7]))
+
+
+UI = {
+    "url": "https://www.budapestadventures.com/best-hostels-budapest", "home": "Home", "home_url": "https://www.budapestadventures.com/",
+    "about_url": "https://www.budapestadventures.com/about",
+    "title": "10 Best Hostels in Budapest in 2026 (I Stayed in 9)",
+    "h1_main": "10 Best Hostels in Budapest in 2026", "h1_muted": "(I Stayed in 9)",
+    "meta": ("I stayed in 9 of Budapest's top hostels, including 30 nights at Maverick. "
+             "Dorms from €8: the best party, quiet, budget and nomad picks, by area."),
+    "breadcrumb": "Best Hostels in Budapest", "kicker_badge": "2026 Hostel Comparison",
+    "author_line": 'By <a href="/about" target="_blank">Adam Dimitrov</a>, Founder &amp; Local Budapest Tester',
+    "author_role": "Stayed in 9 of these 10 • Own photos &amp; video reviews",
+    "last_updated": "<strong>Last updated</strong>: Nov 14, 2026",
+    "job_title": "Founder & Local Budapest Tester",
+    "intro": (
+        '<p>Picking the wrong Budapest hostel costs you sleep, not money. Dorm beds in the center run <strong>€8 to €15 a night</strong>, '
+        'but a party hostel in the Jewish Quarter and a quiet pod hostel by the Central Market Hall are two completely different trips.</p>\n'
+        '<p>I <strong>stayed in 9 of the 10 hostels below</strong>, including <strong>30 nights at Maverick for €280</strong>, and compared them side by side '
+        'on what decides the booking: noise at night, bed privacy, bathrooms, kitchen, age rules, the crowd and the real price per night. '
+        'The Hive is the one party pick I haven\'t slept in, so it gets checked facts only and no "tested" badge.</p>\n'
+        '<p>Prices and ratings checked on <strong>%s</strong>. Use the filters to jump straight to party, quiet, budget, private-room or digital-nomad picks.</p>\n' % CHECKED),
+    "filters": [("party", "🎉 Social &amp; Party"), ("quiet", "😴 Quiet Sleep"), ("budget", "💶 Under €11"),
+                ("private", "🛏️ Private Rooms"), ("nomad", "💻 Digital Nomads"), ("kitchen", "🍳 Guest Kitchen")],
+    "district_fmt": "%s District", "decimal": ".", "thousands": ",", "k": "k",
+    "tested_chip": "✓ Personally Tested",
+    "best_for_card": "Best For:", "best_for_summary": "Best for:", "skip_if": "Skip if",
+    "from_eur": "From €%d", "eur": "€%d", "card_psub": "Dorm bed/night • 14 Nov 2026",
+    "card_btn": "Check Prices &amp; Dates →", "read_review": "Read Review ↓",
+    "pros": "Pros:", "cons": "Cons:", "why": "Why pick it:", "why_skip": "Why skip it:",
+    "video": "Video:", "watch_my": "Watch my",
+    "summary_title": "Summary &amp; Review", "summary_pill": "Overview",
+    "swipe_photos": "Swipe %d Photos →", "one_photo": "1 Photo", "no_photo": "From my stay",
+    "photo_alt": "%s: %s, photo from my stay", "prev_photo": "Previous photo", "next_photo": "Next photo",
+    "buy_badge": "Live Prices &amp; Availability", "buy_sub": "Dorm bed per night • Checked " + CHECKED,
+    "address_perk": "Address: <strong>%s</strong>", "privates_perk": "Private rooms from <strong>€%d</strong>",
+    "buy_cta": "Check Dates &amp; Prices", "buy_trust": "Prices change by date; the final price shows before you pay",
+    "qf": {"title": "Quick Facts: %s", "address": "Address", "dorm": "Dorm Beds", "transit": "Getting There", "checkin": "Check-In",
+           "rules": "House Rules", "ratings": "Ratings", "watch": "Watch Out For",
+           "dorm_fmt": "From €%d a night (checked " + CHECKED + ")", "priv_fmt": ", privates from €%d",
+           "hw_fmt": "Hostelworld %s/10 (%s reviews)", "bk_fmt": ", Booking.com %s/10 (%s reviews)"},
+    "breakdown_h2": "Detailed Reviews: 10 Best Hostels in Budapest",
+    "breakdown_sub": "9 stayed in, 1 party pick on checked facts • Click to collapse or expand",
+    "picks": [
+        ("Best overall", 1, "Social without party noise, curtained beds, great bathrooms, and €280 for my 30-night stay."),
+        ("Solo travelers (18 to 39)", 2, "Free daily activities and pub crawls make friends on easy mode. Over 39? Pick Maverick or Wombat's."),
+        ("Party", 10, lambda H: 'The big, loud option with a rooftop bar in the ruin bar district. Want it more low-key? <a href="#%s">%s</a>.' % (H[6]['id'], H[6]['name'])),
+        ("Cheapest bed", 3, "Beds from about €8 plus a free breakfast. Bring earplugs: it's on a tram junction."),
+        ("Quiet sleep", 1, lambda H: 'A quiet side street in District IX. Also calm: <a href="#%s">%s</a> and <a href="#%s">%s</a>.' % (H[7]['id'], H[7]['name'], H[5]['id'], H[5]['name'])),
+        ("Digital nomads", 4, "Laptop-friendly lounge and coworking space. Maverick is the long-stay alternative."),
+        ("Couples &amp; families", 5, "Simple, quiet, clean rooms with private options. Budget about €3 for linens."),
+        ("Sightseeing", 8, "At the start of Andrássy út, minutes from St. Stephen's Basilica and Deák tér."),
+        ("Small &amp; homely", 9, "Feels like a friend's loft in the Jewish Quarter, with hosts full of local tips."),
+    ],
+    "sections": {
+        "picks_badge": "Quick Picks", "picks_h2": "Best Hostel in Budapest by Traveler Type",
+        "picks_sub": "The short answer for each kind of trip, based on my stays",
+        "table_badge": "Side by Side", "table_h2": "Budapest Hostels Compared: Price, Noise and Catches",
+        "table_sub": "Dorm prices and Hostelworld scores checked " + CHECKED + ". Noise and catches from my own stays (The Hive: guest feedback).",
+        "table_cols": ["Hostel", "Best for", "Area", "Dorms from", "Hostelworld", "Noise at night", "Watch out for"],
+        "areas_badge": "Areas", "areas_h2": "Where to Stay in Budapest for Hostels",
+        "areas_sub": "All 10 are in central Pest. The district decides how loud your nights are.",
+        "areas_body": _areas,
+        "map_h2": "Map: Best Hostels in Budapest",
+        "map_sub": 'The hostels on this list across Budapest\'s downtown districts (<a href="/best-walking-tours-budapest">7th Jewish Quarter</a>, 5th City Center, 6th Terézváros, and 9th Ferencváros)',
+        "types_h2": "Budapest Hostel Types Explained",
+    },
+    "faq": [
+        ('What is the best hostel in Budapest?',
+         '<p><strong>Maverick Central Market</strong> is my best overall pick: social without party noise, curtained beds, great bathrooms and real long-stay value (I paid €280 for 30 nights in March). '
+         'For a social trip pick <strong>Onefam Budapest</strong>; for the cheapest bed, <strong>Avenue Hostel</strong>.</p>'),
+        ('What are the best hostels in Budapest for solo travelers?',
+         '<p><strong>Onefam Budapest</strong> is the easiest place to make friends, with free daily activities and pub crawls, but it only takes guests aged <strong>18 to 39</strong>. '
+         'Over 39, or want more sleep? <strong>Maverick Central Market</strong> and <strong>Wombat\'s City Hostel</strong> are social without the party pressure.</p>'),
+        ('What are the best party hostels in Budapest?',
+         '<p><strong>Onefam Budapest</strong> (social, daily bar crawls), <strong>The Hive Party Hostel</strong> (the big, loud one with a rooftop bar, strictly 18+) and '
+         '<strong>Wombat\'s City Hostel</strong> (low-key party, quiet enough to sleep). All three are a short walk from the Jewish Quarter ruin bars.</p>'),
+        ('Which Budapest hostels are best for a quiet night?',
+         '<p><strong>Maverick Central Market</strong> (quiet side street), <strong>Central Market Hall Zen Hostel</strong> (small and homely) and <strong>a&amp;o Budapest City</strong> (hotel-style rooms). '
+         'Avoid Avenue Hostel if you are a light sleeper: it\'s on the Oktogon tram junction.</p>'),
+        ('How much does a hostel cost in Budapest?',
+         '<p>On %s, dorm beds at these 10 hostels started at <strong>about €8 to €15 a night</strong> (Avenue from €8, Das Nest from €15), and private rooms from about €17 to €28. '
+         'Prices rise on <strong>weekends, in summer (May to September), during Sziget Festival in August, the Christmas markets and New Year\'s Eve</strong>.</p>' % CHECKED),
+        ('What is the best area to stay in Budapest for hostels?',
+         '<p><strong>District VII (Jewish Quarter)</strong> for nightlife, <strong>District VI</strong> (Király utca, Andrássy út) for a central, well-connected base, and '
+         '<strong>District IX</strong> by the Central Market Hall for quieter nights near the Danube.</p>'),
+        ('Do Budapest hostels have age limits?',
+         '<p>Some do. Per their house rules, <strong>Onefam Budapest takes guests aged 18 to 39</strong>, <strong>The Hive is strictly 18+</strong>, and <strong>Avenue Hostel accepts ages 6 to 49</strong>. Check the rules before you book.</p>'),
+        ('Are hostels in Budapest safe?',
+         '<p>Generally yes, but petty theft happens: I had a pullover and a box of nasal strips stolen at a hostel. <strong>Lock valuables in your locker</strong> and bring a padlock, since some hostels '
+         '(Avenue, a&amp;o) don\'t include one. Flow Spaces gives you one for free.</p>'),
+        ('What criteria did you use to choose the best hostels in Budapest?',
+         '<p>I stayed in 9 of the 10 hostels and judged them on <strong>location, noise at night, cleanliness, bed comfort and privacy, facilities, the crowd and price</strong>. '
+         'The Hive is included as a party pick based on checked facts and guest feedback, without a tested badge.</p>'),
+        ('What should I bring with me to a hostel?',
+         '<p><strong>Mandatory:</strong> earplugs and an eye mask. <strong>Basics:</strong> slippers, pajamas, phone charger, wet wipes, deodorant, toothbrush and toothpaste. '
+         '<strong>Optional</strong> (check if your hostel includes them): towel, padlock, shampoo and shower gel.</p>'),
+    ],
+    "sticky_trust": "Dorm bed per night", "sticky_cta": "Check Prices →", "sheet_label": "Jump to a Budapest Hostel",
+    "toc_breakdown": "Detailed Reviews (10 Hostels)",
+    "szimpla_alt": "Szimpla Kert ruin bar, a short walk from The Hive on Dob utca",
+    "szimpla_pill": "Szimpla Kert, 3 min walk",
+    "collapse_label": "Collapse Review", "expand_label": "Read Review",
+    "price_range": "From €%d per dorm bed",
+}
