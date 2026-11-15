@@ -43,7 +43,7 @@ UI = {
 PAGE = {
     "count": 7, "prosecco_count": 5,
     "title": "Prosecco Cruise Budapest (2026): 5 Best Unlimited Prosecco Boats + 2 Drink Deals",
-    "meta": "The 5 best unlimited prosecco cruises in Budapest, compared side by side: prices from €17.50, real refill rules, times, piers and guest ratings. Updated November 2026.",
+    "meta": "The 5 best unlimited prosecco cruises in Budapest: the city's most popular boats compared side by side on price (from €17.50), real refill rules, times and piers. Updated November 2026.",
     "h1_main": "Prosecco Cruise Budapest:",
     "h1_muted": "The 5 Best Unlimited Prosecco Boats (2026)",
     "breadcrumb": "Prosecco Cruise Budapest (2026)",
@@ -52,7 +52,7 @@ PAGE = {
     "updated": "<strong>Last updated</strong>: Nov 14, 2026",
     "lead": [
         "Are you feeling overwhelmed by the plethora of boat tour options in Budapest? Then let me help you <strong>choose the best unlimited prosecco cruise</strong> for you.",
-        "I <strong>rode the #1 pick myself</strong>, then lined up all 7 boats side by side on what really matters: <strong>what is truly unlimited</strong>, how long the refills last, piers and departure times, and <strong>{reviews} verified guest reviews</strong>. Prices and timetables are up to date as of 14 November 2026.",
+        "I <strong>rode the #1 pick myself</strong>, then compared <strong>Budapest's most popular prosecco cruises</strong> side by side on what really matters: <strong>what is truly unlimited</strong>, how long the refills last, piers and departure times. Prices and timetables are up to date as of 14 November 2026.",
         "Below are the <strong>5 best cruises where prosecco is unlimited and included in the ticket</strong>, plus <strong>2 boats with other unlimited drinks</strong> (cocktails or a party bar) as #6 and #7, under the 🍹 filter.",
     ],
     "filters": {
