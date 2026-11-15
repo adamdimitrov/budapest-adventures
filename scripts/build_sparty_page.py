@@ -27,7 +27,7 @@ URL = SITE + "/" + SLUG
 HUB = "/thermal-baths-budapest"
 TODAY = "2026-11-15"
 IMG = "/assets/sparty-2026/"
-CHECK = "Checked on the booking calendar for Saturday 21 November 2026."
+CHECK = "Prices for Saturday 21 November 2026."
 OFFICIAL_SPARTY = "https://spartybooking.com/"
 RUDAS_NIGHT = "https://www.rudasfurdo.hu/en/offers/night-above-the-city"
 
@@ -85,19 +85,19 @@ SPARTY_COMMON = dict(
 )
 WHEN_PILL = pill("🕒", "Saturdays · 21:30–2:00",
                  "<strong>Every Saturday</strong> from 21:30 to 2:00, last entry at 1:00. "
-                 "<strong>Next dates:</strong> 21 and 28 November, 5 and 12 December 2026.", CHECK, "bpa-time")
+                 "<strong>Next dates:</strong> 21 and 28 November, 5 and 12 December 2026.", None, "bpa-time")
 PAY_PILL = pill("💳", "Bars: SpartyPay only",
                 "The bars take <strong>SpartyPay cards only</strong>, no bank cards. The first top-up is <strong>20,000 HUF</strong>, "
                 "including a 3,000 HUF card deposit, and you top up with cash. Drinks come in a reusable cup: 700 HUF, 350 HUF back when you return it.",
-                "From the ticket listing, 15 November 2026.")
+                "From the ticket listing.")
 AGE_PILL = pill("🔞", "18+ · non-refundable",
-                "Adults only (ID required). Sparty tickets cannot be cancelled or refunded, so book once your Saturday is fixed.", CHECK)
+                "Adults only (ID required). Sparty tickets cannot be cancelled or refunded, so book once your Saturday is fixed.")
 
 
 def qf_sparty(ticket_row):
     return [("Dates &amp; Times", "Every Saturday 21:30–2:00, last entry 1:00 · next: 21, 28 Nov, 5, 12 Dec 2026"),
             ("Ticket (this card)", ticket_row),
-            ("Official Ticket Tiers", "Basic €69 · Premium €85 · Premium Plus €104 · Express €135 · VIP €199 (spartybooking.com, 21 Nov 2026)"),
+            ("Official Ticket Tiers", "Basic €69 · Premium €85 · Premium Plus €104 · Express €135 · VIP €199 (spartybooking.com, prices for Sat 21 Nov 2026)"),
             ("Drink Coupons", "1 beer = 1 coupon · 1 cocktail = 2 coupons"),
             ("Bar Payment", "SpartyPay card only, first top-up 20,000 HUF incl. 3,000 HUF deposit, top up with cash"),
             ("Pool Temperature", "34–38 °C outdoor thermal water"),
@@ -141,7 +141,7 @@ CARDS.append(dict(SPARTY_COMMON,
               "Bars take SpartyPay cards only: first top-up 20,000 HUF (3,000 HUF deposit included), cash top-ups. Cups cost 700 HUF, 350 HUF back."),
              ("The Shows", IMG + "sparty-show-04.avif",
               "Costumed performers, fire shows and circus acts around the pools through the night. Bring swimwear, a towel, flip-flops and ID.")],
-    qf=qf_sparty("Basic with locker, €73 (21 Nov 2026)"),
+    qf=qf_sparty("Basic with locker, €73 (price for Sat 21 Nov 2026)"),
 ))
 CARDS.append(dict(SPARTY_COMMON,
     key="sparty-premium", anchor="item-2-sparty-premium", rank="🍹 #2 Sparty With Drinks", color="bpa-silver",
@@ -171,7 +171,7 @@ CARDS.append(dict(SPARTY_COMMON,
               "DJs, lasers, fire shows and circus artists around the outdoor pools from 21:30 to 2:00."),
              ("The Pools", IMG + "sparty-szechenyi-night-01.avif",
               "34–38 °C outdoor thermal pools in front of the lit-up palace. Bring swimwear, a towel, flip-flops and ID.")],
-    qf=qf_sparty("Premium: entry, locker, 2 drink coupons, cup, €100 (21 Nov 2026)"),
+    qf=qf_sparty("Premium: entry, locker, 2 drink coupons, cup, €100 (price for Sat 21 Nov 2026)"),
 ))
 
 rudas = copy.deepcopy(BASE["rudas"])
@@ -188,13 +188,13 @@ CARDS.append(dict(
     photos=rudas["photos"], alt="Rudas Thermal Bath",
     pills=[pill("🕒", "Fri &amp; Sat · 22:00–3:00",
                 "<strong>Every Friday and Saturday night</strong> from 22:00 to 3:00, with mixed bathing.",
-                "From rudasfurdo.hu, 15 November 2026.", "bpa-time"),
+                "From rudasfurdo.hu.", "bpa-time"),
            pill("🏛️", "Turkish bath + rooftop bar",
                 "The 450-year-old <strong>Turkish bath</strong> with six pools at different temperatures, the swimming pool, "
                 "the wellness area and a <strong>cocktail bar on the roof</strong>.", "From rudasfurdo.hu."),
            pill("🎟️", "15,000 HUF online",
                 "Night bathing tickets cost <strong>15,000 HUF</strong> and are sold online only on rudasfurdo.hu.",
-                "Checked on the official site on 14 November 2026."),
+                "From rudasfurdo.hu."),
            pill("🔞", "14+ · not step-free",
                 "Children under 14 are not admitted. The bath currently cannot receive guests with reduced mobility.", "From rudasfurdo.hu.")],
     pick="if you want a late soak without the party: the <strong>Ottoman Turkish bath until 3:00</strong> with a cocktail bar on the roof, on Fridays as well as Saturdays.",
@@ -212,8 +212,8 @@ CARDS.append(dict(
              "with a cocktail bar on the roof. It is the calm, grown-up version of a night at the baths.",
              "I have bathed at Rudas myself in the daytime; the rooftop pool looks straight over the Danube."],
     quotes=rudas["quotes"][:2], getthere=rudas["getthere"], spcards=rudas["spcards"][:3],
-    qf=[("Night Bathing", "Fri and Sat 22:00–3:00, mixed (rudasfurdo.hu, 15 Nov 2026)"),
-        ("Price", "15,000 HUF, online only (checked 14 Nov 2026)"),
+    qf=[("Night Bathing", "Fri and Sat 22:00–3:00, mixed (rudasfurdo.hu)"),
+        ("Price", "15,000 HUF, online only"),
         ("What Is Open", "Turkish bath, swimming pool, wellness area, rooftop cocktail bar"),
         ("Age Limit", "14+"),
         ("Address", "Döbrentei tér 9, 1013 Budapest"),
@@ -238,11 +238,11 @@ CARDS.append(dict(
                 "A <strong>45-minute private beer spa soak</strong> in a wooden tub with <strong>unlimited Hungarian draught beer</strong> "
                 "from your own tap, plus a <strong>full-day fast-track Széchenyi ticket</strong> and a private changing cabin.", CHECK),
            pill("🕒", "From 10:00 · 3 hours",
-                "The Beer Spa opens at 10:00; arrive 20 minutes before your slot. Plan about 3 hours with the bath.", CHECK, "bpa-time"),
+                "The Beer Spa opens at 10:00; arrive 20 minutes before your slot. Plan about 3 hours with the bath.", None, "bpa-time"),
            pill("✅", "Free cancellation",
-                "Free cancellation up to 24 hours before, and you can reserve now and pay later.", CHECK),
+                "Free cancellation up to 24 hours before, and you can reserve now and pay later."),
            pill("🔞", "18+",
-                "Adults only. Towels cost 5,000 HUF on site; bring your own slippers.", CHECK)],
+                "Adults only. Towels cost 5,000 HUF on site; bring your own slippers.")],
     pick="if Saturday night does not fit or you want a refundable booking: <strong>a full day at Széchenyi plus 45 minutes of unlimited beer</strong> in a private tub.",
     skip="if you want a night out: the Beer Spa opens at 10:00 and it is a private tub, not a party.",
     pros=[("Unlimited beer", "Self-poured draught beer from your own tap for 45 minutes."),
@@ -300,7 +300,7 @@ NIGHT_LINKS = join_links([("best-night-cruises-budapest", "best night cruises in
 TITLE = "Sparty Budapest 2026: Tickets, Prices &amp; What to Know Before You Go"
 TITLE_TXT = "Sparty Budapest 2026: Tickets, Prices & What to Know Before You Go"
 DESC = ("Sparty is the Saturday night pool party at Budapest's Széchenyi Baths. Ticket prices, what each ticket includes, "
-        "how paying for drinks works and next dates, checked 15 Nov 2026.")
+        "how paying for drinks works and the next dates.")
 H1 = 'Sparty Budapest: Tickets, Prices &amp; Tips <span class="ltt-h1-muted">(2026)</span>'
 
 LEAD = f'''<div class="ltt-lead-copy">
@@ -347,7 +347,7 @@ FAQ = [
     ("When is Sparty in Budapest?",
      "Every Saturday from 21:30 to 2:00 at the Széchenyi Baths, with last entry at 1:00. The next dates are 21 and 28 November and 5 and 12 December 2026."),
     ("How much are Sparty tickets?",
-     "The Basic ticket with a locker is €73 and the Premium ticket with 2 drink coupons is €100 on the booking calendar for 21 November 2026. The official site sells Basic from €69 and VIP up to €199."),
+     "The Basic ticket with a locker is €73 and the Premium ticket with 2 drink coupons is €100 for Saturday 21 November 2026. The official site sells Basic from €69 and VIP up to €199."),
     ("Can you get a refund on Sparty tickets?",
      "No. Sparty tickets are non-refundable. For a refundable option, book the Széchenyi Beer Spa, which has free cancellation up to 24 hours before."),
     ("How do you pay for drinks at Sparty?",
@@ -407,10 +407,10 @@ def hero(page):
     crumbs = ('<a href="/">Home</a>\n<span class="ltt-bc-sep">›</span>\n<a href="%s">Thermal Baths</a>\n'
               '<span class="ltt-bc-sep">›</span>\n<span class="ltt-bc-current">Sparty</span>' % HUB)
     page = must_sub(r'<a href="/">Home</a>\s*<span class="ltt-bc-sep">›</span>\s*<span class="ltt-bc-current">[^<]*</span>', crumbs, page)
-    page = must_sub(r'<span class="ltt-hero-kicker-badge">[^<]*</span>', '<span class="ltt-hero-kicker-badge">Dates &amp; Prices Checked 15 Nov 2026</span>', page)
+    page = must_sub(r'<span class="ltt-hero-kicker-badge">[^<]*</span>', '<span class="ltt-hero-kicker-badge">2026 Sparty Ticket Guide</span>', page)
     page = must_sub(r'(<h1 class="ltt-editorial-h1">).*?(</h1>)', r"\1\n      %s\n\2" % H1, page, flags=re.S)
     page = must_sub(r'<div class="ltt-author-role">[^<]*</div>',
-                    '<div class="ltt-author-role">Budapest Local • Sparty Tickets &amp; 2 Alternatives Compared • Checked 15 Nov 2026</div>', page)
+                    '<div class="ltt-author-role">Budapest Local • Sparty Tickets &amp; 2 Alternatives Compared</div>', page)
     page = must_sub(r"<strong>Last updated</strong>: [^<]*<", "<strong>Last updated</strong>: Nov 15, 2026<", page)
     page = swap_block(page, r'<div class="ltt-lead-copy">', LEAD)
     page = swap_block(page, r'<div class="ltt-integrated-pills">', PILLS)
@@ -426,6 +426,8 @@ def body(page):
     page = page[:ds[0][0]] + dets + page[ds[-1][1]:]
     page = re.sub(r"<!-- #\d+: [^>]*-->\n?", "", page)
     page = re.sub(r"<blockquote><strong>What visitors say:</strong>.*?</blockquote>", "", page, flags=re.S)  # no review quotes
+    # no self-evident "checked on <date>" lines (user rule): "Last updated" already shows the date
+    page = re.sub(r'<p class="qf1-note"[^>]*>Checked on the official site and the live listings on [^<]*</p>', "", page)
     page = swap_block(page, r'<div class="container w-container"><div class="w-richtext"><p>Every bath below', MID)
     page = must_sub(r'(<h2 class="bpa-breakdown-heading" id="desert-safaris-breakdown">)[^<]*(</h2>)',
                     r"\1Detailed Breakdown: Sparty Tickets &amp; Alternatives\2", page)
@@ -447,6 +449,7 @@ def chrome(page):
     page = must_sub(r'(<span class="hybrid-active-title" id="sticky-name">)[^<]*(</span>)', r"\g<1>%s\2" % c1["short"], page)
     page = must_sub(r'(<span class="hybrid-active-price" id="sticky-price">)[^<]*(</span>)', r"\g<1>From €%s\2" % c1["price"], page)
     page = must_sub(r'(<a class="hybrid-cta-btn" href=")[^"]*(" id="sticky-cta-btn")', r"\g<1>%s\2" % R["book_url"](c1, "sticky"), page)
+    page = must_sub(r'<span class="hybrid-active-trust">Prices checked [^<]*</span>', "", page)
     page = must_sub(r"<span>All \d+ Thermal Baths</span>", "<span>All %d Options</span>" % N, page)
     page = page.replace("Jump to Tested Thermal Bath", "Jump to a Ticket")
     page = page.replace('aria-label="Jump to Bath Review"', 'aria-label="Jump to Ticket Review"')
