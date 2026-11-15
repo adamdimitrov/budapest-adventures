@@ -34,7 +34,7 @@ def maps(q):
 # ---------------------------------------------------------------------------
 CARDS = [
     {
-        "slug": "rubin-group", "order": [5, 1, 2, 3, 4, 6, 9, 8], "anchor": "item-1-rubingroup", "tested": True,
+        "slug": "rubin-group", "order": [10, 11, 12, 13, 5, 2, 14, 4, 1, 3, 8, 6], "anchor": "item-1-rubingroup", "tested": True,
         "cats": "tested prosecco sightseeing",
         "gyg_id": "t416276",
         "gyg_path": "budapest-unlimited-prosecco-beer-and-aperol-spritz-cruise-t416276",
@@ -55,7 +55,8 @@ CARDS = [
             "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e92be2896fd573cf19_Budapest-river-cruises-portum-10.webp",
             "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858eb6b6209525005c772_Budapest-river-cruises-portum-17.webp",
             "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b85c19bd509e80e2cfbd71_Budapest-river-cruises-legenda-1.webp",
-        ],
+            # 10-14: operator photos from the GYG product page (t416276), added to the own photos
+        ] + [f"/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-duna-weser-{i:02d}.avif" for i in range(1, 6)],
     },
     {
         "slug": "floating-lotus", "order": [1, 3, 2, 8, 6, 5, 9, 12, 10, 7, 4, 11], "anchor": "item-2-floating-lotus", "tested": False,
@@ -84,7 +85,7 @@ CARDS = [
         "photos": [f"/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-{i:02d}.avif" for i in range(1, 9)],
     },
     {
-        "slug": "silverline-prosecco", "order": [2, 4, 3, 1, 5, 7, 10, 6, 8, 9], "anchor": "item-4-silverline-prosecco", "tested": False,
+        "slug": "silverline-prosecco", "order": [2, 4, 3, 1, 5, 7, 10, 6, 9], "anchor": "item-4-silverline-prosecco", "tested": False,
         "cats": "prosecco sightseeing",
         "gyg_id": "t408167",
         "gyg_path": "budapest-sunset-cocktail-cruise-t408167",

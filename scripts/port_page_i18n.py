@@ -43,7 +43,7 @@ LANG_NAMES = {
 INLINE = {"a", "strong", "b", "em", "i", "span", "br", "small", "sup", "sub", "u", "mark", "abbr", "code", "s"}
 SKIP = {"script", "style", "svg", "noscript", "template", "iframe", "code"}
 ATTRS = ("alt", "title", "aria-label", "placeholder", "data-tooltip", "data-label")
-JSONLD_KEYS = {"name", "description", "headline", "text", "alternateName", "caption", "about"}
+JSONLD_KEYS = {"name", "description", "headline", "text", "alternateName", "caption", "about", "reviewBody"}
 
 SYSTEM = """You translate pages of Budapest Adventures, a travel guide to Budapest Danube cruises, from English into {lang}.
 

@@ -17,7 +17,7 @@ its tracking parameters, target and the link text are never touched. A tag
 that already has all three tokens is left byte-for-byte as it is.
 
 The official thermal-bath ticket sites (BATH_BOOKING_HOSTS) are not
-affiliates: they get rel="nofollow noopener" only.
+affiliates: they get rel="nofollow noopener" only (a stray "sponsored" is removed).
 
 Generator templates whose href is a placeholder ({url}, %s, ' + x + ') are
 covered when the tag is clearly an affiliate slot: it already says
@@ -137,13 +137,15 @@ def fix_tag(tag):
     if not kind:
         return tag, None, False
     required = AFFILIATE_REL if kind == "aff" else BATH_REL
+    forbidden = () if kind == "aff" else ("sponsored",)
     rm = REL.search(tag)
     if rm:
         have = {t.lower() for t in rm.group(2).split()}
-        if all(r in have for r in required):
+        if all(r in have for r in required) and not have & set(forbidden):
             return tag, kind, False
         q = rm.group(1)
-        new = tag[:rm.start()] + f"rel={q}{merged_rel(rm.group(2), required)}{q}" + tag[rm.end():]
+        kept = " ".join(t for t in rm.group(2).split() if t.lower() not in forbidden)
+        new = tag[:rm.start()] + f"rel={q}{merged_rel(kept, required)}{q}" + tag[rm.end():]
         return new, kind, True
     q = hm.group(1)
     attr = f"rel={q}{' '.join(required)}{q}"
