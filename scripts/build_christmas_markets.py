@@ -88,6 +88,7 @@ PAGE_CSS = """<style id="xm-page-css">
 .xm-faq p{margin:10px 0 2px;font-size:16px}
 .xm-sources li{font-size:14px;word-break:break-word}
 @media (max-width:640px){.xm-wrap h2{font-size:23px}.xm-poster-dates{font-size:22px}.xm-cruise{flex-direction:column;align-items:flex-start}.xm-cruise img{width:100%;height:150px}}
+.xm-related{list-style:none;padding:0;margin:14px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.xm-related li{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px;font-size:15.5px !important;line-height:1.5}.xm-related a{display:block;font-weight:800;color:#0f172a;text-decoration:none;margin-bottom:2px}.xm-related a:hover{color:#ea580c}
 .xm-pick{display:flex;gap:18px;align-items:center;background:#fff7ed;border:2px solid #fdba74;border-radius:16px;padding:18px 20px;margin:26px 0 8px}
 .xm-pick img{width:132px;height:99px;object-fit:cover;border-radius:10px;flex-shrink:0}
 .xm-pick .xm-pick-tag{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#9a3412;margin-bottom:4px}
@@ -485,6 +486,7 @@ def analysis_html(copy):
 <p class="xm-note">{an["route_note"]}</p>
 </section>
 {copy.get("stay", "")}
+{copy.get("related", "")}
 </div>'''
 
 
