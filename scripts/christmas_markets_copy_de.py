@@ -743,6 +743,7 @@ FAQ = [
 ]
 
 EDITORIAL = {
+    "photos_h3": "Fotonachweis (Wikimedia Commons)",
     "faq_h2": "Weihnachtsmärkte Budapest: FAQ",
     "src_h2": "Quellen &amp; wie wir geprüft haben",
     "method": "Termine, Öffnungszeiten und Programme stammen von den Websites der Veranstalter, gelesen am 14. und 15. November 2026. Preise stammen aus der Eröffnungsmitteilung der Veranstalter 2026 und aus Vor-Ort-Preisen, die ungarische Medien am 13. November 2026 veröffentlicht haben. Daten zu Touren und Bootsfahrten, Dezember-Termine und Bewertungen stammen aus den Angeboten auf GetYourGuide, Viator und Silverline vom 15. November 2026. Wir haben diese Touren nicht selbst gemacht. Gehzeiten sind eigene Schätzungen (Methode unter der Tabelle).",

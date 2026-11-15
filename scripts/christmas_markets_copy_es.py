@@ -743,6 +743,7 @@ FAQ = [
 ]
 
 EDITORIAL = {
+    "photos_h3": "Créditos de las fotos (Wikimedia Commons)",
     "faq_h2": "Mercadillos navideños de Budapest: preguntas frecuentes",
     "src_h2": "Fuentes y método",
     "method": "Las fechas, horarios y programas vienen de la web de cada organizador, consultadas el 14 y 15 de noviembre de 2026. Los precios vienen del comunicado de apertura 2026 de los organizadores y de precios tomados in situ que publicó la prensa húngara el 13 de noviembre de 2026. Los datos de tours y cruceros, las fechas de diciembre y las opiniones vienen de las ofertas de GetYourGuide, Viator y Silverline a 15 de noviembre de 2026. No hemos hecho estos tours. Los minutos a pie son estimaciones propias (método bajo la tabla).",

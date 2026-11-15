@@ -20,7 +20,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import build_private_boats as bp  # noqa: E402
 from christmas_markets_data import (  # noqa: E402
-    BUDGETS, CHECKED, MARKETS, PRICES, PRICE_SOURCES, PRODUCTS, SISTER, TRANSIT, budget_total, walk_minutes, weighted)
+    BUDGETS, CHECKED, MARKET_PHOTOS, MARKETS, PRICES, PRICE_SOURCES, PRODUCTS, SISTER, TRANSIT, budget_total, walk_minutes, weighted)
 
 SITE = bp.SITE
 esc, fmt1, pill, balanced_end, sub_once = bp.esc, bp.fmt1, bp.pill, bp.balanced_end, bp.sub_once
@@ -40,7 +40,6 @@ DECK_ID = "budapest-christmas-markets-deck"
 
 PAGE_CSS = """<style id="xm-page-css">
 .bpa-mkt .bpa-poster{position:relative;border-radius:12px;aspect-ratio:3/2;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:18px 18px 16px;color:#fff;overflow:hidden;box-sizing:border-box}
-.bpa-mkt .bpa-media{background:none !important;aspect-ratio:auto !important;height:auto !important;min-height:0 !important}
 .bpa-mkt .bpa-poster .bpa-rank-tag{position:absolute;top:12px;left:12px}
 .bpa-mkt .xm-p1{background:linear-gradient(135deg,#7f1d1d,#b91c1c 55%,#f59e0b)}
 .bpa-mkt .xm-p2{background:linear-gradient(135deg,#064e3b,#047857 55%,#a3e635)}
@@ -50,6 +49,10 @@ PAGE_CSS = """<style id="xm-page-css">
 .xm-poster-dates{font-size:26px;font-weight:800;line-height:1.15}
 .xm-poster-sub{font-size:14px;opacity:.95}
 .bpa-mkt .bpa-price{font-size:20px}
+.bpa-mkt .xm-date-chip{position:absolute;left:10px;bottom:10px;z-index:3;background:rgba(15,23,42,.82);color:#fff;font-weight:700;font-size:13px;line-height:1.2;border-radius:8px;padding:5px 10px;pointer-events:none}
+.bpa-mkt .xm-credit{position:absolute;left:10px;bottom:42px;z-index:3;background:rgba(15,23,42,.55);color:#fff !important;font-size:10.5px;border-radius:6px;padding:2px 7px;text-decoration:none;max-width:60%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.xm-credits li{font-size:13px}
+.bpa-card.bpa-mkt .bpa-media a.xm-credit,.bpa-card.bpa-mkt .bpa-media a.xm-credit:visited{color:#fff !important;background:rgba(15,23,42,.7) !important}
 .xm-wrap{max-width:1240px;margin:0 auto 40px;padding:0 16px;box-sizing:border-box;color:#1e293b;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
 .xm-wrap h2{font-size:28px;line-height:1.25;font-weight:800;color:#0f172a;margin:44px 0 10px}
 .xm-wrap h3{font-size:20px;font-weight:700;color:#0f172a;margin:26px 0 10px}
@@ -154,16 +157,24 @@ def via(p, ui):
 # ---------------------------------------------------------------- market card
 def market_card(i, m, c, ui):
     pills = "\n".join(pill(pl) for pl in c["pills"])
+    photos = MARKET_PHOTOS[m["key"]]
+    alt = esc("%s, %s, Budapest" % (m["name"], m["place"]))
+    imgs = ""
+    for k, (f, _, _, _) in enumerate(photos):
+        if k == 0:
+            extra = 'fetchpriority="high" loading="eager"' if i == 1 else 'loading="lazy"'
+            imgs += '<img alt="%s" height="534" %s sizes="%s" src="%s%s" width="800"/>' % (alt, extra, SIZES, IMG, f)
+        else:
+            imgs += '<img alt="%s" data-src="%s%s" decoding="async" loading="lazy" sizes="%s" src="%s"/>' % (alt, IMG, f, SIZES, bp.PLACEHOLDER)
+    credit = " / ".join(dict.fromkeys("%s, %s" % (a, l) for _, a, l, _ in photos))
     return f'''<!-- market {i}: {m["name"]} -->
 <div class="bpa-card bpa-mkt" id="mcard-{i}">
 <div class="bpa-main">
 <div class="bpa-media">
-<div class="bpa-poster xm-p{i}">
 <span class="bpa-rank-tag bpa-gold">{c["rank_tag"]}</span>
-<span class="xm-poster-place">{esc(m["place"])} · {m["district"]} {ui["district"]}</span>
-<span class="xm-poster-dates">{span(m, ui)}</span>
-<span class="xm-poster-sub">{c["poster_sub"]}</span>
-</div>
+<button aria-label="{ui["prev"]}" class="bpa-arrow prev" onclick="bpaSlide(this,-1)" type="button">‹</button><button aria-label="{ui["next"]}" class="bpa-arrow next" onclick="bpaSlide(this,1)" type="button">›</button><span class="bpa-pill">1 / {len(photos)}</span><div aria-label="{ui["photo_gallery"].format(n=esc(m["name"]))}" class="bpa-slider" onscroll="bpaCount(this)" tabindex="0">{imgs}</div>
+<span class="xm-date-chip">📅 {span(m, ui)}</span>
+<a class="xm-credit" href="#sources-method">📷 {esc(credit)}</a>
 </div>
 <div class="bpa-info">
 <div class="bpa-kicker">{esc(m["place"])} • {m["district"]} {ui["district"]} • <a class="bpa-kicker-map-link" href="{maps(m["map_q"])}" rel="noopener noreferrer" target="_blank">{ui["map"]}</a></div>
@@ -578,7 +589,7 @@ def jsonld(lang, path, copy):
               "location": {"@type": "Place", "name": m["place"], "address": {"@type": "PostalAddress", "streetAddress": m["place"],
                            "addressLocality": "Budapest", "addressCountry": "HU"},
                            "geo": {"@type": "GeoCoordinates", "latitude": m["lat"], "longitude": m["lng"]}},
-              "url": m["official"], "image": SITE + "/assets/xmas-markets-2026/" + PRODUCTS[0]["images"][0]}
+              "url": m["official"], "image": SITE + IMG + MARKET_PHOTOS[m["key"]][0][0]}
         events.append(ev)
     graph = [
         {"@type": "Article", "@id": url + "#article", "mainEntityOfPage": {"@type": "WebPage", "@id": url},
@@ -626,6 +637,10 @@ def editorial(copy):
         return "<li>%s</li>" % label
     src_html = "".join(src_li(u) for u in srcs)
     ed = copy["editorial"]
+    cred = ""
+    for m in MARKETS:
+        for f, a, l, u in MARKET_PHOTOS[m["key"]]:
+            cred += '<li>%s: <a href="%s" rel="nofollow noopener" target="_blank">%s</a>, %s</li>' % (esc(m["name"]), u, esc(a), l)
     return f'''<section id="christmas-market-faq">
 <h2 class="ltt-sec-title">{ed["faq_h2"]}</h2>
 <div class="xm-faq">{faq}</div>
@@ -634,6 +649,8 @@ def editorial(copy):
 <h2 class="ltt-sec-title">{ed["src_h2"]}</h2>
 <p>{ed["method"]}</p>
 <ul class="xm-sources">{src_html}</ul>
+<h3>{ed["photos_h3"]}</h3>
+<ul class="xm-credits">{cred}</ul>
 </section>'''
 
 

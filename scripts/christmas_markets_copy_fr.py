@@ -744,6 +744,7 @@ FAQ = [
 ]
 
 EDITORIAL = {
+    "photos_h3": "Crédits photo (Wikimedia Commons)",
     "faq_h2": "Marchés de Noël de Budapest : FAQ",
     "src_h2": "Sources &amp; méthode",
     "method": "Les dates, horaires et programmes viennent du site de chaque organisateur, consultés les 14 et 15 novembre 2026. Les prix viennent du communiqué d'ouverture 2026 des organisateurs et de prix relevés sur place publiés par la presse hongroise le 13 novembre 2026. Les informations sur les visites et croisières, les dates de décembre et les avis viennent des offres GetYourGuide, Viator et Silverline au 15 novembre 2026. Nous n'avons pas fait ces visites nous-mêmes. Les temps de marche sont nos propres estimations (méthode sous le tableau).",

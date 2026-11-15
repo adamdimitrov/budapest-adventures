@@ -120,6 +120,31 @@ MARKETS = [
     },
 ]
 
+# Market card photos: Wikimedia Commons, free licences, credited on the page (Sources section).
+# (file in /assets/xmas-markets-2026/, author, licence, file page)
+_EA = "Elekes Andor"
+_C = "https://commons.wikimedia.org/wiki/File:"
+MARKET_PHOTOS = {
+    "basilica": [("market-basilica-%02d.avif" % i, _EA, "CC BY 4.0", _C + f) for i, f in enumerate([
+        "Basilica_Christmas_Fair_2025_(2).jpg", "Basilica_Christmas_Fair_2025.jpg", "Basilica_Christmas_Fair_2025_(33).jpg",
+        "Basilica_Christmas_Fair_2025_(20).jpg", "Basilica_Christmas_Fair_2025_(23).jpg", "Basilica_Christmas_Fair_2025_(21).jpg",
+        "Basilica_Christmas_Fair_2025_(18).jpg", "Basilica_Christmas_Fair_2025_(46).jpg"], 1)],
+    "vorosmarty": [("market-vorosmarty-%02d.avif" % i, _EA, "CC BY 4.0", _C + f) for i, f in enumerate([
+        "V%C3%B6r%C3%B6smarty_Christmas_Fair_2025_(18).jpg", "V%C3%B6r%C3%B6smarty_Christmas_Fair_2025_(20).jpg",
+        "V%C3%B6r%C3%B6smarty_Christmas_Fair_2025_(15).jpg", "V%C3%B6r%C3%B6smarty_Christmas_Fair_2025_(34).jpg",
+        "V%C3%B6r%C3%B6smarty_Christmas_Fair_2025_(22).jpg", "V%C3%B6r%C3%B6smarty_Christmas_Fair_2025_(25).jpg",
+        "V%C3%B6r%C3%B6smarty_Christmas_Fair_2025_(1).jpg", "V%C3%B6r%C3%B6smarty_Christmas_Fair_2025_(5).jpg"], 1)],
+    "castle": [
+        ("market-castle-01.avif", "Thaler Tamás", "CC BY-SA 4.0", _C + "MatyasTemplomFotoThalerTamas20162.JPG"),
+        ("market-castle-02.avif", "Andrés Nieto Porras", "CC BY-SA 2.0", _C + "Views_from_Fisherman%27s_Bastion_toward_south._-_Budapest,_Hungary._-_62_365%C2%B2_Observador_(8262965486).jpg"),
+        ("market-castle-03.avif", "Jorge Franganillo", "CC BY 2.0", _C + "Budapest_Fisherman%27s_Bastion_(54171700818).jpg"),
+    ],
+    "obuda": [
+        ("market-obuda-01.avif", "Globetrotter19", "CC BY-SA 3.0", _C + "%C3%93buda_F%C5%91_Square_Ice_Rink._-_2016_Budapest.jpg"),
+        ("market-obuda-02.avif", "Globetrotter19", "CC BY-SA 3.0", _C + "Town_Hall_in_F%C5%91_Square,_%C3%93buda,_2016_Budapest.jpg"),
+    ],
+}
+
 # Markets we looked for and left out: no 2026 programme published by 15 Nov 2026
 LEFT_OUT = ["Várkert Bazár", "Erzsébet tér"]
 

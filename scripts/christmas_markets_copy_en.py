@@ -735,6 +735,7 @@ FAQ = [
 ]
 
 EDITORIAL = {
+    "photos_h3": "Photo credits (Wikimedia Commons)",
     "faq_h2": "Budapest Christmas Markets: FAQ",
     "src_h2": "Sources &amp; How We Checked",
     "method": "Dates, opening hours and programs come from each organiser's website, read on 14 and 15 November 2026. Food prices come from the organisers' 2026 opening statement and on-site prices reported by Hungarian media on 13 November 2026. Tour and cruise facts, December dates and reviews come from the GetYourGuide, Viator and Silverline listings on 15 November 2026. We have not taken these tours ourselves. Walking times are our own estimates (method under the table).",

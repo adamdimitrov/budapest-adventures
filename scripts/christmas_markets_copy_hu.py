@@ -744,6 +744,7 @@ FAQ = [
 ]
 
 EDITORIAL = {
+    "photos_h3": "Fotók forrása (Wikimedia Commons)",
     "faq_h2": "Budapesti karácsonyi vásárok: GYIK",
     "src_h2": "Források &amp; ellenőrzés",
     "method": "A dátumok, nyitvatartások és programok a szervezők saját oldaláról származnak, 2026. november 14-én és 15-én olvastuk őket. Az árak a szervezők 2026-os nyitó közleményéből és a magyar sajtóban 2026. november 13-án közölt helyszíni árakból származnak. A túrák és hajóutak adatai, a decemberi dátumok és az értékelések a GetYourGuide, a Viator és a Silverline ajánlataiból származnak, 2026. november 15-i állapot szerint. Ezeket a programokat nem próbáltuk ki. A sétaidők saját becslések (módszer a táblázat alatt).",

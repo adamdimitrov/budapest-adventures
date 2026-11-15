@@ -743,6 +743,7 @@ FAQ = [
 ]
 
 EDITORIAL = {
+    "photos_h3": "Crediti fotografici (Wikimedia Commons)",
     "faq_h2": "Mercatini di Natale di Budapest: FAQ",
     "src_h2": "Fonti &amp; metodo",
     "method": "Date, orari e programmi vengono dal sito di ciascun organizzatore, consultati il 14 e 15 novembre 2026. I prezzi vengono dal comunicato di apertura 2026 degli organizzatori e dai prezzi rilevati sul posto pubblicati dalla stampa ungherese il 13 novembre 2026. Dati di tour e crociere, date di dicembre e recensioni vengono dalle offerte GetYourGuide, Viator e Silverline al 15 novembre 2026. Non abbiamo provato questi tour. I tempi a piedi sono nostre stime (metodo sotto la tabella).",
