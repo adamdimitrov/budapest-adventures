@@ -199,8 +199,6 @@ class Builder:
         cons = "".join(f"<li><strong>{a}</strong>: {b}</li>" for a, b in T["cons"])
         q, a = T["faq"]
         summary = "".join(f"<p>{p}</p>" for p in T["summary"])
-        if not c["tested"]:
-            summary = f'<p><em>{U["research_note"]}</em></p>' + summary
         quotes = "<br/>".join(f'💬 “{t}” <em>({who}, {site}, {month})</em>' for t, who, site, month in T["quotes"])
         video = f'<blockquote>{T["video"]}</blockquote>' if T.get("video") else ""
         fill = {"pier": c["pier_maps"], "maps_ak3": CARDS[4]["pier_maps"],

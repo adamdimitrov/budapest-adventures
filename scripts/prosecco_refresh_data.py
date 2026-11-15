@@ -34,7 +34,7 @@ def maps(q):
 # ---------------------------------------------------------------------------
 CARDS = [
     {
-        "slug": "rubin-group", "order": [10, 11, 12, 13, 5, 2, 14, 4, 1, 3, 8, 6], "anchor": "item-1-rubingroup", "tested": True,
+        "slug": "rubin-group", "order": [10, 11, 12, 13, 5, 2, 14, 4, 1, 3, 6], "anchor": "item-1-rubingroup", "tested": True,
         "cats": "tested prosecco sightseeing",
         "gyg_id": "t416276",
         "gyg_path": "budapest-unlimited-prosecco-beer-and-aperol-spritz-cruise-t416276",

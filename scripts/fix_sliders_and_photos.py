@@ -29,8 +29,7 @@ RUBIN_PHOTOS = [
     '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e8f731d90165d271cc_Budapest-river-cruises-portum-11.webp',
     '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e9803ea5e532e13df1_Budapest-river-cruises-portum-15.webp',
     '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e8a4e49cb177974356_Budapest-river-cruises-portum-14.webp',
-    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858eda4b537601bf3ceab_Budapest-river-cruises-portum-21.webp',
-    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858eb6b6209525005c772_Budapest-river-cruises-portum-17.webp'
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858eda4b537601bf3ceab_Budapest-river-cruises-portum-21.webp'
 ]
 
 DINNER_PHOTOS = [
