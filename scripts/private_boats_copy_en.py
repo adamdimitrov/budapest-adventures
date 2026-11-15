@@ -80,7 +80,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Hourly 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Wed 18 Nov:</strong> every hour from 08:00 to 16:00, €225. <strong>Sat 21 Nov:</strong> 08:00 to 15:00, €275.",
-                 "note": "Checked on the GetYourGuide booking calendar on 14 November 2026; times and weekend prices change by season."},
+                 "note": "Checked on the booking calendar on 14 November 2026; times and weekend prices change by season."},
                 {"icon": "👥", "label": "Up to 20 guests",
                  "body": "<strong>One price for the whole boat.</strong> At €225 that is about €11 per person for a group of 20, or €112.50 each for a couple.",
                  "note": "The boat itself takes 25 passengers; the listing sells it for groups of up to 20."},
@@ -151,8 +151,8 @@ COPY = {
             "duration": "50 Mins",
             "pills": [
                 {"icon": "🕒", "label": "Hourly 10:00–18:00", "cls": "bpa-time",
-                 "body": "<strong>Sat 21 Nov:</strong> every hour from 10:00 to 18:00. <strong>Wed 18 Nov:</strong> only 10:00 left. €580 on both days.",
-                 "note": "Checked on the GetYourGuide booking calendar on 14 November 2026; times change by season."},
+                 "body": "<strong>Sat 21 Nov:</strong> every hour from 10:00 to 18:00. <strong>Wed 18 Nov:</strong> 10:00. €580 on both days.",
+                 "note": "Checked on the booking calendar on 14 November 2026; times change by season."},
                 {"icon": "🥂", "label": "Glass of sparkling wine",
                  "body": "<strong>Included:</strong> one glass of Hungarian sparkling wine each (or a soft drink).",
                  "note": "Wine, champagne and beer from the fridge cost extra and should be pre-ordered. One guest paid 7,000 Ft for a bottle of prosecco in 2021."},
@@ -228,7 +228,7 @@ COPY = {
                  "note": "Spirits and other drinks are sold at the bar. No outside food or drinks."},
                 {"icon": "🕒", "label": "Hourly 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Wed 18 Nov:</strong> every hour from 08:00 to 16:00, €450. <strong>Sat 21 Nov:</strong> 08:00 to 15:00, €550.",
-                 "note": "Checked on the GetYourGuide booking calendar on 14 November 2026; times and weekend prices change by season."},
+                 "note": "Checked on the booking calendar on 14 November 2026; times and weekend prices change by season."},
                 {"icon": "🔊", "label": "Sound system &amp; Wi-Fi",
                  "body": "<strong>On board:</strong> bar, sound system, music, party lights, heating, Wi-Fi and 220 V sockets.",
                  "note": "A modern Dutch boat refitted for private events."},
@@ -297,7 +297,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Any start 08:00–23:00", "cls": "bpa-time",
                  "body": "<strong>Choose your own start time</strong> between 08:00 and 23:00, the only listing here with late-evening slots.",
-                 "note": "Window shown on the GetYourGuide booking calendar for Wed 18 and Sat 21 Nov 2026."},
+                 "note": "Window shown on the booking calendar for Wed 18 and Sat 21 Nov 2026."},
                 {"icon": "🛥️", "label": "2 boats: classic or boutique",
                  "body": "<strong>Classic boat (up to 35):</strong> €495 Wed, €540 Sat. <strong>Boutique boat (up to 12):</strong> €675 Wed, €765 Sat, with a welcome drink.",
                  "note": "Prices include a 10% discount shown on 14 November 2026. The classic boat in the listing photos is the Budapest Klára, the same boat as card #1."},
@@ -332,7 +332,7 @@ COPY = {
             ],
             "reviews": [],
             "how": [
-                "📍 <strong>Two departure points</strong>, depending on the boat you choose. GetYourGuide shows the exact address when you select an option.",
+                "📍 <strong>Two departure points</strong>, depending on the boat you choose. The exact address is shown when you pick an option at booking.",
                 "💬 Message the provider through GetYourGuide if you want a pick-up at a specific pier.",
             ],
             "walk": [

@@ -18,7 +18,7 @@ MAPS = "https://www.google.com/maps/search/?api=1&query={q}"
 CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/"
 
 TIME_NOTE = "Checked on the booking calendar for Saturday 28 November 2026; times change by season."
-LISTING_NOTE = "From the GetYourGuide listing, checked 14 November 2026."
+LISTING_NOTE = "From the listing, checked 14 November 2026."
 
 
 def pill(icon, label, pop, note=None, cls="", langs=None):
@@ -64,12 +64,12 @@ CARDS.append(dict(
              "<strong>Included:</strong> one welcome drink: champagne, wine, beer, a soft drink or mineral water. Other drinks are paid on board.",
              LISTING_NOTE),
         pill("🎶", "Live lounge music", "A pianist and singer play live through the evening.",
-             "From the GetYourGuide listing and my own visit."),
+             "From the listing and my own visit."),
         pill("🌱", "Diet notes",
              "Gluten-free and lactose-free dishes are marked on the menu. <strong>No vegan menu</strong>, and the listing says it is not suitable for people with food allergies or children under 3.",
-             "From Legenda&rsquo;s menu and the GetYourGuide listing, checked 14 November 2026."),
+             "From Legenda&rsquo;s menu and the listing, checked 14 November 2026."),
         pill("🕒", "19:00 · 2.5 h",
-             "Departs at <strong>19:00</strong>. About 2.5 hours on board. On 14 November GetYourGuide showed only 1 spot left for 28 November.",
+             "Departs at <strong>19:00</strong>. About 2.5 hours on board.",
              TIME_NOTE, "bpa-time"),
     ],
     pick="for a romantic 4-course candlelit dinner with live lounge music and the lit-up Parliament.",
@@ -80,7 +80,7 @@ CARDS.append(dict(
           ("Live music", "Contemporary music performed by a pianist and singer duo.")],
     cons=[("Not the cheapest", "€110 per adult and €84 per child (3 to 12). Legenda is pricey, but the evening is worth it."),
           ("Only the welcome drink is included", "Wine, cocktails and soft drinks are paid on board."),
-          ("Not for every diet", "GetYourGuide says it is not suitable for vegans, people with food allergies, children under 3 or wheelchair users.")],
+          ("Not for every diet", "The listing says it is not suitable for vegans, people with food allergies, children under 3 or wheelchair users.")],
     qf=[("Schedule &amp; Frequency", "19:00 (calendar for Sat 28 Nov 2026)"),
         ("Duration", "2.5 Hours"),
         ("Meeting Point &amp; Pier", "Jane Haining rakpart 7, Dock 7 (Vigadó tér), 1052 Budapest"),
@@ -136,7 +136,7 @@ CARDS.append(dict(
              TIME_NOTE, "bpa-time"),
         pill("🥂", "Welcome Prosecco",
              "<strong>Included:</strong> one welcome drink. Other drinks are paid on board. Window seat: +€15 on Dinner &amp; Lights, +€25 on the Folk &amp; Operetta show.",
-             "From budapestrivercruise.eu and the GetYourGuide listing, checked 14 November 2026."),
+             "From budapestrivercruise.eu and the listing, checked 14 November 2026."),
     ],
     pick="for a good-value 4-course dinner with no show or a folk and operetta show, on the same boat.",
     skip="if you want drinks included or a window table at no extra cost: only one welcome drink is included and window seats cost more.",
@@ -154,7 +154,7 @@ CARDS.append(dict(
         ("Price per Person", "Dinner &amp; Lights from €77 (window +€15) · Folk &amp; Operetta from €91 (window +€25) · Live Piano Show from €91"),
         ("Menu", "4-course served dinner: starter, soup, main, dessert"),
         ("Dietary Options", "Vegetarian main; most dishes made with gluten-free and/or lactose-free ingredients; GF, LF and vegan on request in advance"),
-        ("Drinks Included", "One welcome drink (welcome Prosecco on GetYourGuide)"),
+        ("Drinks Included", "One welcome drink (welcome Prosecco in the listing)"),
         ("Show / Music", "Live background music; Folk &amp; Operetta show on the €91 option"),
         ("Ticket Format", "Mobile voucher"),
         ("Kids Policy", "Infant tickets do not include dinner (order on board)"),
@@ -319,7 +319,7 @@ CARDS.append(dict(
     pills=[
         pill("🍽️", "Seasonal buffet",
              "<strong>Buffet stations</strong> by Executive Chef Viktor Moldován: starters, mains, sides, vegetarian dishes and desserts. The winter menu (26 Nov to 25 Dec 2026) includes bean goulash, whole duck breast, juniper venison ragout and pike-perch.",
-             "From the GetYourGuide listing and its menu photos, checked 14 November 2026."),
+             "From the listing and its menu photos, checked 14 November 2026."),
         pill("🍸", "Unlimited drinks",
              "<strong>Included all evening:</strong> cocktails, spirits, Prosecco, wine, beer, soft drinks and water, served to your table.",
              LISTING_NOTE),

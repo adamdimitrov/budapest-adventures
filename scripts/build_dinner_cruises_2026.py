@@ -410,7 +410,7 @@ def about(b, old_h4, new_h4, text):
 
 def fix_legenda_dinner(b):
     b = must_re(b, r"<p>From June to August the best evenings sell out.*?</p>",
-                "<p>Book a few days ahead: on 14 November 2026, GetYourGuide showed <strong>only 1 spot left</strong> for Saturday 28 November.</p>")
+                "<p>Book a few days ahead, especially for weekend evenings.</p>")
     b = about(b, "About Legenda City Cruises", "About Legenda City Cruises",
               "Legenda City Cruises runs sightseeing boats and this candlelit dinner cruise from its own floating dock at Vigadó tér (Dock 7).")
     b = b.replace("checked Nov 10, 2026", "checked Nov 14, 2026")
@@ -443,7 +443,7 @@ def fix_hungaria(b):
     b = re.sub(r'href="https://budapestxplore\.com/[^"]*"', 'href="%s"' % gyg(CARD_BY_KEY["hungaria-koncert-dinner"], "menu"), b)
     b = b.replace("Chicken leg paprikash, potato gratin, fresh salad, pickles", "Chicken breast paprikash, potato gratin, fresh salad, pickles")
     b = b.replace("Source: Hungária Koncert's 2026 served-dinner menus (via reseller listing), checked Nov 10, 2026",
-                  "Source: Hungária Koncert's GetYourGuide listing, checked Nov 14, 2026")
+                  "Source: Hungária Koncert's listing, checked Nov 14, 2026")
     b = b.replace("Since summer 2026 Hungária Koncert serves", "Hungária Koncert now serves")
     b = b.replace("Served at your table since summer 2026 (was a buffet)", "Served at your table (it was a buffet when I tested it)")
     b = must_re(b, r"<p>Boarding opens at 18:30, half an hour before departure\. <strong>Get there 30 to 45 minutes early</strong>:",
