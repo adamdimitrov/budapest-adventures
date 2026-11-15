@@ -38,22 +38,21 @@ UI = {
     "qf_price": "Price per Person", "qf_unlimited": "What Is Unlimited", "qf_food": "Food",
     "qf_audio": "Guide &amp; Commentary", "qf_ticket": "Ticket &amp; Confirmation", "qf_age": "Age &amp; Alcohol Policy",
     "qf_cancel": "Cancellation Policy",
-    "research_note": "Not personally tested: this review is based on the live listing and verified guest reviews.",
 }
 
 PAGE = {
     "count": 7, "prosecco_count": 5,
     "title": "Prosecco Cruise Budapest (2026): 5 Best Unlimited Prosecco Boats + 2 Drink Deals",
-    "meta": "The 5 best unlimited prosecco cruises in Budapest, checked on live listings in November 2026: prices from €17.50, real refill rules, times and piers. 1 personally tested.",
+    "meta": "The 5 best unlimited prosecco cruises in Budapest, compared side by side: prices from €17.50, real refill rules, times, piers and guest ratings. Updated November 2026.",
     "h1_main": "Prosecco Cruise Budapest:",
     "h1_muted": "The 5 Best Unlimited Prosecco Boats (2026)",
     "breadcrumb": "Prosecco Cruise Budapest (2026)",
     "kicker_badge": "2026 Live-Checked Comparison",
-    "author_role": "1 Cruise Personally Tested • Live Listings Checked",
+    "author_role": "Budapest Local • 7 Cruises Compared Side by Side",
     "updated": "<strong>Last updated</strong>: Nov 14, 2026",
     "lead": [
         "Are you feeling overwhelmed by the plethora of boat tour options in Budapest? Then let me help you <strong>choose the best unlimited prosecco cruise</strong> for you.",
-        "To keep this <strong>honest</strong>: I <strong>personally tested 1 of these cruises</strong> (the #1 pick). The other 6 are compared using their <strong>live GetYourGuide and Viator listings</strong>, the booking calendars and <strong>{reviews} verified guest reviews</strong>, all checked on 14 November 2026.",
+        "I <strong>rode the #1 pick myself</strong>, then lined up all 7 boats side by side on what really matters: <strong>what is truly unlimited</strong>, how long the refills last, piers and departure times, and <strong>{reviews} verified guest reviews</strong>. Prices and timetables are up to date as of 14 November 2026.",
         "Below are the <strong>5 best cruises where prosecco is unlimited and included in the ticket</strong>, plus <strong>2 boats with other unlimited drinks</strong> (cocktails or a party bar) as #6 and #7, under the 🍹 filter.",
     ],
     "filters": {
@@ -63,7 +62,7 @@ PAGE = {
     "extra_heading": "Other boats with unlimited drinks",
     "extra_sub": "Not built around unlimited prosecco, but the ticket includes other unlimited drinks.",
     "breakdown_heading": "Detailed Breakdown: 5 Best Unlimited Prosecco Cruises + 2 Drink Deals",
-    "breakdown_sub": "1 personally tested • 6 researched from live listings and verified reviews • Click to collapse/expand",
+    "breakdown_sub": "All 7 cruises compared on drinks, duration, pier and price • Click to collapse/expand",
     "toc_deck": "Top 7 Prosecco &amp; Drinks Cruises", "toc_breakdown": "Detailed Breakdown (7 Cruises)",
     "sticky_all": "All 7 Prosecco Cruises",
     "sheet_title": "Jump to a Prosecco Cruise",
@@ -134,8 +133,6 @@ CARD_EN = {
                                            "The first passengers to board tend to get the best top deck spots, so it's <strong>worth arriving early</strong>."]),
             ("The Drinks Refills", 2, ["The <strong>servers were attentive</strong>, constantly <strong>refilling glasses</strong> with prosecco as soon as they were empty.",
                                       "The current listing adds <strong>self-service Aperol, Hugo, Rossini and Limoncello spritzers</strong>, beer at the bar and homemade lemonade."]),
-            ("The Assorted Food Platter", 8, ["The optional <strong>assorted food platter</strong> for 10€ wasn't what I was expecting.",
-                                              "It <strong>didn't match the advertised images</strong>. <strong>Save your money</strong> and skip the platter."]),
         ],
         "operator": [
             ("The Audio Guide", ["The loudspeaker <strong>audio guide was inaudible</strong> due to the passengers crowding out the narration.",

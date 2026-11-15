@@ -75,8 +75,7 @@ cruises = [
             "63b858e8a4e49cb177974356_Budapest-river-cruises-portum-14.webp",
             "63b858eda4b537601bf3ceab_Budapest-river-cruises-portum-21.webp",
             "64946bd848dfb642de48fcfb_16-rubin-group.webp",
-            "63b858e92be2896fd573cf19_Budapest-river-cruises-portum-10.webp",
-            "63b858eb6b6209525005c772_Budapest-river-cruises-portum-17.webp"
+            "63b858e92be2896fd573cf19_Budapest-river-cruises-portum-10.webp"
         ]
     },
     {
