@@ -211,7 +211,7 @@ CARDS.append(dict(
     ratings=[("GetYourGuide", 4.4339, 104, "gyg", None)],
     price="125", psub="per person · bath day ticket included", via="GetYourGuide",
     trust=["✓ Free cancellation up to 24 hours before", "✓ Private cabin all day"],
-    photos=[P[k] for k in ("hero", "cabins7", "indoor3", "outdoor", "sauna")],
+    photos=[P[k] for k in ("indoor3", "cabins7", "hero", "outdoor", "sauna")],
     alt="Széchenyi Thermal Bath with beer spa",
     pills=[
         pill("🍺", "45 min, unlimited beer",
@@ -273,7 +273,7 @@ CARDS.append(dict(
     ratings=[("GetYourGuide", 4.2779, 30, "gyg", None)],
     price="110", psub="per person · robe, towel, cocktail", via="GetYourGuide",
     trust=["✓ Free cancellation up to 24 hours before", "✓ Fast-track entrance"],
-    photos=[P[k] for k in ("hero", "indoor3", "outdoor", "cabins", "sauna")],
+    photos=[P[k] for k in ("indoor1", "cabins", "hero", "outdoor", "sauna")],
     alt="Széchenyi Thermal Bath Palm House",
     pills=[
         pill("🌴", "Private lounge",
@@ -334,7 +334,7 @@ CARDS.append(dict(
     ratings=[("GetYourGuide", 4.1185, 22, "gyg", None)],
     price="59", psub="per adult · fast-track entry + locker", via="GetYourGuide",
     trust=["✓ Free cancellation up to 24 hours before", "✓ Reserve now, pay later"],
-    photos=[P[k] for k in ("entrance", "outdoor", "lockers", "indoor1", "sauna")],
+    photos=[P[k] for k in ("lap", "entrance", "lockers", "indoor1", "sauna")],
     alt="Széchenyi Thermal Bath fast track entrance",
     pills=[
         pill("⚡", "Separate entrance",

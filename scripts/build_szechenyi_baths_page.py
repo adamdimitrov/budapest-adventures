@@ -240,6 +240,8 @@ def main():
     page = page.replace('aria-label="Quick Bath Navigation &amp; Booking"', 'aria-label="Quick Ticket Navigation &amp; Booking"')
     page = jsonld(page)
     page = bath_hub_nav.ensure_css(page)
+    page = re.sub(r'<style id="bpa-szechenyi-css">.*?</style>\n?', "", page, flags=re.S)
+    page = page.replace("</head>", '<style id="bpa-szechenyi-css">@media (max-width:839px){.ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}}</style>\n</head>', 1)
     assert "—" not in re.sub(r"<script.*?</script>|<style.*?</style>", "", page, flags=re.S), "em dash in copy"
     with open(OUT, "w", encoding="utf-8") as f:
         f.write(page)
