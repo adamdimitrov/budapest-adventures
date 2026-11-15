@@ -23,7 +23,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from build_walking_tours_10 import stars_html, gyg_icon  # noqa: E402
+import hashlib  # noqa: E402
+from build_walking_tours_10 import gyg_icon  # noqa: E402
+from day_trips_pills import ORDER, PILLS, PICKSKIP  # noqa: E402
 
 TEMPLATE = ROOT / "best-walking-tours-budapest.html"
 OUT = ROOT / "best-day-trips-from-budapest.html"
@@ -34,6 +36,7 @@ CHECKED = "15 November 2026"
 CHECKED_SHORT = "Nov 15, 2026"
 ISO = "2026-11-15"
 IMG = "/assets/day-trips-2026"
+OG_IMG = "https://www.budapestadventures.com/assets/day-trips-2026/danube-forest-01.webp"  # social cards need webp/jpg
 GYG = "https://www.getyourguide.com/{path}/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp={cmp}&amp;mkt_cmp=true"
 
 TITLE_TAG = "13 Best Day Trips from Budapest (2026): Time & Price Compared"
@@ -551,7 +554,12 @@ for i, t in enumerate(TRIPS, 1):
     t["count"] = f"{t['count_exact']:,}"
     t["price_txt"] = f"From €{t['price']}"
     t["href"] = GYG.format(path=t["path"], cmp=t["cmp"])
-    t["photo_list"] = [f"{IMG}/{t['photos']}-{k:02d}.webp" for k in range(1, len(t["alts"]) + 1)]
+    order = ORDER[t["photos"]]
+    assert sorted(order) == list(range(1, len(t["alts"]) + 1)), t["photos"]
+    t["photo_list"] = [f"{IMG}/{t['photos']}-{k:02d}.avif" for k in order]
+    t["alts"] = [t["alts"][k - 1] for k in order]
+    t["pills"] = PILLS[i]
+    t["pick"], t["skip"] = PICKSKIP[i]
     t["rank"] = ("🏆 " if i == 1 else "") + f"#{i} {t['short_op']}"
     t["tag"] = {1: "bpa-gold", 2: "bpa-silver", 3: "bpa-bronze"}.get(i, "bpa-slate")
     t["per_hour"] = round(t["price"] / t["ground"])
@@ -562,16 +570,36 @@ BLANK = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0
 SIZES = 'sizes="(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"'
 
 
+def rating(t, s, where):
+    """Star summary with a per-site dropdown (BPA standard). GYG entry links to the listing."""
+    href = GYG.format(path=t["path"], cmp=t["cmp"].replace("day-trips-", "day-trips-rating-"))
+    return (f'<div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum">'
+            f'<span class="bpa-stars" style="--r:{t["score"]}" aria-hidden="true"></span><b class="bpa-rate-score">{t["score"]}</b>'
+            f'<span class="bpa-rate-meta">{t["count"]} reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary>'
+            f'<div class="bpa-lang-pop"><strong>Rating on 1 booking site</strong><span class="bpa-rate-list">'
+            f'<a class="bpa-rev-badge is-link" href="{href}" rel="nofollow sponsored noopener" target="_blank">'
+            f'<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="{gyg_icon(s)}"/><span class="bpa-rev-site">GetYourGuide</span>'
+            f'<span class="bpa-rev-score">{t["score"]}</span><span class="bpa-rev-count">({t["count"]})</span><span class="bpa-rev-go">→</span></a>'
+            f'</span></div></details></div>')
+
+
+def pills(t):
+    return "\n".join(f'<details class="bpa-lang"><summary class="bpa-sp"><span class="bpa-lang-label">{lab}</span>'
+                     f'<span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop">{pop}</div></details>'
+                     for lab, pop in t["pills"])
+
+
+def pickskip(t):
+    return (f'<div class="bpa-best-for bpa-pickskip"><span class="bpa-pick">✓ Pick it</span> {t["pick"]} '
+            f'<span class="bpa-skip">✕ Skip it</span> {t["skip"]}</div>')
+
+
 def deck_card(t, s):
     first = (f'<img alt="{t["alts"][0]}" fetchpriority="high" height="534" loading="eager" {SIZES} src="{t["photo_list"][0]}" width="800"/>'
              if t["n"] == 1 else
              f'<img alt="{t["alts"][0]}" height="534" loading="lazy" {SIZES} src="{t["photo_list"][0]}" width="800"/>')
     imgs = [first] + [f'<img alt="{a}" data-src="{p}" decoding="async" loading="lazy" {SIZES} src="{BLANK}"/>'
                       for p, a in zip(t["photo_list"][1:], t["alts"][1:])]
-    specs = "\n".join(f'<span class="bpa-sp">{x}</span>' for x in t["specs"])
-    badge = (f'<a class="bpa-rev-badge" href="{t["href"]}" onclick="event.stopPropagation()" rel="nofollow sponsored noopener" target="_blank">'
-             f'<img alt="" class="bpa-rev-icon" loading="lazy" src="{gyg_icon(s)}"/><span class="bpa-rev-score">{t["score"]}</span>'
-             f'{stars_html(s, t["score"])}<span class="bpa-rev-count">({t["count"]} reviews)</span></a>')
     place = (t["place"] if not t["map"] else
              f'<a class="bpa-kicker-map-link" href="https://www.google.com/maps/search/?api=1&amp;query={t["map"]}" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank">{t["place"]}</a>')
     return f"""<!-- #{t['n']}: {t['title']} -->
@@ -590,14 +618,12 @@ def deck_card(t, s):
 <div class="bpa-kicker">{t['short_op']} • ⏱️ {t['dur']} • {place}</div>
 <a class="bpa-title" href="{t['href']}" rel="nofollow sponsored noopener" target="_blank">{t['title']}</a>
 <div class="bpa-reviews-line">
-<div class="bpa-summary-reviews"><div class="div-block-53">{badge}</div></div>
+{rating(t, s, "deck")}
 </div>
 <div class="bpa-specs-row">
-{specs}
+{pills(t)}
 </div>
-<div class="bpa-best-for">
-<strong>Best For:</strong> {t['best_for']}
-              </div>
+{pickskip(t)}
 </div>
 <div class="bpa-cta-cell">
 <div>
@@ -618,9 +644,6 @@ def deck_card(t, s):
 
 
 def details(t, s, lock_svg):
-    badge = (f'<span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="{gyg_icon(s)}"/>'
-             f'<span class="bpa-rev-score">{t["score"]}</span>{stars_html(s, t["score"])}'
-             f'<span class="bpa-rev-count">({t["count"]} reviews)</span></span>')
     pros = "".join(f"<li><strong>{x}</strong></li>" for x in t["pros"])
     cons = "".join(f"<li><strong>{x}</strong></li>" for x in t["cons"])
     n = len(t["photo_list"])
@@ -641,7 +664,7 @@ def details(t, s, lock_svg):
 </div>
 <h3 class="bpa-details-title">{t['title']}</h3>
 <div class="bpa-reviews-line">
-<div class="bpa-summary-reviews"><div class="div-block-53">{badge}</div></div>
+{rating(t, s, "details")}
 </div>
 </div>
 <div class="bpa-details-right">
@@ -718,7 +741,7 @@ def A(n):
 
 
 LEAD = f"""<p>A 12-hour day trip from Budapest can mean 6 hours on a motorway. Most listings sell the total length, but what you are paying for is the <strong>time you actually spend at the castle, the lake or the wine cellar</strong>, and that ranges from about 2 hours to 7 depending on the trip.</p>
-<p>So the 13 most popular day trips from Budapest are compared below on what decides the booking: <strong>hours on the ground vs hours on the road, price per destination hour, hotel pickup or meeting point, what is included</strong> (lunch, tickets, the boat back) and group size. You will also see when a <strong>train or HÉV ticket beats the tour</strong>. Only one free day? Take the <strong>small-group Danube Bend forest tour</strong> (€96, max 7 guests).</p>
+<p>So the 13 most popular day trips from Budapest are compared below on what decides the booking: <strong>hours on the ground vs hours on the road, price per destination hour, hotel pickup or meeting point, what is included</strong> (lunch, tickets, the boat back) and group size. You will also see when a <strong>train or HÉV ticket beats the tour</strong>. Only one free day? Take the <a href="#item-1-danube-bend-forest-tour"><strong>small-group Danube Bend forest tour</strong></a> (€96, max 7 guests).</p>
 <p>Prices, ratings and inclusions checked on {CHECKED}.</p>"""
 
 FILTERS = """<div class="ltt-integrated-filter-bar smart-filter-bar">
@@ -870,6 +893,16 @@ METHOD = f"""<h2 id="how-we-compared">How We Compared These Day Trips</h2>
 </div>"""
 
 
+NO_RED_CSS = """<style id="bpa-no-red-hover">
+/* no red hover: every link keeps its own colour or turns brand gold */
+.ltt-lead-copy a:hover,.w-richtext a:hover,.bpa-wt-guide a:hover,.bpa-wt-faq a:hover,.ltt-checklist-table a:hover{color:#855a00 !important;background:transparent !important}
+.bpa-title:hover{color:#855a00 !important}
+.bpa-kicker-map-link:hover,.bpa-sublink:hover{color:#855a00 !important}
+.bpa-btn:hover,.ltt-buy-cta-btn:hover,.hybrid-cta-btn:hover{color:#fff !important}
+.bpa-lang-note a:hover{color:#855a00 !important}
+</style>"""
+
+
 def build():
     s = TEMPLATE.read_text()
     lock = re.search(r'<div class="ltt-buy-card-trust">\s*(<svg.*?</svg>)', s, re.S).group(1)
@@ -883,12 +916,35 @@ def build():
     s = s.replace(f'content="{old_desc}"', f'content="{META}"')
     s = s.replace(f'content="{old_title}"', f'content="{TITLE_TAG}"')
     s = re.sub(r'<link as="image" fetchpriority="high" href="[^"]+" rel="preload" type="image/webp"/>',
-               f'<link as="image" fetchpriority="high" href="{TRIPS[0]["photo_list"][0]}" rel="preload" type="image/webp"/>', s, count=1)
+               f'<link as="image" fetchpriority="high" href="{TRIPS[0]["photo_list"][0]}" rel="preload" type="image/avif"/>', s, count=1)
     old_og = re.search(r'<meta content="([^"]+)" property="og:image"/>', s).group(1)
-    s = s.replace(old_og, f"https://www.budapestadventures.com{TRIPS[0]['photo_list'][0]}")
+    s = s.replace(old_og, OG_IMG)
     # hreflang: EN only
     s = re.sub(r'<link href="[^"]+" hreflang="(?!en"|x-default")[^"]+" rel="alternate"/>', "", s)
     s = s.replace(f'"{OLD_URL}"', f'"{URL}"')
+
+    # ---- own purged CSS copies without Webflow's red a:hover ----
+    for href in re.findall(r'href="(/css/purged/best-walking-tours-budapest\.[^"]+\.css)"', s):
+        css = (ROOT / href.lstrip("/")).read_text()
+        css = re.sub(r'(?<![\w\-.#:\]])a:hover\{([^}]*)\}',
+                     lambda m: "a:hover{" + ";".join(d for d in m.group(1).split(";")
+                                                     if d.split(":")[0].strip() not in ("color", "background-color", "background-image", "opacity")) + "}",
+                     css)
+        assert not re.search(r"a:hover\{[^}]*(#ff421c|#f13657|#ff553340)", css), href
+        base = href.split("best-walking-tours-budapest.")[1].rsplit(".", 2)[0]
+        new = f"/css/purged/{SLUG}.{base}.{hashlib.sha1(css.encode()).hexdigest()[:10]}.css"
+        for old_f in (ROOT / "css/purged").glob(f"{SLUG}.{base}.*.css"):
+            old_f.unlink()
+        (ROOT / new.lstrip("/")).write_text(css)
+        s = s.replace(href, new)
+
+    # ---- dropdown pills, star summary, pick/skip: CSS + JS from the night cruises page ----
+    nc = (ROOT / "best-night-cruises-budapest.html").read_text()
+    blocks = "".join(re.search(rf'<style id="{i}">.*?</style>', nc, re.S).group(0) for i in ("bpa-lang-css", "bpa-card2-css"))
+    blocks += NO_RED_CSS
+    s = s.replace("</head>", blocks + "</head>", 1)
+    js = re.search(r'<script id="bpa-lang-js">.*?</script>', nc, re.S).group(0)
+    s = s.replace("</body>", js + "</body>", 1)
 
     # ---- hero ----
     a = s.index('<div class="ltt-hero-wrap">')
@@ -956,7 +1012,7 @@ def build():
         {"@type": "Article", "@id": f"{URL}#article", "mainEntityOfPage": {"@type": "WebPage", "@id": URL},
          "headline": H1, "description": META, "url": URL, "inLanguage": "en",
          "datePublished": ISO, "dateModified": ISO, "author": author, "publisher": art_old["publisher"],
-         "image": [f"https://www.budapestadventures.com{TRIPS[0]['photo_list'][0]}"],
+         "image": [OG_IMG],
          "mainEntity": {"@type": "ItemList", "name": H1, "description": lead_txt,
                         "numberOfItems": len(TRIPS), "itemListElement": items}},
         {"@type": "BreadcrumbList", "@id": f"{URL}#breadcrumb", "itemListElement": [
