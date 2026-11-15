@@ -435,7 +435,9 @@ GUIDE = (
     '<p>Got an evening free? A bus tour covers the day; for the city lit up at night, compare the '
     '<a href="/best-night-cruises-budapest">best night cruises in Budapest</a> or book a table on one of the '
     '<a href="/best-dinner-cruises-budapest">best dinner cruises</a>. Prefer to explore on foot? See the '
-    '<a href="/best-walking-tours-budapest">best walking tours in Budapest</a>.</p>\n'
+    '<a href="/best-walking-tours-budapest">best walking tours in Budapest</a>. Hungry between stops? Compare the <a href="/best-food-tours-budapest">best food tours</a>, '
+    'and if you hop off at Heroes\' Square, Széchenyi is a short walk away: see the <a href="/thermal-baths-budapest">best thermal baths in Budapest</a>. '
+    'For the full plan, start with the <a href="/best-things-to-do-budapest">best things to do in Budapest</a>.</p>\n'
     '</div>'
 )
 
