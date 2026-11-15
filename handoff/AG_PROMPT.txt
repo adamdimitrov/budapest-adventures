@@ -1,0 +1,18 @@
+Work in the repo ~/Development/bpa-antigravity (budapest-adventures). First run:
+git fetch origin && git checkout content/hostels-legacy-12 && git pull
+
+Then read GEMINI.md (HARD RULES) and handoff/ANTIGRAVITY_hostels_12_langs.md and execute that brief exactly. Summary of the job (the brief is the authority):
+
+1. TRANSLATION ONLY. For each language it,nl,pt,pl,ro,sk,sr,ru,uk,tr,ja,ko: read data/i18n/todo/best-hostels-budapest/<lang>.json ({id: english html}, 721 segments) and write data/i18n/port/best-hostels-budapest/<lang>.json with the same ids and the translated html. Every id, no extras, valid UTF-8 JSON.
+2. Keep every HTML tag and attribute identical (only translate visible text and alt/title/aria-label/placeholder values). Do not change numbers, prices, ratings, review counts, times, URLs, anchors or emojis.
+3. Never translate brand/hostel/place/street names: Maverick Central Market, Onefam Budapest, Avenue Hostel, Flow Spaces, a&amp;o Budapest City, Wombat's City Hostel, Central Market Hall Zen Hostel, Adagio Hostel 2.0 Basilica, Das Nest Budapest, The Hive Party Hostel, Hostelworld, Booking.com, Budapest Adventures, Adam Dimitrov, Szimpla Kert, Gozsdu udvar, Sziget Festival, all Hungarian street/square names, M1-M4, 100E.
+4. Serbian in Cyrillic. Polite/plural "you" for PL, RO, SK, SR, RU, UK, NL; informal ok for IT, PT, TR; polite style for JA and KO.
+5. No em dash (—) anywhere. Never invent facts or "tested" claims. The Hive stays NOT stayed in, no tested badge. Title meaning: "10 Best Hostels in Budapest in 2026 (I Stayed in 9)".
+6. Build and check, all must pass:
+   python3 scripts/port_page_i18n.py best-hostels-budapest.html --langs it,nl,pt,pl,ro,sk,sr,ru,uk,tr,ja,ko --cache-only   (every language: 0 tag mismatches)
+   python3 scripts/sync_layout.py
+   python3 scripts/sync_layout.py --check   (exit 0)
+   python3 scripts/fix_affiliate_rel.py --check   (exit 0)
+   no "Carpe" in the 12 hostel pages, no new em dash in git diff.
+7. In each <lang>/index.html update only the hostel guide card title (h3) and the hostels "name" in the homepage JSON-LD ItemList to the translated "10 Best Hostels in Budapest (I Stayed in 9)". If the card shows a starting price, make it 8 EUR. Change nothing else.
+8. Delete data/i18n/todo/ and handoff/, commit "content(hostels): port hostel guide to IT, NL, PT, PL, RO, SK, SR, RU, UK, TR, JA, KO", push, open a PR to main. DO NOT MERGE. In the PR body list per language: segment count, tag mismatches, final title.
