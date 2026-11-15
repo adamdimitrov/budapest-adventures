@@ -174,7 +174,7 @@ def market_card(i, m, c, ui):
 <span class="bpa-rank-tag bpa-gold">{c["rank_tag"]}</span>
 <button aria-label="{ui["prev"]}" class="bpa-arrow prev" onclick="bpaSlide(this,-1)" type="button">‹</button><button aria-label="{ui["next"]}" class="bpa-arrow next" onclick="bpaSlide(this,1)" type="button">›</button><span class="bpa-pill">1 / {len(photos)}</span><div aria-label="{ui["photo_gallery"].format(n=esc(m["name"]))}" class="bpa-slider" onscroll="bpaCount(this)" tabindex="0">{imgs}</div>
 <span class="xm-date-chip">📅 {span(m, ui)}</span>
-<a class="xm-credit" href="#sources-method">📷 {esc(credit)}</a>
+<a class="xm-credit" href="{photos[0][3]}" rel="nofollow noopener" target="_blank" title="Wikimedia Commons">📷 {esc(credit)}</a>
 </div>
 <div class="bpa-info">
 <div class="bpa-kicker">{esc(m["place"])} • {m["district"]} {ui["district"]} • <a class="bpa-kicker-map-link" href="{maps(m["map_q"])}" rel="noopener noreferrer" target="_blank">{ui["map"]}</a></div>
@@ -644,13 +644,6 @@ def editorial(copy):
     return f'''<section id="christmas-market-faq">
 <h2 class="ltt-sec-title">{ed["faq_h2"]}</h2>
 <div class="xm-faq">{faq}</div>
-</section>
-<section id="sources-method">
-<h2 class="ltt-sec-title">{ed["src_h2"]}</h2>
-<p>{ed["method"]}</p>
-<ul class="xm-sources">{src_html}</ul>
-<h3>{ed["photos_h3"]}</h3>
-<ul class="xm-credits">{cred}</ul>
 </section>'''
 
 
