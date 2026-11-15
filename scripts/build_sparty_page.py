@@ -277,6 +277,25 @@ N = len(CARDS)
 N_SPARTY = sum(c["cat"] == "sparty" for c in CARDS)
 SPARTY_URL = R["amp"](D.GYG.format(slug=CARDS[0]["gyg_slug"], placement="intro", key="sparty"))
 
+def live(slug):
+    """Link only to pages that exist in this checkout (main + this branch)."""
+    return os.path.exists(os.path.join(ROOT, slug + ".html"))
+
+
+def join_links(items):
+    items = ['<a href="/%s">%s</a>' % (slug, text) for slug, text in items if live(slug)]
+    if len(items) <= 1:
+        return "".join(items)
+    return ", ".join(items[:-1]) + " or " + items[-1]
+
+
+BATH_LINKS = join_links([("szechenyi-baths-budapest", "Széchenyi Baths guide"), ("rudas-baths-budapest", "Rudas Baths guide"),
+                         (HUB.strip("/"), "best thermal baths in Budapest")])
+NIGHT_LINKS = join_links([("best-night-cruises-budapest", "best night cruises in Budapest"),
+                          ("best-pub-crawls-budapest", "best pub crawls in Budapest"),
+                          ("best-food-tours-budapest", "best food tours in Budapest")])
+
+
 # ── copy ─────────────────────────────────────────────────────────────────────────────
 TITLE = "Sparty Budapest 2026: Tickets, Prices &amp; What to Know Before You Go"
 TITLE_TXT = "Sparty Budapest 2026: Tickets, Prices & What to Know Before You Go"
@@ -287,7 +306,7 @@ H1 = 'Sparty Budapest: Tickets, Prices &amp; Tips <span class="ltt-h1-muted">(20
 LEAD = f'''<div class="ltt-lead-copy">
 <p><strong>Sparty</strong> turns the Széchenyi Baths into an open-air club every Saturday from <strong>21:30 to 2:00</strong>: DJs, lasers and fire shows around 34–38 °C pools. What catches first-timers out is not the ticket but the bar: drinks are paid only with a <strong>SpartyPay card topped up in cash</strong>, and every ticket is <strong>non-refundable</strong>.</p>
 <p>Below are the <strong>two Sparty tickets</strong> compared on what you actually get for the money, plus two alternatives if Saturday does not work: <strong>Rudas night bathing</strong> (Fridays too, until 3:00) and the <strong>Széchenyi Beer Spa</strong>. Next Sparty nights: <strong>21 and 28 November, 5 and 12 December 2026</strong>.</p>
-<p>Planning a daytime soak? See the <a href="/szechenyi-baths-budapest">Széchenyi Baths guide</a>, the <a href="/rudas-baths-budapest">Rudas Baths guide</a> or the <a href="{HUB}">best thermal baths in Budapest</a>.</p>
+<p>Planning a daytime soak? See the {BATH_LINKS}. Making a night of it? Start with the {NIGHT_LINKS}.</p>
 </div>'''
 
 PILLS = f'''<div class="ltt-integrated-pills">
@@ -321,7 +340,7 @@ GUIDE = f'''<div class="container w-container"><h2 id="sparty-tips">Sparty Tips:
 </div>
 <h2 id="sparty-how-we-checked">How We Checked</h2><div class="w-richtext">
 <p>Ticket options, prices, dates and rules were checked on the booking calendar for Saturday 21 November 2026 and on the official Sparty site on 15 November 2026. Rudas night bathing hours were checked on rudasfurdo.hu the same day. I have bathed at Széchenyi and Rudas in person.</p>
-<p>More bath guides: the <a href="{HUB}">best thermal baths in Budapest</a>, the <a href="/szechenyi-baths-budapest">Széchenyi Baths guide</a> and the <a href="/rudas-baths-budapest">Rudas Baths guide</a>.</p>
+<p>More guides: the {BATH_LINKS}, and for the rest of your night the {NIGHT_LINKS}.</p>
 </div>'''
 
 FAQ = [
