@@ -741,8 +741,7 @@ def A(n):
 
 
 LEAD = f"""<p>A 12-hour day trip from Budapest can mean 6 hours on a motorway. Most listings sell the total length, but what you are paying for is the <strong>time you actually spend at the castle, the lake or the wine cellar</strong>, and that ranges from about 2 hours to 7 depending on the trip.</p>
-<p>So the 13 most popular day trips from Budapest are compared below on what decides the booking: <strong>hours on the ground vs hours on the road, price per destination hour, hotel pickup or meeting point, what is included</strong> (lunch, tickets, the boat back) and group size. You will also see when a <strong>train or HÉV ticket beats the tour</strong>. Only one free day? Take the <a href="#item-1-danube-bend-forest-tour"><strong>small-group Danube Bend forest tour</strong></a> (€96, max 7 guests).</p>
-<p>Prices, ratings and inclusions checked on {CHECKED}.</p>"""
+<p>So the 13 most popular day trips from Budapest are compared below on what decides the booking: <strong>hours on the ground vs hours on the road, price per destination hour, hotel pickup or meeting point, what is included</strong> (lunch, tickets, the boat back) and group size. You will also see when a <strong>train or HÉV ticket beats the tour</strong>. Only one free day? Take the <a href="#item-1-danube-bend-forest-tour"><strong>small-group Danube Bend forest tour</strong></a> (€96, max 7 guests).</p>"""
 
 FILTERS = """<div class="ltt-integrated-filter-bar smart-filter-bar">
 <div class="ltt-integrated-pills">
