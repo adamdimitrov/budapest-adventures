@@ -95,7 +95,7 @@ def main():
                                for key, href, _, name, _ in bath_hub_nav.GUIDES if key != "hub"]
     page = page[:a] + json.dumps(data, ensure_ascii=False, indent=1) + page[b:]
 
-    style = '<style id="bpa-hub-child-css">.bpa-hub-child{margin:0 0 14px;padding:10px 14px;border-left:3px solid #dfa732;background:#fffbeb;border-radius:8px;font-size:14px;line-height:1.5}.bpa-sublink-guide{font-weight:700}</style>'
+    style = '<style id="bpa-hub-child-css">.bpa-hub-child{margin:0 0 14px;padding:10px 14px;border-left:3px solid #dfa732;background:#fffbeb;border-radius:8px;font-size:14px;line-height:1.5}.bpa-sublink-guide{font-weight:700}.bpa-hub-child a{color:#855a00!important;font-weight:600}.bpa-hub-child a:hover{color:#5c3d00!important;text-decoration:underline}</style>'
     page = re.sub(r'<style id="bpa-hub-child-css">.*?</style>\n?', "", page, flags=re.S)
     page = page.replace("</head>", style + "\n</head>", 1)
     open(PAGE, "w", encoding="utf-8").write(page)
