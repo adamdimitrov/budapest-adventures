@@ -78,8 +78,8 @@ P = {  # photos
     "drinking": CDN + "64d4e79648d7f0b7f7ac4062_Rudas-thermal-bath%20(8).webp",
 }
 
-BOOKING_NOTE = "Checked on the booking calendar for Thursday 19 and Saturday 21 November 2026; prices change by date."
-OFFICIAL_NOTE = "Checked on rudasfurdo.hu on %s; hours change on holidays." % TODAY_TXT
+BOOKING_NOTE = "Prices for Thursday 19 and Saturday 21 November 2026; they change by date."
+OFFICIAL_NOTE = "From rudasfurdo.hu; hours change on holidays."
 SHOP_NOTE = "Official online prices are in euros and move with the exchange rate and peak days."
 
 
@@ -105,8 +105,7 @@ GETTHERE = [
     "🌙 After night bathing: night buses <strong>907</strong> and <strong>973</strong>.",
 ]
 
-TESTED_POP = ("<strong>I bathed at Rudas myself.</strong> Every price, hour and pool temperature on this card was "
-              "rechecked on rudasfurdo.hu and the live booking page on %s." % TODAY_TXT)
+TESTED_POP = "<strong>I bathed at Rudas myself:</strong> the Turkish bath, the wellness area, the saunas and the rooftop pool."
 
 CARDS = []
 
@@ -240,7 +239,7 @@ CARDS.append(dict(
         ("Fast Track", "15,000 / 18,000 / 19,000 HUF · online €45–57, entry 12:00–15:00 or 16:00–19:00, not Tue or Wed"),
         ("Weekend Early Bird", "Fast track, entry 8:00–9:00 Sat and Sun: 14,000 HUF (€42–45 online)"),
         ("Cabin", "+1,000 HUF · locker included"),
-        ("Opening Hours", "Daily 6:00–20:00, Mon until 22:00 · saunas from 8:00 (checked %s)" % TODAY_TXT),
+        ("Opening Hours", "Daily 6:00–20:00, Mon until 22:00 · saunas from 8:00"),
         ("Towel &amp; Robe", "Towel 6,900 HUF · bathrobe 12,600 HUF · slippers 4,200 HUF"),
         ("Age Limit", "14+"),
         ("Address", "Döbrentei tér 9, 1013 Budapest")],
@@ -629,7 +628,6 @@ def qf(c):
 <div class="qf1-Validation-pills">
 {chips}
 </div>
-<p class="qf1-note" style="margin:10px 0 0;font-size:12px;color:#64748b">Checked on rudasfurdo.hu and the live booking pages on {TODAY_TXT}.</p>
 </div>'''
 
 
@@ -677,12 +675,12 @@ N = len(CARDS)
 TITLE = "Rudas Baths Budapest 2026: Tickets, Prices &amp; Night Bathing"
 TITLE_TXT = "Rudas Baths Budapest 2026: Tickets, Prices & Night Bathing"
 DESC = ("Rudas Baths tickets compared: desk 12,000 HUF vs €74.99 bath + meal, night bathing Fri and Sat 22:00 to 3:00, "
-        "the men/women Turkish bath timetable and the rooftop pool. Checked 15 Nov 2026.")
+        "the men/women Turkish bath timetable and the rooftop pool.")
 H1 = 'Rudas Baths Budapest: Which Ticket to Book in 2026 <span class="ltt-h1-muted">(Personally Tested)</span>'
 
 LEAD = f'''<div class="ltt-lead-copy">
 <p>Most visitors book Rudas online as a <strong>€74.99 bath + meal package</strong>, while the same bath costs <strong>12,000 HUF at the desk</strong> on a weekday. The bigger trap is the day: the Ottoman Turkish bath is <strong>women-only on Tuesdays and men-only on Wednesdays</strong>, and the 36 °C rooftop pool holds just 16 people at a time.</p>
-<p>I bathed at Rudas myself, then compared the <strong>{N} ways to get in</strong> side by side: the day pass with a 3-course meal, the official day and fast-track tickets, <strong>Friday and Saturday night bathing (22:00 to 3:00)</strong>, the cheap single-zone ticket and a private rooftop hour for two. Prices, hours and the men/women timetable are up to date as of {TODAY_TXT}.</p>
+<p>I bathed at Rudas myself, then compared the <strong>{N} ways to get in</strong> side by side: the day pass with a 3-course meal, the official day and fast-track tickets, <strong>Friday and Saturday night bathing (22:00 to 3:00)</strong>, the cheap single-zone ticket and a private rooftop hour for two.</p>
 <p>Comparing baths? See <a href="{HUB}">all Budapest thermal baths</a>{SZE_LINK}.</p>
 </div>'''
 
@@ -720,7 +718,7 @@ QUICK = f'''<div class="container w-container"><div class="w-richtext bpa-wt-gui
 <tr><td style="padding:8px;border-bottom:1px solid #e2e8f0"><strong>Saturday, Sunday</strong></td><td style="padding:8px;border-bottom:1px solid #e2e8f0">Co-ed 6:00–20:00</td></tr>
 <tr><td style="padding:8px"><strong>Fri and Sat night</strong></td><td style="padding:8px">Co-ed 22:00–3:00 (night bathing)</td></tr>
 </tbody></table></div>
-<p>Co-ed sessions are in swimwear. Source: <a href="{OFFICIAL_HOURS}" rel="nofollow noopener" target="_blank">official opening hours</a>, checked {TODAY_TXT}.</p>
+<p>Co-ed sessions are in swimwear. Source: <a href="{OFFICIAL_HOURS}" rel="nofollow noopener" target="_blank">official opening hours</a>.</p>
 <h2 id="rudas-desk-vs-online">Desk or Online: What Each Ticket Costs</h2>
 <div style="overflow-x:auto"><table class="bpa-rudas-table" style="width:100%;border-collapse:collapse;font-size:15px">
 <thead><tr><th style="text-align:left;padding:8px;border-bottom:2px solid #e2e8f0">Ticket</th><th style="text-align:left;padding:8px;border-bottom:2px solid #e2e8f0">Mon–Thu</th><th style="text-align:left;padding:8px;border-bottom:2px solid #e2e8f0">Fri–Sun</th></tr></thead>
@@ -956,7 +954,7 @@ def main():
     page = must_sub(r'<span class="ltt-hero-kicker-badge">[^<]*</span>', '<span class="ltt-hero-kicker-badge">2026 Rudas Ticket Comparison</span>', page)
     page = must_sub(r'(<h1 class="ltt-editorial-h1">).*?(</h1>)', r'\1\n      %s\n\2' % H1, page, flags=re.S)
     page = must_sub(r'<div class="ltt-author-role">[^<]*</div>',
-                    '<div class="ltt-author-role">Bathed at Rudas in Person • %d Tickets Compared • Prices Checked 15 Nov 2026</div>' % N, page)
+                    '<div class="ltt-author-role">Bathed at Rudas in Person • %d Tickets Compared</div>' % N, page)
     page = must_sub(r"<strong>Last updated</strong>: [^<]*<", "<strong>Last updated</strong>: Nov 15, 2026<", page)
     page = swap_block(page, r'<div class="ltt-lead-copy">', LEAD)
     page = swap_block(page, r'<div class="ltt-integrated-pills">', PILLS)
@@ -990,7 +988,7 @@ def main():
         page = re.sub(r'(<span class="hybrid-active-price" id="%s">)[^<]*(</span>)' % pid, r"\g<1>From €%s\2" % c1["price"], page, count=1)
         page = re.sub(r'(<a class="hybrid-cta-btn" href=")[^"]*(" id="%s")' % bid, r"\g<1>%s\2" % gyg(c1, "sticky"), page, count=1)
     page = re.sub(r"<span>All \d+ Thermal Baths</span>", "<span>All %d Rudas Tickets</span>" % N, page)
-    page = re.sub(r'<span class="hybrid-active-trust">[^<]*</span>', '<span class="hybrid-active-trust">Prices checked 15 Nov 2026</span>', page)
+    page = re.sub(r'<span class="hybrid-active-trust">[^<]*</span>', '', page)
     page = page.replace("Jump to Tested Thermal Bath", "Jump to a Rudas Ticket")
     page = page.replace('aria-label="Jump to Bath Review"', 'aria-label="Jump to Ticket Review"')
     page = page.replace("' cruises matching '", "' tickets matching '")
