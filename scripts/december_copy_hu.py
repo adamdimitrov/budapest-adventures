@@ -418,7 +418,7 @@ MORE = [
     ("Egy nap a városon kívül", "A Hévízi-tó télen is meleg, hideg reggeleken gőzölög: <a href=\"/best-day-trips-from-budapest\">egynapos kirándulások Budapestről</a> (angolul)."),
     ("Múzeumok hideg napokra", "Megéri-e a Budapest Card egy múzeumos útra: <a href=\"/hu/budapest-card-megéri-e\">Budapest Card, megéri?</a>"),
 ]
-NOV_LINK = ("Korábban jössz? Nézd meg, <a href=\"/things-to-do-budapest-november\">mit csinálj Budapesten novemberben</a> (angolul).")
+NOV_LINK = ("Korábban jössz? Nézd meg, <a href=\"/hu/budapest-programok-november\">mit csinálj Budapesten novemberben</a>.")
 
 FAQ = [
     ("Megéri decemberben Budapestre menni?",
