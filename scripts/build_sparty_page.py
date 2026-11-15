@@ -132,16 +132,15 @@ CARDS.append(dict(SPARTY_COMMON,
                "Yes, if you want one big night out in a thermal bath. Basic is the right ticket if you plan to drink more than a couple of beers."),
     summary=["Sparty turns the Széchenyi Baths into an open-air club every Saturday night: DJs, lasers, fire shows and circus artists "
              "around steaming 34–38 °C pools under the yellow palace. It runs from 21:30 to 2:00, and the last entry is at 1:00.",
-             "Based on <strong>1,800+ GetYourGuide reviews</strong> (4.2 out of 5), guests love the shows and the setting. "
-             "The recurring complaints are drink prices and the cash-only SpartyPay system."],
+             "The shows and the setting are the highlight. The two things to plan for are drink prices and the cash-only SpartyPay system."],
     spcards=[("The Party", IMG + "sparty-lasers-02.avif",
               "Techno, lasers and circus artists around the outdoor pools from 21:30 to 2:00. Last entry is at 1:00."),
              ("The Pools", IMG + "sparty-szechenyi-night-01.avif",
               "You party in the 34–38 °C outdoor thermal pools. They are about shoulder-deep, so the steps are the best place to dance."),
              ("Drinks &amp; SpartyPay", IMG + "sparty-drinks-05.avif",
               "Bars take SpartyPay cards only: first top-up 20,000 HUF (3,000 HUF deposit included), cash top-ups. Cups cost 700 HUF, 350 HUF back."),
-             ("What to Bring", None,
-              "Swimwear, a towel, flip-flops (mandatory) and a passport or ID card. No food, drinks or large bags.")],
+             ("The Shows", IMG + "sparty-show-04.avif",
+              "Costumed performers, fire shows and circus acts around the pools through the night. Bring swimwear, a towel, flip-flops and ID.")],
     qf=qf_sparty("Basic with locker, €73 (21 Nov 2026)"),
 ))
 CARDS.append(dict(SPARTY_COMMON,
@@ -170,8 +169,8 @@ CARDS.append(dict(SPARTY_COMMON,
               "2 coupons and a reusable cup. 1 beer = 1 coupon, 1 cocktail = 2 coupons."),
              ("The Party", IMG + "sparty-stage-03.avif",
               "DJs, lasers, fire shows and circus artists around the outdoor pools from 21:30 to 2:00."),
-             ("What to Bring", None,
-              "Swimwear, a towel, flip-flops (mandatory) and a passport or ID card. No food, drinks or large bags.")],
+             ("The Pools", IMG + "sparty-szechenyi-night-01.avif",
+              "34–38 °C outdoor thermal pools in front of the lit-up palace. Bring swimwear, a towel, flip-flops and ID.")],
     qf=qf_sparty("Premium: entry, locker, 2 drink coupons, cup, €100 (21 Nov 2026)"),
 ))
 
@@ -256,7 +255,7 @@ CARDS.append(dict(
                "Yes, for a fun daytime version with drinks included and free cancellation. It is not a party."),
     summary=["The Beer Spa combines a full-day fast-track Széchenyi ticket with a 45-minute private soak in a wooden tub of thermal water "
              "infused with hops and malt, with unlimited draught beer from your own copper tap.",
-             "Based on <strong>100+ GetYourGuide reviews</strong> (4.4 out of 5), guests call it fun and relaxing; the most common complaint is a small changing space."],
+             "It is a relaxed, fun soak rather than a party, and it ends with the rest of the day free in the Széchenyi pools."],
     quotes=[("the beer spa was very calming and it was fun to have draft beer on tap right next to us", "GetYourGuide", "October 2026")],
     getthere=["📍 " + maps_link("Széchenyi Gyógyfürdő Kós Károly sétány 1 Budapest", "Széchenyi main entrance (Gate 1), Kós Károly sétány 1, 1146 Budapest"),
               "🚇 Take <strong>metro M1</strong> to <strong>Széchenyi fürdő</strong>.",
@@ -407,6 +406,7 @@ def body(page):
     ds = all_spans(page, "details")
     page = page[:ds[0][0]] + dets + page[ds[-1][1]:]
     page = re.sub(r"<!-- #\d+: [^>]*-->\n?", "", page)
+    page = re.sub(r"<blockquote><strong>What visitors say:</strong>.*?</blockquote>", "", page, flags=re.S)  # no review quotes
     page = swap_block(page, r'<div class="container w-container"><div class="w-richtext"><p>Every bath below', MID)
     page = must_sub(r'(<h2 class="bpa-breakdown-heading" id="desert-safaris-breakdown">)[^<]*(</h2>)',
                     r"\1Detailed Breakdown: Sparty Tickets &amp; Alternatives\2", page)
@@ -494,7 +494,7 @@ def main():
     page = jsonld(chrome(body(hero(head(page)))))
     page = page.replace("LUXURY EDITORIAL SYSTEM — UNIFIED", "LUXURY EDITORIAL SYSTEM: UNIFIED")
     content = re.sub(r'<header[^>]*class="[^"]*ltt-navbar.*?</header>', "", page, flags=re.S)  # menu: sync_layout.py
-    leftovers = [w for w in ("6 Best Thermal Baths", "Dandár", "Palatinus", "en-thermal-baths-", "—", "&mdash;")
+    leftovers = [w for w in ("What visitors say", "6 Best Thermal Baths", "Dandár", "Palatinus", "en-thermal-baths-", "—", "&mdash;")
                  if w in content]
     assert not leftovers, leftovers
     with open(OUT, "w", encoding="utf-8") as f:
