@@ -8,6 +8,8 @@ Sparty from Saturday 21 November 2026. The user personally visited Széchenyi (1
 """
 import urllib.parse
 
+import bath_hub_nav
+
 GYG = ("https://www.getyourguide.com/budapest-l29/{slug}/?partner_id=YS414AJ"
        "&utm_medium=online_publisher&cmp=en-szechenyi-{placement}-{key}&mkt_cmp=true")
 TIQETS = "https://www.tiqets.com/en/things-to-do-in-budapest-c68199/{slug}/?partner=thecruisedetective.com-176436"
@@ -175,7 +177,8 @@ CARDS.append(dict(
     summary=["Sparty turns Széchenyi's outdoor pools into a night club every Saturday from 21:30 to 2:00. "
              "The water stays at 34 to 38 °C, so it works in November as well as in July.",
              "Budget for drinks on top of the ticket. Bring cash to load the SpartyPay card, pick the €73 basic ticket, and order a <strong>Bolt</strong> or <strong>Uber</strong> home rather than the taxis waiting at the gate. "
-             'For dates, dress code and every ticket type, see our full <a href="/sparty-budapest">Sparty Budapest guide</a>.'],
+             + ('For dates, dress code and every ticket type, see our full <a href="/sparty-budapest">Sparty Budapest guide</a>.'
+                if bath_hub_nav.live("/sparty-budapest") else "")],
     quotes=[("Amazing party scene at the hot baths.", "GetYourGuide", "October 2026"),
             ("The music and lights were fab, the heat off the pool was fantastic too.", "GetYourGuide", "October 2026"),
             ("The drinks are very expensive though...", "GetYourGuide", "June 2026")],

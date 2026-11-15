@@ -2,8 +2,23 @@
 
 Used by the hub (/thermal-baths-budapest) and /szechenyi-baths-budapest; the Rudas and Sparty
 pages may import it too. One place to change the list of bath guides.
+A guide is linked only once its page exists in the checkout (live()), so re-run the hub and
+Széchenyi builders after the Rudas or Sparty page is merged.
 """
+import os
 import re
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def live(href):
+    """True when the page exists in this checkout. Guides from other open PRs stay unlinked until merged."""
+    slug = href.strip("/")
+    return not slug or os.path.exists(os.path.join(ROOT, slug + ".html")) or os.path.exists(os.path.join(ROOT, slug, "index.html"))
+
+
+def guides():
+    return [g for g in GUIDES if live(g[1])]
 
 GUIDES = [
     ("hub", "/thermal-baths-budapest", "♨️", "All Budapest Thermal Baths",
@@ -32,7 +47,7 @@ START = '<nav aria-label="Budapest bath guides" class="bpa-hubnav" id="bpa-hubna
 
 def block(current, title="Budapest Bath Guides"):
     items = []
-    for key, href, ico, name, sub in GUIDES:
+    for key, href, ico, name, sub in guides():
         cur = key == current
         items.append('<a class="bpa-hubnav-item%s" href="%s"%s><span class="bpa-hubnav-ico" aria-hidden="true">%s</span>'
                      '<span><span class="bpa-hubnav-name">%s</span><span class="bpa-hubnav-sub">%s</span></span></a>'

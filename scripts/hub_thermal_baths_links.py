@@ -19,20 +19,35 @@ PAGE = os.path.join(ROOT, "thermal-baths-budapest.html")
 SITE = "https://www.budapestadventures.com"
 TODAY = "2026-11-15"
 
-LEAD_P3 = ('<p>Already picked your bath? Compare every ticket in our <a href="/szechenyi-baths-budapest">Széchenyi Baths tickets guide</a> '
-           'and <a href="/rudas-baths-budapest">Rudas Baths tickets guide</a>, or plan a Saturday night at <a href="/sparty-budapest">Sparty</a>, '
-           'the pool party at Széchenyi. Gellért (closed until 2028) and Király (closed indefinitely) are not in this list.</p>')
+L = bath_hub_nav.live
 
-CARD_LINKS = {
-    "card-1": ('/szechenyi-baths-budapest', "All Széchenyi tickets →"),
-    "card-2": ('/rudas-baths-budapest', "All Rudas tickets →"),
-}
-DET_LINKS = {
-    "item-1-szechenyi": ('<p class="bpa-hub-child"><strong>Booking Széchenyi?</strong> See the <a href="/szechenyi-baths-budapest">Széchenyi tickets guide</a> '
-                         '(day ticket from €39, locker vs cabin, Palm House and Beer Spa) and the <a href="/sparty-budapest">Sparty guide</a> for Saturday nights.</p>'),
-    "item-2-rudas": ('<p class="bpa-hub-child"><strong>Booking Rudas?</strong> See the <a href="/rudas-baths-budapest">Rudas tickets guide</a> '
-                     'for every ticket, the men-only and women-only days and weekend night bathing.</p>'),
-}
+
+def lead_p3():
+    links = ['our <a href="/szechenyi-baths-budapest">Széchenyi Baths tickets guide</a>']
+    if L("/rudas-baths-budapest"):
+        links.append('<a href="/rudas-baths-budapest">Rudas Baths tickets guide</a>')
+    out = "<p>Already picked your bath? Compare every ticket in " + " and ".join(links)
+    if L("/sparty-budapest"):
+        out += ', or plan a Saturday night at <a href="/sparty-budapest">Sparty</a>, the pool party at Széchenyi'
+    return out + ". Gellért (closed until 2028) and Király (closed indefinitely) are not in this list.</p>"
+
+
+def card_links():
+    out = {"card-1": ("/szechenyi-baths-budapest", "All Széchenyi tickets →")}
+    if L("/rudas-baths-budapest"):
+        out["card-2"] = ("/rudas-baths-budapest", "All Rudas tickets →")
+    return out
+
+
+def det_links():
+    sparty = (' and the <a href="/sparty-budapest">Sparty guide</a> for Saturday nights' if L("/sparty-budapest")
+              else ', including Sparty, the Saturday night pool party')
+    out = {"item-1-szechenyi": ('<p class="bpa-hub-child"><strong>Booking Széchenyi?</strong> See the <a href="/szechenyi-baths-budapest">Széchenyi tickets guide</a> '
+                                '(day ticket from €39, locker vs cabin, Palm House and Beer Spa)%s.</p>' % sparty)}
+    if L("/rudas-baths-budapest"):
+        out["item-2-rudas"] = ('<p class="bpa-hub-child"><strong>Booking Rudas?</strong> See the <a href="/rudas-baths-budapest">Rudas tickets guide</a> '
+                               'for every ticket, the men-only and women-only days and weekend night bathing.</p>')
+    return out
 
 
 def main():
@@ -48,11 +63,11 @@ def main():
     # 2. intro: last paragraph points at the child guides
     m = re.search(r'(<div class="ltt-lead-copy">.*?)(<p>(?:(?!<p>).)*?(?:Gellért|Already picked).*?</p>)(\s*</div>)', page, re.S)
     assert m, "lead paragraph not found"
-    page = page[:m.start(2)] + LEAD_P3 + page[m.end(2):]
+    page = page[:m.start(2)] + lead_p3() + page[m.end(2):]
 
     # 3. deck cards: link next to "Read Review"
     page = re.sub(r'\n<a class="bpa-sublink bpa-sublink-guide" href="[^"]*">[^<]*</a>', "", page)
-    for cid, (href, text) in CARD_LINKS.items():
+    for cid, (href, text) in card_links().items():
         i = page.find('id="%s"' % cid)
         j = page.find('<a class="bpa-sublink" href="#', i)
         k = page.find("</a>", j) + 4
@@ -61,7 +76,7 @@ def main():
 
     # 4. details: a line before the Summary bento
     page = re.sub(r'<p class="bpa-hub-child">.*?</p>\n?', "", page, flags=re.S)
-    for did, html in DET_LINKS.items():
+    for did, html in det_links().items():
         i = page.find('id="%s"' % did)
         j = page.find('<details class="ltt-bento-group"', i)
         assert 0 < i < j
@@ -92,7 +107,7 @@ def main():
         if node.get("@type") == "Article":
             node["dateModified"] = TODAY
             node["hasPart"] = [{"@type": "WebPage", "name": name, "url": SITE + href}
-                               for key, href, _, name, _ in bath_hub_nav.GUIDES if key != "hub"]
+                               for key, href, _, name, _ in bath_hub_nav.guides() if key != "hub"]
     page = page[:a] + json.dumps(data, ensure_ascii=False, indent=1) + page[b:]
 
     style = '<style id="bpa-hub-child-css">.bpa-hub-child{margin:0 0 14px;padding:10px 14px;border-left:3px solid #dfa732;background:#fffbeb;border-radius:8px;font-size:14px;line-height:1.5}.bpa-sublink-guide{font-weight:700}.bpa-hub-child a{color:#855a00!important;font-weight:600}.bpa-hub-child a:hover{color:#5c3d00!important;text-decoration:underline}</style>'

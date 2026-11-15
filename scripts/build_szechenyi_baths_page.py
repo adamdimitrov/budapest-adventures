@@ -45,10 +45,14 @@ def gyg(key, placement):
     return book_url(c, placement)
 
 
+RUDAS = (', or see <a href="/rudas-baths-budapest">Rudas Baths</a> for an Ottoman Turkish bath with a rooftop pool'
+         if bath_hub_nav.live('/rudas-baths-budapest') else ', which compares Széchenyi with Rudas, Lukács and the local baths')
+SPARTY_MORE = (' For dress code, what to bring and every ticket type, read the full <a href="/sparty-budapest">Sparty Budapest guide</a>.'
+               if bath_hub_nav.live('/sparty-budapest') else '')
 LEAD = f'''<div class="ltt-lead-copy">
 <p>Most visitors pay more than they need to at Széchenyi. The same locker ticket is <strong>€39 if you enter before 9:00</strong> and €46 after, a private cabin costs only <strong>€4 more</strong>, and Sparty, the Saturday night pool party, is a different ticket that <strong>cannot be refunded</strong>.</p>
 <p>I have soaked here myself, then compared the <strong>5 Széchenyi tickets worth booking</strong> side by side: what each one includes, desk vs online price, locker or cabin, and who should skip it. Prices and opening hours are up to date as of 15 November 2026.</p>
-<p>Still choosing a bath? Start with the <a href="/thermal-baths-budapest">Budapest thermal baths guide</a>, or see <a href="/rudas-baths-budapest">Rudas Baths</a> for an Ottoman Turkish bath with a rooftop pool.</p>
+<p>Still choosing a bath? Start with the <a href="/thermal-baths-budapest">Budapest thermal baths guide</a>{RUDAS}.</p>
 </div>'''
 
 PILLS = f'''<div class="ltt-integrated-pills">
@@ -73,7 +77,7 @@ GUIDE = f'''<div class="w-richtext bpa-wt-guide">
 <p>Online you pay a little more (€46 for the weekday locker ticket), and in return you get <strong>free cancellation up to 24 hours before</strong>, pay-later booking and a QR code that goes straight to the turnstile machines instead of the cashier queue. If you are already standing outside on a quiet weekday, the desk is cheaper. If you are planning ahead, or going at the weekend, book.</p>
 <h2 id="sparty-szechenyi-night-party">Sparty: Széchenyi's Saturday Night Pool Party</h2>
 <p>Every Saturday from <strong>21:30 to 2:00</strong>, the outdoor pools turn into a club: DJs, lasers, fire shows and circus acts around 34 to 38 °C water. Tickets start at <strong>€73 with a locker</strong>; the €100 premium ticket adds two drink coupons, which buy roughly one cocktail. It is 18+ only and non-refundable, and the bars take only the cash-loaded SpartyPay card.</p>
-<p><a href="{gyg("sparty", "guide")}" rel="{AFF_REL}" target="_blank"><strong>Check Sparty dates and tickets →</strong></a> For dress code, what to bring and every ticket type, read the full <a href="/sparty-budapest">Sparty Budapest guide</a>.</p>
+<p><a href="{gyg("sparty", "guide")}" rel="{AFF_REL}" target="_blank"><strong>Check Sparty dates and tickets →</strong></a>{SPARTY_MORE}</p>
 </div>'''
 
 KNOW = '''<h2 id="szechenyi-know-before-you-go">Széchenyi Baths: Know Before You Go</h2><div class="w-richtext">
