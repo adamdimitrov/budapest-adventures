@@ -725,11 +725,7 @@ QUICK = f'''<div class="container w-container"><div class="w-richtext bpa-wt-gui
 <tr><td style="padding:8px">Private cabin</td><td style="padding:8px">+1,000 HUF</td><td style="padding:8px">+1,000 HUF</td></tr>
 </tbody></table></div>
 <p>Holidays and high season: 16,000 HUF at the desk, 19,000 HUF fast track. The desk takes cards; for cash, Hungarian forints only.</p>
-<div class="bpa-rudas-hub" style="margin:24px 0;padding:16px 18px;border:1px solid #e2e8f0;border-radius:12px;background:#fff">
-<p style="margin:0 0 8px"><strong>Not sure Rudas is your bath?</strong></p>
-<p style="margin:0"><a href="{SZE}"><strong>Széchenyi</strong></a> has big outdoor pools and is open until 22:00 on Fridays. <a href="{HUB}"><strong>All Budapest thermal baths compared →</strong></a></p>
-</div>
-</div></div>
+{{HUBNAV}}</div></div>
 '''
 
 SECTIONS = [
@@ -778,6 +774,59 @@ def editorial_html():
     secs = "".join('<section class="w-richtext" id="%s" style="margin-bottom: 48px;"><div class="container w-container"><h2>%s</h2><div class="w-richtext">%s\n</div></div></section>\n'
                    % (sid, h, body) for sid, h, body in SECTIONS)
     return '<div class="ltt-editorial-wrapper" role="main">\n%s%s\n</div>' % (secs, faq_html())
+
+
+# ── shared "Budapest Bath Guides" block (copied from scripts/bath_hub_nav.py on article/thermal-baths-hub) ──
+
+GUIDES = [
+    ("hub", "/thermal-baths-budapest", "♨️", "All Budapest Thermal Baths",
+     "6 open baths compared: prices, pools, crowds"),
+    ("szechenyi", "/szechenyi-baths-budapest", "🏛️", "Széchenyi Baths Tickets",
+     "Day ticket from €39, locker vs cabin, VIP and Beer Spa"),
+    ("rudas", "/rudas-baths-budapest", "🕌", "Rudas Baths Tickets",
+     "Turkish bath, rooftop pool, weekend night bathing"),
+    ("sparty", "/sparty-budapest", "🎉", "Sparty Budapest",
+     "Saturday night pool party at Széchenyi, from €73"),
+]
+
+CSS = ('<style id="bpa-hubnav-css">.bpa-hubnav{margin:8px 0 28px;padding:18px 18px 14px;border:1px solid #e2e8f0;'
+       'border-radius:16px;background:#fafbfc}.bpa-hubnav-title{font-size:12px;font-weight:800;letter-spacing:1px;'
+       'text-transform:uppercase;color:#855a00;margin:0 0 12px}.bpa-hubnav-grid{display:grid;'
+       'grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}.bpa-hubnav a.bpa-hubnav-item{display:flex;'
+       'gap:10px;align-items:flex-start;padding:12px 14px;border:1px solid #e2e8f0;border-radius:12px;background:#fff;'
+       'text-decoration:none!important;color:#0f172a!important;min-width:0}.bpa-hubnav a.bpa-hubnav-item:hover{'
+       'border-color:#dfa732}.bpa-hubnav-item.is-current{border-color:#0f172a;box-shadow:inset 0 0 0 1px #0f172a}'
+       '.bpa-hubnav-ico{font-size:20px;line-height:1.2}.bpa-hubnav-name{display:block;font-size:14.5px;font-weight:700;'
+       'line-height:1.3}.bpa-hubnav-sub{display:block;font-size:12.5px;color:#64748b;line-height:1.35;margin-top:2px}'
+       '</style>')
+
+START = '<nav aria-label="Budapest bath guides" class="bpa-hubnav" id="bpa-hubnav">'
+
+
+def hubnav_block(current, title="Budapest Bath Guides"):
+    items = []
+    for key, href, ico, name, sub in GUIDES:
+        cur = key == current
+        items.append('<a class="bpa-hubnav-item%s" href="%s"%s><span class="bpa-hubnav-ico" aria-hidden="true">%s</span>'
+                     '<span><span class="bpa-hubnav-name">%s</span><span class="bpa-hubnav-sub">%s</span></span></a>'
+                     % (" is-current" if cur else "", href, ' aria-current="page"' if cur else "", ico, name, sub))
+    return '%s<p class="bpa-hubnav-title">%s</p><div class="bpa-hubnav-grid">%s</div></nav>\n' % (START, title, "".join(items))
+
+
+def hubnav_strip(page):
+    return re.sub(re.escape(START) + r".*?</nav>\n?", "", page, flags=re.S)
+
+
+def hubnav_css(page):
+    page = re.sub(r'<style id="bpa-hubnav-css">.*?</style>', "", page, flags=re.S)
+    return page.replace("</head>", CSS + "\n</head>", 1)
+
+HOVER_CSS = ('<style id="bpa-rudas-hover-css">'
+             '.ltt-lead-copy a:not([class]):hover,.bpa-wt-guide a:not([class]):hover,.ltt-editorial-wrapper a:not([class]):hover,'
+             '.bpa-details-card .w-richtext a:not([class]):hover,.bpa-lang-pop a:not([class]):hover,.ltt-breadcrumbs a:hover,'
+             '.bpa-hubnav a.bpa-hubnav-item:hover,.bpa-hubnav a.bpa-hubnav-item:hover *{color:#9f6e0d!important}'
+             '.bpa-hubnav a.bpa-hubnav-item:hover .bpa-hubnav-sub{color:#64748b!important}'
+             '</style>')
 
 
 # ── helpers ──────────────────────────────────────────────────────────────────────────
@@ -905,7 +954,7 @@ def main():
     a = page.find('<div class="container w-container"><div class="w-richtext"><p>Every bath below')
     b = page.find('<div class="bpa-breakdown-top-bar" id="breakdown-header">')
     assert 0 < a < b, (a, b)
-    page = page[:a] + QUICK + page[b:]
+    page = page[:a] + QUICK.replace("{HUBNAV}", hubnav_block("rudas")) + page[b:]
     page = must_sub(r'(<h2 class="bpa-breakdown-heading" id="desert-safaris-breakdown">)[^<]*(</h2>)',
                     r"\1Detailed Breakdown: %d Rudas Baths Tickets\2" % N, page)
     page = must_sub(r'<p class="bpa-breakdown-sub">[^<]*</p>',
@@ -942,6 +991,7 @@ def main():
     b = page.find("</script>", a)
     page = page[:a] + jsonld() + page[b:]
 
+    page = hubnav_css(page).replace("</head>", HOVER_CSS + "\n</head>", 1)
     page = page.replace("SYSTEM — UNIFIED", "SYSTEM: UNIFIED")
     page = re.sub(r"<!-- #\d+: [^>]*-->\n?", "", page)
     with open(OUT, "w", encoding="utf-8") as f:
