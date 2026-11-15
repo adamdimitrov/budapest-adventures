@@ -13,6 +13,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import bath_hub_nav  # noqa: E402
+import bath_copy_rules  # noqa: E402
 
 ROOT = os.path.dirname(HERE)
 PAGE = os.path.join(ROOT, "thermal-baths-budapest.html")
@@ -55,7 +56,7 @@ def main():
 
     # 1. guide navigation at the top of the article body
     page = bath_hub_nav.strip(page)
-    anchor = '<div class="container w-container"><div class="w-richtext"><p>Every bath below'
+    anchor = '<div class="container w-container"><div class="w-richtext"><p>'
     assert anchor in page
     page = page.replace(anchor, bath_hub_nav.block("hub", "Bath-by-Bath Ticket Guides") + anchor, 1)
     page = bath_hub_nav.ensure_css(page)
@@ -113,6 +114,7 @@ def main():
     style = '<style id="bpa-hub-child-css">.bpa-hub-child{margin:0 0 14px;padding:10px 14px;border-left:3px solid #dfa732;background:#fffbeb;border-radius:8px;font-size:14px;line-height:1.5}.bpa-sublink-guide{font-weight:700}.bpa-hub-child a{color:#855a00!important;font-weight:600}.bpa-hub-child a:hover{color:#5c3d00!important;text-decoration:underline}</style>'
     page = re.sub(r'<style id="bpa-hub-child-css">.*?</style>\n?', "", page, flags=re.S)
     page = page.replace("</head>", style + "\n</head>", 1)
+    page = bath_copy_rules.apply(page)
     open(PAGE, "w", encoding="utf-8").write(page)
     print("patched", PAGE)
 

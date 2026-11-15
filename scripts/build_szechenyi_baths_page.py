@@ -15,6 +15,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import szechenyi_baths_data as S  # noqa: E402
 import bath_hub_nav  # noqa: E402
+import bath_copy_rules  # noqa: E402
 
 # Load the hub builder's renderers without its "already rebuilt" guard.
 _path = os.path.join(HERE, "build_thermal_baths_2026.py")
@@ -217,7 +218,7 @@ def main():
                     r"\1Széchenyi visited in person • All reviews open by default • Click to collapse/expand\2", page)
 
     # body: hub nav + ticket guide replace the hub's map / why-visit prose
-    a = page.find('<div class="container w-container"><div class="w-richtext"><p>Every bath below')
+    a = page.find('<div class="container w-container"><div class="w-richtext"><p>')
     b = page.find('<div class="bpa-breakdown-top-bar"')
     assert 0 < a < b, (a, b)
     page = page[:a] + bath_hub_nav.block("szechenyi") + GUIDE + "\n" + page[b:]
@@ -246,6 +247,7 @@ def main():
     page = bath_hub_nav.ensure_css(page)
     page = re.sub(r'<style id="bpa-szechenyi-css">.*?</style>\n?', "", page, flags=re.S)
     page = page.replace("</head>", '<style id="bpa-szechenyi-css">@media (max-width:839px){.ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}}</style>\n</head>', 1)
+    page = bath_copy_rules.apply(page)
     assert "—" not in re.sub(r"<script.*?</script>|<style.*?</style>", "", page, flags=re.S), "em dash in copy"
     with open(OUT, "w", encoding="utf-8") as f:
         f.write(page)
