@@ -1090,7 +1090,7 @@ def build_river_deck_and_sticky() -> str:
       </div>
       <div class="bpa-info">
         <div class="bpa-kicker">{c["kicker"]}</div>
-        <a href="{c["url"]}" target="_blank" rel="sponsored noopener" class="bpa-headline bpa-title">
+        <a href="{c["url"]}" target="_blank" rel="nofollow sponsored noopener" class="bpa-headline bpa-title">
           {c["title"]}
         </a>
         <div class="bpa-proof-bar bpa-proof">
@@ -1109,7 +1109,7 @@ def build_river_deck_and_sticky() -> str:
       </div>
       <div class="bpa-cta-cell">
         <div><div class="bpa-price-num bpa-price">{c["price"]}</div><div class="bpa-price-sub">{c["price_sub"]}</div></div>
-        <a href="{c["url"]}" target="_blank" rel="sponsored noopener" class="bpa-book-button bpa-btn">Book Now →</a>
+        <a href="{c["url"]}" target="_blank" rel="nofollow sponsored noopener" class="bpa-book-button bpa-btn">Book Now →</a>
         <a href="{sem_anchor}" class="bpa-sublink">Read Full Review ↓</a>
       </div>
     </div>
@@ -1197,7 +1197,7 @@ def build_river_deck_and_sticky() -> str:
       <span class="hybrid-active-title" id="hybridActiveTitle">Legenda City Cruises</span>
       <span class="hybrid-active-price" id="hybridActivePrice">€20–25</span>
     </div>
-    <a href="https://legenda.hu/en?partner=38585" target="_blank" rel="sponsored noopener" class="hybrid-cta-btn" id="hybridActiveCta">
+    <a href="https://legenda.hu/en?partner=38585" target="_blank" rel="nofollow sponsored noopener" class="hybrid-cta-btn" id="hybridActiveCta">
       Check Availability →
     </a>
   </div>
@@ -1360,7 +1360,7 @@ def build_dinner_deck_and_sticky() -> str:
       <span class="hybrid-active-title" id="hybridActiveTitle">Legenda Candlelit Dinner Cruise</span>
       <span class="hybrid-active-price" id="hybridActivePrice">€110</span>
     </div>
-    <a href="https://legenda.hu/en?partner=38585" target="_blank" rel="sponsored noopener" class="hybrid-cta-btn" id="hybridActiveCta">
+    <a href="https://legenda.hu/en?partner=38585" target="_blank" rel="nofollow sponsored noopener" class="hybrid-cta-btn" id="hybridActiveCta">
       Reserve Table →
     </a>
   </div>
@@ -1594,7 +1594,7 @@ def upgrade_candlelit_file():
     new_verdict_and_card = """<!-- Quick Verdict & Luxury Editorial Tested Card -->
     <div id="verdict-summary" class="bpa-card mb-10" style="padding: 26px 28px;">
       <div class="bpa-kicker">Legenda City Cruises • 📍 Vigadó tér Dock 7 • Flagship Evening Sailing</div>
-      <a href="https://legenda.hu/en/ticket-purchase?partner=38585" target="_blank" rel="noopener" class="bpa-headline bpa-title">
+      <a href="https://legenda.hu/en/ticket-purchase?partner=38585" target="_blank" rel="nofollow sponsored noopener" class="bpa-headline bpa-title">
         Legenda 4-Course Romantic Candlelit Dinner Cruise With Live Salon Music
       </a>
       <div class="bpa-proof-bar bpa-proof">
@@ -1621,7 +1621,7 @@ def upgrade_candlelit_file():
           <span class="bpa-price-num bpa-price">€110</span>
           <span class="bpa-price-sub" style="margin-left:8px;">per adult · 4-course all-inclusive · free 24h cancellation</span>
         </div>
-        <a href="https://legenda.hu/en/ticket-purchase?partner=38585" target="_blank" rel="noopener" class="bpa-book-button bpa-btn" style="width:auto; padding:12px 26px !important;">
+        <a href="https://legenda.hu/en/ticket-purchase?partner=38585" target="_blank" rel="nofollow sponsored noopener" class="bpa-book-button bpa-btn" style="width:auto; padding:12px 26px !important;">
           Book Legenda Direct →
         </a>
       </div>
@@ -1691,7 +1691,7 @@ def upgrade_candlelit_file():
         <span class="hybrid-active-title">Legenda Candlelit Dinner Cruise (Dock 7)</span>
         <span class="hybrid-active-price">€110</span>
       </div>
-      <a href="https://legenda.hu/en/ticket-purchase?partner=38585" target="_blank" rel="noopener" class="hybrid-cta-btn">
+      <a href="https://legenda.hu/en/ticket-purchase?partner=38585" target="_blank" rel="nofollow sponsored noopener" class="hybrid-cta-btn">
         Book Dock 7 Direct →
       </a>
     </div>

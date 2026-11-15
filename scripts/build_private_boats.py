@@ -156,7 +156,7 @@ def deck_card(i, p, c, ui):
 </div>
 <div class="bpa-info">
 {kicker(p, c)}
-<a class="bpa-title" href="{esc(p["gyg"])}" rel="noopener" target="_blank">{c["title"]}</a>
+<a class="bpa-title" href="{esc(p["gyg"])}" rel="nofollow sponsored noopener" target="_blank">{c["title"]}</a>
 <div class="bpa-reviews-line">
 {rate_block(p, ui)}
 </div>
@@ -170,7 +170,7 @@ def deck_card(i, p, c, ui):
 <div class="bpa-price">{ui["from"].format(p=p["price_from"])}</div>
 <div class="bpa-psub">{ui["per_boat"].format(cap=p["capacity"])}</div>
 </div>
-<a class="bpa-btn" href="{esc(p["gyg"])}" rel="noopener" target="_blank">{ui["check"]}</a>
+<a class="bpa-btn" href="{esc(p["gyg"])}" rel="nofollow sponsored noopener" target="_blank">{ui["check"]}</a>
 <div class="bpa-via">{ui["via_gyg"]}</div>
 <div class="bpa-trust2">{trust}</div>
 <a class="bpa-sublink" href="#{p["anchor"]}">{ui["read"]}</a>

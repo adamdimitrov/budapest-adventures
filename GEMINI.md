@@ -68,6 +68,9 @@ These override anything else in this file. Breaking one of them costs money or r
 - Language switcher is EN/HU style as on the masters; do not invent new menu groups or top-bar links.
 - Before every commit run `python3 scripts/sync_layout.py --check`. It must exit 0.
 
+## Affiliate links
+- Every affiliate/OTA link (GetYourGuide, Viator, Tiqets, Tripadvisor, Travelpayouts, Legenda, Budapest River Cruise, Silverline, Xplore, GuruWalk...) needs `rel="nofollow sponsored noopener"`; official bath ticket sites get `rel="nofollow noopener"`. Run `python3 scripts/fix_affiliate_rel.py` after building pages; `--check` runs in CI and must exit 0. New partner host: add it to `AFFILIATE_HOSTS` there and to `AFFILIATE_REL_HOSTS` in `bpa-tracking.js`.
+
 ## Caching gotchas
 - `.js` files and `/assets` images are cached 1 year immutable. Changed JS: bump its `?v=` everywhere it is loaded. Replaced image: new filename, never overwrite.
 - Do not touch `vercel.json`, analytics/tag snippets, or anything under `api/`.
@@ -75,5 +78,5 @@ These override anything else in this file. Breaking one of them costs money or r
 ## Workflow
 - Branch from `origin/main`, never commit to `main`, never force-push.
 - One language per branch and per PR.
-- Before each PR: `sync_layout.py --check` passes, `grep -rn "—" <changed files>` returns nothing, changed pages load without console errors locally.
+- Before each PR: `sync_layout.py --check` and `fix_affiliate_rel.py --check` pass, `grep -rn "—" <changed files>` returns nothing, changed pages load without console errors locally.
 - Do not merge PRs. Do not deploy to production.

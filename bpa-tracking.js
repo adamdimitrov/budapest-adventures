@@ -46,6 +46,48 @@
     'silver-line.hu'
   ];
 
+  // Affiliate / OTA hosts whose links must carry rel="nofollow sponsored noopener".
+  // Mirrors AFFILIATE_HOSTS in scripts/fix_affiliate_rel.py (which fixes the static HTML);
+  // this covers links added or rewritten at runtime.
+  var AFFILIATE_REL = ['nofollow', 'sponsored', 'noopener'];
+  var AFFILIATE_REL_HOSTS = [
+    'getyourguide.com', 'gyg.me', 'viator.com', 'tiqets.com', 'fareharbor.com',
+    'booking.com', 'hostelworld.com', 'klook.com', 'civitatis.com', 'musement.com',
+    'expedia.com', 'agoda.com', 'hotels.com', 'airbnb.com',
+    'tp.st', 'tp.media', 'tpm.lv', 'tpk.lv', 'travelpayouts.com',
+    'legenda.hu', 'budapestrivercruise.eu', 'budapestrivercruise.com', 'silver-line.hu',
+    'budapestxplore.com', 'guruwalk.com'
+  ];
+
+  function isAffiliateRelHost(hostname) {
+    if (!hostname) return false;
+    var h = hostname.toLowerCase();
+    if (/(^|\.)tripadvisor\.[a-z.]+$/.test(h)) return true;
+    for (var i = 0; i < AFFILIATE_REL_HOSTS.length; i++) {
+      var d = AFFILIATE_REL_HOSTS[i];
+      if (h === d || h.slice(-(d.length + 1)) === '.' + d) return true;
+    }
+    return false;
+  }
+
+  /**
+   * Merge nofollow sponsored noopener into an affiliate link's rel, keeping other tokens.
+   */
+  function ensureAffiliateRel(link) {
+    if (!link || !link.getAttribute) return;
+    var host;
+    try {
+      host = new URL(link.href, window.location.origin).hostname;
+    } catch (err) {
+      return;
+    }
+    if (!isAffiliateRelHost(host)) return;
+    var current = (link.getAttribute('rel') || '').split(/\s+/).filter(Boolean);
+    var lower = current.map(function (t) { return t.toLowerCase(); });
+    var missing = AFFILIATE_REL.filter(function (t) { return lower.indexOf(t) === -1; });
+    if (missing.length) link.setAttribute('rel', missing.concat(current).join(' '));
+  }
+
   /**
    * Read a cookie value by name from document.cookie.
    */
@@ -432,6 +474,7 @@
       if (decorated && decorated !== link.href) {
         link.href = decorated;
       }
+      ensureAffiliateRel(link);
     }
   }
 
@@ -459,6 +502,7 @@
         var target = event.target;
         var link = target && target.closest ? target.closest('a[href]') : null;
         if (!link || !link.href) return;
+        ensureAffiliateRel(link);
 
         try {
           var url = new URL(link.href, window.location.origin);
@@ -500,7 +544,8 @@
       loadAndSyncAttribution: loadAndSyncAttribution,
       decorateOutboundUrl: decorateOutboundUrl,
       calculateNetCommission: calculateNetCommission,
-      decorateAllPageLinks: decorateAllPageLinks
+      decorateAllPageLinks: decorateAllPageLinks,
+      ensureAffiliateRel: ensureAffiliateRel
     };
   }
 })();
