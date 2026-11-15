@@ -284,11 +284,28 @@ def key(s):
 
 
 # ---------------------------------------------------------------- translation
+CACHE_ONLY = False   # --cache-only: build from data/i18n/port only, no API calls
+DUMP_TODO = None     # --dump-todo DIR: write untranslated segments as {id: html} and skip the build
+
+
+class _Todo(Exception):
+    pass
+
+
 def translate(strings, lang, cache_path, dry_run):
     cache = json.load(open(cache_path, encoding="utf-8")) if os.path.exists(cache_path) else {}
     todo = [s for s in dict.fromkeys(strings) if key(s) not in cache]
     if dry_run:
         return {s: cache.get(key(s), s) for s in strings}
+    if CACHE_ONLY:
+        if DUMP_TODO:
+            os.makedirs(DUMP_TODO, exist_ok=True)
+            out = os.path.join(DUMP_TODO, f"{lang}.json")
+            json.dump({key(s): s for s in todo}, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+            print(f"  {lang}: {len(todo)} untranslated segments written to {out}")
+            raise SystemExit(0) if not todo else _Todo()
+        if todo:
+            raise RuntimeError(f"{lang}: {len(todo)} segments missing from the cache (run with --dump-todo)")
     if todo:
         import anthropic
         client = anthropic.Anthropic()
@@ -404,9 +421,15 @@ def main():
     ap.add_argument("en_file")
     ap.add_argument("--langs", default=",".join(LANG_NAMES))
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--cache-only", action="store_true",
+                    help="no API: build only from cached translations (fill the cache by hand or another tool)")
+    ap.add_argument("--dump-todo", metavar="DIR",
+                    help="with --cache-only: write each language's untranslated segments to DIR/<lang>.json")
     args = ap.parse_args()
+    global CACHE_ONLY, DUMP_TODO
+    CACHE_ONLY, DUMP_TODO = args.cache_only or bool(args.dump_todo), args.dump_todo
     load_env_key()
-    if not args.dry_run and not os.environ.get("ANTHROPIC_API_KEY"):
+    if not args.dry_run and not CACHE_ONLY and not os.environ.get("ANTHROPIC_API_KEY"):
         sys.exit("ANTHROPIC_API_KEY is not set (environment or .env)")
     alts = alternates(read(args.en_file))
     links = link_map()
@@ -416,7 +439,10 @@ def main():
         if not target:
             print(f"{lang}: no translated URL for {args.en_file}, skipped")
             continue
-        n, bad = port(args.en_file, lang, target, links, args.dry_run)
+        try:
+            n, bad = port(args.en_file, lang, target, links, args.dry_run)
+        except (_Todo, SystemExit):
+            continue
         print(f"{lang}: {target} ({n} strings, {bad} tag mismatches)")
 
 
