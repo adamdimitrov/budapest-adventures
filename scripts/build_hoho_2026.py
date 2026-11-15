@@ -278,7 +278,6 @@ def qf(c):
 <div class="qf1-Validation-pills">
 {chips}
 </div>
-<p class="qf1-note" style="margin:10px 0 0;font-size:12px;color:#64748b">Checked on the live listings on {D.CHECKED} (prices for {D.CAL_DATE}). Only what the source confirms is shown.</p>
 </div>'''
 
 
@@ -356,7 +355,6 @@ LEAD = f'''<div class="ltt-lead-copy">
 <p class="bpa-hoho-callout"><strong>Quick answer:</strong> book the {a("city-sightseeing", "City Sightseeing 48-hour ticket")} (€44 with a boat ride and free cancellation), or skip the open-top bus and ride tram 2 and bus 16 on a €7 day pass.</p>
 <p>Budapest's two big hop-on hop-off companies charge <strong>exactly the same: €39 for one day, €44 for two, €49 for three</strong>. The difference is in the small print. One ticket includes a Danube boat ride and free cancellation; the other is non-refundable. And the second day costs just €5 more, which is why the 24-hour ticket is the worst value of the three.</p>
 <p>Below are the <strong>7 best bus tours in Budapest</strong> side by side, from the classic open-top loops to a bus that <strong>splashes into the Danube</strong>, an electric shuttle up Castle Hill and two party buses with beer on tap. For each one: price per day, stops, how often the buses come, what's included and who should skip it.</p>
-<p>Prices and timetables checked on {D.CHECKED}.</p>
 </div>'''
 
 FILTERS = '''<div class="ltt-integrated-pills">
@@ -414,7 +412,7 @@ GUIDE = (
     'You pay for the experience, not the transport.</p>\n'
     '<h2 id="public-transport-vs-hop-on-hop-off">Is a Hop-On Hop-Off Bus Worth It? The €7 Alternative</h2>\n'
     '<p>Budapest\'s public transport passes most of the same sights for a fraction of the price. A <strong>24-hour travelcard is 2,750 HUF (about €7)</strong> '
-    'and a <strong>72-hour travelcard 5,750 HUF (under €15)</strong>, valid on every metro, tram and bus in the city (bkk.hu prices, checked 15 November 2026).</p>\n<ul>\n'
+    'and a <strong>72-hour travelcard 5,750 HUF (under €15)</strong>, valid on every metro, tram and bus in the city.</p>\n<ul>\n'
     '<li><strong>Tram 2</strong> runs along the Pest bank of the Danube past the Parliament, with views of Buda Castle across the river. Often called one of the most scenic tram rides in Europe.</li>\n'
     '<li><strong>Bus 16</strong> goes from Deák Ferenc tér over the Chain Bridge and up to Castle Hill, the same climb the €18 castle bus saves you.</li>\n'
     '<li><strong>Bus 105</strong> also crosses the Chain Bridge between Pest and Buda.</li>\n'
@@ -558,7 +556,7 @@ def main():
     page = must_sub(r'(<div class="ltt-author-line">\s*By <a href="/about" target="_blank">Adam Dimitrov</a>),[^<]*',
                     r"\1, Founder, Budapest Adventures\n          ", page)
     page = must_sub(r'<div class="ltt-author-role">[^<]*</div>',
-                    '<div class="ltt-author-role">7 Bus Tours Compared • Prices &amp; Timetables Checked 15 Nov 2026</div>', page)
+                    '<div class="ltt-author-role">7 Bus Tours Compared Side by Side</div>', page)
     page = must_sub(r"<strong>Last updated</strong>: [^<]*<", "<strong>Last updated</strong>: Nov 15, 2026<", page)
     page = swap_block(page, r'<div class="ltt-lead-copy">', LEAD)
     page = swap_block(page, r'<div class="ltt-integrated-pills">', FILTERS)
@@ -569,7 +567,7 @@ def main():
     page = must_sub(r'(<h2 class="bpa-breakdown-heading" id=")[^"]*(">)[^<]*(</h2>)',
                     r"\1bus-tours-breakdown\2Detailed Breakdown: %d Best Bus Tours in Budapest\3" % n, page)
     page = must_sub(r'<p class="bpa-breakdown-sub">[^<]*</p>',
-                    '<p class="bpa-breakdown-sub">Prices checked %s • All reviews open by default • Click to collapse/expand</p>' % D.CHECKED, page)
+                    '<p class="bpa-breakdown-sub">All reviews open by default • Click to collapse/expand</p>', page)
     page = swap_block(page, r'<div class="w-richtext bpa-wt-faq">', faq_html())
 
     # runtime config + sticky bar
@@ -584,7 +582,7 @@ def main():
         page = re.sub(r'(<a class="hybrid-cta-btn" href=")[^"]*(" id="%s")' % bid, r"\g<1>%s\2" % book_url(c1, "sticky"), page, count=1)
     page = re.sub(r"<span>All \d+ Walking Tours</span>", "<span>All %d Bus Tours</span>" % n, page)
     page = page.replace('<span class="hybrid-active-trust">Free 24h Cancellation</span>',
-                        '<span class="hybrid-active-trust">Prices checked 15 Nov 2026</span>')
+                        '<span class="hybrid-active-trust">Free cancellation up to 2 days before</span>')
     page = page.replace('aria-label="Jump to Cruise Review"', 'aria-label="Jump to Bus Tour Review"')
     page = page.replace('aria-label="Quick Cruise Navigation &amp; Booking"', 'aria-label="Quick Bus Tour Navigation &amp; Booking"')
     page = page.replace('rel="noopener nofollow sponsored"', 'rel="%s"' % AFF_REL)

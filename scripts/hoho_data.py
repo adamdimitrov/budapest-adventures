@@ -16,7 +16,7 @@ TIQETS = "https://www.tiqets.com/en/things-to-do-in-budapest-c68199/{slug}/?part
 MAPS = "https://www.google.com/maps/search/?api=1&query={q}"
 IMG = "/assets/" + SLUG + "/"
 
-CAL_NOTE = "Prices on the booking calendar for Thursday 17 December 2026, checked on 15 November 2026."
+CAL_NOTE = "Prices for Thursday 17 December 2026."
 
 
 def pill(icon, label, pop, note=None, cls=""):
@@ -87,7 +87,7 @@ CARDS = [
                  "The ticket is the best-value package in town: the bus, a <strong>Danube boat ride</strong> and a <strong>1-hour guided walking tour</strong> "
                  "through the streets the bus can't reach. At €39 for 24 hours the boat alone covers a good part of the price, "
                  "because a 1-hour sightseeing cruise costs about €11 to €20 on its own (compare them in our <a href=\"/best-budapest-river-cruises\">Budapest river cruise guide</a>).",
-                 "Two stops (both at Astoria) were temporarily closed when we checked, so use Dohány Street or the Opera instead."],
+                 "Two stops (both at Astoria) are temporarily closed, so use Dohány Street or the Opera instead."],
         quotes=[("Depending on traffic, a complete round trip took 1.5 to 2 hours. The bus frequency was quite okay.", "Dirk, Germany", "October 2026"),
                 ("This was a great way to see Budapest. It was convenient to get on and off, or just do a round trip.", "Becky, UK", "October 2026"),
                 ("Waiting at Stop # 5 for more than an hour. All the buses were full.", "Sudarshan, India", "October 2026")],
@@ -135,8 +135,7 @@ CARDS = [
                  "The ticket includes a <strong>Danube river cruise</strong> (one boarding) and a <strong>guided walking tour</strong> "
                  "of Pest in English: Shoes on the Danube Bank, Parliament, Váci utca."),
             pill("🕒", "10:00 to 17:00 · every 10 to 25 min",
-                 "The red route runs from 10:00 to 17:00 with a bus every 10 to 25 minutes. Buses are air-conditioned in summer and heated in winter.",
-                 "Route, stops and frequency from bigbustours.com, checked 15 November 2026."),
+                 "The red route runs from 10:00 to 17:00 with a bus every 10 to 25 minutes. Buses are air-conditioned in summer and heated in winter."),
             pill("🎧", "16 audio languages",
                  "Recorded commentary in 16 languages, plus the free Big Bus app with a route map. Wheelchair accessible."),
         ],
