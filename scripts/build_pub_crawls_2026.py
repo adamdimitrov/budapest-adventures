@@ -53,7 +53,10 @@ CRAWLS = [
               "Pub crawl group photo by the Danube at night",
               "Crawl group outside a District VII bar",
               "Pub crawl group gathering at the meeting point"],
-        specs=["Party Crawl", "⏱ 5 to 5.5 Hours", "4-5 Venues", "VIP Club Entry"],
+        specs=[("🍻", "4-5 Venues", "Pubs, ruin bars, then a club.", "Icebreakers at the start, drinking games along the way.", "The route changes with opening hours and crowds."),
+              ("⏱", "5 to 5.5 Hours", "Starts 21:10, 21:40 or 22:20.", "The 21:10 start ends around 02:10, the 22:20 start around 03:20, inside a club you can stay in.", "The 5.5-hour version starts at 21:40."),
+              ("🥃", "Shot at Every Venue", "Free: a welcome shot at every venue.", "Every other drink you buy at the bar.", "Food is not included."),
+              ("🎟️", "VIP Club Entry", "Fast-track entry", "at Instant-Fogas, Füge Udvar, La Siesta and Humbák, through a separate entrance.", "Useful on Friday and Saturday, when the club queues are longest.")],
         best_for="Solo travellers and first-timers who want the biggest, busiest crawl in town: a shot at every stop and no queue at the club.",
         pros=["A welcome shot at every venue, plus VIP entry at Instant-Fogas, Füge Udvar, La Siesta and Humbák",
               "Three start times (21:10, 21:40, 22:20), so dinner first is easy",
@@ -97,7 +100,10 @@ CRAWLS = [
               "Dancers on stage in a Budapest party bar",
               "Friends in party masks on the ruin bar crawl",
               "Crawl guests in sunglasses at the final club"],
-        specs=["Party Crawl", "⏱ 5.5 Hours", "3-4 Bars + Club", "Rated 5.0"],
+        specs=[("🍻", "3-4 Bars + Club", "Route pool:", "Humbák Borkápolna, Stifler Ház, Doboz, La Siesta, Lámpás and Blue Bird Karaoke Rooms, ending at Instant.", "Stops rotate from night to night."),
+              ("⏱", "5.5 Hours", "Starts 21:00, 21:30 or 22:00.", "Ends around 02:30 to 03:30.", "Fri 20 Nov 2026: €2.18 at 21:00 or 22:00, €4 at 21:30."),
+              ("🥃", "Welcome + Club Shots", "Free drinks:", "a welcome shot at the first ruin bar, then free shots at the club.", "Other drinks and food are extra."),
+              ("⭐", "Rated 5.0", "5.0 from 1,657 reviews.", "Guests mention guides who keep the group together between bars.", "Rating checked on 15 November 2026.")],
         best_for="Anyone who wants the best-reviewed big crawl: a welcome shot, 3-4 bars, then VIP club entry with free shots, for about €2.",
         pros=["The top rating of any big Budapest crawl: 5.0 from 1,657 reviews",
               "Cheap on a Friday too: €2.18 (21:00 or 22:00) or €4 (21:30)",
@@ -140,7 +146,10 @@ CRAWLS = [
               "Pinball machines in a Budapest ruin bar",
               "Pub crawl group photo outside the meeting point",
               "Neon-lit bar stage on the Budapest crawl"],
-        specs=["Party Crawl", "⏱ 5 or 6 Hours", "5-6 Venues", "English + Spanish"],
+        specs=[("🍻", "5-6 Venues", "From a pool of 10+:", "Doboz, Füge Udvar, KAZI, Humbák, Vörös Neon, La Siesta and Instant-Fogas (VIP entry).", "The route is picked each night by crowds and events."),
+              ("⏱", "5 or 6 Hours", "22:00 start (5 hours) or 21:00 start (6 hours).", "Both end around 03:00.", "Fri 20 Nov 2026: €2 for the 22:00 start, €6 for 21:00."),
+              ("🥃", "Tequila, Vodka, Pálinka", "Shots included", "along the route, plus drinking games at the first bar.", "The 1-hour open bar (long drinks, wine, beer) is a paid extra."),
+              ("🗣️", "English + Spanish", "Guides speak English and Spanish.", "You join a WhatsApp group at check-in with the route and map links.", "Local rules stop hosts guiding groups on the street.")],
         best_for="Late arrivals and people who want the longest night: join at 22:00 after dinner, or do the 6-hour version from 21:00.",
         pros=["A 22:00 start for people with dinner plans (€2 on the Friday we checked)",
               "Real shots included: tequila, vodka and pálinka",
@@ -183,7 +192,10 @@ CRAWLS = [
               "Group of friends on the Budapest pub crawl",
               "Crawl group in a Budapest ruin bar lounge",
               "Guests toasting in a Budapest cellar bar"],
-        specs=["Party Crawl", "⏱ 5 Hours", "3 Bars + Club", "Entrance Fees Incl."],
+        specs=[("🍺", "Starts in an Irish Pub", "Meet at Becketts Irish Bar,", "Liszt Ferenc tér 11, at 21:30.", "On New Year's Eve it meets at Klauzál utca 10."),
+              ("⏱", "5 Hours", "21:30 to around 02:30.", "One start time every night.", "Not for guests over 70, per the operator."),
+              ("🍻", "3 Bars + Club", "Listed route:", "Becketts, Doboz, La Siesta, Badabing, Füge Udvar, Place Bár, ending at Instant.", "Fast-track VIP entry at Instant-Fogas."),
+              ("🎟️", "Entrance Fees Incl.", "Included:", "free shots, entrance fees and drinking games.", "The food stop is pay-as-you-go. Private version: €100 per group of up to 12 (Fri 20 Nov 2026).")],
         best_for="People who'd rather meet in a real pub than on a street corner, and groups of up to 12 who want the same night to themselves.",
         pros=["Meets at Becketts Irish Bar on Liszt Ferenc tér: easy to find, easy to wait in",
               "Free shots, drinking games, entrance fees and fast-track entry at Instant-Fogas",
@@ -227,7 +239,10 @@ CRAWLS = [
               "Group with drinks in a vinyl-record bar",
               "Glasses raised in a toast on the cocktail crawl",
               "Night street toast on the hidden bars crawl"],
-        specs=["Cocktail Crawl", "⏱ 3 Hours", "5 Drinks Included", "Starts 20:00"],
+        specs=[("🍸", "Cocktail Crawl", "Hidden pubs and underground bars,", "with stories about Budapest's quirkier history between stops.", "Ends at a ruin bar on Klauzál utca."),
+              ("⏱", "3 Hours", "20:00 to around 23:00.", "Early enough to keep going, or to be up for a morning tour.", "Fri 20 Nov 2026: €24.67."),
+              ("🥂", "5 Drinks Included", "Pálinka, a tour cocktail, fröccs or beer, and 2 shots.", "The cocktail uses Hungarian ingredients and was made for this tour.", "Extra drinks are at your own cost."),
+              ("📍", "Szervita tér Start", "Meet at Szervita tér 8", "(District V), 3 minutes from Deák Ferenc tér.", "Finish: Klauzál utca 25, District VII.")],
         best_for="Couples and anyone past the shots-and-club stage: five real drinks, hidden bars and city stories, done by 23:00.",
         pros=["5 drinks included: pálinka, a cocktail made for the tour, fröccs or beer, and 2 more shots",
               "Starts at 20:00, ends around 23:00 at a ruin bar on Klauzál utca",
@@ -270,7 +285,10 @@ CRAWLS = [
               "Group of friends under a bar terrace at night",
               "Guest drinking a shot under neon lights",
               "Hen group posing in a Budapest bar"],
-        specs=["Private Crawl", "⏱ 4 Hours", "Min. 8 People", "Pickup Included"],
+        specs=[("🔒", "Private Crawl", "Only your group", "and a local guide, through 3-4 pubs and bars.", "The route is adapted to your group's vibe."),
+              ("⏱", "4 Hours", "4 hours,", "start time set when you book.", "Ends with entry to a nightclub or a strip club."),
+              ("👥", "Min. 8 People", "From €27 per person,", "so at least €216 for the group.", "Not bookable for fewer than 8."),
+              ("🚐", "Pickup Included", "Pickup in a set pickup area,", "confirmed when you book.", "Other transport is not included.")],
         best_for="Stag and hen groups of 8 or more: your own guide, pickup, 4 rounds of shots, then a nightclub or a strip club.",
         pros=["Only your group, with pickup included",
               "4 rounds of party shots across 3-4 pubs and bars",
@@ -442,7 +460,11 @@ def deck_card(t, s):
     blank = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
     for p, a in zip(ph[1:], t["alts"][1:]):
         imgs.append(f'<img alt="{a}" data-src="{p}" decoding="async" loading="lazy" {sizes} src="{blank}"/>')
-    specs = "\n".join(f'<span class="bpa-sp">{x}</span>' for x in t["specs"])
+    specs = "\n".join(
+        f'<details class="bpa-lang"><summary class="bpa-sp">{e} <span class="bpa-lang-label">{lab}</span>'
+        f'<span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>{lead}</strong> {txt}'
+        f'<span class="bpa-lang-note">{note}</span></div></details>'
+        for e, lab, lead, txt, note in t["specs"])
     place = (t["place"] if not t["map"] else
              f'<a class="bpa-kicker-map-link" href="https://www.google.com/maps/search/?api=1&amp;query={t["map"]}" onclick="event.stopPropagation()" rel="noopener noreferrer" target="_blank">{t["place"]}</a>')
     return f"""<!-- #{t['n']}: {t['title']} -->
@@ -719,6 +741,14 @@ def main():
     # --- JSON-LD ---
     s = re.sub(r'(<script id="ltt-schema-jsonld" type="application/ld\+json">).*?(</script>)',
                lambda m: m.group(1) + jsonld() + m.group(2), s, count=1, flags=re.S)
+
+    # spec-pill dropdowns: CSS + JS from the private boats page
+    boats = (ROOT / "best-private-boat-tours-budapest.html").read_text()
+    css = re.search(r'<style id="bpa-lang-css">.*?</style>', boats, re.S).group(0)
+    js = re.search(r'<script id="bpa-lang-js">.*?</script>', boats, re.S).group(0)
+    s = s.replace("</head>", css + "\n</head>", 1)
+    i = s.rfind("</body>")
+    s = s[:i] + js + "\n" + s[i:]
 
     assert "—" not in s, "em dash"
     PAGE.write_text(s)
