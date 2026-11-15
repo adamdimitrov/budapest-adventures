@@ -77,7 +77,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Stündlich 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Mi 18. Nov.:</strong> stündlich von 08:00 bis 16:00, €225. <strong>Sa 21. Nov.:</strong> 08:00 bis 15:00, €275.",
-                 "note": "Im GetYourGuide-Buchungskalender am 14. November 2026 geprüft; Zeiten und Wochenendpreise ändern sich je nach Saison."},
+                 "note": "Im Buchungskalender am 14. November 2026 geprüft; Zeiten und Wochenendpreise ändern sich je nach Saison."},
                 {"icon": "👥", "label": "Bis zu 20 Gäste",
                  "body": "<strong>Ein Preis für das ganze Boot.</strong> Bei €225 sind das rund €11 pro Person für 20 Gäste oder €112,50 pro Person zu zweit.",
                  "note": "Das Boot fasst 25 Passagiere; das Angebot gilt für Gruppen bis 20 Personen."},
@@ -148,8 +148,8 @@ COPY = {
             "duration": "50 Min.",
             "pills": [
                 {"icon": "🕒", "label": "Stündlich 10:00–18:00", "cls": "bpa-time",
-                 "body": "<strong>Sa 21. Nov.:</strong> stündlich von 10:00 bis 18:00. <strong>Mi 18. Nov.:</strong> nur noch 10:00 frei. An beiden Tagen €580.",
-                 "note": "Im GetYourGuide-Buchungskalender am 14. November 2026 geprüft; Zeiten ändern sich je nach Saison."},
+                 "body": "<strong>Sa 21. Nov.:</strong> stündlich von 10:00 bis 18:00. <strong>Mi 18. Nov.:</strong> 10:00. An beiden Tagen €580.",
+                 "note": "Im Buchungskalender am 14. November 2026 geprüft; Zeiten ändern sich je nach Saison."},
                 {"icon": "🥂", "label": "Ein Glas Sekt",
                  "body": "<strong>Inklusive:</strong> ein Glas ungarischer Sekt pro Gast (oder ein Softdrink).",
                  "note": "Wein, Champagner und Bier aus dem Kühlschrank kosten extra und sollten vorbestellt werden. Ein Gast zahlte 2021 7.000 Ft für eine Flasche Prosecco."},
@@ -225,7 +225,7 @@ COPY = {
                  "note": "Spirituosen und andere Getränke gibt es an der Bar. Keine mitgebrachten Speisen oder Getränke."},
                 {"icon": "🕒", "label": "Stündlich 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Mi 18. Nov.:</strong> stündlich von 08:00 bis 16:00, €450. <strong>Sa 21. Nov.:</strong> 08:00 bis 15:00, €550.",
-                 "note": "Im GetYourGuide-Buchungskalender am 14. November 2026 geprüft; Zeiten und Wochenendpreise ändern sich je nach Saison."},
+                 "note": "Im Buchungskalender am 14. November 2026 geprüft; Zeiten und Wochenendpreise ändern sich je nach Saison."},
                 {"icon": "🔊", "label": "Musikanlage &amp; WLAN",
                  "body": "<strong>An Bord:</strong> Bar, Musikanlage, Musik, Partylicht, Heizung, WLAN und 220-V-Steckdosen.",
                  "note": "Ein modernes niederländisches Boot, umgebaut für private Events."},
@@ -294,7 +294,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Start 08:00–23:00", "cls": "bpa-time",
                  "body": "<strong>Startzeit frei wählbar</strong> zwischen 08:00 und 23:00, das einzige Angebot hier mit späten Abendterminen.",
-                 "note": "Zeitfenster laut GetYourGuide-Buchungskalender für Mi 18. und Sa 21. Nov. 2026."},
+                 "note": "Zeitfenster laut Buchungskalender für Mi 18. und Sa 21. Nov. 2026."},
                 {"icon": "🛥️", "label": "2 Boote: klassisch oder Boutique",
                  "body": "<strong>Klassisches Boot (bis 35):</strong> €495 Mi, €540 Sa. <strong>Boutique-Boot (bis 12):</strong> €675 Mi, €765 Sa, mit Begrüßungsgetränk.",
                  "note": "Preise inklusive 10 % Rabatt, angezeigt am 14. November 2026. Das klassische Boot auf den Angebotsfotos ist die Budapest Klára, dasselbe Boot wie in Karte #1."},
@@ -329,7 +329,7 @@ COPY = {
             ],
             "reviews": [],
             "how": [
-                "📍 <strong>Zwei Abfahrtsorte</strong>, je nach gewähltem Boot. GetYourGuide zeigt die genaue Adresse, wenn Sie eine Option wählen.",
+                "📍 <strong>Zwei Abfahrtsorte</strong>, je nach gewähltem Boot. Die genaue Adresse sehen Sie, wenn Sie bei der Buchung eine Option wählen.",
                 "💬 Schreiben Sie dem Anbieter über GetYourGuide, wenn Sie an einem bestimmten Anleger zusteigen möchten.",
             ],
             "walk": [

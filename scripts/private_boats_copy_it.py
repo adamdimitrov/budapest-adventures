@@ -77,7 +77,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Ogni ora 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Mer 18 nov:</strong> ogni ora dalle 08:00 alle 16:00, €225. <strong>Sab 21 nov:</strong> dalle 08:00 alle 15:00, €275.",
-                 "note": "Verificato sul calendario di prenotazione di GetYourGuide il 14 novembre 2026; orari e prezzi del weekend cambiano con la stagione."},
+                 "note": "Verificato sul calendario di prenotazione il 14 novembre 2026; orari e prezzi del weekend cambiano con la stagione."},
                 {"icon": "👥", "label": "Fino a 20 ospiti",
                  "body": "<strong>Un prezzo per tutta la barca.</strong> A €225 sono circa €11 a persona per 20 ospiti, o €112,50 a testa per una coppia.",
                  "note": "La barca porta 25 passeggeri; l'offerta è venduta per gruppi fino a 20."},
@@ -149,7 +149,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Ogni ora 10:00–18:00", "cls": "bpa-time",
                  "body": "<strong>Sab 21 nov:</strong> ogni ora dalle 10:00 alle 18:00. <strong>Mer 18 nov:</strong> libera solo alle 10:00. €580 entrambi i giorni.",
-                 "note": "Verificato sul calendario di prenotazione di GetYourGuide il 14 novembre 2026; gli orari cambiano con la stagione."},
+                 "note": "Verificato sul calendario di prenotazione il 14 novembre 2026; gli orari cambiano con la stagione."},
                 {"icon": "🥂", "label": "Un calice di spumante",
                  "body": "<strong>Incluso:</strong> un calice di spumante ungherese a testa (o una bibita analcolica).",
                  "note": "Vino, champagne e birra dal frigo sono extra e vanno ordinati in anticipo. Un ospite ha pagato 7.000 Ft una bottiglia di prosecco nel 2021."},
@@ -225,7 +225,7 @@ COPY = {
                  "note": "Superalcolici e altre bevande al bar. Vietato portare cibo o bevande."},
                 {"icon": "🕒", "label": "Ogni ora 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Mer 18 nov:</strong> ogni ora dalle 08:00 alle 16:00, €450. <strong>Sab 21 nov:</strong> dalle 08:00 alle 15:00, €550.",
-                 "note": "Verificato sul calendario di prenotazione di GetYourGuide il 14 novembre 2026; orari e prezzi del weekend cambiano con la stagione."},
+                 "note": "Verificato sul calendario di prenotazione il 14 novembre 2026; orari e prezzi del weekend cambiano con la stagione."},
                 {"icon": "🔊", "label": "Impianto audio &amp; Wi-Fi",
                  "body": "<strong>A bordo:</strong> bar, impianto audio, musica, luci da festa, riscaldamento, Wi-Fi e prese da 220 V.",
                  "note": "Una moderna barca olandese ristrutturata per eventi privati."},
@@ -294,7 +294,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Partenza 08:00–23:00", "cls": "bpa-time",
                  "body": "<strong>Scegli tu l'orario di partenza</strong> tra le 08:00 e le 23:00, l'unica offerta qui con orari serali.",
-                 "note": "Fascia oraria indicata sul calendario di prenotazione di GetYourGuide per mer 18 e sab 21 nov 2026."},
+                 "note": "Fascia oraria indicata sul calendario di prenotazione per mer 18 e sab 21 nov 2026."},
                 {"icon": "🛥️", "label": "2 barche: classica o boutique",
                  "body": "<strong>Barca classica (fino a 35):</strong> €495 mer, €540 sab. <strong>Barca boutique (fino a 12):</strong> €675 mer, €765 sab, con drink di benvenuto.",
                  "note": "Prezzi con lo sconto del 10% mostrato il 14 novembre 2026. La barca classica nelle foto è la Budapest Klára, la stessa della scheda n. 1."},
@@ -329,7 +329,7 @@ COPY = {
             ],
             "reviews": [],
             "how": [
-                "📍 <strong>Due punti di partenza</strong>, a seconda della barca scelta. GetYourGuide mostra l'indirizzo esatto quando selezioni un'opzione.",
+                "📍 <strong>Due punti di partenza</strong>, a seconda della barca scelta. L’indirizzo esatto compare quando scegli un’opzione al momento della prenotazione.",
                 "💬 Scrivi all'operatore tramite GetYourGuide se vuoi imbarcarti a un pontile preciso.",
             ],
             "walk": [

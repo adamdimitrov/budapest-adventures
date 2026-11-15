@@ -77,7 +77,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Cada hora 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Mié 18 nov:</strong> cada hora de 08:00 a 16:00, 225 €. <strong>Sáb 21 nov:</strong> de 08:00 a 15:00, 275 €.",
-                 "note": "Comprobado en el calendario de reservas de GetYourGuide el 14 de noviembre de 2026; horarios y precios de fin de semana cambian según la temporada."},
+                 "note": "Comprobado en el calendario de reservas el 14 de noviembre de 2026; horarios y precios de fin de semana cambian según la temporada."},
                 {"icon": "👥", "label": "Hasta 20 personas",
                  "body": "<strong>Un precio por todo el barco.</strong> A 225 € son unos 11 € por persona para 20, o 112,50 € cada uno para una pareja.",
                  "note": "El barco admite 25 pasajeros; la oferta se vende para grupos de hasta 20."},
@@ -149,7 +149,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Cada hora 10:00–18:00", "cls": "bpa-time",
                  "body": "<strong>Sáb 21 nov:</strong> cada hora de 10:00 a 18:00. <strong>Mié 18 nov:</strong> solo quedaba las 10:00. 580 € ambos días.",
-                 "note": "Comprobado en el calendario de reservas de GetYourGuide el 14 de noviembre de 2026; los horarios cambian según la temporada."},
+                 "note": "Comprobado en el calendario de reservas el 14 de noviembre de 2026; los horarios cambian según la temporada."},
                 {"icon": "🥂", "label": "Una copa de espumoso",
                  "body": "<strong>Incluido:</strong> una copa de vino espumoso húngaro por persona (o un refresco).",
                  "note": "Vino, champán y cerveza de la nevera se pagan aparte y conviene pedirlos con antelación. Un cliente pagó 7.000 Ft por una botella de prosecco en 2021."},
@@ -225,7 +225,7 @@ COPY = {
                  "note": "Licores y otras bebidas en el bar. Prohibido llevar comida o bebida."},
                 {"icon": "🕒", "label": "Cada hora 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Mié 18 nov:</strong> cada hora de 08:00 a 16:00, 450 €. <strong>Sáb 21 nov:</strong> de 08:00 a 15:00, 550 €.",
-                 "note": "Comprobado en el calendario de reservas de GetYourGuide el 14 de noviembre de 2026; horarios y precios de fin de semana cambian según la temporada."},
+                 "note": "Comprobado en el calendario de reservas el 14 de noviembre de 2026; horarios y precios de fin de semana cambian según la temporada."},
                 {"icon": "🔊", "label": "Equipo de sonido &amp; Wi-Fi",
                  "body": "<strong>A bordo:</strong> bar, equipo de sonido, música, luces de fiesta, calefacción, Wi-Fi y enchufes de 220 V.",
                  "note": "Un barco holandés moderno reformado para eventos privados."},
@@ -294,7 +294,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Salida 08:00–23:00", "cls": "bpa-time",
                  "body": "<strong>Elige tu hora de salida</strong> entre las 08:00 y las 23:00, la única oferta de aquí con horarios nocturnos.",
-                 "note": "Franja mostrada en el calendario de reservas de GetYourGuide para el mié 18 y el sáb 21 de nov de 2026."},
+                 "note": "Franja mostrada en el calendario de reservas para el mié 18 y el sáb 21 de nov de 2026."},
                 {"icon": "🛥️", "label": "2 barcos: clásico o boutique",
                  "body": "<strong>Barco clásico (hasta 35):</strong> 495 € mié, 540 € sáb. <strong>Barco boutique (hasta 12):</strong> 675 € mié, 765 € sáb, con bebida de bienvenida.",
                  "note": "Precios con el 10 % de descuento mostrado el 14 de noviembre de 2026. El barco clásico de las fotos es el Budapest Klára, el mismo de la tarjeta n.º 1."},
@@ -329,7 +329,7 @@ COPY = {
             ],
             "reviews": [],
             "how": [
-                "📍 <strong>Dos puntos de salida</strong>, según el barco elegido. GetYourGuide muestra la dirección exacta al seleccionar una opción.",
+                "📍 <strong>Dos puntos de salida</strong>, según el barco elegido. La dirección exacta aparece al elegir una opción en la reserva.",
                 "💬 Escribe al operador a través de GetYourGuide si quieres embarcar en un muelle concreto.",
             ],
             "walk": [

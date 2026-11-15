@@ -77,7 +77,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Óránként 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Nov. 18., szerda:</strong> óránként 08:00 és 16:00 között, 225 €. <strong>Nov. 21., szombat:</strong> 08:00 és 15:00 között, 275 €.",
-                 "note": "A GetYourGuide foglalási naptárában ellenőrizve 2026. november 14-én; az időpontok és a hétvégi árak szezononként változnak."},
+                 "note": "A foglalási naptárban ellenőrizve 2026. november 14-én; az időpontok és a hétvégi árak szezononként változnak."},
                 {"icon": "👥", "label": "Legfeljebb 20 fő",
                  "body": "<strong>Egy ár az egész hajóért.</strong> 225 €-val ez 20 főnél kb. 11 € fejenként, egy párnál 112,50 € fejenként.",
                  "note": "A hajó 25 utast visz; az ajánlat legfeljebb 20 fős csoportoknak szól."},
@@ -148,8 +148,8 @@ COPY = {
             "duration": "50 perc",
             "pills": [
                 {"icon": "🕒", "label": "Óránként 10:00–18:00", "cls": "bpa-time",
-                 "body": "<strong>Nov. 21., szombat:</strong> óránként 10:00 és 18:00 között. <strong>Nov. 18., szerda:</strong> már csak 10:00 volt szabad. Mindkét nap 580 €.",
-                 "note": "A GetYourGuide foglalási naptárában ellenőrizve 2026. november 14-én; az időpontok szezononként változnak."},
+                 "body": "<strong>Nov. 21., szombat:</strong> óránként 10:00 és 18:00 között. <strong>Nov. 18., szerda:</strong> 10:00. Mindkét nap 580 €.",
+                 "note": "A foglalási naptárban ellenőrizve 2026. november 14-én; az időpontok szezononként változnak."},
                 {"icon": "🥂", "label": "Egy pohár pezsgő",
                  "body": "<strong>Benne van:</strong> fejenként egy pohár magyar pezsgő (vagy üdítő).",
                  "note": "A hűtőben lévő bor, pezsgő és sör külön fizetendő, érdemes előre rendelni. Egy vendég 2021-ben 7000 Ft-ot fizetett egy üveg proseccóért."},
@@ -225,7 +225,7 @@ COPY = {
                  "note": "Röviditalt és más italokat a bárban vehetsz. Saját étel és ital nem vihető fel."},
                 {"icon": "🕒", "label": "Óránként 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Nov. 18., szerda:</strong> óránként 08:00 és 16:00 között, 450 €. <strong>Nov. 21., szombat:</strong> 08:00 és 15:00 között, 550 €.",
-                 "note": "A GetYourGuide foglalási naptárában ellenőrizve 2026. november 14-én; az időpontok és a hétvégi árak szezononként változnak."},
+                 "note": "A foglalási naptárban ellenőrizve 2026. november 14-én; az időpontok és a hétvégi árak szezononként változnak."},
                 {"icon": "🔊", "label": "Hangosítás &amp; Wi-Fi",
                  "body": "<strong>A fedélzeten:</strong> bár, hangosítás, zene, partifények, fűtés, Wi-Fi és 220 V-os konnektorok.",
                  "note": "Modern holland hajó, magánrendezvényekre átalakítva."},
@@ -294,7 +294,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Indulás 08:00–23:00", "cls": "bpa-time",
                  "body": "<strong>Te választod meg az indulást</strong> 08:00 és 23:00 között, ez az egyetlen ajánlat itt késő esti időpontokkal.",
-                 "note": "A GetYourGuide foglalási naptárában látható időablak 2026. nov. 18-ra (szerda) és 21-re (szombat)."},
+                 "note": "A foglalási naptárban látható időablak 2026. nov. 18-ra (szerda) és 21-re (szombat)."},
                 {"icon": "🛥️", "label": "2 hajó: klasszikus vagy butik",
                  "body": "<strong>Klasszikus hajó (35 főig):</strong> 495 € szerdán, 540 € szombaton. <strong>Butik hajó (12 főig):</strong> 675 € szerdán, 765 € szombaton, üdvözlőitallal.",
                  "note": "Az árak a 2026. november 14-én látható 10%-os kedvezménnyel. A fotókon szereplő klasszikus hajó a Budapest Klára, ugyanaz, mint az 1. kártyán."},
@@ -329,7 +329,7 @@ COPY = {
             ],
             "reviews": [],
             "how": [
-                "📍 <strong>Két indulási hely</strong> a választott hajótól függően. A GetYourGuide az opció kiválasztásakor mutatja a pontos címet.",
+                "📍 <strong>Két indulási hely</strong> a választott hajótól függően. A pontos cím a foglaláskor, az opció kiválasztásakor jelenik meg.",
                 "💬 Ha egy adott kikötőben szállnál fel, írj a cégnek a GetYourGuide-on keresztül.",
             ],
             "walk": [

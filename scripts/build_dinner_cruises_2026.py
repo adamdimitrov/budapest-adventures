@@ -15,6 +15,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from dinner_blocks import balanced, deck_card, details_card, all_spans  # noqa: E402
 import dinner_cruises_2026_data as D  # noqa: E402
+import dinner_menus_2026 as M  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAGE = os.path.join(ROOT, "best-dinner-cruises-budapest.html")
@@ -200,6 +201,7 @@ def deck_html(i, c):
 {tested_pill}{chr(10).join(c["pills"])}
 </div>
 <div class="bpa-best-for bpa-pickskip"><span class="bpa-pick">✓ Pick it</span> {c["pick"]} <span class="bpa-skip">✕ Skip it</span> {c["skip"]}</div>
+{M.opts_html(c["key"]) if c["key"] in M.OPTS else ""}{M.FOOD[c["key"]]}
 </div>
 <div class="bpa-cta-cell">
 <div>
@@ -410,7 +412,7 @@ def about(b, old_h4, new_h4, text):
 
 def fix_legenda_dinner(b):
     b = must_re(b, r"<p>From June to August the best evenings sell out.*?</p>",
-                "<p>Book a few days ahead: on 14 November 2026, GetYourGuide showed <strong>only 1 spot left</strong> for Saturday 28 November.</p>")
+                "<p>Book a few days ahead, especially for weekend evenings.</p>")
     b = about(b, "About Legenda City Cruises", "About Legenda City Cruises",
               "Legenda City Cruises runs sightseeing boats and this candlelit dinner cruise from its own floating dock at Vigadó tér (Dock 7).")
     b = b.replace("checked Nov 10, 2026", "checked Nov 14, 2026")
@@ -443,7 +445,7 @@ def fix_hungaria(b):
     b = re.sub(r'href="https://budapestxplore\.com/[^"]*"', 'href="%s"' % gyg(CARD_BY_KEY["hungaria-koncert-dinner"], "menu"), b)
     b = b.replace("Chicken leg paprikash, potato gratin, fresh salad, pickles", "Chicken breast paprikash, potato gratin, fresh salad, pickles")
     b = b.replace("Source: Hungária Koncert's 2026 served-dinner menus (via reseller listing), checked Nov 10, 2026",
-                  "Source: Hungária Koncert's GetYourGuide listing, checked Nov 14, 2026")
+                  "Source: Hungária Koncert's listing, checked Nov 14, 2026")
     b = b.replace("Since summer 2026 Hungária Koncert serves", "Hungária Koncert now serves")
     b = b.replace("Served at your table since summer 2026 (was a buffet)", "Served at your table (it was a buffet when I tested it)")
     b = must_re(b, r"<p>Boarding opens at 18:30, half an hour before departure\. <strong>Get there 30 to 45 minutes early</strong>:",
@@ -456,6 +458,23 @@ def fix_hungaria(b):
 CARD_BY_KEY = {c["key"]: c for c in D.CARDS}
 FIXES = {"legenda-candlelit": fix_legenda_dinner, "silverline-dinner": fix_silverline_dinner,
          "hungaria-koncert-dinner": fix_hungaria}
+
+
+def menu_templates(cards, dets):
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(dets, "html.parser")
+    out = []
+    for c in cards:
+        k = c["key"]
+        link = book_url(c, "menu")
+        if c["tested"]:
+            inner = soup.find(id=c["anchor"]).select_one(".dc-carte-wrap").decode_contents()
+        else:
+            inner = M.cartes(k, link)
+        op, price, sub = M.MODAL[k]
+        out.append('<template data-link="%s" data-op="%s" data-price="%s" data-sub="%s" data-title="%s" id="dc-menu-%s">'
+                   '<div class="dc-carte-wrap">%s</div></template>' % (link, op, price, sub, c["title"], M.MENU_ID[k], inner))
+    return "".join(out)
 
 
 def details_html(i, c):
@@ -520,6 +539,10 @@ def main():
     n = len(cards)
     deck = "\n".join(deck_html(i, c) for i, c in enumerate(cards, 1))
     dets = "".join(details_html(i, c) for i, c in enumerate(cards, 1))
+    # the breakdown's variant selector is the same block as the deck's
+    for c in cards:
+        if c["key"] in M.OPTS:
+            dets = must_re(dets, r'<div class="dc-opts"[^>]*>(?:<a .*?</a>)+</div>', lambda m, k=c["key"]: M.opts_html(k, "margin:0 0 16px"))
     deck, dets = no_em_dash(deck), no_em_dash(dets)
 
     cs = all_spans(page, "card")
@@ -583,8 +606,12 @@ def main():
            "shortTitles": [c["short"].replace("&amp;", "&") for c in cards]}
     page = re.sub(r"window\.LTT_PAGE_CONFIG = \{.*?\};", "window.LTT_PAGE_CONFIG = %s;" % json.dumps(cfg, ensure_ascii=False), page, count=1, flags=re.S)
 
-    # the deck's "Full menu" buttons are gone, so their stale menu templates go too
+    # menu modal: one template per card, opened by the deck's "Full menu" buttons
     page = re.sub(r'<template id="dc-menu-[^"]*"[^>]*>.*?</template>', "", page, flags=re.S)
+    page = page.replace('<div class="dc-modal" hidden id="dc-modal">', menu_templates(cards, dets) + '<div class="dc-modal" hidden id="dc-modal">', 1)
+    page = page.replace('<style id="dc-menu-css">', '<style id="dc-menu-css">\n' + M.OPTS_CSS, 1)
+    page = page.replace("/bpa-tracking.js?v=20261113b", "/bpa-tracking.js?v=20261114r")
+    page = page.replace("+' — ask the crew'", "+': ask the crew'")
 
     # sticky bar starts on card 1
     for tid, pid, cid in (("sticky-name", "sticky-price", "sticky-cta-btn"),

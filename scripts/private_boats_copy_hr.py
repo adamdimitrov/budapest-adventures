@@ -80,7 +80,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Svaki sat 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Sri 18. stu:</strong> svaki sat od 08:00 do 16:00, €225. <strong>Sub 21. stu:</strong> od 08:00 do 15:00, €275.",
-                 "note": "Provjereno u kalendaru rezervacija GetYourGuidea 14. studenoga 2026.; vremena i vikend cijene mijenjaju se po sezoni."},
+                 "note": "Provjereno u kalendaru rezervacija 14. studenoga 2026.; vremena i vikend cijene mijenjaju se po sezoni."},
                 {"icon": "👥", "label": "Do 20 gostiju",
                  "body": "<strong>Jedna cijena za cijeli brod.</strong> Uz €225 to je oko €11 po osobi za grupu od 20, ili €112,50 po osobi za par.",
                  "note": "Sam brod prima 25 putnika; ponuda ga prodaje za grupe do 20."},
@@ -152,7 +152,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Svaki sat 10:00–18:00", "cls": "bpa-time",
                  "body": "<strong>Sub 21. stu:</strong> svaki sat od 10:00 do 18:00. <strong>Sri 18. stu:</strong> slobodno još samo u 10:00. €580 oba dana.",
-                 "note": "Provjereno u kalendaru rezervacija GetYourGuidea 14. studenoga 2026.; vremena se mijenjaju po sezoni."},
+                 "note": "Provjereno u kalendaru rezervacija 14. studenoga 2026.; vremena se mijenjaju po sezoni."},
                 {"icon": "🥂", "label": "Čaša pjenušca",
                  "body": "<strong>Uključeno:</strong> jedna čaša mađarskog pjenušca po osobi (ili bezalkoholno piće).",
                  "note": "Vino, šampanjac i pivo iz hladnjaka plaćaju se dodatno i najbolje ih je naručiti unaprijed. Jedan gost platio je 2021. godine 7.000 Ft za bocu prosecca."},
@@ -228,7 +228,7 @@ COPY = {
                  "note": "Žestoka pića i ostala pića prodaju se na baru. Bez vlastite hrane i pića."},
                 {"icon": "🕒", "label": "Svaki sat 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Sri 18. stu:</strong> svaki sat od 08:00 do 16:00, €450. <strong>Sub 21. stu:</strong> od 08:00 do 15:00, €550.",
-                 "note": "Provjereno u kalendaru rezervacija GetYourGuidea 14. studenoga 2026.; vremena i vikend cijene mijenjaju se po sezoni."},
+                 "note": "Provjereno u kalendaru rezervacija 14. studenoga 2026.; vremena i vikend cijene mijenjaju se po sezoni."},
                 {"icon": "🔊", "label": "Ozvučenje &amp; Wi-Fi",
                  "body": "<strong>Na brodu:</strong> bar, ozvučenje, glazba, svjetla za zabavu, grijanje, Wi-Fi i utičnice od 220 V.",
                  "note": "Moderni nizozemski brod preuređen za privatna događanja."},
@@ -297,7 +297,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Bilo kada 08:00–23:00", "cls": "bpa-time",
                  "body": "<strong>Sami odaberite vrijeme polaska</strong> između 08:00 i 23:00, jedina ponuda ovdje s kasnim večernjim terminima.",
-                 "note": "Raspon prikazan u kalendaru rezervacija GetYourGuidea za sri 18. i sub 21. stu 2026."},
+                 "note": "Raspon prikazan u kalendaru rezervacija za sri 18. i sub 21. stu 2026."},
                 {"icon": "🛥️", "label": "2 broda: klasični ili boutique",
                  "body": "<strong>Klasični brod (do 35):</strong> €495 sri, €540 sub. <strong>Boutique brod (do 12):</strong> €675 sri, €765 sub, s pićem dobrodošlice.",
                  "note": "Cijene uključuju popust od 10% prikazan 14. studenoga 2026. Klasični brod na fotografijama ponude je Budapest Klára, isti brod kao na kartici #1."},

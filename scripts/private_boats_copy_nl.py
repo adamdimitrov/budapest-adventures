@@ -80,7 +80,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Elk uur 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Wo 18 nov:</strong> elk uur van 08:00 tot 16:00, €225. <strong>Za 21 nov:</strong> 08:00 tot 15:00, €275.",
-                 "note": "Gecontroleerd in de boekingskalender van GetYourGuide op 14 november 2026; tijden en weekendprijzen wisselen per seizoen."},
+                 "note": "Gecontroleerd in de boekingskalender op 14 november 2026; tijden en weekendprijzen wisselen per seizoen."},
                 {"icon": "👥", "label": "Tot 20 gasten",
                  "body": "<strong>Eén prijs voor de hele boot.</strong> Bij €225 is dat zo'n €11 per persoon voor een groep van 20, of €112,50 per persoon voor een stel.",
                  "note": "De boot zelf neemt 25 passagiers mee; het aanbod verkoopt hem voor groepen tot 20."},
@@ -151,8 +151,8 @@ COPY = {
             "duration": "50 min.",
             "pills": [
                 {"icon": "🕒", "label": "Elk uur 10:00–18:00", "cls": "bpa-time",
-                 "body": "<strong>Za 21 nov:</strong> elk uur van 10:00 tot 18:00. <strong>Wo 18 nov:</strong> alleen 10:00 nog vrij. €580 op beide dagen.",
-                 "note": "Gecontroleerd in de boekingskalender van GetYourGuide op 14 november 2026; tijden wisselen per seizoen."},
+                 "body": "<strong>Za 21 nov:</strong> elk uur van 10:00 tot 18:00. <strong>Wo 18 nov:</strong> 10:00. €580 op beide dagen.",
+                 "note": "Gecontroleerd in de boekingskalender op 14 november 2026; tijden wisselen per seizoen."},
                 {"icon": "🥂", "label": "Glas mousserende wijn",
                  "body": "<strong>Inbegrepen:</strong> één glas Hongaarse mousserende wijn per persoon (of een frisdrank).",
                  "note": "Wijn, champagne en bier uit de koelkast kosten extra en kunt u het best vooraf bestellen. Een gast betaalde in 2021 7.000 Ft voor een fles prosecco."},
@@ -228,7 +228,7 @@ COPY = {
                  "note": "Sterke drank en andere drankjes worden aan de bar verkocht. Geen eigen eten of drinken."},
                 {"icon": "🕒", "label": "Elk uur 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Wo 18 nov:</strong> elk uur van 08:00 tot 16:00, €450. <strong>Za 21 nov:</strong> 08:00 tot 15:00, €550.",
-                 "note": "Gecontroleerd in de boekingskalender van GetYourGuide op 14 november 2026; tijden en weekendprijzen wisselen per seizoen."},
+                 "note": "Gecontroleerd in de boekingskalender op 14 november 2026; tijden en weekendprijzen wisselen per seizoen."},
                 {"icon": "🔊", "label": "Geluidsinstallatie &amp; wifi",
                  "body": "<strong>Aan boord:</strong> bar, geluidsinstallatie, muziek, feestverlichting, verwarming, wifi en 220V-stopcontacten.",
                  "note": "Een moderne Nederlandse boot, omgebouwd voor privé-evenementen."},
@@ -297,7 +297,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Vrije start 08:00–23:00", "cls": "bpa-time",
                  "body": "<strong>Kies zelf uw starttijd</strong> tussen 08:00 en 23:00, het enige aanbod hier met tijden laat op de avond.",
-                 "note": "Tijdvenster in de boekingskalender van GetYourGuide voor wo 18 en za 21 nov 2026."},
+                 "note": "Tijdvenster in de boekingskalender voor wo 18 en za 21 nov 2026."},
                 {"icon": "🛥️", "label": "2 boten: klassiek of boutique",
                  "body": "<strong>Klassieke boot (tot 35):</strong> €495 wo, €540 za. <strong>Boutiqueboot (tot 12):</strong> €675 wo, €765 za, met een welkomstdrankje.",
                  "note": "Prijzen inclusief een korting van 10% die op 14 november 2026 werd getoond. De klassieke boot op de foto's is de Budapest Klára, dezelfde boot als kaart #1."},
@@ -332,7 +332,7 @@ COPY = {
             ],
             "reviews": [],
             "how": [
-                "📍 <strong>Twee vertrekpunten</strong>, afhankelijk van de gekozen boot. GetYourGuide toont het exacte adres wanneer u een optie kiest.",
+                "📍 <strong>Twee vertrekpunten</strong>, afhankelijk van de gekozen boot. Het exacte adres ziet u wanneer u bij het boeken een optie kiest.",
                 "💬 Stuur de aanbieder een bericht via GetYourGuide als u bij een bepaalde steiger wilt instappen.",
             ],
             "walk": [

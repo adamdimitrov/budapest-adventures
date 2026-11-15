@@ -80,7 +80,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Din oră în oră 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Mie 18 nov:</strong> din oră în oră între 08:00 și 16:00, €225. <strong>Sâm 21 nov:</strong> 08:00 până la 15:00, €275.",
-                 "note": "Verificat în calendarul de rezervări GetYourGuide pe 14 noiembrie 2026; orele și prețurile de weekend se schimbă în funcție de sezon."},
+                 "note": "Verificat în calendarul de rezervări pe 14 noiembrie 2026; orele și prețurile de weekend se schimbă în funcție de sezon."},
                 {"icon": "👥", "label": "Până la 20 de persoane",
                  "body": "<strong>Un singur preț pentru toată barca.</strong> La €225 înseamnă circa €11 de persoană pentru un grup de 20, sau €112,50 de persoană pentru un cuplu.",
                  "note": "Barca are 25 de locuri; oferta o vinde pentru grupuri de până la 20."},
@@ -152,7 +152,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Din oră în oră 10:00–18:00", "cls": "bpa-time",
                  "body": "<strong>Sâm 21 nov:</strong> din oră în oră între 10:00 și 18:00. <strong>Mie 18 nov:</strong> mai era liber doar 10:00. €580 în ambele zile.",
-                 "note": "Verificat în calendarul de rezervări GetYourGuide pe 14 noiembrie 2026; orele se schimbă în funcție de sezon."},
+                 "note": "Verificat în calendarul de rezervări pe 14 noiembrie 2026; orele se schimbă în funcție de sezon."},
                 {"icon": "🥂", "label": "Un pahar de vin spumant",
                  "body": "<strong>Inclus:</strong> un pahar de vin spumant maghiar de persoană (sau o băutură răcoritoare).",
                  "note": "Vinul, șampania și berea din frigider se plătesc separat și e bine să le comandați din timp. Un client a plătit 7.000 Ft pentru o sticlă de prosecco în 2021."},
@@ -228,7 +228,7 @@ COPY = {
                  "note": "Tăria și alte băuturi se vând la bar. Fără mâncare sau băutură proprie."},
                 {"icon": "🕒", "label": "Din oră în oră 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Mie 18 nov:</strong> din oră în oră între 08:00 și 16:00, €450. <strong>Sâm 21 nov:</strong> 08:00 până la 15:00, €550.",
-                 "note": "Verificat în calendarul de rezervări GetYourGuide pe 14 noiembrie 2026; orele și prețurile de weekend se schimbă în funcție de sezon."},
+                 "note": "Verificat în calendarul de rezervări pe 14 noiembrie 2026; orele și prețurile de weekend se schimbă în funcție de sezon."},
                 {"icon": "🔊", "label": "Sistem audio &amp; Wi-Fi",
                  "body": "<strong>La bord:</strong> bar, sistem audio, muzică, lumini de petrecere, încălzire, Wi-Fi și prize de 220 V.",
                  "note": "O barcă olandeză modernă, amenajată pentru evenimente private."},
@@ -297,7 +297,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Orice oră 08:00–23:00", "cls": "bpa-time",
                  "body": "<strong>Alegeți singuri ora de plecare</strong> între 08:00 și 23:00, singura ofertă de aici cu plecări seara târziu.",
-                 "note": "Intervalul afișat în calendarul de rezervări GetYourGuide pentru mie 18 și sâm 21 nov 2026."},
+                 "note": "Intervalul afișat în calendarul de rezervări pentru mie 18 și sâm 21 nov 2026."},
                 {"icon": "🛥️", "label": "2 bărci: clasică sau boutique",
                  "body": "<strong>Barca clasică (până la 35):</strong> €495 mie, €540 sâm. <strong>Barca boutique (până la 12):</strong> €675 mie, €765 sâm, cu o băutură de bun venit.",
                  "note": "Prețurile includ reducerea de 10% afișată pe 14 noiembrie 2026. Barca clasică din fotografiile ofertei este Budapest Klára, aceeași barcă ca la cardul #1."},

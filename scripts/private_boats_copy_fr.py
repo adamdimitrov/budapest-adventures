@@ -77,7 +77,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Toutes les heures 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Mer. 18 nov. :</strong> toutes les heures de 08:00 à 16:00, 225 €. <strong>Sam. 21 nov. :</strong> 08:00 à 15:00, 275 €.",
-                 "note": "Vérifié sur le calendrier de réservation GetYourGuide le 14 novembre 2026 ; horaires et prix du week-end varient selon la saison."},
+                 "note": "Vérifié sur le calendrier de réservation le 14 novembre 2026 ; horaires et prix du week-end varient selon la saison."},
                 {"icon": "👥", "label": "Jusqu'à 20 personnes",
                  "body": "<strong>Un prix pour tout le bateau.</strong> À 225 €, cela fait environ 11 € par personne pour 20, ou 112,50 € chacun pour un couple.",
                  "note": "Le bateau accueille 25 passagers ; l'offre est vendue pour des groupes jusqu'à 20."},
@@ -149,7 +149,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Toutes les heures 10:00–18:00", "cls": "bpa-time",
                  "body": "<strong>Sam. 21 nov. :</strong> toutes les heures de 10:00 à 18:00. <strong>Mer. 18 nov. :</strong> seul 10:00 restait libre. 580 € les deux jours.",
-                 "note": "Vérifié sur le calendrier de réservation GetYourGuide le 14 novembre 2026 ; les horaires varient selon la saison."},
+                 "note": "Vérifié sur le calendrier de réservation le 14 novembre 2026 ; les horaires varient selon la saison."},
                 {"icon": "🥂", "label": "Une coupe de mousseux",
                  "body": "<strong>Inclus :</strong> une coupe de vin mousseux hongrois par personne (ou une boisson sans alcool).",
                  "note": "Vin, champagne et bière du frigo sont en supplément, à commander à l'avance. Un client a payé 7 000 Ft une bouteille de prosecco en 2021."},
@@ -225,7 +225,7 @@ COPY = {
                  "note": "Alcools forts et autres boissons au bar. Nourriture et boissons extérieures interdites."},
                 {"icon": "🕒", "label": "Toutes les heures 08:00–16:00", "cls": "bpa-time",
                  "body": "<strong>Mer. 18 nov. :</strong> toutes les heures de 08:00 à 16:00, 450 €. <strong>Sam. 21 nov. :</strong> 08:00 à 15:00, 550 €.",
-                 "note": "Vérifié sur le calendrier de réservation GetYourGuide le 14 novembre 2026 ; horaires et prix du week-end varient selon la saison."},
+                 "note": "Vérifié sur le calendrier de réservation le 14 novembre 2026 ; horaires et prix du week-end varient selon la saison."},
                 {"icon": "🔊", "label": "Sono &amp; Wi-Fi",
                  "body": "<strong>À bord :</strong> bar, sono, musique, jeux de lumière, chauffage, Wi-Fi et prises 220 V.",
                  "note": "Un bateau néerlandais moderne réaménagé pour les événements privés."},
@@ -294,7 +294,7 @@ COPY = {
             "pills": [
                 {"icon": "🕒", "label": "Départ 08:00–23:00", "cls": "bpa-time",
                  "body": "<strong>Heure de départ au choix</strong> entre 08:00 et 23:00, la seule offre ici avec des créneaux en soirée.",
-                 "note": "Plage affichée sur le calendrier de réservation GetYourGuide pour le mer. 18 et le sam. 21 nov. 2026."},
+                 "note": "Plage affichée sur le calendrier de réservation pour le mer. 18 et le sam. 21 nov. 2026."},
                 {"icon": "🛥️", "label": "2 bateaux : classique ou boutique",
                  "body": "<strong>Bateau classique (jusqu'à 35) :</strong> 495 € mer., 540 € sam. <strong>Bateau boutique (jusqu'à 12) :</strong> 675 € mer., 765 € sam., boisson de bienvenue incluse.",
                  "note": "Prix incluant une remise de 10 % affichée le 14 novembre 2026. Le bateau classique des photos est le Budapest Klára, le même que celui de la carte n°1."},
@@ -329,7 +329,7 @@ COPY = {
             ],
             "reviews": [],
             "how": [
-                "📍 <strong>Deux lieux de départ</strong>, selon le bateau choisi. GetYourGuide affiche l'adresse exacte quand vous sélectionnez une option.",
+                "📍 <strong>Deux lieux de départ</strong>, selon le bateau choisi. L’adresse exacte s’affiche quand vous choisissez une option lors de la réservation.",
                 "💬 Écrivez à l'opérateur via GetYourGuide si vous souhaitez embarquer à un ponton précis.",
             ],
             "walk": [

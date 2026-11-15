@@ -18,7 +18,7 @@ CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/"
 NEW = "/assets/thermal-baths-2026/"
 
 OFFICIAL_NOTE = "Checked on the official site on 14 November 2026; hours change by season and holidays."
-GYG_NOTE = "Checked on the GetYourGuide booking calendar for Thursday 19 November 2026."
+GYG_NOTE = "Checked on the booking calendar for Thursday 19 November 2026."
 
 
 def pill(icon, label, pop, note=None, cls=""):
@@ -78,7 +78,7 @@ CARDS.append(dict(
         pill("🏊", "3 outdoor + 15 indoor pools",
              "<strong>Outdoor:</strong> swimming pool 26–28 °C, thermal pool 36–38 °C, adventure pool 32–34 °C. "
              "<strong>Indoor:</strong> medicinal pools 28–40 °C and plunge pools at 18 °C and 40 °C.",
-             "Temperatures from szechenyifurdo.hu; the pool count is from the GetYourGuide and Tiqets listings."),
+             "Temperatures from szechenyifurdo.hu; the pool count is from the ticket listings."),
         pill("🎟️", "Locker or cabin",
              "<strong>GetYourGuide (Thu 19 Nov 2026):</strong> Morning Pass with locker, entry 7:00–9:00, €39 · "
              "Weekday Pass with locker €46 · Weekday Pass with private cabin €50. "
@@ -88,7 +88,7 @@ CARDS.append(dict(
              "<strong>Sparty</strong> is the Saturday night pool party at Széchenyi: from €73 on GetYourGuide (start 21:30), "
              "or €100 with two drink coupons. 18+ only and <strong>non-refundable</strong>. "
              "<a href=\"{sparty}\" rel=\"nofollow sponsored noopener\" target=\"_blank\">See Sparty tickets →</a>",
-             "Checked on the GetYourGuide calendar for Saturday 21 November 2026."),
+             "Checked on the booking calendar for Saturday 21 November 2026."),
     ],
     pick="for the classic Budapest bath: big outdoor pools in a yellow neo-baroque palace, open until 22:00 on Fridays.",
     skip="if you want quiet: it gets busy from late morning, so come at 7:00 on a weekday or pick Lukács or Veli Bej.",
@@ -270,7 +270,7 @@ CARDS.append(dict(
     alt="Lukács Thermal Bath",
     pills=[
         pill("🕒", "Daily · 7:00–19:00",
-             "<strong>Mon, Wed–Sun</strong> 7:00–19:00 · <strong>Tue</strong> 7:00–22:00. The GetYourGuide ticket shows a 9:00–17:00 window for Thu 19 Nov.",
+             "<strong>Mon, Wed–Sun</strong> 7:00–19:00 · <strong>Tue</strong> 7:00–22:00. The online ticket has a 9:00–17:00 window for Thu 19 Nov.",
              OFFICIAL_NOTE, "bpa-time"),
         pill("🏊", "Medicinal pools 32–40 °C",
              "<strong>Indoor medicinal pools</strong> at 32, 36 and 40 °C, a 20 °C cold pool and a 20 °C Kneipp foot path. "
