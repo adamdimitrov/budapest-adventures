@@ -160,6 +160,14 @@ def translatable(text):
     return bool(re.search(r"[A-Za-z]{2}", t))
 
 
+def _skip(el):
+    """Skipped tags; the dinner page's menu-modal templates are translated like page content."""
+    return el.name in SKIP and not (el.name == "template" and (el.get("id") or "").startswith("dc-menu-"))
+
+
+MENU_TPL_ATTRS = ("data-title", "data-price", "data-sub")
+
+
 def collect(soup):
     """Return list of (kind, ref, source_html). kind: 'inner' | 'text' | 'attr' | 'meta' | 'title' | 'jsonld'."""
     segs = []
@@ -172,7 +180,7 @@ def collect(soup):
 
     done = set()
     for el in body.find_all(True):
-        if in_chrome(el) or el.name in SKIP or any(p.name in SKIP for p in el.parents):
+        if in_chrome(el) or _skip(el) or any(_skip(p) for p in el.parents):
             continue
         if any(id(p) in done for p in el.parents):
             continue
@@ -186,7 +194,7 @@ def collect(soup):
         if isinstance(s, Comment) or not s.strip() or not translatable(s):
             continue
         el = s.parent
-        if in_chrome(el) or el.name in SKIP or any(p.name in SKIP for p in el.parents):
+        if in_chrome(el) or _skip(el) or any(_skip(p) for p in el.parents):
             continue
         if id(el) in done or any(id(p) in done for p in el.parents):
             continue
@@ -198,6 +206,12 @@ def collect(soup):
             v = el.get(a)
             if isinstance(v, str) and translatable(v):
                 segs.append(("attr", (el, a), v))
+    for el in body.find_all("template"):
+        if not _skip(el):
+            for a in MENU_TPL_ATTRS:
+                v = el.get(a)
+                if isinstance(v, str) and translatable(v):
+                    segs.append(("attr", (el, a), v))
     if soup.title and soup.title.string and translatable(soup.title.string):
         segs.append(("title", soup.title, soup.title.string))
     for m in soup.find_all("meta"):

@@ -126,7 +126,7 @@ CARDS.append(dict(
         pill("🎭", "3 show options",
              "<strong>Dinner &amp; Lights (no show):</strong> from €77, background music. <a href=\"" + SL.format(slug="dinner-lights") + "\" rel=\"noopener nofollow sponsored\" target=\"_blank\">Book →</a><br/>"
              "<strong>Folk &amp; Operetta Show:</strong> from €91, operetta singers and a folklore show. <a href=\"" + SL.format(slug="budapest-danube-dinner-cruise") + "\" rel=\"noopener nofollow sponsored\" target=\"_blank\">Book →</a><br/>"
-             "<strong>Live Piano Show:</strong> from €91. <a href=\"" + SL.format(slug="dinner-cruise-piano-battle-show") + "\" rel=\"noopener nofollow sponsored\" target=\"_blank\">Book →</a>",
+             "<strong>Live Piano Show:</strong> from €91, not bookable now (no dates in November or December 2026).",
              "Same boat at Dock 11 and the same 4-course menu; only the entertainment changes. Prices from budapestrivercruise.eu, 14 November 2026."),
         pill("🕒", "Piano show: not bookable now",
              "The Live Piano Show calendar had <strong>no bookable dates in November or December 2026</strong>. Dinner &amp; Lights and the Folk &amp; Operetta show are bookable.",
