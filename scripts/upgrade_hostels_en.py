@@ -88,7 +88,7 @@ def rev_badges(html, h, link_override=None):
     def fix(m):
         a = m.group(0)
         href = re.search(r'href="([^"]+)"', a).group(1)
-        if 'booking' in href:
+        if 'booking' in href or 'IHZpZXdCb3g9IjAgMCAzMiAzMiIg' in a:  # Booking.com icon
             if not h['bk']:
                 return ''
             sc, n = h['bk']
@@ -128,6 +128,7 @@ for h in HOSTELS:
                    'loading="lazy" src="%s"/></div>' % SZIMPLA, c, count=1, flags=re.S)
         c = re.sub(r'<button aria-label="(Previous|Next) photo"[^>]*>.</button>\s*', '', c)
         c = re.sub(r'<span class="bpa-pill">[^<]*</span>\s*', '', c)
+        c = c.replace('<div class="bpa-slider"', '<span class="bpa-pill">Szimpla Kert, 3 min walk</span>\n<div class="bpa-slider"', 1)
     c = re.sub(r'(<img alt=")[^"]+(")', lambda m: m.group(1) + h['name'] + m.group(2), c)
     c = re.sub(r'(<a class="bpa-title"[^>]*>)[^<]*(</a>)', r'\g<1>%s\g<2>' % h['name'], c, count=1)
     c = rev_badges(c, h, HIVE_LINK_CARD if n == 10 else None)
@@ -141,7 +142,7 @@ for h in HOSTELS:
                '<div class="bpa-best-for">\n<strong>Best For:</strong> %s <strong>Skip if</strong> %s\n</div>' % (h['best_for'], h['skip_if']),
                c, count=1, flags=re.S)
     c = re.sub(r'<div class="bpa-price">[^<]*</div>', '<div class="bpa-price">From €%d</div>' % h['dorm'], c, count=1)
-    c = re.sub(r'<div class="bpa-psub">[^<]*</div>', '<div class="bpa-psub">Dorm bed per night • Checked %s</div>' % CHECKED, c, count=1)
+    c = re.sub(r'<div class="bpa-psub">[^<]*</div>', '<div class="bpa-psub">Dorm bed/night • %s</div>' % CHECKED, c, count=1)
     c = re.sub(r'<div class="bpa-trust-micro">.*?</div>',
                '<div class="bpa-trust-micro">\n<span>%s</span>\n</div>' % h['trust'], c, count=1, flags=re.S)
     c = re.sub(r'(<a class="bpa-btn"[^>]*>)[^<]*(</a>)', r'\g<1>Check Prices &amp; Dates →\g<2>', c, count=1)
