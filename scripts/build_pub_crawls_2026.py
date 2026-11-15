@@ -371,6 +371,7 @@ GUIDE = f"""<div class="w-richtext bpa-wt-guide">
 <p><strong>Szimpla Kert</strong>, the ruin bar on every postcard, is on none of the venue lists for #1 to #4. It's free to walk into, so the easy fix is to go there first, around 20:00 when you can still move, then join a 21:30 or 22:00 crawl a few streets away.</p>
 <h2 id="free-ruin-bar-route">Free Self-Guided Ruin Bar Route vs a Paid Crawl</h2>
 <p>You don't need a tour to see the ruin bars: the best ones sit within a 10-minute walk of each other in District VII. A simple free route: <strong>Szimpla Kert</strong> (Kazinczy utca 14) for the famous courtyards, then <strong>Doboz</strong> (Klauzál utca 10), and finish at <strong>Instant-Fogas</strong> (Akácfa utca 49-51) if you want to dance.</p>
+<p>Hungry first? The Jewish Quarter tour in our <a href="/best-food-tours-budapest">best food tours in Budapest</a> ends on Kazinczy utca, the same street as Szimpla, so dinner and the first ruin bar are a two-minute walk apart.</p>
 <p><strong>Go self-guided</strong> if you're a couple who wants to look around, have two drinks and be in bed by midnight. <strong>Book a crawl</strong> if you're solo, want a group to go out with, or it's a Friday or Saturday and you'd rather skip the club queue: at €2, the ticket costs less than a beer in Szimpla.</p>
 <p>Making a whole evening of it? Start on the river with an <a href="/unlimited-prosecco-cruises-budapest">unlimited prosecco cruise</a> or one of the <a href="/best-night-cruises-budapest">best night cruises</a>, then walk 15 minutes into District VII for a 21:30 or 22:00 crawl.</p>
 <h2 id="same-crawl-two-listings">Same Crawl, Two Listings: What We Left Out</h2>
@@ -383,7 +384,7 @@ GUIDE = f"""<div class="w-richtext bpa-wt-guide">
 <li><strong>Pay at the bar.</strong> Beyond what's listed as included, you buy your own drinks, so carry a card or some forint.</li>
 <li><strong>Getting home:</strong> tram 6 runs all night along the Grand Boulevard (Erzsébet körút), a few minutes' walk from every finish.</li>
 </ul>
-<p>Staying near the bars? Our pick of the <a href="/best-hostels-budapest">best hostels in Budapest</a> lists the social ones that run their own nights out. For daytime plans, see the <a href="/best-things-to-do-budapest">best things to do in Budapest</a>.</p>
+<p>Staying near the bars? Our pick of the <a href="/best-hostels-budapest">best hostels in Budapest</a> lists the social ones that run their own nights out. For daytime plans, see the <a href="/best-things-to-do-budapest">best things to do in Budapest</a>, or the free Jewish Quarter walk in our <a href="/best-walking-tours-budapest">best walking tours</a> to see the same streets by day.</p>
 </div>"""
 
 FAQ = [
