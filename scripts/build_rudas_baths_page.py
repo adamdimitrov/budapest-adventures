@@ -31,7 +31,6 @@ TODAY = "2026-11-15"
 TODAY_TXT = "15 November 2026"
 HUB = "/thermal-baths-budapest"
 SZE = "/szechenyi-baths-budapest"
-GEL = "/gellert-baths-budapest"
 
 
 def rd(p):
@@ -676,7 +675,7 @@ H1 = 'Rudas Baths Budapest: Which Ticket to Book in 2026 <span class="ltt-h1-mut
 LEAD = f'''<div class="ltt-lead-copy">
 <p>Most visitors book Rudas online as a <strong>€74.99 bath + meal package</strong>, while the same bath costs <strong>12,000 HUF at the desk</strong> on a weekday. The bigger trap is the day: the Ottoman Turkish bath is <strong>women-only on Tuesdays and men-only on Wednesdays</strong>, and the 36 °C rooftop pool holds just 16 people at a time.</p>
 <p>I bathed at Rudas myself, then compared the <strong>{N} ways to get in</strong> side by side: the day pass with a 3-course meal, the official day and fast-track tickets, <strong>Friday and Saturday night bathing (22:00 to 3:00)</strong>, the cheap single-zone ticket and a private rooftop hour for two. Prices, hours and the men/women timetable are up to date as of {TODAY_TXT}.</p>
-<p>Comparing baths? See <a href="{HUB}">all Budapest thermal baths</a>, or go straight to <a href="{SZE}">Széchenyi</a> and <a href="{GEL}">Gellért</a>.</p>
+<p>Comparing baths? See <a href="{HUB}">all Budapest thermal baths</a>, or go straight to <a href="{SZE}">Széchenyi</a>.</p>
 </div>'''
 
 
@@ -728,7 +727,7 @@ QUICK = f'''<div class="container w-container"><div class="w-richtext bpa-wt-gui
 <p>Holidays and high season: 16,000 HUF at the desk, 19,000 HUF fast track. The desk takes cards; for cash, Hungarian forints only.</p>
 <div class="bpa-rudas-hub" style="margin:24px 0;padding:16px 18px;border:1px solid #e2e8f0;border-radius:12px;background:#fff">
 <p style="margin:0 0 8px"><strong>Not sure Rudas is your bath?</strong></p>
-<p style="margin:0"><a href="{SZE}"><strong>Széchenyi</strong></a> has big outdoor pools and is open until 22:00 on Fridays. <a href="{GEL}"><strong>Gellért</strong></a> is closed for renovation until 2028. <a href="{HUB}"><strong>All Budapest thermal baths compared →</strong></a></p>
+<p style="margin:0"><a href="{SZE}"><strong>Széchenyi</strong></a> has big outdoor pools and is open until 22:00 on Fridays. <a href="{HUB}"><strong>All Budapest thermal baths compared →</strong></a></p>
 </div>
 </div></div>
 '''
