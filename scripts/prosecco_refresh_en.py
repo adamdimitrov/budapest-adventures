@@ -51,9 +51,9 @@ PAGE = {
     "author_role": "Budapest Local • 7 Cruises Compared Side by Side",
     "updated": "<strong>Last updated</strong>: Nov 14, 2026",
     "lead": [
-        "Are you feeling overwhelmed by the plethora of boat tour options in Budapest? Then let me help you <strong>choose the best unlimited prosecco cruise</strong> for you.",
-        "I <strong>rode the #1 pick myself</strong>, then compared <strong>Budapest's most popular prosecco cruises</strong> side by side on what really matters: <strong>what is truly unlimited</strong>, how long the refills last, piers and departure times. Prices and timetables are up to date as of 14 November 2026.",
-        "Below are the <strong>5 best cruises where prosecco is unlimited and included in the ticket</strong>, plus <strong>2 boats with other unlimited drinks</strong> (cocktails or a party bar) as #6 and #7, under the 🍹 filter.",
+        "In Budapest, “unlimited prosecco” can mean 60 minutes or 75, prosecco only or spritzers and beer too, dinner on board or nothing to eat. Same promise, very different evenings.",
+        "I rode the #1 pick myself, so here is the <strong>short answer</strong>: for most people it’s <strong>Duna-Weser’s 75-minute cruise (€24.80)</strong>. The servers kept my glass full the whole way, and the ticket adds spritzers and beer, from three central docks. On a budget? <strong>Floating Lotus</strong> pours for the same 75 minutes <strong>from €17.50</strong>, with a rooftop terrace.",
+        "Below, all 7 compared side by side: <strong>5 boats with unlimited prosecco in the ticket</strong>, plus 2 with other unlimited drinks (cocktails or a party bar). Prices and timetables updated 14 November 2026.",
     ],
     "filters": {
         "label": "Filters:", "all": "All", "tested": "⚡ Personally Tested",
