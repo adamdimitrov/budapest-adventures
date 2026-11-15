@@ -62,7 +62,7 @@ CRAWLS = [
               "Three start times (21:10, 21:40, 22:20), so dinner first is easy",
               "Budapest's most-reviewed crawl, and the guides take photos for you"],
         cons=["Shots are the only free drinks: every beer and cocktail is on you",
-              "The €2 price is not every night: €8.50 on the Friday we checked",
+              "The €2 price is not every night: €8.50 on Friday 20 November",
               "It's a crowd, not a cosy bar tour"],
         body="""<p>This is the crawl most people in Budapest end up on, and the numbers explain why: <strong>4.9 from 3,813 reviews</strong> and a ticket from <strong>€2</strong>. You meet on <strong>Erzsébet körút</strong>, do a round of icebreakers, then move through <strong>4 to 5 venues</strong>: pubs, ruin bars and a club to finish.</p>
 <p>What the ticket buys: a <strong>welcome shot at every venue</strong>, <strong>VIP fast-track entry</strong> at Instant-Fogas, Füge Udvar, La Siesta and Humbák, drinking games and digital photos. What it doesn't: food, and every other drink you order. The official part runs <strong>5 to 5.5 hours</strong>, so a 21:10 start ends around 02:10 and the 22:20 start around 03:20, inside a club you can stay in.</p>
@@ -103,7 +103,7 @@ CRAWLS = [
         specs=[("🍻", "3-4 Bars + Club", "Route pool:", "Humbák Borkápolna, Stifler Ház, Doboz, La Siesta, Lámpás and Blue Bird Karaoke Rooms, ending at Instant.", "Stops rotate from night to night."),
               ("⏱", "5.5 Hours", "Starts 21:00, 21:30 or 22:00.", "Ends around 02:30 to 03:30.", "Fri 20 Nov 2026: €2.18 at 21:00 or 22:00, €4 at 21:30."),
               ("🥃", "Welcome + Club Shots", "Free drinks:", "a welcome shot at the first ruin bar, then free shots at the club.", "Other drinks and food are extra."),
-              ("⭐", "Rated 5.0", "5.0 from 1,657 reviews.", "Guests mention guides who keep the group together between bars.", "Rating checked on 15 November 2026.")],
+              ("⭐", "Rated 5.0", "5.0 from 1,657 reviews.", "Guests mention guides who keep the group together between bars.", "The highest score of any big crawl on this page.")],
         best_for="Anyone who wants the best-reviewed big crawl: a welcome shot, 3-4 bars, then VIP club entry with free shots, for about €2.",
         pros=["The top rating of any big Budapest crawl: 5.0 from 1,657 reviews",
               "Cheap on a Friday too: €2.18 (21:00 or 22:00) or €4 (21:30)",
@@ -151,12 +151,12 @@ CRAWLS = [
               ("🥃", "Tequila, Vodka, Pálinka", "Shots included", "along the route, plus drinking games at the first bar.", "The 1-hour open bar (long drinks, wine, beer) is a paid extra."),
               ("🗣️", "English + Spanish", "Guides speak English and Spanish.", "You join a WhatsApp group at check-in with the route and map links.", "Local rules stop hosts guiding groups on the street.")],
         best_for="Late arrivals and people who want the longest night: join at 22:00 after dinner, or do the 6-hour version from 21:00.",
-        pros=["A 22:00 start for people with dinner plans (€2 on the Friday we checked)",
+        pros=["A 22:00 start for people with dinner plans (€2 on Friday 20 November)",
               "Real shots included: tequila, vodka and pálinka",
               "The most venues of any crawl here: 5 to 6, and Spanish-speaking guides too"],
         cons=["The 1-hour open bar is a paid extra, not in the base price",
               "Hosts can't lead the group on the street: you follow the route on WhatsApp"],
-        body="""<p>Party Deck solves the most common pub crawl problem: you booked dinner for 20:00 and every crawl leaves at 21:00. Their <strong>5-hour option starts at 22:00</strong> (€2 on the Friday we checked), and the <strong>6-hour option starts at 21:00</strong> (€6). Either way you finish around 03:00.</p>
+        body="""<p>Party Deck solves the most common pub crawl problem: you booked dinner for 20:00 and every crawl leaves at 21:00. Their <strong>5-hour option starts at 22:00</strong> (€2 on Friday 20 November), and the <strong>6-hour option starts at 21:00</strong> (€6). Either way you finish around 03:00.</p>
 <p>The night covers <strong>5 to 6 ruin bars and clubs</strong> from a pool of more than ten: <strong>Doboz, Füge Udvar, KAZI, Humbák, Vörös Neon, La Siesta</strong> and <strong>Instant-Fogas</strong>, which gets VIP entry. Shots are proper ones: <strong>tequila, vodka and pálinka</strong>. A <strong>1-hour open bar</strong> (long drinks, wine and beer) is sold as an extra.</p>
 <p>One thing to know: local rules stop the hosts guiding groups through the streets, so you <strong>scan a QR code at check-in to join a WhatsApp group</strong> with the bar names, timings and map links. The hosts party with you inside every bar. Anyone who turns up visibly drunk is turned away.</p>
 <h3>Who Should Book It</h3>
@@ -199,7 +199,7 @@ CRAWLS = [
         best_for="People who'd rather meet in a real pub than on a street corner, and groups of up to 12 who want the same night to themselves.",
         pros=["Meets at Becketts Irish Bar on Liszt Ferenc tér: easy to find, easy to wait in",
               "Free shots, drinking games, entrance fees and fast-track entry at Instant-Fogas",
-              "Private version for your own group: €100 per group of up to 12 on the Friday we checked"],
+              "Private version for your own group: €100 per group of up to 12 on Friday 20 November"],
         cons=["Costs more than the €2 crawls for a similar night (€19)",
               "The food stop is pay-as-you-go, not included",
               "Not for over-70s, per the operator"],
@@ -300,7 +300,7 @@ CRAWLS = [
 <p>It costs <strong>from €27 per person</strong> with a <strong>minimum of 8</strong>, and runs <strong>4 hours</strong>. The house rules are stricter than most: drinking on the street, public urination and noise can mean <strong>fines of up to €400</strong>, and if the operator is fined because of your group, your group pays it.</p>
 <h3>Who Should Book It</h3>
 <p><strong>Pick it</strong> for a stag, hen or birthday group of 8+ that wants its own guide and pickup, not 40 strangers.</p>
-<p><strong>Skip it</strong> if you're fewer than 8, or you just want a private version of a normal crawl: the <a href="#item-4-irish-pub-start-crawl">#4 private option</a> was €100 for a whole group of up to 12 on the Friday we checked.</p>
+<p><strong>Skip it</strong> if you're fewer than 8, or you just want a private version of a normal crawl: the <a href="#item-4-irish-pub-start-crawl">#4 private option</a> was €100 for a whole group of up to 12 on Friday 20 November.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Pickup: </strong>included in a pickup area, confirmed when you book.<br/>🕒 <strong>Start time:</strong> set when you book.</p>""",
         qf_badge="Private, pickup included",
@@ -336,7 +336,7 @@ FILTERS = """<div class="ltt-integrated-filter-bar smart-filter-bar">
 
 LEAD = f"""<div class="ltt-lead-copy">
 <p>Every big Budapest pub crawl costs about <strong>€2</strong>, and that is the least useful number on the listing. What decides your night is <strong>what's actually free after the welcome shot</strong>, when it starts, how late it ends, and whether the bar you came for is even on the route: <strong>Szimpla Kert isn't named on the venue lists of the four biggest crawls</strong>.</p>
-<p>Below are the 6 worth booking side by side, from the €2 party crawls to a <strong>€25 crawl with 5 drinks included</strong> and a private stag night, plus a free route if you'd rather do the ruin bars yourself. Prices, start times and meeting points checked on {CHECKED}.</p>
+<p>Below are the 6 worth booking side by side, from the €2 party crawls to a <strong>€25 crawl with 5 drinks included</strong> and a private stag night, plus a free route if you'd rather do the ruin bars yourself.</p>
 </div>"""
 
 GUIDE = f"""<div class="w-richtext bpa-wt-guide">
@@ -349,14 +349,14 @@ GUIDE = f"""<div class="w-richtext bpa-wt-guide">
 <li><strong>Want to meet in a pub, not on a corner:</strong> <a href="#item-4-irish-pub-start-crawl">Original Europe Tours</a> (€19, Becketts Irish Bar, 21:30).</li>
 <li><strong>Good drinks over cheap shots:</strong> <a href="#item-5-hidden-bars-cocktail-crawl">Hidden Bars and Cocktails crawl</a> (€25, 5 drinks included, 20:00 to 23:00).</li>
 <li><strong>Stag or hen group of 8+:</strong> <a href="#item-6-private-stag-pub-crawl">Private pub crawl with pickup</a> (from €27 per person).</li>
-<li><strong>Group of 6 to 12, normal night out:</strong> the <a href="#item-4-irish-pub-start-crawl">private version of #4</a> (€100 for the whole group on the Friday we checked).</li>
+<li><strong>Group of 6 to 12, normal night out:</strong> the <a href="#item-4-irish-pub-start-crawl">private version of #4</a> (€100 for the whole group on Friday 20 November).</li>
 </ul>
 <h2 id="what-2-euros-buys">What a €2 Ticket Really Covers (and What €25 Adds)</h2>
 <p>The €2 crawls aren't a trick, but read them as <strong>a guide, a group and a queue-skip</strong>, not a drinks package. Across #1 to #3, the price covers a <strong>welcome shot</strong> (at every venue on #1, at the first bar and the club on #2), drinking games, photos and <strong>VIP fast-track entry at the club</strong>, usually Instant-Fogas. Every beer, cocktail and glass of wine after that is <strong>bought at the bar</strong>. Food is never included.</p>
 <p>The €2 price also moves by date. On <strong>Friday 20 November 2026</strong>, #1 was <strong>€8.50</strong>, #2 was €2.18 or €4 depending on the start time, and #3 was €2 or €6. Still cheap, but check your own date before you plan around €2.</p>
 <p>At <strong>€25</strong>, the <a href="#item-5-hidden-bars-cocktail-crawl">hidden bars crawl</a> flips the deal: <strong>5 drinks are included</strong> (pálinka, a tour cocktail, fröccs or beer, two shots), but there's no club and it ends at 23:00. If you'd drink four or five rounds anyway, that's where the €23 difference goes.</p>
 <div class="bpa-pc-table-wrap"><table class="bpa-pc-table">
-<caption>Prices are the lowest adult price, with a Friday 20 November 2026 sample. Checked {CHECKED}.</caption>
+<caption>Prices are the lowest adult price, with a Friday 20 November 2026 sample.</caption>
 <thead><tr><th>Crawl</th><th>Price</th><th>Starts</th><th>Ends around</th><th>Free drinks</th><th>Club entry</th><th>Meet at</th></tr></thead>
 <tbody>
 <tr><td><a href="#item-1-ruin-bar-pub-crawl">#1 RuinBarCrawl</a></td><td>From €2 (Fri €8.50)</td><td>21:10, 21:40, 22:20</td><td>02:10 to 03:20</td><td>Shot at every venue</td><td>VIP, 4 venues</td><td>Erzsébet körút 36</td></tr>
@@ -409,7 +409,7 @@ FAQ = [
      "A crawl mainly adds a group, shots and a skip-the-queue entry at the club on busy nights."),
     ("Which Budapest pub crawl is best for a stag or hen party?",
      "For 8 or more, the <strong>private pub crawl with pickup</strong> (from €27 per person, 4 rounds of shots, nightclub or strip club entry). "
-     "For 6 to 12 who want a normal crawl to themselves, the private version from Liszt Ferenc tér was €100 per group on the Friday we checked."),
+     "For 6 to 12 who want a normal crawl to themselves, the private version from Liszt Ferenc tér was €100 per group on Friday 20 November."),
     ("Is there a New Year's Eve pub crawl in Budapest?",
      "Yes. Party Deck runs a NYE night with 2 hours of unlimited drinks and VIP entry at Instant-Fogas, and the Liszt Ferenc tér crawl adds a 1-hour open bar on 31 December. "
      "Prefer the fireworks from the river? See our <a href=\"/new-years-eve-cruises-budapest\">New Year's Eve cruises in Budapest</a>."),
@@ -687,7 +687,7 @@ def main():
     s = re.sub(r'(<h1 class="ltt-editorial-h1">).*?(</h1>)', lambda m: f"{m.group(1)}\n      {H1}\n{m.group(2)}", s, count=1, flags=re.S)
     s = s.replace("Founder &amp; Local Budapest Tester", "Founder, Budapest Adventures")
     s = s.replace('<div class="ltt-author-role">Personally Field-Tested • Original Photos &amp; Videos</div>',
-                  '<div class="ltt-author-role">Budapest Local • Prices and Start Times Checked</div>')
+                  '<div class="ltt-author-role">Budapest Local • Side-by-Side Comparison</div>')
     s = re.sub(r"<strong>Last updated</strong>: [A-Za-z]{3} \d+, 2026", f"<strong>Last updated</strong>: {CHECKED_SHORT}", s, count=1)
     s, _ = cut(s, '<div class="ltt-lead-copy">', '<div class="ltt-integrated-filter-bar smart-filter-bar">', LEAD + "\n")
     a = s.find('<div class="ltt-integrated-filter-bar smart-filter-bar">')
@@ -708,7 +708,7 @@ def main():
     s = re.sub(r'(<h2 class="bpa-breakdown-heading" id="desert-safaris-breakdown">).*?(</h2>)',
                r"\1Detailed Breakdown: 6 Best Pub Crawls in Budapest\2", s, count=1)
     s = re.sub(r'<p class="bpa-breakdown-sub">.*?</p>',
-               f'<p class="bpa-breakdown-sub">Compared on {CHECKED} • All reviews open by default • Click to collapse/expand</p>', s, count=1)
+               f'<p class="bpa-breakdown-sub">All reviews open by default • Click to collapse/expand</p>', s, count=1)
 
     # --- details + faq ---
     a = s.find('<details class="bpa-details-card"')
