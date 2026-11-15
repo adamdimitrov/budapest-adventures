@@ -172,7 +172,7 @@ C["rudas"] = dict(
     pros=["Rooftop hot pool with a river view", "16th-century Turkish bath under a stone dome", "Late night bathing on Friday and Saturday"],
     cons=["Men-only and women-only days in the Turkish part", "The booking-site ticket always includes a meal"],
     body="""<p>Rudas is the bath for a December night. The <strong>rooftop pool is 36 °C</strong> and looks across the Danube to the lit Parliament and bridges, and downstairs the <strong>Turkish bath under a 16th-century dome</strong> has six pools from 16 to 42 °C. On <strong>Friday and Saturday it reopens for night bathing from 22:00 to 3:00</strong>.</p>
-<p>I've been to Rudas myself. Its rooftop pool is the best place I know to sit out a grey December afternoon.</p>
+<p>I've been to Rudas myself. Its rooftop pool is the best place I know to sit out a grey December afternoon. Tickets, prices and night bathing in detail: <a href="/rudas-baths-budapest">Rudas Baths Budapest</a>.</p>
 <h3>Who Should Book It</h3>
 <p><strong>Pick it</strong> if you've done Széchenyi or want something calmer and older. The meal makes it a full afternoon.</p>
 <p><strong>Skip it</strong> if your day falls on a single-sex day for the Turkish bath and you are travelling as a couple: check the timetable in the pill above.</p>

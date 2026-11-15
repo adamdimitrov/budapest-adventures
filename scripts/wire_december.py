@@ -56,9 +56,13 @@ def en_home(s):
     s = after_once(s, r'<a class="ltt-quick-btn" href="/thermal-baths-budapest">[^<]*</a>\n?',
                    f'<a class="ltt-quick-btn" href="{EN}">🎄 December</a>\n', f'ltt-quick-btn" href="{EN}"')
     if f'{SITE}{EN}"' not in s:
-        s = s.replace('"url":"https://www.budapestadventures.com/best-day-trips-from-budapest"}]',
-                      '"url":"https://www.budapestadventures.com/best-day-trips-from-budapest"},{"@type":"ListItem","position":12,'
-                      '"name":"11 Best Things to Do in Budapest in December 2026","url":"' + SITE + EN + '"}]', 1)
+        # append to the homepage ItemList after its last entry, whatever the JSON spacing
+        items = list(re.finditer(r'"position": ?(\d+), ?"name": ?"[^"]*", ?"url": ?"[^"]*"\}', s))
+        last = max(items, key=lambda m: int(m.group(1)))
+        sp = " " if '"position": ' in last.group(0) else ""
+        add = (f',{sp}{{"@type":{sp}"ListItem",{sp}"position":{sp}{int(last.group(1)) + 1},{sp}'
+               f'"name":{sp}"11 Best Things to Do in Budapest in December 2026",{sp}"url":{sp}"{SITE}{EN}"}}')
+        s = s[:last.end()] + add + s[last.end():]
     return s
 
 
