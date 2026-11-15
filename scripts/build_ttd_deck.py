@@ -112,7 +112,7 @@ def esc(s):
 
 
 def link_attrs(url):
-    return ' rel="sponsored noopener" target="_blank"' if url.startswith("http") else ""
+    return ' rel="nofollow sponsored noopener" target="_blank"' if url.startswith("http") else ""
 
 
 def card(i, r):

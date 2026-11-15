@@ -159,7 +159,7 @@ def rate_block(c):
         inner = ('%s<span class="bpa-rev-site">%s</span><span class="bpa-rev-score">%s</span><span class="bpa-rev-count">(%s)</span>'
                  % ("\n" + ICON[site], site, score1(s), fmt_count(cnt)))
         if rating_links(c):
-            badges.append('<a class="bpa-rev-badge is-link" href="%s" rel="%s" target="_blank">%s'
+            badges.append('<a class="bpa-rev-badge is-link" href="%s" rel="nofollow sponsored noopener %s" target="_blank">%s'
                           '<span class="bpa-rev-go" aria-hidden="true">→</span></a>' % (site_url(c, r), AFF_REL, inner))
         else:
             badges.append('<span class="bpa-rev-badge is-static">%s</span>' % inner)

@@ -397,7 +397,7 @@ for c in cruises:
       </div>
       <div class="bpa-info">
         <div class="bpa-kicker">{c["kicker"]}</div>
-        <a href="{c["url"]}" target="_blank" rel="sponsored noopener" class="bpa-headline">
+        <a href="{c["url"]}" target="_blank" rel="nofollow sponsored noopener" class="bpa-headline">
           {c["title"]}
         </a>
         <div class="bpa-proof-bar">
@@ -416,7 +416,7 @@ for c in cruises:
       </div>
       <div class="bpa-cta-cell">
         <div><div class="bpa-price-num">{c["price"]}</div><div class="bpa-price-sub">{c["price_sub"]}</div></div>
-        <a href="{c["url"]}" target="_blank" rel="sponsored noopener" class="bpa-book-button">Book Now →</a>
+        <a href="{c["url"]}" target="_blank" rel="nofollow sponsored noopener" class="bpa-book-button">Book Now →</a>
         <a href="{c["anchor"]}" class="bpa-sublink">Read Full Review ↓</a>
       </div>
     </div>

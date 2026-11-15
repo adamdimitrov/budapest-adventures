@@ -139,7 +139,7 @@ class Builder:
 </div>
 <div class="bpa-info">
 <div class="bpa-kicker">{c["operator"]} • ⏱️ {T["dur"]} • <a class="bpa-kicker-map-link" href="{c["pier_maps"]}" rel="nofollow noopener" target="_blank">{T["pier"]}</a></div>
-<a class="bpa-title" href="{self.link(c, "card-title").replace("&", "&amp;")}" rel="noopener" target="_blank">{T["title"]}</a>
+<a class="bpa-title" href="{self.link(c, "card-title").replace("&", "&amp;")}" rel="nofollow sponsored noopener" target="_blank">{T["title"]}</a>
 <div class="bpa-reviews-line">
 {self.rating_block(c)}
 {proof}</div>
@@ -153,7 +153,7 @@ class Builder:
 <div class="bpa-price">{self.price(c)}</div>
 <div class="bpa-psub">{U["per_adult"]}</div>
 </div>
-<a class="bpa-btn" href="{self.link(c, "card-button").replace("&", "&amp;")}" rel="noopener" target="_blank">{U["check"]}</a>
+<a class="bpa-btn" href="{self.link(c, "card-button").replace("&", "&amp;")}" rel="nofollow sponsored noopener" target="_blank">{U["check"]}</a>
 <div class="bpa-via">{U["via_gyg"]}</div>
 <div class="bpa-trust2">{trust}</div>
 <a class="bpa-sublink" href="#{c["anchor"]}">{U["read_review"]}</a>
