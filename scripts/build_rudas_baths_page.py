@@ -33,6 +33,14 @@ HUB = "/thermal-baths-budapest"
 SZE = "/szechenyi-baths-budapest"
 
 
+def live(href):
+    """True when the linked page exists in this checkout (sibling bath pages ship in their own PRs)."""
+    return os.path.exists(os.path.join(ROOT, href.strip("/") + ".html"))
+
+
+SZE_LINK = ', or go straight to <a href="%s">Széchenyi</a>' % SZE if live(SZE) else ""
+
+
 def rd(p):
     with open(os.path.join(ROOT, p), encoding="utf-8") as f:
         return f.read()
@@ -195,7 +203,7 @@ CARDS.append(dict(
              "<strong>Wellness and Turkish bath:</strong> 6:00–20:00, Mon until 22:00. <strong>Sauna world:</strong> from 8:00. "
              "The cash desk closes one hour before closing, and you must leave the pools 20 minutes before. 8 December 2026: open until 16:00.",
              OFFICIAL_NOTE, "bpa-time"),
-        pill("💳", "Budapest Card −20%", "Budapest Card holders get 20% off daily tickets at Rudas."),
+        pill("💳", "Budapest Card −20%", "Budapest Card holders get 20% off daily tickets at Rudas. <a href=\"/budapest-card-is-it-worth-it\">Is the Budapest Card worth it?</a>"),
     ],
     pick="if you want the full bath without a set meal: Turkish bath, wellness, saunas and the rooftop pool on one ticket, the cheapest full Rudas day.",
     skip="on a Tuesday or Wednesday if you want the Turkish bath and it is not your day: it is women-only on Tuesday and men-only on Wednesday.",
@@ -675,7 +683,7 @@ H1 = 'Rudas Baths Budapest: Which Ticket to Book in 2026 <span class="ltt-h1-mut
 LEAD = f'''<div class="ltt-lead-copy">
 <p>Most visitors book Rudas online as a <strong>€74.99 bath + meal package</strong>, while the same bath costs <strong>12,000 HUF at the desk</strong> on a weekday. The bigger trap is the day: the Ottoman Turkish bath is <strong>women-only on Tuesdays and men-only on Wednesdays</strong>, and the 36 °C rooftop pool holds just 16 people at a time.</p>
 <p>I bathed at Rudas myself, then compared the <strong>{N} ways to get in</strong> side by side: the day pass with a 3-course meal, the official day and fast-track tickets, <strong>Friday and Saturday night bathing (22:00 to 3:00)</strong>, the cheap single-zone ticket and a private rooftop hour for two. Prices, hours and the men/women timetable are up to date as of {TODAY_TXT}.</p>
-<p>Comparing baths? See <a href="{HUB}">all Budapest thermal baths</a>, or go straight to <a href="{SZE}">Széchenyi</a>.</p>
+<p>Comparing baths? See <a href="{HUB}">all Budapest thermal baths</a>{SZE_LINK}.</p>
 </div>'''
 
 
@@ -735,6 +743,7 @@ SECTIONS = [
 <h3>Rooftop Pool</h3><p>The 36 °C panorama pool fits <strong>16 people</strong>. It fills up from late morning, so go early (weekend fast track from 8:00) or at night.</p>
 <h3>Age Limit and Access</h3><p>Rudas does not admit <strong>children under 14</strong>, at any time. The bath is <strong>not step-free</strong>: for technical reasons it currently cannot receive guests with reduced mobility.</p>
 <h3>Getting There</h3><p>Rudas is at Döbrentei tér 9, at the Buda end of Elizabeth Bridge. Take <strong>tram 19, 41, 56 or 56A</strong>, or <strong>bus 7, 8E, 108E, 110 or 112</strong>. From the Pest side it is a 10-minute walk across Elizabeth Bridge. After night bathing: night buses 907 and 973.</p>
+<h3>Plan the Rest of Your Day</h3><p>Rudas is a 10-minute walk from the Pest side, so it pairs well with a <a href="/best-walking-tours-budapest">walking tour</a> in the morning or a <a href="/best-night-cruises-budapest">night cruise on the Danube</a> after your bath. If you hold a <a href="/budapest-card-is-it-worth-it">Budapest Card</a>, it takes 20% off Rudas day tickets. For more ideas, see the <a href="/best-things-to-do-budapest">best things to do in Budapest</a>.</p>
 <h3>Holiday Hours</h3><p>On 8 December 2026 the bath closes at 16:00. On public holidays it follows weekend hours. The cash desk closes one hour before closing time.</p>'''),
     ("rudas-how-i-compared", "How I Compared Rudas Tickets", f'''
 <p>I bathed at Rudas myself: Turkish bath, wellness area, saunas and the rooftop pool. For this page I rechecked every ticket on {TODAY_TXT}: the official price list, opening hours and pool temperatures on rudasfurdo.hu, the official online ticket shop, and the bath + meal package on its booking calendar for Thursday 19 and Saturday 21 November 2026.</p>
@@ -806,6 +815,8 @@ START = '<nav aria-label="Budapest bath guides" class="bpa-hubnav" id="bpa-hubna
 def hubnav_block(current, title="Budapest Bath Guides"):
     items = []
     for key, href, ico, name, sub in GUIDES:
+        if key != current and not live(href):
+            continue
         cur = key == current
         items.append('<a class="bpa-hubnav-item%s" href="%s"%s><span class="bpa-hubnav-ico" aria-hidden="true">%s</span>'
                      '<span><span class="bpa-hubnav-name">%s</span><span class="bpa-hubnav-sub">%s</span></span></a>'
