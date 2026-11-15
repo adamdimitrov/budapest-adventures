@@ -753,6 +753,7 @@ def build(lang):
     s = sub_once(r'(id="hybridActiveTitle">).*?(</span>)', lambda m: m.group(1) + c1["short"] + m.group(2), s, re.S)
     s = sub_once(r'(id="hybridActivePrice">).*?(</span>)', lambda m: m.group(1) + ui["from"].format(p=p1["price_from"]) + m.group(2), s, re.S)
     s = re.sub(r'(<a class="hybrid-cta-btn" href=")[^"]*(")', lambda m: m.group(1) + esc(p1["book"]) + m.group(2), s)
+    s = s.replace('id="hybridActiveCta" rel="sponsored noopener"', 'id="hybridActiveCta" rel="nofollow sponsored noopener"')
     s = re.sub(r'(id="sticky-name">).*?(</span>)', lambda m: m.group(1) + c1["short"] + m.group(2), s, count=1, flags=re.S)
     s = re.sub(r'(id="sticky-price">).*?(</span>)', lambda m: m.group(1) + ui["from"].format(p=p1["price_from"]) + m.group(2), s, count=1, flags=re.S)
     s = re.sub(r'(id="sticky-rank">).*?(</span>)', lambda m: m.group(1) + "#1 " + pick + m.group(2), s, count=1, flags=re.S)
