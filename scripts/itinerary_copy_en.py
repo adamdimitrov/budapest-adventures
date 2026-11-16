@@ -282,7 +282,7 @@ PRACTICAL = [
     ("Getting around", "Walk inside the centre. For Castle Hill take bus 16, for Széchenyi the M1, and for the river views tram 2, which runs along the Pest embankment."),
     ("Budapest Card", 'Whether it pays off depends on your exact plan. Check it against this itinerary with the <a href="/budapest-card-is-it-worth-it">Budapest Card calculator</a>, which covers all 94 sights.'),
     ("Visiting in winter", 'Add the <a href="/budapest-christmas-markets">Christmas markets</a> to any evening from late November, and plan the night cruise early: it is dark by about 16:00.'),
-    ("Longer river cruise", 'Starting or ending a longer river cruise here? The 15-day Danube and Rhine sailings are compared in <a href="/budapest-amsterdam-river-cruises">Budapest to Amsterdam river cruises</a>.'),
+    ("Longer river cruise", 'Starting or ending a longer river cruise here? The 15-day Danube and Rhine sailings are compared in <a href="/budapest-amsterdam-river-cruises">Budapest to Amsterdam river cruises</a>. For a shorter trip, the 5 to 8-day <a href="/budapest-vienna-river-cruises">Budapest to Vienna river cruises</a> cover the first stretch.'),
 ]
 
 FAQ = [
