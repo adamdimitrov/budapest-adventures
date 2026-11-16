@@ -96,7 +96,7 @@ class Tier4RealWorldScenarioTests(BaseTestCase):
         """Scenario 2: Meta Ads Retargeting -> Candlelit Review -> TourCMS Checkout.
         
         1. User clicks Instagram story ad with ?fbclid=IwAR2...&utm_source=instagram&utm_medium=paid_social
-        2. Lands on Candlelit Dinner Cruise Review (/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest)
+        2. Lands on Candlelit Dinner Cruise Review (/candlelit-dinner-cruise-budapest)
         3. Canonical tag confirms clean review path without hash fragment
         4. Editorial tested review schema verified
         5. Outbound TourCMS reservation link clicked
@@ -105,7 +105,7 @@ class Tier4RealWorldScenarioTests(BaseTestCase):
         """
         # Step 1: Inbound Meta ad click
         inbound_url = (
-            "https://www.budapestadventures.com/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest?"
+            "https://www.budapestadventures.com/candlelit-dinner-cruise-budapest?"
             "fbclid=IwAR2_Meta_Story_Retargeting_Click_9988"
             "&utm_source=instagram"
             "&utm_medium=paid_social"
@@ -117,7 +117,7 @@ class Tier4RealWorldScenarioTests(BaseTestCase):
         # Step 2: Candlelit review static page inspection
         review_html = read_project_file("candlelit-dinner-cruise.html")
         self.assert_true(review_html is not None, "candlelit-dinner-cruise.html must exist")
-        self.assert_clean_canonical(review_html, "/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest")
+        self.assert_clean_canonical(review_html, "/candlelit-dinner-cruise-budapest")
 
         # Step 3: Outbound TourCMS / Legenda decoration
         base_booking_url = "https://legenda.hu/en/ticket-purchase"

@@ -416,7 +416,7 @@ def fix_legenda_dinner(b):
     b = about(b, "About Legenda City Cruises", "About Legenda City Cruises",
               "Legenda City Cruises runs sightseeing boats and this candlelit dinner cruise from its own floating dock at Vigadó tér (Dock 7).")
     b = b.replace("checked Nov 10, 2026", "checked Nov 14, 2026")
-    b = b.replace('href="https://legenda.hu/en?partner=38585"', 'href="%s"' % D.LEGENDA_DINNER)
+    b = b.replace('href="https://legenda.hu/en/ticket-purchase?partner=38585"', 'href="%s"' % D.LEGENDA_DINNER)
     # the gallery shows dishes from my test dinner, which are no longer on the menu
     b = must_re(b, r'(<div class="ltt-strip-cap"><span>)4-Course served dinner menu with a choice of starter, soup, main course, and dessert\.',
                 r"\g<1>From my test dinner: 4 courses with a choice of starter, soup, main course and dessert. The menu has changed since; the current menu is below.")

@@ -25,7 +25,7 @@ Rebuild and deploy the 5 core money hubs on staging branch (`staging/static-over
 - **What to build**:
   1. Danube River Cruises Main Hub (`/` and `/budapest-river-cruises`): promoted clean `river-ecom.html` to root `index.html`.
   2. Budapest Dinner Cruises Hub (`/budapest-dinner-cruises`): verified `dinner.html` and routing.
-  3. Candlelit Dinner Cruise Tested Review (`/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`): assembled dedicated static page `candlelit-dinner-cruise.html` with verified salon photo, tested review badge, 4-course menu breakdown, ratings, and booking CTA.
+  3. Candlelit Dinner Cruise Tested Review (`/candlelit-dinner-cruise-budapest`): assembled dedicated static page `candlelit-dinner-cruise.html` with verified salon photo, tested review badge, 4-course menu breakdown, ratings, and booking CTA.
   4. Legenda Dedicated Terminal (`legenda-city-cruises.html`): added clean canonical tag, fixed typo `partner=38885` to VIP `partner=38585`.
   5. Danube Cruise Decision Hub (`danube_cruise_decision_hub.html`): updated canonical tag, fixed broken local anchor `#silverline-folk`, added Card 3 (`#budget-cruises`), tagged Legenda and Silverline links, added Meta Pixel and `tourcms-sync.js`.
   6. Routing in `vercel.json`: verified all 10 core rewrites.

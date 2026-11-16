@@ -758,7 +758,7 @@ def get_navbar_html(cta_href: str, cta_label: str) -> str:
                 <p class="ltt-mega-desc">4-course candlelit, folklore &amp; piano battle cruises ranked</p>
               </div>
             </a>
-            <a href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest" class="ltt-mega-card">
+            <a href="/candlelit-dinner-cruise-budapest" class="ltt-mega-card">
               <span class="ltt-mega-icon">🕯️</span>
               <div>
                 <div class="ltt-mega-title">Legenda Candlelit Dinner Review</div>
@@ -818,7 +818,7 @@ def get_navbar_html(cta_href: str, cta_label: str) -> str:
       <div class="ltt-drawer-links">
         <a href="/best-budapest-river-cruises" class="ltt-drawer-link"><span>🚢 10 Best Danube River Cruises</span><span>→</span></a>
         <a href="/best-dinner-cruises-budapest" class="ltt-drawer-link"><span>🍷 7 Best Budapest Dinner Cruises</span><span>→</span></a>
-        <a href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest" class="ltt-drawer-link"><span>🕯️ Legenda Candlelit Dinner Review</span><span>→</span></a>
+        <a href="/candlelit-dinner-cruise-budapest" class="ltt-drawer-link"><span>🕯️ Legenda Candlelit Dinner Review</span><span>→</span></a>
         <a href="/unlimited-prosecco-cruises-budapest" class="ltt-drawer-link"><span>🥂 Unlimited Prosecco Cruises</span><span>→</span></a>
         <a href="/best-night-cruises-budapest" class="ltt-drawer-link"><span>🌃 Best Evening &amp; Night Cruises</span><span>→</span></a>
         <a href="/thermal-baths-budapest" class="ltt-drawer-link"><span>♨️ 8 Best Thermal Baths in Budapest</span><span>→</span></a>
@@ -1034,7 +1034,7 @@ def upgrade_footer_and_faq(soup: BeautifulSoup, current_path: str):
               <div class="footer-link-title">Budapest Cruise Guides</div>
               <a{r_curr} href="/best-budapest-river-cruises">10 Best Danube River Cruises</a>
               <a{d_curr} href="/best-dinner-cruises-budapest">7 Best Budapest Dinner Cruises</a>
-              <a class="footer-link-3" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">Legenda Candlelit Dinner Review</a>
+              <a class="footer-link-3" href="/candlelit-dinner-cruise-budapest">Legenda Candlelit Dinner Review</a>
               <a class="footer-link-3" href="/unlimited-prosecco-cruises-budapest">Unlimited Prosecco Cruises</a>
               <a class="footer-link-3" href="/best-night-cruises-budapest">Best Evening &amp; Night Cruises</a>
               <a class="footer-link-3" href="/thermal-baths-budapest">8 Best Thermal Baths</a>

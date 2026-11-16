@@ -21,12 +21,12 @@ SLUG_MAP = {
     'hu': {
         'river': 'setahajozas-a-dunan-budapest',
         'dinner': 'setahajozas-a-dunan-vacsoraval',
-        'candlelit': 'setahajozas-a-dunan-vacsoraval/gyertyafenyes-vacsora-a-dunan-budapest',
+        'candlelit': 'gyertyafenyes-vacsora-a-dunan-budapest',
         'night_cruises': 'legjobb-éjszakai-hajóutak-budapest',
         'thermal_baths': 'legjobb-termalfurdok-budapest',
         'budapest_card': 'budapest-card-megéri-e',
         'airport': 'budapest-reptér-városközpont',
-        'parliament': 'budapest-attractions/budapest-parlament',
+        'parliament': 'orszaghaz-jegyek',
         'walking_tours': 'legjobb-gyalogtúrák-budapest',
         'hostels': 'legjobb-hostelek-budapesten',
         'tourism_statistics': 'budapest-turizmus-statisztika',
@@ -74,27 +74,27 @@ with open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 
 
 CANDLELIT_MAP = {
-    'hu': 'setahajozas-a-dunan-vacsoraval/gyertyafenyes-vacsora-a-dunan-budapest',
-    'bg': 'най-добрата-вечеря-круизи-будапеща/круиз-с-вечеря-на-свещи-будапеща',
-    'cs': 'nejlepší-večeře-plavby-budapešť/večeře-plavba-při-svíčkách-budapešť',
-    'de': 'bootsfahrten-mit-abendessen-dunau-budapest/candlelight-dinner-kreuzfahrt-budapest',
-    'el': 'καλύτερο-δείπνο-κρουαζιέρες-Βουδαπέστη/κρουαζιέρα-για-δείπνο-υπό-κεριά-στη-βουδαπέστη',
-    'es': 'cruceros-con-cena-danubio-budapest/crucero-con-cena-a-la-luz-de-las-velas-budapest',
-    'fr': 'diner-croisieres-danube-budapest/croisiere-avec-diner-aux-chandelles-a-budapest',
-    'he': 'ארוחתערב-שייט-דנובה-בודפשט/שייט-ארוחת-ערב-לאור-נרות-בודפשט',
-    'hr': 'najbolja-krstarenja-svečerom-budimpešta/krstarenje-uz-večeru-uz-svijeće-budimpešta',
-    'it': 'crociere-cena-danubio-budapest/crociera-con-cena-a-lume-di-candela-a-budapest',
-    'ja': 'budapesuto-dinakuruzu/kyandoruraitodinakuruzubudapesuto',
-    'ko': 'dineo-keulujeu-budapeseuteu-danyubeu/kaendeullis-dineo-keulujeu-budapeseuteu',
-    'nl': 'beste-diner-cruises-boedapest/diner-cruise-bij-kaarslicht-boedapest',
-    'pl': 'rejsy-dunaju-budapeszt-kolacja/rejs-z-kolacja-przy-swiecach-budapeszt',
-    'pt': 'budapeste-jantar-cruzeiros-danubio/cruzeiro-com-jantar-a-luz-de-velas-budapeste',
-    'ro': 'croaziera-dunare-cu-cina-budapesta/croaziera-cu-cina-la-lumina-lumanarilor-budapesta',
-    'ru': 'uzhin-kruizy-budapesht-dunay/kruiz-s-uzhinom-pri-svechakh-budapesht',
-    'sk': 'vecera-plavby-budapest-dunaj/večerná-plavba-pri-sviečkach-budapešti',
-    'sr': 'најбоља-вечера-крстарења-будимпешта/вечера-крстарење-будимпешта-уз-свеће',
-    'tr': 'aksam-yemegi-yolculuklari-budapeste-tuna/mum-ışığında-akşam-yemeği-gezisi-budapest',
-    'uk': 'найкраща-вечеря-круїзи-будапешт/круїз-з-вечерею-при-свічках-будапешт'
+    'hu': 'gyertyafenyes-vacsora-a-dunan-budapest',
+    'bg': 'круиз-с-вечеря-на-свещи-будапеща',
+    'cs': 'večeře-plavba-při-svíčkách-budapešť',
+    'de': 'candlelight-dinner-kreuzfahrt-budapest',
+    'el': 'κρουαζιέρα-για-δείπνο-υπό-κεριά-στη-βουδαπέστη',
+    'es': 'crucero-con-cena-a-la-luz-de-las-velas-budapest',
+    'fr': 'croisiere-avec-diner-aux-chandelles-a-budapest',
+    'he': 'שייט-ארוחת-ערב-לאור-נרות-בודפשט',
+    'hr': 'krstarenje-uz-večeru-uz-svijeće-budimpešta',
+    'it': 'crociera-con-cena-a-lume-di-candela-a-budapest',
+    'ja': 'kyandoruraitodinakuruzubudapesuto',
+    'ko': 'kaendeullis-dineo-keulujeu-budapeseuteu',
+    'nl': 'diner-cruise-bij-kaarslicht-boedapest',
+    'pl': 'rejs-z-kolacja-przy-swiecach-budapeszt',
+    'pt': 'cruzeiro-com-jantar-a-luz-de-velas-budapeste',
+    'ro': 'croaziera-cu-cina-la-lumina-lumanarilor-budapesta',
+    'ru': 'kruiz-s-uzhinom-pri-svechakh-budapesht',
+    'sk': 'večerná-plavba-pri-sviečkach-budapešti',
+    'sr': 'вечера-крстарење-будимпешта-уз-свеће',
+    'tr': 'mum-ışığında-akşam-yemeği-gezisi-budapest',
+    'uk': 'круїз-з-вечерею-при-свічках-будапешт'
 }
 
 WALKING_MAP = {
@@ -108,7 +108,7 @@ HUBS = [
     ('', 1.0, 'daily', 'home'),
     ('best-budapest-river-cruises', 1.0, 'daily', 'river'),
     ('best-dinner-cruises-budapest', 1.0, 'daily', 'dinner'),
-    ('best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest', 0.8, 'weekly', 'candlelit'),
+    ('candlelit-dinner-cruise-budapest', 0.8, 'weekly', 'candlelit'),
     ('best-night-cruises-budapest', 0.9, 'weekly', 'night_cruises'),
     ('thermal-baths-budapest', 0.9, 'weekly', 'thermal_baths'),
     ('best-private-boat-tours-budapest', 0.8, 'weekly', 'private_boats'),
@@ -118,12 +118,14 @@ HUBS = [
     ('budapest-card-is-it-worth-it', 0.8, 'weekly', 'budapest_card'),
     ('budapest-travel-guide', 0.8, 'monthly', 'travel_guide'),
     ('budapest-airport-to-city-center', 0.8, 'monthly', 'airport'),
-    ('budapest-attractions/budapest-parliament', 0.8, 'monthly', 'parliament'),
+    ('budapest-parliament-tickets', 0.8, 'monthly', 'parliament'),
     ('budapest-river-cruise-group-booking', 0.7, 'monthly', 'group_booking'),
     ('budapest-tourism-statistics', 0.7, 'monthly', 'tourism_statistics'),
     ('about', 0.8, 'monthly', 'about'),
     ('contact', 0.7, 'monthly', 'contact')
 ]
+
+PARLIAMENT_MAP = {"hu": "orszaghaz-jegyek", "de": "parlament-budapest-tickets", "fr": "billets-parlement-budapest", "es": "entradas-parlamento-budapest", "it": "biglietti-parlamento-budapest", "pt": "ingressos-parlamento-budapeste", "nl": "parlement-boedapest-tickets", "pl": "bilety-parlament-budapeszt", "cs": "vstupenky-parlament-budapest", "sk": "vstupenky-parlament-budapest", "hr": "ulaznice-parlament-budimpesta", "sr": "ulaznice-parlament-budimpesta", "ro": "bilete-parlament-budapesta", "ru": "bilety-v-parlament-budapeshta", "uk": "kvytky-do-parlamentu-budapeshta", "bg": "bileti-parlament-budapeshta", "el": "eisitiria-koinovoulio-voudapesti", "he": "כרטיסים-לפרלמנט-בודפשט", "ja": "budapesuto-kokkaigijido-chiketto", "ko": "budapeseuteu-gukhoeuisadang-tikes", "tr": "budapeste-parlamento-bileti"}
 
 def get_loc(en_slug, hub_key, lang):
     if lang == 'en':
@@ -144,6 +146,9 @@ def get_loc(en_slug, hub_key, lang):
     
     if hub_key == 'candlelit' and lang in CANDLELIT_MAP:
         return f"https://www.budapestadventures.com/{lang}/{CANDLELIT_MAP[lang]}"
+    
+    if hub_key == 'parliament' and lang in PARLIAMENT_MAP:
+        return f"https://www.budapestadventures.com/{lang}/{PARLIAMENT_MAP[lang]}"
     
     if hub_key == 'walking_tours' and lang in WALKING_MAP:
         return f"https://www.budapestadventures.com/{lang}/{WALKING_MAP[lang]}"

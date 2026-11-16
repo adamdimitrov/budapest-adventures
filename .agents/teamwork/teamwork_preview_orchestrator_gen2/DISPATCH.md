@@ -17,7 +17,7 @@ Your Parent Conversation ID is `40f3afb7-d012-4ac6-8e24-b01d81ea518b` (Sentinel)
   1. Rebuild and deploy the 5 core money hubs:
      - Replace Prosecco mockup at `/` with clean Danube River Cruises Main Hub (`river-ecom.html`).
      - Deploy Budapest Dinner Cruises Hub (`dinner.html`) to `/budapest-dinner-cruises` and `/best-dinner-cruises-budapest`.
-     - Assemble and deploy Candlelit Dinner Cruise Tested Review static page at `candlelit-dinner-cruise.html` (mapped to `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`).
+     - Assemble and deploy Candlelit Dinner Cruise Tested Review static page at `candlelit-dinner-cruise.html` (mapped to `/candlelit-dinner-cruise-budapest`).
      - Verify Legenda Dedicated Terminal (`legenda-city-cruises.html`).
      - Verify Danube Cruise Decision Hub (`danube_cruise_decision_hub.html`).
   2. Run the Iteration Loop for Milestone 2: Explorer -> Worker -> Reviewers (2) -> Challengers (2) -> Forensic Auditor. Strict AND gate.

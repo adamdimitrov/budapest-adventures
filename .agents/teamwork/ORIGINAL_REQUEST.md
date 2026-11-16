@@ -20,7 +20,7 @@ Integrity mode: development
 Build a local and staging-preview environment on a dedicated branch (`staging/static-overhaul`) for Budapest Adventures' top revenue-generating hubs without modifying live production DNS (`35.187.176.9` / Linguana / Webflow):
 1. **Danube River Cruises Main Hub** (`/` and `/budapest-river-cruises`)
 2. **Budapest Dinner Cruises Hub** (`/budapest-dinner-cruises`)
-3. **Candlelit Dinner Cruise Tested Review** (`/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`)
+3. **Candlelit Dinner Cruise Tested Review** (`/candlelit-dinner-cruise-budapest`)
 4. **Legenda City Cruises Dedicated Terminal** (`/legenda-city-cruises`)
 5. **Danube Cruise Decision Hub & Filter Engines** (`danube_cruise_decision_hub.html`)
 

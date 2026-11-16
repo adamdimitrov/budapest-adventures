@@ -61,7 +61,7 @@ C["parliament"] = dict(
     psub="per adult • 45-minute tour",
     pills=[("🎟️", "Book a few days ahead",
             "<strong>You can only go inside on a 45-minute tour</strong>, and English slots sell out, days ahead from May to September and at weekends. "
-            "The official price is HUF 7,000 for EU/EEA adults and HUF 14,000 for everyone else. <a href=\"/budapest-attractions/budapest-parliament\">Official tickets and tips →</a>"),
+            "The official price is HUF 7,000 for EU/EEA adults and HUF 14,000 for everyone else. <a href=\"/budapest-parliament-tickets\">Official tickets and tips →</a>"),
            ("🕘", "Take a 9:00 to 10:00 slot",
             "Open 8:00 to 16:00 from November to March (to 18:00 April to October). An early slot leaves the whole day free for the Basilica and the riverside. "
             "Arrive 15 minutes early for the airport-style security check."),
@@ -73,7 +73,7 @@ C["parliament"] = dict(
     body="""<p>Start day 1 where every postcard starts: the <strong>Parliament</strong>. You can only go inside on a <strong>45-minute guided tour</strong>, past the gilded main staircase and the Holy Crown, and English slots sell out, so this is the one thing on day 1 to book before you fly.</p>
 <p>I like a <strong>9:00 or 10:00 slot</strong>: the security queue is short and you are done before the tour groups arrive. Afterwards walk round the back of the building to the riverside for the classic view across to Buda.</p>
 <h3>Who Should Book It</h3>
-<p><strong>Pick it</strong> if you want a guaranteed slot with an audio guide in your language. <strong>Skip it</strong> if you hold an EU/EEA passport and can book a few days ahead on the official site: see my <a href="/budapest-attractions/budapest-parliament">Parliament ticket guide</a>.</p>
+<p><strong>Pick it</strong> if you want a guaranteed slot with an audio guide in your language. <strong>Skip it</strong> if you hold an EU/EEA passport and can book a few days ahead on the official site: see my <a href="/budapest-parliament-tickets">Parliament ticket guide</a>.</p>
 <h3>Next Stop</h3>
 <p>🚶 St Stephen's Basilica is about a 15-minute walk south-east through Szabadság tér.</p>""",
     qf_badge="Day 1 morning", qf=[("Duration", "45 minutes, fixed time slot"), ("Hours", "8:00 to 16:00 Nov to Mar · 8:00 to 18:00 Apr to Oct"),

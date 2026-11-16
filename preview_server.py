@@ -423,7 +423,7 @@ def run_diagnostics(root_dir: Path, config_path: Path) -> bool:
         ("/budapest-dinner-cruises", "/dinner.html"),
         ("/best-dinner-cruises-budapest", "/dinner.html"),
         (
-            "/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest",
+            "/candlelit-dinner-cruise-budapest",
             "/candlelit-dinner-cruise.html",
         ),
         ("/about", "/about.html"),

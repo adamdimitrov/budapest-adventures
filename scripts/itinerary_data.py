@@ -5,7 +5,7 @@ Every product fact is taken from the card or Quick Facts of the same product on
 another BPA page, which were read on the live listings on 14-15 Nov 2026:
   - Legenda sightseeing cruise: best-budapest-river-cruises.html (tested, 4.4 from 17k+ on 3 sites).
   - Parliament ticket + audio guide (GYG t731430): best-things-to-do-budapest.html card;
-    official prices and hours from budapest-parliament.html (HUF 7,000 EU/EEA, HUF 14,000 others,
+    official prices and hours from budapest-parliament-tickets.html (HUF 7,000 EU/EEA, HUF 14,000 others,
     45-minute tour, 8:00 to 16:00 Nov to Mar, arrive 15 minutes early).
   - St Stephen's Basilica entry (GYG t655129): best-things-to-do-budapest.html card.
   - Buda Castle walking tour (GYG t157275): best-walking-tours-budapest.html (daily 14:00 and 14:30,
@@ -26,7 +26,7 @@ GYG = ("https://www.getyourguide.com/budapest-l29/{slug}/?partner_id=YS414AJ&amp
        "&amp;cmp=itinerary-{cmp}&amp;mkt_cmp=true")
 GYG_OTHER = ("https://www.getyourguide.com/{loc}/{slug}/?partner_id=YS414AJ&amp;utm_medium=online_publisher"
              "&amp;cmp=itinerary-{cmp}&amp;mkt_cmp=true")
-LEGENDA = "https://legenda.hu/en?partner=38585"
+LEGENDA = "https://legenda.hu/en/ticket-purchase?partner=38585"
 
 SITE_NAME = {"gyg": "GetYourGuide", "viator": "Viator", "tiqets": "Tiqets", "tripadvisor": "Tripadvisor"}
 

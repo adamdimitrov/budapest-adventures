@@ -1197,7 +1197,7 @@ def build_river_deck_and_sticky() -> str:
       <span class="hybrid-active-title" id="hybridActiveTitle">Legenda City Cruises</span>
       <span class="hybrid-active-price" id="hybridActivePrice">€20–25</span>
     </div>
-    <a href="https://legenda.hu/en?partner=38585" target="_blank" rel="nofollow sponsored noopener" class="hybrid-cta-btn" id="hybridActiveCta">
+    <a href="https://legenda.hu/en/ticket-purchase?partner=38585" target="_blank" rel="nofollow sponsored noopener" class="hybrid-cta-btn" id="hybridActiveCta">
       Check Availability →
     </a>
   </div>
@@ -1360,7 +1360,7 @@ def build_dinner_deck_and_sticky() -> str:
       <span class="hybrid-active-title" id="hybridActiveTitle">Legenda Candlelit Dinner Cruise</span>
       <span class="hybrid-active-price" id="hybridActivePrice">€110</span>
     </div>
-    <a href="https://legenda.hu/en?partner=38585" target="_blank" rel="nofollow sponsored noopener" class="hybrid-cta-btn" id="hybridActiveCta">
+    <a href="https://legenda.hu/en/ticket-purchase?partner=38585" target="_blank" rel="nofollow sponsored noopener" class="hybrid-cta-btn" id="hybridActiveCta">
       Reserve Table →
     </a>
   </div>
@@ -1430,7 +1430,7 @@ def build_dinner_deck_and_sticky() -> str:
   };
 
   const items = [
-    {id:"cruise-1-legenda",badge:"#1 PICK",title:"Legenda Candlelit 4-Course Dinner",price:"€110",url:"https://legenda.hu/en?partner=38585"},
+    {id:"cruise-1-legenda",badge:"#1 PICK",title:"Legenda Candlelit 4-Course Dinner",price:"€110",url:"https://legenda.hu/en/ticket-purchase?partner=38585"},
     {id:"cruise-2-silverline-no-show",badge:"#2 VALUE",title:"Silverline 4-Course (No Show)",price:"€74",url:"https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures"},
     {id:"cruise-3-silverline-folklore",badge:"#3 FOLK SHOW",title:"Silverline Folklore & Operetta",price:"€91",url:"https://budapestrivercruise.eu/product/budapest-danube-dinner-cruise/?code=bpadventures"},
     {id:"cruise-4-silverline-piano",badge:"#4 PIANO DUEL",title:"Silverline Piano Battle Dinner",price:"€91",url:"https://budapestrivercruise.eu/product/dinner-cruise-piano-battle-show/?code=bpadventures"},

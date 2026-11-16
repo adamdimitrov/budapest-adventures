@@ -12,7 +12,7 @@ to 6 are written from the live listings and their reviews, never in the first pe
 
 GYG = ("https://www.getyourguide.com/budapest-l29/{slug}/?partner_id=YS414AJ"
        "&utm_medium=online_publisher&cmp=en-dinner-cruises-{placement}-{key}&mkt_cmp=true")
-LEGENDA_DINNER = "https://legenda.hu/en/candlelit-dinner-cruise?partner=38585"
+LEGENDA_DINNER = "https://legenda.hu/en/ticket-purchase?partner=38585"
 SL = "https://budapestrivercruise.eu/product/{slug}/?code=bpadventures"
 MAPS = "https://www.google.com/maps/search/?api=1&query={q}"
 CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/"
