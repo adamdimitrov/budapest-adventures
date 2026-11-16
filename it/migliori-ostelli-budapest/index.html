@@ -107,7 +107,36 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) h2.ltt-section-title,body:has(.calc-title) main.container h2{font-size:28px!important}
 }
 </style>
-</head><body><header class="ltt-navbar" role="banner">
+<style id="bpa-lang-css">
+.bpa-lang{display:inline-flex;flex-wrap:wrap;gap:5px;flex-shrink:0}
+.bpa-lang[open]{flex-basis:100%}
+.bpa-lang>summary{list-style:none;cursor:pointer;user-select:none}
+.bpa-lang>summary::-webkit-details-marker{display:none}
+.bpa-lang>summary:hover{background:#e2e8f0 !important}
+.bpa-lang-chev{font-size:12px;line-height:1;opacity:.75;transition:transform .15s}
+.bpa-lang[open] .bpa-lang-chev{transform:rotate(180deg)}
+.bpa-lang.is-match>summary{background:#dcfce7 !important;color:#166534 !important}
+.bpa-lang-pop{flex-basis:100%;box-sizing:border-box;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.5;color:#334155;white-space:normal}
+.bpa-lang-pop strong{color:#0f172a}
+.bpa-lang-names b{color:#166534}
+.bpa-lang-note{display:block;margin-top:3px;color:#64748b;font-size:11px}
+/* With JS: the list floats over the card instead of pushing it down */
+html.bpa-lang-on .bpa-lang[open]{flex-basis:auto}
+html.bpa-lang-on .bpa-lang .bpa-lang-pop{display:none}
+html.bpa-lang-on .bpa-lang.is-open .bpa-lang-chev{transform:rotate(180deg)}
+html.bpa-lang-on .bpa-lang.is-open>summary{background:#e2e8f0 !important}
+html.bpa-lang-on .bpa-lang.is-match.is-open>summary{background:#bbf7d0 !important}
+#bpa-lang-float{position:absolute;z-index:9990;max-width:290px;box-sizing:border-box;background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 10px 30px rgba(15,23,42,.14);padding:10px 12px;font-size:12px;line-height:1.5;color:#334155;opacity:0;transform:translateY(-4px);transition:none;pointer-events:none}
+#bpa-lang-float.is-visible{opacity:1;transform:none;pointer-events:auto;transition:opacity .12s ease,transform .12s ease}
+#bpa-lang-float.is-above{transform:translateY(4px)}
+#bpa-lang-float.is-above.is-visible{transform:none}
+#bpa-lang-float strong{color:#0f172a}
+#bpa-lang-float .bpa-lang-names b{color:#166534}
+#bpa-lang-float::before{content:"";position:absolute;left:var(--ax,20px);top:-6px;width:10px;height:10px;background:#fff;border-left:1px solid #e2e8f0;border-top:1px solid #e2e8f0;transform:translateX(-50%) rotate(45deg)}
+#bpa-lang-float.is-above::before{top:auto;bottom:-6px;transform:translateX(-50%) rotate(225deg)}
+#bpa-lang-float::after{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+#bpa-lang-float.is-above::after{top:auto;bottom:-12px}
+</style></head><body><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/it">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -3845,10 +3874,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Testato di persona</span>
-<span class="bpa-sp">Tende per la privacy</span>
-<span class="bpa-sp">Terrazza sul tetto</span>
-<span class="bpa-sp">Via laterale tranquilla</span>
-<span class="bpa-sp">Ideale per lunghi soggiorni</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Tende per la privacy</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Una tenda per ogni letto.</strong> Dormitori moderni con tende e armadietti grandi, così anche una camera piena resta tranquilla.<span class="bpa-lang-note">Chiudi a chiave gli oggetti di valore: a me hanno rubato un maglione.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">Terrazza sul tetto</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Una terrazza per gli ospiti.</strong> Social senza essere un party hostel: facile conoscere gente la sera, poi dormire.<span class="bpa-lang-note">Ospiti: viaggiatori solitari, soggiorni lunghi e lavoratori da remoto.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">Via laterale tranquilla</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lónyay utca, IX distretto.</strong> Una via laterale più piccola, lontana dalle strade della festa del VII distretto. Rumore di strada minimo in 30 notti.<span class="bpa-lang-note">Kálvin tér (M3, M4) e Fővám tér (M4, tram 2, 47, 49) a pochi minuti a piedi.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💶 <span class="bpa-lang-label">Ideale per lunghi soggiorni</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>30 notti per 280 €.</strong> Circa 9,33 € a notte a marzo, il miglior rapporto qualità-prezzo per lunghi soggiorni che ho trovato in centro.<span class="bpa-lang-note">Letto in dormitorio da circa 10 € per date vicine, camere private da 28 €.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideale per:</strong> Chi viaggia da solo, nomadi digitali e backpacker per soggiorni lunghi che vogliono un ostello social senza chiasso da festa. <strong>Evitalo se</strong> vuoi un party hostel vicino ai ruin bar.
@@ -3895,10 +3924,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Testato di persona</span>
-<span class="bpa-sp">Attività giornaliere gratis</span>
-<span class="bpa-sp">Bar crawl</span>
-<span class="bpa-sp">Età 18-39 anni</span>
-<span class="bpa-sp">Deák tér</span>
+<details class="bpa-lang"><summary class="bpa-sp">🎯 <span class="bpa-lang-label">Attività giornaliere gratis</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Qualcosa ogni giorno.</strong> Attività gratuite di giorno, poi giochi alcolici al bar la sera. Lo staff coinvolge tutti.<span class="bpa-lang-note">Il posto più facile della lista per arrivare da solo e ripartire con un gruppo.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">Bar crawl</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Pub crawl nei ruin bar.</strong> La festa dell'ostello finisce tra le 23 e mezzanotte, poi il gruppo esce nel quartiere ebraico.<span class="bpa-lang-note">Nessun coprifuoco; check-in dalle 15:00 alle 23:00.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🪪 <span class="bpa-lang-label">Età 18-39 anni</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Solo dai 18 ai 39 anni.</strong> Possono soggiornare solo ospiti tra i 18 e i 39 anni, così il pubblico resta giovane e socievole.<span class="bpa-lang-note">Più di 39 anni? Il Maverick offre il lato social senza limiti di età.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚇 <span class="bpa-lang-label">Deák tér</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>4 minuti da Deák Ferenc tér.</strong> M1, M2, M3 e il bus 100E per l'aeroporto, da Rumbach Sebestyén utca 6.<span class="bpa-lang-note">Dai bar torni a casa a piedi.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideale per:</strong> Chi viaggia da solo tra i 18 e i 39 anni e cerca subito un gruppo, attività giornaliere e serate fuori. <strong>Evitalo se</strong> hai più di 39 anni, viaggi in coppia cercando privacy o vuoi andare a dormire presto.
@@ -3945,10 +3974,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Testato di persona</span>
-<span class="bpa-sp">Colazione gratis</span>
-<span class="bpa-sp">Tende per la privacy</span>
-<span class="bpa-sp">Tram 24 ore su 24</span>
-<span class="bpa-sp">Oktogon</span>
+<details class="bpa-lang"><summary class="bpa-sp">🥐 <span class="bpa-lang-label">Colazione gratis</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Colazione inclusa.</strong> In più cene scontate. Con i prezzi del cibo in Ungheria, i pasti ti fanno risparmiare ogni giorno più di quanto costa il letto.<span class="bpa-lang-note">Durante il mio soggiorno lo sconto sulla cena richiedeva una piccola spesa minima al bar.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Tende per la privacy</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Letti a castello con tenda.</strong> La mia camera da 10 letti aveva le tende, ma era il punto debole. Le camere da 4, 8 e 12 letti sono più belle per pochi euro in più.<span class="bpa-lang-note">Lucchetto non incluso: portane uno o compralo per circa 3 €.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚋 <span class="bpa-lang-label">Tram 24 ore su 24</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Tram notturni davanti alla porta.</strong> La M1 e i tram 4 e 6, attivi 24 ore su 24, fermano proprio davanti: tornare alle 3 di notte è facile.<span class="bpa-lang-note">Il rovescio: i tram passano tutta la notte. Porta i tappi per le orecchie.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Oktogon</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Oktogon tér 4, VI distretto.</strong> All'incrocio tra Andrássy út e il Grande Viale, centro raggiungibile a piedi.<span class="bpa-lang-note">Reception aperta 24 ore su 24, check-in dalle 14:00 a mezzanotte.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideale per:</strong> Viaggiatori attenti al budget che cercano il letto più economico in centro, colazione gratis e cene a poco prezzo. <strong>Evitalo se</strong> hai il sonno leggero o vuoi un'atmosfera social e personale.
@@ -3995,10 +4024,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Testato di persona</span>
-<span class="bpa-sp">Spazio coworking</span>
-<span class="bpa-sp">Lucchetto gratis</span>
-<span class="bpa-sp">Letti a capsula</span>
-<span class="bpa-sp">Mercato Centrale</span>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">Spazio coworking</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Un vero angolo lavoro.</strong> La lounge ha un'area di lavoro adatta al laptop, la sistemazione migliore qui per lavorare da remoto.<span class="bpa-lang-note">Social ma tranquillo: più residenza universitaria che quartier generale dei pub crawl.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔒 <span class="bpa-lang-label">Lucchetto gratis</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lucchetto incluso.</strong> Il tuo box portaoggetti ha un lucchetto gratuito, niente 3 € extra come altrove.<span class="bpa-lang-note">Reception attiva 24 ore su 24.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Letti a capsula</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Capsule complete.</strong> Ogni letto ha tenda, presa, lampada, ripiano e box portaoggetti.<span class="bpa-lang-note">Camere strette: poco spazio quando tutti disfano i bagagli.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">Mercato Centrale</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Gönczy Pál utca 2.</strong> A un edificio dal Mercato Centrale, a pochi minuti a piedi dal Danubio.<span class="bpa-lang-note">3° piano, senza ascensore. Fővám tér (M4, tram 2, 47, 49) è vicina.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideale per:</strong> Nomadi digitali e viaggiatori che vogliono una lounge adatta al laptop, letti a capsula e un clima socievole ma calmo. <strong>Evitalo se</strong> hai bagagli pesanti (3° piano, senza ascensore) o vuoi bagni privati.
@@ -4046,10 +4075,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Testato di persona</span>
-<span class="bpa-sp">Camere silenziose</span>
-<span class="bpa-sp">Ottima doccia</span>
-<span class="bpa-sp">Lounge lavoro</span>
-<span class="bpa-sp">Camere private</span>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">Camere silenziose</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>La calma di un hotel economico.</strong> Camere semplici, silenziose e pulite, poca vita da ostello, pensate per dormire bene.<span class="bpa-lang-note">Adatto a coppie, famiglie e a chi vuole privacy.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Ottima doccia</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Una doccia strepitosa.</strong> In una camera semplice, silenziosa e pulita, la doccia spiccava.<span class="bpa-lang-note">Lenzuola e asciugamani a pagamento: 1.150 HUF (circa 3 €).</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">Lounge lavoro</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lounge adatta al laptop.</strong> Un'ottima area di lavoro nella lounge, e la reception ha custodito il mio laptop al sicuro mentre ero fuori.<span class="bpa-lang-note">Colazione da hotel facoltativa a circa 8 €.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚪 <span class="bpa-lang-label">Camere private</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Private da 2 persone.</strong> Camere private oltre ai dormitori, con reception 24 ore su 24 per arrivare a qualsiasi ora.<span class="bpa-lang-note">Csengery utca 11, a pochi minuti da Oktogon (M1, tram 4 e 6).</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideale per:</strong> Coppie, famiglie e chiunque preferisca una camera tranquilla, semplice e pulita rispetto alla vita social. <strong>Evitalo se</strong> vuoi un ostello social o detesti pagare extra per la biancheria.
@@ -4093,10 +4122,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Testato di persona</span>
-<span class="bpa-sp">Dormitori con bagno in camera</span>
-<span class="bpa-sp">Tende sui letti</span>
-<span class="bpa-sp">Bar dell'ostello</span>
-<span class="bpa-sp">Király utca</span>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Dormitori con bagno in camera</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Bagno in ogni camera.</strong> Ogni camera ha bagno privato e aria condizionata, niente code nel corridoio.<span class="bpa-lang-note">Pulito ma ordinario: non prenotarlo per il design.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Tende sui letti</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Tende personali al letto.</strong> Per essere un party hostel di notte è tranquillo. Ho dormito bene.<span class="bpa-lang-note">Armadietti di sicurezza gratuiti.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍸 <span class="bpa-lang-label">Bar dell'ostello</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Un bar social nell'ostello.</strong> Facile conoscere gente al bar dell'ostello, poi i bar di Gozsdu Udvar sono a due passi.<span class="bpa-lang-note">Il pubblico internazionale è stato la parte migliore del soggiorno.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Király utca</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Király utca 20.</strong> A 3 minuti a piedi da Deák Ferenc tér (M1, M2, M3 e bus 100E per l'aeroporto).<span class="bpa-lang-note">Check-in dalle 14:00 alle 23:00, check-out entro le 10:00.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideale per:</strong> Backpacker che vogliono un bar social e la vita notturna sotto casa, ma anche una buona notte di sonno. <strong>Evitalo se</strong> cerchi il letto più economico o un ostello con vera personalità.
@@ -4142,10 +4171,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Testato di persona</span>
-<span class="bpa-sp">Clima familiare</span>
-<span class="bpa-sp">Piccolo ostello</span>
-<span class="bpa-sp">Tè e caffè gratis</span>
-<span class="bpa-sp">Mercato Centrale</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛋️ <span class="bpa-lang-label">Clima familiare</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Un vero soggiorno.</strong> Tutti finiscono a chiacchierare sul divano, con giochi da tavolo durante il giorno.<span class="bpa-lang-note">Se ami l'atmosfera accogliente e casalinga, qui è il paradiso.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">Piccolo ostello</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Piccolo e personale.</strong> Durante il mio soggiorno un'unica host gentile gestiva tutto l'ostello. È grazie a lei che ha voti da 9/10.<span class="bpa-lang-note">Niente armadietto con chiave né scrivania con prese.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">Tè e caffè gratis</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Gratis tutto il giorno.</strong> Tè e caffè self-service tutto il giorno, in soggiorno.<span class="bpa-lang-note">Check-in solo dalle 14:00 alle 21:00: se arrivi tardi, prenota altrove.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">Mercato Centrale</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Vámház körút 5.</strong> Accanto al Mercato Centrale e al Ponte della Libertà, a pochi minuti dal Danubio.<span class="bpa-lang-note">Fővám tér (M4, tram 2, 47, 49) davanti alla porta.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideale per:</strong> Introversi e viaggiatori lenti che cercano un posto piccolo, accogliente e familiare vicino al Danubio. <strong>Evitalo se</strong> arrivi tardi la sera, ti serve un armadietto con serratura o una scrivania con presa.
@@ -4194,10 +4223,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Testato di persona</span>
-<span class="bpa-sp">Vista Basilica</span>
-<span class="bpa-sp">Bagni privati</span>
-<span class="bpa-sp">Tè e caffè gratis</span>
-<span class="bpa-sp">Andrássy út</span>
+<details class="bpa-lang"><summary class="bpa-sp">⛪ <span class="bpa-lang-label">Vista Basilica</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Vista sulla Basilica di Santo Stefano.</strong> All'inizio di Andrássy út, a pochi minuti a piedi dalla Basilica, dall'Opera e da Deák Ferenc tér.<span class="bpa-lang-note">La base migliore della lista per visitare la città a piedi.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Bagni privati</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Il tuo bagno privato.</strong> Dormitori e doppie con bagno privato; il mio era ottimo e pulito.<span class="bpa-lang-note">Camere private da circa 22 €.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">Tè e caffè gratis</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Tè, caffè e lenzuola gratis.</strong> Tè e caffè self-service e cucine completamente attrezzate, secondo l'ostello.<span class="bpa-lang-note">Tranquillo, non social: niente eventi né tocco personale.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Andrássy út</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Andrássy út 2, 1° piano.</strong> Bajcsy-Zsilinszky út (M1) davanti alla porta, Deák Ferenc tér (M1, M2, M3) a pochi passi.<span class="bpa-lang-note">Strada principale: chiedi una camera sul cortile. Una rampa di scale, senza ascensore.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideale per:</strong> Chi visita la città e vuole un letto calmo e pulito all'inizio di Andrássy út, a due passi dalla Basilica di Santo Stefano. <strong>Evitalo se</strong> vuoi un ostello social o sei sensibile al rumore del traffico.
@@ -4234,10 +4263,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Testato di persona</span>
-<span class="bpa-sp">Loft accogliente</span>
-<span class="bpa-sp">Consigli locali</span>
-<span class="bpa-sp">Cucina per ospiti</span>
-<span class="bpa-sp">Quartiere Ebraico</span>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">Loft accogliente</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Un loft mansardato.</strong> Ristrutturato e intimo, sembra di stare da un amico.<span class="bpa-lang-note">Dormitori da 4 e 6 letti misti o solo donne, più una doppia privata.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🗺️ <span class="bpa-lang-label">Consigli locali</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Consigli che non trovi online.</strong> Gli host mi hanno dato consigli su bar, ristoranti e festival che non erano in nessuna guida.<span class="bpa-lang-note">Staff cordiale e accogliente.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍳 <span class="bpa-lang-label">Cucina per ospiti</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Cucina completamente attrezzata.</strong> Cucina da te e risparmia sui prezzi dei ristoranti di Budapest.<span class="bpa-lang-note">Durante il mio soggiorno si pagava solo in contanti: porta qualche fiorino per sicurezza.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Quartiere Ebraico</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Akácfa utca 10, VII distretto.</strong> Nel quartiere della movida, vicino alle principali attrazioni e ai ruin bar.<span class="bpa-lang-note">Tram 4 e 6 a Wesselényi utca. Porta i tappi per il weekend.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideale per:</strong> Backpacker solitari e piccoli gruppi che vogliono un ostello accogliente in stile appartamento con host cordiali nel quartiere della movida. <strong>Evitalo se</strong> ti serve il pagamento con carta, l'accesso senza scale o il silenzio nei weekend.
@@ -4272,10 +4301,10 @@ a.w-webflow-badge,
 <div class="bpa-proof"></div>
 </div>
 <div class="bpa-specs-row">
-<span class="bpa-sp">Rooftop bar</span>
-<span class="bpa-sp">Pub crawl ogni giorno</span>
-<span class="bpa-sp">Solo 18+</span>
-<span class="bpa-sp">Quartiere Ebraico</span>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">Rooftop bar</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rooftop bar solo per ospiti.</strong> Happy hour tutti i giorni dalle 16 alle 19.<span class="bpa-lang-note">Oltre 300 letti, aperto dal 2015, secondo l'ostello.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">Pub crawl ogni giorno</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Una festa ogni sera.</strong> Pub crawl ogni giorno, più bingo crawl, SPArty e party boat organizzati dall'ostello.<span class="bpa-lang-note">Gli ospiti segnalano rumore dal club al piano di sotto.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔞 <span class="bpa-lang-label">Solo 18+</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rigorosamente 18+.</strong> Pensato per le notti fuori, non per chi si alza presto.<span class="bpa-lang-note">Check-in dalle 15:00 a mezzanotte; pagamento in contanti o con carta.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Quartiere Ebraico</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Dob utca 19, VII distretto.</strong> A pochi passi da Gozsdu Udvar e dallo Szimpla Kert.<span class="bpa-lang-note">Astoria (M2) e Deák Ferenc tér (M1, M2, M3) a pochi minuti.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideale per:</strong> Gruppi 18+ e amanti delle feste che vogliono un grande party hostel chiassoso con rooftop bar nella zona dei ruin bar. <strong>Evitalo se</strong> hai il sonno leggero, ti svegli presto o vuoi tende sui letti.
@@ -8968,4 +8997,92 @@ a.cd-editorial-bookmark .cd-editorial-meta{display:none!important}
 a.cd-editorial-bookmark .cd-editorial-desc{display:-webkit-box!important;-webkit-line-clamp:1!important;-webkit-box-orient:vertical!important;overflow:hidden!important;font-size:13px!important;line-height:1.4!important;color:#64748b!important;margin:3px 0 0!important}
 a.cd-editorial-bookmark .cd-editorial-title{font-family:'Playfair Display',Georgia,serif!important;font-size:16px!important;line-height:1.3!important;margin:0!important;color:#0a192f!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
 a.cd-editorial-bookmark::after{content:"\203A"!important;position:static!important;order:2;flex:0 0 auto;font-size:22px;line-height:1;color:#b88214}
-</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style></body></html>
+</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style><script id="bpa-lang-js">
+(function(){
+  var N={en:'English',fr:'French',es:'Spanish',de:'German',it:'Italian',pt:'Portuguese',nl:'Dutch',pl:'Polish',ru:'Russian',ar:'Arabic',hi:'Hindi',zh:'Chinese',ja:'Japanese',ko:'Korean'};
+  function init(){
+    var langs=[];
+    try{langs=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']);}catch(e){}
+    var code=String(langs[0]||'').slice(0,2).toLowerCase();
+    var boxes=document.querySelectorAll('.bpa-lang');
+    if(!boxes.length) return;
+    document.documentElement.classList.add('bpa-lang-on');
+
+    var pop=document.createElement('div');
+    pop.id='bpa-lang-float';
+    pop.setAttribute('role','tooltip');
+    document.body.appendChild(pop);
+    var current=null, pinned=false, hideTimer=null;
+    var canHover=window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    function place(d){
+      var s=d.querySelector('summary').getBoundingClientRect();
+      var vw=document.documentElement.clientWidth, vh=window.innerHeight;
+      var w=Math.min(290, vw-16);
+      pop.style.width=w+'px';
+      var left=Math.max(8, Math.min(s.left, vw-w-8));
+      var h=pop.offsetHeight;
+      var above=(s.bottom+10+h>vh) && (s.top-10-h>0);
+      var top=above ? (s.top-10-h) : (s.bottom+10);
+      pop.classList.toggle('is-above', above);
+      pop.style.left=(left+window.scrollX)+'px';
+      pop.style.top=(top+window.scrollY)+'px';
+      pop.style.setProperty('--ax', Math.max(14, Math.min(w-14, s.left+Math.min(s.width,40)/2-left))+'px');
+    }
+    function show(d, pin){
+      clearTimeout(hideTimer);
+      if(current && current!==d) current.classList.remove('is-open');
+      current=d; pinned=!!pin;
+      pop.innerHTML=d.querySelector('.bpa-lang-pop').innerHTML;
+      d.classList.add('is-open');
+      d.querySelector('summary').setAttribute('aria-expanded','true');
+      place(d);
+      pop.classList.add('is-visible');
+    }
+    function hide(){
+      clearTimeout(hideTimer);
+      if(current){ current.classList.remove('is-open'); current.querySelector('summary').setAttribute('aria-expanded','false'); }
+      current=null; pinned=false;
+      pop.classList.remove('is-visible');
+    }
+    function softHide(e){
+      if(pinned) return;
+      var to=e && e.relatedTarget;
+      if(to && to.closest && (to.closest('#bpa-lang-float') || (current && current.contains(to)))) return;
+      hide();
+    }
+
+    boxes.forEach(function(d){
+      var sum=d.querySelector('summary');
+      sum.setAttribute('aria-expanded','false');
+      sum.addEventListener('click',function(e){
+        e.preventDefault();
+        if(current===d && pinned){ hide(); return; }
+        show(d,true);
+      });
+      if(canHover){
+        sum.addEventListener('mouseenter',function(){ if(!pinned||current!==d) show(d,false); });
+        sum.addEventListener('mouseleave',softHide);
+      }
+      if(!code||code==='en'||!N[code]) return;
+      var list=(d.getAttribute('data-langs')||'').split(',');
+      if(list.indexOf(code)===-1) return;
+      var label=d.querySelector('.bpa-lang-label');
+      if(label) label.textContent='Audio in '+N[code]+' \u2713';
+      d.classList.add('is-match');
+      var names=d.querySelector('.bpa-lang-names');
+      if(names) names.innerHTML=names.textContent.split(', ').map(function(n){return n===N[code]?'<b>'+n+'</b>':n;}).join(', ');
+    });
+    pop.addEventListener('mouseenter',function(){ clearTimeout(hideTimer); });
+    pop.addEventListener('mouseleave',softHide);
+    document.addEventListener('click',function(e){
+      if(!current) return;
+      if(e.target.closest && (e.target.closest('.bpa-lang') || e.target.closest('#bpa-lang-float'))) return;
+      hide();
+    });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') hide(); });
+    window.addEventListener('resize',function(){ if(current) place(current); });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script></body></html>

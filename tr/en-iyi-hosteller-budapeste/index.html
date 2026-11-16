@@ -107,7 +107,36 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) h2.ltt-section-title,body:has(.calc-title) main.container h2{font-size:28px!important}
 }
 </style>
-</head><body><header class="ltt-navbar" role="banner">
+<style id="bpa-lang-css">
+.bpa-lang{display:inline-flex;flex-wrap:wrap;gap:5px;flex-shrink:0}
+.bpa-lang[open]{flex-basis:100%}
+.bpa-lang>summary{list-style:none;cursor:pointer;user-select:none}
+.bpa-lang>summary::-webkit-details-marker{display:none}
+.bpa-lang>summary:hover{background:#e2e8f0 !important}
+.bpa-lang-chev{font-size:12px;line-height:1;opacity:.75;transition:transform .15s}
+.bpa-lang[open] .bpa-lang-chev{transform:rotate(180deg)}
+.bpa-lang.is-match>summary{background:#dcfce7 !important;color:#166534 !important}
+.bpa-lang-pop{flex-basis:100%;box-sizing:border-box;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.5;color:#334155;white-space:normal}
+.bpa-lang-pop strong{color:#0f172a}
+.bpa-lang-names b{color:#166534}
+.bpa-lang-note{display:block;margin-top:3px;color:#64748b;font-size:11px}
+/* With JS: the list floats over the card instead of pushing it down */
+html.bpa-lang-on .bpa-lang[open]{flex-basis:auto}
+html.bpa-lang-on .bpa-lang .bpa-lang-pop{display:none}
+html.bpa-lang-on .bpa-lang.is-open .bpa-lang-chev{transform:rotate(180deg)}
+html.bpa-lang-on .bpa-lang.is-open>summary{background:#e2e8f0 !important}
+html.bpa-lang-on .bpa-lang.is-match.is-open>summary{background:#bbf7d0 !important}
+#bpa-lang-float{position:absolute;z-index:9990;max-width:290px;box-sizing:border-box;background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 10px 30px rgba(15,23,42,.14);padding:10px 12px;font-size:12px;line-height:1.5;color:#334155;opacity:0;transform:translateY(-4px);transition:none;pointer-events:none}
+#bpa-lang-float.is-visible{opacity:1;transform:none;pointer-events:auto;transition:opacity .12s ease,transform .12s ease}
+#bpa-lang-float.is-above{transform:translateY(4px)}
+#bpa-lang-float.is-above.is-visible{transform:none}
+#bpa-lang-float strong{color:#0f172a}
+#bpa-lang-float .bpa-lang-names b{color:#166534}
+#bpa-lang-float::before{content:"";position:absolute;left:var(--ax,20px);top:-6px;width:10px;height:10px;background:#fff;border-left:1px solid #e2e8f0;border-top:1px solid #e2e8f0;transform:translateX(-50%) rotate(45deg)}
+#bpa-lang-float.is-above::before{top:auto;bottom:-6px;transform:translateX(-50%) rotate(225deg)}
+#bpa-lang-float::after{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+#bpa-lang-float.is-above::after{top:auto;bottom:-12px}
+</style></head><body><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/tr">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -3845,10 +3874,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Bizzat Test Edildi</span>
-<span class="bpa-sp">Mahremiyet Perdesi</span>
-<span class="bpa-sp">Çatı Terası</span>
-<span class="bpa-sp">Sessiz Ara Sokak</span>
-<span class="bpa-sp">Uzun Konaklama Değeri</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Mahremiyet Perdesi</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Her yatakta perde.</strong> Perdeli ve büyük dolaplı modern yatakhaneler, dolu bir oda bile sakin hissettiriyor.<span class="bpa-lang-note">Değerli eşyalarını kilitle: benim bir kazağım çalındı.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">Çatı Terası</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Misafirlere özel teras.</strong> Sosyal ama parti hosteli değil: akşam kolayca insanlarla tanışır, sonra uyursun.<span class="bpa-lang-note">Kitle: yalnız gezginler, uzun kalanlar ve uzaktan çalışanlar.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">Sessiz Ara Sokak</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lónyay utca, IX. bölge.</strong> VII. bölgenin parti sokaklarından uzak, daha küçük bir ara sokak. 30 gecede neredeyse hiç sokak gürültüsü yoktu.<span class="bpa-lang-note">Kálvin tér (M3, M4) ve Fővám tér (M4, 2, 47, 49 numaralı tramvaylar) birkaç dakika yürüme mesafesinde.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💶 <span class="bpa-lang-label">Uzun Konaklama Değeri</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>30 gece 280 €.</strong> Mart ayında gecelik yaklaşık 9,33 €, merkezde bulduğum en iyi uzun konaklama fiyatı.<span class="bpa-lang-note">Yakın tarihler için yatakhane yaklaşık 10 €'dan, özel odalar 28 €'dan başlıyor.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kimler için en iyi:</strong> Parti gürültüsü olmadan sosyal bir hostel isteyen tek başına gezginler, dijital göçebeler ve uzun süre kalacak sırt çantalılar. Ruin barların yanında bir parti hosteli istiyorsan <strong>pas geç</strong>.
@@ -3895,10 +3924,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Bizzat Test Edildi</span>
-<span class="bpa-sp">Ücretsiz Günlük Aktiviteler</span>
-<span class="bpa-sp">Bar Turları</span>
-<span class="bpa-sp">18-39 Yaş</span>
-<span class="bpa-sp">Deák tér</span>
+<details class="bpa-lang"><summary class="bpa-sp">🎯 <span class="bpa-lang-label">Ücretsiz Günlük Aktiviteler</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Her gün bir şey var.</strong> Gündüz ücretsiz etkinlikler, akşam barda içme oyunları. Ekip herkesi işin içine katıyor.<span class="bpa-lang-note">Listede yalnız gelip bir ekiple ayrılmanın en kolay olduğu yer.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">Bar Turları</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ruin barlara pub crawl.</strong> Hosteldeki parti 23:00 ile gece yarısı arasında biter, sonra grup Yahudi Mahallesi'ne çıkar.<span class="bpa-lang-note">Sokağa çıkma saati yok; giriş 15:00 ile 23:00 arası.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🪪 <span class="bpa-lang-label">18-39 Yaş</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Sadece 18 ile 39 yaş arası.</strong> Yalnızca 18 ile 39 yaş arası misafirler kalabiliyor, bu da kitleyi genç ve sosyal tutuyor.<span class="bpa-lang-note">39'un üstünde misin? Maverick yaş sınırı olmadan sosyal ortam sunuyor.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚇 <span class="bpa-lang-label">Deák tér</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Deák Ferenc tér'e 4 dakika.</strong> M1, M2, M3 ve havalimanı otobüsü 100E, Rumbach Sebestyén utca 6'dan.<span class="bpa-lang-note">Barlardan yürüyerek dönersin.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kimler için en iyi:</strong> Anında arkadaş grubu, günlük aktiviteler ve gece eğlencesi isteyen 18-39 yaş arası tek başına gezginler. 39 yaşından büyüksen, mahremiyet isteyen bir çiftsen veya erken uyumak istiyorsan <strong>pas geç</strong>.
@@ -3945,10 +3974,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Bizzat Test Edildi</span>
-<span class="bpa-sp">Ücretsiz Kahvaltı</span>
-<span class="bpa-sp">Mahremiyet Perdesi</span>
-<span class="bpa-sp">7/24 Tramvay</span>
-<span class="bpa-sp">Oktogon</span>
+<details class="bpa-lang"><summary class="bpa-sp">🥐 <span class="bpa-lang-label">Ücretsiz Kahvaltı</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Kahvaltı dahil.</strong> Üstüne indirimli akşam yemekleri. Macaristan'daki yemek fiyatlarıyla öğünler, yatağın fiyatından fazlasını kazandırıyor.<span class="bpa-lang-note">Ben kaldığımda akşam yemeği indirimi barda küçük bir minimum harcama gerektiriyordu.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Mahremiyet Perdesi</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Perdeli ranzalar.</strong> 10 yataklı odamın perdeleri vardı ama zayıf nokta oydu. 4, 8 ve 12 yataklı odalar birkaç euro fazlasına daha güzel.<span class="bpa-lang-note">Asma kilit dahil değil: kendininkini getir ya da yaklaşık 3 €'ya al.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚋 <span class="bpa-lang-label">7/24 Tramvay</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Kapıda gece tramvayı.</strong> M1 ve 24 saat çalışan 4 ve 6 numaralı tramvaylar tam önünde duruyor, gece 3'te dönmek kolay.<span class="bpa-lang-note">Öbür yüzü: tramvaylar bütün gece geçiyor. Kulak tıkacı getir.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Oktogon</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Oktogon tér 4, VI. bölge.</strong> Andrássy út ile Büyük Bulvar'ın kesiştiği yerde, merkeze yürüme mesafesinde.<span class="bpa-lang-note">Resepsiyon 7/24 açık, giriş 14:00'ten gece yarısına kadar.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kimler için en iyi:</strong> Merkezdeki en ucuz yatağı, ücretsiz kahvaltıyı ve uygun fiyatlı akşam yemeklerini isteyen bütçe dostu gezginler. Uykun hafifse veya sosyal, samimi bir ortam istiyorsan <strong>pas geç</strong>.
@@ -3995,10 +4024,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Bizzat Test Edildi</span>
-<span class="bpa-sp">Ortak Çalışma Alanı</span>
-<span class="bpa-sp">Ücretsiz Asma Kilit</span>
-<span class="bpa-sp">Kapsül Yataklar</span>
-<span class="bpa-sp">Pazar Hali</span>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">Ortak Çalışma Alanı</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Gerçek bir çalışma alanı.</strong> Lounge'da laptop dostu bir çalışma alanı var, burada uzaktan çalışma için en iyi düzen.<span class="bpa-lang-note">Sosyal ama sakin: pub crawl merkezinden çok öğrenci yurdu.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔒 <span class="bpa-lang-label">Ücretsiz Asma Kilit</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Asma kilit dahil.</strong> Saklama kutun ücretsiz asma kilitle geliyor, başka yerlerdeki gibi 3 € ekstra yok.<span class="bpa-lang-note">Resepsiyon 7/24 hizmette.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Kapsül Yataklar</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Her şeyi olan kapsüller.</strong> Her yatakta perde, priz, lamba, eşya rafı ve saklama kutusu var.<span class="bpa-lang-note">Odalar dar: herkes bavul açarken az yer kalıyor.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">Pazar Hali</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Gönczy Pál utca 2.</strong> Büyük Çarşı'ya bir bina mesafede, Tuna'ya birkaç dakikalık yürüyüş.<span class="bpa-lang-note">3. kat, asansör yok. Fővám tér (M4, 2, 47, 49 numaralı tramvaylar) yakın.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kimler için en iyi:</strong> Dizüstü bilgisayara uygun salon, kapsül yataklar ve sosyal ama sakin bir ortam isteyen dijital göçebeler ve gezginler. Ağır valizin varsa (3. kat, asansör yok) veya özel banyo istiyorsan <strong>pas geç</strong>.
@@ -4046,10 +4075,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Bizzat Test Edildi</span>
-<span class="bpa-sp">Sessiz Odalar</span>
-<span class="bpa-sp">Harika Duş</span>
-<span class="bpa-sp">Çalışma Salonu</span>
-<span class="bpa-sp">Özel Odalar</span>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">Sessiz Odalar</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ekonomik otel sakinliği.</strong> Sade, sessiz ve temiz odalar, az hostel kalabalığı, iyi uyumak için tasarlanmış.<span class="bpa-lang-note">Çiftlere, ailelere ve mahremiyet isteyen herkese uygun.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Harika Duş</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Muhteşem bir duş.</strong> Sade, sessiz ve temiz bir odada duş öne çıkıyordu.<span class="bpa-lang-note">Çarşaf ve havlu ücretli: 1.150 HUF (yaklaşık 3 €).</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">Çalışma Salonu</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Laptop dostu lounge.</strong> Lounge'da harika bir çalışma alanı var, resepsiyon da ben dışarıdayken laptopumu güvenle sakladı.<span class="bpa-lang-note">İsteğe bağlı otel kahvaltısı yaklaşık 8 €.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚪 <span class="bpa-lang-label">Özel Odalar</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>2 kişiden itibaren özel odalar.</strong> Yatakhanelerin yanında özel odalar, istediğin saatte giriş için 24 saat resepsiyon.<span class="bpa-lang-note">Csengery utca 11, Oktogon'a birkaç dakika (M1, 4 ve 6 numaralı tramvaylar).</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kimler için en iyi:</strong> Sosyal bir ortam yerine sessiz, sade ve temiz bir oda isteyen çiftler, aileler ve herkes. Sosyal bir hostel istiyorsan veya nevresim için ekstra ödemekten nefret ediyorsan <strong>pas geç</strong>.
@@ -4093,10 +4122,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Bizzat Test Edildi</span>
-<span class="bpa-sp">Özel Banyolu Yatakhane</span>
-<span class="bpa-sp">Yatak Perdesi</span>
-<span class="bpa-sp">Hostel Barı</span>
-<span class="bpa-sp">Király utca</span>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Özel Banyolu Yatakhane</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Her odada banyo.</strong> Her odada kendi banyosu ve klima var, koridorda sıra yok.<span class="bpa-lang-note">Temiz ama sıradan: tasarım için rezervasyon yapma.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Yatak Perdesi</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Kişisel yatak perdeleri.</strong> Bir parti hosteline göre gece sessiz. İyi uyudum.<span class="bpa-lang-note">Ücretsiz güvenlik dolapları.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍸 <span class="bpa-lang-label">Hostel Barı</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Sosyal bir hostel barı.</strong> Hostelin barında insanlarla tanışmak kolay, Gozsdu Udvar'ın barları da birkaç adım ötede.<span class="bpa-lang-note">Uluslararası kitle konaklamamın en iyi kısmıydı.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Király utca</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Király utca 20.</strong> Deák Ferenc tér'e 3 dakika yürüme (M1, M2, M3 ve havalimanı otobüsü 100E).<span class="bpa-lang-note">Giriş 14:00 ile 23:00 arası, çıkış 10:00'a kadar.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kimler için en iyi:</strong> Kapısının önünde sosyal bir bar ve gece hayatı olup yine de geceleri iyi uyumak isteyen sırt çantalılar. En ucuz yatağı veya gerçekten karakterli bir hosteli arıyorsan <strong>pas geç</strong>.
@@ -4142,10 +4171,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Bizzat Test Edildi</span>
-<span class="bpa-sp">Ev Sıcaklığında</span>
-<span class="bpa-sp">Küçük Hostel</span>
-<span class="bpa-sp">Ücretsiz Çay &amp; Kahve</span>
-<span class="bpa-sp">Pazar Hali</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛋️ <span class="bpa-lang-label">Ev Sıcaklığında</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Gerçek bir oturma odası.</strong> Herkes sohbet etmek için kanepede buluşuyor, gündüz kutu oyunlarıyla.<span class="bpa-lang-note">Sıcak, ev gibi bir ortamı seviyorsan burası cennet.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">Küçük Hostel</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Küçük ve samimi.</strong> Ben kaldığımda bütün hosteli tek bir güler yüzlü ev sahibi yönetiyordu. 9/10 puanların sebebi o.<span class="bpa-lang-note">Kilitlenebilir dolap ve prizli masa yok.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">Ücretsiz Çay &amp; Kahve</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Bütün gün ücretsiz.</strong> Gün boyu self servis çay ve kahve, oturma odasında.<span class="bpa-lang-note">Giriş sadece 14:00 ile 21:00 arası: geç varıyorsan başka yer ayırt.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">Pazar Hali</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Vámház körút 5.</strong> Büyük Çarşı ve Özgürlük Köprüsü'nün yanında, Tuna'ya birkaç dakika.<span class="bpa-lang-note">Fővám tér (M4, 2, 47, 49 numaralı tramvaylar) kapının önünde.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kimler için en iyi:</strong> Tuna kıyısında küçük, sıcak ve ev gibi bir yer isteyen içe dönük gezginler ve yavaş seyahat edenler. Gece geç varacaksan, kilitli dolaba veya prizli çalışma masasına ihtiyacın varsa <strong>pas geç</strong>.
@@ -4194,10 +4223,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Bizzat Test Edildi</span>
-<span class="bpa-sp">Bazilika Manzarası</span>
-<span class="bpa-sp">Özel Banyolar</span>
-<span class="bpa-sp">Ücretsiz Çay &amp; Kahve</span>
-<span class="bpa-sp">Andrássy út</span>
+<details class="bpa-lang"><summary class="bpa-sp">⛪ <span class="bpa-lang-label">Bazilika Manzarası</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Aziz İştvan Bazilikası manzarası.</strong> Andrássy út'un başında, Bazilika'ya, Opera'ya ve Deák Ferenc tér'e birkaç dakika yürüme.<span class="bpa-lang-note">Yürüyerek gezmek için listedeki en iyi üs.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Özel Banyolar</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Kendi banyon.</strong> Özel banyolu yatakhaneler ve çift kişilik odalar; benimki mükemmel ve temizdi.<span class="bpa-lang-note">Özel odalar yaklaşık 22 €'dan başlıyor.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">Ücretsiz Çay &amp; Kahve</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ücretsiz çay, kahve ve çarşaf.</strong> Hostelin bilgisine göre self servis çay ve kahve ile tam donanımlı mutfaklar.<span class="bpa-lang-note">Sakin, sosyal değil: etkinlik ya da kişisel dokunuş yok.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Andrássy út</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Andrássy út 2, 1. kat.</strong> Bajcsy-Zsilinszky út (M1) kapıda, Deák Ferenc tér (M1, M2, M3) kısa bir yürüyüş.<span class="bpa-lang-note">Ana cadde: avluya bakan oda iste. Bir kat merdiven, asansör yok.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kimler için en iyi:</strong> Andrássy út'un başında, Aziz Stephen Bazilikası'na birkaç adım mesafede sakin ve temiz bir yatak isteyen gezginler. Sosyal bir hostel arıyorsan veya trafik gürültüsüne hassassan <strong>pas geç</strong>.
@@ -4234,10 +4263,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Bizzat Test Edildi</span>
-<span class="bpa-sp">Sıcak Çatı Katı</span>
-<span class="bpa-sp">Yerel İpuçları</span>
-<span class="bpa-sp">Ortak Mutfak</span>
-<span class="bpa-sp">Yahudi Mahallesi</span>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">Sıcak Çatı Katı</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Çatı katında loft daire.</strong> Yenilenmiş ve samimi, bir arkadaşında kalıyor gibisin.<span class="bpa-lang-note">4 ve 6 yataklı karma ya da kadınlara özel yatakhaneler, artı bir özel çift kişilik oda.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🗺️ <span class="bpa-lang-label">Yerel İpuçları</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>İnternette bulamayacağın tavsiyeler.</strong> Ev sahipleri bana hiçbir rehberde olmayan bar, restoran ve festival önerileri verdi.<span class="bpa-lang-note">Güler yüzlü, misafirperver ekip.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍳 <span class="bpa-lang-label">Ortak Mutfak</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Tam donanımlı mutfak.</strong> Kendi yemeğini yap, Budapeşte'nin restoran fiyatlarından tasarruf et.<span class="bpa-lang-note">Ben kaldığımda sadece nakit geçiyordu: ne olur ne olmaz forint getir.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Yahudi Mahallesi</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Akácfa utca 10, VII. bölge.</strong> Gece hayatı bölgesinde, başlıca turistik yerlere ve ruin barlara yakın.<span class="bpa-lang-note">Wesselényi utca'da 4 ve 6 numaralı tramvaylar. Hafta sonu için kulak tıkacı al.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kimler için en iyi:</strong> Gece hayatı bölgesinde samimi ev sahipleriyle sıcak, daire tarzı bir hostel isteyen tek başına sırt çantalılar ve küçük gruplar. Kartla ödeme yapman gerekiyorsa, basamaksız erişime ihtiyacın varsa veya hafta sonu geceleri sessizlik arıyorsan <strong>pas geç</strong>.
@@ -4272,10 +4301,10 @@ a.w-webflow-badge,
 <div class="bpa-proof"></div>
 </div>
 <div class="bpa-specs-row">
-<span class="bpa-sp">Çatı Barı</span>
-<span class="bpa-sp">Günlük Bar Turları</span>
-<span class="bpa-sp">Sadece 18+</span>
-<span class="bpa-sp">Yahudi Mahallesi</span>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">Çatı Barı</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Sadece misafirlere çatı barı.</strong> Her gün 16:00 ile 19:00 arası happy hour.<span class="bpa-lang-note">300'den fazla yatak, 2015'ten beri açık, hostelin bilgisine göre.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">Günlük Bar Turları</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Her gece parti.</strong> Hostelin düzenlediği günlük pub crawl'lar, bingo crawl'lar, SPArty'ler ve parti tekneleri.<span class="bpa-lang-note">Misafirler alttaki kulüpten gelen gürültüden söz ediyor.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔞 <span class="bpa-lang-label">Sadece 18+</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Kesinlikle 18+.</strong> Gece eğlencesi için yapılmış, erken kalkmak için değil.<span class="bpa-lang-note">Giriş 15:00'ten gece yarısına kadar; nakit ya da kartla ödeme.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Yahudi Mahallesi</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Dob utca 19, VII. bölge.</strong> Gozsdu Udvar ve Szimpla Kert'e kısa bir yürüyüş.<span class="bpa-lang-note">Astoria (M2) ve Deák Ferenc tér (M1, M2, M3) birkaç dakika uzakta.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kimler için en iyi:</strong> Ruin barlar bölgesinde çatı barlı, büyük ve gürültülü bir parti hosteli isteyen 18+ gruplar ve tek başına parti tutkunları. Uykun hafifse, erken kalkıyorsan veya yatak perdesi istiyorsan <strong>pas geç</strong>.
@@ -8969,4 +8998,92 @@ a.cd-editorial-bookmark .cd-editorial-meta{display:none!important}
 a.cd-editorial-bookmark .cd-editorial-desc{display:-webkit-box!important;-webkit-line-clamp:1!important;-webkit-box-orient:vertical!important;overflow:hidden!important;font-size:13px!important;line-height:1.4!important;color:#64748b!important;margin:3px 0 0!important}
 a.cd-editorial-bookmark .cd-editorial-title{font-family:'Playfair Display',Georgia,serif!important;font-size:16px!important;line-height:1.3!important;margin:0!important;color:#0a192f!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
 a.cd-editorial-bookmark::after{content:"\203A"!important;position:static!important;order:2;flex:0 0 auto;font-size:22px;line-height:1;color:#b88214}
-</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style></body></html>
+</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style><script id="bpa-lang-js">
+(function(){
+  var N={en:'English',fr:'French',es:'Spanish',de:'German',it:'Italian',pt:'Portuguese',nl:'Dutch',pl:'Polish',ru:'Russian',ar:'Arabic',hi:'Hindi',zh:'Chinese',ja:'Japanese',ko:'Korean'};
+  function init(){
+    var langs=[];
+    try{langs=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']);}catch(e){}
+    var code=String(langs[0]||'').slice(0,2).toLowerCase();
+    var boxes=document.querySelectorAll('.bpa-lang');
+    if(!boxes.length) return;
+    document.documentElement.classList.add('bpa-lang-on');
+
+    var pop=document.createElement('div');
+    pop.id='bpa-lang-float';
+    pop.setAttribute('role','tooltip');
+    document.body.appendChild(pop);
+    var current=null, pinned=false, hideTimer=null;
+    var canHover=window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    function place(d){
+      var s=d.querySelector('summary').getBoundingClientRect();
+      var vw=document.documentElement.clientWidth, vh=window.innerHeight;
+      var w=Math.min(290, vw-16);
+      pop.style.width=w+'px';
+      var left=Math.max(8, Math.min(s.left, vw-w-8));
+      var h=pop.offsetHeight;
+      var above=(s.bottom+10+h>vh) && (s.top-10-h>0);
+      var top=above ? (s.top-10-h) : (s.bottom+10);
+      pop.classList.toggle('is-above', above);
+      pop.style.left=(left+window.scrollX)+'px';
+      pop.style.top=(top+window.scrollY)+'px';
+      pop.style.setProperty('--ax', Math.max(14, Math.min(w-14, s.left+Math.min(s.width,40)/2-left))+'px');
+    }
+    function show(d, pin){
+      clearTimeout(hideTimer);
+      if(current && current!==d) current.classList.remove('is-open');
+      current=d; pinned=!!pin;
+      pop.innerHTML=d.querySelector('.bpa-lang-pop').innerHTML;
+      d.classList.add('is-open');
+      d.querySelector('summary').setAttribute('aria-expanded','true');
+      place(d);
+      pop.classList.add('is-visible');
+    }
+    function hide(){
+      clearTimeout(hideTimer);
+      if(current){ current.classList.remove('is-open'); current.querySelector('summary').setAttribute('aria-expanded','false'); }
+      current=null; pinned=false;
+      pop.classList.remove('is-visible');
+    }
+    function softHide(e){
+      if(pinned) return;
+      var to=e && e.relatedTarget;
+      if(to && to.closest && (to.closest('#bpa-lang-float') || (current && current.contains(to)))) return;
+      hide();
+    }
+
+    boxes.forEach(function(d){
+      var sum=d.querySelector('summary');
+      sum.setAttribute('aria-expanded','false');
+      sum.addEventListener('click',function(e){
+        e.preventDefault();
+        if(current===d && pinned){ hide(); return; }
+        show(d,true);
+      });
+      if(canHover){
+        sum.addEventListener('mouseenter',function(){ if(!pinned||current!==d) show(d,false); });
+        sum.addEventListener('mouseleave',softHide);
+      }
+      if(!code||code==='en'||!N[code]) return;
+      var list=(d.getAttribute('data-langs')||'').split(',');
+      if(list.indexOf(code)===-1) return;
+      var label=d.querySelector('.bpa-lang-label');
+      if(label) label.textContent='Audio in '+N[code]+' \u2713';
+      d.classList.add('is-match');
+      var names=d.querySelector('.bpa-lang-names');
+      if(names) names.innerHTML=names.textContent.split(', ').map(function(n){return n===N[code]?'<b>'+n+'</b>':n;}).join(', ');
+    });
+    pop.addEventListener('mouseenter',function(){ clearTimeout(hideTimer); });
+    pop.addEventListener('mouseleave',softHide);
+    document.addEventListener('click',function(e){
+      if(!current) return;
+      if(e.target.closest && (e.target.closest('.bpa-lang') || e.target.closest('#bpa-lang-float'))) return;
+      hide();
+    });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') hide(); });
+    window.addEventListener('resize',function(){ if(current) place(current); });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script></body></html>

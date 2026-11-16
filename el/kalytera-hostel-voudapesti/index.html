@@ -440,7 +440,36 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) h2.ltt-section-title,body:has(.calc-title) main.container h2{font-size:28px!important}
 }
 </style>
-</head><body><header class="ltt-navbar" role="banner">
+<style id="bpa-lang-css">
+.bpa-lang{display:inline-flex;flex-wrap:wrap;gap:5px;flex-shrink:0}
+.bpa-lang[open]{flex-basis:100%}
+.bpa-lang>summary{list-style:none;cursor:pointer;user-select:none}
+.bpa-lang>summary::-webkit-details-marker{display:none}
+.bpa-lang>summary:hover{background:#e2e8f0 !important}
+.bpa-lang-chev{font-size:12px;line-height:1;opacity:.75;transition:transform .15s}
+.bpa-lang[open] .bpa-lang-chev{transform:rotate(180deg)}
+.bpa-lang.is-match>summary{background:#dcfce7 !important;color:#166534 !important}
+.bpa-lang-pop{flex-basis:100%;box-sizing:border-box;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.5;color:#334155;white-space:normal}
+.bpa-lang-pop strong{color:#0f172a}
+.bpa-lang-names b{color:#166534}
+.bpa-lang-note{display:block;margin-top:3px;color:#64748b;font-size:11px}
+/* With JS: the list floats over the card instead of pushing it down */
+html.bpa-lang-on .bpa-lang[open]{flex-basis:auto}
+html.bpa-lang-on .bpa-lang .bpa-lang-pop{display:none}
+html.bpa-lang-on .bpa-lang.is-open .bpa-lang-chev{transform:rotate(180deg)}
+html.bpa-lang-on .bpa-lang.is-open>summary{background:#e2e8f0 !important}
+html.bpa-lang-on .bpa-lang.is-match.is-open>summary{background:#bbf7d0 !important}
+#bpa-lang-float{position:absolute;z-index:9990;max-width:290px;box-sizing:border-box;background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 10px 30px rgba(15,23,42,.14);padding:10px 12px;font-size:12px;line-height:1.5;color:#334155;opacity:0;transform:translateY(-4px);transition:none;pointer-events:none}
+#bpa-lang-float.is-visible{opacity:1;transform:none;pointer-events:auto;transition:opacity .12s ease,transform .12s ease}
+#bpa-lang-float.is-above{transform:translateY(4px)}
+#bpa-lang-float.is-above.is-visible{transform:none}
+#bpa-lang-float strong{color:#0f172a}
+#bpa-lang-float .bpa-lang-names b{color:#166534}
+#bpa-lang-float::before{content:"";position:absolute;left:var(--ax,20px);top:-6px;width:10px;height:10px;background:#fff;border-left:1px solid #e2e8f0;border-top:1px solid #e2e8f0;transform:translateX(-50%) rotate(45deg)}
+#bpa-lang-float.is-above::before{top:auto;bottom:-6px;transform:translateX(-50%) rotate(225deg)}
+#bpa-lang-float::after{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+#bpa-lang-float.is-above::after{top:auto;bottom:-12px}
+</style></head><body><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/el">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -4178,10 +4207,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Προσωπικά δοκιμασμένο</span>
-<span class="bpa-sp">Κουρτίνες στα κρεβάτια</span>
-<span class="bpa-sp">Ταράτσα</span>
-<span class="bpa-sp">Ήσυχος παράδρομος</span>
-<span class="bpa-sp">Ιδανικό για μεγάλη διαμονή</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Κουρτίνες στα κρεβάτια</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Κουρτίνα σε κάθε κρεβάτι.</strong> Σύγχρονοι κοιτώνες με κουρτίνες και μεγάλα ντουλαπάκια, έτσι ακόμα και ένα γεμάτο δωμάτιο μένει ήσυχο.<span class="bpa-lang-note">Κλειδώνετε τα πολύτιμα: εμένα μου έκλεψαν ένα πουλόβερ.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">Ταράτσα</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ταράτσα για τους επισκέπτες.</strong> Κοινωνικό χωρίς να είναι party χόστελ: εύκολα γνωρίζετε κόσμο το βράδυ και μετά κοιμάστε.<span class="bpa-lang-note">Κοινό: ταξιδιώτες μόνοι, μακροχρόνιες διαμονές και όσοι δουλεύουν εξ αποστάσεως.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">Ήσυχος παράδρομος</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lónyay utca, IX διαμέρισμα.</strong> Ένας μικρότερος παράδρομος, μακριά από τους δρόμους του πάρτι στο VII διαμέρισμα. Σε 30 βράδια σχεδόν καθόλου θόρυβος από τον δρόμο.<span class="bpa-lang-note">Kálvin tér (M3, M4) και Fővám tér (M4, τραμ 2, 47, 49) σε λίγα λεπτά με τα πόδια.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💶 <span class="bpa-lang-label">Ιδανικό για μεγάλη διαμονή</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>30 βράδια για 280 €.</strong> Περίπου 9,33 € τη βραδιά τον Μάρτιο, η καλύτερη τιμή για μεγάλη διαμονή που βρήκα στο κέντρο.<span class="bpa-lang-note">Κρεβάτι σε κοιτώνα από περίπου 10 € για κοντινές ημερομηνίες, ιδιωτικά δωμάτια από 28 €.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ιδανικό για:</strong> Μοναχικούς ταξιδιώτες, ψηφιακούς νομάδες και backpackers για μεγάλη διαμονή που θέλουν κοινωνικό χόστελ χωρίς θόρυβο από πάρτι. <strong>Αποφύγετέ το αν</strong> ψάχνετε party χόστελ ακριβώς δίπλα στα ruin bars.
@@ -4228,10 +4257,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Προσωπικά δοκιμασμένο</span>
-<span class="bpa-sp">Δωρεάν καθημερινές δραστηριότητες</span>
-<span class="bpa-sp">Βόλτες στα μπαρ</span>
-<span class="bpa-sp">18 έως 39 ετών</span>
-<span class="bpa-sp">Deák tér</span>
+<details class="bpa-lang"><summary class="bpa-sp">🎯 <span class="bpa-lang-label">Δωρεάν καθημερινές δραστηριότητες</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Κάτι κάθε μέρα.</strong> Δωρεάν δραστηριότητες τη μέρα, το βράδυ παιχνίδια με ποτό στο μπαρ. Το προσωπικό παρασύρει όλους.<span class="bpa-lang-note">Το πιο εύκολο μέρος της λίστας για να έρθετε μόνοι και να φύγετε με παρέα.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">Βόλτες στα μπαρ</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Pub crawl στα ruin bars.</strong> Το πάρτι του χόστελ τελειώνει μεταξύ 23:00 και μεσάνυχτα, μετά η ομάδα βγαίνει στην Εβραϊκή Συνοικία.<span class="bpa-lang-note">Χωρίς ώρα απαγόρευσης· check-in 15:00 έως 23:00.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🪪 <span class="bpa-lang-label">18 έως 39 ετών</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Μόνο 18 έως 39 ετών.</strong> Μπορούν να μείνουν μόνο επισκέπτες 18 έως 39 ετών, έτσι η παρέα μένει νέα και κοινωνική.<span class="bpa-lang-note">Πάνω από 39; Το Maverick προσφέρει την κοινωνική πλευρά χωρίς όριο ηλικίας.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚇 <span class="bpa-lang-label">Deák tér</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>4 λεπτά από την Deák Ferenc tér.</strong> M1, M2, M3 και το λεωφορείο 100E για το αεροδρόμιο, από τη Rumbach Sebestyén utca 6.<span class="bpa-lang-note">Από τα μπαρ γυρνάτε με τα πόδια.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ιδανικό για:</strong> Μοναχικούς ταξιδιώτες 18 έως 39 ετών που θέλουν αμέσως παρέα, καθημερινές δραστηριότητες και βραδιές πάρτι. <strong>Αποφύγετέ το αν</strong> είστε πάνω από 39, ως ζευγάρι θέλετε ιδιωτικότητα ή κοιμάστε νωρίς.
@@ -4278,10 +4307,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Προσωπικά δοκιμασμένο</span>
-<span class="bpa-sp">Δωρεάν πρωινό</span>
-<span class="bpa-sp">Κουρτίνες στα κρεβάτια</span>
-<span class="bpa-sp">Τραμ 24 ώρες</span>
-<span class="bpa-sp">Oktogon</span>
+<details class="bpa-lang"><summary class="bpa-sp">🥐 <span class="bpa-lang-label">Δωρεάν πρωινό</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Πρωινό περιλαμβάνεται.</strong> Και δείπνα με έκπτωση. Με τις τιμές φαγητού στην Ουγγαρία, τα γεύματα σας γλιτώνουν περισσότερα τη μέρα απ' όσο κοστίζει το κρεβάτι.<span class="bpa-lang-note">Όταν έμεινα, η έκπτωση στο δείπνο ήθελε μια μικρή ελάχιστη κατανάλωση στο μπαρ.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Κουρτίνες στα κρεβάτια</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Κουκέτες με κουρτίνα.</strong> Το 10κλινο δωμάτιό μου είχε κουρτίνες, αλλά ήταν το αδύναμο σημείο. Τα 4κλινα, 8κλινα και 12κλινα είναι καλύτερα με λίγα ευρώ παραπάνω.<span class="bpa-lang-note">Λουκέτο δεν περιλαμβάνεται: φέρτε δικό σας ή αγοράστε ένα με περίπου 3 €.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚋 <span class="bpa-lang-label">Τραμ 24 ώρες</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Νυχτερινό τραμ στην πόρτα.</strong> Το M1 και τα 24ωρα τραμ 4 και 6 σταματούν ακριβώς απέξω, οπότε η επιστροφή στις 3 τα ξημερώματα είναι εύκολη.<span class="bpa-lang-note">Η άλλη πλευρά: τα τραμ περνούν όλη τη νύχτα. Φέρτε ωτοασπίδες.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Oktogon</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Oktogon tér 4, VI διαμέρισμα.</strong> Στη διασταύρωση της Andrássy út με τη Μεγάλη Λεωφόρο, με τα πόδια ως το κέντρο.<span class="bpa-lang-note">Ρεσεψιόν 24/7, check-in από 14:00 ως τα μεσάνυχτα.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ιδανικό για:</strong> Ταξιδιώτες με χαμηλό budget που ψάχνουν το φθηνότερο κρεβάτι στο κέντρο, με δωρεάν πρωινό και φθηνό δείπνο. <strong>Αποφύγετέ το αν</strong> έχετε ελαφρύ ύπνο ή θέλετε κοινωνική, προσωπική ατμόσφαιρα.
@@ -4328,10 +4357,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Προσωπικά δοκιμασμένο</span>
-<span class="bpa-sp">Χώρος coworking</span>
-<span class="bpa-sp">Δωρεάν λουκέτο</span>
-<span class="bpa-sp">Κρεβάτια κάψουλες</span>
-<span class="bpa-sp">Κεντρική Αγορά</span>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">Χώρος coworking</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Πραγματικός χώρος εργασίας.</strong> Το lounge έχει χώρο εργασίας κατάλληλο για laptop, η καλύτερη επιλογή εδώ για απομακρυσμένη δουλειά.<span class="bpa-lang-note">Κοινωνικό αλλά ήρεμο: περισσότερο φοιτητική εστία παρά αρχηγείο pub crawl.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔒 <span class="bpa-lang-label">Δωρεάν λουκέτο</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Λουκέτο μαζί.</strong> Το κουτί αποθήκευσης έρχεται με δωρεάν λουκέτο, χωρίς τα 3 € επιπλέον που χρεώνουν αλλού.<span class="bpa-lang-note">Ρεσεψιόν ανοιχτή 24/7.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Κρεβάτια κάψουλες</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Κάψουλες με τα πάντα.</strong> Κάθε κρεβάτι έχει κουρτίνα, πρίζα, λάμπα, ραφάκι και κουτί αποθήκευσης.<span class="bpa-lang-note">Τα δωμάτια είναι στενά: λίγος χώρος όταν όλοι ξεπακετάρουν.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">Κεντρική Αγορά</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Gönczy Pál utca 2.</strong> Ένα κτίριο από την Κεντρική Αγορά, λίγα λεπτά με τα πόδια από τον Δούναβη.<span class="bpa-lang-note">3ος όροφος, χωρίς ασανσέρ. Η Fővám tér (M4, τραμ 2, 47, 49) είναι κοντά.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ιδανικό για:</strong> Ψηφιακούς νομάδες και ταξιδιώτες που θέλουν σαλόνι κατάλληλο για δουλειά με laptop, κρεβάτια κάψουλες και κοινωνική αλλά χαλαρή ατμόσφαιρα. <strong>Αποφύγετέ το αν</strong> έχετε βαριές αποσκευές (3ος όροφος, χωρίς ασανσέρ) ή θέλετε δικό σας μπάνιο.
@@ -4379,10 +4408,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Προσωπικά δοκιμασμένο</span>
-<span class="bpa-sp">Ήσυχα δωμάτια</span>
-<span class="bpa-sp">Υπέροχο ντους</span>
-<span class="bpa-sp">Γωνιά εργασίας</span>
-<span class="bpa-sp">Ιδιωτικά δωμάτια</span>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">Ήσυχα δωμάτια</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ηρεμία οικονομικού ξενοδοχείου.</strong> Απλά, ήσυχα και καθαρά δωμάτια, λίγη φασαρία χόστελ, φτιαγμένα για καλό ύπνο.<span class="bpa-lang-note">Ταιριάζει σε ζευγάρια, οικογένειες και όσους θέλουν ιδιωτικότητα.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Υπέροχο ντους</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ένα εκπληκτικό ντους.</strong> Σε ένα απλό, ήσυχο και καθαρό δωμάτιο, το ντους ξεχώριζε.<span class="bpa-lang-note">Σεντόνια και πετσέτες με χρέωση: 1.150 HUF (περίπου 3 €).</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">Γωνιά εργασίας</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lounge για laptop.</strong> Εξαιρετικός χώρος εργασίας στο lounge, και η ρεσεψιόν φύλαξε με ασφάλεια το laptop μου όσο έλειπα.<span class="bpa-lang-note">Προαιρετικό ξενοδοχειακό πρωινό με περίπου 8 €.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚪 <span class="bpa-lang-label">Ιδιωτικά δωμάτια</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ιδιωτικά από 2 άτομα.</strong> Ιδιωτικά δωμάτια δίπλα στους κοιτώνες, με 24ωρη ρεσεψιόν για check-in οποιαδήποτε ώρα.<span class="bpa-lang-note">Csengery utca 11, λίγα λεπτά από το Oktogon (M1, τραμ 4 και 6).</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ιδανικό για:</strong> Ζευγάρια, οικογένειες και όσους προτιμούν ένα ήσυχο, απλό και καθαρό δωμάτιο από την κοινωνική ζωή. <strong>Αποφύγετέ το αν</strong> ψάχνετε κοινωνικό χόστελ ή δεν θέλετε να πληρώσετε χωριστά τα σεντόνια.
@@ -4426,10 +4455,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Προσωπικά δοκιμασμένο</span>
-<span class="bpa-sp">Κοιτώνες με μπάνιο</span>
-<span class="bpa-sp">Κουρτίνες στα κρεβάτια</span>
-<span class="bpa-sp">Μπαρ στο χόστελ</span>
-<span class="bpa-sp">Οδός Király</span>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Κοιτώνες με μπάνιο</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Μπάνιο σε κάθε δωμάτιο.</strong> Κάθε δωμάτιο έχει δικό του μπάνιο και κλιματισμό, χωρίς ουρές στον διάδρομο.<span class="bpa-lang-note">Καθαρό αλλά συνηθισμένο: μην το κλείσετε για το design.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Κουρτίνες στα κρεβάτια</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Δικές σας κουρτίνες κρεβατιού.</strong> Για party χόστελ, το βράδυ έχει ησυχία. Κοιμήθηκα καλά.<span class="bpa-lang-note">Δωρεάν ντουλάπια ασφαλείας.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍸 <span class="bpa-lang-label">Μπαρ στο χόστελ</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ένα κοινωνικό μπαρ στο χόστελ.</strong> Στο μπαρ του χόστελ γνωρίζετε εύκολα κόσμο, και τα μπαρ του Gozsdu Udvar είναι δυο βήματα μακριά.<span class="bpa-lang-note">Το διεθνές κοινό ήταν το καλύτερο κομμάτι της διαμονής μου.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Οδός Király</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Király utca 20.</strong> 3 λεπτά με τα πόδια από την Deák Ferenc tér (M1, M2, M3 και λεωφορείο 100E για το αεροδρόμιο).<span class="bpa-lang-note">Check-in 14:00 έως 23:00, check-out έως 10:00.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ιδανικό για:</strong> Backpackers που θέλουν κοινωνικό μπαρ και νυχτερινή ζωή έξω από την πόρτα, αλλά και καλό ύπνο. <strong>Αποφύγετέ το αν</strong> ψάχνετε το φθηνότερο κρεβάτι ή ένα χόστελ με πραγματικό χαρακτήρα.
@@ -4475,10 +4504,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Προσωπικά δοκιμασμένο</span>
-<span class="bpa-sp">Σπιτική ατμόσφαιρα</span>
-<span class="bpa-sp">Μικρό χόστελ</span>
-<span class="bpa-sp">Δωρεάν τσάι και καφές</span>
-<span class="bpa-sp">Κεντρική Αγορά</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛋️ <span class="bpa-lang-label">Σπιτική ατμόσφαιρα</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ένα αληθινό σαλόνι.</strong> Στον καναπέ καταλήγουν όλοι να συζητούν, τη μέρα με επιτραπέζια.<span class="bpa-lang-note">Αν σας αρέσει η ζεστή, σπιτική ατμόσφαιρα, εδώ είναι ο παράδεισος.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">Μικρό χόστελ</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Μικρό και προσωπικό.</strong> Όταν έμεινα, μία φιλική οικοδέσποινα έτρεχε όλο το χόστελ. Χάρη σε αυτήν έχει βαθμολογίες 9/10.<span class="bpa-lang-note">Ούτε ντουλάπι που κλειδώνει ούτε γραφείο με πρίζες.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">Δωρεάν τσάι και καφές</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Δωρεάν όλη μέρα.</strong> Τσάι και καφές self-service όλη μέρα, στο σαλόνι.<span class="bpa-lang-note">Check-in μόνο 14:00 έως 21:00: αν φτάνετε αργά, κλείστε αλλού.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">Κεντρική Αγορά</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Vámház körút 5.</strong> Δίπλα στην Κεντρική Αγορά και τη Γέφυρα της Ελευθερίας, λίγα λεπτά από τον Δούναβη.<span class="bpa-lang-note">Η Fővám tér (M4, τραμ 2, 47, 49) στην πόρτα.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ιδανικό για:</strong> Εσωστρεφείς και αργούς ταξιδιώτες που ψάχνουν ένα μικρό, ζεστό, σπιτικό μέρος δίπλα στον Δούναβη. <strong>Αποφύγετέ το αν</strong> φτάνετε αργά, χρειάζεστε ντουλάπι ή ψάχνετε γραφείο με πρίζα.
@@ -4527,10 +4556,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Προσωπικά δοκιμασμένο</span>
-<span class="bpa-sp">Θέα στη βασιλική</span>
-<span class="bpa-sp">Ιδιωτικά μπάνια</span>
-<span class="bpa-sp">Δωρεάν τσάι και καφές</span>
-<span class="bpa-sp">Λεωφόρος Andrássy</span>
+<details class="bpa-lang"><summary class="bpa-sp">⛪ <span class="bpa-lang-label">Θέα στη βασιλική</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Θέα στη Βασιλική του Αγίου Στεφάνου.</strong> Στην αρχή της Andrássy út, λίγα λεπτά με τα πόδια από τη Βασιλική, την Όπερα και την Deák Ferenc tér.<span class="bpa-lang-note">Η καλύτερη βάση της λίστας για περιήγηση με τα πόδια.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Ιδιωτικά μπάνια</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Δικό σας μπάνιο.</strong> Κοιτώνες και δίκλινα με ιδιωτικό μπάνιο· το δικό μου ήταν εξαιρετικό και καθαρό.<span class="bpa-lang-note">Ιδιωτικά δωμάτια από περίπου 22 €.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">Δωρεάν τσάι και καφές</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Δωρεάν τσάι, καφές και σεντόνια.</strong> Τσάι και καφές self-service και πλήρως εξοπλισμένες κουζίνες, σύμφωνα με το χόστελ.<span class="bpa-lang-note">Ήσυχο, όχι κοινωνικό: χωρίς εκδηλώσεις ή προσωπική πινελιά.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Λεωφόρος Andrássy</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Andrássy út 2, 1ος όροφος.</strong> Bajcsy-Zsilinszky út (M1) στην πόρτα, Deák Ferenc tér (M1, M2, M3) σε μικρή απόσταση.<span class="bpa-lang-note">Κεντρικός δρόμος: ζητήστε δωμάτιο προς την αυλή. Ένας όροφος σκάλες, χωρίς ασανσέρ.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ιδανικό για:</strong> Λάτρεις των αξιοθέατων που θέλουν ήσυχο, καθαρό κρεβάτι στην αρχή της λεωφόρου Andrássy, λίγα βήματα από τη βασιλική του Αγίου Στεφάνου. <strong>Αποφύγετέ το αν</strong> ψάχνετε κοινωνικό χόστελ ή σας ενοχλεί ο θόρυβος της κίνησης.
@@ -4567,10 +4596,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Προσωπικά δοκιμασμένο</span>
-<span class="bpa-sp">Ζεστό loft</span>
-<span class="bpa-sp">Τοπικές συμβουλές</span>
-<span class="bpa-sp">Κουζίνα επισκεπτών</span>
-<span class="bpa-sp">Εβραϊκή συνοικία</span>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">Ζεστό loft</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ένα loft στη σοφίτα.</strong> Ανακαινισμένο και οικείο, σαν να μένετε σε φίλους.<span class="bpa-lang-note">Μικτοί ή γυναικείοι κοιτώνες 4 και 6 κλινών, συν ένα ιδιωτικό δίκλινο.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🗺️ <span class="bpa-lang-label">Τοπικές συμβουλές</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Συμβουλές που δεν θα βρείτε online.</strong> Οι οικοδεσπότες μου έδωσαν συμβουλές για μπαρ, εστιατόρια και φεστιβάλ που δεν υπήρχαν σε κανέναν οδηγό.<span class="bpa-lang-note">Φιλικό, φιλόξενο προσωπικό.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍳 <span class="bpa-lang-label">Κουζίνα επισκεπτών</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Πλήρως εξοπλισμένη κουζίνα.</strong> Μαγειρέψτε μόνοι σας και γλιτώστε από τις τιμές των εστιατορίων της Βουδαπέστης.<span class="bpa-lang-note">Όταν έμεινα, πληρωμή μόνο με μετρητά: πάρτε φιορίνια για κάθε ενδεχόμενο.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Εβραϊκή συνοικία</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Akácfa utca 10, VII διαμέρισμα.</strong> Στη συνοικία της νυχτερινής ζωής, κοντά στα κύρια αξιοθέατα και τα ruin bars.<span class="bpa-lang-note">Τραμ 4 και 6 στη Wesselényi utca. Για το Σαββατοκύριακο, πάρτε ωτοασπίδες.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ιδανικό για:</strong> Μοναχικούς backpackers και μικρές παρέες που ψάχνουν ζεστό χόστελ σαν διαμέρισμα, με φιλικούς οικοδεσπότες στη συνοικία των πάρτι. <strong>Αποφύγετέ το αν</strong> θέλετε να πληρώσετε με κάρτα, χρειάζεστε προσβάσιμη είσοδο ή θέλετε ησυχία και το Σαββατοκύριακο.
@@ -4605,10 +4634,10 @@ a.w-webflow-badge,
 <div class="bpa-proof"></div>
 </div>
 <div class="bpa-specs-row">
-<span class="bpa-sp">Μπαρ στην ταράτσα</span>
-<span class="bpa-sp">Καθημερινές βόλτες στα μπαρ</span>
-<span class="bpa-sp">Μόνο 18+</span>
-<span class="bpa-sp">Εβραϊκή συνοικία</span>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">Μπαρ στην ταράτσα</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Μπαρ στην ταράτσα μόνο για επισκέπτες.</strong> Happy hour κάθε μέρα από τις 16:00 ως τις 19:00.<span class="bpa-lang-note">Πάνω από 300 κρεβάτια, ανοιχτό από το 2015, σύμφωνα με το χόστελ.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">Καθημερινές βόλτες στα μπαρ</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Πάρτι κάθε βράδυ.</strong> Καθημερινά pub crawl, μαζί με bingo crawl, SPArty και party boats που οργανώνει το χόστελ.<span class="bpa-lang-note">Οι επισκέπτες αναφέρουν θόρυβο από το κλαμπ από κάτω.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔞 <span class="bpa-lang-label">Μόνο 18+</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Αυστηρά 18+.</strong> Φτιαγμένο για βραδινές εξόδους, όχι για πρωινό ξύπνημα.<span class="bpa-lang-note">Check-in 15:00 ως τα μεσάνυχτα· πληρωμή με μετρητά ή κάρτα.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Εβραϊκή συνοικία</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Dob utca 19, VII διαμέρισμα.</strong> Σε μικρή απόσταση από το Gozsdu Udvar και το Szimpla Kert.<span class="bpa-lang-note">Astoria (M2) και Deák Ferenc tér (M1, M2, M3) σε λίγα λεπτά.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ιδανικό για:</strong> Παρέες άνω των 18 και μοναχικούς φίλους του πάρτι που θέλουν μεγάλο, θορυβώδες party χόστελ με μπαρ στην ταράτσα στη συνοικία των ruin bars. <strong>Αποφύγετέ το αν</strong> έχετε ελαφρύ ύπνο, ξυπνάτε νωρίς ή θέλετε κουρτίνες στα κρεβάτια.
@@ -9298,4 +9327,92 @@ a.cd-editorial-bookmark .cd-editorial-meta{display:none!important}
 a.cd-editorial-bookmark .cd-editorial-desc{display:-webkit-box!important;-webkit-line-clamp:1!important;-webkit-box-orient:vertical!important;overflow:hidden!important;font-size:13px!important;line-height:1.4!important;color:#64748b!important;margin:3px 0 0!important}
 a.cd-editorial-bookmark .cd-editorial-title{font-family:'Playfair Display',Georgia,serif!important;font-size:16px!important;line-height:1.3!important;margin:0!important;color:#0a192f!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
 a.cd-editorial-bookmark::after{content:"\203A"!important;position:static!important;order:2;flex:0 0 auto;font-size:22px;line-height:1;color:#b88214}
-</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style></body></html>
+</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style><script id="bpa-lang-js">
+(function(){
+  var N={en:'English',fr:'French',es:'Spanish',de:'German',it:'Italian',pt:'Portuguese',nl:'Dutch',pl:'Polish',ru:'Russian',ar:'Arabic',hi:'Hindi',zh:'Chinese',ja:'Japanese',ko:'Korean'};
+  function init(){
+    var langs=[];
+    try{langs=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']);}catch(e){}
+    var code=String(langs[0]||'').slice(0,2).toLowerCase();
+    var boxes=document.querySelectorAll('.bpa-lang');
+    if(!boxes.length) return;
+    document.documentElement.classList.add('bpa-lang-on');
+
+    var pop=document.createElement('div');
+    pop.id='bpa-lang-float';
+    pop.setAttribute('role','tooltip');
+    document.body.appendChild(pop);
+    var current=null, pinned=false, hideTimer=null;
+    var canHover=window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    function place(d){
+      var s=d.querySelector('summary').getBoundingClientRect();
+      var vw=document.documentElement.clientWidth, vh=window.innerHeight;
+      var w=Math.min(290, vw-16);
+      pop.style.width=w+'px';
+      var left=Math.max(8, Math.min(s.left, vw-w-8));
+      var h=pop.offsetHeight;
+      var above=(s.bottom+10+h>vh) && (s.top-10-h>0);
+      var top=above ? (s.top-10-h) : (s.bottom+10);
+      pop.classList.toggle('is-above', above);
+      pop.style.left=(left+window.scrollX)+'px';
+      pop.style.top=(top+window.scrollY)+'px';
+      pop.style.setProperty('--ax', Math.max(14, Math.min(w-14, s.left+Math.min(s.width,40)/2-left))+'px');
+    }
+    function show(d, pin){
+      clearTimeout(hideTimer);
+      if(current && current!==d) current.classList.remove('is-open');
+      current=d; pinned=!!pin;
+      pop.innerHTML=d.querySelector('.bpa-lang-pop').innerHTML;
+      d.classList.add('is-open');
+      d.querySelector('summary').setAttribute('aria-expanded','true');
+      place(d);
+      pop.classList.add('is-visible');
+    }
+    function hide(){
+      clearTimeout(hideTimer);
+      if(current){ current.classList.remove('is-open'); current.querySelector('summary').setAttribute('aria-expanded','false'); }
+      current=null; pinned=false;
+      pop.classList.remove('is-visible');
+    }
+    function softHide(e){
+      if(pinned) return;
+      var to=e && e.relatedTarget;
+      if(to && to.closest && (to.closest('#bpa-lang-float') || (current && current.contains(to)))) return;
+      hide();
+    }
+
+    boxes.forEach(function(d){
+      var sum=d.querySelector('summary');
+      sum.setAttribute('aria-expanded','false');
+      sum.addEventListener('click',function(e){
+        e.preventDefault();
+        if(current===d && pinned){ hide(); return; }
+        show(d,true);
+      });
+      if(canHover){
+        sum.addEventListener('mouseenter',function(){ if(!pinned||current!==d) show(d,false); });
+        sum.addEventListener('mouseleave',softHide);
+      }
+      if(!code||code==='en'||!N[code]) return;
+      var list=(d.getAttribute('data-langs')||'').split(',');
+      if(list.indexOf(code)===-1) return;
+      var label=d.querySelector('.bpa-lang-label');
+      if(label) label.textContent='Audio in '+N[code]+' \u2713';
+      d.classList.add('is-match');
+      var names=d.querySelector('.bpa-lang-names');
+      if(names) names.innerHTML=names.textContent.split(', ').map(function(n){return n===N[code]?'<b>'+n+'</b>':n;}).join(', ');
+    });
+    pop.addEventListener('mouseenter',function(){ clearTimeout(hideTimer); });
+    pop.addEventListener('mouseleave',softHide);
+    document.addEventListener('click',function(e){
+      if(!current) return;
+      if(e.target.closest && (e.target.closest('.bpa-lang') || e.target.closest('#bpa-lang-float'))) return;
+      hide();
+    });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') hide(); });
+    window.addEventListener('resize',function(){ if(current) place(current); });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script></body></html>

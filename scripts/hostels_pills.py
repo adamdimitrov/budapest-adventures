@@ -14,7 +14,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, '..')
 sys.path.insert(0, HERE)
 lang, rel = sys.argv[1], sys.argv[2]
-PILLS = importlib.import_module('hostels_pills_%s' % lang).PILLS
+_M = importlib.import_module('hostels_pills_%s' % lang)
+if hasattr(_M, 'T'):  # translation: 40 x (lead, text, note) in card order, emojis from EN
+    from hostels_pills_en import PILLS as _EN
+    assert len(_M.T) == 40, 'need 40 pills, got %d' % len(_M.T)
+    PILLS = {n: [(_EN[n][k][0],) + tuple(_M.T[(n - 1) * 4 + k]) for k in range(4)] for n in range(1, 11)}
+else:
+    PILLS = _M.PILLS
 PAGE = os.path.join(ROOT, rel)
 
 ref = open(os.path.join(ROOT, 'best-private-boat-tours-budapest.html'), encoding='utf-8').read()

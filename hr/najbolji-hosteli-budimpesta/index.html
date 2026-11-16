@@ -440,7 +440,36 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) h2.ltt-section-title,body:has(.calc-title) main.container h2{font-size:28px!important}
 }
 </style>
-</head><body><header class="ltt-navbar" role="banner">
+<style id="bpa-lang-css">
+.bpa-lang{display:inline-flex;flex-wrap:wrap;gap:5px;flex-shrink:0}
+.bpa-lang[open]{flex-basis:100%}
+.bpa-lang>summary{list-style:none;cursor:pointer;user-select:none}
+.bpa-lang>summary::-webkit-details-marker{display:none}
+.bpa-lang>summary:hover{background:#e2e8f0 !important}
+.bpa-lang-chev{font-size:12px;line-height:1;opacity:.75;transition:transform .15s}
+.bpa-lang[open] .bpa-lang-chev{transform:rotate(180deg)}
+.bpa-lang.is-match>summary{background:#dcfce7 !important;color:#166534 !important}
+.bpa-lang-pop{flex-basis:100%;box-sizing:border-box;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.5;color:#334155;white-space:normal}
+.bpa-lang-pop strong{color:#0f172a}
+.bpa-lang-names b{color:#166534}
+.bpa-lang-note{display:block;margin-top:3px;color:#64748b;font-size:11px}
+/* With JS: the list floats over the card instead of pushing it down */
+html.bpa-lang-on .bpa-lang[open]{flex-basis:auto}
+html.bpa-lang-on .bpa-lang .bpa-lang-pop{display:none}
+html.bpa-lang-on .bpa-lang.is-open .bpa-lang-chev{transform:rotate(180deg)}
+html.bpa-lang-on .bpa-lang.is-open>summary{background:#e2e8f0 !important}
+html.bpa-lang-on .bpa-lang.is-match.is-open>summary{background:#bbf7d0 !important}
+#bpa-lang-float{position:absolute;z-index:9990;max-width:290px;box-sizing:border-box;background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 10px 30px rgba(15,23,42,.14);padding:10px 12px;font-size:12px;line-height:1.5;color:#334155;opacity:0;transform:translateY(-4px);transition:none;pointer-events:none}
+#bpa-lang-float.is-visible{opacity:1;transform:none;pointer-events:auto;transition:opacity .12s ease,transform .12s ease}
+#bpa-lang-float.is-above{transform:translateY(4px)}
+#bpa-lang-float.is-above.is-visible{transform:none}
+#bpa-lang-float strong{color:#0f172a}
+#bpa-lang-float .bpa-lang-names b{color:#166534}
+#bpa-lang-float::before{content:"";position:absolute;left:var(--ax,20px);top:-6px;width:10px;height:10px;background:#fff;border-left:1px solid #e2e8f0;border-top:1px solid #e2e8f0;transform:translateX(-50%) rotate(45deg)}
+#bpa-lang-float.is-above::before{top:auto;bottom:-6px;transform:translateX(-50%) rotate(225deg)}
+#bpa-lang-float::after{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+#bpa-lang-float.is-above::after{top:auto;bottom:-12px}
+</style></head><body><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/hr">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -4178,10 +4207,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobno testirano</span>
-<span class="bpa-sp">Zavjese na krevetima</span>
-<span class="bpa-sp">Krovna terasa</span>
-<span class="bpa-sp">Mirna sporedna ulica</span>
-<span class="bpa-sp">Isplativ za duži boravak</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Zavjese na krevetima</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Zavjesa na svakom krevetu.</strong> Moderne spavaonice sa zavjesama i velikim ormarićima, pa je i puna soba mirna.<span class="bpa-lang-note">Zaključajte vrijedne stvari: meni su ukrali vestu.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">Krovna terasa</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Terasa za goste.</strong> Društveno, ali nije party hostel: navečer lako upoznate ljude, a zatim se naspavate.<span class="bpa-lang-note">Gosti: solo putnici, duži boravci i oni koji rade na daljinu.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">Mirna sporedna ulica</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lónyay utca, IX. okrug.</strong> Manja sporedna ulica, daleko od party ulica VII. okruga. U 30 noći gotovo bez buke s ulice.<span class="bpa-lang-note">Kálvin tér (M3, M4) i Fővám tér (M4, tramvaji 2, 47, 49) nekoliko minuta pješice.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💶 <span class="bpa-lang-label">Isplativ za duži boravak</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>30 noći za 280 €.</strong> To je u ožujku oko 9,33 € po noći, najbolja cijena za duži boravak koju sam našao u centru.<span class="bpa-lang-note">Krevet u spavaonici od oko 10 € za bliske datume, privatne sobe od 28 €.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najbolje za:</strong> Solo putnicima, digitalnim nomadima i backpackerima na dužem boravku koji žele društven hostel bez buke od zabava. <strong>Preskočite ako</strong> tražite party hostel odmah pokraj ruin barova.
@@ -4228,10 +4257,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobno testirano</span>
-<span class="bpa-sp">Besplatne dnevne aktivnosti</span>
-<span class="bpa-sp">Obilasci barova</span>
-<span class="bpa-sp">18 do 39 godina</span>
-<span class="bpa-sp">Deák tér</span>
+<details class="bpa-lang"><summary class="bpa-sp">🎯 <span class="bpa-lang-label">Besplatne dnevne aktivnosti</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Svaki dan nešto.</strong> Besplatne aktivnosti danju, navečer igre s pićem za šankom. Osoblje uključi svakoga.<span class="bpa-lang-note">Najlakše mjesto s popisa da dođete sami i odete s ekipom.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">Obilasci barova</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Pub crawlovi po ruin barovima.</strong> Zabava u hostelu završava između 23:00 i ponoći, zatim grupa kreće u Židovsku četvrt.<span class="bpa-lang-note">Nema policijskog sata; prijava od 15:00 do 23:00.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🪪 <span class="bpa-lang-label">18 do 39 godina</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Samo od 18 do 39 godina.</strong> Odsjesti mogu samo gosti od 18 do 39 godina, pa je ekipa mlada i društvena.<span class="bpa-lang-note">Imate više od 39? Maverick nudi društvenost bez dobne granice.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚇 <span class="bpa-lang-label">Deák tér</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>4 minute do Deák Ferenc tér.</strong> M1, M2, M3 i aerodromski autobus 100E, iz Rumbach Sebestyén utca 6.<span class="bpa-lang-note">Iz barova do kuće pješice.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najbolje za:</strong> Solo putnicima od 18 do 39 godina koji odmah žele društvo, dnevne aktivnosti i noćne zabave. <strong>Preskočite ako</strong> imate više od 39 godina, kao par želite privatnost ili rano liježete.
@@ -4278,10 +4307,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobno testirano</span>
-<span class="bpa-sp">Besplatan doručak</span>
-<span class="bpa-sp">Zavjese na krevetima</span>
-<span class="bpa-sp">Tramvaj 0-24</span>
-<span class="bpa-sp">Oktogon</span>
+<details class="bpa-lang"><summary class="bpa-sp">🥐 <span class="bpa-lang-label">Besplatan doručak</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Doručak uključen.</strong> Plus večere s popustom. Uz mađarske cijene hrane obroci vam dnevno uštede više nego što košta krevet.<span class="bpa-lang-note">Dok sam bio ondje, popust na večeru tražio je malu minimalnu potrošnju u baru.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Zavjese na krevetima</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Kreveti na kat sa zavjesom.</strong> Moja soba s 10 kreveta imala je zavjese, ali je bila slaba točka. Sobe s 4, 8 i 12 kreveta ljepše su za nekoliko eura više.<span class="bpa-lang-note">Lokot nije uključen: ponesite svoj ili ga kupite za oko 3 €.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚋 <span class="bpa-lang-label">Tramvaj 0-24</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Noćni tramvaj pred vratima.</strong> M1 i cjelonoćni tramvaji 4 i 6 staju točno ispred, pa je povratak u 3 ujutro lak.<span class="bpa-lang-note">Druga strana: tramvaji voze cijelu noć. Ponesite čepiće za uši.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Oktogon</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Oktogon tér 4, VI. okrug.</strong> Na raskrižju Andrássy út i Velikog bulevara, do centra pješice.<span class="bpa-lang-note">Recepcija 0-24, prijava od 14:00 do ponoći.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najbolje za:</strong> Putnicima s malim budžetom koji traže najjeftiniji krevet u centru s besplatnim doručkom i jeftinom večerom. <strong>Preskočite ako</strong> imate lagan san ili želite društvenu, osobnu atmosferu.
@@ -4328,10 +4357,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobno testirano</span>
-<span class="bpa-sp">Coworking prostor</span>
-<span class="bpa-sp">Besplatan lokot</span>
-<span class="bpa-sp">Kapsule</span>
-<span class="bpa-sp">Velika tržnica</span>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">Coworking prostor</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Pravo mjesto za rad.</strong> Lounge ima radni prostor pogodan za laptop, ovdje najbolji uvjeti za rad na daljinu.<span class="bpa-lang-note">Društveno, ali mirno: više studentski dom nego baza pub crawla.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔒 <span class="bpa-lang-label">Besplatan lokot</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lokot uključen.</strong> Uz kutiju za spremanje dobijete besplatan lokot, bez 3 € doplate kao drugdje.<span class="bpa-lang-note">Recepcija radi 0-24.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Kapsule</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Kapsule sa svime.</strong> Svaki krevet ima zavjesu, utičnicu, lampicu, policu i kutiju za spremanje.<span class="bpa-lang-note">Sobe su tijesne: malo mjesta kad se svi raspakiravaju.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">Velika tržnica</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Gönczy Pál utca 2.</strong> Jednu zgradu od Velike tržnice, nekoliko minuta pješice do Dunava.<span class="bpa-lang-note">3. kat, bez dizala. Fővám tér (M4, tramvaji 2, 47, 49) je blizu.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najbolje za:</strong> Digitalnim nomadima i putnicima koji žele salon pogodan za rad na laptopu, kapsule i društvenu, ali opuštenu atmosferu. <strong>Preskočite ako</strong> imate tešku prtljagu (3. kat, bez dizala) ili želite vlastitu kupaonicu.
@@ -4379,10 +4408,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobno testirano</span>
-<span class="bpa-sp">Mirne sobe</span>
-<span class="bpa-sp">Odličan tuš</span>
-<span class="bpa-sp">Kutak za rad</span>
-<span class="bpa-sp">Privatne sobe</span>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">Mirne sobe</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Mir jeftinog hotela.</strong> Jednostavne, tihe i čiste sobe, malo hostelske gužve, stvorene za dobar san.<span class="bpa-lang-note">Za parove, obitelji i sve koji žele privatnost.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Odličan tuš</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Fantastičan tuš.</strong> U jednostavnoj, tihoj i čistoj sobi tuš se isticao.<span class="bpa-lang-note">Posteljina i ručnici naplaćuju se posebno: 1150 HUF (oko 3 €).</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">Kutak za rad</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lounge pogodan za laptop.</strong> Odličan radni prostor u loungeu, a recepcija mi je sigurno čuvala laptop dok me nije bilo.<span class="bpa-lang-note">Neobavezan hotelski doručak za oko 8 €.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚪 <span class="bpa-lang-label">Privatne sobe</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Privatne sobe od 2 osobe.</strong> Privatne sobe uz spavaonice, s recepcijom 0-24 za dolazak u bilo koje doba.<span class="bpa-lang-note">Csengery utca 11, nekoliko minuta od Oktogona (M1, tramvaji 4 i 6).</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najbolje za:</strong> Parovima, obiteljima i svima koji umjesto društvenog života žele mirnu, jednostavnu i čistu sobu. <strong>Preskočite ako</strong> tražite društven hostel ili ne želite posebno plaćati posteljinu.
@@ -4426,10 +4455,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobno testirano</span>
-<span class="bpa-sp">Spavaonice s kupaonicom</span>
-<span class="bpa-sp">Zavjese na krevetima</span>
-<span class="bpa-sp">Bar u hostelu</span>
-<span class="bpa-sp">Ulica Király</span>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Spavaonice s kupaonicom</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Kupaonica u svakoj sobi.</strong> Svaka soba ima vlastitu kupaonicu i klimu, bez reda u hodniku.<span class="bpa-lang-note">Čisto, ali obično: ne rezervirajte zbog dizajna.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Zavjese na krevetima</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Vlastite zavjese na krevetu.</strong> Za party hostel noću je mirno. Dobro sam spavao.<span class="bpa-lang-note">Besplatni sigurnosni ormarići.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍸 <span class="bpa-lang-label">Bar u hostelu</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Društveni bar u hostelu.</strong> Za šankom hostela lako upoznate ljude, a barovi u Gozsdu Udvaru su na par koraka.<span class="bpa-lang-note">Međunarodna ekipa bila je najbolji dio boravka.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Ulica Király</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Király utca 20.</strong> 3 minute pješice do Deák Ferenc tér (M1, M2, M3 i aerodromski autobus 100E).<span class="bpa-lang-note">Prijava od 14:00 do 23:00, odjava do 10:00.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najbolje za:</strong> Backpackerima koji žele društven bar i noćni život pred vratima, ali i dobro se naspavati. <strong>Preskočite ako</strong> tražite najjeftiniji krevet ili hostel s pravim karakterom.
@@ -4475,10 +4504,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobno testirano</span>
-<span class="bpa-sp">Domaća atmosfera</span>
-<span class="bpa-sp">Mali hostel</span>
-<span class="bpa-sp">Besplatan čaj i kava</span>
-<span class="bpa-sp">Velika tržnica</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛋️ <span class="bpa-lang-label">Domaća atmosfera</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Pravi dnevni boravak.</strong> Na kauču svi završe u razgovoru, danju uz društvene igre.<span class="bpa-lang-note">Ako volite ugodnu, domaću atmosferu, ovo je raj.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">Mali hostel</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Malen i osoban.</strong> Dok sam bio ondje, cijeli hostel vodila je jedna ljubazna domaćica. Zbog nje ima ocjene 9/10.<span class="bpa-lang-note">Nema ormarića na zaključavanje ni stola s utičnicama.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">Besplatan čaj i kava</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Besplatno cijeli dan.</strong> Čaj i kava na samoposluživanje cijeli dan, u dnevnom boravku.<span class="bpa-lang-note">Prijava samo od 14:00 do 21:00: ako kasno stižete, rezervirajte drugdje.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">Velika tržnica</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Vámház körút 5.</strong> Uz Veliku tržnicu i Most slobode, nekoliko minuta od Dunava.<span class="bpa-lang-note">Fővám tér (M4, tramvaji 2, 47, 49) pred vratima.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najbolje za:</strong> Introvertima i sporim putnicima koji traže malo, ugodno, domaće mjesto uz Dunav. <strong>Preskočite ako</strong> stižete kasno, trebate ormarić ili tražite stol s utičnicom.
@@ -4527,10 +4556,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobno testirano</span>
-<span class="bpa-sp">Pogled na baziliku</span>
-<span class="bpa-sp">Vlastite kupaonice</span>
-<span class="bpa-sp">Besplatan čaj i kava</span>
-<span class="bpa-sp">Avenija Andrássy</span>
+<details class="bpa-lang"><summary class="bpa-sp">⛪ <span class="bpa-lang-label">Pogled na baziliku</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Pogled na baziliku sv. Stjepana.</strong> Na početku Andrássy út, nekoliko minuta pješice od bazilike, Opere i Deák Ferenc tér.<span class="bpa-lang-note">Najbolja baza s ovog popisa za razgledavanje pješice.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Vlastite kupaonice</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Vlastita kupaonica.</strong> Spavaonice i dvokrevetne sobe s vlastitom kupaonicom; moja je bila izvrsna i čista.<span class="bpa-lang-note">Privatne sobe od oko 22 €.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">Besplatan čaj i kava</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Besplatni čaj, kava i posteljina.</strong> Čaj i kava na samoposluživanje i potpuno opremljene kuhinje, prema hostelu.<span class="bpa-lang-note">Mirno, nije društveno: bez događanja i osobnog pristupa.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Avenija Andrássy</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Andrássy út 2, 1. kat.</strong> Bajcsy-Zsilinszky út (M1) pred vratima, Deák Ferenc tér (M1, M2, M3) kratka šetnja.<span class="bpa-lang-note">Glavna cesta: tražite sobu prema dvorištu. Jedan kat stepenicama, bez dizala.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najbolje za:</strong> Ljubiteljima razgledavanja koji žele miran, čist krevet na početku avenije Andrássy, nekoliko koraka od bazilike svetog Stjepana. <strong>Preskočite ako</strong> tražite društven hostel ili vam smeta buka prometa.
@@ -4567,10 +4596,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobno testirano</span>
-<span class="bpa-sp">Ugodan potkrovni stan</span>
-<span class="bpa-sp">Lokalni savjeti</span>
-<span class="bpa-sp">Kuhinja za goste</span>
-<span class="bpa-sp">Židovska četvrt</span>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">Ugodan potkrovni stan</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Potkrovni loft stan.</strong> Renoviran i intiman, osjećate se kao kod prijatelja.<span class="bpa-lang-note">Mješovite ili ženske spavaonice s 4 i 6 kreveta, plus privatna dvokrevetna soba.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🗺️ <span class="bpa-lang-label">Lokalni savjeti</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Savjeti kojih nema na internetu.</strong> Domaćini su mi dali savjete za barove, restorane i festivale kojih nije bilo ni u jednom vodiču.<span class="bpa-lang-note">Ljubazno, gostoljubivo osoblje.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍳 <span class="bpa-lang-label">Kuhinja za goste</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Potpuno opremljena kuhinja.</strong> Kuhajte sami i uštedite na cijenama budimpeštanskih restorana.<span class="bpa-lang-note">Dok sam bio ondje, plaćalo se samo gotovinom: za svaki slučaj ponesite forinte.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Židovska četvrt</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Akácfa utca 10, VII. okrug.</strong> U četvrti noćnog života, blizu glavnih znamenitosti i ruin barova.<span class="bpa-lang-note">Tramvaji 4 i 6 kod Wesselényi utca. Za vikend spakirajte čepiće za uši.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najbolje za:</strong> Solo backpackerima i malim grupama koji traže ugodan hostel nalik stanu, s ljubaznim domaćinima u party četvrti. <strong>Preskočite ako</strong> želite plaćati karticom, trebate pristupačan ulaz ili želite mir i vikendom.
@@ -4605,10 +4634,10 @@ a.w-webflow-badge,
 <div class="bpa-proof"></div>
 </div>
 <div class="bpa-specs-row">
-<span class="bpa-sp">Krovni bar</span>
-<span class="bpa-sp">Dnevni obilasci barova</span>
-<span class="bpa-sp">Samo 18+</span>
-<span class="bpa-sp">Židovska četvrt</span>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">Krovni bar</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Krovni bar samo za goste.</strong> Happy hour svaki dan od 16 do 19 sati.<span class="bpa-lang-note">Više od 300 kreveta, otvoren od 2015., prema hostelu.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">Dnevni obilasci barova</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Zabava svake večeri.</strong> Dnevni pub crawlovi, uz bingo crawlove, SPArtyje i party brodove koje organizira hostel.<span class="bpa-lang-note">Gosti spominju buku iz kluba ispod.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔞 <span class="bpa-lang-label">Samo 18+</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Strogo 18+.</strong> Napravljen za noćne izlaske, ne za rano ustajanje.<span class="bpa-lang-note">Prijava od 15:00 do ponoći; plaćanje gotovinom ili karticom.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Židovska četvrt</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Dob utca 19, VII. okrug.</strong> Kratka šetnja do Gozsdu Udvara i Szimpla Kerta.<span class="bpa-lang-note">Astoria (M2) i Deák Ferenc tér (M1, M2, M3) nekoliko minuta dalje.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najbolje za:</strong> Grupama starijima od 18 i solo partijanerima koji žele velik, bučan party hostel s krovnim barom u četvrti ruin barova. <strong>Preskočite ako</strong> imate lagan san, rano ustajete ili želite zavjese na krevetima.
@@ -9298,4 +9327,92 @@ a.cd-editorial-bookmark .cd-editorial-meta{display:none!important}
 a.cd-editorial-bookmark .cd-editorial-desc{display:-webkit-box!important;-webkit-line-clamp:1!important;-webkit-box-orient:vertical!important;overflow:hidden!important;font-size:13px!important;line-height:1.4!important;color:#64748b!important;margin:3px 0 0!important}
 a.cd-editorial-bookmark .cd-editorial-title{font-family:'Playfair Display',Georgia,serif!important;font-size:16px!important;line-height:1.3!important;margin:0!important;color:#0a192f!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
 a.cd-editorial-bookmark::after{content:"\203A"!important;position:static!important;order:2;flex:0 0 auto;font-size:22px;line-height:1;color:#b88214}
-</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style></body></html>
+</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style><script id="bpa-lang-js">
+(function(){
+  var N={en:'English',fr:'French',es:'Spanish',de:'German',it:'Italian',pt:'Portuguese',nl:'Dutch',pl:'Polish',ru:'Russian',ar:'Arabic',hi:'Hindi',zh:'Chinese',ja:'Japanese',ko:'Korean'};
+  function init(){
+    var langs=[];
+    try{langs=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']);}catch(e){}
+    var code=String(langs[0]||'').slice(0,2).toLowerCase();
+    var boxes=document.querySelectorAll('.bpa-lang');
+    if(!boxes.length) return;
+    document.documentElement.classList.add('bpa-lang-on');
+
+    var pop=document.createElement('div');
+    pop.id='bpa-lang-float';
+    pop.setAttribute('role','tooltip');
+    document.body.appendChild(pop);
+    var current=null, pinned=false, hideTimer=null;
+    var canHover=window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    function place(d){
+      var s=d.querySelector('summary').getBoundingClientRect();
+      var vw=document.documentElement.clientWidth, vh=window.innerHeight;
+      var w=Math.min(290, vw-16);
+      pop.style.width=w+'px';
+      var left=Math.max(8, Math.min(s.left, vw-w-8));
+      var h=pop.offsetHeight;
+      var above=(s.bottom+10+h>vh) && (s.top-10-h>0);
+      var top=above ? (s.top-10-h) : (s.bottom+10);
+      pop.classList.toggle('is-above', above);
+      pop.style.left=(left+window.scrollX)+'px';
+      pop.style.top=(top+window.scrollY)+'px';
+      pop.style.setProperty('--ax', Math.max(14, Math.min(w-14, s.left+Math.min(s.width,40)/2-left))+'px');
+    }
+    function show(d, pin){
+      clearTimeout(hideTimer);
+      if(current && current!==d) current.classList.remove('is-open');
+      current=d; pinned=!!pin;
+      pop.innerHTML=d.querySelector('.bpa-lang-pop').innerHTML;
+      d.classList.add('is-open');
+      d.querySelector('summary').setAttribute('aria-expanded','true');
+      place(d);
+      pop.classList.add('is-visible');
+    }
+    function hide(){
+      clearTimeout(hideTimer);
+      if(current){ current.classList.remove('is-open'); current.querySelector('summary').setAttribute('aria-expanded','false'); }
+      current=null; pinned=false;
+      pop.classList.remove('is-visible');
+    }
+    function softHide(e){
+      if(pinned) return;
+      var to=e && e.relatedTarget;
+      if(to && to.closest && (to.closest('#bpa-lang-float') || (current && current.contains(to)))) return;
+      hide();
+    }
+
+    boxes.forEach(function(d){
+      var sum=d.querySelector('summary');
+      sum.setAttribute('aria-expanded','false');
+      sum.addEventListener('click',function(e){
+        e.preventDefault();
+        if(current===d && pinned){ hide(); return; }
+        show(d,true);
+      });
+      if(canHover){
+        sum.addEventListener('mouseenter',function(){ if(!pinned||current!==d) show(d,false); });
+        sum.addEventListener('mouseleave',softHide);
+      }
+      if(!code||code==='en'||!N[code]) return;
+      var list=(d.getAttribute('data-langs')||'').split(',');
+      if(list.indexOf(code)===-1) return;
+      var label=d.querySelector('.bpa-lang-label');
+      if(label) label.textContent='Audio in '+N[code]+' \u2713';
+      d.classList.add('is-match');
+      var names=d.querySelector('.bpa-lang-names');
+      if(names) names.innerHTML=names.textContent.split(', ').map(function(n){return n===N[code]?'<b>'+n+'</b>':n;}).join(', ');
+    });
+    pop.addEventListener('mouseenter',function(){ clearTimeout(hideTimer); });
+    pop.addEventListener('mouseleave',softHide);
+    document.addEventListener('click',function(e){
+      if(!current) return;
+      if(e.target.closest && (e.target.closest('.bpa-lang') || e.target.closest('#bpa-lang-float'))) return;
+      hide();
+    });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') hide(); });
+    window.addEventListener('resize',function(){ if(current) place(current); });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script></body></html>
