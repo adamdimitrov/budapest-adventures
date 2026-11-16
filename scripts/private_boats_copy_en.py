@@ -49,20 +49,20 @@ COPY = {
     },
     "page": {
         "title": "The 4 Best Private Boat Tours in Budapest (2026)",
-        "meta": "4 private boats on the Danube you can book online in 2026, compared on price per boat, capacity, start times, drinks and reviews from GetYourGuide and Viator.",
+        "meta": "4 private boats on the Danube you can book online in 2026, compared side by side on price per boat, capacity, start times and included drinks.",
         "h1": "The 4 Best Private Boat Tours in Budapest",
         "h1_muted": "(2026)",
         "breadcrumb": "The 4 Best Private Boat Tours in Budapest",
         "kicker_badge": "2026 Listing-Checked Comparison",
         "author_line": "By <a href=\"/about\" target=\"_blank\">Adam Dimitrov</a>, Founder of Budapest Adventures",
-        "author_role": "Prices, start times &amp; reviews checked on 14 Nov 2026",
+        "author_role": "Budapest Local • 4 Private Boats Compared Side by Side • Updated 14 Nov 2026",
         "lead": [
             "A private boat is the only way to see the Danube panorama without sharing the deck with 200 strangers. This guide compares the <strong>4 private boats in Budapest you can actually book online today</strong>, from a 20-guest motor boat for €225 to a Venetian-style wooden water limousine.",
-            "We compared them on <strong>price per boat, how many guests fit, real start times on the booking calendar, what drinks are included and what guests say on GetYourGuide and Viator</strong>. We have not sailed on these four boats ourselves, so everything below comes from the live listings and verified reviews.",
+            "Below they are side by side on what decides the booking: <strong>price per boat, how many guests fit, real start times and which drinks are included</strong>.",
         ],
         "filters": [("all", "All (4)"), ("small", "Couples &amp; Small Groups (3)"), ("groups20", "Groups up to 20+ (3)"), ("party", "Stag &amp; Hen (2)")],
         "breakdown_h2": "Detailed Breakdown: 4 Best Private Boat Tours in Budapest",
-        "breakdown_sub": "Compared from live listings and verified reviews • Click to collapse/expand",
+        "breakdown_sub": "All 4 boats compared on price, capacity, times and drinks • Click to collapse/expand",
         "sheet_title": "Jump to a Private Boat",
         "toc_deck": "Top 4 Private Boats",
         "toc_breakdown": "Detailed Breakdown (4 Private Boats)",
@@ -255,7 +255,7 @@ COPY = {
                     "Yes for <strong>beer, house wine and house sparkling wine</strong> during the hour, plus <strong>one shot</strong> each. Anything else, like spirits or cocktails, is sold at the bar."),
             "summary": [
                 "Portum's party boat is the <strong>easiest private stag or hen do on the Danube</strong>: one price of <strong>€450 on weekdays</strong> covers the boat for up to 20 people and unlimited beer, wine and sparkling wine for an hour.",
-                "The boat is a refitted Dutch vessel with a bar, sound system, neon party lights and heating, and it leaves from the same Dock 42 as the Portum private boat.",
+                "The boat is a refitted Dutch vessel with a bar, sound system, neon party lights and heating, and it leaves from the same Dock 42 as the Portum private boat. Most groups carry on in the ruin bars afterwards: our <a href=\"/best-pub-crawls-budapest\">best pub crawls in Budapest</a> include a private stag crawl with pickup for 8 or more.",
                 "Only 16 people have reviewed it so far: <strong>5.0 out of 5 on GetYourGuide (10)</strong> and <strong>3.5 on Viator (6)</strong>. The one concrete complaint is warm beer once the cold cans ran out.",
             ],
             "reviews": [
