@@ -14,6 +14,7 @@ import json
 import os
 import re
 import sys
+import urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
@@ -32,6 +33,17 @@ PAGES = {
     "ro": ("ro/plimbari-barca-privata-budapesta/index.html", "/ro/plimbari-barca-privata-budapesta", "/ro/rezervari-grup-croaziere-budapesta"),
     "hr": ("hr/privatni-izleti-brodom-budimpesta/index.html", "/hr/privatni-izleti-brodom-budimpesta", "/hr/grupne-rezervacije-krstarenja-budimpesta"),
     "sr": ("sr/privatne-ture-brodom-budimpesta/index.html", "/sr/privatne-ture-brodom-budimpesta", "/sr/grupne-rezervacije-krstarenja-budimpesta"),
+    "pl": ("pl/prywatne-rejsy-lodzia-budapeszt/index.html", "/pl/prywatne-rejsy-lodzia-budapeszt", "/pl/rezerwacja-grupowa-rejsy-budapeszt"),
+    "cs": ("cs/soukrome-plavby-lodi-budapest/index.html", "/cs/soukrome-plavby-lodi-budapest", "/cs/skupinova-rezervace-plavby-budapest"),
+    "sk": ("sk/sukromne-plavby-lodou-budapest/index.html", "/sk/sukromne-plavby-lodou-budapest", "/sk/skupinova-rezervacia-plavby-budapest"),
+    "ru": ("ru/chastnye-progulki-na-lodke-budapesht/index.html", "/ru/chastnye-progulki-na-lodke-budapesht", "/ru/gruppovoe-bronirovanie-kruizov-budapesht"),
+    "bg": ("bg/chastni-razhodki-s-lodka-budapeshta/index.html", "/bg/chastni-razhodki-s-lodka-budapeshta", "/bg/grupovi-rezervatsii-kruiz-budapeshta"),
+    "el": ("el/idiotiko-skafos-voudapesti/index.html", "/el/idiotiko-skafos-voudapesti", "/el/omadikes-kratiseis-krouaziera-voudapesti"),
+    "tr": ("tr/ozel-tekne-turu-budapeste/index.html", "/tr/ozel-tekne-turu-budapeste", "/tr/grup-tekne-turu-rezervasyonu-budapeste"),
+    "uk": ("uk/pryvatni-progulyanky-chovnom-budapesht/index.html", "/uk/pryvatni-progulyanky-chovnom-budapesht", "/uk/hrupove-bronyuvannya-kruiziv-budapesht"),
+    "he": ("he/shayit-prati-budapest/index.html", "/he/shayit-prati-budapest", "/he/hazmana-kvutsatit-shayit-budapest"),
+    "ja": ("ja/budapesuto-kashikiri-boto/index.html", "/ja/budapesuto-kashikiri-boto", "/ja/budapesuto-kuruzu-dantai-yoyaku"),
+    "ko": ("ko/budapeseuteu-peuraibit-boteu/index.html", "/ko/budapeseuteu-peuraibit-boteu", "/ko/budapeseuteu-keulujeu-danche-yeyak"),
 }
 IMG_DIR = "/assets/private-boats/"
 SIZES = "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
@@ -82,8 +94,20 @@ def stars(r):
     return out
 
 
+POP_SUB = None  # set per page in build(): review-popover sub_id, e.g. best_private_boat_tours_buda_en_pop
+
+
+def pop_viator(url):
+    """Review-popover Viator link: same tp.media deep link, per-page popover sub_id, fully encoded target."""
+    if not POP_SUB:
+        return url
+    q = urllib.parse.parse_qs(urllib.parse.urlsplit(html.unescape(url)).query)
+    return ("https://tp.media/r?campaign_id=%s&marker=%s&p=%s&sub_id=%s&trs=%s&u=%s" % (
+        q["campaign_id"][0], q["marker"][0], q["p"][0], POP_SUB, q["trs"][0], urllib.parse.quote(q["u"][0], safe="")))
+
+
 def product_links(p):
-    return {"gyg": p["gyg"], "viator": p["viator"]}
+    return {"gyg": p["gyg"], "viator": pop_viator(p["viator"]) if p["viator"] else None}
 
 
 def balanced_end(s, start, tag="div"):
@@ -426,7 +450,7 @@ def sub_once(pattern, repl, s, flags=0):
     return new
 
 
-PICK_LABEL = {"en": "PICK", "de": "TIPP", "fr": "CHOIX", "it": "SCELTA", "es": "OPCIÓN", "hu": "VÁLASZTÁS", "nl": "KEUZE", "pt": "ESCOLHA", "ro": "ALEGERE", "hr": "IZBOR", "sr": "ИЗБОР", "pl": "WYBÓR"}
+PICK_LABEL = {"en": "PICK", "de": "TIPP", "fr": "CHOIX", "it": "SCELTA", "es": "OPCIÓN", "hu": "VÁLASZTÁS", "nl": "KEUZE", "pt": "ESCOLHA", "ro": "ALEGERE", "hr": "IZBOR", "sr": "ИЗБОР", "pl": "WYBÓR", "cs": "VOLBA", "sk": "VOĽBA", "ru": "ВЫБОР", "bg": "ИЗБОР", "el": "ΕΠΙΛΟΓΗ", "tr": "SEÇİM", "uk": "ВИБІР", "he": "בחירה", "ja": "おすすめ", "ko": "추천"}
 
 HU_TEMPLATE = {
     "Inhaltsverzeichnis öffnen": "Tartalomjegyzék megnyitása",
@@ -455,7 +479,9 @@ def hu_skeleton():
 
 
 def build(lang):
+    global POP_SUB
     rel, path, group_url = PAGES[lang]
+    POP_SUB = "%s_%s_pop" % (re.sub(r"[^a-z0-9]+", "_", path.rstrip("/").split("/")[-1].lower())[:28], lang)
     if lang == "hu" and 'id="ltt-cards-deck"' not in open(os.path.join(ROOT, rel), encoding="utf-8").read():
         hu_skeleton()
     copy = importlib.import_module("private_boats_copy_%s" % lang).COPY
