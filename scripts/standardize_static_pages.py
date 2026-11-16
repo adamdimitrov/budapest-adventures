@@ -59,7 +59,7 @@ NAVBAR_HTML = """  <!-- NAVIGATION HEADER -->
                   <p>Exclusive Danube charters &amp; speedboats</p>
                 </div>
               </a>
-              <a class="ltt-mega-item" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">
+              <a class="ltt-mega-item" href="/candlelit-dinner-cruise-budapest">
                 <span class="ltt-mega-icon">🕯️</span>
                 <div>
                   <strong>Legenda Candlelit Review</strong>
@@ -128,7 +128,7 @@ NAVBAR_HTML = """  <!-- NAVIGATION HEADER -->
           <a class="ltt-mobile-link" href="/best-dinner-cruises-budapest">
             <span>🍷 Top 7 Dinner Cruises</span>
           </a>
-          <a class="ltt-mobile-link" href="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">
+          <a class="ltt-mobile-link" href="/candlelit-dinner-cruise-budapest">
             <span>🕯️ Legenda Candlelit Review</span>
           </a>
           <a class="ltt-mobile-link" href="/unlimited-prosecco-cruises-budapest">

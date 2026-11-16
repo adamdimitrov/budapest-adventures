@@ -50,7 +50,7 @@ class Tier3CrossFeatureTests(BaseTestCase):
 
     def test_pair_02_meta_ads_candlelit_tourcms_checkout(self):
         """Pair 2: Meta Ads (fbclid) + Candlelit Review Hub + TourCMS checkout + Net Commission."""
-        inbound = "https://budapestadventures.com/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest?fbclid=IwAR_test_fbclid_999&utm_source=facebook&utm_medium=paid"
+        inbound = "https://budapestadventures.com/candlelit-dinner-cruise-budapest?fbclid=IwAR_test_fbclid_999&utm_source=facebook&utm_medium=paid"
         params = TrackingAttributionSimulator.extract_inbound_params(inbound)
         self.assert_equal(params.get("fbclid"), "IwAR_test_fbclid_999")
 

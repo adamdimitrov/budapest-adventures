@@ -32,7 +32,7 @@ DO NOT CHEAT. All implementations must be genuine. DO NOT hardcode test results,
      - `/budapest-river-cruises` -> `/index.html`
      - `/budapest-dinner-cruises` -> `/dinner.html`
      - `/best-dinner-cruises-budapest` -> `/dinner.html`
-     - `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest` -> `/candlelit-dinner-cruise.html`
+     - `/candlelit-dinner-cruise-budapest` -> `/candlelit-dinner-cruise.html`
      - `/legenda-city-cruises` -> `/legenda-city-cruises.html`
      - `/danube-cruise-decision-hub` -> `/danube_cruise_decision_hub.html`
 6. Create `preview_server.py`:

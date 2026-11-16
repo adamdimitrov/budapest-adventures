@@ -20,9 +20,9 @@
     - `pages.json` line 1: `id="690fc96a2a1078147a33d019"`, `publishedPath="/budapest-dinner-cruises"`, title `"Budapest Dinner Cruises"`.
     - `pages.json` line 1: `id="64abbb0ee146f7684dd946bc"`, `publishedPath="/best-dinner-cruises-budapest"`, title `"7 Best Dinner Cruises in Budapest in 2025 (Personally Tested)"`.
     - Local source files: `dinner.html` (744 lines, 224KB), `dinner_desktop_wide_preview.html` (2,229 lines, 142KB). Both URLs return `HTTP/2 200` on production.
-  - **Hub 3: Candlelit Dinner Cruise Tested Review** (`/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`):
-    - `pages.json` line 1: `id="69032f89be8ec49c419233a6"`, `publishedPath="/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest"`, title `"Candlelit Dinner Cruise Budapest Review (Personally Tested)"`.
-    - Live URL returns `HTTP/2 200` (89,482 bytes) with canonical pointing to `https://www.budapestadventures.com/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`.
+  - **Hub 3: Candlelit Dinner Cruise Tested Review** (`/candlelit-dinner-cruise-budapest`):
+    - `pages.json` line 1: `id="69032f89be8ec49c419233a6"`, `publishedPath="/candlelit-dinner-cruise-budapest"`, title `"Candlelit Dinner Cruise Budapest Review (Personally Tested)"`.
+    - Live URL returns `HTTP/2 200` (89,482 bytes) with canonical pointing to `https://www.budapestadventures.com/candlelit-dinner-cruise-budapest`.
     - Local source files: Content exists embedded inside `dinner.html`, `all_7_cruises_complete.html`, and `webflow_part1_cruises_1_to_2.html`. No standalone file exists at root.
   - **Hub 4: Legenda City Cruises Dedicated Terminal** (`/legenda-city-cruises`):
     - Local source file: `legenda-city-cruises.html` (646 lines, 33KB). Clean Tailwind CSS, live TourCMS timetable, Meta Pixel `1355732169631751`, Google Tag `AW-16782417237`.
@@ -40,7 +40,7 @@
 ## 2. Logic Chain
 1. From Observation 1, because branch `staging/static-overhaul` does not exist, all staging work must be isolated by branching from `main` before modifications occur.
 2. From Observation 2 (Hub 1), the live URL `/budapest-river-cruises` is a 404, while `/best-budapest-river-cruises` is the live canonical target. On Vercel, root `/` currently resolves to an obsolete Prosecco mockup (`index.html`). Therefore, `river-ecom.html` must be placed at root (or routed to `/`) and `/budapest-river-cruises` must be given a 301 rewrite/redirect in `vercel.json`.
-3. From Observation 2 (Hub 2 & Hub 3), `dinner.html` serves `/best-dinner-cruises-budapest`. `/budapest-dinner-cruises` must be routed to `dinner.html` in `vercel.json`. The candlelit review page needs a dedicated static file extracted or built and routed at `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`.
+3. From Observation 2 (Hub 2 & Hub 3), `dinner.html` serves `/best-dinner-cruises-budapest`. `/budapest-dinner-cruises` must be routed to `dinner.html` in `vercel.json`. The candlelit review page needs a dedicated static file extracted or built and routed at `/candlelit-dinner-cruise-budapest`.
 4. From Observation 2 (Hub 4 & Hub 5), `legenda-city-cruises.html` and `danube_cruise_decision_hub.html` are modern Tailwind static pages that are already production-ready and independent of Webflow runtime bloat.
 5. From Observation 3, `vercel.json` is currently incomplete: it lacks routes for the core hubs and lacks 301 redirect rules for pruned Linguana language prefixes (`/cs/*`, `/bg/*`, `/zh/*`).
 6. From Observation 4, `tourcms-sync.js` and `api/cron.py` contain all required keys and logic to safeguard the €130,000 Legenda partnership. They must be preserved and included in all staging hubs.
@@ -71,7 +71,7 @@ The Budapest Adventures repository contains all core source components needed to
    curl -sI https://www.budapestadventures.com/
    curl -sI https://www.budapestadventures.com/best-budapest-river-cruises
    curl -sI https://www.budapestadventures.com/budapest-dinner-cruises
-   curl -sI https://www.budapestadventures.com/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest
+   curl -sI https://www.budapestadventures.com/candlelit-dinner-cruise-budapest
    ```
 3. Verify comprehensive survey report exists:
    ```bash

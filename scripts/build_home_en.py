@@ -29,7 +29,7 @@ GROUPS = [
                         "/best-private-boat-tours-budapest", "/budapest-river-cruise-group-booking"]),
     ("Thermal baths", ["/thermal-baths-budapest", "/szechenyi-baths-budapest", "/rudas-baths-budapest", "/sparty-budapest"]),
     ("Tours, food &amp; nights out", ["/best-walking-tours-budapest", "/best-food-tours-budapest", "/best-pub-crawls-budapest",
-                                       "/best-hop-on-hop-off-bus-budapest", "/budapest-attractions/budapest-parliament",
+                                       "/best-hop-on-hop-off-bus-budapest", "/budapest-parliament-tickets",
                                        "/best-day-trips-from-budapest"]),
     ("Plan your trip", ["/budapest-airport-to-city-center", "/best-hostels-budapest", "/budapest-card-is-it-worth-it"]),
     ("Budapest in numbers", ["/budapest-tourism-statistics", "/hungary-tourism-statistics"]),

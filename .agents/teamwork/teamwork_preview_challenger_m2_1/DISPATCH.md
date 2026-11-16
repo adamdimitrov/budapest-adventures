@@ -9,7 +9,7 @@ Adversarially probe and stress-test the 5 core money hubs delivered in Milestone
 3. Read Worker M2 handoff at `/Users/adamdimitrov/Development/budapest-adventures/.agents/teamwork/teamwork_preview_worker_m2_1/handoff.md`.
 4. Adversarially challenge the money hubs:
    - Verify that root `/` never serves the obsolete Prosecco mockup under any user-agent or query string.
-   - Verify that `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest` renders the full candlelit review page with valid schema markup.
+   - Verify that `/candlelit-dinner-cruise-budapest` renders the full candlelit review page with valid schema markup.
    - Test decision hub interactive filters (e.g. Day, Sunset, Dinner, Unlimited Drinks) and verify that all cards exist and don't throw JavaScript exceptions.
    - Test all outbound booking buttons on the 5 hubs and check that partner parameters are present.
 5. Run tests:

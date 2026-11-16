@@ -53,7 +53,7 @@ def localize_navbar_and_menu(soup):
         '/unlimited-prosecco-cruises-budapest': ('Korlátlan Prosecco Hajók', 'Korlátlan pezsgőfogyasztás és zene', '/unlimited-prosecco-cruises-budapest'),
         '/best-night-cruises-budapest': ('Legjobb Éjszakai Hajók', 'Esti utak kivilágított Parlamenttel', '/best-night-cruises-budapest'),
         '/best-private-boat-tours-budapest': ('Privát Hajóbérlés', 'Exkluzív dunai jachtok és vízi taxik', '/best-private-boat-tours-budapest'),
-        '/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest': ('Legenda Gyertyafényes Teszt', 'Budapest első számú vacsorahajója', '/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest'),
+        '/candlelit-dinner-cruise-budapest': ('Legenda Gyertyafényes Teszt', 'Budapest első számú vacsorahajója', '/candlelit-dinner-cruise-budapest'),
         '/budapest-card-is-it-worth-it': ('Budapest Kártya Kalkulátor', 'Interaktív kalkulátor 94 látnivalóval', '/budapest-card-is-it-worth-it'),
         '/thermal-baths-budapest': ('8 Legjobb Termálfürdő', 'Széchenyi, Gellért, Rudas és Lukács', '/thermal-baths-budapest'),
         '/best-walking-tours-budapest': ('Legjobb Gyalogtúrák', 'Várnegyed és Zsidó Negyed gasztroséták', '/best-walking-tours-budapest'),
@@ -111,7 +111,7 @@ def localize_navbar_and_menu(soup):
                 if span: span.string = '10 Legjobb Dunai Sétahajó'
                 b = ml.find_all('span')
                 if len(b) > 1: b[1].string = 'LEGJOBB'
-            elif '/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest' in href:
+            elif '/candlelit-dinner-cruise-budapest' in href:
                 if span: span.string = 'Legenda Gyertyafényes Teszt'
             elif '/best-dinner-cruises-budapest' in href or '/hu/setahajozas-a-dunan-vacsoraval' in href:
                 ml['href'] = '/hu/setahajozas-a-dunan-vacsoraval'

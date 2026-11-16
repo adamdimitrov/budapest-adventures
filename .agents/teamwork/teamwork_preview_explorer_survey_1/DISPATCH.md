@@ -10,7 +10,7 @@ Investigate git status, repo file tree, existing static/HTML files, Vercel confi
 4. Locate the exact source files for the 5 core money hubs:
    - Danube River Cruises Main Hub (`/` and `/budapest-river-cruises`)
    - Budapest Dinner Cruises Hub (`/budapest-dinner-cruises`)
-   - Candlelit Dinner Cruise Tested Review (`/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`)
+   - Candlelit Dinner Cruise Tested Review (`/candlelit-dinner-cruise-budapest`)
    - Legenda City Cruises Dedicated Terminal (`/legenda-city-cruises`)
    - Danube Cruise Decision Hub & Filter Engines (`danube_cruise_decision_hub.html`)
 5. Check how local staging preview can be served (e.g. local web server, Vercel CLI).

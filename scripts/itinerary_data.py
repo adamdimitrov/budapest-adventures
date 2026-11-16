@@ -5,7 +5,7 @@ Every product fact is taken from the card or Quick Facts of the same product on
 another BPA page, which were read on the live listings on 14-15 Nov 2026:
   - Legenda sightseeing cruise: best-budapest-river-cruises.html (tested, 4.4 from 17k+ on 3 sites).
   - Parliament ticket + audio guide (GYG t731430): best-things-to-do-budapest.html card;
-    official prices and hours from budapest-parliament.html (HUF 7,000 EU/EEA, HUF 14,000 others,
+    official prices and hours from budapest-parliament-tickets.html (HUF 7,000 EU/EEA, HUF 14,000 others,
     45-minute tour, 8:00 to 16:00 Nov to Mar, arrive 15 minutes early).
   - St Stephen's Basilica entry (GYG t655129): best-things-to-do-budapest.html card.
   - Buda Castle walking tour (GYG t157275): best-walking-tours-budapest.html (daily 14:00 and 14:30,
