@@ -42,7 +42,7 @@ HERO = """<section class="ltt-home-hero">
           Budapest, Tested by Someone <span class="ltt-gold-text">Who Lives Here</span>
 </h1>
 <p class="ltt-hero-subtitle hp-hero-sub">Cruises, thermal baths, tours and nights out compared side by side: real prices, start times, meeting points and which ones to skip. From 50+ cruises, baths, tours and hostels tried in person.</p>
-<ul class="hp-trust"><li>Tried in person</li><li>Real prices &amp; start times</li><li>Written by a Budapest local</li><li>22 languages</li></ul>
+<ul class="hp-trust"><li>Compared side by side</li><li>Real prices &amp; start times</li><li>Written by a Budapest local</li><li>22 languages</li></ul>
 <div class="hp-situ">
 <a class="hp-situ-card" href="/budapest-travel-guide"><span class="hp-situ-q">Planning 2 to 4 days?</span><span class="hp-situ-a">Follow my day-by-day itinerary →</span></a>
 <a class="hp-situ-card" href="/best-night-cruises-budapest"><span class="hp-situ-q">Only one evening?</span><span class="hp-situ-a">Take a Danube cruise after dark →</span></a>
@@ -87,7 +87,7 @@ SECTION_HEAD = """<div class="ltt-section-header">
 MANIFESTO_SUB = ("Vacations don't have a return policy. Before you spend an evening or a whole day of your trip on something, "
                  "you deserve verified facts: what it really costs, when it starts and whether it is worth it.")
 MANIFESTO = [
-    ("Tried in Person", "I try the experiences I write about across Budapest, from baths and walking tours to food, nightlife and places to stay, and every guide marks which options <strong>I tested myself</strong>."),
+    ("Tried in Person Where It Counts", "I have tried many of the cruises, baths, tours and hostels on this site myself, and every guide clearly marks <strong>which options I tested</strong> and which come from the comparison."),
     ("Compared Side by Side", "Every guide lines the options up on what decides the booking: <strong>real price, start time, meeting point, what is included</strong> and the small print."),
     ("Pick It or Skip It", "Each option gets a clear pick-or-skip line and honest cons, so you know <strong>which one to book</strong> and which to leave out."),
 ]
@@ -96,11 +96,11 @@ AUTHOR = """<h3 class="ltt-author-name">Adam Dimitrov</h3>
 <div class="ltt-author-role">Founder &amp; Budapest Local</div>
 <div class="ltt-vbadge-row">
 <span class="ltt-vbadge">✓ Budapest Resident</span>
-<span class="ltt-vbadge">✓ Tests What He Recommends</span>
+<span class="ltt-vbadge">✓ Real Prices &amp; Times</span>
 <span class="ltt-vbadge">✓ 28 Budapest Guides</span>
 </div>
 <p class="ltt-author-bio">
-              Adam Dimitrov founded Budapest Adventures to give travelers practical, firsthand guides to Budapest. <strong>Living in Budapest</strong>, he tries the experiences he writes about, checks timetables, meeting points and real prices, and tells you which option to book and which to skip.
+              Adam Dimitrov founded Budapest Adventures to give travelers practical, firsthand guides to Budapest. <strong>Living in Budapest</strong>, he compares every option side by side, checks timetables, meeting points and real prices, has tried many of them himself, and tells you which one to book and which to skip.
             </p>"""
 
 
