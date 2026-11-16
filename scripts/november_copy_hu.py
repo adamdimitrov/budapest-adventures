@@ -168,7 +168,7 @@ C["vampire"] = dict(
            ("👥", "20-25 fős csoport", "Az én csoportom 20-25 fős volt. Angol, német és spanyol nyelvű séták vannak meghirdetve. 10 év felett.")],
     pick="olyan novemberi estére, ami sötétben jobb: a Várhegy lámpafénynél, egy mesélővel.",
     skip="ha történelmet és évszámokat szeretnél: ez folklór és színház.",
-    pros=["Sötétre tervezve: éjjel üres és kivilágított a Várnegyed", "20 € két óráért egy mesélő idegenvezetővel", "Több mint 4600 vendég értékelte 4,6-ra"],
+    pros=["Sötétre tervezve: éjjel üres és kivilágított a Várnegyed", "18 €-tól két óra egy mesélő idegenvezetővel", "Több mint 4600 vendég értékelte 4,6-ra"],
     cons=["Lépcső az elején", "A második fele kicsit ismétlődő"],
     body="""<p>A legtöbb gyalogtúra veszít novemberben: 16 órára sötét és hideg van. Ezt a sétát viszont pont erre találták ki. <strong>20:00-kor indul a Clark Ádám térről</strong>, felmegy a Várhegyre, és <strong>két órán át vámpír-, kísértet- és népmeséket</strong> mesél a Mátyás-templom és a Halászbástya körüli kihalt, lámpafényes udvarokon.</p>
 <p>Ezt a sétát én is végigcsináltam. Az idegenvezetőnk improvizációs színészként dolgozott, az első fele lebilincselő volt. Hat-hét történet után kicsit ismétlődővé vált, de a helyszín elviszi.</p>
@@ -177,12 +177,12 @@ C["vampire"] = dict(
 <p><strong>Hagyd ki</strong>, ha tényeket és évszámokat keresel: a <a href="#item-8-buda-castle-walking-tour">délelőtti várséta</a> 12 euróért elmondja a történelmet. Több séta összehasonlítva: <a href="/hu/legjobb-gyalogtúrák-budapest">a legjobb budapesti gyalogtúrák</a>.</p>
 <h3>Találkozási pont</h3>
 <p>🗺️ <strong>Találkozási pont: </strong>Clark Ádám tér, a Nulla kilométerkő mellett, a Siklónál.<br/>🚌 <strong>Tömegközlekedés:</strong> 16-os, 105-ös vagy 178-as busz a Deák Ferenc térről vagy az Erzsébet térről, vagy gyalog át a Lánchídon.</p>""",
-    qf_badge="Várnegyed", qf=[("Indulás", "20:00 (angolul, szombat, nov. 21.)"), ("Időtartam", "Kb. 2 óra"), ("Ár", "20 €-tól / fő"),
+    qf_badge="Várnegyed", qf=[("Indulás", "20:00 (angolul, szombat, nov. 21.)"), ("Időtartam", "Kb. 2 óra"), ("Ár", "18 €-tól / fő"),
         ("Útvonal", "Várnegyedi udvarok, Mátyás-templom, Halászbástya"), ("Életkor", "10 év felett"),
         ("Találkozási pont", "Clark Ádám tér, a Nulla kilométerkőnél")],
     chips=[("yes", "✓ Sötétre tervezve"), ("yes", "✓ 40 € alatt"), ("yes", "✓ Ingyenes lemondás"), ("no", "✕ Lépcső az elején")],
     perks=["Indulás: <strong>Clark Ádám tér</strong>", "Időpont: <strong>20:00</strong>"],
-    desc="Kétórás éjszakai séta a budai Várnegyedben vámpír- és népmesékkel, 20 eurótól.",
+    desc="Kétórás éjszakai séta a budai Várnegyedben vámpír- és népmesékkel, 18 eurótól.",
 )
 C["silverline"] = dict(
     rank="#6 A legjobb ár-érték vacsorahajó", title="Dinner &amp; Lights 4 fogásos vacsorás hajóút", dur="2 óra", place="11-es kikötő",
@@ -212,10 +212,10 @@ C["silverline"] = dict(
 )
 C["foodapest"] = dict(
     rank="#7 A legjobb gasztrotúra", title="Foodapest gasztrotúra a vásárcsarnoktól a kocsmáig, borral", dur="3 óra", place="Központi Vásárcsarnok",
-    map="Central Market Hall Budapest", psub="fő • 11:30-as csarnoktúra",
+    map="Central Market Hall Budapest", psub="fő • 3 óra",
     pills=[("🏛️", "Csarnok + étterem", "A Központi Vásárcsarnokban indul, utána egy pékség és két helyi étterem. Az utolsó állomás a borkóstoló."),
            ("🍽️", "12+ kóstoló", "Felvágottak, savanyúság, gulyás, lángos, kürtőskalács és egy magyar desszert: egy ebédnek is elmegy."),
-           ("🕒", "11:30 vagy 17:00", "A 11:30-as csarnoktúra 69 €. A 17:00-s esti túra (street food, bor, pálinka, kézműves sör, csarnok nélkül) 79 €."),
+           ("🕒", "11:30 vagy 17:00", "Két indulás: a 11:30-as csarnoktúra 62 eurótól, és egy 17:00-s esti túra (street food, bor, pálinka, kézműves sör, csarnok nélkül), ami kicsit drágább."),
            ("🍷", "Bor és pálinka", "Borkóstoló az utolsó étteremben, közben egy házi pálinka. Alkoholmentes csere is kérhető.")],
     pick="egy hideg novemberi délre, amit nagyrészt fedett helyen töltesz, a csarnoktól egy kocsmáig evve.",
     skip="ha aznap este vacsorás hajó jön, és nem vagy nagyevő.",
@@ -223,12 +223,12 @@ C["foodapest"] = dict(
     cons=["3 óra talpon", "Az esti változat kihagyja a vásárcsarnokot"],
     body="""<p>November a vásárcsarnok-idő. Ez a túra <strong>11:30-kor</strong> indul a <strong>Központi Vásárcsarnokban</strong>, <strong>12+ kóstolón</strong> (gulyás, lángos, kürtőskalács, felvágottak) megy végig egy pékségben és két helyi étteremben, és <strong>magyar borkóstolóval</strong> zárul. A 3 óra nagy része fedett helyen telik, és kora délután végzel, maradt még fény egy fürdőhöz.</p>
 <h3>Kinek ajánlom</h3>
-<p><strong>Válaszd</strong> az első teljes napodon: utána tudni fogod, mit rendelj a többi napon. A 11:30-as túra 69 €.</p>
+<p><strong>Válaszd</strong> az első teljes napodon: utána tudni fogod, mit rendelj a többi napon. A 11:30-as túra 62 eurótól indul.</p>
 <p><strong>Hagyd ki</strong>, ha este vacsorás hajó jön, és keveset eszel. Kilenc gasztrotúra összehasonlítva: <a href="/best-food-tours-budapest">a legjobb budapesti gasztrotúrák</a> (angolul).</p>
 <h3>Találkozási pont</h3>
 <p>🗺️ <strong>Találkozási pont: </strong>Központi Vásárcsarnok, Fővám tér (a pontos helyet a voucher tartalmazza).<br/>🚇 <strong>Tömegközlekedés:</strong> M4 a Fővám térig, vagy 2-es, 47-es, 49-es villamos.</p>""",
     qf_badge="Étel + bor", qf=[("Indulások", "11:30 csarnoktúra · 17:00 esti túra (csarnok nélkül)"), ("Időtartam", "Kb. 3 óra"),
-        ("Ár", "69 € (11:30) · 79 € (17:00)"), ("Étel", "12+ kóstoló"), ("Italok", "Borkóstoló, pálinka"), ("Indulás helye", "Központi Vásárcsarnok, Fővám tér")],
+        ("Ár", "62 €-tól (11:30) · az esti túra drágább"), ("Étel", "12+ kóstoló"), ("Italok", "Borkóstoló, pálinka"), ("Indulás helye", "Központi Vásárcsarnok, Fővám tér")],
     chips=[("yes", "✓ Nagyrészt fedett helyen"), ("yes", "✓ Bor az árban"), ("yes", "✓ Ingyenes lemondás")],
     perks=["Indulás: <strong>Vásárcsarnok</strong>", "Kóstolók: <strong>12+</strong>"],
     desc="Háromórás budapesti gasztrotúra a Központi Vásárcsarnoktól egy helyi étteremig, 12+ kóstolóval és borral.",
@@ -277,9 +277,9 @@ PICKS = [("Az első estédre", "legenda-evening", "25 €, egy óra, 16:20-tól 
          ("Forró medence hideg levegőben", "szechenyi", "39 €-tól, pénteken 22:00-ig nyitva"),
          ("Romantikus vacsora a folyón", "legenda-dinner", "110 €, naponta 19:00, 4 fogás felszolgálva"),
          ("Fürdő kilátással, sötétedés után", "rudas", "36 °C-os tetőmedence, éjszakai fürdő pénteken és szombaton"),
-         ("Program este 8-ra", "vampire", "20 €, két óra népmese a Várhegyen"),
+         ("Program este 8-ra", "vampire", "18 €-tól, két óra népmese a Várhegyen"),
          ("Vacsorás hajó olcsóbban", "silverline", "77 €-tól, 4 fogás 19:00-kor"),
-         ("Esős délre", "foodapest", "69 €, nagyrészt fedett helyen, 12+ kóstoló"),
+         ("Esős délre", "foodapest", "62 €-tól, nagyrészt fedett helyen, 12+ kóstoló"),
          ("Kis keretből", "castle", "12 eurós vezetett séta a Várhegyen")]
 
 DATES_H = "Novemberi dátumok, amik átírják a tervet"

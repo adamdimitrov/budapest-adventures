@@ -168,7 +168,7 @@ C["vampire"] = dict(
            ("👥", "Groups of 20 to 25", "My group was 20 to 25 people. English, German and Spanish walks are listed. Ages 10+.")],
     pick="for a November evening outdoors that is better in the dark: Castle Hill by lamplight with a storyteller.",
     skip="if you want history and dates: this is folklore and theatre.",
-    pros=["Made for the dark: the Castle District is empty and lit at night", "€20 for 2 hours with a storyteller guide", "Rated 4.6 by more than 4,600 guests"],
+    pros=["Made for the dark: the Castle District is empty and lit at night", "From €18 for 2 hours with a storyteller guide", "Rated 4.6 by more than 4,600 guests"],
     cons=["Stairs at the start", "The second half can feel repetitive"],
     body="""<p>Most walking tours lose to November: by 16:00 it is dark and cold. This one is built for it. It starts at <strong>20:00 at Clark Ádám tér</strong>, climbs Castle Hill and spends <strong>two hours on vampire, ghost and folk tales</strong> in the empty, lamp-lit courtyards around Matthias Church and Fisherman's Bastion.</p>
 <p>I've done this walk myself. Our guide had a background in improv theatre, and the first half was gripping. After six or seven tales it got a little repetitive, but the setting carries it.</p>
@@ -177,12 +177,12 @@ C["vampire"] = dict(
 <p><strong>Skip it</strong> if you want facts and dates: the <a href="#item-8-buda-castle-walking-tour">morning Castle District walk</a> covers the history for €12. More walks compared: <a href="/best-walking-tours-budapest">best walking tours in Budapest</a>.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Clark Ádám tér, next to the Kilometer Zero stone by the funicular.<br/>🚌 <strong>Public Transport:</strong> Bus 16, 105 or 178 from Deák Ferenc tér or Erzsébet tér, or walk across the Chain Bridge.</p>""",
-    qf_badge="Castle District", qf=[("Start", "20:00 (English, Sat 21 Nov)"), ("Duration", "About 2 hours"), ("Price", "From €20 / person"),
+    qf_badge="Castle District", qf=[("Start", "20:00 (English, Sat 21 Nov)"), ("Duration", "About 2 hours"), ("Price", "From €18 / person"),
         ("Route", "Castle District courtyards, Matthias Church, Fisherman's Bastion"), ("Age", "10+"),
         ("Meeting Point", "Clark Ádám tér, by Kilometer Zero")],
     chips=[("yes", "✓ Built for the Dark"), ("yes", "✓ Under €40"), ("yes", "✓ Free Cancellation"), ("no", "✕ Stairs at the Start")],
     perks=["Start: <strong>Clark Ádám tér</strong>", "Time: <strong>20:00</strong>"],
-    desc="Two-hour night walk through Buda Castle District with vampire and folk tales, from €20.",
+    desc="Two-hour night walk through Buda Castle District with vampire and folk tales, from €18.",
 )
 C["silverline"] = dict(
     rank="#6 Best Value Dinner Cruise", title="Dinner &amp; Lights 4-Course Dinner Cruise", dur="2 Hours", place="Dock 11",
@@ -212,10 +212,10 @@ C["silverline"] = dict(
 )
 C["foodapest"] = dict(
     rank="#7 Best Food Tour", title="Market to Tavern Food Tour With Wine", dur="3 Hours", place="Central Market Hall",
-    map="Central Market Hall Budapest", psub="per person • 11:30 market tour",
+    map="Central Market Hall Budapest", psub="per person • 3 hours",
     pills=[("🏛️", "Market + tavern", "Starts in the Central Market Hall, then a bakery and two local restaurants. The last stop is the wine tasting."),
            ("🍽️", "12+ tastings", "Cold cuts, pickles, goulash, lángos, chimney cake and a Hungarian dessert: enough to count as lunch."),
-           ("🕒", "11:30 or 17:00", "The 11:30 market tour is €69. A 17:00 evening tour (street food, wine, pálinka and craft beer, no market) is €79."),
+           ("🕒", "11:30 or 17:00", "Two start times: the 11:30 market tour, from €62, and a 17:00 evening tour (street food, wine, pálinka and craft beer, no market) that costs a little more."),
            ("🍷", "Wine and pálinka", "A Hungarian wine tasting at the final restaurant and a homemade pálinka along the way. Alcohol-free swaps available.")],
     pick="for a cold November midday spent mostly indoors, eating your way from the market to a tavern.",
     skip="if you have a dinner cruise the same evening and a small appetite.",
@@ -223,12 +223,12 @@ C["foodapest"] = dict(
     cons=["3 hours on your feet", "The evening option skips the market hall"],
     body="""<p>November is market-hall weather. This tour starts in the <strong>Central Market Hall</strong> at <strong>11:30</strong>, works through <strong>12+ tastings</strong> (goulash, lángos, chimney cake, cold cuts) in a bakery and two local restaurants, and ends with a <strong>Hungarian wine tasting</strong>. Most of the 3 hours are spent indoors, and you finish in the early afternoon with daylight left for a bath.</p>
 <h3>Who Should Book It</h3>
-<p><strong>Pick it</strong> on your first full day: you'll know what to order for the rest of the trip. The 11:30 tour costs €69.</p>
+<p><strong>Pick it</strong> on your first full day: you'll know what to order for the rest of the trip. The 11:30 tour starts from €62.</p>
 <p><strong>Skip it</strong> if your evening is a dinner cruise and you eat light. Nine food tours compared: <a href="/best-food-tours-budapest">best food tours in Budapest</a>.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Central Market Hall, Fővám tér (the exact spot is in your voucher).<br/>🚇 <strong>Public Transport:</strong> M4 to Fővám tér, or tram 2, 47 or 49.</p>""",
     qf_badge="Food + wine", qf=[("Start Times", "11:30 market tour · 17:00 evening tour (no market)"), ("Duration", "About 3 hours"),
-        ("Price", "€69 (11:30) · €79 (17:00)"), ("Food", "12+ tastings"), ("Drinks", "Wine tasting, pálinka"), ("Start", "Central Market Hall, Fővám tér")],
+        ("Price", "From €62 (11:30) · evening tour costs more"), ("Food", "12+ tastings"), ("Drinks", "Wine tasting, pálinka"), ("Start", "Central Market Hall, Fővám tér")],
     chips=[("yes", "✓ Mostly Indoors"), ("yes", "✓ Wine Included"), ("yes", "✓ Free Cancellation")],
     perks=["Start: <strong>Market Hall</strong>", "Tastings: <strong>12+</strong>"],
     desc="Three-hour Budapest food tour from the Central Market Hall to a local tavern with 12+ tastings and wine.",
@@ -277,9 +277,9 @@ PICKS = [("Your first evening", "legenda-evening", "€25, one hour, every 20 mi
          ("Hot pools in cold air", "szechenyi", "from €39, open until 22:00 on Fridays"),
          ("A romantic dinner on the river", "legenda-dinner", "€110, 19:00 daily, served 4 courses"),
          ("A bath with a view after dark", "rudas", "rooftop pool at 36 °C, night bathing Fri and Sat"),
-         ("Something to do at 20:00", "vampire", "€20, two hours of folk tales on Castle Hill"),
+         ("Something to do at 20:00", "vampire", "from €18, two hours of folk tales on Castle Hill"),
          ("A dinner cruise for less", "silverline", "from €77, 4 courses at 19:00"),
-         ("A rainy midday", "foodapest", "€69, mostly indoors, 12+ tastings"),
+         ("A rainy midday", "foodapest", "from €62, mostly indoors, 12+ tastings"),
          ("On a budget", "castle", "€12 guided walk on Castle Hill")]
 
 DATES_H = "November 2026 Dates That Change Your Plans"

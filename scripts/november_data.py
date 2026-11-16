@@ -13,9 +13,10 @@ Products: read on the live listings on 15 Nov 2026 in Chrome.
     window seat +15 EUR). Ratings as in scripts/dinner_cruises_2026_data.py.
   - GYG pages (from price and rating on the product page): Szechenyi t4139 from 39 EUR,
     4.3 (29,228); Rudas t233617 from 75 EUR (calendar price 74.99), 4.2 (1,422);
-    Vampires night tour t59444 from 20 EUR, 4.6 (4,644), Sat 21 Nov start 20:00;
-    Foodapest t808482 from 69 EUR, 4.9 (679), Fri 20 Nov: 11:30 market tour 69 EUR,
-    17:00 evening tour (no market) 79 EUR; Buda Castle walk t157275 from 12 EUR, 4.6 (2,418).
+    Vampires night tour t59444 from 18 EUR (sale price, 20 EUR struck through), 4.6 (4,644),
+    Sat 21 Nov start 20:00; Foodapest t808482 from 62 EUR (sale price, 69 EUR struck through),
+    4.9 (679), starts 11:30 (market tour) and 17:00 (evening tour, no market, costs more);
+    GYG shows "From <old> <new>": the second, lower figure is the bookable from-price (16 Nov 2026); Buda Castle walk t157275 from 12 EUR, 4.6 (2,418).
 
 Personally tested (as marked on the user's other pages): Legenda Danube Legend and
 candlelit dinner, Silverline dinner, Szechenyi, Rudas, the vampire night walk and
@@ -59,7 +60,7 @@ PRODUCTS = [
          ratings=[("gyg", 4.19, 1422, "self")]),
     dict(key="vampire", src=("best-walking-tours-budapest.html", "t59444"), n_photos=6,
          href=GYG.format(slug="budapest-the-legendary-vampires-at-the-castle-s-court-t59444", cmp="vampire-walk"), via="gyg",
-         op="Mysterium Tours", cats="dark u40", tested=True, price=20,
+         op="Mysterium Tours", cats="dark u40", tested=True, price=18,
          ratings=[("gyg", 4.6, 4644, "self")]),
     dict(key="silverline", src=("best-dinner-cruises-budapest.html", "dinner-lights/"), n_photos=10,
          href=SILVER.format(slug="dinner-lights"), via="direct", op="Silverline Cruises", cats="river dark food",
@@ -67,7 +68,7 @@ PRODUCTS = [
          ratings=[("gyg", 4.428, 1479, None), ("viator", 4.7, 577, None), ("tripadvisor", 4.7, 482, None)]),
     dict(key="foodapest", src=("best-food-tours-budapest.html", "t808482"), n_photos=5,
          href=GYG.format(slug="budapest-food-tour-market-to-tavern-14-tasters-wines-t808482", cmp="food-tour"), via="gyg",
-         op="Foodapest", cats="food", tested=False, price=69,
+         op="Foodapest", cats="food", tested=False, price=62,
          ratings=[("gyg", 4.86, 679, "self")]),
     dict(key="castle", src=("best-walking-tours-budapest.html", "t157275"), n_photos=6,
          href=GYG.format(slug="budapest-classic-buda-castle-walking-tour-t157275", cmp="castle-walk"), via="gyg",
