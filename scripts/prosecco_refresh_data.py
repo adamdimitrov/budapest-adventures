@@ -21,7 +21,7 @@ def gyg(path, lang, placement, slug, mkt=True):
 
 
 def viator(path, lang, slug):
-    return f"https://www.viator.com/tours/Budapest/{path}?{VIATOR_AFF}{lang}-prosecco-cruises-rating-{slug}"
+    return f"https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id={lang}-prosecco-cruises-rating-{slug}&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2F{path}"
 
 
 def maps(q):

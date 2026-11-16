@@ -17,7 +17,7 @@ import math
 CHECKED = "2026-11-15"
 
 GYG = "https://www.getyourguide.com/budapest-l29/{slug}/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=xmas-markets-{cmp}&mkt_cmp=true"
-VIATOR = "https://www.viator.com/tours/Budapest/{slug}?pid=P00072830&mcid=42383&medium=link&campaign=xmas-markets-{cmp}"
+VIATOR = "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=xmas-markets-{cmp}&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2F{slug}"
 
 # ---------------------------------------------------------------- markets
 # coordinates are the market's centre point (used for the walking matrix)

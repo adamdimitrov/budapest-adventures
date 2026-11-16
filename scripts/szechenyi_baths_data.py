@@ -13,8 +13,7 @@ import bath_hub_nav
 GYG = ("https://www.getyourguide.com/budapest-l29/{slug}/?partner_id=YS414AJ"
        "&utm_medium=online_publisher&cmp=en-szechenyi-{placement}-{key}&mkt_cmp=true")
 TIQETS = "https://www.tiqets.com/en/things-to-do-in-budapest-c68199/{slug}/?partner=thecruisedetective.com-176436"
-VIATOR = ("https://www.viator.com/tours/Budapest/{slug}?pid=P00072830&mcid=42383&medium=link"
-          "&campaign=en-szechenyi-rating-{key}")
+VIATOR = "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=en-szechenyi-rating-{key}&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2F{slug}"
 MAPS = "https://www.google.com/maps/search/?api=1&query={q}"
 CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/"
 CHECK = "15 November 2026"
