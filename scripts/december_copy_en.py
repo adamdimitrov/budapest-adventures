@@ -426,6 +426,10 @@ FAQ = [
     ("Is there a Christmas dinner cruise on 25 December?",
      f"Yes. <a href=\"{A('silver-xmas')}\">Silverline's Christmas Day dinner cruise</a> (€155) sails on 25 December from 19:30 to 22:30 with a 4-course festive menu and live piano. "
      f"<a href=\"{A('legenda')}\">Legenda's candlelit dinner</a> (€110) also sails every evening in December except Christmas Eve, 25 December included."),
+    ("Can I take a Christmas river cruise from Budapest to Vienna?",
+     f"Yes. Emerald (5 days) and Avalon (6 days) sail one way from Budapest to Vienna in late November and December, "
+     f"with guided tours and Christmas markets in Budapest, Bratislava and Vienna. The cheapest option is a 5-day loop from Vienna via Budapest from $859. "
+     f"All six are compared in <a href=\"/budapest-vienna-river-cruises\">the best Budapest to Vienna river cruises</a>."),
     ("When do the Budapest Christmas markets close?",
      "Advent Bazilika runs until 1 January 2027 and Vörösmarty tér until 31 December (its craft stalls until 28 December). "
      "Both stay open until 3:00 on New Year's Eve. The Óbuda market closes on 23 December, and Budavári Advent runs until 3 January."),
