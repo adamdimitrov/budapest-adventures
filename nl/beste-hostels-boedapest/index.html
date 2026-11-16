@@ -107,7 +107,36 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) h2.ltt-section-title,body:has(.calc-title) main.container h2{font-size:28px!important}
 }
 </style>
-</head><body><header class="ltt-navbar" role="banner">
+<style id="bpa-lang-css">
+.bpa-lang{display:inline-flex;flex-wrap:wrap;gap:5px;flex-shrink:0}
+.bpa-lang[open]{flex-basis:100%}
+.bpa-lang>summary{list-style:none;cursor:pointer;user-select:none}
+.bpa-lang>summary::-webkit-details-marker{display:none}
+.bpa-lang>summary:hover{background:#e2e8f0 !important}
+.bpa-lang-chev{font-size:12px;line-height:1;opacity:.75;transition:transform .15s}
+.bpa-lang[open] .bpa-lang-chev{transform:rotate(180deg)}
+.bpa-lang.is-match>summary{background:#dcfce7 !important;color:#166534 !important}
+.bpa-lang-pop{flex-basis:100%;box-sizing:border-box;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.5;color:#334155;white-space:normal}
+.bpa-lang-pop strong{color:#0f172a}
+.bpa-lang-names b{color:#166534}
+.bpa-lang-note{display:block;margin-top:3px;color:#64748b;font-size:11px}
+/* With JS: the list floats over the card instead of pushing it down */
+html.bpa-lang-on .bpa-lang[open]{flex-basis:auto}
+html.bpa-lang-on .bpa-lang .bpa-lang-pop{display:none}
+html.bpa-lang-on .bpa-lang.is-open .bpa-lang-chev{transform:rotate(180deg)}
+html.bpa-lang-on .bpa-lang.is-open>summary{background:#e2e8f0 !important}
+html.bpa-lang-on .bpa-lang.is-match.is-open>summary{background:#bbf7d0 !important}
+#bpa-lang-float{position:absolute;z-index:9990;max-width:290px;box-sizing:border-box;background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 10px 30px rgba(15,23,42,.14);padding:10px 12px;font-size:12px;line-height:1.5;color:#334155;opacity:0;transform:translateY(-4px);transition:none;pointer-events:none}
+#bpa-lang-float.is-visible{opacity:1;transform:none;pointer-events:auto;transition:opacity .12s ease,transform .12s ease}
+#bpa-lang-float.is-above{transform:translateY(4px)}
+#bpa-lang-float.is-above.is-visible{transform:none}
+#bpa-lang-float strong{color:#0f172a}
+#bpa-lang-float .bpa-lang-names b{color:#166534}
+#bpa-lang-float::before{content:"";position:absolute;left:var(--ax,20px);top:-6px;width:10px;height:10px;background:#fff;border-left:1px solid #e2e8f0;border-top:1px solid #e2e8f0;transform:translateX(-50%) rotate(45deg)}
+#bpa-lang-float.is-above::before{top:auto;bottom:-6px;transform:translateX(-50%) rotate(225deg)}
+#bpa-lang-float::after{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+#bpa-lang-float.is-above::after{top:auto;bottom:-12px}
+</style></head><body><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/nl">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -1024,27 +1053,8 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 </div>
 <div class="ltt-lead-copy">
 <p>Het verkeerde hostel in Boedapest kiezen kost u nachtrust, geen geld. Slaapzaalbedden in het centrum kosten <strong>€8 tot €15 per nacht</strong>, maar een partyhostel in de Joodse wijk en een rustig pod-hostel bij de Centrale Markthal zijn twee totaal verschillende reizen.</p>
-<p>Ik <strong>verbleef in 9 van de 10 onderstaande hostels</strong>, waaronder <strong>30 nachten bij Maverick voor €280</strong>, en vergeleek ze naast elkaar op wat de boeking bepaalt: nachtlawaai, privacy bij het bed, badkamers, keuken, leeftijdsregels, het publiek en de werkelijke prijs per nacht. The Hive is de enige partykeuze waar ik niet heb geslapen, dus daarvoor staan er alleen gecontroleerde feiten en geen 'getest'-badge.</p>
-<p>Prijzen en beoordelingen gecontroleerd op <strong>14 nov. 2026</strong>. Gebruik de filters om direct naar opties voor feest, rust, budget, privékamers of digitale nomaden te gaan.</p>
-<figure class="cd-bookmark-wrapper">
-<a class="cd-editorial-bookmark" href="/nl/onbeperkt-prosecco-cruises-boedapest" rel="noopener" target="_blank">
-<div class="cd-editorial-body">
-<div>
-<div class="cd-editorial-title">Prosecco-cruise Boedapest (2026): 5 beste boten met onbeperkt prosecco + 2 drankdeals</div>
-<div class="cd-editorial-desc">Onbeperkt prosecco vanaf €17,50: de 5 beste boten vergeleken op actueel aanbod, plus 2 drankdeals.</div>
-</div>
-<div class="cd-editorial-meta">
-<img alt="BUDAPEST ADVENTURES" class="cd-editorial-icon" height="18" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='/assets/budapest-adventures-logo.png';}" src="/assets/budapest-adventures-logo-96.webp" width="18"/>
-<span class="cd-editorial-pub">BUDAPEST ADVENTURES</span>
-<span class="cd-editorial-dot">•</span>
-<span class="cd-editorial-author">Adam Dimitrov</span>
-</div>
-</div>
-<div class="cd-editorial-thumb">
-<img alt="Prosecco-cruise Boedapest (2026): 5 beste boten met onbeperkt prosecco + 2 drankdeals" fetchpriority="high" loading="eager" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='/assets/cdn/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero-p-500.webp';}" src="assets/cdn/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero-p-500.webp"/>
-</div>
-</a>
-</figure>
+<p>Ik <strong>verbleef in 9 van de 10 onderstaande hostels</strong>, waaronder <strong>30 nachten bij Maverick voor €280</strong>, en vergeleek ze naast elkaar op wat de boeking bepaalt: nachtlawaai, privacy bij het bed, badkamers, keuken, leeftijdsregels, het publiek en de werkelijke prijs per nacht.</p>
+<p>Gebruik de filters om direct naar opties voor feest, rust, budget, privékamers of digitale nomaden te gaan.</p>
 </div>
 <div class="ltt-integrated-filter-bar">
 <span class="ltt-filter-label">Filteren:</span>
@@ -3864,10 +3874,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Persoonlijk getest</span>
-<span class="bpa-sp">Privacygordijnen</span>
-<span class="bpa-sp">Dakterras</span>
-<span class="bpa-sp">Rustige zijstraat</span>
-<span class="bpa-sp">Voordelig lang verblijf</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Privacygordijnen</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Gordijn bij elk bed.</strong> Moderne slaapzalen met privacygordijnen en grote kluisjes, zodat zelfs een volle kamer rustig voelt.<span class="bpa-lang-note">Sluit waardevolle spullen op: bij mij werd een trui gestolen.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">Dakterras</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Een terras voor gasten.</strong> Sociaal zonder partyhostel te zijn: 's avonds makkelijk mensen leren kennen, daarna slapen.<span class="bpa-lang-note">Publiek: soloreizigers, langblijvers en thuiswerkers.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">Rustige zijstraat</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lónyay utca, district IX.</strong> Een kleinere zijstraat, weg van de feeststraten in district VII. In 30 nachten nauwelijks straatlawaai.<span class="bpa-lang-note">Kálvin tér (M3, M4) en Fővám tér (M4, tram 2, 47, 49) liggen op een paar minuten lopen.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💶 <span class="bpa-lang-label">Voordelig lang verblijf</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>30 nachten voor € 280.</strong> Dat is in maart ongeveer € 9,33 per nacht, de beste prijs voor een lang verblijf die ik in het centrum vond.<span class="bpa-lang-note">Slaapzaal vanaf ongeveer € 10 voor data dichtbij, privékamers vanaf € 28.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideaal voor:</strong> Soloreizigers, digitale nomaden en backpackers voor een langer verblijf die een sociaal hostel willen zonder feestlawaai. <strong>Sla over als</strong> u een partyhostel naast de ruïnekroegen zoekt.
@@ -3876,7 +3886,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Vanaf €10</div>
-<div class="bpa-psub">Slaapzaalbed/nacht • 14 nov. 2026</div>
+<div class="bpa-psub">Slaapzaalbed/nacht</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/4klGcrSU" rel="nofollow sponsored noopener" target="_blank">Prijzen &amp;amp; data bekijken →</a>
 <div class="bpa-trust-micro">
@@ -3914,10 +3924,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Persoonlijk getest</span>
-<span class="bpa-sp">Gratis dagelijkse activiteiten</span>
-<span class="bpa-sp">Kroegentochten</span>
-<span class="bpa-sp">18 t/m 39 jaar</span>
-<span class="bpa-sp">Deák tér</span>
+<details class="bpa-lang"><summary class="bpa-sp">🎯 <span class="bpa-lang-label">Gratis dagelijkse activiteiten</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Elke dag iets te doen.</strong> Gratis activiteiten overdag, 's avonds drankspelletjes aan de bar. Het team trekt iedereen mee.<span class="bpa-lang-note">Hier komt u het makkelijkst alleen aan en vertrekt u met een groep.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">Kroegentochten</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Kroegentochten langs de ruïnekroegen.</strong> Het hostelfeest loopt tussen 23.00 uur en middernacht af, daarna trekt de groep de Joodse wijk in.<span class="bpa-lang-note">Geen avondklok; inchecken van 15.00 tot 23.00 uur.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🪪 <span class="bpa-lang-label">18 t/m 39 jaar</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Alleen 18 tot 39 jaar.</strong> Alleen gasten van 18 tot 39 mogen er verblijven, dat houdt het publiek jong en sociaal.<span class="bpa-lang-note">Ouder dan 39? Maverick biedt het sociale zonder leeftijdsgrens.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚇 <span class="bpa-lang-label">Deák tér</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>4 minuten naar Deák Ferenc tér.</strong> M1, M2, M3 en de luchthavenbus 100E, vanaf Rumbach Sebestyén utca 6.<span class="bpa-lang-note">Vanaf de kroegen loopt u naar huis.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideaal voor:</strong> Soloreizigers van 18 t/m 39 jaar die meteen een gezellige groep willen, dagelijkse activiteiten en avondjes uit. <strong>Sla over als</strong> u ouder bent dan 39, als stel privacy zoekt, of vroeg wilt slapen.
@@ -3926,7 +3936,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Vanaf €14</div>
-<div class="bpa-psub">Slaapzaalbed/nacht • 14 nov. 2026</div>
+<div class="bpa-psub">Slaapzaalbed/nacht</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/pwL5wYcC" rel="nofollow sponsored noopener" target="_blank">Prijzen &amp;amp; data bekijken →</a>
 <div class="bpa-trust-micro">
@@ -3964,10 +3974,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Persoonlijk getest</span>
-<span class="bpa-sp">Gratis ontbijt</span>
-<span class="bpa-sp">Privacygordijnen</span>
-<span class="bpa-sp">24/7 trams</span>
-<span class="bpa-sp">Oktogon</span>
+<details class="bpa-lang"><summary class="bpa-sp">🥐 <span class="bpa-lang-label">Gratis ontbijt</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ontbijt inbegrepen.</strong> Plus avondeten met korting. Met de Hongaarse voedselprijzen bespaart u per dag meer dan het bed kost.<span class="bpa-lang-note">Toen ik er verbleef, gold de korting op het diner alleen bij een kleine minimale besteding aan de bar.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Privacygordijnen</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Stapelbedden met gordijn.</strong> Mijn 10-persoonskamer had gordijnen, maar was het zwakke punt. De 4-, 8- en 12-persoonskamers zijn mooier voor een paar euro meer.<span class="bpa-lang-note">Hangslot niet inbegrepen: neem er een mee of koop er een voor ongeveer € 3.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚋 <span class="bpa-lang-label">24/7 trams</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Nachttram voor de deur.</strong> M1 en de 24-uurs trams 4 en 6 stoppen pal voor de deur, dus om 3 uur 's nachts thuiskomen is makkelijk.<span class="bpa-lang-note">De keerzijde: er rijden de hele nacht trams. Neem oordopjes mee.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Oktogon</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Oktogon tér 4, district VI.</strong> Op de kruising van Andrássy út en de Grote Ring, lopend naar het centrum.<span class="bpa-lang-note">Receptie 24/7 open, inchecken van 14.00 uur tot middernacht.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideaal voor:</strong> Budgetreizigers die het goedkoopste centrale bed willen, met gratis ontbijt en goedkope diners. <strong>Sla over als</strong> u licht slaapt of een sociale, persoonlijke sfeer zoekt.
@@ -3976,7 +3986,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Vanaf €8</div>
-<div class="bpa-psub">Slaapzaalbed/nacht • 14 nov. 2026</div>
+<div class="bpa-psub">Slaapzaalbed/nacht</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/HpiYT6P3" rel="nofollow sponsored noopener" target="_blank">Prijzen &amp;amp; data bekijken →</a>
 <div class="bpa-trust-micro">
@@ -4014,10 +4024,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Persoonlijk getest</span>
-<span class="bpa-sp">Coworkingruimte</span>
-<span class="bpa-sp">Gratis hangslot</span>
-<span class="bpa-sp">Pod-bedden</span>
-<span class="bpa-sp">Markthal</span>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">Coworkingruimte</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Een echte werkplek.</strong> De lounge heeft een laptopvriendelijke werkplek, hier de beste plek om op afstand te werken.<span class="bpa-lang-note">Sociaal maar rustig: meer studentenhuis dan kroegentocht-hoofdkwartier.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔒 <span class="bpa-lang-label">Gratis hangslot</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Hangslot inbegrepen.</strong> Uw opbergbox krijgt een gratis hangslot, geen € 3 extra zoals elders.<span class="bpa-lang-note">Receptie 24/7 bemand.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Pod-bedden</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Capsules met alles erop en eraan.</strong> Elk bed heeft een privacygordijn, stopcontact, lampje, plankje en opbergbox.<span class="bpa-lang-note">De kamers zijn krap: weinig ruimte als iedereen uitpakt.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">Markthal</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Gönczy Pál utca 2.</strong> Eén gebouw van de Grote Markthal, een paar minuten lopen naar de Donau.<span class="bpa-lang-note">3e verdieping, geen lift. Fővám tér (M4, tram 2, 47, 49) is dichtbij.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideaal voor:</strong> Digitale nomaden en reizigers die een laptopvriendelijke lounge, pod-bedden en een gezellige maar rustige sfeer willen. <strong>Sla over als</strong> u zware bagage heeft (3e verdieping, geen lift) of een eigen badkamer wilt.
@@ -4026,7 +4036,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Vanaf €10</div>
-<div class="bpa-psub">Slaapzaalbed/nacht • 14 nov. 2026</div>
+<div class="bpa-psub">Slaapzaalbed/nacht</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/mx9SOFXZ" rel="nofollow sponsored noopener" target="_blank">Prijzen &amp;amp; data bekijken →</a>
 <div class="bpa-trust-micro">
@@ -4065,10 +4075,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Persoonlijk getest</span>
-<span class="bpa-sp">Rustige kamers</span>
-<span class="bpa-sp">Geweldige douche</span>
-<span class="bpa-sp">Werklounge</span>
-<span class="bpa-sp">Privékamers</span>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">Rustige kamers</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rust van een budgethotel.</strong> Eenvoudige, stille, schone kamers met weinig hostelgedoe, gemaakt om goed te slapen.<span class="bpa-lang-note">Geschikt voor stellen, gezinnen en iedereen die privacy wil.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Geweldige douche</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Een fantastische douche.</strong> In een eenvoudige, stille en schone kamer sprong de douche eruit.<span class="bpa-lang-note">Beddengoed en handdoeken kosten extra: 1.150 HUF (ongeveer € 3).</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">Werklounge</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Laptopvriendelijke lounge.</strong> Een uitstekende werkplek in de lounge, en de receptie bewaarde mijn laptop veilig terwijl ik weg was.<span class="bpa-lang-note">Optioneel hotelontbijt voor ongeveer € 8.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚪 <span class="bpa-lang-label">Privékamers</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Privékamers vanaf 2 personen.</strong> Privékamers naast de slaapzalen, met een 24-uursreceptie om op elk moment in te checken.<span class="bpa-lang-note">Csengery utca 11, een paar minuten van Oktogon (M1, tram 4 en 6).</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideaal voor:</strong> Stellen, gezinnen en iedereen die liever een rustige, eenvoudige, schone kamer heeft dan een druk sociaal leven. <strong>Sla over als</strong> u een sociaal hostel zoekt of niet apart wilt bijbetalen voor beddengoed.
@@ -4077,7 +4087,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Vanaf €12</div>
-<div class="bpa-psub">Slaapzaalbed/nacht • 14 nov. 2026</div>
+<div class="bpa-psub">Slaapzaalbed/nacht</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/RQSFFzzX" rel="nofollow sponsored noopener" target="_blank">Prijzen &amp;amp; data bekijken →</a>
 <div class="bpa-trust-micro">
@@ -4112,10 +4122,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Persoonlijk getest</span>
-<span class="bpa-sp">Slaapzalen met eigen badkamer</span>
-<span class="bpa-sp">Bedgordijnen</span>
-<span class="bpa-sp">Hostelbar</span>
-<span class="bpa-sp">Király utca</span>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Slaapzalen met eigen badkamer</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Badkamer in elke kamer.</strong> Elke kamer heeft een eigen badkamer en airco, dus geen rij op de gang.<span class="bpa-lang-note">Schoon maar gewoon: boek het niet voor het design.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Bedgordijnen</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Eigen bedgordijnen.</strong> Voor een partyhostel is het 's nachts rustig. Ik heb goed geslapen.<span class="bpa-lang-note">Gratis kluisjes.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍸 <span class="bpa-lang-label">Hostelbar</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Een sociale hostelbar.</strong> Aan de hostelbar leert u makkelijk mensen kennen, en de bars van Gozsdu Udvar liggen om de hoek.<span class="bpa-lang-note">Het internationale publiek was het beste van mijn verblijf.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Király utca</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Király utca 20.</strong> 3 minuten lopen naar Deák Ferenc tér (M1, M2, M3 en luchthavenbus 100E).<span class="bpa-lang-note">Inchecken van 14.00 tot 23.00 uur, uitchecken voor 10.00 uur.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideaal voor:</strong> Backpackers die een gezellige bar en nachtleven voor de deur willen, maar ook een goede nachtrust. <strong>Sla over als</strong> u het goedkoopste bed zoekt of een hostel met veel eigen karakter.
@@ -4124,7 +4134,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Vanaf €11</div>
-<div class="bpa-psub">Slaapzaalbed/nacht • 14 nov. 2026</div>
+<div class="bpa-psub">Slaapzaalbed/nacht</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/19dbOWJE" rel="nofollow sponsored noopener" target="_blank">Prijzen &amp;amp; data bekijken →</a>
 <div class="bpa-trust-micro">
@@ -4161,10 +4171,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Persoonlijk getest</span>
-<span class="bpa-sp">Huiselijke sfeer</span>
-<span class="bpa-sp">Klein hostel</span>
-<span class="bpa-sp">Gratis thee &amp; koffie</span>
-<span class="bpa-sp">Markthal</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛋️ <span class="bpa-lang-label">Huiselijke sfeer</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Een echte woonkamer.</strong> Op de bank belandt iedereen om te kletsen, overdag met bordspellen.<span class="bpa-lang-note">Houdt u van een gezellige, huiselijke sfeer, dan is dit de hemel.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">Klein hostel</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Klein en persoonlijk.</strong> Toen ik er was, runde één vriendelijke gastvrouw het hele hostel. Dankzij haar krijgt het 9/10-beoordelingen.<span class="bpa-lang-note">Geen afsluitbaar kluisje en geen bureau met stopcontacten.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">Gratis thee &amp; koffie</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>De hele dag gratis.</strong> Thee en koffie in zelfbediening, de hele dag in de woonkamer.<span class="bpa-lang-note">Inchecken alleen van 14.00 tot 21.00 uur: komt u laat aan, boek dan elders.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">Markthal</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Vámház körút 5.</strong> Naast de Grote Markthal en de Vrijheidsbrug, een paar minuten van de Donau.<span class="bpa-lang-note">Fővám tér (M4, tram 2, 47, 49) voor de deur.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideaal voor:</strong> Introverten en slow travelers die een kleine, knusse, huiselijke plek aan de Donau willen. <strong>Sla over als</strong> u laat in de avond aankomt, een kluisje nodig heeft, of een bureau met stopcontact zoekt.
@@ -4173,7 +4183,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Vanaf €11</div>
-<div class="bpa-psub">Slaapzaalbed/nacht • 14 nov. 2026</div>
+<div class="bpa-psub">Slaapzaalbed/nacht</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/LV5kBsYQ" rel="nofollow sponsored noopener" target="_blank">Prijzen &amp;amp; data bekijken →</a>
 <div class="bpa-trust-micro">
@@ -4213,10 +4223,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Persoonlijk getest</span>
-<span class="bpa-sp">Zicht op de Basiliek</span>
-<span class="bpa-sp">Eigen badkamers</span>
-<span class="bpa-sp">Gratis thee &amp; koffie</span>
-<span class="bpa-sp">Andrássy út</span>
+<details class="bpa-lang"><summary class="bpa-sp">⛪ <span class="bpa-lang-label">Zicht op de Basiliek</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Uitzicht op de Sint-Stefanusbasiliek.</strong> Aan het begin van Andrássy út, een paar minuten lopen naar de basiliek, de Opera en Deák Ferenc tér.<span class="bpa-lang-note">De beste uitvalsbasis van deze lijst om te voet de stad te zien.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Eigen badkamers</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Uw eigen badkamer.</strong> Slaapzalen en tweepersoonskamers met eigen badkamer; de mijne was uitstekend en schoon.<span class="bpa-lang-note">Privékamers vanaf ongeveer € 22.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">Gratis thee &amp; koffie</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Gratis thee, koffie en beddengoed.</strong> Thee en koffie in zelfbediening en volledig uitgeruste gastenkeukens, volgens het hostel.<span class="bpa-lang-note">Rustig, niet sociaal: geen activiteiten of persoonlijke touch.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Andrássy út</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Andrássy út 2, 1e verdieping.</strong> Bajcsy-Zsilinszky út (M1) voor de deur, Deák Ferenc tér (M1, M2, M3) op korte loopafstand.<span class="bpa-lang-note">Drukke weg: vraag om een kamer aan de binnenplaats. Eén trap, geen lift.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideaal voor:</strong> Stedentrippers die een rustig, schoon bed aan het begin van Andrássy út willen, vlak bij de Sint-Stefanusbasiliek. <strong>Sla over als</strong> u een sociaal hostel zoekt of gevoelig bent voor verkeerslawaai.
@@ -4225,7 +4235,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Vanaf €11</div>
-<div class="bpa-psub">Slaapzaalbed/nacht • 14 nov. 2026</div>
+<div class="bpa-psub">Slaapzaalbed/nacht</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/GpKMoQF5" rel="nofollow sponsored noopener" target="_blank">Prijzen &amp;amp; data bekijken →</a>
 <div class="bpa-trust-micro">
@@ -4253,10 +4263,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Persoonlijk getest</span>
-<span class="bpa-sp">Huiselijke loft</span>
-<span class="bpa-sp">Lokale tips</span>
-<span class="bpa-sp">Gastenkeuken</span>
-<span class="bpa-sp">Joodse wijk</span>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">Huiselijke loft</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Een loftappartement onder het dak.</strong> Gerenoveerd en intiem, het voelt alsof u bij een vriend logeert.<span class="bpa-lang-note">Gemengde of vrouwen-slaapzalen met 4 en 6 bedden, plus een privé tweepersoonskamer.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🗺️ <span class="bpa-lang-label">Lokale tips</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Tips die niet online staan.</strong> De gastheren gaven me tips voor bars, restaurants en festivals die in geen enkele gids stonden.<span class="bpa-lang-note">Vriendelijk, gastvrij team.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍳 <span class="bpa-lang-label">Gastenkeuken</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Volledig uitgeruste keuken.</strong> Kook zelf en bespaar op de restaurantprijzen in Boedapest.<span class="bpa-lang-note">Toen ik er verbleef alleen contant: neem voor de zekerheid forint mee.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Joodse wijk</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Akácfa utca 10, district VII.</strong> In de uitgaanswijk, vlak bij de belangrijkste bezienswaardigheden en de ruïnekroegen.<span class="bpa-lang-note">Tram 4 en 6 bij Wesselényi utca. Neem oordopjes mee voor het weekend.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideaal voor:</strong> Solo-backpackers en kleine groepjes die een knus hostel in appartementstijl willen met vriendelijke hosts in de uitgaanswijk. <strong>Sla over als</strong> u met kaart wilt betalen, drempelvrije toegang nodig heeft of stilte op weekendavonden.
@@ -4265,7 +4275,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Vanaf €15</div>
-<div class="bpa-psub">Slaapzaalbed/nacht • 14 nov. 2026</div>
+<div class="bpa-psub">Slaapzaalbed/nacht</div>
 </div>
 <a class="bpa-btn" href="https://tp.media/r?marker=404154.article-best-hostels-budapest-das-nest-comparison-list&amp;trs=204442&amp;p=3518&amp;u=https%3A%2F%2Fwww.hostelworld.com%2Fst%2Fhostels%2Fp%2F47301%2Fdas-nest-budapest%2F&amp;campaign_id=93" rel="nofollow sponsored noopener" target="_blank">Prijzen &amp;amp; data bekijken →</a>
 <div class="bpa-trust-micro">
@@ -4291,10 +4301,10 @@ a.w-webflow-badge,
 <div class="bpa-proof"></div>
 </div>
 <div class="bpa-specs-row">
-<span class="bpa-sp">Rooftopbar</span>
-<span class="bpa-sp">Dagelijkse kroegentochten</span>
-<span class="bpa-sp">Alleen 18+</span>
-<span class="bpa-sp">Joodse wijk</span>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">Rooftopbar</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Dakbar alleen voor gasten.</strong> Elke dag happy hour van 16.00 tot 19.00 uur.<span class="bpa-lang-note">Meer dan 300 bedden, open sinds 2015, volgens het hostel.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">Dagelijkse kroegentochten</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Elke avond feest.</strong> Dagelijkse kroegentochten, plus bingotochten, SPArty's en partyboten georganiseerd door het hostel.<span class="bpa-lang-note">Gasten noemen lawaai van de club beneden.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔞 <span class="bpa-lang-label">Alleen 18+</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Strikt 18+.</strong> Gemaakt voor lange nachten, niet voor vroege vogels.<span class="bpa-lang-note">Inchecken van 15.00 uur tot middernacht; betalen contant of met kaart.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Joodse wijk</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Dob utca 19, district VII.</strong> Op korte loopafstand van Gozsdu Udvar en Szimpla Kert.<span class="bpa-lang-note">Astoria (M2) en Deák Ferenc tér (M1, M2, M3) op een paar minuten.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Ideaal voor:</strong> 18+-groepen en solo-feestgangers die een groot, luidruchtig partyhostel met een rooftopbar in de ruïnekroegenwijk willen. <strong>Sla over als</strong> u licht slaapt, vroeg opstaat of bedgordijnen wilt.
@@ -4303,7 +4313,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Vanaf €13</div>
-<div class="bpa-psub">Slaapzaalbed/nacht • 14 nov. 2026</div>
+<div class="bpa-psub">Slaapzaalbed/nacht</div>
 </div>
 <a class="bpa-btn" href="https://tp.media/r?marker=404154.article-best-hostels-budapest-the-hive-comparison-list&amp;trs=204442&amp;p=3518&amp;u=https%3A%2F%2Fwww.hostelworld.com%2Fhostels%2Fp%2F96091%2Fthe-hive-party-hostel-budapest%2F&amp;campaign_id=93" rel="nofollow sponsored noopener" target="_blank">Prijzen &amp;amp; data bekijken →</a>
 <div class="bpa-trust-micro">
@@ -8987,4 +8997,92 @@ a.cd-editorial-bookmark .cd-editorial-meta{display:none!important}
 a.cd-editorial-bookmark .cd-editorial-desc{display:-webkit-box!important;-webkit-line-clamp:1!important;-webkit-box-orient:vertical!important;overflow:hidden!important;font-size:13px!important;line-height:1.4!important;color:#64748b!important;margin:3px 0 0!important}
 a.cd-editorial-bookmark .cd-editorial-title{font-family:'Playfair Display',Georgia,serif!important;font-size:16px!important;line-height:1.3!important;margin:0!important;color:#0a192f!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
 a.cd-editorial-bookmark::after{content:"\203A"!important;position:static!important;order:2;flex:0 0 auto;font-size:22px;line-height:1;color:#b88214}
-</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style></body></html>
+</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style><script id="bpa-lang-js">
+(function(){
+  var N={en:'English',fr:'French',es:'Spanish',de:'German',it:'Italian',pt:'Portuguese',nl:'Dutch',pl:'Polish',ru:'Russian',ar:'Arabic',hi:'Hindi',zh:'Chinese',ja:'Japanese',ko:'Korean'};
+  function init(){
+    var langs=[];
+    try{langs=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']);}catch(e){}
+    var code=String(langs[0]||'').slice(0,2).toLowerCase();
+    var boxes=document.querySelectorAll('.bpa-lang');
+    if(!boxes.length) return;
+    document.documentElement.classList.add('bpa-lang-on');
+
+    var pop=document.createElement('div');
+    pop.id='bpa-lang-float';
+    pop.setAttribute('role','tooltip');
+    document.body.appendChild(pop);
+    var current=null, pinned=false, hideTimer=null;
+    var canHover=window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    function place(d){
+      var s=d.querySelector('summary').getBoundingClientRect();
+      var vw=document.documentElement.clientWidth, vh=window.innerHeight;
+      var w=Math.min(290, vw-16);
+      pop.style.width=w+'px';
+      var left=Math.max(8, Math.min(s.left, vw-w-8));
+      var h=pop.offsetHeight;
+      var above=(s.bottom+10+h>vh) && (s.top-10-h>0);
+      var top=above ? (s.top-10-h) : (s.bottom+10);
+      pop.classList.toggle('is-above', above);
+      pop.style.left=(left+window.scrollX)+'px';
+      pop.style.top=(top+window.scrollY)+'px';
+      pop.style.setProperty('--ax', Math.max(14, Math.min(w-14, s.left+Math.min(s.width,40)/2-left))+'px');
+    }
+    function show(d, pin){
+      clearTimeout(hideTimer);
+      if(current && current!==d) current.classList.remove('is-open');
+      current=d; pinned=!!pin;
+      pop.innerHTML=d.querySelector('.bpa-lang-pop').innerHTML;
+      d.classList.add('is-open');
+      d.querySelector('summary').setAttribute('aria-expanded','true');
+      place(d);
+      pop.classList.add('is-visible');
+    }
+    function hide(){
+      clearTimeout(hideTimer);
+      if(current){ current.classList.remove('is-open'); current.querySelector('summary').setAttribute('aria-expanded','false'); }
+      current=null; pinned=false;
+      pop.classList.remove('is-visible');
+    }
+    function softHide(e){
+      if(pinned) return;
+      var to=e && e.relatedTarget;
+      if(to && to.closest && (to.closest('#bpa-lang-float') || (current && current.contains(to)))) return;
+      hide();
+    }
+
+    boxes.forEach(function(d){
+      var sum=d.querySelector('summary');
+      sum.setAttribute('aria-expanded','false');
+      sum.addEventListener('click',function(e){
+        e.preventDefault();
+        if(current===d && pinned){ hide(); return; }
+        show(d,true);
+      });
+      if(canHover){
+        sum.addEventListener('mouseenter',function(){ if(!pinned||current!==d) show(d,false); });
+        sum.addEventListener('mouseleave',softHide);
+      }
+      if(!code||code==='en'||!N[code]) return;
+      var list=(d.getAttribute('data-langs')||'').split(',');
+      if(list.indexOf(code)===-1) return;
+      var label=d.querySelector('.bpa-lang-label');
+      if(label) label.textContent='Audio in '+N[code]+' \u2713';
+      d.classList.add('is-match');
+      var names=d.querySelector('.bpa-lang-names');
+      if(names) names.innerHTML=names.textContent.split(', ').map(function(n){return n===N[code]?'<b>'+n+'</b>':n;}).join(', ');
+    });
+    pop.addEventListener('mouseenter',function(){ clearTimeout(hideTimer); });
+    pop.addEventListener('mouseleave',softHide);
+    document.addEventListener('click',function(e){
+      if(!current) return;
+      if(e.target.closest && (e.target.closest('.bpa-lang') || e.target.closest('#bpa-lang-float'))) return;
+      hide();
+    });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') hide(); });
+    window.addEventListener('resize',function(){ if(current) place(current); });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script></body></html>

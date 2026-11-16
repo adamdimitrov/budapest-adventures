@@ -554,15 +554,14 @@ UI = {
         '<p>Picking the wrong Budapest hostel costs you sleep, not money. Dorm beds in the center run <strong>€8 to €15 a night</strong>, '
         'but a party hostel in the Jewish Quarter and a quiet pod hostel by the Central Market Hall are two completely different trips.</p>\n'
         '<p>I <strong>stayed in 9 of the 10 hostels below</strong>, including <strong>30 nights at Maverick for €280</strong>, and compared them side by side '
-        'on what decides the booking: noise at night, bed privacy, bathrooms, kitchen, age rules, the crowd and the real price per night. '
-        'The Hive is the one party pick I haven\'t slept in, so it gets checked facts only and no "tested" badge.</p>\n'
-        '<p>Prices and ratings checked on <strong>%s</strong>. Use the filters to jump straight to party, quiet, budget, private-room or digital-nomad picks.</p>\n' % CHECKED),
+        'on what decides the booking: noise at night, bed privacy, bathrooms, kitchen, age rules, the crowd and the real price per night.</p>\n'
+        '<p>Use the filters to jump straight to party, quiet, budget, private-room or digital-nomad picks.</p>\n'),
     "filters": [("party", "🎉 Social &amp; Party"), ("quiet", "😴 Quiet Sleep"), ("budget", "💶 Under €11"),
                 ("private", "🛏️ Private Rooms"), ("nomad", "💻 Digital Nomads"), ("kitchen", "🍳 Guest Kitchen")],
     "district_fmt": "%s District", "decimal": ".", "thousands": ",", "k": "k",
     "tested_chip": "✓ Personally Tested",
     "best_for_card": "Best For:", "best_for_summary": "Best for:", "skip_if": "Skip if",
-    "from_eur": "From €%d", "eur": "€%d", "card_psub": "Dorm bed/night • 14 Nov 2026",
+    "from_eur": "From €%d", "eur": "€%d", "card_psub": "Dorm bed/night",
     "card_btn": "Check Prices &amp; Dates →", "read_review": "Read Review ↓",
     "pros": "Pros:", "cons": "Cons:", "why": "Why pick it:", "why_skip": "Why skip it:",
     "video": "Video:", "watch_my": "Watch my",
