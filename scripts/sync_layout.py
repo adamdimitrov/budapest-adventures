@@ -160,9 +160,14 @@ def activate(html, path, lang, footer=False):
         return tag.replace("<a ", '<a aria-current="page" ', 1)
     html = re.sub(r"<a [^>]*>", on, html)
     if not footer:
-        if re.search(r'class="ltt-mega-(?:sub)?item active"', html):
-            html = re.sub(r'<button ([^>]*)class="ltt-nav-link ltt-dropdown-btn"',
-                          r'<button aria-current="true" \1class="ltt-nav-link ltt-dropdown-btn active"', html, count=1)
+        # mark the top-level dropdown button whose mega menu holds the current page
+        def mark_drop(m):
+            block = m.group(0)
+            if re.search(r'class="ltt-mega-(?:sub)?item active"', block):
+                block = re.sub(r'<button ([^>]*)class="ltt-nav-link ltt-dropdown-btn"',
+                               r'<button aria-current="true" \1class="ltt-nav-link ltt-dropdown-btn active"', block, count=1)
+            return block
+        html = re.sub(r'<div class="ltt-nav-dropdown".*?(?=<div class="ltt-nav-dropdown"|</nav>)', mark_drop, html, flags=re.S)
         # current language in the switcher
         html = re.sub(rf'(<a [^>]*class="(?:ltt-lang-item|ltt-mobile-lang-chip))("[^>]*data-(?:m-)?lang="{lang}")',
                       r"\1 current\2", html)
