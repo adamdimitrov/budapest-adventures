@@ -426,7 +426,7 @@ def sub_once(pattern, repl, s, flags=0):
     return new
 
 
-PICK_LABEL = {"en": "PICK", "de": "TIPP", "fr": "CHOIX", "it": "SCELTA", "es": "OPCIÓN", "hu": "VÁLASZTÁS", "nl": "KEUZE", "pt": "ESCOLHA", "ro": "ALEGERE", "hr": "IZBOR", "sr": "ИЗБОР"}
+PICK_LABEL = {"en": "PICK", "de": "TIPP", "fr": "CHOIX", "it": "SCELTA", "es": "OPCIÓN", "hu": "VÁLASZTÁS", "nl": "KEUZE", "pt": "ESCOLHA", "ro": "ALEGERE", "hr": "IZBOR", "sr": "ИЗБОР", "pl": "WYBÓR"}
 
 HU_TEMPLATE = {
     "Inhaltsverzeichnis öffnen": "Tartalomjegyzék megnyitása",
