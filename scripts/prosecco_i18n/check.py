@@ -27,7 +27,7 @@ def check(path, lang):
         if fe[k] != fl[k]:
             out.append(f"DRIFT {k}: en={str(fe[k])[:80]} {lang}={str(fl[k])[:80]}")
     links = re.findall(r'href="(https://(?:www\.)?(?:getyourguide|viator)\.com[^"]+)"', s)
-    bad = [l for l in links if not re.search(r"partner_id=YS414AJ.*mkt_cmp=true|pid=P00072830", html.unescape(l))]
+    bad = [l for l in links if not re.search(r"partner_id=YS414AJ.*mkt_cmp=true|pid=P00072830|tp\.media/r\?campaign_id=47", html.unescape(l))]
     if bad: out.append(f"LINK no affiliate: {bad[:2]}")
     cmp_bad = [l for l in links if "getyourguide" in l and f"cmp={lang}-prosecco" not in html.unescape(l)]
     if cmp_bad: out.append(f"LINK cmp not {lang}: {len(cmp_bad)} e.g. {cmp_bad[0][-60:]}")

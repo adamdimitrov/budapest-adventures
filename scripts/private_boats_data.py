@@ -9,7 +9,7 @@ Viator product page). Change a fact here, then rerun scripts/build_private_boats
 CHECKED = "2026-11-14"
 
 GYG = "https://www.getyourguide.com/budapest-l29/{slug}/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private-cruises-{cmp}&mkt_cmp=true"
-VIATOR = "https://www.viator.com/tours/Budapest/{slug}?pid=P00072830&mcid=42383&medium=link&campaign=private-cruises-{cmp}"
+VIATOR = "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=private-cruises-{cmp}&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2F{slug}"
 
 # ---------------------------------------------------------------- facts
 PRODUCTS = [
