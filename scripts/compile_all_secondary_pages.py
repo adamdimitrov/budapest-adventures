@@ -13,10 +13,10 @@ Compiles all 15 secondary editorial, attraction, and utility pages across all 21
 - Budapest Card: /{lang}/budapest-card-is-it-worth-it/index.html
 - Travel Guide: /{lang}/budapest-travel-guide/index.html
 - Airport Transfer: /{lang}/budapest-airport-to-city-center/index.html
-- Parliament: /{lang}/budapest-attractions/budapest-parliament/index.html (and alias)
+- Parliament: /{lang}/budapest-parliament-tickets/index.html (and alias)
 - Group Booking: /{lang}/budapest-river-cruise-group-booking/index.html
 - Tourism Statistics: /{lang}/budapest-tourism-statistics/index.html
-- Candlelit Review: /{lang}/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest/index.html
+- Candlelit Review: /{lang}/candlelit-dinner-cruise-budapest/index.html
 
 Strictly enforces:
 1. Universal link localization (ensures visitors stay in /{lang}/ across the whole site)
@@ -72,10 +72,10 @@ PAGE_TARGETS = {
     'budapest_card': 'budapest-card-is-it-worth-it',
     'travel_guide': 'budapest-travel-guide',
     'airport_transfer': 'budapest-airport-to-city-center',
-    'parliament': 'budapest-attractions/budapest-parliament',
+    'parliament': 'budapest-parliament-tickets',
     'group_booking': 'budapest-river-cruise-group-booking',
     'tourism_statistics': 'budapest-tourism-statistics',
-    'candlelit_dinner': 'best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest'
+    'candlelit_dinner': 'candlelit-dinner-cruise-budapest'
 }
 
 def localize_html(raw_html, lang, page_slug):
@@ -163,14 +163,14 @@ def localize_html(raw_html, lang, page_slug):
             a['href'] = f"/{lang}/budapest-travel-guide"
         elif clean in ['/budapest-airport-to-city-center', 'budapest-airport-to-city-center']:
             a['href'] = f"/{lang}/budapest-airport-to-city-center"
-        elif clean in ['/budapest-attractions/budapest-parliament', '/budapest-parliament', 'budapest-parliament']:
-            a['href'] = f"/{lang}/budapest-attractions/budapest-parliament"
+        elif clean in ['/budapest-parliament-tickets', '/budapest-parliament-tickets', 'budapest-parliament-tickets']:
+            a['href'] = f"/{lang}/budapest-parliament-tickets"
         elif clean in ['/budapest-river-cruise-group-booking', 'budapest-river-cruise-group-booking']:
             a['href'] = f"/{lang}/budapest-river-cruise-group-booking"
         elif clean in ['/budapest-tourism-statistics', 'budapest-tourism-statistics']:
             a['href'] = f"/{lang}/budapest-tourism-statistics"
-        elif clean in ['/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest', '/candlelit-dinner-cruise-budapest', 'candlelit-dinner-cruise-budapest']:
-            a['href'] = f"/{lang}/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest"
+        elif clean in ['/candlelit-dinner-cruise-budapest', '/candlelit-dinner-cruise-budapest', 'candlelit-dinner-cruise-budapest']:
+            a['href'] = f"/{lang}/candlelit-dinner-cruise-budapest"
         elif clean.startswith('/'):
             a['href'] = f"/{lang}{clean}"
         else:

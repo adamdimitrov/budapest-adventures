@@ -324,7 +324,7 @@ MORE_H = "További novemberi ötletek"
 MORE = [
     ("Minden esti hajó összehasonlítva", "Tíz esti és éjszakai hajóút egymás mellett, ebből 6-ot kipróbáltam: <a href=\"/hu/legjobb-éjszakai-hajóutak-budapest\">a legjobb éjszakai hajóutak Budapesten</a>."),
     ("Minden termálfürdő összehasonlítva", "Hat fürdő nyitvatartással és árakkal, ebből 4-et kipróbáltam: <a href=\"/hu/legjobb-termalfurdok-budapest\">a legjobb budapesti termálfürdők</a>."),
-    ("A Parlament", "Vezetett túrák egész évben, este pedig ki van világítva az épület: <a href=\"/hu/budapest-attractions/budapest-parlament\">Parlament jegyek és tippek</a>."),
+    ("A Parlament", "Vezetett túrák egész évben, este pedig ki van világítva az épület: <a href=\"/hu/orszaghaz-jegyek\">Parlament jegyek és tippek</a>."),
     ("Múzeumok esős napokra", "Megéri-e a Budapest Card egy múzeumos útra: <a href=\"/hu/budapest-card-megéri-e\">Budapest Card, megéri?</a>"),
     ("Egész éves kedvencek", "A klasszikusok bármelyik hónapra: <a href=\"/best-things-to-do-budapest\">Budapest 10 legjobb látnivalója</a> (angolul)."),
 ]

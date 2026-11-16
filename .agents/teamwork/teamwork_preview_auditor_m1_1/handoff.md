@@ -21,7 +21,7 @@
   - Total lines: 847.
   - JSON parse test: Valid JSON. Top-level keys: `['$schema', 'version', 'cleanUrls', 'trailingSlash', 'headers', 'redirects', 'rewrites']`.
   - Deprecated properties check: `"routes"` and `"builds"` are 100% absent, eliminating Vercel build conflicts.
-  - Rewrites: 10 rules mapping core money hubs (`/`, `/budapest-river-cruises`, `/budapest-dinner-cruises`, `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`, `/legenda-city-cruises`, `/danube-cruise-decision-hub`, `/api/cron`).
+  - Rewrites: 10 rules mapping core money hubs (`/`, `/budapest-river-cruises`, `/budapest-dinner-cruises`, `/candlelit-dinner-cruise-budapest`, `/legenda-city-cruises`, `/danube-cruise-decision-hub`, `/api/cron`).
   - Redirects: 129 rules (1-to-1 localized river and dinner cruise slugs, German legacy URLs, and 25 pruned language catch-alls).
 
 ### Observation 3: `preview_server.py` Authenticity & Route Resolution

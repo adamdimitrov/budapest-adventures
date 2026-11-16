@@ -35,7 +35,7 @@ CORE_HUBS = {
     "/budapest-river-cruises": "river.html",
     "/budapest-dinner-cruises": "dinner.html",
     "/best-dinner-cruises-budapest": "dinner.html",
-    "/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest": "candlelit-dinner-cruise.html",
+    "/candlelit-dinner-cruise-budapest": "candlelit-dinner-cruise.html",
     "/about": "about.html",
 }
 

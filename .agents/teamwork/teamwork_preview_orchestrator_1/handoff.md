@@ -14,7 +14,7 @@
 | **Phase 0** | Survey & Scope Mapping | **DONE** | Full reports from 3 Explorers (`survey_codebase.md`, `survey_seo_anchors.md`, `survey_tracking_i18n.md`), `PROJECT.md` initialized with 26-feature inventory. |
 | **Track B** | E2E Testing Track | **DONE** | `TEST_INFRA.md` published, `tests/test_runner.py` with 280 tests across Tiers 1-4, `TEST_READY.md` published. |
 | **M1** | Staging Isolation & Local Preview Server | **DONE** (Gate: PASS) | Git branch `staging/static-overhaul`, modern `vercel.json` (cleanUrls, redirects, rewrites, headers), `preview_server.py` with bounds checking (`is_relative_to`), dotfile suppression, 1-hop redirect evaluation order. All 48 self-checks, 60 test_runner tests, and 19 adversarial tests pass 100%. Live DNS `35.187.176.9` untouched. |
-| **M2** | Core Money Hubs Pipeline | **READY** | Source files mapped: `river-ecom.html` -> `/`, `dinner.html` -> `/budapest-dinner-cruises`, `candlelit-dinner-cruise.html` -> `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`, `legenda-city-cruises.html` -> `/legenda-city-cruises`, `danube_cruise_decision_hub.html`. |
+| **M2** | Core Money Hubs Pipeline | **READY** | Source files mapped: `river-ecom.html` -> `/`, `dinner.html` -> `/budapest-dinner-cruises`, `candlelit-dinner-cruise.html` -> `/candlelit-dinner-cruise-budapest`, `legenda-city-cruises.html` -> `/legenda-city-cruises`, `danube_cruise_decision_hub.html`. |
 | **M3** | HCU, Anchor Pollution & Canonicals | **PLANNED** | Ready to follow M2. Clean digits-first IDs, strip `#` fragments, sitemap generation. |
 | **M4** | Tracking Safeguards & VIP Attribution | **PLANNED** | Fix Legenda typo `38885` -> `38585`, Decision Hub tracking injection, `bpa-tracking.js`, Meta Pixel `1355732169631751`. |
 | **M5** | i18n Pruning & 301 Redirect Architecture | **PLANNED** | 25 zombie languages pruned, complete 1-to-1 redirects in `vercel.json`. |
@@ -47,7 +47,7 @@ Your immediate focus is **Milestone 2 (Core Money Hubs Pipeline)**:
    - Rebuild/place the 5 core money hubs:
      - Replace obsolete Prosecco mockup in root `index.html` with clean Danube River Cruises Main Hub (`river-ecom.html`).
      - Map/deploy Budapest Dinner Cruises Hub (`dinner.html`) to `/budapest-dinner-cruises` and `/best-dinner-cruises-budapest`.
-     - Assemble and deploy dedicated static Candlelit Dinner Cruise Tested Review page at `candlelit-dinner-cruise.html` (mapped to `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`).
+     - Assemble and deploy dedicated static Candlelit Dinner Cruise Tested Review page at `candlelit-dinner-cruise.html` (mapped to `/candlelit-dinner-cruise-budapest`).
      - Verify Legenda Terminal (`legenda-city-cruises.html`).
      - Verify Danube Cruise Decision Hub (`danube_cruise_decision_hub.html`).
    - Run Gate verification for M2: Worker -> Reviewers (2) -> Challengers (2) -> Forensic Auditor.

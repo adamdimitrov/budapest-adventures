@@ -324,7 +324,7 @@ MORE_H = "More November Ideas"
 MORE = [
     ("Every night cruise compared", "Ten evening and night cruises side by side, 6 tested: <a href=\"/best-night-cruises-budapest\">best night cruises in Budapest</a>."),
     ("Every thermal bath compared", "Six baths with hours and prices, 4 tested: <a href=\"/thermal-baths-budapest\">best thermal baths in Budapest</a>."),
-    ("The Parliament", "Guided tours run all year, and the building is lit at night: <a href=\"/budapest-parliament\">Budapest Parliament tickets and tips</a>."),
+    ("The Parliament", "Guided tours run all year, and the building is lit at night: <a href=\"/budapest-parliament-tickets\">Budapest Parliament tickets and tips</a>."),
     ("Museums on rainy days", "Whether the Budapest Card pays off on a museum-heavy trip: <a href=\"/budapest-card-is-it-worth-it\">Budapest Card, is it worth it?</a>"),
     ("Year-round favourites", "The classics for any month: <a href=\"/best-things-to-do-budapest\">best things to do in Budapest</a>."),
 ]

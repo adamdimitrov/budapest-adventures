@@ -24,7 +24,7 @@
    - Schema conformance: File header points to modern `$schema: "https://openapi.vercel.sh/vercel.json"`.
    - Legacy property `"routes"` is completely eliminated.
    - Core settings: `"cleanUrls": true`, `"trailingSlash": false`.
-   - Rewrites: 10 rules mapping `/`, `/budapest-river-cruises`, `/best-budapest-river-cruises`, `/budapest-dinner-cruises`, `/best-dinner-cruises-budapest`, `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`, `/legenda-city-cruises`, `/danube-cruise-decision-hub`, `/danube-river-cruise-hub`, and `/api/cron`.
+   - Rewrites: 10 rules mapping `/`, `/budapest-river-cruises`, `/best-budapest-river-cruises`, `/budapest-dinner-cruises`, `/best-dinner-cruises-budapest`, `/candlelit-dinner-cruise-budapest`, `/legenda-city-cruises`, `/danube-cruise-decision-hub`, `/danube-river-cruise-hub`, and `/api/cron`.
    - Redirects: 129 rules configuring 301/308 redirects for 25 pruned Linguana zombie languages, legacy German URLs, and catch-alls.
    - Security headers: Global `/(.*)` rule injecting `X-Content-Type-Options: nosniff`, `X-Frame-Options: SAMEORIGIN`, `X-XSS-Protection: 1; mode=block`, and `Referrer-Policy: strict-origin-when-cross-origin`.
 

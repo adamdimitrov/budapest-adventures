@@ -498,7 +498,7 @@ def get_page_info(rel_path):
         if name in ['thermal-baths-budapest']: return 'en', 'baths'
         if name in ['budapest-card-is-it-worth-it']: return 'en', 'card'
         if name in ['budapest-airport-to-city-center']: return 'en', 'airport'
-        if name in ['budapest-parliament']: return 'en', 'parliament'
+        if name in ['budapest-parliament-tickets']: return 'en', 'parliament'
         if name in ['budapest-river-cruise-group-booking']: return 'en', 'group'
         if name in ['budapest-tourism-statistics']: return 'en', 'tourism'
         if name in ['budapest-travel-guide']: return 'en', 'travel'
@@ -512,7 +512,7 @@ def get_target_url(target_lang, page_key):
         if page_key == 'home': return '/'
         if page_key == 'river': return '/best-budapest-river-cruises'
         if page_key == 'dinner': return '/best-dinner-cruises-budapest'
-        if page_key == 'candlelit': return '/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest'
+        if page_key == 'candlelit': return '/candlelit-dinner-cruise-budapest'
         if page_key == 'night': return '/best-night-cruises-budapest'
         if page_key == 'prosecco': return '/unlimited-prosecco-cruises-budapest'
         if page_key == 'private': return '/best-private-boat-tours-budapest'
@@ -521,7 +521,7 @@ def get_target_url(target_lang, page_key):
         if page_key == 'baths': return '/thermal-baths-budapest'
         if page_key == 'card': return '/budapest-card-is-it-worth-it'
         if page_key == 'airport': return '/budapest-airport-to-city-center'
-        if page_key == 'parliament': return '/budapest-parliament'
+        if page_key == 'parliament': return '/budapest-parliament-tickets'
         if page_key == 'group': return '/budapest-river-cruise-group-booking'
         if page_key == 'tourism': return '/budapest-tourism-statistics'
         if page_key == 'travel': return '/budapest-travel-guide'
@@ -532,7 +532,7 @@ def get_target_url(target_lang, page_key):
         if page_key == 'home': return f'/{target_lang}'
         if page_key == 'river': return f'/{target_lang}/{SLUG_MAP[target_lang]["river"]}'
         if page_key == 'dinner': return f'/{target_lang}/{SLUG_MAP[target_lang]["dinner"]}'
-        if page_key == 'candlelit': return f'/{target_lang}/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest'
+        if page_key == 'candlelit': return f'/{target_lang}/candlelit-dinner-cruise-budapest'
         if page_key == 'night': return f'/{target_lang}/best-night-cruises-budapest'
         if page_key == 'prosecco': return f'/{target_lang}/unlimited-prosecco-cruises-budapest'
         if page_key == 'private': return f'/{target_lang}/best-private-boat-tours-budapest'
@@ -541,7 +541,7 @@ def get_target_url(target_lang, page_key):
         if page_key == 'baths': return f'/{target_lang}/thermal-baths-budapest'
         if page_key == 'card': return f'/{target_lang}/budapest-card-is-it-worth-it'
         if page_key == 'airport': return f'/{target_lang}/budapest-airport-to-city-center'
-        if page_key == 'parliament': return f'/{target_lang}/budapest-attractions/budapest-parliament'
+        if page_key == 'parliament': return f'/{target_lang}/budapest-parliament-tickets'
         if page_key == 'group': return f'/{target_lang}/budapest-river-cruise-group-booking'
         if page_key == 'tourism': return f'/{target_lang}/budapest-tourism-statistics'
         if page_key == 'travel': return f'/{target_lang}/budapest-travel-guide'
@@ -814,12 +814,12 @@ def main():
         'best-dinner-cruises-budapest.html', 'budapest-dinner-cruises.html',
         'best-budapest-river-cruises/index.html', 'budapest-river-cruises/index.html',
         'best-dinner-cruises-budapest/index.html', 'budapest-dinner-cruises/index.html',
-        'best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest/index.html',
+        'candlelit-dinner-cruise-budapest/index.html',
         'best-night-cruises-budapest.html', 'unlimited-prosecco-cruises-budapest.html',
         'best-private-boat-tours-budapest.html', 'best-walking-tours-budapest.html',
         'best-hostels-budapest.html', 'thermal-baths-budapest.html',
         'budapest-card-is-it-worth-it.html', 'budapest-airport-to-city-center.html',
-        'budapest-parliament.html', 'budapest-river-cruise-group-booking.html',
+        'budapest-parliament-tickets.html', 'budapest-river-cruise-group-booking.html',
         'budapest-tourism-statistics.html', 'budapest-travel-guide.html',
         'about.html', 'contact.html', 'things-to-do.html', 'legenda-city-cruises.html'
     ]

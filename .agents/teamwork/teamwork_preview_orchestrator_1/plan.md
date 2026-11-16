@@ -6,7 +6,7 @@ Establish a clean staging-first static architecture for `budapestadventures.com`
 ## Phase 0: Survey & Scope Mapping
 - Spawn 3 parallel Explorers:
   - Explorer 1 (Survey: Codebase & Git Architecture): Branch state (`staging/static-overhaul`), repo file tree, existing static/HTML files, Vercel config, build/sync scripts (`tourcms-sync.js`, `test_tourcms.py`, etc.).
-  - Explorer 2 (Survey: Route & SEO Anchor Inventory): Money hubs (`/`, `/budapest-river-cruises`, `/budapest-dinner-cruises`, `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`, `/legenda-city-cruises`, `danube_cruise_decision_hub.html`), Webflow `#` anchor fragments, TOC links, canonical tags, sitemap structure.
+  - Explorer 2 (Survey: Route & SEO Anchor Inventory): Money hubs (`/`, `/budapest-river-cruises`, `/budapest-dinner-cruises`, `/candlelit-dinner-cruise-budapest`, `/legenda-city-cruises`, `danube_cruise_decision_hub.html`), Webflow `#` anchor fragments, TOC links, canonical tags, sitemap structure.
   - Explorer 3 (Survey: Tracking & i18n Redirects): Outbound booking links (Legenda, TourCMS, Tiqets partner `budapestadventures`), query string preservation (`gclid`, `fbclid`, UTMs), Meta Pixel InitiateCheckout triggers, Linguana routes vs `vercel.json` 301 redirects.
 - Synthesize findings into `PROJECT.md` (Feature Inventory, Architecture, Interface Contracts, Milestones).
 

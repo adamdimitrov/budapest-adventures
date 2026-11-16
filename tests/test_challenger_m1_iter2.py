@@ -282,7 +282,7 @@ def main():
         ("/best-budapest-river-cruises", 200, "Best River Cruises Hub"),
         ("/budapest-dinner-cruises", 200, "Dinner Cruises Rewrite"),
         ("/best-dinner-cruises-budapest", 200, "Best Dinner Cruises Hub"),
-        ("/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest", 200, "Candlelit Dinner Review"),
+        ("/candlelit-dinner-cruise-budapest", 200, "Candlelit Dinner Review"),
         ("/about", 200, "About & Methodology"),
     ]
     for path, expected_status, label in hub_rewrites:

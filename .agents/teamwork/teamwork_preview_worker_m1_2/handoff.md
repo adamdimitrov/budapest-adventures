@@ -162,7 +162,7 @@
      [✓] Rewrite '/best-budapest-river-cruises' -> '/index.html'
      [✓] Rewrite '/budapest-dinner-cruises' -> '/dinner.html'
      [✓] Rewrite '/best-dinner-cruises-budapest' -> '/dinner.html'
-     [✓] Rewrite '/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest' -> '/candlelit-dinner-cruise.html'
+     [✓] Rewrite '/candlelit-dinner-cruise-budapest' -> '/candlelit-dinner-cruise.html'
      [✓] Rewrite '/legenda-city-cruises' -> '/legenda-city-cruises.html'
      [✓] Rewrite '/danube-cruise-decision-hub' -> '/danube_cruise_decision_hub.html'
      [✓] Rewrite '/danube-river-cruise-hub' -> '/danube_cruise_decision_hub.html'

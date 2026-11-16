@@ -10,10 +10,10 @@ Execute Milestone 2: Rebuild and deploy all 5 core revenue hubs locally for stag
    - Ensure `/` and `/budapest-river-cruises` both resolve to this clean hub.
 2. **Budapest Dinner Cruises Hub (`/budapest-dinner-cruises`)**:
    - Ensure `dinner.html` is verified and routed from `/budapest-dinner-cruises` and `/best-dinner-cruises-budapest`.
-3. **Candlelit Dinner Cruise Tested Review (`/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`)**:
+3. **Candlelit Dinner Cruise Tested Review (`/candlelit-dinner-cruise-budapest`)**:
    - Assemble a dedicated static HTML file `candlelit-dinner-cruise.html`.
    - Extract tested review content, salon photo, review scores, food/menu details, and booking CTA from `dinner.html`, `article_embed_preview.html`, and components.
-   - Verify route `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest` rewrites to `candlelit-dinner-cruise.html`.
+   - Verify route `/candlelit-dinner-cruise-budapest` rewrites to `candlelit-dinner-cruise.html`.
 4. **Legenda City Cruises Dedicated Terminal (`/legenda-city-cruises`)**:
    - Ensure `legenda-city-cruises.html` is clean and correctly routed.
 5. **Danube Cruise Decision Hub & Filter Engines (`danube_cruise_decision_hub.html`)**:
@@ -65,7 +65,7 @@ Mission:
 Rebuild and deploy the 5 core money hubs on branch `staging/static-overhaul`:
 1. Danube River Cruises Main Hub (`/` and `/budapest-river-cruises`): promote clean `river-ecom.html` to root `index.html` (retiring obsolete Prosecco mockup).
 2. Budapest Dinner Cruises Hub (`/budapest-dinner-cruises`): ensure `dinner.html` is verified and routed.
-3. Candlelit Dinner Cruise Tested Review (`/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`): build dedicated static page `candlelit-dinner-cruise.html` with complete tested review content, salon photo, scores, and booking CTA.
+3. Candlelit Dinner Cruise Tested Review (`/candlelit-dinner-cruise-budapest`): build dedicated static page `candlelit-dinner-cruise.html` with complete tested review content, salon photo, scores, and booking CTA.
 4. Legenda Dedicated Terminal (`legenda-city-cruises.html`): verify clean markup and routing.
 5. Danube Cruise Decision Hub (`danube_cruise_decision_hub.html`): verify clean comparison hub and routing.
 

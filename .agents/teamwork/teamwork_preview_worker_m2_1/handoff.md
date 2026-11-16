@@ -48,7 +48,7 @@
      - Author attribution to Adam Dimitrov (Budapest Adventures editor)
      - Tested badge & 4.8/5.0 review score summary across 3,200+ ratings
      - 4-course gourmet menu details (appetizers, goulash soup, duck breast/trout/beef tenderloin, Somlói dessert)
-     - Clean self-referencing canonical tag `<link rel="canonical" href="https://www.budapestadventures.com/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest">`
+     - Clean self-referencing canonical tag `<link rel="canonical" href="https://www.budapestadventures.com/candlelit-dinner-cruise-budapest">`
      - Clean JSON-LD Review schema with `ratingValue: 4.8`
      - VIP booking CTAs pointing to `https://legenda.hu/en/ticket-purchase?partner=38585`
      - Integrated `tourcms-sync.js` and Meta Pixel `1355732169631751`.
@@ -73,7 +73,7 @@
      - `/` -> `/index.html`
      - `/budapest-river-cruises` -> `/index.html`
      - `/budapest-dinner-cruises` -> `/dinner.html`
-     - `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest` -> `/candlelit-dinner-cruise.html`
+     - `/candlelit-dinner-cruise-budapest` -> `/candlelit-dinner-cruise.html`
      - `/legenda-city-cruises` -> `/legenda-city-cruises.html`
      - `/danube-cruise-decision-hub` -> `/danube_cruise_decision_hub.html`
    - Tested live HTTP server responses across all 6 routes; each returned `HTTP 200` with expected authentic content.
@@ -150,7 +150,7 @@ To independently verify the implementation:
        ('/', 200, 'River Cruises'),
        ('/budapest-river-cruises', 200, 'River Cruises'),
        ('/budapest-dinner-cruises', 200, 'Dinner Cruises'),
-       ('/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest', 200, 'Legenda Romantic Candlelit Dinner'),
+       ('/candlelit-dinner-cruise-budapest', 200, 'Legenda Romantic Candlelit Dinner'),
        ('/legenda-city-cruises', 200, 'Legenda City Cruises'),
        ('/danube-cruise-decision-hub', 200, 'Danube'),
    ]

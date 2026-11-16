@@ -56,7 +56,7 @@ The test suite is structured into four distinct, complementary tiers:
 - **Goal**: Full isolation coverage for all 26 inventoried features. Every feature has at least 5 atomic test cases asserting its discrete requirements.
 - **Scope**:
   - F1–F3: Git branch isolation, preview server functionality, modern `vercel.json` config.
-  - F4–F8: 5 Core money hubs (`/`, `/budapest-dinner-cruises`, `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`, `/legenda-city-cruises`, `danube_cruise_decision_hub.html`).
+  - F4–F8: 5 Core money hubs (`/`, `/budapest-dinner-cruises`, `/candlelit-dinner-cruise-budapest`, `/legenda-city-cruises`, `danube_cruise_decision_hub.html`).
   - F9–F14: `#` TOC fragment removal, semantic HTML5 IDs, unicode cleanup, duplicate ID elimination, clean canonicals, approved multilingual sitemap.
   - F15–F20: Legenda VIP partner ID `38585`, Decision Hub tracking, UTM persistence, dual cookie/localStorage sync, Meta Pixel `1355732169631751` net commission value, Tiqets partner preservation.
   - F21–F24: Linguana 25 zombie language pruning, 1-to-1 localized 301 redirects, catch-all redirects, zero broken links/loops.
@@ -87,7 +87,7 @@ The test suite is structured into four distinct, complementary tiers:
   - **Scenario 1 (The Google Ads Direct Booker)**:
     Visitor clicks Google Search ad for "budapest boat tour" with `?gclid=Cj0KCQ...&utm_source=google&utm_medium=cpc&utm_campaign=river_search_us`. Lands on Danube River Cruises Hub (`/`). Reads boat comparison table. Selects Legenda 70-minute sightseeing cruise. Clicks direct checkout button. Test asserts: outbound URL is `https://legenda.hu/...partner=38585...`, includes `subid` with encoded `gclid`, and Meta Pixel `InitiateCheckout` is triggered.
   - **Scenario 2 (The Meta Retargeting Luxury Diner)**:
-    Visitor clicks Instagram Story ad with `?fbclid=IwAR2...&utm_source=instagram&utm_medium=paid_social`. Lands on Candlelit Dinner Cruise Review (`/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`). Reads verified review and menu analysis. Clicks TourCMS booking link. Test asserts: outbound TourCMS link contains `agent_ref=38585`, `tc_fbclid` is retained, and Meta Pixel `InitiateCheckout` value corresponds to 25% of ticket price.
+    Visitor clicks Instagram Story ad with `?fbclid=IwAR2...&utm_source=instagram&utm_medium=paid_social`. Lands on Candlelit Dinner Cruise Review (`/candlelit-dinner-cruise-budapest`). Reads verified review and menu analysis. Clicks TourCMS booking link. Test asserts: outbound TourCMS link contains `agent_ref=38585`, `tc_fbclid` is retained, and Meta Pixel `InitiateCheckout` value corresponds to 25% of ticket price.
   - **Scenario 3 (The International Organic Visitor from Pruned Language)**:
     German traveler clicks an old indexed Google result for `/de/donau-schifffahrt-budapest` with `?ref=travelblog`. Server returns HTTP 301 redirecting to clean canonical `/budapest-river-cruises`. Page renders valid canonical `<link rel="canonical" href="https://www.budapestadventures.com/budapest-river-cruises">`. German traveler navigates to Legenda terminal (`/legenda-city-cruises`). All tracking and partner codes remain intact.
   - **Scenario 4 (The Decision Engine Power User)**:

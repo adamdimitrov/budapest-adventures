@@ -100,7 +100,7 @@
 ## 3. Caveats
 
 1. **Local `index.html` Identity**: The local `index.html` file is currently a 19KB Prosecco cruise mockup, NOT the root homepage. When building the static overhaul, the actual homepage must be aligned so Vercel does not publish the wrong page to root `/`.
-2. **Candlelit Review Page Availability**: The full HTML for `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest` exists on live production (87KB) but has not yet been checked into the root of this local repository. The live HTML was inspected over the network.
+2. **Candlelit Review Page Availability**: The full HTML for `/candlelit-dinner-cruise-budapest` exists on live production (87KB) but has not yet been checked into the root of this local repository. The live HTML was inspected over the network.
 3. **No Code Written**: In accordance with the Explorer read-only mandate, no source code, templates, or redirects were modified during this investigation.
 
 ---
