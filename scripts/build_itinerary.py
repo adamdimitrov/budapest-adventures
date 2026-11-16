@@ -15,6 +15,7 @@ product on another BPA page (PRODUCTS[*]["src"]).
     python3 scripts/sync_layout.py
 """
 import hashlib
+from legenda_links import localize as localize_legenda
 import html as H
 import importlib
 import json
@@ -494,6 +495,7 @@ def build(lang):
     for bad in ("13 Day Trips", "Hévíz", "Blueridge", "Cityrama"):
         hits = [x for x in re.findall(r".{0,60}%s.{0,60}" % re.escape(bad), body_only) if "best-day-trips-from-budapest" not in x]
         assert not hits, (bad, hits[:3])
+    s = localize_legenda(s, lang)
     for href in re.findall(r'href="(https://(?:www\.getyourguide|budapestrivercruise|legenda)[^"]+)"', s):
         if "getyourguide" in href:
             assert "mkt_cmp=true" in href and "partner_id=YS414AJ" in href, href

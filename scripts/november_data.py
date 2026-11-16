@@ -37,12 +37,12 @@ No em dashes in this file (house rule).
 GYG = ("https://www.getyourguide.com/budapest-l29/{slug}/?partner_id=YS414AJ&amp;utm_medium=online_publisher"
        "&amp;cmp=november-{cmp}&amp;mkt_cmp=true")
 SILVER = "https://budapestrivercruise.eu/product/{slug}/?code=bpadventures"
-LEGENDA_DL = "https://legenda.hu/en/danube-legend?partner=38585"
-LEGENDA_DINNER = "https://legenda.hu/en/candlelit-dinner-cruise?partner=38585"
+LEGENDA_DL = "https://legenda.hu/en/ticket-purchase?partner=38585"
+LEGENDA_DINNER = "https://legenda.hu/en/ticket-purchase?partner=38585"
 
 # (site, score, count, link-or-None). Links only when the card books through GYG.
 PRODUCTS = [
-    dict(key="legenda-evening", src=("best-night-cruises-budapest.html", "legenda.hu/en/danube-legend"), n_photos=8,
+    dict(key="legenda-evening", src=("best-night-cruises-budapest.html", "Danube Legend Evening Cruise"), n_photos=8,
          href=LEGENDA_DL, via="direct", op="Legenda City Cruises", cats="river dark u40",
          tested=True, price=25,
          ratings=[("gyg", 4.5, 10999, None), ("viator", 4.3, 4255, None), ("tripadvisor", 4.3, 2294, None)]),
@@ -50,7 +50,7 @@ PRODUCTS = [
          href=GYG.format(slug="szechenyi-spa-full-day-entrance-pass-t4139", cmp="szechenyi"), via="gyg",
          op="Széchenyi Bath", cats="bath u40", tested=True, price=39,
          ratings=[("gyg", 4.28, 29228, "self"), ("tiqets", 4.4, 1200, None), ("viator", 3.8, 2300, None)]),
-    dict(key="legenda-dinner", src=("best-dinner-cruises-budapest.html", "candlelit-dinner-cruise?partner"), n_photos=10,
+    dict(key="legenda-dinner", src=("best-dinner-cruises-budapest.html", "4-Course Romantic Candlelit Dinner Cruise"), n_photos=10,
          href=LEGENDA_DINNER, via="direct", op="Legenda City Cruises", cats="river dark food",
          tested=True, price=110,
          ratings=[("gyg", 4.712, 2432, None), ("viator", 4.7, 2056, None), ("tripadvisor", 4.6, 1005, None)]),

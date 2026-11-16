@@ -4,7 +4,7 @@
  *
  * Features covered:
  * - Feature 15: Authoritative Legenda VIP Partner ID (partner=38585; replaces legacy 38885)
- *   Standard link: https://legenda.hu/en?partner=38585
+ *   Standard link: https://legenda.hu/en/ticket-purchase?partner=38585
  * - Feature 16: Decision Hub & Multi-Operator Outbound Tracking (Legenda, Tiqets, Silverline)
  * - Feature 17: Inbound UTM & Click ID Capture (gclid, fbclid, _fbp, wbraid, gbraid, utm_*)
  * - Feature 18: Bidirectional Cookie + localStorage Persistence (bpa_attribution, 30-day TTL, Safari ITP/Private mode safe)
@@ -282,7 +282,7 @@
       var host = url.hostname.toLowerCase();
       var subId = buildSubId(attr);
 
-      // 1. Legenda City Cruises (Authoritative VIP Partner 38585: https://legenda.hu/en?partner=38585)
+      // 1. Legenda City Cruises (Authoritative VIP Partner 38585: https://legenda.hu/en/ticket-purchase?partner=38585)
       if (host.indexOf('legenda.hu') !== -1) {
         var existingPartner = url.searchParams.get('partner');
         if (!existingPartner || existingPartner === TYPO_LEGENDA_PARTNER || existingPartner !== VIP_LEGENDA_PARTNER) {

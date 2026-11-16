@@ -31,7 +31,7 @@ def gyg(path, cmp):
     return f"https://www.getyourguide.com/budapest-l29/{path}/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=things-to-do-deck-{cmp}"
 
 
-LEGENDA = "https://legenda.hu/en?partner=38585"
+LEGENDA = "https://legenda.hu/en/ticket-purchase?partner=38585"
 ROWS = [
     dict(name="Danube River Cruise", sid="section-1-go-on-a-river-cruise-on-the-danube",
          img="63b8588b53a4e063ae3b41f8_Budapest-river-cruises-legenda-4.webp",

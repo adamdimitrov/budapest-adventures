@@ -7,7 +7,7 @@ cruises = [
         "badge_cls": "bpa-gold",
         "kicker": "Legenda City Cruises • 📍 Dock 7 (Vigadó tér)",
         "title": "Budapest Day or Night River Cruise With Audio Guide in 30 Languages & Welcome Drink",
-        "url": "https://legenda.hu/en?partner=38585",
+        "url": "https://legenda.hu/en/ticket-purchase?partner=38585",
         "score": "4.4 / 5.0",
         "stars": "★★★★☆",
         "reviews": "(12,810+ Reviews)",
