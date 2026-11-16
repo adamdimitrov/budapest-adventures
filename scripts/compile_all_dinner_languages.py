@@ -69,7 +69,7 @@ def compile_all_dinner():
             c = f.read()
         fstrips = c.count('class="ltt-filmstrip-wrap"')
         bentos = c.count('class="ltt-bento-group"')
-        partner = 'legenda.hu/en?partner=38585' in c
+        partner = 'legenda.hu/' in c and 'partner=38585' in c
         if fstrips >= 8 and bentos >= 20 and partner:
             success += 1
             print(f"  [PASS] {lang.upper()} ({slug}): {fstrips} filmstrips, {bentos} bentos, partner=38585 OK")

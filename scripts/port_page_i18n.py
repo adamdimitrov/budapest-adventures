@@ -30,6 +30,9 @@ import urllib.parse
 
 from bs4 import BeautifulSoup, NavigableString, Comment
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from legenda_links import localize as localize_legenda
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://www.budapestadventures.com"
 MODEL = "claude-opus-5-5"
@@ -410,7 +413,7 @@ def port(en_file, lang, target_file, links, dry_run):
         loc = links.get(path, {}).get(lang)
         if loc:
             a["href"] = loc + (("#" + frag) if frag else "")
-    out = str(soup)
+    out = localize_legenda(str(soup), lang)  # Legenda CTAs -> ticket page in this language
     with open(os.path.join(ROOT, target_file), "w", encoding="utf-8") as fh:
         fh.write(out)
     return len(strings), bad

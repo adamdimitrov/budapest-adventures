@@ -26,7 +26,7 @@ GYG = ("https://www.getyourguide.com/budapest-l29/{slug}/?partner_id=YS414AJ&amp
        "&amp;cmp=itinerary-{cmp}&amp;mkt_cmp=true")
 GYG_OTHER = ("https://www.getyourguide.com/{loc}/{slug}/?partner_id=YS414AJ&amp;utm_medium=online_publisher"
              "&amp;cmp=itinerary-{cmp}&amp;mkt_cmp=true")
-LEGENDA = "https://legenda.hu/en?partner=38585"
+LEGENDA = "https://legenda.hu/en/ticket-purchase?partner=38585"
 
 SITE_NAME = {"gyg": "GetYourGuide", "viator": "Viator", "tiqets": "Tiqets", "tripadvisor": "Tripadvisor"}
 
