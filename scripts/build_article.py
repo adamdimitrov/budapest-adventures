@@ -83,7 +83,7 @@ def rating_html(it, gyg_icon):
     return (f'<div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum">'
             f'<span class="bpa-stars" style="--r:{it["rating"]:.2f}" aria-hidden="true"></span><b class="bpa-rate-score">{it["rating"]:.1f}</b>'
             f'<span class="bpa-rate-meta">{compact(it["reviews"])} reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary>'
-            f'<div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="{esc_attr(it["link"])}" {REL}>'
+            f'<div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="{esc_attr(it["link"])}" rel="nofollow sponsored noopener" target="_blank">'
             f'<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="{gyg_icon}"/><span class="bpa-rev-site">GetYourGuide</span>'
             f'<span class="bpa-rev-score">{it["rating"]:.1f}</span><span class="bpa-rev-count">({compact(it["reviews"])})</span>'
             f'<span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div>')
@@ -168,7 +168,7 @@ def details_html(n, it, gyg_icon):
 </div>
 <h3 class="bpa-details-title">{E(it["title"])}</h3>
 <div class="bpa-reviews-line">
-{rating_html(it, gyg_icon) if not it.get("reviews") else ""}<div class="bpa-summary-reviews"{' hidden=""' if not it.get("reviews") else ""}><div class="div-block-53"><a class="bpa-rev-badge" href="{esc_attr(it["link"])}" onclick="event.stopPropagation()" {REL}><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="{gyg_icon}"/><span class="bpa-rev-score">{(it.get("rating") or 0):.1f}</span><span class="bpa-rev-count">({compact(it.get("reviews") or 0)})</span></a></div></div>
+{rating_html(it, gyg_icon) if not it.get("reviews") else ""}<div class="bpa-summary-reviews"{' hidden=""' if not it.get("reviews") else ""}><div class="div-block-53"><a class="bpa-rev-badge" href="{esc_attr(it["link"])}" onclick="event.stopPropagation()" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="{gyg_icon}"/><span class="bpa-rev-score">{(it.get("rating") or 0):.1f}</span><span class="bpa-rev-count">({compact(it.get("reviews") or 0)})</span></a></div></div>
 </div>
 </div>
 <div class="bpa-details-right">
