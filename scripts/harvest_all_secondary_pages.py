@@ -32,7 +32,7 @@ PAGES = {
     'parliament': 'budapest-attractions/budapest-parliament',
     'group_booking': 'budapest-river-cruise-group-booking',
     'tourism_statistics': 'budapest-tourism-statistics',
-    'candlelit_dinner': 'best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest'
+    'candlelit_dinner': 'candlelit-dinner-cruise-budapest'
 }
 
 def fetch_page(lang, key, slug):

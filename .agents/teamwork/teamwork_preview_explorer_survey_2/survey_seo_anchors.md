@@ -29,7 +29,7 @@ A comprehensive forensic audit of the Budapest Adventures codebase, live product
 |---|---|---|---|---|---|
 | **Hub 1** | **Danube River Cruises Main Hub** | `/` (200, 130KB)<br>`/best-budapest-river-cruises` (200, 458KB)<br>`/budapest-river-cruises` (**404 Not Found**) | `river_desktop_wide_preview.html`<br>`river.html`<br>`river-ecom.html` | `https://www.budapestadventures.com/best-budapest-river-cruises` | Self-referencing clean URL (`/` for homepage, `/best-budapest-river-cruises` for review pillar) |
 | **Hub 2** | **Budapest Dinner Cruises Hub** | `/budapest-dinner-cruises` (200, 77KB)<br>`/best-dinner-cruises-budapest` (200, 222KB) | `dinner_desktop_wide_preview.html`<br>`dinner.html` | `https://www.budapestadventures.com/best-dinner-cruises-budapest` | Consolidate or self-reference clean target `/budapest-dinner-cruises` |
-| **Hub 3** | **Candlelit Dinner Cruise Review** | `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest` (200, 87KB) | Missing locally! Only `legenda-candlelit-dinner.jpg` exists | `https://www.budapestadventures.com/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest` | `https://www.budapestadventures.com/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest` |
+| **Hub 3** | **Candlelit Dinner Cruise Review** | `/candlelit-dinner-cruise-budapest` (200, 87KB) | Missing locally! Only `legenda-candlelit-dinner.jpg` exists | `https://www.budapestadventures.com/candlelit-dinner-cruise-budapest` | `https://www.budapestadventures.com/candlelit-dinner-cruise-budapest` |
 | **Hub 4** | **Legenda City Cruises Terminal** | `/legenda-city-cruises` (**404 Not Found**)<br>`/legenda` (200, "Claude Code Test") | `legenda-city-cruises.html`<br>`legenda.html` | **NONE** (Tag is completely missing) | `https://www.budapestadventures.com/legenda-city-cruises` |
 | **Hub 5** | **Danube Cruise Decision Hub** | Local staging file only | `danube_cruise_decision_hub.html` | `https://www.budapestadventures.com/danube-river-cruise-hub` | `https://www.budapestadventures.com/danube-river-cruise-hub` |
 
@@ -200,7 +200,7 @@ Files missing canonical tags: 31
 2.  https://www.budapestadventures.com/about
 3.  https://www.budapestadventures.com/best-budapest-river-cruises
 4.  https://www.budapestadventures.com/best-dinner-cruises-budapest
-5.  https://www.budapestadventures.com/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest
+5.  https://www.budapestadventures.com/candlelit-dinner-cruise-budapest
 6.  https://www.budapestadventures.com/best-hostels-budapest
 7.  https://www.budapestadventures.com/best-hostels-budapest/adagio-basilica-hostel-budapest-review
 8.  https://www.budapestadventures.com/best-hostels-budapest/ao-city-hostel-budapest-review

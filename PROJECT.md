@@ -11,7 +11,7 @@
 - HTML Money Hubs:
   - `index.html` (Danube River Cruises Main Hub `/`)
   - `dinner.html` (Budapest Dinner Cruises Hub `/budapest-dinner-cruises`)
-  - `candlelit-dinner-cruise.html` (Candlelit Dinner Cruise Review `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`)
+  - `candlelit-dinner-cruise.html` (Candlelit Dinner Cruise Review `/candlelit-dinner-cruise-budapest`)
   - `legenda-city-cruises.html` (Legenda Dedicated Terminal `/legenda-city-cruises`)
   - `danube_cruise_decision_hub.html` (Interactive Comparison & Filter Engine `/danube-cruise-decision-hub`)
   - `about.html` (About Us & Editorial Credentials `/about`)
@@ -58,7 +58,7 @@
 | # | Name | Scope | Dependencies | Status |
 |---|------|-------|-------------|--------|
 | M1 | Staging Isolation & Local Preview Server | Branch `staging/static-overhaul`, modern `vercel.json` base, `preview_server.py` | none | DONE |
-| M2 | Core Money Hubs Pipeline | Rebuild 5 core hubs (`/`, `/budapest-dinner-cruises`, `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest`, `/legenda-city-cruises`, `danube_cruise_decision_hub.html`) | M1 | DONE |
+| M2 | Core Money Hubs Pipeline | Rebuild 5 core hubs (`/`, `/budapest-dinner-cruises`, `/candlelit-dinner-cruise-budapest`, `/legenda-city-cruises`, `danube_cruise_decision_hub.html`) | M1 | DONE |
 | M3 | HCU, Anchor Pollution & Canonicals | Strip `#` TOC fragments, clean semantic HTML5 IDs, fix ghost links, canonical tags with 0 `#`, clean `sitemap.xml` | M2 | DONE |
 | M4 | Tracking Safeguards & VIP Attribution | Fix Legenda partner ID (`38585`), plug Decision Hub bleed, `bpa-tracking.js` (UTM/click ID persistence), Meta Pixel `1355732169631751` | M2 | DONE |
 | M5 | i18n Pruning & 301 Redirect Architecture | Prune 25 zombie languages, complete 1-to-1 301 redirects in `vercel.json`, catch-all redirects, zero 404 traps | M1, M2, M3 | DONE |
@@ -75,7 +75,7 @@
   - `/budapest-river-cruises` -> `/index.html`
   - `/budapest-dinner-cruises` -> `/dinner.html`
   - `/best-dinner-cruises-budapest` -> `/dinner.html`
-  - `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest` -> `/candlelit-dinner-cruise.html`
+  - `/candlelit-dinner-cruise-budapest` -> `/candlelit-dinner-cruise.html`
   - `/legenda-city-cruises` -> `/legenda-city-cruises.html`
   - `/danube-cruise-decision-hub` -> `/danube_cruise_decision_hub.html`
   - `/about` -> `/about.html`

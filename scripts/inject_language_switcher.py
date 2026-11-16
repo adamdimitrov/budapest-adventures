@@ -512,7 +512,7 @@ def get_target_url(target_lang, page_key):
         if page_key == 'home': return '/'
         if page_key == 'river': return '/best-budapest-river-cruises'
         if page_key == 'dinner': return '/best-dinner-cruises-budapest'
-        if page_key == 'candlelit': return '/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest'
+        if page_key == 'candlelit': return '/candlelit-dinner-cruise-budapest'
         if page_key == 'night': return '/best-night-cruises-budapest'
         if page_key == 'prosecco': return '/unlimited-prosecco-cruises-budapest'
         if page_key == 'private': return '/best-private-boat-tours-budapest'
@@ -532,7 +532,7 @@ def get_target_url(target_lang, page_key):
         if page_key == 'home': return f'/{target_lang}'
         if page_key == 'river': return f'/{target_lang}/{SLUG_MAP[target_lang]["river"]}'
         if page_key == 'dinner': return f'/{target_lang}/{SLUG_MAP[target_lang]["dinner"]}'
-        if page_key == 'candlelit': return f'/{target_lang}/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest'
+        if page_key == 'candlelit': return f'/{target_lang}/candlelit-dinner-cruise-budapest'
         if page_key == 'night': return f'/{target_lang}/best-night-cruises-budapest'
         if page_key == 'prosecco': return f'/{target_lang}/unlimited-prosecco-cruises-budapest'
         if page_key == 'private': return f'/{target_lang}/best-private-boat-tours-budapest'
@@ -814,7 +814,7 @@ def main():
         'best-dinner-cruises-budapest.html', 'budapest-dinner-cruises.html',
         'best-budapest-river-cruises/index.html', 'budapest-river-cruises/index.html',
         'best-dinner-cruises-budapest/index.html', 'budapest-dinner-cruises/index.html',
-        'best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest/index.html',
+        'candlelit-dinner-cruise-budapest/index.html',
         'best-night-cruises-budapest.html', 'unlimited-prosecco-cruises-budapest.html',
         'best-private-boat-tours-budapest.html', 'best-walking-tours-budapest.html',
         'best-hostels-budapest.html', 'thermal-baths-budapest.html',

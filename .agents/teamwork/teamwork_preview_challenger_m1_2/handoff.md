@@ -41,7 +41,7 @@
   - `/` -> resolves to `rewritten_path='/index.html'`, `file_path` exists on disk.
   - `/budapest-river-cruises` -> resolves to `rewritten_path='/index.html'`, `file_path` exists on disk.
   - `/budapest-dinner-cruises` -> resolves to `rewritten_path='/dinner.html'`, `file_path` exists on disk.
-  - `/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest` -> resolves to `rewritten_path='/candlelit-dinner-cruise.html'`, rewrite mapping verified (HTML asset planned for M2).
+  - `/candlelit-dinner-cruise-budapest` -> resolves to `rewritten_path='/candlelit-dinner-cruise.html'`, rewrite mapping verified (HTML asset planned for M2).
   - `/legenda-city-cruises` -> resolves to `rewritten_path='/legenda-city-cruises.html'`, `file_path` exists on disk.
   - `/danube-cruise-decision-hub` -> resolves to `rewritten_path='/danube_cruise_decision_hub.html'`, `file_path` exists on disk.
 

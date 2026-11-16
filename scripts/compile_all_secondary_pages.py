@@ -16,7 +16,7 @@ Compiles all 15 secondary editorial, attraction, and utility pages across all 21
 - Parliament: /{lang}/budapest-attractions/budapest-parliament/index.html (and alias)
 - Group Booking: /{lang}/budapest-river-cruise-group-booking/index.html
 - Tourism Statistics: /{lang}/budapest-tourism-statistics/index.html
-- Candlelit Review: /{lang}/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest/index.html
+- Candlelit Review: /{lang}/candlelit-dinner-cruise-budapest/index.html
 
 Strictly enforces:
 1. Universal link localization (ensures visitors stay in /{lang}/ across the whole site)
@@ -75,7 +75,7 @@ PAGE_TARGETS = {
     'parliament': 'budapest-attractions/budapest-parliament',
     'group_booking': 'budapest-river-cruise-group-booking',
     'tourism_statistics': 'budapest-tourism-statistics',
-    'candlelit_dinner': 'best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest'
+    'candlelit_dinner': 'candlelit-dinner-cruise-budapest'
 }
 
 def localize_html(raw_html, lang, page_slug):
@@ -169,8 +169,8 @@ def localize_html(raw_html, lang, page_slug):
             a['href'] = f"/{lang}/budapest-river-cruise-group-booking"
         elif clean in ['/budapest-tourism-statistics', 'budapest-tourism-statistics']:
             a['href'] = f"/{lang}/budapest-tourism-statistics"
-        elif clean in ['/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest', '/candlelit-dinner-cruise-budapest', 'candlelit-dinner-cruise-budapest']:
-            a['href'] = f"/{lang}/best-dinner-cruises-budapest/candlelit-dinner-cruise-budapest"
+        elif clean in ['/candlelit-dinner-cruise-budapest', '/candlelit-dinner-cruise-budapest', 'candlelit-dinner-cruise-budapest']:
+            a['href'] = f"/{lang}/candlelit-dinner-cruise-budapest"
         elif clean.startswith('/'):
             a['href'] = f"/{lang}{clean}"
         else:
