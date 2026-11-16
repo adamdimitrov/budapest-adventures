@@ -321,13 +321,17 @@ PRODUCTS = [
     },
 ]
 
-SISTER = {  # the Christmas cruises page in each language (FR/IT/HU have none: link the EN page)
+SISTER = {  # the Christmas cruises page in each language (no translation: link the EN page)
     "en": "/christmas-cruises-budapest",
     "de": "/de/weihnachts-bootsfahrten-budapest",
     "es": "/es/cruceros-navidad-budapest",
     "fr": "/christmas-cruises-budapest",
     "it": "/christmas-cruises-budapest",
     "hu": "/christmas-cruises-budapest",
+    "ro": "/christmas-cruises-budapest",
+    "hr": "/hr/bozicna-krstarenja-budimpesta",
+    "sr": "/christmas-cruises-budapest",
+    "pl": "/christmas-cruises-budapest",
 }
 
 

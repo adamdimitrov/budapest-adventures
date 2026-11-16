@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Budapest Christmas Markets 2026 page (EN, DE, FR, IT, ES, HU).
+"""Build the Budapest Christmas Markets 2026 page (EN, DE, FR, IT, ES, HU, RO, HR, SR, PL).
 
 Facts: scripts/christmas_markets_data.py      Copy: scripts/christmas_markets_copy_<lang>.py
 Cards, pills, star summary and breakdowns reuse the components of the private boats builder
@@ -31,6 +31,10 @@ PAGES = {
     "it": ("it/mercatini-di-natale-budapest/index.html", "/it/mercatini-di-natale-budapest", "it/tour-barca-privata-budapest/index.html"),
     "es": ("es/mercadillo-navideno-budapest/index.html", "/es/mercadillo-navideno-budapest", "es/paseos-barco-privado-budapest/index.html"),
     "hu": ("hu/karacsonyi-vasar-budapest/index.html", "/hu/karacsonyi-vasar-budapest", "hu/legjobb-privát-hajókirándulások-budapest/index.html"),
+    "ro": ("ro/targ-de-craciun-budapesta/index.html", "/ro/targ-de-craciun-budapesta", "ro/plimbari-barca-privata-budapesta/index.html"),
+    "hr": ("hr/advent-budimpesta/index.html", "/hr/advent-budimpesta", "hr/privatni-izleti-brodom-budimpesta/index.html"),
+    "sr": ("sr/advent-budimpesta/index.html", "/sr/advent-budimpesta", "sr/privatne-ture-brodom-budimpesta/index.html"),
+    "pl": ("pl/jarmark-bozonarodzeniowy-budapeszt/index.html", "/pl/jarmark-bozonarodzeniowy-budapeszt", "pl/prywatne-rejsy-lodzia-budapeszt/index.html"),
 }
 IMG = "/assets/xmas-markets-2026/"
 SIZES = bp.SIZES
@@ -676,7 +680,7 @@ def ensure_page(lang):
 
 def hreflang_block():
     out = ""
-    for lg in ("en", "de", "fr", "it", "es", "hu"):
+    for lg in PAGES:
         out += '<link href="%s%s" hreflang="%s" rel="alternate"/>' % (SITE, PAGES[lg][1], lg)
     out += '<link href="%s%s" hreflang="x-default" rel="alternate"/>' % (SITE, PAGES["en"][1])
     return out
@@ -701,7 +705,7 @@ def build(lang):
     s = re.sub(r'<meta content="[^"]*" property="og:url"/>', lambda m: '<meta content="%s" property="og:url"/>' % url, s)
     s = re.sub(r'<link href="[^"]*" rel="canonical"/>', lambda m: '<link href="%s" rel="canonical"/>' % url, s, count=1)
     s = re.sub(r'<link as="image" fetchpriority="high" href="[^"]*" rel="preload" type="image/[a-z]+"/>', "", s)
-    # hreflang: only the 6 pages of this article
+    # hreflang: only the pages of this article
     s = re.sub(r'<link href="[^"]*" hreflang="[^"]*" rel="alternate"/>', "", s)
     s = s.replace('<link href="%s" rel="canonical"/>' % url, hreflang_block() + '<link href="%s" rel="canonical"/>' % url, 1)
 
