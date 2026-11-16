@@ -28,7 +28,7 @@ best-night-cruises-budapest.html thermal-baths-budapest.html
 best-private-boat-tours-budapest.html unlimited-prosecco-cruises-budapest.html
 best-walking-tours-budapest.html best-hostels-budapest.html
 budapest-card-is-it-worth-it.html budapest-travel-guide.html
-budapest-airport-to-city-center.html budapest-parliament.html
+budapest-airport-to-city-center.html budapest-parliament-tickets.html
 budapest-river-cruise-group-booking.html budapest-tourism-statistics.html
 about.html contact.html
 best-budapest-river-cruises.html best-dinner-cruises-budapest.html

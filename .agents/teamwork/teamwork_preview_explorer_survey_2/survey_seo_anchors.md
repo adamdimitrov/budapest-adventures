@@ -215,7 +215,7 @@ Files missing canonical tags: 31
 17. https://www.budapestadventures.com/best-things-to-do-budapest
 18. https://www.budapestadventures.com/best-walking-tours-budapest
 19. https://www.budapestadventures.com/budapest-airport-to-city-center
-20. https://www.budapestadventures.com/budapest-attractions/budapest-parliament
+20. https://www.budapestadventures.com/budapest-parliament-tickets
 21. https://www.budapestadventures.com/budapest-card-is-it-worth-it
 22. https://www.budapestadventures.com/budapest-dinner-cruises
 23. https://www.budapestadventures.com/budapest-river-cruise-group-booking

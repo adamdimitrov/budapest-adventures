@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild /budapest-attractions/budapest-parliament (budapest-parliament.html)
+"""Rebuild /budapest-parliament-tickets (budapest-parliament-tickets.html)
 in the article design used by the tourism statistics and Christmas pages:
 hero card (breadcrumb, badge, H1, author bar, last updated, lead), sticky TOC,
 fact tiles, tables, native FAQ.
@@ -18,9 +18,9 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PAGE = ROOT / "budapest-parliament.html"
+PAGE = ROOT / "budapest-parliament-tickets.html"
 STATS = ROOT / "budapest-tourism-statistics.html"
-URL = "https://www.budapestadventures.com/budapest-attractions/budapest-parliament"
+URL = "https://www.budapestadventures.com/budapest-parliament-tickets"
 CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/"
 TICKETS = "https://jegymester.hu/production/480000/hungarian-parliament-building-parliament-visit"
 UPDATED_ISO = "2026-11-13"

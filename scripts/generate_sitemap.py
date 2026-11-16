@@ -26,7 +26,7 @@ SLUG_MAP = {
         'thermal_baths': 'legjobb-termalfurdok-budapest',
         'budapest_card': 'budapest-card-megéri-e',
         'airport': 'budapest-reptér-városközpont',
-        'parliament': 'budapest-attractions/budapest-parlament',
+        'parliament': 'orszaghaz-jegyek',
         'walking_tours': 'legjobb-gyalogtúrák-budapest',
         'hostels': 'legjobb-hostelek-budapesten',
         'tourism_statistics': 'budapest-turizmus-statisztika',
@@ -118,12 +118,14 @@ HUBS = [
     ('budapest-card-is-it-worth-it', 0.8, 'weekly', 'budapest_card'),
     ('budapest-travel-guide', 0.8, 'monthly', 'travel_guide'),
     ('budapest-airport-to-city-center', 0.8, 'monthly', 'airport'),
-    ('budapest-attractions/budapest-parliament', 0.8, 'monthly', 'parliament'),
+    ('budapest-parliament-tickets', 0.8, 'monthly', 'parliament'),
     ('budapest-river-cruise-group-booking', 0.7, 'monthly', 'group_booking'),
     ('budapest-tourism-statistics', 0.7, 'monthly', 'tourism_statistics'),
     ('about', 0.8, 'monthly', 'about'),
     ('contact', 0.7, 'monthly', 'contact')
 ]
+
+PARLIAMENT_MAP = {"hu": "orszaghaz-jegyek", "de": "parlament-budapest-tickets", "fr": "billets-parlement-budapest", "es": "entradas-parlamento-budapest", "it": "biglietti-parlamento-budapest", "pt": "ingressos-parlamento-budapeste", "nl": "parlement-boedapest-tickets", "pl": "bilety-parlament-budapeszt", "cs": "vstupenky-parlament-budapest", "sk": "vstupenky-parlament-budapest", "hr": "ulaznice-parlament-budimpesta", "sr": "ulaznice-parlament-budimpesta", "ro": "bilete-parlament-budapesta", "ru": "bilety-v-parlament-budapeshta", "uk": "kvytky-do-parlamentu-budapeshta", "bg": "bileti-parlament-budapeshta", "el": "eisitiria-koinovoulio-voudapesti", "he": "כרטיסים-לפרלמנט-בודפשט", "ja": "budapesuto-kokkaigijido-chiketto", "ko": "budapeseuteu-gukhoeuisadang-tikes", "tr": "budapeste-parlamento-bileti"}
 
 def get_loc(en_slug, hub_key, lang):
     if lang == 'en':
@@ -144,6 +146,9 @@ def get_loc(en_slug, hub_key, lang):
     
     if hub_key == 'candlelit' and lang in CANDLELIT_MAP:
         return f"https://www.budapestadventures.com/{lang}/{CANDLELIT_MAP[lang]}"
+    
+    if hub_key == 'parliament' and lang in PARLIAMENT_MAP:
+        return f"https://www.budapestadventures.com/{lang}/{PARLIAMENT_MAP[lang]}"
     
     if hub_key == 'walking_tours' and lang in WALKING_MAP:
         return f"https://www.budapestadventures.com/{lang}/{WALKING_MAP[lang]}"

@@ -405,7 +405,7 @@ MORE_H = "More December Ideas"
 MORE = [
     ("Christmas cruises compared", "All 9 Christmas cruises side by side, from €19 to €155: <a href=\"/christmas-cruises-budapest\">Christmas cruises in Budapest</a>."),
     ("Every thermal bath compared", "Six baths with winter hours and prices, 4 tested: <a href=\"/thermal-baths-budapest\">best thermal baths in Budapest</a>."),
-    ("The Parliament", "Guided tours run through December, and the building is lit at night: <a href=\"/budapest-parliament\">Budapest Parliament tickets and tips</a>."),
+    ("The Parliament", "Guided tours run through December, and the building is lit at night: <a href=\"/budapest-parliament-tickets\">Budapest Parliament tickets and tips</a>."),
     ("A day out of town", "Lake Hévíz stays warm in winter, steaming on cold mornings: <a href=\"/best-day-trips-from-budapest\">day trips from Budapest</a>."),
     ("Museums on cold days", "Whether the Budapest Card pays off on a museum-heavy trip: <a href=\"/budapest-card-is-it-worth-it\">Budapest Card, is it worth it?</a>"),
 ]

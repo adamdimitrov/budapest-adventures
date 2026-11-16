@@ -260,8 +260,8 @@ def localize_universal_links(soup, lang, river_slug, dinner_slug):
             a['href'] = f"/{lang}/budapest-travel-guide"
         elif clean in ['/budapest-airport-to-city-center', 'budapest-airport-to-city-center']:
             a['href'] = f"/{lang}/budapest-airport-to-city-center"
-        elif clean in ['/budapest-attractions/budapest-parliament', '/budapest-parliament', 'budapest-parliament']:
-            a['href'] = f"/{lang}/budapest-attractions/budapest-parliament"
+        elif clean in ['/budapest-parliament-tickets', '/budapest-parliament-tickets', 'budapest-parliament-tickets']:
+            a['href'] = f"/{lang}/budapest-parliament-tickets"
         elif clean in ['/budapest-river-cruise-group-booking', 'budapest-river-cruise-group-booking']:
             a['href'] = f"/{lang}/budapest-river-cruise-group-booking"
         elif clean in ['/budapest-tourism-statistics', 'budapest-tourism-statistics']:

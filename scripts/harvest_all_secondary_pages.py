@@ -29,7 +29,7 @@ PAGES = {
     'budapest_card': 'budapest-card-is-it-worth-it',
     'travel_guide': 'budapest-travel-guide',
     'airport_transfer': 'budapest-airport-to-city-center',
-    'parliament': 'budapest-attractions/budapest-parliament',
+    'parliament': 'budapest-parliament-tickets',
     'group_booking': 'budapest-river-cruise-group-booking',
     'tourism_statistics': 'budapest-tourism-statistics',
     'candlelit_dinner': 'candlelit-dinner-cruise-budapest'
