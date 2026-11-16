@@ -42,7 +42,7 @@ HERO = """<section class="ltt-home-hero">
           Budapest, Tested by Someone <span class="ltt-gold-text">Who Lives Here</span>
 </h1>
 <p class="ltt-hero-subtitle hp-hero-sub">Cruises, thermal baths, tours and nights out compared side by side: real prices, start times, meeting points and which ones to skip. From 50+ cruises, baths, tours and hostels tried in person.</p>
-<ul class="hp-trust"><li>40+ Danube cruises tested</li><li>9 hostels stayed in</li><li>Budapest local</li><li>22 languages</li></ul>
+<ul class="hp-trust"><li>Tried in person</li><li>Real prices &amp; start times</li><li>Written by a Budapest local</li><li>22 languages</li></ul>
 <div class="hp-situ">
 <a class="hp-situ-card" href="/budapest-travel-guide"><span class="hp-situ-q">Planning 2 to 4 days?</span><span class="hp-situ-a">Follow my day-by-day itinerary →</span></a>
 <a class="hp-situ-card" href="/best-night-cruises-budapest"><span class="hp-situ-q">Only one evening?</span><span class="hp-situ-a">Take a Danube cruise after dark →</span></a>
@@ -64,16 +64,30 @@ SITU_CSS = """<style id="hp-situ-css">
 @media (max-width:760px){.hp-situ{grid-template-columns:1fr;gap:8px}.hp-situ-card{padding:12px 14px}.hp-situ-a{font-size:15px}}
 </style>"""
 
+TILES_CSS = """<style id="hp-guides-tiles">
+@media (max-width:640px){
+.hp-guides-group{margin:0 0 18px}
+.hp-guides{grid-template-columns:1fr 1fr!important;gap:10px!important}
+.hp-guide{flex-direction:column;align-items:stretch;gap:0;padding:0!important;overflow:hidden;height:100%}
+.hp-guide img{width:100%!important;height:auto!important;aspect-ratio:4/3;border-radius:0!important}
+.hp-guide-txt{padding:8px 10px 10px}
+.hp-guides .hp-guide h3{font-size:14.5px!important;line-height:1.28!important;-webkit-line-clamp:3}
+.hp-guide-go{display:none}
+.hp-guides>li:last-child:nth-child(odd){grid-column:1/-1}
+.hp-guides>li:last-child:nth-child(odd) .hp-guide img{aspect-ratio:16/7}
+}
+</style>"""
+
 SECTION_HEAD = """<div class="ltt-section-header">
 <div class="ltt-section-eyebrow">ALL GUIDES</div>
 <h2 class="ltt-section-title">Every Budapest Guide, by What You're Planning</h2>
 <p class="ltt-section-subtitle">Each guide lines the options up side by side on <strong>price, timing and what's included</strong>, and tells you which one I would book.</p>
 </div>"""
 
-MANIFESTO_SUB = ("Vacations don't have a return policy. Whether it is a dinner cruise, a bath ticket or a pub crawl, "
-                 "you deserve verified facts before you book.")
+MANIFESTO_SUB = ("Vacations don't have a return policy. Before you spend an evening or a whole day of your trip on something, "
+                 "you deserve verified facts: what it really costs, when it starts and whether it is worth it.")
 MANIFESTO = [
-    ("Tried in Person", "I ride the cruises, soak in the baths, walk the tours and sleep in the hostels I write about, and every guide marks which options <strong>I tested myself</strong>."),
+    ("Tried in Person", "I try the experiences I write about across Budapest, from baths and walking tours to food, nightlife and places to stay, and every guide marks which options <strong>I tested myself</strong>."),
     ("Compared Side by Side", "Every guide lines the options up on what decides the booking: <strong>real price, start time, meeting point, what is included</strong> and the small print."),
     ("Pick It or Skip It", "Each option gets a clear pick-or-skip line and honest cons, so you know <strong>which one to book</strong> and which to leave out."),
 ]
@@ -81,12 +95,12 @@ MANIFESTO = [
 AUTHOR = """<h3 class="ltt-author-name">Adam Dimitrov</h3>
 <div class="ltt-author-role">Founder &amp; Budapest Local</div>
 <div class="ltt-vbadge-row">
-<span class="ltt-vbadge">✓ 40+ Danube Cruises Tested</span>
-<span class="ltt-vbadge">✓ Stayed in 9 Budapest Hostels</span>
 <span class="ltt-vbadge">✓ Budapest Resident</span>
+<span class="ltt-vbadge">✓ Tests What He Recommends</span>
+<span class="ltt-vbadge">✓ 28 Budapest Guides</span>
 </div>
 <p class="ltt-author-bio">
-              Adam Dimitrov founded Budapest Adventures to give travelers practical, firsthand guides to Budapest. <strong>Living in Budapest</strong>, he tests the cruises, baths, tours and hostels he writes about, checks timetables, meeting points and real prices, and tells you which option to book and which to skip.
+              Adam Dimitrov founded Budapest Adventures to give travelers practical, firsthand guides to Budapest. <strong>Living in Budapest</strong>, he tries the experiences he writes about, checks timetables, meeting points and real prices, and tells you which option to book and which to skip.
             </p>"""
 
 
@@ -126,11 +140,12 @@ def main():
     a = main_html.index('<div class="ltt-section-header">', main_html.index('<section class="ltt-section">'))
     b = main_html.index("</div>", main_html.index('class="ltt-section-subtitle"', a)) + len("</div>")
     main_html = main_html[:a] + SECTION_HEAD + main_html[b:]
+    main_html = re.sub(r'<style id="hp-guides-tiles">.*?</style>', "", main_html, flags=re.S)
     css = re.search(r'<style id="hp-guides-css">.*?</style>', main_html, re.S).group(0)
     script = re.search(r"<script>\(function\(\)\{try\{var n=new Date\(\);document\.querySelectorAll\('\.hp-guides li\[data-until\]'\).*?</script>", main_html, re.S).group(0)
     g0 = main_html.index(css)
     g1 = main_html.rindex("</ul></div>", 0, main_html.index('<section class="ltt-section" style=')) + len("</ul></div>")
-    main_html = main_html[:g0] + css + groups_html + script + main_html[g1:]
+    main_html = main_html[:g0] + css + TILES_CSS + groups_html + script + main_html[g1:]
 
     # ---- manifesto
     main_html = re.sub(r'(<div class="ltt-section-eyebrow">EDITORIAL ETHICS &amp; METHODOLOGY</div>\s*<h2 class="ltt-section-title">Why Budapest Adventures Exists</h2>\s*<p class="ltt-section-subtitle">).*?(</p>)',
