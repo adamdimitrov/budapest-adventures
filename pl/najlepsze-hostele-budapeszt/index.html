@@ -107,7 +107,36 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) h2.ltt-section-title,body:has(.calc-title) main.container h2{font-size:28px!important}
 }
 </style>
-</head><body><header class="ltt-navbar" role="banner">
+<style id="bpa-lang-css">
+.bpa-lang{display:inline-flex;flex-wrap:wrap;gap:5px;flex-shrink:0}
+.bpa-lang[open]{flex-basis:100%}
+.bpa-lang>summary{list-style:none;cursor:pointer;user-select:none}
+.bpa-lang>summary::-webkit-details-marker{display:none}
+.bpa-lang>summary:hover{background:#e2e8f0 !important}
+.bpa-lang-chev{font-size:12px;line-height:1;opacity:.75;transition:transform .15s}
+.bpa-lang[open] .bpa-lang-chev{transform:rotate(180deg)}
+.bpa-lang.is-match>summary{background:#dcfce7 !important;color:#166534 !important}
+.bpa-lang-pop{flex-basis:100%;box-sizing:border-box;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.5;color:#334155;white-space:normal}
+.bpa-lang-pop strong{color:#0f172a}
+.bpa-lang-names b{color:#166534}
+.bpa-lang-note{display:block;margin-top:3px;color:#64748b;font-size:11px}
+/* With JS: the list floats over the card instead of pushing it down */
+html.bpa-lang-on .bpa-lang[open]{flex-basis:auto}
+html.bpa-lang-on .bpa-lang .bpa-lang-pop{display:none}
+html.bpa-lang-on .bpa-lang.is-open .bpa-lang-chev{transform:rotate(180deg)}
+html.bpa-lang-on .bpa-lang.is-open>summary{background:#e2e8f0 !important}
+html.bpa-lang-on .bpa-lang.is-match.is-open>summary{background:#bbf7d0 !important}
+#bpa-lang-float{position:absolute;z-index:9990;max-width:290px;box-sizing:border-box;background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 10px 30px rgba(15,23,42,.14);padding:10px 12px;font-size:12px;line-height:1.5;color:#334155;opacity:0;transform:translateY(-4px);transition:none;pointer-events:none}
+#bpa-lang-float.is-visible{opacity:1;transform:none;pointer-events:auto;transition:opacity .12s ease,transform .12s ease}
+#bpa-lang-float.is-above{transform:translateY(4px)}
+#bpa-lang-float.is-above.is-visible{transform:none}
+#bpa-lang-float strong{color:#0f172a}
+#bpa-lang-float .bpa-lang-names b{color:#166534}
+#bpa-lang-float::before{content:"";position:absolute;left:var(--ax,20px);top:-6px;width:10px;height:10px;background:#fff;border-left:1px solid #e2e8f0;border-top:1px solid #e2e8f0;transform:translateX(-50%) rotate(45deg)}
+#bpa-lang-float.is-above::before{top:auto;bottom:-6px;transform:translateX(-50%) rotate(225deg)}
+#bpa-lang-float::after{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+#bpa-lang-float.is-above::after{top:auto;bottom:-12px}
+</style></head><body><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/pl">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -177,8 +206,8 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 <div class="ltt-mega-menu is-narrow is-right" role="menu">
 <div class="ltt-mega-col">
 <div class="ltt-mega-head">Zima w Budapeszcie</div>
-<a class="ltt-mega-item" href="/things-to-do-budapest-november"><span class="ltt-thumb ltt-thumb-icon ltt-thumb-month" style="width:48px;height:48px;background:#fff7ed;color:#9a3412"><span class="ltt-month-top">2026</span>NOV</span><div><strong>Budapeszt w listopadzie</strong><p>Wieczorne rejsy, gorące baseny &amp; jarmarki</p></div></a>
-<a class="ltt-mega-item" href="/things-to-do-budapest-december"><span class="ltt-thumb ltt-thumb-icon ltt-thumb-month" style="width:48px;height:48px;background:#ecfdf5;color:#065f46"><span class="ltt-month-top">2026</span>DEC</span><div><strong>Budapeszt w grudniu</strong><p>Rejsy świąteczne, łaźnie &amp; godziny otwarcia</p></div></a>
+<a class="ltt-mega-item" href="/things-to-do-budapest-november"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/things-to-do-budapest-november.webp" decoding="async" height="48" width="48"/><div><strong>Budapeszt w listopadzie</strong><p>Wieczorne rejsy, gorące baseny &amp; jarmarki</p></div></a>
+<a class="ltt-mega-item" href="/things-to-do-budapest-december"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/things-to-do-budapest-december.webp" decoding="async" height="48" width="48"/><div><strong>Budapeszt w grudniu</strong><p>Rejsy świąteczne, łaźnie &amp; godziny otwarcia</p></div></a>
 <a class="ltt-mega-item" href="/pl/jarmark-bozonarodzeniowy-budapeszt"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-christmas-markets.webp" decoding="async" height="48" width="48"/><div><strong>Jarmarki bożonarodzeniowe</strong><p>Daty, godziny, ceny &amp; mapa</p></div></a>
 <a class="ltt-mega-item" href="/christmas-cruises-budapest"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/christmas-cruises-budapest-v2.webp" decoding="async" height="48" width="48"/><div><strong>Rejsy świąteczne</strong><p>Kolacje wigilijne i świąteczne na Dunaju</p></div></a>
 <a class="ltt-mega-item" href="/new-years-eve-cruises-budapest"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/new-years-eve-cruises-budapest-v3.webp" decoding="async" height="48" width="48"/><div><strong>Rejsy sylwestrowe</strong><p>Północne fajerwerki z rzeki</p></div></a>
@@ -190,15 +219,15 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 <div class="ltt-mega-menu is-right" role="menu">
 <div class="ltt-mega-col">
 <div class="ltt-mega-head">Zaplanuj podróż</div>
-<a class="ltt-mega-item" href="/pl/przewodnik-budapeszt"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#e0f2fe;color:#0369a1"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" x2="9" y1="3" y2="18"></line><line x1="15" x2="15" y1="6" y2="21"></line></svg></span><div><strong>Przewodnik po Budapeszcie</strong><p>Rejsy, atrakcje &amp; planowanie</p></div></a>
-<a class="ltt-mega-item" href="/pl/budapest-card-czy-warto"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#fef3c7;color:#855a00"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><rect height="14" rx="2" width="20" x="2" y="5"></rect><line x1="2" x2="22" y1="10" y2="10"></line><line x1="6" x2="10" y1="15" y2="15"></line></svg></span><div><strong>Kalkulator Budapest Card</strong><p>Interaktywna analiza opłacalności dla 94 atrakcji</p></div></a>
-<a class="ltt-mega-item" href="/pl/lotnisko-budapeszt-centrum"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#ede9fe;color:#5b21b6"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg></span><div><strong>Z lotniska do centrum</strong><p>Autobus ekspresowy 100E, taksówka &amp; ceny komunikacji</p></div></a>
-<a aria-current="page" class="ltt-mega-item active" href="/pl/najlepsze-hostele-budapeszt"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#dcfce7;color:#166534"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg></span><div><strong>Najlepsze hostele w Budapeszcie</strong><p>Sprawdzone hostele towarzyskie, butikowe &amp; budżetowe</p></div></a>
+<a class="ltt-mega-item" href="/pl/przewodnik-budapeszt"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-itinerary.webp" decoding="async" height="48" width="48"/><div><strong>Przewodnik po Budapeszcie</strong><p>Rejsy, atrakcje &amp; planowanie</p></div></a>
+<a class="ltt-mega-item" href="/pl/budapest-card-czy-warto"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-card-is-it-worth-it.webp" decoding="async" height="48" width="48"/><div><strong>Kalkulator Budapest Card</strong><p>Interaktywna analiza opłacalności dla 94 atrakcji</p></div></a>
+<a class="ltt-mega-item" href="/pl/lotnisko-budapeszt-centrum"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-airport-to-city-center.webp" decoding="async" height="48" width="48"/><div><strong>Z lotniska do centrum</strong><p>Autobus ekspresowy 100E, taksówka &amp; ceny komunikacji</p></div></a>
+<a aria-current="page" class="ltt-mega-item active" href="/pl/najlepsze-hostele-budapeszt"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/best-hostels-budapest.webp" decoding="async" height="48" width="48"/><div><strong>Najlepsze hostele w Budapeszcie</strong><p>Sprawdzone hostele towarzyskie, butikowe &amp; budżetowe</p></div></a>
 </div>
 <div class="ltt-mega-col">
 <div class="ltt-mega-head">Dane</div>
-<a class="ltt-mega-item" href="/pl/statystyki-turystyki-budapeszt"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#eef2f7;color:#1e3a5f"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewBox="0 0 24 24" width="22"><line x1="5" x2="5" y1="20" y2="13"></line><line x1="12" x2="12" y1="20" y2="6"></line><line x1="19" x2="19" y1="20" y2="10"></line></svg></span><div><strong>Statystyki turystyki w Budapeszcie</strong><p>Oficjalne dane o gościach &amp; wydatkach</p></div></a>
-<a class="ltt-mega-item" href="/hungary-tourism-statistics"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#eef2f7;color:#1e3a5f"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewBox="0 0 24 24" width="22"><line x1="5" x2="5" y1="20" y2="13"></line><line x1="12" x2="12" y1="20" y2="6"></line><line x1="19" x2="19" y1="20" y2="10"></line></svg></span><div><strong>Statystyki turystyki na Węgrzech</strong><p>Ilu turystów odwiedza Węgry</p></div></a>
+<a class="ltt-mega-item" href="/pl/statystyki-turystyki-budapeszt"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-tourism-statistics.webp" decoding="async" height="48" width="48"/><div><strong>Statystyki turystyki w Budapeszcie</strong><p>Oficjalne dane o gościach &amp; wydatkach</p></div></a>
+<a class="ltt-mega-item" href="/hungary-tourism-statistics"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/hungary-tourism-statistics.webp" decoding="async" height="48" width="48"/><div><strong>Statystyki turystyki na Węgrzech</strong><p>Ilu turystów odwiedza Węgry</p></div></a>
 </div>
 </div>
 </div>
@@ -370,8 +399,8 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 <summary class="ltt-mobile-acc-sum"><span>Sezony</span><svg class="ltt-chevron" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
 <div class="ltt-mobile-acc-body">
 <div class="ltt-mobile-label">Zima w Budapeszcie</div>
-<a class="ltt-mobile-link" href="/things-to-do-budapest-november"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon ltt-thumb-month" style="width:36px;height:36px;background:#fff7ed;color:#9a3412"><span class="ltt-month-top">2026</span>NOV</span><span>Budapeszt w listopadzie</span></span></a>
-<a class="ltt-mobile-link" href="/things-to-do-budapest-december"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon ltt-thumb-month" style="width:36px;height:36px;background:#ecfdf5;color:#065f46"><span class="ltt-month-top">2026</span>DEC</span><span>Budapeszt w grudniu</span></span></a>
+<a class="ltt-mobile-link" href="/things-to-do-budapest-november"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/things-to-do-budapest-november.webp" decoding="async" height="36" width="36"/><span>Budapeszt w listopadzie</span></span></a>
+<a class="ltt-mobile-link" href="/things-to-do-budapest-december"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/things-to-do-budapest-december.webp" decoding="async" height="36" width="36"/><span>Budapeszt w grudniu</span></span></a>
 <a class="ltt-mobile-link" href="/pl/jarmark-bozonarodzeniowy-budapeszt"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-christmas-markets.webp" decoding="async" height="36" width="36"/><span>Jarmarki bożonarodzeniowe</span></span></a>
 <a class="ltt-mobile-link" href="/christmas-cruises-budapest"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/christmas-cruises-budapest-v2.webp" decoding="async" height="36" width="36"/><span>Rejsy świąteczne</span></span></a>
 <a class="ltt-mobile-link" href="/new-years-eve-cruises-budapest"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/new-years-eve-cruises-budapest-v3.webp" decoding="async" height="36" width="36"/><span>Rejsy sylwestrowe</span></span></a>
@@ -380,13 +409,13 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 <details class="ltt-mobile-acc">
 <summary class="ltt-mobile-acc-sum"><span>Zaplanuj podróż</span><svg class="ltt-chevron" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
 <div class="ltt-mobile-acc-body">
-<a class="ltt-mobile-link" href="/pl/przewodnik-budapeszt"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#e0f2fe;color:#0369a1"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" x2="9" y1="3" y2="18"></line><line x1="15" x2="15" y1="6" y2="21"></line></svg></span><span>Przewodnik po Budapeszcie</span></span></a>
-<a class="ltt-mobile-link" href="/pl/budapest-card-czy-warto"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#fef3c7;color:#855a00"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><rect height="14" rx="2" width="20" x="2" y="5"></rect><line x1="2" x2="22" y1="10" y2="10"></line><line x1="6" x2="10" y1="15" y2="15"></line></svg></span><span>Kalkulator Budapest Card</span></span></a>
-<a class="ltt-mobile-link" href="/pl/lotnisko-budapeszt-centrum"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#ede9fe;color:#5b21b6"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg></span><span>Z lotniska do centrum</span></span></a>
-<a aria-current="page" class="ltt-mobile-link active" href="/pl/najlepsze-hostele-budapeszt"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#dcfce7;color:#166534"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg></span><span>Najlepsze hostele w Budapeszcie</span></span></a>
+<a class="ltt-mobile-link" href="/pl/przewodnik-budapeszt"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-itinerary.webp" decoding="async" height="36" width="36"/><span>Przewodnik po Budapeszcie</span></span></a>
+<a class="ltt-mobile-link" href="/pl/budapest-card-czy-warto"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-card-is-it-worth-it.webp" decoding="async" height="36" width="36"/><span>Kalkulator Budapest Card</span></span></a>
+<a class="ltt-mobile-link" href="/pl/lotnisko-budapeszt-centrum"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-airport-to-city-center.webp" decoding="async" height="36" width="36"/><span>Z lotniska do centrum</span></span></a>
+<a aria-current="page" class="ltt-mobile-link active" href="/pl/najlepsze-hostele-budapeszt"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/best-hostels-budapest.webp" decoding="async" height="36" width="36"/><span>Najlepsze hostele w Budapeszcie</span></span></a>
 <div class="ltt-mobile-label">Dane</div>
-<a class="ltt-mobile-link" href="/pl/statystyki-turystyki-budapeszt"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#eef2f7;color:#1e3a5f"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewBox="0 0 24 24" width="22"><line x1="5" x2="5" y1="20" y2="13"></line><line x1="12" x2="12" y1="20" y2="6"></line><line x1="19" x2="19" y1="20" y2="10"></line></svg></span><span>Statystyki turystyki w Budapeszcie</span></span></a>
-<a class="ltt-mobile-link" href="/hungary-tourism-statistics"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#eef2f7;color:#1e3a5f"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewBox="0 0 24 24" width="22"><line x1="5" x2="5" y1="20" y2="13"></line><line x1="12" x2="12" y1="20" y2="6"></line><line x1="19" x2="19" y1="20" y2="10"></line></svg></span><span>Statystyki turystyki na Węgrzech</span></span></a>
+<a class="ltt-mobile-link" href="/pl/statystyki-turystyki-budapeszt"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-tourism-statistics.webp" decoding="async" height="36" width="36"/><span>Statystyki turystyki w Budapeszcie</span></span></a>
+<a class="ltt-mobile-link" href="/hungary-tourism-statistics"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/hungary-tourism-statistics.webp" decoding="async" height="36" width="36"/><span>Statystyki turystyki na Węgrzech</span></span></a>
 </div>
 </details>
 <div class="ltt-mobile-section">
@@ -1024,27 +1053,8 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 </div>
 <div class="ltt-lead-copy">
 <p>Wybór złego hostelu w Budapeszcie kosztuje Was sen, a nie pieniądze. Łóżka w pokojach wieloosobowych w centrum kosztują <strong>od 8 do 15 € za noc</strong>, ale hostel imprezowy w Dzielnicy Żydowskiej i cichy hostel z łóżkami kapsułowymi przy Wielkiej Hali Targowej to dwa zupełnie różne wyjazdy.</p>
-<p><strong>Spałem w 9 z 10 poniższych hosteli</strong>, w tym <strong>30 nocy w Maverick za 280 €</strong>, i porównałem je obok siebie pod kątem tego, co decyduje o rezerwacji: hałasu w nocy, prywatności łóżek, łazienek, kuchni, zasad dotyczących wieku, towarzystwa i realnej ceny za noc. The Hive to jedyna imprezowa opcja, w której nie nocowałem, dlatego zawiera wyłącznie sprawdzone fakty, bez odznaki przetestowanego miejsca.</p>
-<p>Ceny i oceny sprawdzone <strong>14 listopada 2026</strong>. Użyjcie filtrów, aby przejść od razu do hosteli imprezowych, cichych, budżetowych, z pokojami prywatnymi lub dla cyfrowych nomadów.</p>
-<figure class="cd-bookmark-wrapper">
-<a class="cd-editorial-bookmark" href="/pl/rejsy-z-prosecco-budapeszt" rel="noopener" target="_blank">
-<div class="cd-editorial-body">
-<div>
-<div class="cd-editorial-title">Rejs z prosecco w Budapeszcie (2026): 5 najlepszych statków z nielimitowanym prosecco + 2 promocje na drinki</div>
-<div class="cd-editorial-desc">Nielimitowane prosecco od 17,50 €: porównanie 5 najlepszych rejsów na podstawie aktualnych ofert oraz 2 promocje na drinki.</div>
-</div>
-<div class="cd-editorial-meta">
-<img alt="BUDAPEST ADVENTURES" class="cd-editorial-icon" height="18" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='/assets/budapest-adventures-logo.png';}" src="/assets/budapest-adventures-logo-96.webp" width="18"/>
-<span class="cd-editorial-pub">BUDAPEST ADVENTURES</span>
-<span class="cd-editorial-dot">•</span>
-<span class="cd-editorial-author">Adam Dimitrov</span>
-</div>
-</div>
-<div class="cd-editorial-thumb">
-<img alt="Rejs z prosecco w Budapeszcie (2026): 5 najlepszych statków z nielimitowanym prosecco + 2 promocje na drinki" fetchpriority="high" loading="eager" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='/assets/cdn/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero-p-500.webp';}" src="assets/cdn/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero-p-500.webp"/>
-</div>
-</a>
-</figure>
+<p><strong>Spałem w 9 z 10 poniższych hosteli</strong>, w tym <strong>30 nocy w Maverick za 280 €</strong>, i porównałem je obok siebie pod kątem tego, co decyduje o rezerwacji: hałasu w nocy, prywatności łóżek, łazienek, kuchni, zasad dotyczących wieku, towarzystwa i realnej ceny za noc.</p>
+<p>Użyjcie filtrów, aby przejść od razu do hosteli imprezowych, cichych, budżetowych, z pokojami prywatnymi lub dla cyfrowych nomadów.</p>
 </div>
 <div class="ltt-integrated-filter-bar">
 <span class="ltt-filter-label">Filtry:</span>
@@ -3864,10 +3874,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobiście przetestowane</span>
-<span class="bpa-sp">Zasłonki przy łóżkach</span>
-<span class="bpa-sp">Taras na dachu</span>
-<span class="bpa-sp">Cicha boczna ulica</span>
-<span class="bpa-sp">Opłacalny na dłużej</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Zasłonki przy łóżkach</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Zasłonka przy każdym łóżku.</strong> Nowoczesne dormitoria z zasłonkami i dużymi szafkami, więc nawet pełny pokój jest spokojny.<span class="bpa-lang-note">Zamykajcie cenne rzeczy: ukradziono mi bluzę.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">Taras na dachu</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Taras dla gości.</strong> Towarzysko, ale bez imprezowni: wieczorem łatwo kogoś poznać, potem się wyspać.<span class="bpa-lang-note">Goście: podróżujący solo, długie pobyty i pracujący zdalnie.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">Cicha boczna ulica</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lónyay utca, IX dzielnica.</strong> Mniejsza boczna uliczka, z dala od imprezowych ulic VII dzielnicy. Przez 30 nocy prawie bez hałasu z ulicy.<span class="bpa-lang-note">Kálvin tér (M3, M4) i Fővám tér (M4, tramwaje 2, 47, 49) kilka minut pieszo.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💶 <span class="bpa-lang-label">Opłacalny na dłużej</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>30 nocy za 280 €.</strong> To około 9,33 € za noc w marcu, najlepsza cena na dłuższy pobyt, jaką znalazłem w centrum.<span class="bpa-lang-note">Łóżko w dormitorium od około 10 € na bliskie terminy, pokoje prywatne od 28 €.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najlepszy dla:</strong> Podróżujących solo, cyfrowych nomadów i backpackerów na dłuższy pobyt, którzy szukają towarzyskiego hostelu bez hałasu imprez. <strong>Pomińcie, jeśli</strong> chcecie hostelu imprezowego tuż obok ruin barów.
@@ -3876,7 +3886,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Od 10 €</div>
-<div class="bpa-psub">Łóżko wieloosobowe/noc • 14 lis 2026</div>
+<div class="bpa-psub">Łóżko wieloosobowe/noc</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/4klGcrSU" rel="nofollow sponsored noopener" target="_blank">Sprawdźcie ceny i terminy →</a>
 <div class="bpa-trust-micro">
@@ -3914,10 +3924,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobiście przetestowane</span>
-<span class="bpa-sp">Darmowe zajęcia codziennie</span>
-<span class="bpa-sp">Pub crawle</span>
-<span class="bpa-sp">Wiek 18–39 lat</span>
-<span class="bpa-sp">Deák tér</span>
+<details class="bpa-lang"><summary class="bpa-sp">🎯 <span class="bpa-lang-label">Darmowe zajęcia codziennie</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Codziennie coś się dzieje.</strong> Darmowe atrakcje w dzień, wieczorem gry alkoholowe przy barze. Obsługa wciąga wszystkich.<span class="bpa-lang-note">Najłatwiejsze miejsce z listy, żeby przyjechać samemu i wyjechać z ekipą.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">Pub crawle</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Pub crawle po ruin barach.</strong> Impreza w hostelu kończy się między 23:00 a północą, potem grupa rusza do Dzielnicy Żydowskiej.<span class="bpa-lang-note">Bez godziny policyjnej; zameldowanie 15:00 do 23:00.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🪪 <span class="bpa-lang-label">Wiek 18–39 lat</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Tylko od 18 do 39 lat.</strong> Nocować mogą tylko goście w wieku 18 do 39 lat, dzięki temu ekipa jest młoda i towarzyska.<span class="bpa-lang-note">Macie ponad 39 lat? Maverick daje towarzyski klimat bez limitu wieku.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚇 <span class="bpa-lang-label">Deák tér</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>4 minuty do Deák Ferenc tér.</strong> M1, M2, M3 i autobus lotniskowy 100E, z Rumbach Sebestyén utca 6.<span class="bpa-lang-note">Z barów wrócicie pieszo.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najlepszy dla:</strong> Podróżujących solo w wieku od 18 do 39 lat, którzy chcą od razu poznać ekipę, chodzić na codzienne aktywności i wieczorne wyjścia. <strong>Pomińcie, jeśli</strong> macie powyżej 39 lat, podróżujecie jako para szukająca prywatności albo chcecie wcześnie chodzić spać.
@@ -3926,7 +3936,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Od 14 €</div>
-<div class="bpa-psub">Łóżko wieloosobowe/noc • 14 lis 2026</div>
+<div class="bpa-psub">Łóżko wieloosobowe/noc</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/pwL5wYcC" rel="nofollow sponsored noopener" target="_blank">Sprawdźcie ceny i terminy →</a>
 <div class="bpa-trust-micro">
@@ -3964,10 +3974,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobiście przetestowane</span>
-<span class="bpa-sp">Darmowe śniadanie</span>
-<span class="bpa-sp">Zasłonki przy łóżkach</span>
-<span class="bpa-sp">Tramwaje 24/7</span>
-<span class="bpa-sp">Oktogon</span>
+<details class="bpa-lang"><summary class="bpa-sp">🥐 <span class="bpa-lang-label">Darmowe śniadanie</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Śniadanie w cenie.</strong> Do tego zniżki na kolacje. Przy węgierskich cenach jedzenia posiłki oszczędzają dziennie więcej, niż kosztuje łóżko.<span class="bpa-lang-note">Podczas mojego pobytu zniżka na kolację wymagała małego minimalnego wydatku w barze.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Zasłonki przy łóżkach</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Piętrowe łóżka z zasłonką.</strong> Mój 10-osobowy pokój miał zasłonki, ale był słabym punktem. Pokoje 4-, 8- i 12-osobowe są ładniejsze za kilka euro więcej.<span class="bpa-lang-note">Kłódka nie jest w cenie: weźcie własną albo kupcie za około 3 €.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚋 <span class="bpa-lang-label">Tramwaje 24/7</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Nocny tramwaj pod drzwiami.</strong> M1 i całodobowe tramwaje 4 i 6 zatrzymują się tuż przed wejściem, więc powrót o 3 w nocy to nic trudnego.<span class="bpa-lang-note">Druga strona medalu: tramwaje jeżdżą całą noc. Weźcie stopery.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Oktogon</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Oktogon tér 4, VI dzielnica.</strong> Na skrzyżowaniu Andrássy út i Wielkiego Bulwaru, do centrum pieszo.<span class="bpa-lang-note">Recepcja całodobowa, zameldowanie od 14:00 do północy.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najlepszy dla:</strong> Podróżujących budżetowo, którzy chcą najtańszego łóżka w centrum, darmowego śniadania i tanich obiadokolacji. <strong>Pomińcie, jeśli</strong> macie lekki sen albo szukacie kameralnej, towarzyskiej atmosfery.
@@ -3976,7 +3986,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Od 8 €</div>
-<div class="bpa-psub">Łóżko wieloosobowe/noc • 14 lis 2026</div>
+<div class="bpa-psub">Łóżko wieloosobowe/noc</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/HpiYT6P3" rel="nofollow sponsored noopener" target="_blank">Sprawdźcie ceny i terminy →</a>
 <div class="bpa-trust-micro">
@@ -4014,10 +4024,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobiście przetestowane</span>
-<span class="bpa-sp">Strefa coworkingowa</span>
-<span class="bpa-sp">Darmowa kłódka</span>
-<span class="bpa-sp">Łóżka kapsułowe</span>
-<span class="bpa-sp">Hala Targowa</span>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">Strefa coworkingowa</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Prawdziwe miejsce do pracy.</strong> W salonie jest strefa pracy przyjazna laptopom, najlepsze tu warunki do pracy zdalnej.<span class="bpa-lang-note">Towarzysko, ale spokojnie: bardziej akademik niż baza pub crawli.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔒 <span class="bpa-lang-label">Darmowa kłódka</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Kłódka w cenie.</strong> Do schowka dostajecie darmową kłódkę, bez dopłaty 3 € jak gdzie indziej.<span class="bpa-lang-note">Recepcja czynna całą dobę.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Łóżka kapsułowe</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Kapsuły z pełnym wyposażeniem.</strong> Każde łóżko ma zasłonkę, gniazdko, lampkę, półkę i schowek.<span class="bpa-lang-note">Ciasne pokoje: mało miejsca, gdy wszyscy się rozpakowują.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">Hala Targowa</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Gönczy Pál utca 2.</strong> Budynek obok Hali Targowej, kilka minut pieszo nad Dunaj.<span class="bpa-lang-note">3. piętro, bez windy. Fővám tér (M4, tramwaje 2, 47, 49) jest blisko.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najlepszy dla:</strong> Cyfrowych nomadów i podróżnych szukających salonu do pracy z laptopem, łóżek kapsułowych oraz towarzyskiej, ale spokojnej atmosfery. <strong>Pomińcie, jeśli</strong> macie ciężki bagaż (3. piętro, brak windy) lub chcecie prywatnych łazienek.
@@ -4026,7 +4036,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Od 10 €</div>
-<div class="bpa-psub">Łóżko wieloosobowe/noc • 14 lis 2026</div>
+<div class="bpa-psub">Łóżko wieloosobowe/noc</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/mx9SOFXZ" rel="nofollow sponsored noopener" target="_blank">Sprawdźcie ceny i terminy →</a>
 <div class="bpa-trust-micro">
@@ -4065,10 +4075,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobiście przetestowane</span>
-<span class="bpa-sp">Ciche pokoje</span>
-<span class="bpa-sp">Świetny prysznic</span>
-<span class="bpa-sp">Salon do pracy</span>
-<span class="bpa-sp">Pokoje prywatne</span>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">Ciche pokoje</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Spokój taniego hotelu.</strong> Proste, ciche, czyste pokoje, mało hostelowego zgiełku, stworzone do dobrego snu.<span class="bpa-lang-note">Dla par, rodzin i wszystkich, którzy chcą prywatności.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Świetny prysznic</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rewelacyjny prysznic.</strong> W prostym, cichym i czystym pokoju prysznic się wyróżniał.<span class="bpa-lang-note">Pościel i ręczniki za dopłatą: 1150 HUF (około 3 €).</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">Salon do pracy</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Salon przyjazny laptopom.</strong> Świetna strefa pracy w salonie, a recepcja bezpiecznie przechowała mój laptop, gdy mnie nie było.<span class="bpa-lang-note">Opcjonalne hotelowe śniadanie za około 8 €.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚪 <span class="bpa-lang-label">Pokoje prywatne</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Pokoje prywatne od 2 osób.</strong> Pokoje prywatne obok dormitoriów, z całodobową recepcją, by zameldować się o każdej porze.<span class="bpa-lang-note">Csengery utca 11, kilka minut od Oktogonu (M1, tramwaje 4 i 6).</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najlepszy dla:</strong> Par, rodzin i każdego, kto woli cichy, prosty, czysty pokój od życia towarzyskiego. <strong>Pomińcie, jeśli</strong> szukacie towarzyskiego hostelu lub nie znosicie dopłat za pościel.
@@ -4077,7 +4087,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Od 12 €</div>
-<div class="bpa-psub">Łóżko wieloosobowe/noc • 14 lis 2026</div>
+<div class="bpa-psub">Łóżko wieloosobowe/noc</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/RQSFFzzX" rel="nofollow sponsored noopener" target="_blank">Sprawdźcie ceny i terminy →</a>
 <div class="bpa-trust-micro">
@@ -4112,10 +4122,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobiście przetestowane</span>
-<span class="bpa-sp">Pokoje z łazienkami</span>
-<span class="bpa-sp">Zasłonki przy łóżkach</span>
-<span class="bpa-sp">Bar w hostelu</span>
-<span class="bpa-sp">Király utca</span>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Pokoje z łazienkami</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Łazienka w każdym pokoju.</strong> Każdy pokój ma własną łazienkę i klimatyzację, więc bez kolejek na korytarzu.<span class="bpa-lang-note">Czysto, ale zwyczajnie: nie rezerwujcie dla designu.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Zasłonki przy łóżkach</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Własne zasłonki przy łóżku.</strong> Jak na hostel imprezowy, w nocy jest cicho. Dobrze spałem.<span class="bpa-lang-note">Darmowe szafki depozytowe.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍸 <span class="bpa-lang-label">Bar w hostelu</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Towarzyski bar w hostelu.</strong> Przy barze łatwo kogoś poznać, a bary Gozsdu Udvar są kilka kroków dalej.<span class="bpa-lang-note">Międzynarodowe towarzystwo było najlepszą częścią pobytu.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Király utca</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Király utca 20.</strong> 3 minuty pieszo do Deák Ferenc tér (M1, M2, M3 i autobus lotniskowy 100E).<span class="bpa-lang-note">Zameldowanie 14:00 do 23:00, wymeldowanie do 10:00.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najlepszy dla:</strong> Backpackerów, którzy chcą baru z atmosferą towarzyską i nocnego życia pod drzwiami, ale nadal dobrze się wysypiać. <strong>Pomińcie, jeśli</strong> szukacie najtańszego łóżka albo hostelu z wyrazistym charakterem.
@@ -4124,7 +4134,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Od 11 €</div>
-<div class="bpa-psub">Łóżko wieloosobowe/noc • 14 lis 2026</div>
+<div class="bpa-psub">Łóżko wieloosobowe/noc</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/19dbOWJE" rel="nofollow sponsored noopener" target="_blank">Sprawdźcie ceny i terminy →</a>
 <div class="bpa-trust-micro">
@@ -4161,10 +4171,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobiście przetestowane</span>
-<span class="bpa-sp">Domowa atmosfera</span>
-<span class="bpa-sp">Mały hostel</span>
-<span class="bpa-sp">Darmowa herbata i kawa</span>
-<span class="bpa-sp">Hala Targowa</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛋️ <span class="bpa-lang-label">Domowa atmosfera</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Prawdziwy salon.</strong> Wszyscy lądują na kanapie, żeby pogadać, w dzień z grami planszowymi.<span class="bpa-lang-note">Jeśli lubicie przytulny, domowy klimat, to jest raj.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">Mały hostel</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Mały i osobisty.</strong> Podczas mojego pobytu cały hostel prowadziła jedna sympatyczna gospodyni. To dzięki niej ma oceny 9/10.<span class="bpa-lang-note">Brak zamykanej szafki i biurka z gniazdkami.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">Darmowa herbata i kawa</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Za darmo przez cały dzień.</strong> Herbata i kawa w samoobsłudze przez cały dzień, w salonie.<span class="bpa-lang-note">Zameldowanie tylko 14:00 do 21:00: przy późnym przyjeździe wybierzcie coś innego.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">Hala Targowa</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Vámház körút 5.</strong> Obok Hali Targowej i Mostu Wolności, kilka minut od Dunaju.<span class="bpa-lang-note">Fővám tér (M4, tramwaje 2, 47, 49) pod drzwiami.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najlepszy dla:</strong> Introwertyków i osób podróżujących w spokojnym tempie, które chcą małego, przytulnego, domowego miejsca nad Dunajem. <strong>Pomińcie, jeśli</strong> przylatujecie późno w nocy, potrzebujecie zamykanej szafki lub biurka z gniazdkiem.
@@ -4173,7 +4183,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Od 11 €</div>
-<div class="bpa-psub">Łóżko wieloosobowe/noc • 14 lis 2026</div>
+<div class="bpa-psub">Łóżko wieloosobowe/noc</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/LV5kBsYQ" rel="nofollow sponsored noopener" target="_blank">Sprawdźcie ceny i terminy →</a>
 <div class="bpa-trust-micro">
@@ -4213,10 +4223,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobiście przetestowane</span>
-<span class="bpa-sp">Widok na Bazylikę</span>
-<span class="bpa-sp">Prywatne łazienki</span>
-<span class="bpa-sp">Darmowa herbata i kawa</span>
-<span class="bpa-sp">Andrássy út</span>
+<details class="bpa-lang"><summary class="bpa-sp">⛪ <span class="bpa-lang-label">Widok na Bazylikę</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Widok na Bazylikę św. Stefana.</strong> Na początku Andrássy út, kilka minut pieszo od Bazyliki, Opery i Deák Ferenc tér.<span class="bpa-lang-note">Najlepsza baza z tej listy do zwiedzania pieszo.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Prywatne łazienki</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Własna łazienka.</strong> Dormitoria i pokoje dwuosobowe z prywatną łazienką; moja była świetna i czysta.<span class="bpa-lang-note">Pokoje prywatne od około 22 €.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">Darmowa herbata i kawa</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Darmowa herbata, kawa i pościel.</strong> Herbata i kawa w samoobsłudze i w pełni wyposażone kuchnie, według hostelu.<span class="bpa-lang-note">Spokojnie, nie towarzysko: bez wydarzeń i osobistego podejścia.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Andrássy út</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Andrássy út 2, 1. piętro.</strong> Bajcsy-Zsilinszky út (M1) pod drzwiami, Deák Ferenc tér (M1, M2, M3) blisko pieszo.<span class="bpa-lang-note">Ruchliwa ulica: poproście o pokój od podwórza. Jedne schody, bez windy.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najlepszy dla:</strong> Zwiedzających, którzy chcą spokojnego, czystego łóżka na początku Andrássy út, kilka kroków od Bazyliki św. Stefana. <strong>Pomińcie, jeśli</strong> szukacie towarzyskiego hostelu albo przeszkadza Wam hałas uliczny.
@@ -4225,7 +4235,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Od 11 €</div>
-<div class="bpa-psub">Łóżko wieloosobowe/noc • 14 lis 2026</div>
+<div class="bpa-psub">Łóżko wieloosobowe/noc</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/GpKMoQF5" rel="nofollow sponsored noopener" target="_blank">Sprawdźcie ceny i terminy →</a>
 <div class="bpa-trust-micro">
@@ -4253,10 +4263,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Osobiście przetestowane</span>
-<span class="bpa-sp">Przytulny loft</span>
-<span class="bpa-sp">Lokalne wskazówki</span>
-<span class="bpa-sp">Kuchnia dla gości</span>
-<span class="bpa-sp">Dzielnica Żydowska</span>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">Przytulny loft</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Loft na poddaszu.</strong> Odnowiony i kameralny, czujecie się jak u znajomych.<span class="bpa-lang-note">Dormitoria 4- i 6-osobowe mieszane lub damskie, plus prywatny pokój dwuosobowy.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🗺️ <span class="bpa-lang-label">Lokalne wskazówki</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Wskazówki, których nie ma w sieci.</strong> Gospodarze polecili mi bary, restauracje i festiwale, których nie było w żadnym przewodniku.<span class="bpa-lang-note">Przyjazna, gościnna obsługa.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍳 <span class="bpa-lang-label">Kuchnia dla gości</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>W pełni wyposażona kuchnia.</strong> Gotujcie sami i oszczędzajcie na cenach budapeszteńskich restauracji.<span class="bpa-lang-note">Podczas mojego pobytu tylko gotówka: weźcie forinty na wszelki wypadek.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Dzielnica Żydowska</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Akácfa utca 10, VII dzielnica.</strong> W dzielnicy rozrywki, blisko głównych atrakcji i ruin barów.<span class="bpa-lang-note">Tramwaje 4 i 6 przy Wesselényi utca. Na weekend weźcie stopery.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najlepszy dla:</strong> Podróżujących solo i małych grup szukających przytulnego hostelu w stylu mieszkania z przyjaznymi gospodarzami w imprezowej dzielnicy. <strong>Pomińcie, jeśli</strong> potrzebujecie płatności kartą, dostępu bez schodów lub ciszy w weekendowe noce.
@@ -4265,7 +4275,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Od 15 €</div>
-<div class="bpa-psub">Łóżko wieloosobowe/noc • 14 lis 2026</div>
+<div class="bpa-psub">Łóżko wieloosobowe/noc</div>
 </div>
 <a class="bpa-btn" href="https://tp.media/r?marker=404154.article-best-hostels-budapest-das-nest-comparison-list&amp;trs=204442&amp;p=3518&amp;u=https%3A%2F%2Fwww.hostelworld.com%2Fst%2Fhostels%2Fp%2F47301%2Fdas-nest-budapest%2F&amp;campaign_id=93" rel="nofollow sponsored noopener" target="_blank">Sprawdźcie ceny i terminy →</a>
 <div class="bpa-trust-micro">
@@ -4291,10 +4301,10 @@ a.w-webflow-badge,
 <div class="bpa-proof"></div>
 </div>
 <div class="bpa-specs-row">
-<span class="bpa-sp">Bar na dachu</span>
-<span class="bpa-sp">Codzienne pub crawle</span>
-<span class="bpa-sp">Tylko 18+</span>
-<span class="bpa-sp">Dzielnica Żydowska</span>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">Bar na dachu</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Bar na dachu tylko dla gości.</strong> Happy hour codziennie od 16:00 do 19:00.<span class="bpa-lang-note">Ponad 300 łóżek, otwarty od 2015 roku, według hostelu.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">Codzienne pub crawle</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Impreza co wieczór.</strong> Codzienne pub crawle, a do tego bingo crawle, SPArty i imprezowe statki organizowane przez hostel.<span class="bpa-lang-note">Goście wspominają hałas z klubu na dole.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔞 <span class="bpa-lang-label">Tylko 18+</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Wyłącznie 18+.</strong> Stworzony na nocne wyjścia, nie na wczesne pobudki.<span class="bpa-lang-note">Zameldowanie 15:00 do północy; płatność gotówką lub kartą.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Dzielnica Żydowska</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Dob utca 19, VII dzielnica.</strong> Krótki spacer do Gozsdu Udvar i Szimpla Kert.<span class="bpa-lang-note">Astoria (M2) i Deák Ferenc tér (M1, M2, M3) kilka minut stąd.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Najlepszy dla:</strong> Grup 18+ i imprezowiczów solo, którzy chcą dużego, głośnego hostelu imprezowego z barem na dachu w dzielnicy ruin barów. <strong>Pomińcie, jeśli</strong> macie lekki sen, wcześnie wstajecie lub chcecie zasłonek przy łóżkach.
@@ -4303,7 +4313,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">Od 13 €</div>
-<div class="bpa-psub">Łóżko wieloosobowe/noc • 14 lis 2026</div>
+<div class="bpa-psub">Łóżko wieloosobowe/noc</div>
 </div>
 <a class="bpa-btn" href="https://tp.media/r?marker=404154.article-best-hostels-budapest-the-hive-comparison-list&amp;trs=204442&amp;p=3518&amp;u=https%3A%2F%2Fwww.hostelworld.com%2Fhostels%2Fp%2F96091%2Fthe-hive-party-hostel-budapest%2F&amp;campaign_id=93" rel="nofollow sponsored noopener" target="_blank">Sprawdźcie ceny i terminy →</a>
 <div class="bpa-trust-micro">
@@ -8987,4 +8997,92 @@ a.cd-editorial-bookmark .cd-editorial-meta{display:none!important}
 a.cd-editorial-bookmark .cd-editorial-desc{display:-webkit-box!important;-webkit-line-clamp:1!important;-webkit-box-orient:vertical!important;overflow:hidden!important;font-size:13px!important;line-height:1.4!important;color:#64748b!important;margin:3px 0 0!important}
 a.cd-editorial-bookmark .cd-editorial-title{font-family:'Playfair Display',Georgia,serif!important;font-size:16px!important;line-height:1.3!important;margin:0!important;color:#0a192f!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
 a.cd-editorial-bookmark::after{content:"\203A"!important;position:static!important;order:2;flex:0 0 auto;font-size:22px;line-height:1;color:#b88214}
-</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style></body></html>
+</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style><script id="bpa-lang-js">
+(function(){
+  var N={en:'English',fr:'French',es:'Spanish',de:'German',it:'Italian',pt:'Portuguese',nl:'Dutch',pl:'Polish',ru:'Russian',ar:'Arabic',hi:'Hindi',zh:'Chinese',ja:'Japanese',ko:'Korean'};
+  function init(){
+    var langs=[];
+    try{langs=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']);}catch(e){}
+    var code=String(langs[0]||'').slice(0,2).toLowerCase();
+    var boxes=document.querySelectorAll('.bpa-lang');
+    if(!boxes.length) return;
+    document.documentElement.classList.add('bpa-lang-on');
+
+    var pop=document.createElement('div');
+    pop.id='bpa-lang-float';
+    pop.setAttribute('role','tooltip');
+    document.body.appendChild(pop);
+    var current=null, pinned=false, hideTimer=null;
+    var canHover=window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    function place(d){
+      var s=d.querySelector('summary').getBoundingClientRect();
+      var vw=document.documentElement.clientWidth, vh=window.innerHeight;
+      var w=Math.min(290, vw-16);
+      pop.style.width=w+'px';
+      var left=Math.max(8, Math.min(s.left, vw-w-8));
+      var h=pop.offsetHeight;
+      var above=(s.bottom+10+h>vh) && (s.top-10-h>0);
+      var top=above ? (s.top-10-h) : (s.bottom+10);
+      pop.classList.toggle('is-above', above);
+      pop.style.left=(left+window.scrollX)+'px';
+      pop.style.top=(top+window.scrollY)+'px';
+      pop.style.setProperty('--ax', Math.max(14, Math.min(w-14, s.left+Math.min(s.width,40)/2-left))+'px');
+    }
+    function show(d, pin){
+      clearTimeout(hideTimer);
+      if(current && current!==d) current.classList.remove('is-open');
+      current=d; pinned=!!pin;
+      pop.innerHTML=d.querySelector('.bpa-lang-pop').innerHTML;
+      d.classList.add('is-open');
+      d.querySelector('summary').setAttribute('aria-expanded','true');
+      place(d);
+      pop.classList.add('is-visible');
+    }
+    function hide(){
+      clearTimeout(hideTimer);
+      if(current){ current.classList.remove('is-open'); current.querySelector('summary').setAttribute('aria-expanded','false'); }
+      current=null; pinned=false;
+      pop.classList.remove('is-visible');
+    }
+    function softHide(e){
+      if(pinned) return;
+      var to=e && e.relatedTarget;
+      if(to && to.closest && (to.closest('#bpa-lang-float') || (current && current.contains(to)))) return;
+      hide();
+    }
+
+    boxes.forEach(function(d){
+      var sum=d.querySelector('summary');
+      sum.setAttribute('aria-expanded','false');
+      sum.addEventListener('click',function(e){
+        e.preventDefault();
+        if(current===d && pinned){ hide(); return; }
+        show(d,true);
+      });
+      if(canHover){
+        sum.addEventListener('mouseenter',function(){ if(!pinned||current!==d) show(d,false); });
+        sum.addEventListener('mouseleave',softHide);
+      }
+      if(!code||code==='en'||!N[code]) return;
+      var list=(d.getAttribute('data-langs')||'').split(',');
+      if(list.indexOf(code)===-1) return;
+      var label=d.querySelector('.bpa-lang-label');
+      if(label) label.textContent='Audio in '+N[code]+' \u2713';
+      d.classList.add('is-match');
+      var names=d.querySelector('.bpa-lang-names');
+      if(names) names.innerHTML=names.textContent.split(', ').map(function(n){return n===N[code]?'<b>'+n+'</b>':n;}).join(', ');
+    });
+    pop.addEventListener('mouseenter',function(){ clearTimeout(hideTimer); });
+    pop.addEventListener('mouseleave',softHide);
+    document.addEventListener('click',function(e){
+      if(!current) return;
+      if(e.target.closest && (e.target.closest('.bpa-lang') || e.target.closest('#bpa-lang-float'))) return;
+      hide();
+    });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') hide(); });
+    window.addEventListener('resize',function(){ if(current) place(current); });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script></body></html>

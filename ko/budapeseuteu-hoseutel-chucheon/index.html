@@ -107,7 +107,36 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) h2.ltt-section-title,body:has(.calc-title) main.container h2{font-size:28px!important}
 }
 </style>
-</head><body><header class="ltt-navbar" role="banner">
+<style id="bpa-lang-css">
+.bpa-lang{display:inline-flex;flex-wrap:wrap;gap:5px;flex-shrink:0}
+.bpa-lang[open]{flex-basis:100%}
+.bpa-lang>summary{list-style:none;cursor:pointer;user-select:none}
+.bpa-lang>summary::-webkit-details-marker{display:none}
+.bpa-lang>summary:hover{background:#e2e8f0 !important}
+.bpa-lang-chev{font-size:12px;line-height:1;opacity:.75;transition:transform .15s}
+.bpa-lang[open] .bpa-lang-chev{transform:rotate(180deg)}
+.bpa-lang.is-match>summary{background:#dcfce7 !important;color:#166534 !important}
+.bpa-lang-pop{flex-basis:100%;box-sizing:border-box;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.5;color:#334155;white-space:normal}
+.bpa-lang-pop strong{color:#0f172a}
+.bpa-lang-names b{color:#166534}
+.bpa-lang-note{display:block;margin-top:3px;color:#64748b;font-size:11px}
+/* With JS: the list floats over the card instead of pushing it down */
+html.bpa-lang-on .bpa-lang[open]{flex-basis:auto}
+html.bpa-lang-on .bpa-lang .bpa-lang-pop{display:none}
+html.bpa-lang-on .bpa-lang.is-open .bpa-lang-chev{transform:rotate(180deg)}
+html.bpa-lang-on .bpa-lang.is-open>summary{background:#e2e8f0 !important}
+html.bpa-lang-on .bpa-lang.is-match.is-open>summary{background:#bbf7d0 !important}
+#bpa-lang-float{position:absolute;z-index:9990;max-width:290px;box-sizing:border-box;background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 10px 30px rgba(15,23,42,.14);padding:10px 12px;font-size:12px;line-height:1.5;color:#334155;opacity:0;transform:translateY(-4px);transition:none;pointer-events:none}
+#bpa-lang-float.is-visible{opacity:1;transform:none;pointer-events:auto;transition:opacity .12s ease,transform .12s ease}
+#bpa-lang-float.is-above{transform:translateY(4px)}
+#bpa-lang-float.is-above.is-visible{transform:none}
+#bpa-lang-float strong{color:#0f172a}
+#bpa-lang-float .bpa-lang-names b{color:#166534}
+#bpa-lang-float::before{content:"";position:absolute;left:var(--ax,20px);top:-6px;width:10px;height:10px;background:#fff;border-left:1px solid #e2e8f0;border-top:1px solid #e2e8f0;transform:translateX(-50%) rotate(45deg)}
+#bpa-lang-float.is-above::before{top:auto;bottom:-6px;transform:translateX(-50%) rotate(225deg)}
+#bpa-lang-float::after{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+#bpa-lang-float.is-above::after{top:auto;bottom:-12px}
+</style></head><body><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/ko">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -177,8 +206,8 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 <div class="ltt-mega-menu is-narrow is-right" role="menu">
 <div class="ltt-mega-col">
 <div class="ltt-mega-head">부다페스트의 겨울</div>
-<a class="ltt-mega-item" href="/things-to-do-budapest-november"><span class="ltt-thumb ltt-thumb-icon ltt-thumb-month" style="width:48px;height:48px;background:#fff7ed;color:#9a3412"><span class="ltt-month-top">2026</span>NOV</span><div><strong>11월의 부다페스트</strong><p>야간 크루즈, 온천, 마켓</p></div></a>
-<a class="ltt-mega-item" href="/things-to-do-budapest-december"><span class="ltt-thumb ltt-thumb-icon ltt-thumb-month" style="width:48px;height:48px;background:#ecfdf5;color:#065f46"><span class="ltt-month-top">2026</span>DEC</span><div><strong>12월의 부다페스트</strong><p>크리스마스 크루즈, 온천, 연휴 운영 시간</p></div></a>
+<a class="ltt-mega-item" href="/things-to-do-budapest-november"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/things-to-do-budapest-november.webp" decoding="async" height="48" width="48"/><div><strong>11월의 부다페스트</strong><p>야간 크루즈, 온천, 마켓</p></div></a>
+<a class="ltt-mega-item" href="/things-to-do-budapest-december"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/things-to-do-budapest-december.webp" decoding="async" height="48" width="48"/><div><strong>12월의 부다페스트</strong><p>크리스마스 크루즈, 온천, 연휴 운영 시간</p></div></a>
 <a class="ltt-mega-item" href="/budapest-christmas-markets"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-christmas-markets.webp" decoding="async" height="48" width="48"/><div><strong>크리스마스 마켓</strong><p>일정, 운영 시간, 가격, 지도</p></div></a>
 <a class="ltt-mega-item" href="/christmas-cruises-budapest"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/christmas-cruises-budapest-v2.webp" decoding="async" height="48" width="48"/><div><strong>크리스마스 크루즈</strong><p>다뉴브강에서 즐기는 크리스마스 디너</p></div></a>
 <a class="ltt-mega-item" href="/new-years-eve-cruises-budapest"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/new-years-eve-cruises-budapest-v3.webp" decoding="async" height="48" width="48"/><div><strong>새해맞이 크루즈</strong><p>강 위에서 보는 자정 불꽃놀이</p></div></a>
@@ -190,15 +219,15 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 <div class="ltt-mega-menu is-right" role="menu">
 <div class="ltt-mega-col">
 <div class="ltt-mega-head">여행 계획</div>
-<a class="ltt-mega-item" href="/ko/budapeseuteu-yeohaeng-gaideu"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#e0f2fe;color:#0369a1"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" x2="9" y1="3" y2="18"></line><line x1="15" x2="15" y1="6" y2="21"></line></svg></span><div><strong>부다페스트 여행 가이드</strong><p>크루즈, 명소, 여행 계획</p></div></a>
-<a class="ltt-mega-item" href="/ko/budapest-card-gachi"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#fef3c7;color:#855a00"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><rect height="14" rx="2" width="20" x="2" y="5"></rect><line x1="2" x2="22" y1="10" y2="10"></line><line x1="6" x2="10" y1="15" y2="15"></line></svg></span><div><strong>Budapest Card 계산기</strong><p>명소 94곳 가성비 인터랙티브 분석</p></div></a>
-<a class="ltt-mega-item" href="/ko/budapeseuteu-gonghang-sinae"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#ede9fe;color:#5b21b6"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg></span><div><strong>공항에서 시내까지</strong><p>100E 급행버스, 택시 &amp; 교통 요금</p></div></a>
-<a aria-current="page" class="ltt-mega-item active" href="/ko/budapeseuteu-hoseutel-chucheon"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#dcfce7;color:#166534"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg></span><div><strong>부다페스트 추천 호스텔</strong><p>소셜, 부티크 &amp; 저가 호스텔 평가</p></div></a>
+<a class="ltt-mega-item" href="/ko/budapeseuteu-yeohaeng-gaideu"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-itinerary.webp" decoding="async" height="48" width="48"/><div><strong>부다페스트 여행 가이드</strong><p>크루즈, 명소, 여행 계획</p></div></a>
+<a class="ltt-mega-item" href="/ko/budapest-card-gachi"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-card-is-it-worth-it.webp" decoding="async" height="48" width="48"/><div><strong>Budapest Card 계산기</strong><p>명소 94곳 가성비 인터랙티브 분석</p></div></a>
+<a class="ltt-mega-item" href="/ko/budapeseuteu-gonghang-sinae"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-airport-to-city-center.webp" decoding="async" height="48" width="48"/><div><strong>공항에서 시내까지</strong><p>100E 급행버스, 택시 &amp; 교통 요금</p></div></a>
+<a aria-current="page" class="ltt-mega-item active" href="/ko/budapeseuteu-hoseutel-chucheon"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/best-hostels-budapest.webp" decoding="async" height="48" width="48"/><div><strong>부다페스트 추천 호스텔</strong><p>소셜, 부티크 &amp; 저가 호스텔 평가</p></div></a>
 </div>
 <div class="ltt-mega-col">
 <div class="ltt-mega-head">데이터</div>
-<a class="ltt-mega-item" href="/ko/budapeseuteu-gwangwang-tonggye"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#eef2f7;color:#1e3a5f"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewBox="0 0 24 24" width="22"><line x1="5" x2="5" y1="20" y2="13"></line><line x1="12" x2="12" y1="20" y2="6"></line><line x1="19" x2="19" y1="20" y2="10"></line></svg></span><div><strong>부다페스트 관광 통계</strong><p>공식 방문객 &amp; 지출 데이터</p></div></a>
-<a class="ltt-mega-item" href="/hungary-tourism-statistics"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#eef2f7;color:#1e3a5f"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewBox="0 0 24 24" width="22"><line x1="5" x2="5" y1="20" y2="13"></line><line x1="12" x2="12" y1="20" y2="6"></line><line x1="19" x2="19" y1="20" y2="10"></line></svg></span><div><strong>헝가리 관광 통계</strong><p>헝가리를 찾는 관광객 수</p></div></a>
+<a class="ltt-mega-item" href="/ko/budapeseuteu-gwangwang-tonggye"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-tourism-statistics.webp" decoding="async" height="48" width="48"/><div><strong>부다페스트 관광 통계</strong><p>공식 방문객 &amp; 지출 데이터</p></div></a>
+<a class="ltt-mega-item" href="/hungary-tourism-statistics"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/hungary-tourism-statistics.webp" decoding="async" height="48" width="48"/><div><strong>헝가리 관광 통계</strong><p>헝가리를 찾는 관광객 수</p></div></a>
 </div>
 </div>
 </div>
@@ -370,8 +399,8 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 <summary class="ltt-mobile-acc-sum"><span>시즌</span><svg class="ltt-chevron" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
 <div class="ltt-mobile-acc-body">
 <div class="ltt-mobile-label">부다페스트의 겨울</div>
-<a class="ltt-mobile-link" href="/things-to-do-budapest-november"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon ltt-thumb-month" style="width:36px;height:36px;background:#fff7ed;color:#9a3412"><span class="ltt-month-top">2026</span>NOV</span><span>11월의 부다페스트</span></span></a>
-<a class="ltt-mobile-link" href="/things-to-do-budapest-december"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon ltt-thumb-month" style="width:36px;height:36px;background:#ecfdf5;color:#065f46"><span class="ltt-month-top">2026</span>DEC</span><span>12월의 부다페스트</span></span></a>
+<a class="ltt-mobile-link" href="/things-to-do-budapest-november"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/things-to-do-budapest-november.webp" decoding="async" height="36" width="36"/><span>11월의 부다페스트</span></span></a>
+<a class="ltt-mobile-link" href="/things-to-do-budapest-december"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/things-to-do-budapest-december.webp" decoding="async" height="36" width="36"/><span>12월의 부다페스트</span></span></a>
 <a class="ltt-mobile-link" href="/budapest-christmas-markets"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-christmas-markets.webp" decoding="async" height="36" width="36"/><span>크리스마스 마켓</span></span></a>
 <a class="ltt-mobile-link" href="/christmas-cruises-budapest"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/christmas-cruises-budapest-v2.webp" decoding="async" height="36" width="36"/><span>크리스마스 크루즈</span></span></a>
 <a class="ltt-mobile-link" href="/new-years-eve-cruises-budapest"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/new-years-eve-cruises-budapest-v3.webp" decoding="async" height="36" width="36"/><span>새해맞이 크루즈</span></span></a>
@@ -380,13 +409,13 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 <details class="ltt-mobile-acc">
 <summary class="ltt-mobile-acc-sum"><span>여행 계획</span><svg class="ltt-chevron" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
 <div class="ltt-mobile-acc-body">
-<a class="ltt-mobile-link" href="/ko/budapeseuteu-yeohaeng-gaideu"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#e0f2fe;color:#0369a1"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" x2="9" y1="3" y2="18"></line><line x1="15" x2="15" y1="6" y2="21"></line></svg></span><span>부다페스트 여행 가이드</span></span></a>
-<a class="ltt-mobile-link" href="/ko/budapest-card-gachi"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#fef3c7;color:#855a00"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><rect height="14" rx="2" width="20" x="2" y="5"></rect><line x1="2" x2="22" y1="10" y2="10"></line><line x1="6" x2="10" y1="15" y2="15"></line></svg></span><span>Budapest Card 계산기</span></span></a>
-<a class="ltt-mobile-link" href="/ko/budapeseuteu-gonghang-sinae"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#ede9fe;color:#5b21b6"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg></span><span>공항에서 시내까지</span></span></a>
-<a aria-current="page" class="ltt-mobile-link active" href="/ko/budapeseuteu-hoseutel-chucheon"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#dcfce7;color:#166534"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg></span><span>부다페스트 추천 호스텔</span></span></a>
+<a class="ltt-mobile-link" href="/ko/budapeseuteu-yeohaeng-gaideu"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-itinerary.webp" decoding="async" height="36" width="36"/><span>부다페스트 여행 가이드</span></span></a>
+<a class="ltt-mobile-link" href="/ko/budapest-card-gachi"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-card-is-it-worth-it.webp" decoding="async" height="36" width="36"/><span>Budapest Card 계산기</span></span></a>
+<a class="ltt-mobile-link" href="/ko/budapeseuteu-gonghang-sinae"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-airport-to-city-center.webp" decoding="async" height="36" width="36"/><span>공항에서 시내까지</span></span></a>
+<a aria-current="page" class="ltt-mobile-link active" href="/ko/budapeseuteu-hoseutel-chucheon"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/best-hostels-budapest.webp" decoding="async" height="36" width="36"/><span>부다페스트 추천 호스텔</span></span></a>
 <div class="ltt-mobile-label">데이터</div>
-<a class="ltt-mobile-link" href="/ko/budapeseuteu-gwangwang-tonggye"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#eef2f7;color:#1e3a5f"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewBox="0 0 24 24" width="22"><line x1="5" x2="5" y1="20" y2="13"></line><line x1="12" x2="12" y1="20" y2="6"></line><line x1="19" x2="19" y1="20" y2="10"></line></svg></span><span>부다페스트 관광 통계</span></span></a>
-<a class="ltt-mobile-link" href="/hungary-tourism-statistics"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#eef2f7;color:#1e3a5f"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewBox="0 0 24 24" width="22"><line x1="5" x2="5" y1="20" y2="13"></line><line x1="12" x2="12" y1="20" y2="6"></line><line x1="19" x2="19" y1="20" y2="10"></line></svg></span><span>헝가리 관광 통계</span></span></a>
+<a class="ltt-mobile-link" href="/ko/budapeseuteu-gwangwang-tonggye"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-tourism-statistics.webp" decoding="async" height="36" width="36"/><span>부다페스트 관광 통계</span></span></a>
+<a class="ltt-mobile-link" href="/hungary-tourism-statistics"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/hungary-tourism-statistics.webp" decoding="async" height="36" width="36"/><span>헝가리 관광 통계</span></span></a>
 </div>
 </details>
 <div class="ltt-mobile-section">
@@ -1024,27 +1053,8 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 </div>
 <div class="ltt-lead-copy">
 <p>부다페스트 호스텔을 잘못 고르면 돈보다 잠을 잃게 됩니다. 시내 중심가 도미토리는 <strong>1박 €8~€15</strong> 선이지만, 유대인 지구의 파티 호스텔과 중앙시장 옆의 조용한 포드형 호스텔은 전혀 다른 여행이 됩니다.</p>
-<p>저는 아래 <strong>호스텔 10곳 중 9곳에 직접 숙박</strong>했으며(<strong>Maverick에서 30박 €280</strong> 포함), 예약을 좌우하는 기준인 야간 소음, 침대 프라이버시, 욕실, 주방, 연령 제한, 분위기, 실제 1박 요금을 기준으로 나란히 비교했습니다. The Hive만 직접 자 보지 않은 파티 호스텔이라 확인된 사실 정보만 실었고 "직접 숙박" 배지는 넣지 않았습니다.</p>
-<p>가격과 평점은 <strong>2026년 11월 14일</strong>에 확인했습니다. 필터를 눌러 파티, 조용한 숙소, 가성비, 개인실, 디지털 노마드 추천 숙소로 바로 이동해 보세요.</p>
-<figure class="cd-bookmark-wrapper">
-<a class="cd-editorial-bookmark" href="/ko/budapeseuteu-peuroseko-keulujeu" rel="noopener" target="_blank">
-<div class="cd-editorial-body">
-<div>
-<div class="cd-editorial-title">부다페스트 프로세코 크루즈 (2026): 프로세코 무제한 베스트 보트 5선 + 음료 할인 2곳</div>
-<div class="cd-editorial-desc">€17.50부터 즐기는 프로세코 무제한: 실시간 예약 사이트 기준 베스트 보트 5곳과 음료 할인 2곳을 비교했습니다.</div>
-</div>
-<div class="cd-editorial-meta">
-<img alt="BUDAPEST ADVENTURES" class="cd-editorial-icon" height="18" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='/assets/budapest-adventures-logo.png';}" src="/assets/budapest-adventures-logo-96.webp" width="18"/>
-<span class="cd-editorial-pub">BUDAPEST ADVENTURES</span>
-<span class="cd-editorial-dot">•</span>
-<span class="cd-editorial-author">Adam Dimitrov</span>
-</div>
-</div>
-<div class="cd-editorial-thumb">
-<img alt="부다페스트 프로세코 크루즈 (2026): 프로세코 무제한 베스트 보트 5선 + 음료 할인 2곳" fetchpriority="high" loading="eager" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='/assets/cdn/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero-p-500.webp';}" src="assets/cdn/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero-p-500.webp"/>
-</div>
-</a>
-</figure>
+<p>저는 아래 <strong>호스텔 10곳 중 9곳에 직접 숙박</strong>했으며(<strong>Maverick에서 30박 €280</strong> 포함), 예약을 좌우하는 기준인 야간 소음, 침대 프라이버시, 욕실, 주방, 연령 제한, 분위기, 실제 1박 요금을 기준으로 나란히 비교했습니다.</p>
+<p>필터를 눌러 파티, 조용한 숙소, 가성비, 개인실, 디지털 노마드 추천 숙소로 바로 이동해 보세요.</p>
 </div>
 <div class="ltt-integrated-filter-bar">
 <span class="ltt-filter-label">필터:</span>
@@ -3864,10 +3874,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ 직접 숙박</span>
-<span class="bpa-sp">프라이버시 커튼</span>
-<span class="bpa-sp">루프탑 테라스</span>
-<span class="bpa-sp">조용한 골목</span>
-<span class="bpa-sp">장기 숙박 가성비</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">프라이버시 커튼</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>모든 침대에 커튼.</strong> 커튼과 큰 사물함이 있는 모던한 도미토리라 방이 꽉 차도 차분해요.<span class="bpa-lang-note">귀중품은 꼭 잠가 두세요. 저는 후드티를 도난당했어요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">루프탑 테라스</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>투숙객 전용 테라스.</strong> 파티 호스텔은 아니지만 사교적이에요. 저녁엔 쉽게 사람을 사귀고, 그다음엔 푹 잘 수 있어요.<span class="bpa-lang-note">투숙객: 혼자 여행자, 장기 투숙객, 원격 근무자.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">조용한 골목</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lónyay utca, 9구.</strong> 7구 파티 거리에서 떨어진 작은 골목이에요. 30박 동안 거리 소음이 거의 없었어요.<span class="bpa-lang-note">Kálvin tér(M3, M4)와 Fővám tér(M4, 트램 2·47·49번)까지 걸어서 몇 분.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💶 <span class="bpa-lang-label">장기 숙박 가성비</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>30박에 €280.</strong> 3월 기준 1박 약 €9.33로, 중심가에서 찾은 가장 좋은 장기 숙박 가격이에요.<span class="bpa-lang-note">가까운 날짜 기준 도미토리 약 €10부터, 개인실 €28부터.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>이런 분께 추천:</strong> 파티 소음 없이 교류할 수 있는 소셜 호스텔을 찾는 1인 여행자, 디지털 노마드, 장기 배낭여행자. <strong>비추천:</strong> 루인 바 바로 옆의 파티 호스텔을 원한다면 맞지 않습니다.
@@ -3876,7 +3886,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€10부터</div>
-<div class="bpa-psub">도미토리 1박 • 2026년 11월 14일</div>
+<div class="bpa-psub">도미토리 1박</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/4klGcrSU" rel="nofollow sponsored noopener" target="_blank">요금 &amp;amp; 날짜 확인 →</a>
 <div class="bpa-trust-micro">
@@ -3914,10 +3924,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ 직접 숙박</span>
-<span class="bpa-sp">매일 무료 액티비티</span>
-<span class="bpa-sp">바 크롤</span>
-<span class="bpa-sp">만 18~39세</span>
-<span class="bpa-sp">Deák tér</span>
+<details class="bpa-lang"><summary class="bpa-sp">🎯 <span class="bpa-lang-label">매일 무료 액티비티</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>매일 뭔가 있어요.</strong> 낮에는 무료 액티비티, 저녁엔 바에서 술 게임. 스태프가 모두를 끌어들여요.<span class="bpa-lang-note">혼자 와서 친구들과 떠나기 가장 쉬운 곳이에요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">바 크롤</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>폐허 바 펍 크롤.</strong> 호스텔 파티는 밤 11시에서 자정 사이에 끝나고, 그다음 다 같이 유대인 지구로 나가요.<span class="bpa-lang-note">통금 없음, 체크인 15:00~23:00.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🪪 <span class="bpa-lang-label">만 18~39세</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>18~39세만 가능.</strong> 18~39세 투숙객만 묵을 수 있어서 분위기가 젊고 사교적이에요.<span class="bpa-lang-note">39세 이상이라면 나이 제한 없이 사교적인 Maverick을 추천해요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚇 <span class="bpa-lang-label">Deák tér</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Deák Ferenc tér까지 4분.</strong> Rumbach Sebestyén utca 6에서 M1, M2, M3와 공항버스 100E를 탈 수 있어요.<span class="bpa-lang-note">바에서 걸어서 돌아올 수 있어요.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>이런 분께 추천:</strong> 금방 어울릴 친구와 매일의 액티비티, 나이트라이프를 원하는 만 18~39세 1인 여행자. <strong>비추천:</strong> 만 39세 초과이거나 프라이버시를 원하는 커플, 일찍 자고 싶은 여행자.
@@ -3926,7 +3936,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€14부터</div>
-<div class="bpa-psub">도미토리 1박 • 2026년 11월 14일</div>
+<div class="bpa-psub">도미토리 1박</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/pwL5wYcC" rel="nofollow sponsored noopener" target="_blank">요금 &amp;amp; 날짜 확인 →</a>
 <div class="bpa-trust-micro">
@@ -3964,10 +3974,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ 직접 숙박</span>
-<span class="bpa-sp">무료 조식</span>
-<span class="bpa-sp">프라이버시 커튼</span>
-<span class="bpa-sp">24시간 트램</span>
-<span class="bpa-sp">Oktogon</span>
+<details class="bpa-lang"><summary class="bpa-sp">🥐 <span class="bpa-lang-label">무료 조식</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>조식 포함.</strong> 저녁도 할인돼요. 헝가리 식비를 생각하면 식사로 아끼는 돈이 침대값보다 많아요.<span class="bpa-lang-note">제가 묵을 땐 저녁 할인에 바에서 소액 최소 주문이 필요했어요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">프라이버시 커튼</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>커튼 달린 2층 침대.</strong> 제가 묵은 10인실은 커튼이 있었지만 가장 아쉬운 부분이었어요. 4·8·12인실은 몇 유로 더 내면 훨씬 나아요.<span class="bpa-lang-note">자물쇠는 제공되지 않아요. 직접 챙기거나 약 €3에 구입하세요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚋 <span class="bpa-lang-label">24시간 트램</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>문 앞 심야 트램.</strong> M1과 24시간 운행하는 트램 4·6번이 바로 앞에 서서 새벽 3시에도 쉽게 돌아올 수 있어요.<span class="bpa-lang-note">대신 트램이 밤새 지나가요. 귀마개를 챙기세요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Oktogon</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Oktogon tér 4, 6구.</strong> Andrássy út와 대환상도로가 만나는 곳으로, 중심가까지 걸어갈 수 있어요.<span class="bpa-lang-note">리셉션 24시간, 체크인 14:00~자정.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>이런 분께 추천:</strong> 시내 중심 최저가 침대와 무료 조식, 저렴한 석식을 원하는 알뜰 여행자. <strong>비추천:</strong> 소리에 예민하거나 아기자기한 소셜 분위기를 찾는 분.
@@ -3976,7 +3986,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€8부터</div>
-<div class="bpa-psub">도미토리 1박 • 2026년 11월 14일</div>
+<div class="bpa-psub">도미토리 1박</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/HpiYT6P3" rel="nofollow sponsored noopener" target="_blank">요금 &amp;amp; 날짜 확인 →</a>
 <div class="bpa-trust-micro">
@@ -4014,10 +4024,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ 직접 숙박</span>
-<span class="bpa-sp">코워킹 스페이스</span>
-<span class="bpa-sp">자물쇠 무료</span>
-<span class="bpa-sp">포드형 침대</span>
-<span class="bpa-sp">중앙시장</span>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">코워킹 스페이스</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>제대로 된 업무 공간.</strong> 라운지에 노트북 작업 공간이 있어 여기서 원격 근무하기 가장 좋아요.<span class="bpa-lang-note">사교적이지만 차분해요. 펍 크롤 본부보다는 대학 기숙사 느낌이에요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔒 <span class="bpa-lang-label">자물쇠 무료</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>자물쇠 포함.</strong> 수납함에 무료 자물쇠가 함께 나와서 다른 곳처럼 €3를 더 낼 필요가 없어요.<span class="bpa-lang-note">리셉션 24시간 운영.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">포드형 침대</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>다 갖춘 캡슐 침대.</strong> 침대마다 커튼, 콘센트, 조명, 소품 트레이, 수납함이 있어요.<span class="bpa-lang-note">방이 좁아요. 모두 짐을 풀면 움직일 공간이 별로 없어요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">중앙시장</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Gönczy Pál utca 2.</strong> 중앙시장에서 건물 하나 거리, 다뉴브강까지 걸어서 몇 분이에요.<span class="bpa-lang-note">3층, 엘리베이터 없음. Fővám tér(M4, 트램 2·47·49번)가 가까워요.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>이런 분께 추천:</strong> 노트북 작업하기 좋은 라운지, 포드형 침대, 사교적이면서도 차분한 분위기를 원하는 디지털 노마드와 여행자. <strong>비추천:</strong> 무거운 짐이 있거나(3층, 엘리베이터 없음) 전용 욕실을 원하는 분.
@@ -4026,7 +4036,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€10부터</div>
-<div class="bpa-psub">도미토리 1박 • 2026년 11월 14일</div>
+<div class="bpa-psub">도미토리 1박</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/mx9SOFXZ" rel="nofollow sponsored noopener" target="_blank">요금 &amp;amp; 날짜 확인 →</a>
 <div class="bpa-trust-micro">
@@ -4065,10 +4075,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ 직접 숙박</span>
-<span class="bpa-sp">조용한 객실</span>
-<span class="bpa-sp">훌륭한 샤워 시설</span>
-<span class="bpa-sp">워크 라운지</span>
-<span class="bpa-sp">개인실</span>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">조용한 객실</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>저가 호텔 같은 조용함.</strong> 단순하고 조용하고 깨끗한 방, 호스텔 특유의 북적임은 적고 잘 자는 데 집중한 곳이에요.<span class="bpa-lang-note">커플, 가족, 프라이버시를 원하는 분께 잘 맞아요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">훌륭한 샤워 시설</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>감탄이 나오는 샤워.</strong> 단순하고 조용하고 깨끗한 방에서 샤워가 단연 돋보였어요.<span class="bpa-lang-note">침구와 수건은 별도 요금: 1,150포린트(약 €3).</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">워크 라운지</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>노트북 쓰기 좋은 라운지.</strong> 라운지 작업 공간이 훌륭하고, 외출하는 동안 리셉션에서 제 노트북을 안전하게 보관해 줬어요.<span class="bpa-lang-note">호텔식 조식은 선택 사항으로 약 €8.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚪 <span class="bpa-lang-label">개인실</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>2인부터 개인실.</strong> 도미토리 외에 개인실도 있고, 24시간 리셉션이라 언제든 체크인할 수 있어요.<span class="bpa-lang-note">Csengery utca 11, Oktogon(M1, 트램 4·6번)에서 몇 분.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>이런 분께 추천:</strong> 소셜 분위기보다 조용하고 깔끔하며 군더더기 없는 객실을 원하는 커플, 가족, 일반 여행자. <strong>비추천:</strong> 사교적인 호스텔을 원하거나 침구류 추가 요금이 싫은 분.
@@ -4077,7 +4087,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€12부터</div>
-<div class="bpa-psub">도미토리 1박 • 2026년 11월 14일</div>
+<div class="bpa-psub">도미토리 1박</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/RQSFFzzX" rel="nofollow sponsored noopener" target="_blank">요금 &amp;amp; 날짜 확인 →</a>
 <div class="bpa-trust-micro">
@@ -4112,10 +4122,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ 직접 숙박</span>
-<span class="bpa-sp">객실 내 전용 욕실</span>
-<span class="bpa-sp">침대 커튼</span>
-<span class="bpa-sp">호스텔 바</span>
-<span class="bpa-sp">Király utca</span>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">객실 내 전용 욕실</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>모든 방에 욕실.</strong> 모든 방에 전용 욕실과 에어컨이 있어 복도에서 줄 설 일이 없어요.<span class="bpa-lang-note">깨끗하지만 평범해요. 디자인 때문에 예약할 곳은 아니에요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">침대 커튼</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>침대마다 개인 커튼.</strong> 파티 호스텔치고 밤에는 조용해요. 잘 잤어요.<span class="bpa-lang-note">무료 보안 사물함.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍸 <span class="bpa-lang-label">호스텔 바</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>사교적인 호스텔 바.</strong> 호스텔 바에서 쉽게 사람을 사귈 수 있고, Gozsdu Udvar 바들도 바로 근처예요.<span class="bpa-lang-note">세계 각국에서 온 투숙객이 이번 숙박의 최고 장점이었어요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Király utca</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Király utca 20.</strong> Deák Ferenc tér(M1, M2, M3, 공항버스 100E)까지 걸어서 3분.<span class="bpa-lang-note">체크인 14:00~23:00, 체크아웃 10:00까지.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>이런 분께 추천:</strong> 숙소 문 앞의 소셜 바와 나이트라이프를 즐기면서도 밤에는 숙면을 취하고 싶은 배낭여행자. <strong>비추천:</strong> 최저가 숙소나 개성 있는 분위기를 찾는 분.
@@ -4124,7 +4134,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€11부터</div>
-<div class="bpa-psub">도미토리 1박 • 2026년 11월 14일</div>
+<div class="bpa-psub">도미토리 1박</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/19dbOWJE" rel="nofollow sponsored noopener" target="_blank">요금 &amp;amp; 날짜 확인 →</a>
 <div class="bpa-trust-micro">
@@ -4161,10 +4171,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ 직접 숙박</span>
-<span class="bpa-sp">집 같은 분위기</span>
-<span class="bpa-sp">소규모 호스텔</span>
-<span class="bpa-sp">무료 차 &amp; 커피</span>
-<span class="bpa-sp">중앙시장</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛋️ <span class="bpa-lang-label">집 같은 분위기</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>진짜 거실.</strong> 다들 소파에 모여 수다를 떨고, 낮에는 보드게임도 해요.<span class="bpa-lang-note">아늑하고 집 같은 분위기를 좋아한다면 여기가 천국이에요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">소규모 호스텔</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>작고 정겨운 곳.</strong> 제가 묵을 땐 친절한 호스트 한 명이 호스텔 전체를 운영했어요. 9/10 평점은 그녀 덕분이에요.<span class="bpa-lang-note">잠금 수납공간도, 콘센트 있는 책상도 없어요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">무료 차 &amp; 커피</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>하루 종일 무료.</strong> 셀프서비스 차와 커피를 거실에서 하루 종일 마실 수 있어요.<span class="bpa-lang-note">체크인은 14:00~21:00만 가능해요. 늦게 도착한다면 다른 곳을 예약하세요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">중앙시장</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Vámház körút 5.</strong> 중앙시장과 자유의 다리 바로 옆, 다뉴브강까지 몇 분이에요.<span class="bpa-lang-note">Fővám tér(M4, 트램 2·47·49번)가 바로 앞.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>이런 분께 추천:</strong> 다뉴브 강 옆의 작고 아늑하며 집 같은 숙소를 원하는 내향적인 여행자와 느린 여행자. <strong>비추천:</strong> 밤늦게 도착하거나 개인 사물함, 콘센트가 있는 책상이 꼭 필요한 분.
@@ -4173,7 +4183,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€11부터</div>
-<div class="bpa-psub">도미토리 1박 • 2026년 11월 14일</div>
+<div class="bpa-psub">도미토리 1박</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/LV5kBsYQ" rel="nofollow sponsored noopener" target="_blank">요금 &amp;amp; 날짜 확인 →</a>
 <div class="bpa-trust-micro">
@@ -4213,10 +4223,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ 직접 숙박</span>
-<span class="bpa-sp">대성당 전망</span>
-<span class="bpa-sp">전용 욕실</span>
-<span class="bpa-sp">무료 차 &amp; 커피</span>
-<span class="bpa-sp">Andrássy út</span>
+<details class="bpa-lang"><summary class="bpa-sp">⛪ <span class="bpa-lang-label">대성당 전망</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>성 이슈트반 대성당 전망.</strong> Andrássy út 시작점에 있어 대성당, 오페라 하우스, Deák Ferenc tér까지 걸어서 몇 분이에요.<span class="bpa-lang-note">걸어서 관광하기엔 이 목록에서 가장 좋은 거점이에요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">전용 욕실</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>전용 욕실.</strong> 도미토리와 더블룸 모두 전용 욕실이 있어요. 제 방 욕실은 훌륭하고 깨끗했어요.<span class="bpa-lang-note">개인실 약 €22부터.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">무료 차 &amp; 커피</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>차, 커피, 침구 무료.</strong> 호스텔에 따르면 셀프서비스 차와 커피, 모든 것을 갖춘 공용 주방이 있어요.<span class="bpa-lang-note">조용하지만 사교적이진 않아요. 이벤트나 개인적인 응대는 없어요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Andrássy út</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Andrássy út 2, 1층.</strong> Bajcsy-Zsilinszky út(M1)가 문 앞, Deák Ferenc tér(M1, M2, M3)도 걸어서 금방이에요.<span class="bpa-lang-note">큰길 쪽이라 안뜰 쪽 방을 요청하세요. 계단 한 층, 엘리베이터 없음.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>이런 분께 추천:</strong> 성 이슈트반 대성당에서 몇 걸음 거리인 Andrássy út 초입의 차분하고 깨끗한 침대를 원하는 관광객. <strong>비추천:</strong> 소셜 호스텔을 원하거나 도로 소음에 예민한 분.
@@ -4225,7 +4235,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€11부터</div>
-<div class="bpa-psub">도미토리 1박 • 2026년 11월 14일</div>
+<div class="bpa-psub">도미토리 1박</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/GpKMoQF5" rel="nofollow sponsored noopener" target="_blank">요금 &amp;amp; 날짜 확인 →</a>
 <div class="bpa-trust-micro">
@@ -4253,10 +4263,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ 직접 숙박</span>
-<span class="bpa-sp">아늑한 로프트</span>
-<span class="bpa-sp">현지인 꿀팁</span>
-<span class="bpa-sp">공용 주방</span>
-<span class="bpa-sp">유대인 지구</span>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">아늑한 로프트</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>옥탑 로프트 아파트.</strong> 리모델링된 아늑한 공간이라 친구 집에 머무는 느낌이에요.<span class="bpa-lang-note">4·6인 혼성 또는 여성 전용 도미토리와 개인 더블룸 1개.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🗺️ <span class="bpa-lang-label">현지인 꿀팁</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>인터넷에 없는 현지 팁.</strong> 호스트가 어떤 가이드북에도 없는 바, 레스토랑, 축제 정보를 알려줬어요.<span class="bpa-lang-note">친절하고 따뜻한 스태프.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍳 <span class="bpa-lang-label">공용 주방</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>모든 것을 갖춘 주방.</strong> 직접 요리해서 부다페스트 외식비를 아낄 수 있어요.<span class="bpa-lang-note">제가 묵을 땐 현금만 받았어요. 혹시 모르니 포린트를 챙기세요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">유대인 지구</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Akácfa utca 10, 7구.</strong> 나이트라이프 지구에 있어 주요 명소와 폐허 바가 가까워요.<span class="bpa-lang-note">Wesselényi utca에 트램 4·6번. 주말엔 귀마개를 챙기세요.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>이런 분께 추천:</strong> 나이트라이프 지구 안에서 친절한 호스트와 함께하는 아늑한 아파트형 호스텔을 원하는 1인 배낭여행자와 소규모 일행. <strong>비추천:</strong> 카드 결제, 계단 없는 동선, 주말 밤의 고요함이 꼭 필요한 분.
@@ -4265,7 +4275,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€15부터</div>
-<div class="bpa-psub">도미토리 1박 • 2026년 11월 14일</div>
+<div class="bpa-psub">도미토리 1박</div>
 </div>
 <a class="bpa-btn" href="https://tp.media/r?marker=404154.article-best-hostels-budapest-das-nest-comparison-list&amp;trs=204442&amp;p=3518&amp;u=https%3A%2F%2Fwww.hostelworld.com%2Fst%2Fhostels%2Fp%2F47301%2Fdas-nest-budapest%2F&amp;campaign_id=93" rel="nofollow sponsored noopener" target="_blank">요금 &amp;amp; 날짜 확인 →</a>
 <div class="bpa-trust-micro">
@@ -4291,10 +4301,10 @@ a.w-webflow-badge,
 <div class="bpa-proof"></div>
 </div>
 <div class="bpa-specs-row">
-<span class="bpa-sp">루프탑 바</span>
-<span class="bpa-sp">매일 펍 크롤</span>
-<span class="bpa-sp">만 18세 이상 전용</span>
-<span class="bpa-sp">유대인 지구</span>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">루프탑 바</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>투숙객 전용 루프탑 바.</strong> 매일 16시~19시 해피아워.<span class="bpa-lang-note">호스텔에 따르면 300개 이상의 침대, 2015년부터 운영.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">매일 펍 크롤</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>매일 밤 파티.</strong> 호스텔이 운영하는 매일 펍 크롤에 빙고 크롤, SPArty, 파티 보트까지.<span class="bpa-lang-note">아래층 클럽 소음을 언급하는 투숙객도 있어요.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔞 <span class="bpa-lang-label">만 18세 이상 전용</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>18세 이상만.</strong> 아침형이 아니라 밤 문화를 위한 곳이에요.<span class="bpa-lang-note">체크인 15:00~자정, 현금 또는 카드 결제.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">유대인 지구</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Dob utca 19, 7구.</strong> Gozsdu Udvar와 Szimpla Kert까지 걸어서 금방이에요.<span class="bpa-lang-note">Astoria(M2)와 Deák Ferenc tér(M1, M2, M3)까지 몇 분.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>이런 분께 추천:</strong> 루인 바 지구에서 루프탑 바가 있는 크고 시끌벅적한 파티 호스텔을 찾는 만 18세 이상 단체 및 1인 파티 여행자. <strong>비추천:</strong> 소리에 예민하거나 아침형 인간, 침대 커튼이 꼭 필요한 분.
@@ -4303,7 +4313,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">€13부터</div>
-<div class="bpa-psub">도미토리 1박 • 2026년 11월 14일</div>
+<div class="bpa-psub">도미토리 1박</div>
 </div>
 <a class="bpa-btn" href="https://tp.media/r?marker=404154.article-best-hostels-budapest-the-hive-comparison-list&amp;trs=204442&amp;p=3518&amp;u=https%3A%2F%2Fwww.hostelworld.com%2Fhostels%2Fp%2F96091%2Fthe-hive-party-hostel-budapest%2F&amp;campaign_id=93" rel="nofollow sponsored noopener" target="_blank">요금 &amp;amp; 날짜 확인 →</a>
 <div class="bpa-trust-micro">
@@ -8987,4 +8997,92 @@ a.cd-editorial-bookmark .cd-editorial-meta{display:none!important}
 a.cd-editorial-bookmark .cd-editorial-desc{display:-webkit-box!important;-webkit-line-clamp:1!important;-webkit-box-orient:vertical!important;overflow:hidden!important;font-size:13px!important;line-height:1.4!important;color:#64748b!important;margin:3px 0 0!important}
 a.cd-editorial-bookmark .cd-editorial-title{font-family:'Playfair Display',Georgia,serif!important;font-size:16px!important;line-height:1.3!important;margin:0!important;color:#0a192f!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
 a.cd-editorial-bookmark::after{content:"\203A"!important;position:static!important;order:2;flex:0 0 auto;font-size:22px;line-height:1;color:#b88214}
-</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style></body></html>
+</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style><script id="bpa-lang-js">
+(function(){
+  var N={en:'English',fr:'French',es:'Spanish',de:'German',it:'Italian',pt:'Portuguese',nl:'Dutch',pl:'Polish',ru:'Russian',ar:'Arabic',hi:'Hindi',zh:'Chinese',ja:'Japanese',ko:'Korean'};
+  function init(){
+    var langs=[];
+    try{langs=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']);}catch(e){}
+    var code=String(langs[0]||'').slice(0,2).toLowerCase();
+    var boxes=document.querySelectorAll('.bpa-lang');
+    if(!boxes.length) return;
+    document.documentElement.classList.add('bpa-lang-on');
+
+    var pop=document.createElement('div');
+    pop.id='bpa-lang-float';
+    pop.setAttribute('role','tooltip');
+    document.body.appendChild(pop);
+    var current=null, pinned=false, hideTimer=null;
+    var canHover=window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    function place(d){
+      var s=d.querySelector('summary').getBoundingClientRect();
+      var vw=document.documentElement.clientWidth, vh=window.innerHeight;
+      var w=Math.min(290, vw-16);
+      pop.style.width=w+'px';
+      var left=Math.max(8, Math.min(s.left, vw-w-8));
+      var h=pop.offsetHeight;
+      var above=(s.bottom+10+h>vh) && (s.top-10-h>0);
+      var top=above ? (s.top-10-h) : (s.bottom+10);
+      pop.classList.toggle('is-above', above);
+      pop.style.left=(left+window.scrollX)+'px';
+      pop.style.top=(top+window.scrollY)+'px';
+      pop.style.setProperty('--ax', Math.max(14, Math.min(w-14, s.left+Math.min(s.width,40)/2-left))+'px');
+    }
+    function show(d, pin){
+      clearTimeout(hideTimer);
+      if(current && current!==d) current.classList.remove('is-open');
+      current=d; pinned=!!pin;
+      pop.innerHTML=d.querySelector('.bpa-lang-pop').innerHTML;
+      d.classList.add('is-open');
+      d.querySelector('summary').setAttribute('aria-expanded','true');
+      place(d);
+      pop.classList.add('is-visible');
+    }
+    function hide(){
+      clearTimeout(hideTimer);
+      if(current){ current.classList.remove('is-open'); current.querySelector('summary').setAttribute('aria-expanded','false'); }
+      current=null; pinned=false;
+      pop.classList.remove('is-visible');
+    }
+    function softHide(e){
+      if(pinned) return;
+      var to=e && e.relatedTarget;
+      if(to && to.closest && (to.closest('#bpa-lang-float') || (current && current.contains(to)))) return;
+      hide();
+    }
+
+    boxes.forEach(function(d){
+      var sum=d.querySelector('summary');
+      sum.setAttribute('aria-expanded','false');
+      sum.addEventListener('click',function(e){
+        e.preventDefault();
+        if(current===d && pinned){ hide(); return; }
+        show(d,true);
+      });
+      if(canHover){
+        sum.addEventListener('mouseenter',function(){ if(!pinned||current!==d) show(d,false); });
+        sum.addEventListener('mouseleave',softHide);
+      }
+      if(!code||code==='en'||!N[code]) return;
+      var list=(d.getAttribute('data-langs')||'').split(',');
+      if(list.indexOf(code)===-1) return;
+      var label=d.querySelector('.bpa-lang-label');
+      if(label) label.textContent='Audio in '+N[code]+' \u2713';
+      d.classList.add('is-match');
+      var names=d.querySelector('.bpa-lang-names');
+      if(names) names.innerHTML=names.textContent.split(', ').map(function(n){return n===N[code]?'<b>'+n+'</b>':n;}).join(', ');
+    });
+    pop.addEventListener('mouseenter',function(){ clearTimeout(hideTimer); });
+    pop.addEventListener('mouseleave',softHide);
+    document.addEventListener('click',function(e){
+      if(!current) return;
+      if(e.target.closest && (e.target.closest('.bpa-lang') || e.target.closest('#bpa-lang-float'))) return;
+      hide();
+    });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') hide(); });
+    window.addEventListener('resize',function(){ if(current) place(current); });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script></body></html>

@@ -440,7 +440,36 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) h2.ltt-section-title,body:has(.calc-title) main.container h2{font-size:28px!important}
 }
 </style>
-</head><body><header class="ltt-navbar" role="banner">
+<style id="bpa-lang-css">
+.bpa-lang{display:inline-flex;flex-wrap:wrap;gap:5px;flex-shrink:0}
+.bpa-lang[open]{flex-basis:100%}
+.bpa-lang>summary{list-style:none;cursor:pointer;user-select:none}
+.bpa-lang>summary::-webkit-details-marker{display:none}
+.bpa-lang>summary:hover{background:#e2e8f0 !important}
+.bpa-lang-chev{font-size:12px;line-height:1;opacity:.75;transition:transform .15s}
+.bpa-lang[open] .bpa-lang-chev{transform:rotate(180deg)}
+.bpa-lang.is-match>summary{background:#dcfce7 !important;color:#166534 !important}
+.bpa-lang-pop{flex-basis:100%;box-sizing:border-box;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.5;color:#334155;white-space:normal}
+.bpa-lang-pop strong{color:#0f172a}
+.bpa-lang-names b{color:#166534}
+.bpa-lang-note{display:block;margin-top:3px;color:#64748b;font-size:11px}
+/* With JS: the list floats over the card instead of pushing it down */
+html.bpa-lang-on .bpa-lang[open]{flex-basis:auto}
+html.bpa-lang-on .bpa-lang .bpa-lang-pop{display:none}
+html.bpa-lang-on .bpa-lang.is-open .bpa-lang-chev{transform:rotate(180deg)}
+html.bpa-lang-on .bpa-lang.is-open>summary{background:#e2e8f0 !important}
+html.bpa-lang-on .bpa-lang.is-match.is-open>summary{background:#bbf7d0 !important}
+#bpa-lang-float{position:absolute;z-index:9990;max-width:290px;box-sizing:border-box;background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 10px 30px rgba(15,23,42,.14);padding:10px 12px;font-size:12px;line-height:1.5;color:#334155;opacity:0;transform:translateY(-4px);transition:none;pointer-events:none}
+#bpa-lang-float.is-visible{opacity:1;transform:none;pointer-events:auto;transition:opacity .12s ease,transform .12s ease}
+#bpa-lang-float.is-above{transform:translateY(4px)}
+#bpa-lang-float.is-above.is-visible{transform:none}
+#bpa-lang-float strong{color:#0f172a}
+#bpa-lang-float .bpa-lang-names b{color:#166534}
+#bpa-lang-float::before{content:"";position:absolute;left:var(--ax,20px);top:-6px;width:10px;height:10px;background:#fff;border-left:1px solid #e2e8f0;border-top:1px solid #e2e8f0;transform:translateX(-50%) rotate(45deg)}
+#bpa-lang-float.is-above::before{top:auto;bottom:-6px;transform:translateX(-50%) rotate(225deg)}
+#bpa-lang-float::after{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+#bpa-lang-float.is-above::after{top:auto;bottom:-12px}
+</style></head><body><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/hu">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -510,8 +539,8 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 <div class="ltt-mega-menu is-narrow is-right" role="menu">
 <div class="ltt-mega-col">
 <div class="ltt-mega-head">Tél Budapesten</div>
-<a class="ltt-mega-item" href="/hu/budapest-programok-november"><span class="ltt-thumb ltt-thumb-icon ltt-thumb-month" style="width:48px;height:48px;background:#fff7ed;color:#9a3412"><span class="ltt-month-top">2026</span>NOV</span><div><strong>Budapest novemberben</strong><p>Esti hajók, forró medencék, vásárnyitás</p></div></a>
-<a class="ltt-mega-item" href="/hu/budapest-programok-december"><span class="ltt-thumb ltt-thumb-icon ltt-thumb-month" style="width:48px;height:48px;background:#ecfdf5;color:#065f46"><span class="ltt-month-top">2026</span>DEC</span><div><strong>Budapest decemberben</strong><p>Karácsonyi hajók, fürdők, ünnepi nyitvatartás</p></div></a>
+<a class="ltt-mega-item" href="/hu/budapest-programok-november"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/things-to-do-budapest-november.webp" decoding="async" height="48" width="48"/><div><strong>Budapest novemberben</strong><p>Esti hajók, forró medencék, vásárnyitás</p></div></a>
+<a class="ltt-mega-item" href="/hu/budapest-programok-december"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/things-to-do-budapest-december.webp" decoding="async" height="48" width="48"/><div><strong>Budapest decemberben</strong><p>Karácsonyi hajók, fürdők, ünnepi nyitvatartás</p></div></a>
 <a class="ltt-mega-item" href="/hu/karacsonyi-vasar-budapest"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-christmas-markets.webp" decoding="async" height="48" width="48"/><div><strong>Karácsonyi vásárok</strong><p>Időpontok, nyitvatartás, árak és térkép</p></div></a>
 <a class="ltt-mega-item" href="/christmas-cruises-budapest"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/christmas-cruises-budapest-v2.webp" decoding="async" height="48" width="48"/><div><strong>Karácsonyi hajózás</strong><p>Szenteste és karácsony vacsorával a Dunán</p></div></a>
 <a class="ltt-mega-item" href="/new-years-eve-cruises-budapest"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/new-years-eve-cruises-budapest-v3.webp" decoding="async" height="48" width="48"/><div><strong>Szilveszteri hajózás</strong><p>Éjféli tűzijáték a folyóról</p></div></a>
@@ -523,15 +552,15 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 <div class="ltt-mega-menu is-right" role="menu">
 <div class="ltt-mega-col">
 <div class="ltt-mega-head">Utazástervezés</div>
-<a class="ltt-mega-item" href="/hu/budapest-utazási-kalauz"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#e0f2fe;color:#0369a1"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" x2="9" y1="3" y2="18"></line><line x1="15" x2="15" y1="6" y2="21"></line></svg></span><div><strong>Budapest útikalauz</strong><p>Hajózás, látnivalók és utazástervezés</p></div></a>
-<a class="ltt-mega-item" href="/hu/budapest-card-megéri-e"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#fef3c7;color:#855a00"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><rect height="14" rx="2" width="20" x="2" y="5"></rect><line x1="2" x2="22" y1="10" y2="10"></line><line x1="6" x2="10" y1="15" y2="15"></line></svg></span><div><strong>Budapest Card Kalkulátor</strong><p>Interaktív kalkulátor 94 látnivalóval</p></div></a>
-<a class="ltt-mega-item" href="/hu/budapest-reptér-városközpont"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#ede9fe;color:#5b21b6"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg></span><div><strong>Reptér - Városközpont</strong><p>100E gyorsbusz, taxi és transzfer árak</p></div></a>
-<a aria-current="page" class="ltt-mega-item active" href="/hu/legjobb-hostelek-budapesten"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#dcfce7;color:#166534"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg></span><div><strong>Legjobb Hostelek Budapesten</strong><p>Közösségi és boutique szállások</p></div></a>
+<a class="ltt-mega-item" href="/hu/budapest-utazási-kalauz"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-itinerary.webp" decoding="async" height="48" width="48"/><div><strong>Budapest útikalauz</strong><p>Hajózás, látnivalók és utazástervezés</p></div></a>
+<a class="ltt-mega-item" href="/hu/budapest-card-megéri-e"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-card-is-it-worth-it.webp" decoding="async" height="48" width="48"/><div><strong>Budapest Card Kalkulátor</strong><p>Interaktív kalkulátor 94 látnivalóval</p></div></a>
+<a class="ltt-mega-item" href="/hu/budapest-reptér-városközpont"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-airport-to-city-center.webp" decoding="async" height="48" width="48"/><div><strong>Reptér - Városközpont</strong><p>100E gyorsbusz, taxi és transzfer árak</p></div></a>
+<a aria-current="page" class="ltt-mega-item active" href="/hu/legjobb-hostelek-budapesten"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/best-hostels-budapest.webp" decoding="async" height="48" width="48"/><div><strong>Legjobb Hostelek Budapesten</strong><p>Közösségi és boutique szállások</p></div></a>
 </div>
 <div class="ltt-mega-col">
 <div class="ltt-mega-head">Adatok</div>
-<a class="ltt-mega-item" href="/hu/budapest-turizmus-statisztika"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#eef2f7;color:#1e3a5f"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewBox="0 0 24 24" width="22"><line x1="5" x2="5" y1="20" y2="13"></line><line x1="12" x2="12" y1="20" y2="6"></line><line x1="19" x2="19" y1="20" y2="10"></line></svg></span><div><strong>Budapest Turizmus Statisztika</strong><p>Hivatalos látogatói adatok és trendek</p></div></a>
-<a class="ltt-mega-item" href="/hu/magyarorszag-turizmus-statisztika"><span class="ltt-thumb ltt-thumb-icon" style="width:48px;height:48px;background:#eef2f7;color:#1e3a5f"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewBox="0 0 24 24" width="22"><line x1="5" x2="5" y1="20" y2="13"></line><line x1="12" x2="12" y1="20" y2="6"></line><line x1="19" x2="19" y1="20" y2="10"></line></svg></span><div><strong>Magyarország turisztikai statisztikák</strong><p>Hány turista érkezik Magyarországra</p></div></a>
+<a class="ltt-mega-item" href="/hu/budapest-turizmus-statisztika"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-tourism-statistics.webp" decoding="async" height="48" width="48"/><div><strong>Budapest Turizmus Statisztika</strong><p>Hivatalos látogatói adatok és trendek</p></div></a>
+<a class="ltt-mega-item" href="/hu/magyarorszag-turizmus-statisztika"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/hungary-tourism-statistics.webp" decoding="async" height="48" width="48"/><div><strong>Magyarország turisztikai statisztikák</strong><p>Hány turista érkezik Magyarországra</p></div></a>
 </div>
 </div>
 </div>
@@ -703,8 +732,8 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 <summary class="ltt-mobile-acc-sum"><span>Szezonális</span><svg class="ltt-chevron" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
 <div class="ltt-mobile-acc-body">
 <div class="ltt-mobile-label">Tél Budapesten</div>
-<a class="ltt-mobile-link" href="/hu/budapest-programok-november"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon ltt-thumb-month" style="width:36px;height:36px;background:#fff7ed;color:#9a3412"><span class="ltt-month-top">2026</span>NOV</span><span>Budapest novemberben</span></span></a>
-<a class="ltt-mobile-link" href="/hu/budapest-programok-december"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon ltt-thumb-month" style="width:36px;height:36px;background:#ecfdf5;color:#065f46"><span class="ltt-month-top">2026</span>DEC</span><span>Budapest decemberben</span></span></a>
+<a class="ltt-mobile-link" href="/hu/budapest-programok-november"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/things-to-do-budapest-november.webp" decoding="async" height="36" width="36"/><span>Budapest novemberben</span></span></a>
+<a class="ltt-mobile-link" href="/hu/budapest-programok-december"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/things-to-do-budapest-december.webp" decoding="async" height="36" width="36"/><span>Budapest decemberben</span></span></a>
 <a class="ltt-mobile-link" href="/hu/karacsonyi-vasar-budapest"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-christmas-markets.webp" decoding="async" height="36" width="36"/><span>Karácsonyi vásárok</span></span></a>
 <a class="ltt-mobile-link" href="/christmas-cruises-budapest"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/christmas-cruises-budapest-v2.webp" decoding="async" height="36" width="36"/><span>Karácsonyi hajózás</span></span></a>
 <a class="ltt-mobile-link" href="/new-years-eve-cruises-budapest"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/new-years-eve-cruises-budapest-v3.webp" decoding="async" height="36" width="36"/><span>Szilveszteri hajózás</span></span></a>
@@ -713,13 +742,13 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 <details class="ltt-mobile-acc">
 <summary class="ltt-mobile-acc-sum"><span>Utazástervezés</span><svg class="ltt-chevron" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><polyline points="6 9 12 15 18 9"></polyline></svg></summary>
 <div class="ltt-mobile-acc-body">
-<a class="ltt-mobile-link" href="/hu/budapest-utazási-kalauz"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#e0f2fe;color:#0369a1"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" x2="9" y1="3" y2="18"></line><line x1="15" x2="15" y1="6" y2="21"></line></svg></span><span>Budapest útikalauz</span></span></a>
-<a class="ltt-mobile-link" href="/hu/budapest-card-megéri-e"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#fef3c7;color:#855a00"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><rect height="14" rx="2" width="20" x="2" y="5"></rect><line x1="2" x2="22" y1="10" y2="10"></line><line x1="6" x2="10" y1="15" y2="15"></line></svg></span><span>Budapest Card Kalkulátor</span></span></a>
-<a class="ltt-mobile-link" href="/hu/budapest-reptér-városközpont"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#ede9fe;color:#5b21b6"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg></span><span>Reptér - Városközpont</span></span></a>
-<a aria-current="page" class="ltt-mobile-link active" href="/hu/legjobb-hostelek-budapesten"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#dcfce7;color:#166534"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg></span><span>Legjobb Hostelek Budapesten</span></span></a>
+<a class="ltt-mobile-link" href="/hu/budapest-utazási-kalauz"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-itinerary.webp" decoding="async" height="36" width="36"/><span>Budapest útikalauz</span></span></a>
+<a class="ltt-mobile-link" href="/hu/budapest-card-megéri-e"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-card-is-it-worth-it.webp" decoding="async" height="36" width="36"/><span>Budapest Card Kalkulátor</span></span></a>
+<a class="ltt-mobile-link" href="/hu/budapest-reptér-városközpont"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-airport-to-city-center.webp" decoding="async" height="36" width="36"/><span>Reptér - Városközpont</span></span></a>
+<a aria-current="page" class="ltt-mobile-link active" href="/hu/legjobb-hostelek-budapesten"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/best-hostels-budapest.webp" decoding="async" height="36" width="36"/><span>Legjobb Hostelek Budapesten</span></span></a>
 <div class="ltt-mobile-label">Adatok</div>
-<a class="ltt-mobile-link" href="/hu/budapest-turizmus-statisztika"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#eef2f7;color:#1e3a5f"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewBox="0 0 24 24" width="22"><line x1="5" x2="5" y1="20" y2="13"></line><line x1="12" x2="12" y1="20" y2="6"></line><line x1="19" x2="19" y1="20" y2="10"></line></svg></span><span>Budapest Turizmus Statisztika</span></span></a>
-<a class="ltt-mobile-link" href="/hu/magyarorszag-turizmus-statisztika"><span class="ltt-mobile-link-main"><span class="ltt-thumb ltt-thumb-icon" style="width:36px;height:36px;background:#eef2f7;color:#1e3a5f"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewBox="0 0 24 24" width="22"><line x1="5" x2="5" y1="20" y2="13"></line><line x1="12" x2="12" y1="20" y2="6"></line><line x1="19" x2="19" y1="20" y2="10"></line></svg></span><span>Magyarország turisztikai statisztikák</span></span></a>
+<a class="ltt-mobile-link" href="/hu/budapest-turizmus-statisztika"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/budapest-tourism-statistics.webp" decoding="async" height="36" width="36"/><span>Budapest Turizmus Statisztika</span></span></a>
+<a class="ltt-mobile-link" href="/hu/magyarorszag-turizmus-statisztika"><span class="ltt-mobile-link-main"><img alt="" class="ltt-thumb" data-src="/assets/nav-thumbs/hungary-tourism-statistics.webp" decoding="async" height="36" width="36"/><span>Magyarország turisztikai statisztikák</span></span></a>
 </div>
 </details>
 <div class="ltt-mobile-section">
@@ -1357,27 +1386,8 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 </div>
 <div class="ltt-lead-copy">
 <p>A rossz budapesti hostel nem pénzbe, hanem alvásba kerül. A belvárosi dormágyak <strong>8 és 15 € között</strong> vannak éjszakánként, de egy bulihostel a zsidónegyedben és egy csendes kapszulás hostel a Központi Vásárcsarnok mellett két teljesen más utazás.</p>
-<p>Az alábbi <strong>10 hostelből 9-ben én magam aludtam</strong>, a Mavericknél például <strong>30 éjszakát 280 €-ért</strong>, és egymás mellé tettem őket abban, ami a foglalásnál számít: éjszakai zaj, privát szféra az ágyban, fürdők, konyha, korhatár, a közönség és a valódi éjszakai ár. A The Hive az egyetlen bulis választás, ahol nem aludtam, ezért csak ellenőrzött tények szerepelnek róla, "tesztelt" jelölés nélkül.</p>
+<p>Az alábbi <strong>10 hostelből 9-ben én magam aludtam</strong>, a Mavericknél például <strong>30 éjszakát 280 €-ért</strong>, és egymás mellé tettem őket abban, ami a foglalásnál számít: éjszakai zaj, privát szféra az ágyban, fürdők, konyha, korhatár, a közönség és a valódi éjszakai ár.</p>
 <p>A szűrőkkel egyből a bulis, csendes, olcsó, privát szobás vagy digitális nomád hostelekre ugorhat.</p>
-<figure class="cd-bookmark-wrapper">
-<a class="cd-editorial-bookmark" href="/hu/korlátlan-prosecco-hajóutazások-budapest" rel="noopener" target="_blank">
-<div class="cd-editorial-body">
-<div>
-<div class="cd-editorial-title">Proseccós hajózás Budapesten (2026): a 4 legjobb korlátlan italos és naplementés hajó</div>
-<div class="cd-editorial-desc">Korlátlan prosecco 25 € alatt: mind a 4 hajót teszteltem, a naplementés hajózástól a partihajóig.</div>
-</div>
-<div class="cd-editorial-meta">
-<img alt="BUDAPEST ADVENTURES" class="cd-editorial-icon" height="18" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='/assets/budapest-adventures-logo.png';}" src="/assets/budapest-adventures-logo-96.webp" width="18"/>
-<span class="cd-editorial-pub">BUDAPEST ADVENTURES</span>
-<span class="cd-editorial-dot">•</span>
-<span class="cd-editorial-author">Adam Dimitrov</span>
-</div>
-</div>
-<div class="cd-editorial-thumb">
-<img alt="Proseccós hajózás Budapesten (2026): a 4 legjobb korlátlan italos és naplementés hajó" fetchpriority="high" loading="eager" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='/assets/cdn/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero-p-500.webp';}" src="assets/cdn/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero-p-500.webp"/>
-</div>
-</a>
-</figure>
 </div>
 <div class="ltt-integrated-filter-bar">
 <span class="ltt-filter-label">Szűrők:</span>
@@ -4197,10 +4207,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Személyesen tesztelve</span>
-<span class="bpa-sp">Ágyfüggöny</span>
-<span class="bpa-sp">Tetőterasz</span>
-<span class="bpa-sp">Csendes mellékutca</span>
-<span class="bpa-sp">Hosszú távra is jó ár</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Ágyfüggöny</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Függöny minden ágyon.</strong> Modern dormok függönnyel és nagy szekrényekkel, így egy teli szoba is nyugodt.<span class="bpa-lang-note">Zárja el az értékeit: nálam elloptak egy pulóvert.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">Tetőterasz</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Tetőterasz a vendégeknek.</strong> Társasági, de nem bulihostel: este könnyű ismerkedni, utána aludni.<span class="bpa-lang-note">Közönség: egyedül utazók, hosszabb távra érkezők és távmunkások.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">Csendes mellékutca</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lónyay utca, IX. kerület.</strong> Kisebb mellékutca, távol a VII. kerület bulis utcáitól. 30 éjszaka alatt alig volt utcazaj.<span class="bpa-lang-note">A Kálvin tér (M3, M4) és a Fővám tér (M4, 2-es, 47-es, 49-es villamos) pár perc séta.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💶 <span class="bpa-lang-label">Hosszú távra is jó ár</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>30 éjszaka 280 €-ért.</strong> Ez márciusban kb. 9,33 € éjszakánként, a legjobb hosszú távú ár, amit a belvárosban találtam.<span class="bpa-lang-note">Dormágy kb. 10 €-tól közeli dátumokra, privát szoba 28 €-tól.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kinek ajánlom:</strong> Egyedül utazóknak, digitális nomádoknak és hosszabb ideig maradó hátizsákosoknak, akik társasági hostelt szeretnének bulizaj nélkül. <strong>Kerülje, ha</strong> bulihostelt keres a romkocsmák mellett.
@@ -4209,7 +4219,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">10 €-tól</div>
-<div class="bpa-psub">Dormágy/éj • 2026. 11. 14.</div>
+<div class="bpa-psub">Dormágy/éj</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/4klGcrSU" rel="nofollow sponsored noopener" target="_blank">Árak és időpontok →</a>
 <div class="bpa-trust-micro">
@@ -4247,10 +4257,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Személyesen tesztelve</span>
-<span class="bpa-sp">Ingyenes napi programok</span>
-<span class="bpa-sp">Kocsmatúrák</span>
-<span class="bpa-sp">18 és 39 év között</span>
-<span class="bpa-sp">Deák tér</span>
+<details class="bpa-lang"><summary class="bpa-sp">🎯 <span class="bpa-lang-label">Ingyenes napi programok</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Minden nap van program.</strong> Ingyenes nappali programok, este ivós játékok a bárban. A személyzet mindenkit bevon.<span class="bpa-lang-note">Itt a legkönnyebb egyedül érkezni és társasággal távozni.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">Kocsmatúrák</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Kocsmatúrák a romkocsmákba.</strong> A hostelbuli 23 és éjfél között ér véget, utána a csapat indul a zsidónegyedbe.<span class="bpa-lang-note">Nincs takarodó; bejelentkezés 15:00 és 23:00 között.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🪪 <span class="bpa-lang-label">18 és 39 év között</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Csak 18 és 39 év között.</strong> Csak 18 és 39 év közötti vendégek szállhatnak meg, ettől fiatal és közösségi a társaság.<span class="bpa-lang-note">Elmúlt 39? A Maverick korhatár nélkül ad hasonló közösséget.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚇 <span class="bpa-lang-label">Deák tér</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>4 perc a Deák Ferenc térig.</strong> M1, M2, M3 és a 100E reptéri busz, a Rumbach Sebestyén utca 6-tól.<span class="bpa-lang-note">A bárokból gyalog hazaér.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kinek ajánlom:</strong> 18 és 39 év közötti egyedül utazóknak, akik azonnali társaságot, napi programokat és esti bulikat szeretnének. <strong>Kerülje, ha</strong> elmúlt 39, párként privát szférára vágyik, vagy korán szeretne lefeküdni.
@@ -4259,7 +4269,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">14 €-tól</div>
-<div class="bpa-psub">Dormágy/éj • 2026. 11. 14.</div>
+<div class="bpa-psub">Dormágy/éj</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/pwL5wYcC" rel="nofollow sponsored noopener" target="_blank">Árak és időpontok →</a>
 <div class="bpa-trust-micro">
@@ -4297,10 +4307,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Személyesen tesztelve</span>
-<span class="bpa-sp">Ingyenes reggeli</span>
-<span class="bpa-sp">Ágyfüggöny</span>
-<span class="bpa-sp">Éjjel-nappal villamos</span>
-<span class="bpa-sp">Oktogon</span>
+<details class="bpa-lang"><summary class="bpa-sp">🥐 <span class="bpa-lang-label">Ingyenes reggeli</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Reggeli az árban.</strong> Plusz kedvezményes vacsora. A magyar élelmiszerárak mellett a kaja többet spórol naponta, mint amennyibe az ágy kerül.<span class="bpa-lang-note">Ottjártamkor a vacsorakedvezményhez kis minimális bárfogyasztás kellett.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Ágyfüggöny</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Függönyös emeletes ágyak.</strong> A 10 ágyas szobám függönyös volt, de ez volt a gyenge pont. A 4, 8 és 12 ágyas szobák jobbak, pár euróval drágábbak.<span class="bpa-lang-note">Lakatot nem adnak: hozzon magával, vagy vegyen egyet kb. 3 €-ért.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚋 <span class="bpa-lang-label">Éjjel-nappal villamos</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Éjszakai villamos az ajtóban.</strong> Az M1 és a 4-es, 6-os éjjel-nappali villamos a ház előtt áll meg, hajnali 3-kor is könnyű hazajutni.<span class="bpa-lang-note">Az ára: egész éjjel jár a villamos. Hozzon füldugót.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Oktogon</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Oktogon tér 4, VI. kerület.</strong> Az Andrássy út és a Nagykörút találkozásánál, gyalog a belváros.<span class="bpa-lang-note">A recepció 0-24 nyitva, bejelentkezés 14:00-tól éjfélig.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kinek ajánlom:</strong> Takarékos utazóknak, akik a legolcsóbb belvárosi ágyat, ingyenes reggelit és olcsó vacsorát keresnek. <strong>Kerülje, ha</strong> éber alvó, vagy társasági, személyes hangulatra vágyik.
@@ -4309,7 +4319,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">8 €-tól</div>
-<div class="bpa-psub">Dormágy/éj • 2026. 11. 14.</div>
+<div class="bpa-psub">Dormágy/éj</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/HpiYT6P3" rel="nofollow sponsored noopener" target="_blank">Árak és időpontok →</a>
 <div class="bpa-trust-micro">
@@ -4347,10 +4357,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Személyesen tesztelve</span>
-<span class="bpa-sp">Coworking tér</span>
-<span class="bpa-sp">Ingyen lakat</span>
-<span class="bpa-sp">Kapszulaágyak</span>
-<span class="bpa-sp">Vásárcsarnok</span>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">Coworking tér</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Valódi munkasarok.</strong> A társalgóban laptopbarát munkaterület van, itt a legjobb a távmunkára.<span class="bpa-lang-note">Közösségi, de nyugodt: inkább kollégium, mint kocsmatúra-központ.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔒 <span class="bpa-lang-label">Ingyen lakat</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lakat jár hozzá.</strong> A tárolódobozhoz ingyen lakat jár, nem kell 3 €-t fizetni, mint máshol.<span class="bpa-lang-note">A recepció 0-24 nyitva.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Kapszulaágyak</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Kapszulaágy mindennel.</strong> Minden ágyhoz függöny, konnektor, lámpa, tálca és tárolódoboz tartozik.<span class="bpa-lang-note">Szűkösek a szobák: kevés a hely, amikor mindenki pakol.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">Vásárcsarnok</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Gönczy Pál utca 2.</strong> Egy épületnyire a Nagyvásárcsarnoktól, pár perc séta a Dunáig.<span class="bpa-lang-note">3. emelet, lift nincs. A Fővám tér (M4, 2-es, 47-es, 49-es villamos) közel van.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kinek ajánlom:</strong> Digitális nomádoknak és utazóknak, akik laptopbarát társalgót, kapszulaágyat és társasági, mégis nyugodt hangulatot keresnek. <strong>Kerülje, ha</strong> nehéz a csomagja (3. emelet, nincs lift), vagy saját fürdőszobát szeretne.
@@ -4359,7 +4369,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">10 €-tól</div>
-<div class="bpa-psub">Dormágy/éj • 2026. 11. 14.</div>
+<div class="bpa-psub">Dormágy/éj</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/mx9SOFXZ" rel="nofollow sponsored noopener" target="_blank">Árak és időpontok →</a>
 <div class="bpa-trust-micro">
@@ -4398,10 +4408,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Személyesen tesztelve</span>
-<span class="bpa-sp">Csendes szobák</span>
-<span class="bpa-sp">Remek zuhany</span>
-<span class="bpa-sp">Munkasarok</span>
-<span class="bpa-sp">Privát szobák</span>
+<details class="bpa-lang"><summary class="bpa-sp">🤫 <span class="bpa-lang-label">Csendes szobák</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Olcsó hotel nyugalma.</strong> Egyszerű, csendes, tiszta szobák, kevés hostelhangulattal, alvásra tervezve.<span class="bpa-lang-note">Pároknak, családoknak és mindenkinek, aki magánszférát akar.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Remek zuhany</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Elképesztő zuhany.</strong> Egyszerű, csendes és tiszta szobában a zuhany volt a kiemelkedő.<span class="bpa-lang-note">Ágynemű és törölköző külön díjas: 1150 Ft (kb. 3 €).</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">💻 <span class="bpa-lang-label">Munkasarok</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Laptopbarát társalgó.</strong> Kiváló munkasarok a társalgóban, és a recepció biztonságosan megőrizte a laptopomat, amíg nem voltam ott.<span class="bpa-lang-note">Opcionális szállodai reggeli kb. 8 €-ért.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚪 <span class="bpa-lang-label">Privát szobák</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Privát szobák 2 főtől.</strong> Privát szobák a dormok mellett, 0-24 recepcióval, bármikor bejelentkezhet.<span class="bpa-lang-note">Csengery utca 11, pár percre az Oktogontól (M1, 4-es és 6-os villamos).</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kinek ajánlom:</strong> Pároknak, családoknak és mindenkinek, aki a társasági élet helyett csendes, egyszerű, tiszta szobát szeretne. <strong>Kerülje, ha</strong> társasági hostelt keres, vagy nem szeret külön fizetni az ágyneműért.
@@ -4410,7 +4420,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">12 €-tól</div>
-<div class="bpa-psub">Dormágy/éj • 2026. 11. 14.</div>
+<div class="bpa-psub">Dormágy/éj</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/RQSFFzzX" rel="nofollow sponsored noopener" target="_blank">Árak és időpontok →</a>
 <div class="bpa-trust-micro">
@@ -4445,10 +4455,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Személyesen tesztelve</span>
-<span class="bpa-sp">Saját fürdős dormok</span>
-<span class="bpa-sp">Ágyfüggöny</span>
-<span class="bpa-sp">Hostelbár</span>
-<span class="bpa-sp">Király utca</span>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Saját fürdős dormok</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Fürdő minden szobában.</strong> Minden szoba saját fürdős és légkondis, nincs sorbanállás a folyosón.<span class="bpa-lang-note">Tiszta, de átlagos: ne a dizájn miatt foglalja.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🛏️ <span class="bpa-lang-label">Ágyfüggöny</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Saját ágyfüggöny.</strong> Bulihostelhez képest csendes éjszaka. Jól aludtam.<span class="bpa-lang-note">Ingyenes biztonsági szekrények.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍸 <span class="bpa-lang-label">Hostelbár</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Közösségi hostelbár.</strong> A hostelbárban könnyű ismerkedni, a Gozsdu udvar bárjai pár lépésre vannak.<span class="bpa-lang-note">A nemzetközi társaság volt a legjobb rész.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Király utca</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Király utca 20.</strong> 3 perc séta a Deák Ferenc térig (M1, M2, M3 és a 100E reptéri busz).<span class="bpa-lang-note">Bejelentkezés 14:00 és 23:00 között, kijelentkezés 10:00-ig.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kinek ajánlom:</strong> Hátizsákosoknak, akik társasági bárt és éjszakai életet szeretnének a küszöbön, de jól is akarnak aludni. <strong>Kerülje, ha</strong> a legolcsóbb ágyat vagy egy igazán egyedi hangulatú hostelt keres.
@@ -4457,7 +4467,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">11 €-tól</div>
-<div class="bpa-psub">Dormágy/éj • 2026. 11. 14.</div>
+<div class="bpa-psub">Dormágy/éj</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/19dbOWJE" rel="nofollow sponsored noopener" target="_blank">Árak és időpontok →</a>
 <div class="bpa-trust-micro">
@@ -4494,10 +4504,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Személyesen tesztelve</span>
-<span class="bpa-sp">Otthonos hangulat</span>
-<span class="bpa-sp">Kis hostel</span>
-<span class="bpa-sp">Ingyen tea és kávé</span>
-<span class="bpa-sp">Vásárcsarnok</span>
+<details class="bpa-lang"><summary class="bpa-sp">🛋️ <span class="bpa-lang-label">Otthonos hangulat</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Igazi nappali.</strong> A kanapén köt ki mindenki beszélgetni, napközben társasjátékokkal.<span class="bpa-lang-note">Ha szereti az otthonos, meghitt hangulatot, ez maga a mennyország.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">Kis hostel</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Kicsi és személyes.</strong> Ottjártamkor egyetlen kedves vendéglátó vitte az egész hostelt. Miatta kapja a 9/10-es értékeléseket.<span class="bpa-lang-note">Nincs zárható tároló és konnektoros asztal sem.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">Ingyen tea és kávé</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Egész nap ingyen.</strong> Önkiszolgáló tea és kávé egész nap, a nappaliban.<span class="bpa-lang-note">Bejelentkezés csak 14:00 és 21:00 között: késői érkezéshez válasszon mást.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🏛️ <span class="bpa-lang-label">Vásárcsarnok</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Vámház körút 5.</strong> A Nagyvásárcsarnok és a Szabadság híd mellett, pár percre a Dunától.<span class="bpa-lang-note">A Fővám tér (M4, 2-es, 47-es, 49-es villamos) az ajtó előtt.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kinek ajánlom:</strong> Introvertáltaknak és lassan utazóknak, akik kicsi, hangulatos, otthonos helyet keresnek a Duna mellett. <strong>Kerülje, ha</strong> késő este érkezik, szekrényre van szüksége, vagy konnektoros asztalt keres.
@@ -4506,7 +4516,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">11 €-tól</div>
-<div class="bpa-psub">Dormágy/éj • 2026. 11. 14.</div>
+<div class="bpa-psub">Dormágy/éj</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/LV5kBsYQ" rel="nofollow sponsored noopener" target="_blank">Árak és időpontok →</a>
 <div class="bpa-trust-micro">
@@ -4546,10 +4556,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Személyesen tesztelve</span>
-<span class="bpa-sp">Kilátás a Bazilikára</span>
-<span class="bpa-sp">Saját fürdőszobák</span>
-<span class="bpa-sp">Ingyen tea és kávé</span>
-<span class="bpa-sp">Andrássy út</span>
+<details class="bpa-lang"><summary class="bpa-sp">⛪ <span class="bpa-lang-label">Kilátás a Bazilikára</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Kilátás a Szent István-bazilikára.</strong> Az Andrássy út elején, pár perc séta a Bazilikától, az Operától és a Deák Ferenc tértől.<span class="bpa-lang-note">A lista legjobb bázisa a gyalogos városnézéshez.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🚿 <span class="bpa-lang-label">Saját fürdőszobák</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Saját fürdőszoba.</strong> Dormok és kétágyas szobák saját fürdővel; az enyém kiváló és tiszta volt.<span class="bpa-lang-note">Privát szoba kb. 22 €-tól.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">☕ <span class="bpa-lang-label">Ingyen tea és kávé</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ingyen tea, kávé és ágynemű.</strong> Önkiszolgáló tea és kávé, teljesen felszerelt vendégkonyhák, a hostel szerint.<span class="bpa-lang-note">Nyugodt, nem közösségi: nincsenek programok, nincs személyes törődés.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Andrássy út</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Andrássy út 2, 1. emelet.</strong> A Bajcsy-Zsilinszky út (M1) az ajtóban, a Deák Ferenc tér (M1, M2, M3) rövid séta.<span class="bpa-lang-note">Főútvonal: kérjen udvari szobát. Egy lépcsősor, lift nincs.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kinek ajánlom:</strong> Városnézőknek, akik nyugodt, tiszta ágyat szeretnének az Andrássy út elején, pár lépésre a Szent István-bazilikától. <strong>Kerülje, ha</strong> társasági hostelt keres, vagy érzékeny a forgalom zajára.
@@ -4558,7 +4568,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">11 €-tól</div>
-<div class="bpa-psub">Dormágy/éj • 2026. 11. 14.</div>
+<div class="bpa-psub">Dormágy/éj</div>
 </div>
 <a class="bpa-btn" href="https://hostelworld.tp.st/GpKMoQF5" rel="nofollow sponsored noopener" target="_blank">Árak és időpontok →</a>
 <div class="bpa-trust-micro">
@@ -4586,10 +4596,10 @@ a.w-webflow-badge,
 </div>
 <div class="bpa-specs-row">
 <span class="bpa-vchip bpa-proof-mobile">✓ Személyesen tesztelve</span>
-<span class="bpa-sp">Otthonos loft</span>
-<span class="bpa-sp">Helyi tippek</span>
-<span class="bpa-sp">Vendégkonyha</span>
-<span class="bpa-sp">Zsidónegyed</span>
+<details class="bpa-lang"><summary class="bpa-sp">🏠 <span class="bpa-lang-label">Otthonos loft</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Tetőtéri loftlakás.</strong> Felújított és meghitt, olyan, mintha egy barátjánál lakna.<span class="bpa-lang-note">4 és 6 ágyas vegyes vagy női dormok, plusz egy privát franciaágyas szoba.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🗺️ <span class="bpa-lang-label">Helyi tippek</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Tippek, amik nincsenek a neten.</strong> A vendéglátóktól olyan bár-, étterem- és fesztiváltippeket kaptam, amik egyik útikönyvben sem szerepeltek.<span class="bpa-lang-note">Barátságos, kedves személyzet.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍳 <span class="bpa-lang-label">Vendégkonyha</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Teljesen felszerelt konyha.</strong> Főzzön magának, és spóroljon a budapesti éttermi árakon.<span class="bpa-lang-note">Ottjártamkor csak készpénz volt: vigyen forintot a biztonság kedvéért.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Zsidónegyed</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Akácfa utca 10, VII. kerület.</strong> A bulinegyedben, közel a fő látnivalókhoz és a romkocsmákhoz.<span class="bpa-lang-note">4-es és 6-os villamos a Wesselényi utcánál. Hétvégére vigyen füldugót.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kinek ajánlom:</strong> Egyedül utazó hátizsákosoknak és kis csoportoknak, akik hangulatos, lakásszerű hostelt keresnek barátságos házigazdákkal a bulinegyedben. <strong>Kerülje, ha</strong> kártyával fizetne, akadálymentes bejutás kell, vagy hétvégén is csendre vágyik.
@@ -4598,7 +4608,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">15 €-tól</div>
-<div class="bpa-psub">Dormágy/éj • 2026. 11. 14.</div>
+<div class="bpa-psub">Dormágy/éj</div>
 </div>
 <a class="bpa-btn" href="https://tp.media/r?marker=404154.article-best-hostels-budapest-das-nest-comparison-list&amp;trs=204442&amp;p=3518&amp;u=https%3A%2F%2Fwww.hostelworld.com%2Fst%2Fhostels%2Fp%2F47301%2Fdas-nest-budapest%2F&amp;campaign_id=93" rel="nofollow sponsored noopener" target="_blank">Árak és időpontok →</a>
 <div class="bpa-trust-micro">
@@ -4624,10 +4634,10 @@ a.w-webflow-badge,
 <div class="bpa-proof"></div>
 </div>
 <div class="bpa-specs-row">
-<span class="bpa-sp">Tetőbár</span>
-<span class="bpa-sp">Napi kocsmatúrák</span>
-<span class="bpa-sp">Csak 18+</span>
-<span class="bpa-sp">Zsidónegyed</span>
+<details class="bpa-lang"><summary class="bpa-sp">🌇 <span class="bpa-lang-label">Tetőbár</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Csak vendégeknek szóló tetőbár.</strong> Happy hour minden nap 16 és 19 óra között.<span class="bpa-lang-note">300+ ágy, 2015 óta nyitva, a hostel szerint.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🍻 <span class="bpa-lang-label">Napi kocsmatúrák</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Minden este buli.</strong> Napi kocsmatúrák, plusz bingós túrák, SPArtyk és bulihajók a hostel szervezésében.<span class="bpa-lang-note">A vendégek említik a lenti klub zaját.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">🔞 <span class="bpa-lang-label">Csak 18+</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Szigorúan 18 év felett.</strong> Az esti bulikra épül, nem a korai kelésre.<span class="bpa-lang-note">Bejelentkezés 15:00-tól éjfélig; készpénz vagy kártya.</span></div></details>
+<details class="bpa-lang"><summary class="bpa-sp">📍 <span class="bpa-lang-label">Zsidónegyed</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Dob utca 19, VII. kerület.</strong> Rövid séta a Gozsdu udvarig és a Szimpla Kertig.<span class="bpa-lang-note">Az Astoria (M2) és a Deák Ferenc tér (M1, M2, M3) pár percre.</span></div></details>
 </div>
 <div class="bpa-best-for">
 <strong>Kinek ajánlom:</strong> 18 év feletti csoportoknak és egyedül bulizóknak, akik nagy, hangos bulihostelt szeretnének tetőbárral a romkocsmanegyedben. <strong>Kerülje, ha</strong> éber alvó, korán kel, vagy ágyfüggönyt szeretne.
@@ -4636,7 +4646,7 @@ a.w-webflow-badge,
 <div class="bpa-cta-cell">
 <div>
 <div class="bpa-price">13 €-tól</div>
-<div class="bpa-psub">Dormágy/éj • 2026. 11. 14.</div>
+<div class="bpa-psub">Dormágy/éj</div>
 </div>
 <a class="bpa-btn" href="https://tp.media/r?marker=404154.article-best-hostels-budapest-the-hive-comparison-list&amp;trs=204442&amp;p=3518&amp;u=https%3A%2F%2Fwww.hostelworld.com%2Fhostels%2Fp%2F96091%2Fthe-hive-party-hostel-budapest%2F&amp;campaign_id=93" rel="nofollow sponsored noopener" target="_blank">Árak és időpontok →</a>
 <div class="bpa-trust-micro">
@@ -9079,4 +9089,92 @@ a.cd-editorial-bookmark .cd-editorial-meta{display:none!important}
 a.cd-editorial-bookmark .cd-editorial-desc{display:-webkit-box!important;-webkit-line-clamp:1!important;-webkit-box-orient:vertical!important;overflow:hidden!important;font-size:13px!important;line-height:1.4!important;color:#64748b!important;margin:3px 0 0!important}
 a.cd-editorial-bookmark .cd-editorial-title{font-family:'Playfair Display',Georgia,serif!important;font-size:16px!important;line-height:1.3!important;margin:0!important;color:#0a192f!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
 a.cd-editorial-bookmark::after{content:"\203A"!important;position:static!important;order:2;flex:0 0 auto;font-size:22px;line-height:1;color:#b88214}
-</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style></body></html>
+</style><style id="intro-narrow">@media (min-width:840px){.ltt-hero-wrap>.ltt-clean-card{max-width:800px!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;padding-left:0!important;padding-right:0!important;overflow:visible!important}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-filter-bar{position:relative;width:min(1208px,calc(100vw - 32px))!important;max-width:none!important;left:50%;transform:translateX(-50%);box-sizing:border-box}.ltt-hero-wrap>.ltt-clean-card .ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar{flex-wrap:nowrap!important}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*{min-width:0}.ltt-hero-wrap>.ltt-clean-card .ltt-trust-bar>*:last-child{flex-shrink:0}}</style><script id="bpa-lang-js">
+(function(){
+  var N={en:'English',fr:'French',es:'Spanish',de:'German',it:'Italian',pt:'Portuguese',nl:'Dutch',pl:'Polish',ru:'Russian',ar:'Arabic',hi:'Hindi',zh:'Chinese',ja:'Japanese',ko:'Korean'};
+  function init(){
+    var langs=[];
+    try{langs=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']);}catch(e){}
+    var code=String(langs[0]||'').slice(0,2).toLowerCase();
+    var boxes=document.querySelectorAll('.bpa-lang');
+    if(!boxes.length) return;
+    document.documentElement.classList.add('bpa-lang-on');
+
+    var pop=document.createElement('div');
+    pop.id='bpa-lang-float';
+    pop.setAttribute('role','tooltip');
+    document.body.appendChild(pop);
+    var current=null, pinned=false, hideTimer=null;
+    var canHover=window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    function place(d){
+      var s=d.querySelector('summary').getBoundingClientRect();
+      var vw=document.documentElement.clientWidth, vh=window.innerHeight;
+      var w=Math.min(290, vw-16);
+      pop.style.width=w+'px';
+      var left=Math.max(8, Math.min(s.left, vw-w-8));
+      var h=pop.offsetHeight;
+      var above=(s.bottom+10+h>vh) && (s.top-10-h>0);
+      var top=above ? (s.top-10-h) : (s.bottom+10);
+      pop.classList.toggle('is-above', above);
+      pop.style.left=(left+window.scrollX)+'px';
+      pop.style.top=(top+window.scrollY)+'px';
+      pop.style.setProperty('--ax', Math.max(14, Math.min(w-14, s.left+Math.min(s.width,40)/2-left))+'px');
+    }
+    function show(d, pin){
+      clearTimeout(hideTimer);
+      if(current && current!==d) current.classList.remove('is-open');
+      current=d; pinned=!!pin;
+      pop.innerHTML=d.querySelector('.bpa-lang-pop').innerHTML;
+      d.classList.add('is-open');
+      d.querySelector('summary').setAttribute('aria-expanded','true');
+      place(d);
+      pop.classList.add('is-visible');
+    }
+    function hide(){
+      clearTimeout(hideTimer);
+      if(current){ current.classList.remove('is-open'); current.querySelector('summary').setAttribute('aria-expanded','false'); }
+      current=null; pinned=false;
+      pop.classList.remove('is-visible');
+    }
+    function softHide(e){
+      if(pinned) return;
+      var to=e && e.relatedTarget;
+      if(to && to.closest && (to.closest('#bpa-lang-float') || (current && current.contains(to)))) return;
+      hide();
+    }
+
+    boxes.forEach(function(d){
+      var sum=d.querySelector('summary');
+      sum.setAttribute('aria-expanded','false');
+      sum.addEventListener('click',function(e){
+        e.preventDefault();
+        if(current===d && pinned){ hide(); return; }
+        show(d,true);
+      });
+      if(canHover){
+        sum.addEventListener('mouseenter',function(){ if(!pinned||current!==d) show(d,false); });
+        sum.addEventListener('mouseleave',softHide);
+      }
+      if(!code||code==='en'||!N[code]) return;
+      var list=(d.getAttribute('data-langs')||'').split(',');
+      if(list.indexOf(code)===-1) return;
+      var label=d.querySelector('.bpa-lang-label');
+      if(label) label.textContent='Audio in '+N[code]+' \u2713';
+      d.classList.add('is-match');
+      var names=d.querySelector('.bpa-lang-names');
+      if(names) names.innerHTML=names.textContent.split(', ').map(function(n){return n===N[code]?'<b>'+n+'</b>':n;}).join(', ');
+    });
+    pop.addEventListener('mouseenter',function(){ clearTimeout(hideTimer); });
+    pop.addEventListener('mouseleave',softHide);
+    document.addEventListener('click',function(e){
+      if(!current) return;
+      if(e.target.closest && (e.target.closest('.bpa-lang') || e.target.closest('#bpa-lang-float'))) return;
+      hide();
+    });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') hide(); });
+    window.addEventListener('resize',function(){ if(current) place(current); });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script></body></html>
