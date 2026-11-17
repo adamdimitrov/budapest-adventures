@@ -195,6 +195,7 @@ TEXT = [
     ("ranked the 10 best river cruises", "ranked the 12 best river cruises", 1),
     ("Matched against the 10 cruises I compared on this page.", "Matched against the 12 cruises I compared on this page.", 1),
     ("Show all 10 again", "Show all 12 again", 1),
+    ("All 10 Danube Cruises", "All 12 Danube Cruises", 1),
 ]
 for old, new, cnt in TEXT:
     n = s.count(old)
