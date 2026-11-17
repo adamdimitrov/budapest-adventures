@@ -859,7 +859,7 @@ css = block("style", "cd-cards-css") + block("style", "cd-tested-css") + block("
 js = block("script", "cd-cards-js") + block("script", "cd-filters-js") + block("script", "fbm-js")
 _old_note = "note.textContent='Sunset '+SUN+', fully dark by '+DARK+' on '+name+'. Each card shows which sailings are lit up.';"
 assert js.count(_old_note) == 1
-js = js.replace(_old_note, "note.textContent='\U0001F307 Sunset '+SUN+'  \u00b7  \U0001F303 City lit up '+DARK+' to 22:00 ('+name+')';")
+js = js.replace(_old_note, "note.textContent='\U0001F307 Sunset '+SUN+': board about 20 min before ('+hm(sun-20)+') to catch it  \u00b7  \U0001F303 City lit up '+DARK+' to 22:00 ('+name+')';")
 # Lights row on every card: when the city is lit (dusk to the Parliament's 22:00 switch-off), which sailings fall in it,
 # then the exact sunset and the sailing to board to watch the lights come on.
 _old_rows = """        h='';
@@ -870,14 +870,7 @@ _new_rows = """        var OFF=22*60, inLit=lit.filter(function(t){return m(t)<O
         h='🌃 <b>City lit up on '+name+': '+DARK+' to 22:00</b> <span class="fbm-why" title="Lights are on from dusk, about 30 minutes after sunset, until the Parliament switches its floodlights off at 22:00.">ⓘ</span>';
         h+=inLit.length?'<br><span class="fbm-sub">Board for the lights: '+(ev?span(inLit[0],'lit')+' then every '+step+' min to '+span(inLit[inLit.length-1],'lit'):inLit.map(function(t){return span(t,'lit');}).join(''))+(late?' (later sailings: city lit, Parliament dark)':'')+'</span>'
                        :'<br><span class="fbm-sub">'+(late?'Its sailings start after 22:00: the city is lit, the Parliament is dark.':'No sailing starts after dark on this date.')+'</span>';
-        var pre=times.filter(function(t){return m(t)<sun&&m(t)+dur>sun;}), best=pre[pre.length-1];
-        h+='<br>🌇 <b>Sunset '+SUN+'</b>';
-        if(best){ var back=m(best)+dur;
-          h+=': board the '+span(best,'dusk')+' before sunset to '+(back>=dark?'see the sunset and then the city light up':'see the sunset from the river (back at '+hm(back)+', before the city is fully lit)');
-        } else {
-          var after=times.filter(function(t){return m(t)>=sun&&m(t)<dark;})[0];
-          h+=after?': no sailing leaves before sunset; the '+span(after,'dusk')+' sees the city light up':': no sailing is on the water at sunset';
-        }"""
+""
 assert js.count(_old_rows) == 1, "rows"
 js = js.replace(_old_rows, _new_rows)
 css += '<style id="fbm-lights-css">.fbm-slot .fbm-sub{font-weight:500;color:#475569}.fbm-why{cursor:help;color:#b45309;font-weight:800}</style>'
