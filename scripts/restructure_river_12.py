@@ -212,7 +212,7 @@ MIC_BTN = ('<button aria-label="Speak your search" class="bpa-ai-mic" hidden="" 
 FIELD = [
     ('<div class="bpa-ai-row">\n<svg aria-hidden="true"', '<div class="bpa-ai-row">\n<div class="bpa-ai-field">\n<svg aria-hidden="true" class="bpa-ai-glass"'),
     ('<input id="bpa-ai-q" maxlength="300" placeholder="Romantic, under €30, near Vigadó tér…" type="text"/>',
-     '<input autocomplete="off" enterkeyhint="search" id="bpa-ai-q" maxlength="300" placeholder="Search: romantic, under €30, sunset…" type="search"/>'),
+     '<input autocomplete="off" enterkeyhint="search" id="bpa-ai-q" maxlength="300" placeholder="Search: romantic, under €30…" type="search"/>'),
 ]
 for a, b in FIELD:
     assert s.count(a) == 1, a[:60]
