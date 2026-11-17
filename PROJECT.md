@@ -107,3 +107,12 @@
 - Image paths are absolute (`/assets/...`), never relative (`assets/...`): relative paths break on language subpages.
 - After any script that rewrites images (e.g. Lighthouse/perf passes), run `python3 scripts/check_lazy_images.py`;
   `--fix` upgrades old slider runtimes in place. CI fails the PR on any problem.
+- No photos hotlinked from other sites: only our own files or the hosts in `ALLOWED_IMAGE_HOSTS`.
+
+## Filter pills (QC: `scripts/check_filters.py`, runs in CI)
+- The filter runtime (`lttFilterItems` + `btnGroup`) only treats buttons WITH `data-group` as filters.
+  Every `.ltt-tab-btn` except `data-cat="all"` MUST carry `data-group` (single-group pages use `"fit"`),
+  and only the "all" button is `active` in the markup. Without it every pill renders orange/active and
+  shows the total count (hit 12 pages from `build_article.py` in Nov 2026).
+- After building or editing a page with filters, open it and check: on load only "All" is orange,
+  the other pills are grey with their own counts, and clicking one filters the cards.
