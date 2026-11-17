@@ -216,6 +216,7 @@ s = s.replace(cfg, json.dumps(cfgd, ensure_ascii=False))
 TEXT = [
     ("10 Best River Cruises in Budapest", "13 Best River Cruises in Budapest", None),
     ("I personally tested 8 of these 10 day and night cruises", "I personally tested 6 of these 13 day and night cruises", None),
+    ("Experience Budapest's top-rated river cruises in 2026. I personally tested 6 of these 13 day and night cruises: sightseeing cruises, dinner cruises and lively booze cruises.", "I rode 6 of Budapest's most popular Danube river cruises and compared all 13 side by side: price, drinks, docks, audio guide and sunset times. Find yours in 30 seconds with the cruise finder.", None),  # meta/og/twitter/JSON-LD description
     ("8 of 10 Cruises Tested in Person", "6 of 13 Cruises Tested in Person", 1),
     ("added two well-reviewed newcomers, and compared the 10 worth your evening", "added a few well-reviewed newcomers, and compared the 13 worth your evening", 1),
     ("a guaranteed rooftop seat or a folk-show dinner. Tickets run <strong>from €11 to €79</strong>",
