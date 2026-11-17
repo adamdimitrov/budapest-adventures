@@ -58,7 +58,9 @@
     loadSliderImages(slider);
     var first = slider.firstElementChild;
     var w = first ? first.getBoundingClientRect().width + (parseFloat(getComputedStyle(slider).columnGap) || 0) : slider.clientWidth;
-    slider.scrollBy({ left: dir * w, behavior: 'smooth' });
+    // right-to-left pages (Hebrew) scroll towards negative scrollLeft, so "next" goes left
+    var rtl = getComputedStyle(slider).direction === 'rtl' ? -1 : 1;
+    slider.scrollBy({ left: dir * w * rtl, behavior: 'smooth' });
   };
 
   window.bpaCount = function(slider, pillOnly) {
@@ -71,7 +73,7 @@
     var w = (first ? first.getBoundingClientRect().width + (parseFloat(getComputedStyle(slider).columnGap) || 0) : slider.clientWidth) || 1;
     var slides = slider.children;
     var photos = slider.querySelectorAll('img').length;
-    var i = Math.min(Math.round(slider.scrollLeft / w), slides.length - 1);
+    var i = Math.min(Math.round(Math.abs(slider.scrollLeft) / w), slides.length - 1);
     pill.textContent = Math.min(i + 1, photos) + ' / ' + photos;
     var cap = media.querySelector('.bpa-cap');
     if (cap) cap.textContent = (slides[i] && slides[i].getAttribute('data-cap')) || '';
