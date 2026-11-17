@@ -30,6 +30,46 @@ PAGES = {
 _cards_cache = {}
 _client = None
 
+# Abuse limits, so a bot can't run up Anthropic costs. Counters live in the function instance's memory
+# (Fluid Compute reuses instances), on top of the CDN cache that serves repeated questions for free.
+# The hard money cap is the monthly spend limit set in the Anthropic Console.
+PER_IP_MINUTE = int(os.environ.get("CRUISE_FINDER_IP_PER_MIN", "8"))
+PER_IP_DAY = int(os.environ.get("CRUISE_FINDER_IP_PER_DAY", "40"))
+INSTANCE_DAY = int(os.environ.get("CRUISE_FINDER_DAILY_CAP", "1500"))
+ALLOWED_HOSTS = re.compile(r"^(www\.)?budapestadventures\.com$|^budapest-adventures[a-z0-9-]*\.vercel\.app$|^localhost(:\d+)?$")
+_hits = {}          # ip -> list of request times in the last 24 h
+_day = {"date": "", "n": 0}
+
+
+def over_limit(ip):
+    """True if this IP or this instance has used up its allowance."""
+    now = time.time()
+    today = time.strftime("%Y-%m-%d", time.gmtime(now))
+    if _day["date"] != today:
+        _day["date"], _day["n"] = today, 0
+        _hits.clear()
+    if _day["n"] >= INSTANCE_DAY:
+        return True
+    times = [t for t in _hits.get(ip, []) if now - t < 86400]
+    if len(times) >= PER_IP_DAY or sum(1 for t in times if now - t < 60) >= PER_IP_MINUTE:
+        _hits[ip] = times
+        return True
+    times.append(now)
+    _hits[ip] = times
+    _day["n"] += 1
+    if len(_hits) > 20000:  # keep memory bounded
+        _hits.clear()
+    return False
+
+
+def from_our_site(headers):
+    """Browsers send Sec-Fetch-Site and Referer on the page's own fetch; plain scripts usually don't."""
+    if headers.get("Sec-Fetch-Site") == "same-origin":
+        return True
+    ref = headers.get("Referer") or headers.get("Origin") or ""
+    host = urlparse(ref).netloc.lower()
+    return bool(host and ALLOWED_HOSTS.match(host))
+
 SCHEMA = {
     "type": "object",
     "properties": {
@@ -163,7 +203,7 @@ def ask_claude(q, cards, ctx=None, general=None, allowed=None):
     t0 = time.time()
     response = _client.messages.create(
         model=MODEL,
-        max_tokens=2000,
+        max_tokens=700,
         # Speed: no thinking step (allowed on Haiku 5.5 at effort low). The card data is an identical prefix
         # on every call, so the prompt cache serves it; filters only change the small dynamic part.
         thinking={"type": "disabled"},
@@ -211,6 +251,12 @@ class handler(BaseHTTPRequestHandler):
             return self._send(400, {"error": "unknown_page"})
         if len(q) < 2:
             return self._send(400, {"error": "empty_question"})
+        if not from_our_site(self.headers):
+            return self._send(403, {"error": "forbidden"})
+        ip = (self.headers.get("X-Forwarded-For") or self.headers.get("X-Real-Ip") or "?").split(",")[0].strip()
+        if over_limit(ip):
+            print(json.dumps({"finder_limited": {"ip_hash": hash(ip) & 0xFFFFFF}}))
+            return self._send(429, {"error": "busy"})
         try:
             cards, general = load_cards(page)
             # only the cards the visitor's filters leave on screen (all of them if none sent)
