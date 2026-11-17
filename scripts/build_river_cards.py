@@ -628,7 +628,89 @@ FINDER_IN_BOX_CSS = ("<style id=\"bpa-ai-in-box-css\">"
     "@media (max-width:767px){.cd-fbox>.bpa-ai-finder{padding:4px 0 14px!important}}"
     "</style>")
 fa_open = fbox.index(">") + 1
-s = s[:fb_start] + fbox[:fa_open] + finder + FINDER_IN_BOX_CSS + fbox[fa_open:] + s[fb_end:]
+# Interactive dock map (Leaflet + OpenStreetMap), loaded only when scrolled into view.
+# Pontoon coordinates from OpenStreetMap (ferry terminals / piers, 17 Nov 2026); Vigadó 8/A is next to Vigadó 7.
+DOCKS = [
+    {"name": "Vigadó tér, Dock 7", "side": "Pest", "lat": 47.4940626, "lon": 19.0486335, "anchors": ["cruise-1-legenda", "item-4-legenda-candlelit-dinner"]},
+    {"name": "Vigadó tér, Dock 5", "side": "Pest", "lat": 47.4953512, "lon": 19.0478120, "anchors": ["cruise-10-mahart"]},
+    {"name": "Vigadó tér, Dock 8/A", "side": "Pest", "lat": 47.4936300, "lon": 19.0488900, "anchors": ["cruise-2-rubingroup"]},
+    {"name": "Dock 10, Elizabeth Bridge", "side": "Pest", "lat": 47.4922972, "lon": 19.0500585, "anchors": ["cruise-3-kisfaludy-historic-cruise", "cruise-360-panoramic"]},
+    {"name": "Dock 11, Elizabeth Bridge", "side": "Pest", "lat": 47.4919137, "lon": 19.0502679,
+     "anchors": ["cruise-7-silverline-prosecco", "cruise-silverline-mulled-wine", "cruise-5-silverline-no-frills", "cruise-cosy-chimney-cake", "cruise-silverline-folklore"]},
+    {"name": "Akadémia 3, Chain Bridge", "side": "Pest", "lat": 47.5016994, "lon": 19.0450509, "anchors": ["item-5-river-diva-dinner", "cruise-2-rubingroup"]},
+    {"name": "Carl Lutz rakpart, Dock 0", "side": "Pest", "lat": 47.5191467, "lon": 19.0496608, "anchors": ["cruise-2-rubingroup"]},
+    {"name": "Várkert Bazár", "side": "Buda", "lat": 47.4946733, "lon": 19.0439402, "anchors": ["cruise-6-la-perla"]},
+    {"name": "Batthyány tér, Dock 1", "side": "Buda", "lat": 47.5064839, "lon": 19.0400059, "anchors": ["cruise-10-mahart"]},
+]
+anchor_to_card = {}
+for m in re.finditer(r'<div class="bpa-card" data-cat="[^"]*" id="(card-\d+)">', s):
+    nx = re.search(r'class="bpa-sublink" href="#([^"]+)"', s[m.end(): m.end() + 120000])
+    anchor_to_card[nx.group(1)] = m.group(1)
+docks_js = json.dumps([{"n": d["name"], "s": d["side"], "lat": d["lat"], "lon": d["lon"], "c": [anchor_to_card[a] for a in d["anchors"]]} for d in DOCKS], ensure_ascii=False)
+MAP_HTML = ("""<section class="bpa-map" id="cruise-dock-map" aria-labelledby="bpa-map-h">
+<div class="bpa-map-head"><h2 id="bpa-map-h">🗺️ Where each cruise leaves from</h2>
+<p>Tap a pin to see which cruises board there. Most leave from the Pest bank between the Chain Bridge and Elizabeth Bridge.</p></div>
+<div class="bpa-map-box" id="bpa-map-box" role="region" aria-label="Map of cruise docks in Budapest"><button type="button" class="bpa-map-load" id="bpa-map-load">Show the dock map</button></div>
+<ul class="bpa-map-list" id="bpa-map-list"></ul>
+</section>
+<style id="bpa-map-css">
+.bpa-map{margin:18px auto 8px;max-width:1208px;padding:16px;border:1px solid #e2e8f0;border-radius:16px;background:#fff;box-sizing:border-box}
+.bpa-map-head h2{margin:0 0 4px;font:700 22px/1.25 'Playfair Display',Georgia,serif;color:#0f172a}
+.bpa-map-head p{margin:0 0 12px;font:500 14px/1.45 'Plus Jakarta Sans',sans-serif;color:#475569}
+.bpa-map-box{position:relative;height:380px;border-radius:12px;overflow:hidden;background:#e2e8f0;z-index:0}
+.bpa-map-load{position:absolute;inset:0;margin:auto;width:max-content;height:44px;padding:0 18px;border:0;border-radius:9999px;background:#0f172a;color:#fff;font:700 14px 'Plus Jakarta Sans',sans-serif;cursor:pointer}
+.bpa-map-load:hover{background:#1e293b;color:#fff}
+.bpa-map-list{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.bpa-map-list li{border:1px solid #e2e8f0;border-radius:10px;padding:8px 10px;font:500 13px/1.45 'Plus Jakarta Sans',sans-serif;color:#334155}
+.bpa-map-list li.is-off{opacity:.4}
+.bpa-map-list b{color:#0f172a}
+.bpa-map-list a,.bpa-map-pop a{color:#b45309;font-weight:700;text-decoration:underline}
+.bpa-map-list a:hover,.bpa-map-pop a:hover{color:#92400e}
+.bpa-map-pin{width:30px;height:30px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#0f172a;border:2px solid #fff;box-shadow:0 2px 6px rgba(15,23,42,.35);display:flex;align-items:center;justify-content:center}
+.bpa-map-pin span{transform:rotate(45deg);color:#fff;font:800 12px/1 'Plus Jakarta Sans',sans-serif}
+.bpa-map-pin.is-off{background:#94a3b8;opacity:.6}
+.bpa-map-pop{font:500 13px/1.45 'Plus Jakarta Sans',sans-serif;color:#334155;min-width:200px}
+.bpa-map-pop b{display:block;color:#0f172a;margin-bottom:4px}
+@media (max-width:767px){.bpa-map{padding:12px}.bpa-map-box{height:300px}.bpa-map-head h2{font-size:19px}}
+</style>
+<script id="bpa-map-js">
+(function(){
+  var DOCKS=""" + docks_js + r""";
+  var box=document.getElementById('bpa-map-box'), list=document.getElementById('bpa-map-list'); if(!box) return;
+  function card(id){ var c=document.getElementById(id); if(!c) return null;
+    var rank=(c.querySelector('.bpa-rank-tag')||{}).textContent||'', title=(c.querySelector('.bpa-title')||{}).textContent||'';
+    var price=(c.querySelector('.cd-pdd-main')||{}).textContent||'';
+    return {id:id, rank:rank.trim(), title:title.trim(), price:price.trim(), on:c.offsetParent!==null||getComputedStyle(c).display!=='none'}; }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m];}); }
+  function rows(d){ return d.c.map(card).filter(Boolean).map(function(x){ return '<li'+(x.on?'':' style="opacity:.45"')+'><a href="#'+x.id+'">'+esc(x.rank)+'</a> '+esc(x.title)+(x.price?' · '+esc(x.price):'')+'</li>'; }).join(''); }
+  function renderList(){ list.innerHTML=DOCKS.map(function(d,i){ var on=d.c.some(function(id){ var x=card(id); return x&&x.on; });
+    return '<li class="'+(on?'':'is-off')+'"><b>'+(i+1)+'. '+esc(d.n)+'</b> ('+d.s+' side)<ul style="margin:4px 0 0;padding-left:16px">'+rows(d)+'</ul></li>'; }).join(''); }
+  var map=null, markers=[];
+  function icon(i,on){ return L.divIcon({className:'',html:'<div class="bpa-map-pin'+(on?'':' is-off')+'"><span>'+(i+1)+'</span></div>',iconSize:[30,30],iconAnchor:[15,30],popupAnchor:[0,-28]}); }
+  function refresh(){ renderList(); if(!map) return; markers.forEach(function(m,i){ var d=DOCKS[i], on=d.c.some(function(id){ var x=card(id); return x&&x.on; });
+    m.setIcon(icon(i,on)); m.setPopupContent('<div class="bpa-map-pop"><b>'+(i+1)+'. '+esc(d.n)+' ('+d.s+' side)</b><ul style="margin:0;padding-left:16px">'+rows(d)+'</ul></div>'); }); }
+  function load(){
+    if(map||box.dataset.loading) return; box.dataset.loading='1';
+    var css=document.createElement('link'); css.rel='stylesheet'; css.href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css'; document.head.appendChild(css);
+    var js=document.createElement('script'); js.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
+    js.onload=function(){
+      box.innerHTML='';
+      map=L.map(box,{scrollWheelZoom:false, tap:true}).setView([47.5025,19.0465],14);
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+      markers=DOCKS.map(function(d,i){ return L.marker([d.lat,d.lon],{icon:icon(i,true),title:d.n}).addTo(map).bindPopup(''); });
+      map.fitBounds(DOCKS.map(function(d){ return [d.lat,d.lon]; }),{padding:[24,24]});
+      refresh();
+    };
+    document.head.appendChild(js);
+  }
+  document.getElementById('bpa-map-load').addEventListener('click',load);
+  if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ io.disconnect(); load(); } },{rootMargin:'200px'}); io.observe(box); }
+  var tmr; var mo=new MutationObserver(function(){ clearTimeout(tmr); tmr=setTimeout(refresh,80); });
+  document.querySelectorAll('.bpa-card[id^="card-"]').forEach(function(c){ mo.observe(c,{attributes:true,attributeFilter:['style','class','hidden']}); });
+  renderList();
+})();
+</script>""")
+s = s[:fb_start] + fbox[:fa_open] + finder + FINDER_IN_BOX_CSS + fbox[fa_open:] + MAP_HTML + s[fb_end:]
 
 mini = ('<div class="cd-fmini" aria-hidden="true"><div class="cd-fmini-in"><button type="button" class="cd-fmini-btn" '
         'onclick="cdFiltersJump()">⚙️ Filters <span class="cd-fmini-n" hidden></span></button><span class="cd-fmini-res">'
