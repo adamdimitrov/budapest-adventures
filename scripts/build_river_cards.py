@@ -870,12 +870,14 @@ _new_rows = """        var OFF=22*60, inLit=lit.filter(function(t){return m(t)<O
         h='🌃 <b>City lit up on '+name+': '+DARK+' to 22:00</b> <span class="fbm-why" title="Lights are on from dusk, about 30 minutes after sunset, until the Parliament switches its floodlights off at 22:00.">ⓘ</span>';
         h+=inLit.length?'<br><span class="fbm-sub">Board for the lights: '+(ev?span(inLit[0],'lit')+' then every '+step+' min to '+span(inLit[inLit.length-1],'lit'):inLit.map(function(t){return span(t,'lit');}).join(''))+(late?' (later sailings: city lit, Parliament dark)':'')+'</span>'
                        :'<br><span class="fbm-sub">'+(late?'Its sailings start after 22:00: the city is lit, the Parliament is dark.':'No sailing starts after dark on this date.')+'</span>';
-        var seeSun=dusk.filter(function(t){return m(t)<=sun;}), seeLights=dusk.filter(function(t){return m(t)>sun;});
-        function lst(a){return a.map(function(t){return span(t,'dusk');}).join(' or ');}
+        var pre=times.filter(function(t){return m(t)<sun&&m(t)+dur>sun;}), best=pre[pre.length-1];
         h+='<br>🌇 <b>Sunset '+SUN+'</b>';
-        if(seeSun.length) h+=': board the '+lst(seeSun)+' to see the sunset, then the city light up'+(seeLights.length?'; the '+lst(seeLights)+' leaves after sunset and sees the lights come on':'');
-        else if(seeLights.length) h+=': every sailing leaves after sunset. Board the '+lst(seeLights)+' to see the city light up during the cruise';
-        else h+=': no sailing catches the lights coming on';"""
+        if(best){ var back=m(best)+dur;
+          h+=': board the '+span(best,'dusk')+' before sunset to '+(back>=dark?'see the sunset and then the city light up':'see the sunset from the river (back at '+hm(back)+', before the city is fully lit)');
+        } else {
+          var after=times.filter(function(t){return m(t)>=sun&&m(t)<dark;})[0];
+          h+=after?': no sailing leaves before sunset; the '+span(after,'dusk')+' sees the city light up':': no sailing is on the water at sunset';
+        }"""
 assert js.count(_old_rows) == 1, "rows"
 js = js.replace(_old_rows, _new_rows)
 css += '<style id="fbm-lights-css">.fbm-slot .fbm-sub{font-weight:500;color:#475569}.fbm-why{cursor:help;color:#b45309;font-weight:800}</style>'
