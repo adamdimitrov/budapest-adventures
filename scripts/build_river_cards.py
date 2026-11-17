@@ -456,7 +456,7 @@ EDGE_QA = {
         ("Is the upper deck worth €5 more?", "It has a roof with columns that block part of the view. For photos, the front seats and the open-air section are better."),
         ("Is it warm inside?", "Yes, the main deck is heated."),
         ("Do kids pay?", "Under-4s ride free; full price from 4."),
-        ("Can I just turn up?", "With 14 sailings a day from 11:00 to 21:15 it is easy to fit in, but book the evening slots ahead in December.")],
+        ("Can I book on the day?", "Yes, same-day booking works, and with 14 sailings a day from 11:00 to 21:15 it is easy to fit in. Evening slots in December can sell out, though.")],
     "cruise-6-la-perla": [
         ("Good for the lights?", "Yes: 18 of 64 recent guests mention the lit-up city, the most of any cruise here. On the 16:10 sailing the lights come on only near the end."),
         ("What can I bring?", "Your own drinks and snacks, alcohol-free or not. There is no bar on board."),
