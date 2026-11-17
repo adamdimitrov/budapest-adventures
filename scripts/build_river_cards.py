@@ -974,6 +974,45 @@ STICKY_TRUST_JS = """<script id="cd-sticky-trust-js">
 </script>"""
 s = s.replace("</body>", STICKY_TRUST_JS + "\n</body>", 1)
 
+# ---- QC fixes (17 Nov 2026) ----
+def _div_end(src, start):
+    """Index just past the </div> that closes the <div ...> starting at start."""
+    depth, i = 0, start
+    for m in re.finditer(r"<div\b|</div>", src[start:]):
+        depth += 1 if m.group(0) == "<div" else -1
+        if depth == 0:
+            return start + m.end()
+    raise ValueError("unbalanced div")
+_bd = s.index('<details class="bpa-details-card"')
+PERK_BY_SELLER = {"gyg": "Pay nothing today", "legenda": "Same-day booking", "silverline": "Same-day booking"}
+for anc in [m.group(1) for m in re.finditer(r'<a class="bpa-sublink" href="#([^"]+)">Read Review', s)]:
+    kind = SELLER.get(anc, "gyg")
+    j = s.index(f'<a class="bpa-sublink" href="#{anc}">Read Review')
+    ci = s.rfind('<div class="bpa-card" data-cat', 0, j)
+    cs = s.find('<div class="bpa-summary-reviews bpa-rate">', ci, j)
+    card_rating = s[cs:_div_end(s, cs)] if cs > 0 else ""
+    ri = s.index(f'id="{anc}"', _bd)
+    re_end = s.find('<details class="bpa-details-card"', ri + 10)
+    re_end = re_end if re_end > 0 else ri + 90000
+    blk = s[ri:re_end]
+    rs = blk.find('<div class="bpa-summary-reviews">')
+    if rs >= 0:  # review header: same rating component as the card (none when the cruise has no ratings yet)
+        blk = blk[:rs] + card_rating + blk[_div_end(blk, rs):]
+    blk = blk.replace('<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>', f'<span class="ltt-buy-perk">{PERK_BY_SELLER[kind]}</span>')
+    if anc == "cruise-1-legenda":  # evening price is the default; "From" would wrongly suggest it is the cheapest
+        blk = blk.replace("From €25", "€25")
+    if anc == "cruise-2-rubingroup":
+        blk = blk.replace('<br/><a href="https://www.instagram.com/legendacruises/" rel="nofollow" target="_blank">📷 <strong>Instagram</strong></a>: Check out reels and photos of Rubin Group.', "")
+    s = s[:ri] + blk + s[re_end:]
+# the operator is Duna-Weser (GetYourGuide: "Activity provider: Duna-Weser Kft."), not Rubin Group
+s = s.replace("Rubin Group", "Duna-Weser")
+s = s.replace('<span class="hybrid-active-price" id="sticky-price">€20–25</span>', '<span class="hybrid-active-price" id="sticky-price">€25</span>')
+RATE_IN_SUMMARY_JS = """<script id="cd-rate-in-summary-js">
+document.addEventListener('click',function(e){ var sm=e.target.closest('.bpa-details-card .bpa-rate-sum'); if(!sm) return;
+  e.preventDefault(); e.stopPropagation(); var d=sm.parentNode; d.open=!d.open; },true);
+</script>"""
+s = s.replace("</body>", RATE_IN_SUMMARY_JS + "\n</body>", 1)
+
 # Trust lines under the CTA: bold promise + lighter detail, check-circle icons, soft green box
 for _old, _new in [("✓ Instant mobile ticket", "<b>Instant mobile ticket</b> on your phone"),
                    ("✓ Instant confirmation", "<b>Instant confirmation</b> by email"),
@@ -1000,6 +1039,16 @@ node = {"@type": "FAQPage", "@id": "https://www.budapestadventures.com/best-buda
         "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
                        for v in EDGE_QA.values() for q, a in v]}
 data.setdefault("@graph", []).append(node)
+for _n in data["@graph"]:
+    if _n.get("@type") == "Article":
+        for _el in _n.get("mainEntity", {}).get("itemListElement", []):
+            _it = _el.get("item", {})
+            if isinstance(_it.get("aggregateRating"), dict) and not _it["aggregateRating"].get("ratingValue"):
+                del _it["aggregateRating"]  # folklore: no ratings yet; an empty rating is invalid
+            _of = _it.get("offers")
+            if isinstance(_of, dict) and not _of.get("price"):
+                _nm = _it.get("name", "")
+                _of["price"] = "11" if "Paddle Steam" in _nm else ("12" if "No-Frills" in _nm else _of.get("price"))
 s = s.replace(jm.group(0), jm.group(1) + json.dumps(data, ensure_ascii=False) + jm.group(3))
 
 # ------------------------------------------------------------------ assets copied from the night page
