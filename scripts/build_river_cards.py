@@ -288,7 +288,7 @@ ACCESS.update({
 })
 KIDS.update({
     "cruise-360-panoramic": ([("Child", "3 and over", "€12"), ("Under 3", "", "Free")], ("2 adults + 2 kids (3+)", "€48")),
-    "cruise-cosy-chimney-cake": ([("Child", "every age", "€17")], ("2 adults + 2 kids", "€68")),
+    "cruise-cosy-chimney-cake": ([("Child", "every age", "€19")], ("2 adults + 2 kids", "€76")),
     "item-8-floating-lotus-prosecco": ([("Child", "7 and under", "€25"), ("Age 8+", "", "Adult fare")], None),
     "item-4-legenda-candlelit-dinner": ([("Child", "3-12, 3 courses", "€84"), ("Under 3", "", "Not allowed")], ("2 adults + 2 kids (3-12)", "€388")),
     "item-5-river-diva-dinner": ([("Child", "4-17", "€99"), ("Under 4", "", "Free")], ("2 adults + 2 kids (4-17)", "€396")),
@@ -320,6 +320,40 @@ TT.update({
     "item-8-floating-lotus-prosecco": (nd(["18:00", "19:30", "21:00"]), 75, None),
     "item-4-legenda-candlelit-dinner": (LEGENDA_DINNER_TT, 150, None),
     "item-5-river-diva-dinner": (nd(["19:30"], ["18:30"]), 150, None),
+})
+
+# ------------------------------------------------------------------ top-13 additions (Silverline own-site products)
+CARDS.update({
+    "cruise-silverline-mulled-wine": dict(cat="unlimited heated hour",
+        vibe=("🧣", "Warm and festive", "A heated cabin with big windows and an hour of unlimited mulled wine.",
+              "Two alcohol-free winter punches for non-drinkers and kids; alcohol is only served from 18. No own food or drinks on board."),
+        dock=(DOCK11[0], DOCK11[1], "Silverline's dock, also used by its prosecco and sightseeing cruises.")),
+    "cruise-silverline-folklore": dict(cat="heated",
+        vibe=("🎻", "Music night, no dinner", "A Hungarian string quartet plays folk tunes and operetta favourites while you sail.",
+              "Long and relaxed: about 2 hours 15 minutes with 3 drinks. A window table costs €25 more per person."),
+        dock=(DOCK11[0], DOCK11[1], "Arrive 20 minutes before departure for check-in.")),
+})
+ACCESS.update({
+    "cruise-silverline-mulled-wine": ("No wheelchair access", (False, "not suitable for wheelchair users; no electric wheelchairs"), None, None, "one price for every age; alcohol only from 18, alcohol-free punch for kids"),
+    "cruise-silverline-folklore": ("No wheelchair access", (False, "no wheelchair access"), None, None, "alcohol only from 18; mocktails available"),
+})
+KIDS.update({
+    "cruise-silverline-mulled-wine": ([("Child", "every age", "€21")], ("2 adults + 2 kids", "€84")),
+    "cruise-silverline-folklore": ([("Window table", "per person", "+€25"), ("Other evenings", "", "Price varies")], None),
+})
+CARD_FAQ.update({
+    "cruise-silverline-mulled-wine": [
+        ("Which mulled wines can I try on the Silverline cruise?", "Four red mulled wines (classic orange, pomegranate and cardamom, apple and ginger, cranberry and orange) and a white pear and vanilla one, all unlimited for the hour."),
+        ("Is there something for kids or non-drinkers?", "Yes. There are two alcohol-free winter punches, apple and pomegranate, and alcohol is only served from 18."),
+        ("Is the mulled wine cruise warm?", "Yes. The cabin is heated and has large windows, so you can see the sights without going outside.")],
+    "cruise-silverline-folklore": [
+        ("Is dinner included on the folklore cruise?", "No. You get 3 drinks and the live show; for dinner with the same show, Silverline runs a separate dinner cruise."),
+        ("What is the show on the folklore cruise?", "A Hungarian string quartet playing folk music and operetta favourites through the evening."),
+        ("Can I get a window seat on the folklore cruise?", "Yes, a window table costs €25 extra per person when you book.")],
+})
+TT.update({
+    "cruise-silverline-mulled-wine": (nd(["16:30", "18:00", "19:30", "21:00"]), 60, None),
+    "cruise-silverline-folklore": (nd(["19:00"]), 135, None),
 })
 FAQ_ORDER = []
 CAT_BY_ANCHOR = {}
@@ -373,7 +407,7 @@ def thumbs(media):
 
 # ------------------------------------------------------------------ cards
 starts = [m.start() for m in re.finditer(r'<div class="bpa-card" data-cat="[^"]*" id="card-\d+">', s)]
-assert len(starts) == 12, len(starts)
+assert len(starts) == 13, len(starts)
 last_sub = s.find('class="bpa-sublink"', starts[-1])
 tail_start = s.find("</div>\n</div>\n</div>", last_sub) + len("</div>\n</div>\n</div>")
 ends = starts[1:] + [tail_start]
@@ -520,7 +554,7 @@ fbox = (
     + btn("hour", "⏱️ About 1 hour") + "</div></div>"
     '<div class="cd-frow"><span class="cd-flab">Budget &amp; proof</span><div class="cd-fchips">'
     + btn("tested", "✓ Personally tested") + btn("under20", "💶 Under €20") + "</div></div>"
-    '<div class="cd-ffoot"><span class="cd-fcount" aria-live="polite">Showing <b>12</b> of 12 cruises</span>'
+    '<div class="cd-ffoot"><span class="cd-fcount" aria-live="polite">Showing <b>13</b> of 13 cruises</span>'
     '<div class="cd-fapplied"></div><button type="button" class="cd-fclear" hidden onclick="lttFilterCruises(\'all\')">Clear all</button></div></div>'
 )
 fb_start = s.index('<div class="ltt-integrated-filter-bar">')
@@ -530,7 +564,7 @@ s = s[:fb_start] + finder + "\n" + fbox + s[fb_end:]
 
 mini = ('<div class="cd-fmini" aria-hidden="true"><div class="cd-fmini-in"><button type="button" class="cd-fmini-btn" '
         'onclick="cdFiltersJump()">⚙️ Filters <span class="cd-fmini-n" hidden></span></button><span class="cd-fmini-res">'
-        '<b>12</b> of 12 cruises</span></div></div>')
+        '<b>13</b> of 13 cruises</span></div></div>')
 s = rep(s, '<div class="bpa-deck-wrap" id="ltt-cards-deck">', '<div class="bpa-deck-wrap" id="ltt-cards-deck">' + mini, where="mini")
 
 # ------------------------------------------------------------------ FAQPage from the in-card questions

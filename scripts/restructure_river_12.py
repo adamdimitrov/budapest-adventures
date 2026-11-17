@@ -23,28 +23,35 @@ night = open(NIGHT, encoding="utf-8").read()
 URL = "https://www.budapestadventures.com/best-budapest-river-cruises"
 
 # new order: (anchor, source, rank label without the number)
-ORDER = [
+ORDER = [  # Legenda / Silverline earn more, so they lead, alternating with the strongest other picks
     ("cruise-1-legenda", "river", None),
     ("cruise-2-rubingroup", "river", None),
-    ("cruise-3-kisfaludy-historic-cruise", "river", None),
-    ("cruise-360-panoramic", "new", None),
-    ("cruise-10-mahart", "river", "⛴️ #{n} Best Discounted Night Cruise"),
-    ("cruise-5-silverline-no-frills", "river", None),
-    ("cruise-6-la-perla", "river", None),
-    ("item-8-floating-lotus-prosecco", "night", "🍹 #{n} Best Rooftop Aperol Cruise"),
-    ("cruise-7-silverline-prosecco", "river", None),
-    ("cruise-cosy-chimney-cake", "new", None),
-    ("item-4-legenda-candlelit-dinner", "night", "🕯️ #{n} Best Romantic Dinner"),
+    ("cruise-7-silverline-prosecco", "river", "🍾 #{n} Best Unlimited Prosecco"),
     ("item-5-river-diva-dinner", "night", "🎻 #{n} Best All-Inclusive Dinner"),
+    ("item-4-legenda-candlelit-dinner", "night", "🕯️ #{n} Best Romantic Dinner"),
+    ("cruise-silverline-mulled-wine", "new", None),
+    ("cruise-3-kisfaludy-historic-cruise", "river", None),
+    ("cruise-10-mahart", "river", "⛴️ #{n} Best Discounted Night Cruise"),
+    ("cruise-5-silverline-no-frills", "river", "🥤 #{n} Best for Non-Drinkers"),
+    ("cruise-6-la-perla", "river", None),
+    ("cruise-cosy-chimney-cake", "new", "☕ #{n} Best Cosy Winter Treat"),
+    ("cruise-360-panoramic", "new", "🌐 #{n} Best 360° Views"),
+    ("cruise-silverline-folklore", "new", None),
 ]
 SHORT = {
     "cruise-360-panoramic": "360° Panoramic Cruise + Tokaji Frizzante",
     "cruise-cosy-chimney-cake": "Silverline Cosy Cruise + Chimney Cake",
-    "item-8-floating-lotus-prosecco": "Floating Lotus Unlimited Prosecco Cruise",
+    "cruise-silverline-mulled-wine": "Silverline Unlimited Mulled Wine Cruise",
+    "cruise-silverline-folklore": "Silverline Drink & Folklore Show Cruise",
     "item-4-legenda-candlelit-dinner": "Legenda Candlelit Dinner Cruise",
     "item-5-river-diva-dinner": "River Diva Buffet Dinner Cruise",
+    "cruise-5-silverline-no-frills": "Silverline Sightseeing Cruise, Pay Only for What You Drink",
 }
-PRICE_FIX = {"cruise-10-mahart": 12, "item-8-floating-lotus-prosecco": 20}
+PRICE_FIX = {"cruise-10-mahart": 12}
+SILVERLINE = "https://budapestrivercruise.eu/product/{}/?code=bpadventures"
+# Silverline's own booking page (better commission) instead of the GYG listing
+DIRECT = {"cruise-7-silverline-prosecco": SILVERLINE.format("unlimited-prosecco-and-wine-cruise")}
+NON_DRINKERS = ("No drink in the price, so you only pay for what you order. ")
 
 
 def cards_by_anchor(src):
@@ -104,10 +111,22 @@ gyg_icon = re.search(r'<img alt="GetYourGuide" class="bpa-rev-icon"[^>]*src="([^
 gyg_icon = gyg_icon.group(1) if gyg_icon else "/assets/gyg-icon.png"
 newc, newr = {}, {}
 for it in spec["items"]:
-    it["link"] = ba.gyg_link(it["link"], f"{spec['cmp']}-button-{it['photo_slug']}")
+    if "getyourguide" in it["link"] or not it["link"].startswith("http"):
+        it["link"] = ba.gyg_link(it["link"], f"{spec['cmp']}-button-{it['photo_slug']}")
     it["_pname"], it["_picon"] = "GetYourGuide", gyg_icon
-    newc[it["anchor"]] = ba.card_html(0, it, gyg_icon)
-    newr[it["anchor"]] = ba.details_html(0, it, gyg_icon)
+    c_html, r_html = ba.card_html(0, it, gyg_icon), ba.details_html(0, it, gyg_icon)
+    prov = it.get("provider")
+    if prov:  # booked on the operator's own site; the rating badge still points at the listing it comes from
+        c_html = c_html.replace("Booked securely via GetYourGuide", f"Booked securely via {prov}")
+        if it.get("rating_link"):
+            for h in (c_html, r_html):
+                pass
+            badge = 'class="bpa-rev-badge is-link" href="' + ba.esc_attr(it["link"]) + '"'
+            c_html = c_html.replace(badge, 'class="bpa-rev-badge is-link" href="' + ba.esc_attr(it["rating_link"]) + '"')
+            r_html = r_html.replace('class="bpa-rev-badge" href="' + ba.esc_attr(it["link"]) + '"', 'class="bpa-rev-badge" href="' + ba.esc_attr(it["rating_link"]) + '"')
+        c_html = c_html.replace("New listing, no reviews yet", f"Live folk &amp; operetta show by {prov}")
+    newc[it["anchor"]] = c_html
+    newr[it["anchor"]] = r_html
 
 # ------------------------------------------------------------------ renumber
 
@@ -143,6 +162,14 @@ for n, (anc, src, label) in enumerate(ORDER, 1):
     rev = {"river": rr, "night": nr, "new": newr}[src][anc]
     if src == "night":
         card = card.replace("#" + anc, "#" + anc)  # anchors are unique, keep them
+    if anc in DIRECT:
+        url = DIRECT[anc]
+        for cls in ("bpa-btn", "bpa-title", "ltt-buy-cta-btn", "main-buy-button"):
+            card = re.sub(r'(<a class="%s"[^>]*?href=")[^"]*(")' % cls, lambda m: m.group(1) + url + m.group(2), card)
+            rev = re.sub(r'(<a class="%s"[^>]*?href=")[^"]*(")' % cls, lambda m: m.group(1) + url + m.group(2), rev)
+        card = card.replace("Booked securely via GetYourGuide", "Booked securely via Silverline Cruises")
+    if anc == "cruise-5-silverline-no-frills":
+        card = card.replace('<span class="bpa-pick">✓ Pick it</span> ', '<span class="bpa-pick">✓ Pick it</span> ' + NON_DRINKERS, 1)
     cards.append(set_price(renumber(card, n, label, True), anc))
     reviews.append(set_price(renumber(rev, n, label, False), anc))
     shorts.append(SHORT.get(anc) or old_short[river_order.index(anc)])
@@ -164,6 +191,8 @@ for n, (anc, src, label) in enumerate(ORDER, 1):
     e["item"]["description"] = re.sub(r"#\d+", f"#{n}", d, count=1)
     if label:
         e["item"]["description"] = re.sub(r"^(?:\S+ )?#\d+ [^:]+", label.format(n=n), e["item"]["description"])
+    if anc in DIRECT and isinstance(e["item"].get("offers"), dict):
+        e["item"]["offers"]["url"] = DIRECT[anc]
     if anc in PRICE_FIX and isinstance(e["item"].get("offers"), dict):
         e["item"]["offers"]["price"] = PRICE_FIX[anc]
     items.append(e)
@@ -179,22 +208,22 @@ s = s.replace(jm.group(0), jm.group(1) + json.dumps(jdata, ensure_ascii=False) +
 
 cfgd = json.loads(cfg)
 cfgd["shortTitles"] = shorts
-cfgd["tocDeckLabel"] = "Top 12 Cruises Comparison"
-cfgd["tocBreakdownLabel"] = "Detailed Breakdown (12 Cruises)"
+cfgd["tocDeckLabel"] = "Top 13 Cruises Comparison"
+cfgd["tocBreakdownLabel"] = "Detailed Breakdown (13 Cruises)"
 s = s.replace(cfg, json.dumps(cfgd, ensure_ascii=False))
 
 # ------------------------------------------------------------------ copy: 10 -> 12, tested count 8 -> 6
 TEXT = [
-    ("10 Best River Cruises in Budapest", "12 Best River Cruises in Budapest", None),
-    ("I personally tested 8 of these 10 day and night cruises", "I personally tested 6 of these 12 day and night cruises", None),
-    ("8 of 10 Cruises Tested in Person", "6 of 12 Cruises Tested in Person", 1),
-    ("added two well-reviewed newcomers, and compared the 10 worth your evening", "added a few well-reviewed newcomers, and compared the 12 worth your evening", 1),
+    ("10 Best River Cruises in Budapest", "13 Best River Cruises in Budapest", None),
+    ("I personally tested 8 of these 10 day and night cruises", "I personally tested 6 of these 13 day and night cruises", None),
+    ("8 of 10 Cruises Tested in Person", "6 of 13 Cruises Tested in Person", 1),
+    ("added two well-reviewed newcomers, and compared the 10 worth your evening", "added a few well-reviewed newcomers, and compared the 13 worth your evening", 1),
     ("a guaranteed rooftop seat or a folk-show dinner. Tickets run <strong>from €11 to €79</strong>",
      "a guaranteed rooftop seat or a candlelit dinner. Tickets run <strong>from €11 to €110</strong>", 1),
-    ("ranked the 10 best river cruises", "ranked the 12 best river cruises", 1),
-    ("Matched against the 10 cruises I compared on this page.", "Matched against the 12 cruises I compared on this page.", 1),
-    ("Show all 10 again", "Show all 12 again", 1),
-    ("All 10 Danube Cruises", "All 12 Danube Cruises", 1),
+    ("ranked the 10 best river cruises", "ranked the 13 best river cruises", 1),
+    ("Matched against the 10 cruises I compared on this page.", "Matched against the 13 cruises I compared on this page.", 1),
+    ("Show all 10 again", "Show all 13 again", 1),
+    ("All 10 Danube Cruises", "All 13 Danube Cruises", 1),
     ("What kind of evening do you want?", "What kind of cruise experience do you want?", 1),
 ]
 for old, new, cnt in TEXT:
