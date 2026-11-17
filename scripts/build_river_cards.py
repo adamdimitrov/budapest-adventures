@@ -525,15 +525,22 @@ PILL_SLOTS = {
     "cruise-7-silverline-prosecco": ("Party music", "Unlimited Prosecco", "Upper deck views", ["Staff guests love"]),
     "item-5-river-diva-dinner": ("Live Music", "Unlimited drinks", "Rooftop after dinner", ["Seasonal Buffet"]),
     "item-4-legenda-candlelit-dinner": ("Live Music", "Welcome Drink", "Window tables", ["4-Course Dinner"]),
-    "cruise-silverline-mulled-wine": ("Audio guide app", "Unlimited Mulled Wine", "Big windows", ["Alcohol-free punch", "Eat first"]),
-    "cruise-3-kisfaludy-historic-cruise": ("29-Language Audio", "Welcome Drink", "Front panorama deck", ["Historic paddle steamer", "Full city loop"]),
+    "cruise-silverline-mulled-wine": ("Audio guide app", "Unlimited Mulled Wine", "Big windows", ["Alcohol-free punch"]),
+    "cruise-3-kisfaludy-historic-cruise": ("29-Language Audio", "Welcome Drink", "Front panorama deck", ["Historic paddle steamer"]),
     "cruise-10-mahart": ("8-Language Audio", "Prosecco or Juice", "Warm inside", ["Pest or Buda dock"]),
     "cruise-5-silverline-no-frills": ("15-Language Audio", "No drink included", "Upper Deck +€5", ["Heated main deck"]),
     "cruise-6-la-perla": ("10-Language Audio", "Bring Your Own Drinks", "Guaranteed Rooftop Seat", ["Pets welcome"]),
-    "cruise-cosy-chimney-cake": ("No guide included", "Winter Punch & Chimney Cake", "Heated cabin", ["Cake to share", "Not for allergies"]),
-    "cruise-360-panoramic": ("30-Lang Audio", "Tokaji Frizzante", "Seat for everyone", ["Blankets on deck", "Free Wi-Fi"]),
+    "cruise-cosy-chimney-cake": ("No guide included", "Winter Punch & Chimney Cake", "Heated cabin", ["Cake to share"]),
+    "cruise-360-panoramic": ("30-Lang Audio", "Tokaji Frizzante", "Seat for everyone", ["Blankets on deck"]),
     "cruise-silverline-folklore": ("Live Folk & Operetta", "3 Drinks Included", "Window table +€25", ["Mocktails"]),
 }
+
+
+# max 2 pill rows on desktop: these pills are left out (facts stay in other dropdowns and the questions box)
+DROPPED_PILLS = {"cruise-silverline-mulled-wine": {"Eat first"}, "cruise-3-kisfaludy-historic-cruise": {"Full city loop"},
+                 "cruise-cosy-chimney-cake": {"Not for allergies"}, "cruise-360-panoramic": {"Free Wi-Fi"}}
+PILL_RELABEL = {"cruise-2-rubingroup": {"Unlimited Prosecco, Spritzers & Beer": "Unlimited Prosecco & Beer", "Lemonade unlimited too": "Lemonade too"},
+                "cruise-6-la-perla": {"Guaranteed Rooftop Seat": "Rooftop seat for all", "Relaxed, bring your own": "Relaxed BYOB"}}
 
 
 def order_pills(anc, pills):
@@ -549,7 +556,9 @@ def order_pills(anc, pills):
         assert l in by, (anc, l, list(by))
     out = [time[0], by[g], acc[0], by[d], vibe[0], by[k]] + [by[l] for l in uniq]
     left = [l for l in by if by[l] not in out]
-    assert not left, (anc, "unplaced pills", left)
+    assert set(left) <= DROPPED_PILLS.get(anc, set()), (anc, "unplaced pills", left)
+    for o, n in PILL_RELABEL.get(anc, {}).items():  # shorter labels so the pills fit in 2 rows
+        out = [x.replace(f'<span class="bpa-lang-label">{E(o)}</span>', f'<span class="bpa-lang-label">{E(n)}</span>') for x in out]
     return out
 
 FAQ_SHORT = {'Can I get a window seat on the folklore cruise?': 'Window seat?', 'Can I go outside during the Legenda candlelit dinner?': 'Go outside?', 'Can I go outside on the River Diva dinner cruise?': 'Go outside?', 'Can I sit outside on the Legenda cruise?': 'Sit outside?', 'Can children come to the Legenda candlelit dinner?': 'Kids?', 'Can kids come on the Silverline prosecco cruise?': 'Kids?', 'Can kids come on the unlimited prosecco cruise?': 'Kids?', 'Can we bring a stroller on the 360° cruise?': 'Stroller?', 'Can we bring a stroller on the Kisfaludy paddle steamer?': 'Stroller?', 'Do I need earphones on La Perla?': 'Earphones?', 'Do I need earphones on the Kisfaludy paddle steamer?': 'Earphones?', 'Do I need earphones on the Legenda cruise?': 'Earphones?', "I don't like prosecco. What else is unlimited?": 'No prosecco fan?', 'Is a drink included on the Silverline sightseeing cruise?': 'Drink included?', 'Is a seat guaranteed on the 360° Panoramic Cruise?': 'Seat guaranteed?', 'Is dinner included on the folklore cruise?': 'Dinner included?', 'Is it only prosecco on the Silverline prosecco cruise?': 'Only prosecco?', 'Is it warm on board?': 'Warm on board?', 'Is the Cosy Cruise OK for food allergies?': 'Food allergies?', 'Is the Kisfaludy cruise quiet?': 'Quiet?', 'Is the Legenda candlelit dinner OK for vegans or food allergies?': 'Vegan / allergies?', "Is the Legenda cruise good if we don't drink?": 'Non-drinkers?', 'Is the Legenda cruise wheelchair accessible?': 'Wheelchair?', 'Is the Mahart night cruise wheelchair accessible?': 'Wheelchair?', 'Is the River Diva dinner cruise wheelchair accessible?': 'Wheelchair?', 'Is the Silverline upper deck worth €5 more?': 'Upper deck worth it?', 'Is the mulled wine cruise warm?': 'Warm?', 'Is the unlimited prosecco cruise a party boat?': 'Party boat?', 'Is there something for kids or non-drinkers?': 'Kids / non-drinkers?', 'What can I bring on La Perla?': 'What to bring?', 'What do you get on the Cosy Cruise?': "What's included?", 'What is the show on the folklore cruise?': 'The show?', 'What is the welcome drink on the 360° cruise?': 'Welcome drink?', 'When do the Parliament lights go off?': 'Lights off when?', 'Which drink is included on the Mahart cruise?': 'Which drink?', 'Which drinks are unlimited on River Diva?': 'Unlimited drinks?', 'Which mulled wines can I try on the Silverline cruise?': 'Which wines?', 'Will the La Perla rooftop be cold?': 'Cold on the roof?'}
@@ -1117,6 +1126,7 @@ UGC_HTML = """<style id="ugc-css">
 })();
 </script>"""
 s = s.replace("</body>", UGC_HTML + "\n</body>", 1)
+s = s.replace('<div class="bpa-via">Booked securely via Silverline Cruises</div>', '<div class="bpa-via">Booked securely via Silverline</div>')
 # RATE_IN_SUMMARY_JS not needed: clicking the rating only toggles its own <details>, and the card script floats the list
 
 # Trust lines under the CTA: bold promise + lighter detail, check-circle icons, soft green box
