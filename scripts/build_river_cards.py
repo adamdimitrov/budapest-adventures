@@ -926,7 +926,7 @@ SELLER = {"cruise-1-legenda": "legenda", "item-4-legenda-candlelit-dinner": "leg
           "cruise-cosy-chimney-cake": "silverline", "cruise-silverline-folklore": "silverline"}  # everything else: GetYourGuide
 TRUST_LINES = {
     "gyg": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
-    "legenda": ["<b>Free cancellation</b> up to 24 h before, full refund", "<b>Book for tonight</b>: same-day booking works", "<b>Change your date</b> at the Legenda pier, if seats are free"],
+    "legenda": ["<b>Free cancellation</b> up to 24 h", "<b>Book for tonight</b>, same day", "<b>Change your date</b> at the pier"],
     "silverline": ["<b>Book for tonight</b>: same-day booking works", "<b>E-ticket by email</b> as soon as you book"],
 }
 REVIEW_FIX = {
