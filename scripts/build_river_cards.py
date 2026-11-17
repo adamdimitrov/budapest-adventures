@@ -505,9 +505,13 @@ def btn(cat, label):
 
 fbox = (
     '<div class="ltt-integrated-filter-bar cd-fbox" id="cd-filters" role="group" aria-label="Filter cruises">'
-    '<div class="cd-frow fbm-mrow"><span class="cd-flab">Your cruise date</span><div class="cd-fchips">'
-    '<label class="fbm-msel"><span class="sr-only">Cruise date</span><input type="date" id="fbm-date" aria-label="Cruise date"></label>'
-    '<span class="fbm-mnote" id="fbm-mnote"></span></div></div>'
+    '<div class="cd-frow fbm-mrow"><span class="cd-flab fbm-mhead">🌇 When are you cruising?</span>'
+    '<div class="fbm-days" role="group" aria-label="Pick your cruise date">'
+    '<button type="button" class="fbm-day is-on" data-day="0" aria-pressed="true">Tonight</button>'
+    '<button type="button" class="fbm-day" data-day="1" aria-pressed="false">Tomorrow</button>'
+    '<button type="button" class="fbm-day" data-day="sat" aria-pressed="false">Saturday</button>'
+    '<label class="fbm-day fbm-other">📅 <span>Other date</span><input type="date" id="fbm-date" aria-label="Pick another cruise date"></label>'
+    '</div><span class="fbm-mnote" id="fbm-mnote"></span></div>'
     '<div class="cd-frow"><span class="cd-flab">Who is coming</span><div class="cd-fchips">'
     + btn("nodrink", "🥤 Good if you don't drink") + btn("party", "🎉 Party crowd") + "</div></div>"
     '<div class="cd-frow"><span class="cd-flab">The trip</span><div class="cd-fchips">'
@@ -545,6 +549,37 @@ def block(tag, i):
 
 css = block("style", "cd-cards-css") + block("style", "cd-tested-css") + block("style", "cd-filters-css") + block("style", "fbm-css")
 js = block("script", "cd-cards-js") + block("script", "cd-filters-js") + block("script", "fbm-js")
+# one-tap date chips on top of the date field (fbm-js listens to the field's change event)
+css += """<style id="fbm-days-css">
+.fbm-mrow{display:flex!important;flex-direction:column;align-items:flex-start!important;gap:10px!important;padding:14px 16px!important;border:1px solid #fde68a}
+.fbm-mrow .fbm-mhead{font:800 15px/1.3 'Plus Jakarta Sans',sans-serif!important;color:#0f172a!important;text-transform:none!important;letter-spacing:0!important}
+.fbm-days{display:flex;flex-wrap:wrap;gap:8px}
+.fbm-day{position:relative;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 16px;border-radius:9999px;border:1px solid #fcd34d;background:#fff;
+  font:700 14px/1 'Plus Jakarta Sans',sans-serif;color:#0f172a;cursor:pointer}
+.fbm-day:hover{border-color:#b45309;color:#0f172a;background:#fff}
+.fbm-day.is-on{background:#0f172a;border-color:#0f172a;color:#fff}
+.fbm-day.is-on:hover{color:#fff;background:#0f172a}
+.fbm-other input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;border:0;padding:0}
+.fbm-mrow .fbm-mnote{font:700 14px/1.45 'Plus Jakarta Sans',sans-serif!important;color:#92400e!important}
+</style>"""
+js += r"""<script id="fbm-days-js">
+(function(){
+  var inp=document.getElementById('fbm-date'); if(!inp) return;
+  var chips=Array.prototype.slice.call(document.querySelectorAll('.fbm-day'));
+  function iso(d){ return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2); }
+  function dayFor(k){ var d=new Date(); if(k==='sat'){ var add=(6-d.getDay()+7)%7; d.setDate(d.getDate()+(add===0?7:add)); } else { d.setDate(d.getDate()+(+k)); } return iso(d); }
+  function mark(v){
+    var hit=false;
+    chips.forEach(function(c){ var k=c.getAttribute('data-day'); var on=k!==null && dayFor(k)===v && !hit; if(on) hit=true; c.classList.toggle('is-on',on); if(k!==null) c.setAttribute('aria-pressed',on?'true':'false'); });
+    var other=document.querySelector('.fbm-other'); if(other){ other.classList.toggle('is-on',!hit); var sp=other.querySelector('span'); if(sp) sp.textContent=hit?'Other date':new Date(v+'T12:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short'}); }
+  }
+  chips.forEach(function(c){ var k=c.getAttribute('data-day'); if(k===null) return;
+    c.addEventListener('click',function(){ inp.value=dayFor(k); inp.dispatchEvent(new Event('change',{bubbles:true})); mark(inp.value); }); });
+  inp.addEventListener('change',function(){ if(inp.value) mark(inp.value); });
+  var other=document.querySelector('.fbm-other'); if(other) other.addEventListener('click',function(){ try{ inp.showPicker(); }catch(e){} });
+  mark(inp.value||dayFor(0));
+})();
+</script>"""
 s = rep(s, "</head>", css + "</head>", where="css")
 k = s.rfind("</body>")
 s = s[:k] + js + s[k:]
