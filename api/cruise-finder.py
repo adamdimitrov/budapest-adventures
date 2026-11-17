@@ -110,6 +110,8 @@ def build_prompt(q, cards, ctx=None, general=None):
         "Rules:\n"
         "- Use only the data below. Never invent prices, times, menus, features or guest opinions.\n"
         "- Never name or quote review websites or Facebook; say 'guests' or 'travellers'. No em dashes.\n"
+        "- In answer, lead and why, call cruises by their name (for example 'the Duna-Weser prosecco cruise'), never by card id. "
+        "You speak for the author in the first person: write 'I found' or 'when I tested it', never 'the author' or 'the data'.\n"
         "- If a card says it is not bookable now, pick it only if nothing else fits, and say so.\n"
         "- If nothing fits well, return the closest 1 or 2 and say plainly what does not match.\n"
         "- why: one sentence of at most 22 words, to the visitor, citing the concrete facts that match "
