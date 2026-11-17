@@ -3312,8 +3312,8 @@ window.LTT_PAGE_CONFIG = {"deckId": "budapest-night-cruise-deck", "tocDeckLabel"
         h='☀️ <b>'+name+':</b> the last sailing ('+times[times.length-1]+') ends before full dark ('+DARK+').';
       } else {
         h='';
-        if(lit.length) h+='🌙 <b>Dark the whole cruise ('+name+'):</b> '+(lit.length>3&&lit.every(function(t,k){return !k||m(t)-m(lit[k-1])===20;})?span(lit[0],'lit')+' then every 20 min to '+span(lit[lit.length-1],'lit'):lit.map(function(t){return span(t,'lit');}).join(''));
-        if(dusk.length) h+=(h?'<br>':'')+'🌇 <b>Sunset first, then the city lights up:</b> '+dusk.map(function(t){return span(t,'dusk');}).join('');
+        if(lit.length) h+='🌙 <b>Fully lit on '+name+':</b> '+(lit.length>3&&lit.every(function(t,k){return !k||m(t)-m(lit[k-1])===20;})?span(lit[0],'lit')+' then every 20 min to '+span(lit[lit.length-1],'lit'):lit.map(function(t){return span(t,'lit');}).join(''));
+        if(dusk.length) h+=(h?'<br>':'')+'🌇 <b>Sunset into lights:</b> '+dusk.map(function(t){return span(t,'dusk');}).join('');
       }
       el.innerHTML=h;
     });
