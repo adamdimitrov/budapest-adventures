@@ -582,6 +582,7 @@ css = "".join(block("style", i) for i in ("cd-cards-css", "cd-tested-css", "cd-f
 css += ('<style id="dc-rate-plain-css">.bpa-rev-badge:not(.is-link){cursor:default}</style>')
 # no cd-sticky-trust-js: the sticky bar always shows "Free cancellation"
 js = "".join(block("script", i) for i in ("cd-cards-js", "cd-filters-js", "fbm-js", "cd-fmore-js", "fbm-days-js"))
+import sys as _sys, os as _os; _sys.path.insert(0, _os.path.dirname(__file__)); import gallery_fix; js = gallery_fix.patch(js)
 # Price dropdown opens on hover like the pills (mouse only): hover opens, leaving closes, a click pins it open.
 js += """<script id="cd-pdd-hover-js">
 (function(){
