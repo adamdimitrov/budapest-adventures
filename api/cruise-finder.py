@@ -1,6 +1,7 @@
-"""AI cruise finder for the river cruises comparison page.
+"""AI cruise finder for the cruise comparison pages (river cruises, dinner cruises).
 
 GET /api/cruise-finder?page=best-budapest-river-cruises&q=romantic+under+30
+GET /api/cruise-finder?page=best-dinner-cruises-budapest&q=folk+show+under+70
 
 Reads the cards and the author's reviews from the page's own HTML (bundled with the function)
 plus guest-review themes from api/_knowledge/<page>.json. Answers questions in 2-3 sentences
@@ -25,6 +26,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Only these pages can be queried; value = HTML file bundled via vercel.json includeFiles.
 PAGES = {
     "best-budapest-river-cruises": "best-budapest-river-cruises.html",
+    "best-dinner-cruises-budapest": "best-dinner-cruises-budapest.html",
+}
+# What the finder is comparing on each page (goes into the prompt).
+PAGE_TOPIC = {
+    "best-budapest-river-cruises": "a Budapest river cruise comparison page",
+    "best-dinner-cruises-budapest": "a Budapest dinner cruise comparison page",
 }
 
 _cards_cache = {}
@@ -147,10 +154,10 @@ def load_cards(page):
     return _cards_cache[page]
 
 
-def build_prompt(q, cards, ctx=None, general=None):
+def build_prompt(q, cards, ctx=None, general=None, page="best-budapest-river-cruises"):
     static = (
-        "You are the cruise finder on a Budapest river cruise comparison page. "
-        "The author rode most of the cruises below and wrote each card and review. A visitor typed something into the search box.\n\n"
+        f"You are the cruise finder on {PAGE_TOPIC.get(page, 'a Budapest cruise comparison page')}. "
+        "The author rode several of the cruises below and wrote each card and review. A visitor typed something into the search box.\n\n"
         "First decide the kind:\n"
         "- question: they ask something (is it cold, can kids come, is the guide audible, is it worth it, what is included, which is better).\n"
         "- preference: they describe the cruise or experience they want.\n\n"
@@ -167,7 +174,7 @@ def build_prompt(q, cards, ctx=None, general=None):
         "- If a card says it is not bookable now, pick it only if nothing else fits, and say so.\n"
         "- If nothing fits well, return the closest 1 or 2 and say plainly what does not match.\n"
         "- why: one sentence of at most 22 words, to the visitor, citing the concrete facts that match "
-        "(price, drinks, length, pier, audio guide).\n"
+        "(price, food, drinks, show, length, pier).\n"
         "- lead: one short sentence summarising the recommendation.\n"
         "- Answer in the visitor's language.\n"
         "- If the request has nothing to do with Budapest cruises, kind is preference, answer is empty, and return the #1 card with a short lead.\n"
@@ -203,11 +210,11 @@ def visitor_context(params, cards):
     return ctx
 
 
-def ask_claude(q, cards, ctx=None, general=None, allowed=None):
+def ask_claude(q, cards, ctx=None, general=None, allowed=None, page="best-budapest-river-cruises"):
     global _client
     if _client is None:
         _client = anthropic.Anthropic(max_retries=1, timeout=25.0)
-    static, dynamic = build_prompt(q, cards, ctx, general)
+    static, dynamic = build_prompt(q, cards, ctx, general, page)
     if allowed:
         dynamic = (f"The visitor's filters leave only these cruises on screen; pick only from them: {json.dumps(sorted(allowed))}\n\n"
                    + dynamic)
@@ -274,7 +281,7 @@ class handler(BaseHTTPRequestHandler):
             ids = [i for i in (params.get("ids") or [""])[0].split(",") if i]
             allowed = [c["id"] for c in cards if c["id"] in ids]
             pool = [c for c in cards if c["id"] in allowed] or cards
-            return self._send(200, ask_claude(q, cards, visitor_context(params, pool), general, allowed or None), cache=True)
+            return self._send(200, ask_claude(q, cards, visitor_context(params, pool), general, allowed or None, page), cache=True)
         except anthropic.RateLimitError:
             return self._send(429, {"error": "busy"})
         except anthropic.APIConnectionError:
