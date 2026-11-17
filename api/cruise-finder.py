@@ -12,6 +12,7 @@ import html
 import json
 import os
 import re
+import time
 from http.server import BaseHTTPRequestHandler
 from urllib.parse import parse_qs, urlparse
 
@@ -151,14 +152,21 @@ def visitor_context(params, cards):
     return ctx
 
 
-def ask_claude(q, cards, ctx=None, general=None):
+def ask_claude(q, cards, ctx=None, general=None, allowed=None):
     global _client
     if _client is None:
         _client = anthropic.Anthropic(max_retries=1, timeout=25.0)
     static, dynamic = build_prompt(q, cards, ctx, general)
+    if allowed:
+        dynamic = (f"The visitor's filters leave only these cruises on screen; pick only from them: {json.dumps(sorted(allowed))}\n\n"
+                   + dynamic)
+    t0 = time.time()
     response = _client.messages.create(
         model=MODEL,
         max_tokens=2000,
+        # Speed: no thinking step (allowed on Haiku 5.5 at effort low). The card data is an identical prefix
+        # on every call, so the prompt cache serves it; filters only change the small dynamic part.
+        thinking={"type": "disabled"},
         output_config={"effort": "low", "format": {"type": "json_schema", "schema": SCHEMA}},
         messages=[{"role": "user", "content": [
             {"type": "text", "text": static, "cache_control": {"type": "ephemeral"}},
@@ -169,7 +177,7 @@ def ask_claude(q, cards, ctx=None, general=None):
         raise ValueError("refused")
     text = next(b.text for b in response.content if b.type == "text")
     data = json.loads(text)
-    valid = {c["id"] for c in cards}
+    valid = set(allowed) if allowed else {c["id"] for c in cards}
     picks = []
     for p in data.get("picks", []):
         pid = str(p.get("id", ""))
@@ -179,7 +187,10 @@ def ask_claude(q, cards, ctx=None, general=None):
         raise ValueError("no valid picks")
     kind = "question" if data.get("kind") == "question" else "preference"
     answer = str(data.get("answer", ""))[:600].replace("\u2014", ",") if kind == "question" else ""
-    print(json.dumps({"finder_log": {"q": q, "kind": kind, "picks": [p["id"] for p in picks]}}, ensure_ascii=False))
+    u = response.usage
+    print(json.dumps({"finder_log": {"q": q, "kind": kind, "picks": [p["id"] for p in picks], "ms": int((time.time() - t0) * 1000),
+                                     "in": u.input_tokens, "cache_read": getattr(u, "cache_read_input_tokens", 0) or 0,
+                                     "cache_write": getattr(u, "cache_creation_input_tokens", 0) or 0, "out": u.output_tokens}}, ensure_ascii=False))
     return {"kind": kind, "answer": answer, "lead": str(data.get("lead", ""))[:220].replace("\u2014", ","), "picks": picks[:3]}
 
 
@@ -204,8 +215,9 @@ class handler(BaseHTTPRequestHandler):
             cards, general = load_cards(page)
             # only the cards the visitor's filters leave on screen (all of them if none sent)
             ids = [i for i in (params.get("ids") or [""])[0].split(",") if i]
-            pool = [c for c in cards if c["id"] in ids] or cards
-            return self._send(200, ask_claude(q, pool, visitor_context(params, pool), general), cache=True)
+            allowed = [c["id"] for c in cards if c["id"] in ids]
+            pool = [c for c in cards if c["id"] in allowed] or cards
+            return self._send(200, ask_claude(q, cards, visitor_context(params, pool), general, allowed or None), cache=True)
         except anthropic.RateLimitError:
             return self._send(429, {"error": "busy"})
         except anthropic.APIConnectionError:
