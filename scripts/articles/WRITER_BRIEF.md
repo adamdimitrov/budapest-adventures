@@ -41,4 +41,8 @@ Repo (worktree): `/Users/adamdimitrov/Development/bpa-experiences`. Work ONLY on
 
 ## Links (internal, in guide/faq copy as `<a href="/slug">anchor</a>`)
 Live pages: `/best-walking-tours-budapest`, `/best-food-tours-budapest`, `/best-pub-crawls-budapest`, `/best-day-trips-from-budapest`, `/best-budapest-river-cruises`, `/best-dinner-cruises-budapest`, `/best-night-cruises-budapest`, `/best-private-boat-tours-budapest`, `/unlimited-prosecco-cruises-budapest`, `/thermal-baths-budapest`, `/sparty-budapest`, `/best-hop-on-hop-off-bus-budapest`, `/budapest-card-is-it-worth-it`, `/budapest-parliament-tickets`, `/best-things-to-do-budapest`, `/budapest-travel-guide`, `/best-hostels-budapest`.
-Sibling pages publishing in the same batch (link where genuinely relevant): `/best-wine-tasting-budapest`, `/best-bike-tours-budapest`, `/best-shooting-ranges-budapest`, `/best-cave-tours-budapest`, `/best-concerts-budapest`, `/best-jewish-quarter-tours-budapest`, `/best-buda-castle-tours`, `/best-cooking-classes-budapest`, `/best-communist-tours-budapest`, `/best-helicopter-tours-budapest`.
+Also live (batch 1): `/best-wine-tasting-budapest`, `/best-bike-tours-budapest`, `/best-shooting-ranges-budapest`, `/best-cave-tours-budapest`, `/best-concerts-budapest`, `/best-jewish-quarter-tours-budapest`, `/best-buda-castle-tours`, `/best-cooking-classes-budapest`, `/best-communist-tours-budapest`, `/best-helicopter-tours-budapest`.
+Sibling pages publishing in this batch: `/best-things-to-do-budapest-with-kids`, `/best-vienna-day-trips-from-budapest`.
+
+## Tiqets items
+A harvest item with `"platform": "tiqets"` is booked on Tiqets: in the spec set `"platform": "tiqets"`, `"link"` = its full `p` URL (the builder adds the partner parameter), and `"gallery"` = its full image URLs (the builder downloads them). Its badge and button then name Tiqets automatically.
