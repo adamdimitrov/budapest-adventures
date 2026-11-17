@@ -72,8 +72,8 @@ These override anything else in this file. Breaking one of them costs money or r
 - Every affiliate/OTA link (GetYourGuide, Viator, Tiqets, Tripadvisor, Travelpayouts, Legenda, Budapest River Cruise, Silverline, Xplore, GuruWalk...) needs `rel="nofollow sponsored noopener"`; official bath ticket sites get `rel="nofollow noopener"`. Run `python3 scripts/fix_affiliate_rel.py` after building pages; `--check` runs in CI and must exit 0. New partner host: add it to `AFFILIATE_HOSTS` there and to `AFFILIATE_REL_HOSTS` in `bpa-tracking.js`.
 
 ## QC that must pass before every commit (all run in CI)
-- `python3 scripts/check_lazy_images.py` — every lazy photo has a loader, no missing files, no hotlinked photos.
-- `python3 scripts/check_filters.py` — every filter pill except "All" has `data-group`; only "All" starts active.
+- `python3 kit/checks/check_lazy_images.py` — every lazy photo has a loader, no missing files, no hotlinked photos.
+- `python3 kit/checks/check_filters.py` — every filter pill except "All" has `data-group`; only "All" starts active.
 - Visually check new pages at phone width: filters grey except "All", carousels show photos after swiping.
 
 ## Caching gotchas
