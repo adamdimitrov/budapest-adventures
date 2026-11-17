@@ -221,7 +221,7 @@ TEXT = [
     ("a guaranteed rooftop seat or a folk-show dinner. Tickets run <strong>from €11 to €79</strong>",
      "a guaranteed rooftop seat or a candlelit dinner. Tickets run <strong>from €11 to €110</strong>", 1),
     ("ranked the 10 best river cruises", "ranked the 13 best river cruises", 1),
-    ("Matched against the 10 cruises I compared on this page.", "Matched against the 13 cruises I compared on this page.", 1),
+    ("Matched against the 10 cruises I compared on this page.", "Ask a question (is it cold? can kids come?) or describe what you want.", 1),
     ("Show all 10 again", "Show all 13 again", 1),
     ("All 10 Danube Cruises", "All 13 Danube Cruises", 1),
     ("What kind of evening do you want?", "What kind of cruise experience do you want?", 1),
@@ -242,7 +242,7 @@ MIC_BTN = ('<button aria-label="Speak your search" class="bpa-ai-mic" hidden="" 
 FIELD = [
     ('<div class="bpa-ai-row">\n<svg aria-hidden="true"', '<div class="bpa-ai-row">\n<div class="bpa-ai-field">\n<svg aria-hidden="true" class="bpa-ai-glass"'),
     ('<input id="bpa-ai-q" maxlength="300" placeholder="Romantic, under €30, near Vigadó tér…" type="text"/>',
-     '<input autocomplete="off" enterkeyhint="search" id="bpa-ai-q" maxlength="300" placeholder="Search: romantic, under €30…" type="search"/>'),
+     '<input autocomplete="off" enterkeyhint="search" id="bpa-ai-q" maxlength="300" placeholder="Romantic, sunset, €30…" type="search"/>'),
 ]
 for a, b in FIELD:
     assert s.count(a) == 1, a[:60]

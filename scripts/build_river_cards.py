@@ -520,11 +520,20 @@ FINDER_JS = [
      "  document.querySelectorAll('#cd-filters .ltt-tab-btn, #cd-filters .cd-fclear').forEach(function(b){ b.addEventListener('click',function(){ if(lastText){ clearAI(); rerun(); } }); });\n"
      "  var dateIn=document.getElementById('fbm-date'); if(dateIn) dateIn.addEventListener('change',function(){ if(lastText) rerun(); });\n"),
     ("    used=true; ga('ai_finder_search',{search_term:text.slice(0,100)});\n",
-     "    used=true; lastText=text; ga('ai_finder_search',{search_term:text.slice(0,100)});\n"),
+     "    used=true; lastText=text; ga('search',{search_term:text.slice(0,100)}); ga('ai_finder_search',{search_term:text.slice(0,100)});\n"),
     ("fetch('/api/cruise-finder?page=best-budapest-river-cruises&q='+encodeURIComponent(text))",
      "fetch('/api/cruise-finder?page=best-budapest-river-cruises&q='+encodeURIComponent(text)+context())"),
     ("if(e.target.id==='bpa-ai-reset'){ clearAI(); out.hidden=true; q.value=''; }",
      "if(e.target.id==='bpa-ai-reset'){ clearAI(); out.hidden=true; q.value=''; lastText=''; }"),
+]
+FINDER_JS += [
+    ("        say(esc(d.lead||'Here are your best matches.')+' <a href=\"#ltt-cards-deck\">See '+(list.length===1?'it':'them')+' ↓</a>'+resetLink());\n"
+     "        ga('ai_finder_result',{picks:list.map(function(p){return p.id;}).join(',')});",
+     "        var ans=(d.kind==='question' && d.answer) ? '<div class=\"bpa-ai-qa\"><b>💬 Answer:</b> '+esc(d.answer)+'</div>' : '';\n"
+     "        say(ans+'<span class=\"bpa-ai-lead\">'+esc(d.lead||'Here are your best matches.')+'</span> <a href=\"#ltt-cards-deck\">See '+(list.length===1?'it':'them')+' ↓</a>'+resetLink());\n"
+     "        ga('ai_finder_result',{search_term:text.slice(0,100),answer_kind:d.kind||'preference',picks:list.map(function(p){return p.id;}).join(',')});"),
+    (".bpa-ai-answer[hidden]{display:none}",
+     ".bpa-ai-answer[hidden]{display:none}\n.bpa-ai-qa{flex:0 0 100%;font-size:15px;line-height:1.55;color:#0f172a;background:#fff;border:1px solid #fde68a;border-radius:10px;padding:10px 12px}\n.bpa-ai-qa b{color:#b45309}"),
 ]
 for a, b in FINDER_JS:
     assert finder.count(a) == 1, a[:80]
