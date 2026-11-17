@@ -554,7 +554,7 @@ FAQ_VARIANTS = r"""<style id="faqv-css">
 .faqv-tile{border:1px solid #e2e8f0;border-radius:12px;padding:9px 11px;font-size:12.5px;min-width:0;background:#fff}
 .faqv-tile b{display:block;color:#0f172a;font-size:13px;margin:4px 0 2px}
 .faqv-v{display:inline-block;font:800 11px 'Plus Jakarta Sans',sans-serif;border-radius:6px;padding:3px 7px}
-.faqv-v.yes{background:#dcfce7;color:#15803d}.faqv-v.no{background:#fee2e2;color:#b91c1c}.faqv-v.info{background:#e0f2fe;color:#0369a1}
+.faqv-v.yes{background:#dcfce7;color:#15803d}.faqv-v.no{background:#f1f5f9;color:#334155}.faqv-v.info{background:#e0f2fe;color:#0369a1}
 .faqv-row{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px}
 .faqv-sw{flex:0 0 220px;scroll-snap-align:start;border:1px solid #e2e8f0;border-radius:12px;padding:10px 12px;background:#f8fafc;font-size:12.5px}
 .faqv-sw b{display:block;color:#0f172a;font-size:13px;margin-bottom:3px}
@@ -565,7 +565,7 @@ FAQ_VARIANTS = r"""<style id="faqv-css">
   var m=location.search.match(/[?&]faq=([a-e])/); if(!m) return; var v=m[1];
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   function first(a){var x=a.match(/^[^.!?]*[.!?]/);return x?x[0]:a;}
-  function verdict(a){ if(/^yes\b/i.test(a)) return ['yes','✓ Yes']; if(/^no\b/i.test(a)) return ['no','✕ No']; return ['info','ⓘ Good to know']; }
+  function verdict(a){ if(/^yes\b/i.test(a)) return ['yes','✓ Yes']; if(/^no\b/i.test(a)) return ["no","No"]; return ['info','ⓘ Good to know']; }
   function rest(a){ return a.replace(/^(yes|no)[.,]\s*/i,''); }
   function run(){
     var names={a:'A · Chips',b:'B · Quick answers',c:'C · Verdict tiles',d:'D · Swipe cards',e:'Today'};
