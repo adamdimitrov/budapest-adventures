@@ -405,7 +405,7 @@ ACCESS.update({
 # and recent guest reviews summarised in api/_knowledge/best-budapest-river-cruises.json.
 EDGE_QA = {
     "cruise-1-legenda": [
-        ("Do I need to book ahead?", "No, you can book on the same day too. Evening sailings in December and on weekends can sell out, though, and cancellation is free up to 24 hours before, so booking early costs nothing."),
+        ("Do I need to book ahead?", "No, you can book on the same day too. Evening sailings in December and on weekends can sell out, though. If plans change, Legenda can move your ticket to another day at its pier, if seats are free."),
         ("Day or evening?", "Evening: 17 of 64 recent guests name the lit-up city as the highlight. The Parliament's lights go off at 22:00."),
         ("Will I get a good seat?", "Seats are not assigned, so arrive 15 to 20 minutes early. A few guests felt the boat was busy."),
         ("What if my headset doesn't work?", "Guests say there are plenty of spare headsets on board."),
@@ -915,6 +915,65 @@ document.addEventListener('click',function(e){var c=e.target.closest('.cd-tq-chi
   box.querySelectorAll('.cd-tq-chip').forEach(function(b){var on=b===c; b.setAttribute('aria-pressed',on); document.getElementById(b.getAttribute('aria-controls')).hidden=!on;});});
 </script>"""
 # chips layout (ASK_CSS_JS) not used: the collapsed box was picked
+# Booking terms per seller, verified 17 Nov 2026:
+#  GetYourGuide listings: "Free cancellation: cancel up to 24 hours in advance for a full refund" + "Reserve now and pay later: pay nothing today".
+#  Legenda FAQ: tickets can be transferred to another day and time at the Legenda pier, depending on availability (no published refund policy).
+#  Silverline T&C: ticket and confirmation sent electronically; cancel 24 h+ ahead = refund minus 10% fee, within 24 h no refund.
+#  Same-day booking: confirmed by the site owner.
+SELLER = {"cruise-1-legenda": "legenda", "item-4-legenda-candlelit-dinner": "legenda",
+          "cruise-7-silverline-prosecco": "silverline", "cruise-silverline-mulled-wine": "silverline", "cruise-5-silverline-no-frills": "silverline",
+          "cruise-cosy-chimney-cake": "silverline", "cruise-silverline-folklore": "silverline"}  # everything else: GetYourGuide
+TRUST_LINES = {
+    "gyg": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "legenda": ["<b>Book for tonight</b>: same-day booking works", "<b>Change your date</b> at the Legenda pier, if seats are free"],
+    "silverline": ["<b>Book for tonight</b>: same-day booking works", "<b>E-ticket by email</b> as soon as you book"],
+}
+REVIEW_FIX = {
+    "legenda": [('<span class="ltt-buy-perk">Full Refund up to 24h Before</span>', '<span class="ltt-buy-perk">Date change at the pier</span>'),
+                ("Full refund up to 24 hours before departure", "Tickets can be moved to another day at the Legenda pier, if seats are free"),
+                ("🛡️ Free cancellation up to 24 hours before", "🔁 Date change at the Legenda pier"),
+                ("Free cancellation up to 24 hours before", "Date change at the Legenda pier, if seats are free")],
+    "silverline": [('<span class="ltt-buy-perk">Full Refund up to 24h Before</span>', '<span class="ltt-buy-perk">E-ticket by email</span>'),
+                   ("Full refund up to 24 hours before departure", "Cancel over 24 h ahead: refund minus a 10% fee; no refund within 24 h"),
+                   ("🛡️ Free cancellation up to 24 hours before", "📧 E-ticket by email"),
+                   ("Free cancellation up to 24 hours before", "Cancel over 24 h ahead: refund minus a 10% fee; no refund within 24 h"),
+                   ("Booked via GetYourGuide", "Booked via Silverline Cruises")],
+}
+def _span(a, b):
+    return s[a:b]
+for _m in list(re.finditer(r'<a class="bpa-sublink" href="#([^"]+)">Read Review', s)):
+    pass
+for anc in [m.group(1) for m in re.finditer(r'<a class="bpa-sublink" href="#([^"]+)">Read Review', s)]:
+    kind = SELLER.get(anc, "gyg")
+    # card: trust box
+    j = s.index(f'<a class="bpa-sublink" href="#{anc}">Read Review')
+    ci = s.rfind('<div class="bpa-card" data-cat', 0, j)
+    tm = re.compile(r'<div class="bpa-trust2">.*?</div>', re.S).search(s, ci, j)
+    assert tm, anc
+    s = s[:tm.start()] + '<div class="bpa-trust2">' + "".join(f"<span>{l}</span>" for l in TRUST_LINES[kind]) + "</div>" + s[tm.end():]
+    # review section
+    if kind in REVIEW_FIX:
+        ri = s.index(f'id="{anc}"', s.index('<details class="bpa-details-card"'))
+        re_end = s.find('<details class="bpa-details-card"', ri + 10)
+        re_end = re_end if re_end > 0 else ri + 80000
+        blk = s[ri:re_end]
+        for o, n in REVIEW_FIX[kind]:
+            blk = blk.replace(o, n)
+        s = s[:ri] + blk + s[re_end:]
+_tip_old = ('All cruises have a <strong>generous cancellation policy</strong>, allowing a full refund if canceled 24 hours before the activity. '
+            'Additionally, they offer a <strong>reserve now, pay later </strong>flexible payment scheme.')
+assert s.count(_tip_old) == 1
+s = s.replace(_tip_old, 'Cruises booked through GetYourGuide have <strong>free cancellation up to 24 hours before</strong> and you '
+              '<strong>pay nothing today</strong>. Legenda tickets can be <strong>moved to another day</strong> at the Legenda pier, if seats are free.')
+assert s.count('<span class="hybrid-active-trust">Free 24h Cancellation</span>') == 1
+s = s.replace('<span class="hybrid-active-trust">Free 24h Cancellation</span>', '<span class="hybrid-active-trust" id="sticky-trust">Book for tonight</span>')
+STICKY_TRUST_JS = """<script id="cd-sticky-trust-js">
+(function(){ var r=document.getElementById('sticky-rank'), t=document.getElementById('sticky-trust'); if(!r||!t) return;
+  function upd(){ var n=(r.textContent.match(/#(\\d+)/)||[])[1], c=n&&document.getElementById('card-'+n), b=c&&c.querySelector('.bpa-trust2 b'); if(b) t.textContent=b.textContent; }
+  new MutationObserver(upd).observe(r,{childList:true,characterData:true,subtree:true}); upd(); })();
+</script>"""
+s = s.replace("</body>", STICKY_TRUST_JS + "\n</body>", 1)
+
 # Trust lines under the CTA: bold promise + lighter detail, check-circle icons, soft green box
 for _old, _new in [("✓ Instant mobile ticket", "<b>Instant mobile ticket</b> on your phone"),
                    ("✓ Instant confirmation", "<b>Instant confirmation</b> by email"),
