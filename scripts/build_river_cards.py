@@ -1042,6 +1042,82 @@ RATE_IN_SUMMARY_JS = """<script id="cd-rate-in-summary-js">
 document.addEventListener('click',function(e){ var sm=e.target.closest('.bpa-details-card .bpa-rate-sum'); if(!sm) return;
   e.preventDefault(); e.stopPropagation(); var d=sm.parentNode; d.open=!d.open; },true);
 </script>"""
+# ---- UGC preview (?ugc=a|b|c): public TikTok videos by guests, official TikTok player, loaded only on click ----
+UGC = {
+    "cruise-1-legenda": [
+        {"id": "7552667337204174100", "h": "imjulesyang", "t": "An evening cruise under the city lights", "v": "5.7K views"},
+        {"id": "7321843979073506606", "h": "aliciasessler", "t": "Sunset on the Danube with Legenda", "v": "3K views"},
+        {"id": "7692418249618623766", "h": "budapest_insider", "t": "The 1-hour night cruise", "v": "1.2K views"}],
+    "item-4-legenda-candlelit-dinner": [
+        {"id": "7675452863241375009", "h": "travelwithusc", "t": "Candlelit date night on the Danube", "v": "1.9K views"}],
+}
+UGC_HTML = """<style id="ugc-css">
+.ugc-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:84px;z-index:9999;display:flex;gap:4px;padding:4px;background:#0f172a;border-radius:9999px;box-shadow:0 6px 20px rgba(15,23,42,.35);font:700 12px 'Plus Jakarta Sans',sans-serif}
+.ugc-bar a{color:#cbd5e1;text-decoration:none;padding:7px 11px;border-radius:9999px;white-space:nowrap}.ugc-bar a:hover{color:#fff;background:#1e293b}.ugc-bar a.on{background:#fbbf24;color:#0f172a}
+.ugc-tile{position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;border:0;border-radius:10px;cursor:pointer;color:#fff;text-align:left;overflow:hidden;
+  background:radial-gradient(120% 90% at 30% 10%,#334155 0%,#0f172a 60%,#020617 100%);font:600 11px/1.3 'Plus Jakarta Sans',sans-serif;padding:8px}
+.ugc-tile:hover{filter:brightness(1.15);color:#fff}
+.ugc-tile .ugc-play{position:absolute;inset:0;margin:auto;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;color:#0f172a;font-size:14px;padding-left:3px;box-sizing:border-box}
+.ugc-tile b{font-weight:800}.ugc-tile small{opacity:.75;font-size:10px}
+.ugc-thumb{aspect-ratio:1/1}.ugc-thumb .ugc-play{width:26px;height:26px;font-size:11px}.ugc-thumb .ugc-cap{font:800 9.5px/1.15 'Plus Jakarta Sans',sans-serif;position:relative}
+.ugc-row{margin-top:10px}.ugc-row-h{font:800 11px 'Plus Jakarta Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#64748b;margin:0 0 6px}
+.ugc-row-list{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.ugc-row .ugc-tile{aspect-ratio:9/14}
+.ugc-slide{flex:0 0 100%;scroll-snap-align:start;display:flex;align-items:center;justify-content:center;background:#020617;position:relative;height:100%}
+.ugc-slide .ugc-tile{width:100%;height:100%;border-radius:0;align-items:center;justify-content:center;text-align:center;font-size:14px}
+.ugc-slide .ugc-play{position:static;margin:0 0 10px;width:54px;height:54px;font-size:20px}
+.ugc-slide iframe{height:100%;aspect-ratio:9/16;border:0;max-width:100%}
+.ugc-modal{position:fixed;inset:0;z-index:10000;background:rgba(2,6,23,.82);display:flex;align-items:center;justify-content:center;padding:16px}
+.ugc-box{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px}
+.ugc-box iframe{height:min(78vh,620px);aspect-ratio:9/16;border:0;border-radius:12px;background:#000;max-width:92vw}
+.ugc-meta{color:#e2e8f0;font:600 13px 'Plus Jakarta Sans',sans-serif;display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:center}
+.ugc-meta a{color:#fbbf24;text-decoration:underline}.ugc-meta a:hover{color:#fde68a}
+.ugc-x,.ugc-nav{border:0;background:#fff;color:#0f172a;border-radius:50%;width:38px;height:38px;font:800 18px/1 sans-serif;cursor:pointer}
+.ugc-x{position:absolute;top:-6px;right:-50px}.ugc-nav.prev{position:absolute;left:-54px;top:45%}.ugc-nav.next{position:absolute;right:-54px;top:45%}
+.ugc-x:hover,.ugc-nav:hover{background:#e2e8f0;color:#0f172a}
+@media (max-width:767px){.ugc-x{right:0;top:-46px}.ugc-nav.prev{left:4px}.ugc-nav.next{right:4px}.ugc-bar{bottom:76px;font-size:11px}.ugc-bar a{padding:6px 8px}}
+</style>
+<script id="ugc-js">
+(function(){
+  var m=location.search.match(/[?&]ugc=([abc])/); if(!m) return; var v=m[1];
+  var UGC=""" + json.dumps(UGC, ensure_ascii=False) + r""";
+  function esc(x){return String(x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function player(id){return 'https://www.tiktok.com/player/v1/'+id+'?autoplay=1&description=1&music_info=1&rel=0';}
+  function link(x){return 'https://www.tiktok.com/@'+x.h+'/video/'+x.id;}
+  function tile(x,i,cls,inner){return '<button type="button" class="ugc-tile '+cls+'" data-i="'+i+'" aria-label="Play guest video by @'+esc(x.h)+'"><span class="ugc-play" aria-hidden="true">▶</span>'+inner+'</button>';}
+  function openModal(list,i){
+    var md=document.createElement('div'); md.className='ugc-modal'; md.setAttribute('role','dialog'); md.setAttribute('aria-label','Guest videos');
+    function show(){ var x=list[i];
+      md.innerHTML='<div class="ugc-box"><button type="button" class="ugc-x" aria-label="Close">✕</button>'+(list.length>1?'<button type="button" class="ugc-nav prev" aria-label="Previous video">‹</button><button type="button" class="ugc-nav next" aria-label="Next video">›</button>':'')
+        +'<iframe src="'+player(x.id)+'" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen title="Guest video by @'+esc(x.h)+'"></iframe>'
+        +'<div class="ugc-meta"><span>@'+esc(x.h)+' · '+esc(x.v)+'</span><a href="'+link(x)+'" target="_blank" rel="nofollow noopener">View on TikTok</a></div></div>'; }
+    md.addEventListener('click',function(e){ if(e.target===md||e.target.closest('.ugc-x')){ md.remove(); document.removeEventListener('keydown',key); }
+      else if(e.target.closest('.ugc-nav')){ i=(i+(e.target.closest('.next')?1:list.length-1))%list.length; show(); } });
+    function key(e){ if(e.key==='Escape'){ md.remove(); document.removeEventListener('keydown',key);} }
+    document.addEventListener('keydown',key); show(); document.body.appendChild(md);
+  }
+  function run(){
+    var names={a:'A · Photo strip tile',b:'B · Guests filmed it',c:'C · In the slider'};
+    var bar=document.createElement('div'); bar.className='ugc-bar';
+    bar.innerHTML=['a','b','c'].map(function(k){return '<a href="?ugc='+k+'#card-1" class="'+(k===v?'on':'')+'">'+names[k]+'</a>';}).join('')+'<a href="?#card-1">Off</a>';
+    document.body.appendChild(bar);
+    Object.keys(UGC).forEach(function(anc){
+      var a=document.querySelector('.bpa-card a.bpa-sublink[href="#'+anc+'"]'); if(!a) return; var card=a.closest('.bpa-card'), list=UGC[anc];
+      if(v==='a'){ var th=card.querySelector('.cd-thumbs'); var vis=[].filter.call(th.querySelectorAll('.cd-thumb'),function(b){return !b.classList.contains('is-hid');});
+        var slot=vis[vis.length-2]||vis[0]; var t=document.createElement('div'); t.innerHTML=tile(list[0],0,'ugc-thumb cd-thumb','<span class="ugc-cap">'+list.length+' guest video'+(list.length>1?'s':'')+'</span>'); t=t.firstChild;
+        slot.replaceWith(t); t.addEventListener('click',function(e){ e.stopPropagation(); openModal(list,0); }); }
+      if(v==='b'){ var gal=card.querySelector('.cd-gal'); var row=document.createElement('div'); row.className='ugc-row';
+        row.innerHTML='<p class="ugc-row-h">📱 Guests filmed it</p><div class="ugc-row-list">'+list.map(function(x,i){return tile(x,i,'','<b>@'+esc(x.h)+'</b><small>'+esc(x.v)+'</small>');}).join('')+'</div>';
+        gal.appendChild(row); row.addEventListener('click',function(e){ var b=e.target.closest('.ugc-tile'); if(b) openModal(list,+b.dataset.i); }); }
+      if(v==='c'){ var sl=card.querySelector('.bpa-slider'); var s=document.createElement('div'); s.className='ugc-slide';
+        s.innerHTML=tile(list[0],0,'','<div><b>Guest video</b><br><small>@'+esc(list[0].h)+' · '+esc(list[0].v)+'</small><br><small>'+esc(list[0].t)+'</small></div>');
+        var first=sl.children[0]; first.after(s); var pill=card.querySelector('.bpa-pill'); if(pill) pill.textContent=pill.textContent.replace(/\/ (\d+)/,function(_,n){return '/ '+(+n+1);});
+        s.addEventListener('click',function(e){ if(!e.target.closest('.ugc-tile')) return; s.innerHTML='<iframe src="'+player(list[0].id)+'" allow="autoplay; encrypted-media; fullscreen" allowfullscreen title="Guest video by @'+esc(list[0].h)+'"></iframe>'; }); }
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
+})();
+</script>"""
+s = s.replace("</body>", UGC_HTML + "\n</body>", 1)
 # RATE_IN_SUMMARY_JS not needed: clicking the rating only toggles its own <details>, and the card script floats the list
 
 # Trust lines under the CTA: bold promise + lighter detail, check-circle icons, soft green box
@@ -1052,8 +1128,8 @@ for _old, _new in [("✓ Instant mobile ticket", "<b>Instant mobile ticket</b> o
     s = s.replace(f"<span>{_old}</span>", f"<span>{_new}</span>")
 assert "<span>✓ " not in re.sub(r"(?s)^.*?<div class=\"bpa-deck-wrap\"", "", s)[:0] or True
 TRUST_CSS = """<style id="cd-trust-css">
-.bpa-card .bpa-trust2{display:flex!important;flex-direction:column!important;align-items:stretch;gap:5px!important;width:100%;box-sizing:border-box;
-  margin-top:8px;padding:8px 10px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;
+.bpa-card .bpa-trust2{display:flex!important;flex-direction:column!important;align-items:stretch;gap:3px!important;width:100%;box-sizing:border-box;
+  margin-top:6px;padding:6px 9px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;
   font:500 12px/1.35 'Plus Jakarta Sans',sans-serif!important;color:#3f6212;text-align:left}
 .bpa-card .bpa-trust2 span{display:block;position:relative;padding-left:20px}
 .bpa-card .bpa-trust2 span::before{content:"";position:absolute;left:0;top:1px;width:14px;height:14px;border-radius:50%;background:#16a34a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.3l2.6 2.5L12 5.4' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
