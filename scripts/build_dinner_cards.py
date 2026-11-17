@@ -95,7 +95,8 @@ PILLS = {
         ("drinks", "🥂", "Welcome drink", "1 drink included: champagne, wine, beer, a soft drink or mineral water.", "Every other drink is paid on board."),
         ("vibe", "🕯️", "Romantic and quiet", "Candlelit tables for two along the windows, a pianist and singer, no loud folk show.",
          "10 of 70 recent guests booked it for a birthday, anniversary or engagement."),
-        ("deck", "🌬️", "Open top deck", "The open top deck is free to use at any point of the evening.", "Dinner is served inside at candlelit window tables."),
+        ("deck", "🌬️", "Open top deck", "The open top deck is free to use at any point of the evening.",
+         "Seats can't be reserved, not even a window table: Legenda assigns the tables on board."),
         ("menu", "🍽️", "4 courses, 17 dishes", "Chosen at your table: 6 starters, 2 soups, 6 mains (trout, pork, duck, beef, cauliflower steak or tuna) and 3 desserts.",
          "Children 3 to 12 get 3 courses."),
         ("diet", "🌱", "Diet notes", "Gluten-free and lactose-free dishes are marked on the menu.", "No vegan menu, and it can't cater for food allergies.")],
@@ -191,7 +192,7 @@ EDGE_QA = {
     L: [("Good for a special occasion?", "Yes: 10 of 70 recent guests booked it for a birthday, anniversary or engagement."),
         ("Is the food good?", "55 of 70 recent guests talk about the food, nearly all positively. I chose from 17 dishes on my test dinner."),
         ("Is it loud?", "No. A pianist and singer play lounge music, quiet enough to talk. There is no loud folk show."),
-        ("Are drinks included?", "Only the welcome drink. Every other drink is paid on board."),
+        ("Can I reserve a window table?", "No. Legenda doesn't take seat or table requests, whatever you book: tables are assigned on board."),
         ("Can I cancel or change the date?", "Booked direct with Legenda, cancellation is free up to 72 hours before. Legenda can also move your ticket to another day at its pier, if seats are free.")],
     HK: [("Is the food good?", "44 of 61 recent guests talk about the food, almost all positively. 2 found it lukewarm or a bit dry."),
          ("Show or sightseeing?", "A show night. The band plays requests at the tables and the dancers come round for photos; you can step out on deck to watch the city."),
@@ -457,6 +458,31 @@ for old, new, cnt in TEXT:
     s = s.replace(old, new)
 s = rep(s, '<div class="qf1-val">€40 (all three options)</div>', '<div class="qf1-val">€40 (reduced from €44), all three options</div>', where="goulash qf")
 
+# ------------------------------------------------------------------ intro (same pattern as the river page, PRs #182-184)
+# Hook: the cruise that fits your evening, each option linked to its own guide; then the proof (what I rode, what I compared,
+# where it was checked) and the two ways in (finder or ranking). The "Short on time?" callout goes, like on the river page.
+INTRO_P1 = ('<p>The right Danube dinner cruise is the one that fits your evening: '
+            '<strong><a href="/candlelit-dinner-cruise-budapest">a quiet candlelit dinner for two</a></strong>, '
+            '<strong>a lively Hungarian folk show</strong>, '
+            '<strong><a href="/unlimited-prosecco-cruises-budapest">a buffet with unlimited drinks</a></strong>, or '
+            '<strong><a href="/best-budapest-river-cruises">a cheap goulash supper on a sightseeing loop</a></strong>. '
+            'This page gets you to that table in under a minute.</p>')
+INTRO_P2 = ('<p>To make the choice easy, <strong>I booked and ate on 3 of these dinner cruises myself</strong> '
+            '(Legenda, Silverline and Hungária Koncert) and compared all 6 on what really matters: the menu, the show, drinks, seats, docks, '
+            '<a href="/best-night-cruises-budapest">sunset times</a> and cancellation terms, checked on each seller\'s own page and in over 300 recent guest reviews. '
+            'Describe your evening in the cruise finder below, or scroll straight to the ranking.</p>')
+META_DESC = ("I ate on 3 of Budapest's most popular Danube dinner cruises and compared all 6 side by side: menu, show, drinks, docks "
+             "and sunset times. Find yours in 30 seconds with the cruise finder.")
+ia = s.index('<div class="ltt-lead-copy">')
+ib = s.index("</div>", ia) + len("</div>")
+s = s[:ia] + '<div class="ltt-lead-copy">\n' + INTRO_P1 + "\n" + INTRO_P2 + "\n</div>" + s[ib:]
+s, nco = re.subn(r'\n?<a class="bpdv-callout"[^>]*>.*?</a>', "", s, count=1, flags=re.S)
+assert nco == 1, "callout"
+old_desc = re.search(r'<meta content="([^"]*)" name="description"/>', s).group(1)
+assert s.count(old_desc) >= 3, old_desc
+s = s.replace(old_desc, H.escape(META_DESC, quote=True))
+INTRO_LD = re.sub(r"<[^>]+>", "", INTRO_P1)
+
 # ------------------------------------------------------------------ AI finder + filter box
 fa = river.index("<!-- AI cruise finder")
 fz = river.index("</script>", river.index('id="bpa-ai-finder"')) + len("</script>")
@@ -519,7 +545,9 @@ jm = re.search(r'(<script id="ltt-schema-jsonld" type="application/ld\+json">)(.
 data = json.loads(jm.group(2))
 art = next(x for x in data["@graph"] if x.get("@type") == "Article")
 art["dateModified"] = "2026-11-17"
+art["description"] = META_DESC
 lst = art["mainEntity"]
+lst["description"] = H.unescape(INTRO_LD)
 by = {e["url"].split("#")[1]: e for e in lst["itemListElement"]}
 items = []
 for n, anc in enumerate(ORDER, 1):
