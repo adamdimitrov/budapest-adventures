@@ -919,7 +919,7 @@ document.addEventListener('click',function(e){var c=e.target.closest('.cd-tq-chi
 #  GetYourGuide listings: "Free cancellation: cancel up to 24 hours in advance for a full refund" + "Reserve now and pay later: pay nothing today".
 #  Legenda FAQ: tickets can be transferred to another day and time at the Legenda pier, depending on availability.
 #  Legenda free cancellation up to 24 h: confirmed by the site owner (Legenda partner), not published on legenda.hu.
-#  Silverline T&C: ticket and confirmation sent electronically; cancel 24 h+ ahead = refund minus 10% fee, within 24 h no refund.
+#  Silverline FAQ (silver-line.hu/faq): cancelling or modifying 24 h+ before departure = 100% refund; within 24 h not refundable.
 #  Same-day booking: confirmed by the site owner.
 SELLER = {"cruise-1-legenda": "legenda", "item-4-legenda-candlelit-dinner": "legenda",
           "cruise-7-silverline-prosecco": "silverline", "cruise-silverline-mulled-wine": "silverline", "cruise-5-silverline-no-frills": "silverline",
@@ -927,15 +927,11 @@ SELLER = {"cruise-1-legenda": "legenda", "item-4-legenda-candlelit-dinner": "leg
 TRUST_LINES = {
     "gyg": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
     "legenda": ["<b>Free cancellation</b> up to 24 h", "<b>Book for tonight</b>, same day", "<b>Change your date</b> at the pier"],
-    "silverline": ["<b>Book for tonight</b>: same-day booking works", "<b>E-ticket by email</b> as soon as you book"],
+    "silverline": ["<b>Free cancellation</b> up to 24 h", "<b>Free date change</b> up to 24 h", "<b>Book for tonight</b>, same day"],
 }
 REVIEW_FIX = {
     "legenda": [],  # free cancellation confirmed by the owner, so the review keeps its refund text
-    "silverline": [('<span class="ltt-buy-perk">Full Refund up to 24h Before</span>', '<span class="ltt-buy-perk">E-ticket by email</span>'),
-                   ("Full refund up to 24 hours before departure", "Cancel over 24 h ahead: refund minus a 10% fee; no refund within 24 h"),
-                   ("🛡️ Free cancellation up to 24 hours before", "📧 E-ticket by email"),
-                   ("Free cancellation up to 24 hours before", "Cancel over 24 h ahead: refund minus a 10% fee; no refund within 24 h"),
-                   ("Booked via GetYourGuide", "Booked via Silverline Cruises")],
+    "silverline": [("Booked via GetYourGuide", "Booked via Silverline Cruises")],
 }
 def _span(a, b):
     return s[a:b]
@@ -962,7 +958,7 @@ _tip_old = ('All cruises have a <strong>generous cancellation policy</strong>, a
             'Additionally, they offer a <strong>reserve now, pay later </strong>flexible payment scheme.')
 assert s.count(_tip_old) == 1
 s = s.replace(_tip_old, 'Cruises booked through GetYourGuide have <strong>free cancellation up to 24 hours before</strong> and you '
-              '<strong>pay nothing today</strong>. Legenda also offers <strong>free cancellation up to 24 hours before</strong>, and can move your ticket to another day at its pier.')
+              '<strong>pay nothing today</strong>. Legenda and Silverline also refund in full if you cancel <strong>up to 24 hours before</strong>.')
 assert s.count('<span class="hybrid-active-trust">Free 24h Cancellation</span>') == 1
 s = s.replace('<span class="hybrid-active-trust">Free 24h Cancellation</span>', '<span class="hybrid-active-trust" id="sticky-trust">Book for tonight</span>')
 STICKY_TRUST_JS = """<script id="cd-sticky-trust-js">
