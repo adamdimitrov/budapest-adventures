@@ -813,8 +813,7 @@ function bpaAiInit(){
   function clearAI(){
     if(!deck) return;
     deck.querySelectorAll('.bpa-ai-why').forEach(function(el){ el.remove(); });
-    cards().forEach(function(c){ c.classList.remove('bpa-ai-match'); });
-    if(original) original.forEach(function(c){ deck.appendChild(c); });
+    cards().forEach(function(c){ c.classList.remove('bpa-ai-match'); c.style.order=''; });
     picked={};
   }
   function say(html){ out.innerHTML=html; out.hidden=false; }
@@ -828,7 +827,6 @@ function bpaAiInit(){
     var text=q.value.replace(/\s+/g,' ').trim().toLowerCase();
     if(text.length<2){ q.focus(); return; }
     if(!deck) return;
-    if(!original) original=cards();
     go.disabled=true; say('Finding your best match…');
     used=true; ga('ai_finder_search',{search_term:text.slice(0,100)});
     fetch('/api/cruise-finder?page=best-budapest-river-cruises&q='+encodeURIComponent(text))
@@ -839,12 +837,12 @@ function bpaAiInit(){
         clearAI();
         var list=(d.picks||[]).filter(function(p){ return document.getElementById(p.id); });
         if(!list.length) throw {error:'no_answer'};
-        list.slice().reverse().forEach(function(p){
+        list.forEach(function(p,idx){
           var card=document.getElementById(p.id);
           var why=document.createElement('div'); why.className='bpa-ai-why';
           why.innerHTML='<b>Why it fits:</b> '+esc(p.why);
           card.insertBefore(why,card.firstChild); card.classList.add('bpa-ai-match');
-          deck.insertBefore(card,deck.firstChild); picked[p.id]=1;
+          card.style.order=String(idx-list.length); picked[p.id]=1;
         });
         say(esc(d.lead||'Here are your best matches.')+' <a href="#ltt-cards-deck">See '+(list.length===1?'it':'them')+' ↓</a>'+resetLink());
         ga('ai_finder_result',{picks:list.map(function(p){return p.id;}).join(',')});
