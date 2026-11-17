@@ -1,14 +1,14 @@
 name: Layout check
 
-# Fails the PR when any published page's menu or footer drifts from its
-# language master, a floating bar links to something not on the page, or a
-# page is live without being in the sitemap, or an affiliate/OTA link lacks
-# rel="nofollow sponsored noopener", or a lazy-loaded photo (data-src) has no
-# loader / points at a missing file. Fix with:
-#   python3 scripts/sync_layout.py
-#   python3 scripts/fix_affiliate_rel.py
-#   python3 scripts/check_lazy_images.py --fix
-#   python3 scripts/check_filters.py  (filter pills: every non-"all" button needs data-group)
+# Same file on every site (budapestadventures, thecruisedetective,
+# luxurytraveltester, adventuresinnewyork). Fails the PR when:
+#   - a page's menu/footer drifts from its language master, a floating bar
+#     links to something not on the page, or a live page is missing from the
+#     sitemap                                  -> python3 scripts/sync_layout.py
+#   - an affiliate/OTA link lacks its rel tokens -> python3 scripts/fix_affiliate_rel.py
+#   - a photo would not show (lazy data-src with no loader, missing file,
+#     hotlinked from another site)             -> python3 scripts/check_lazy_images.py --fix
+#   - a filter pill would render active on load -> see scripts/check_filters.py
 on:
   pull_request:
   push:
