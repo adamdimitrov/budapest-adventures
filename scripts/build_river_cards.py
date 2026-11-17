@@ -322,6 +322,7 @@ TT.update({
     "item-5-river-diva-dinner": (nd(["19:30"], ["18:30"]), 150, None),
 })
 FAQ_ORDER = []
+CAT_BY_ANCHOR = {}
 
 
 def pill(emoji, label, lead, note, cls=""):
@@ -382,6 +383,7 @@ for n, st in enumerate(starts):
     anc = re.search(r'class="bpa-sublink" href="#([^"]+)"', s[st:ends[n]]).group(1)
     key = OLD.get(anc, anc)
     FAQ_ORDER.append(key)
+    CAT_BY_ANCHOR[anc] = CARDS[key]["cat"]
     c = s[st:ends[n]]
     d = CARDS[key]
     c = re.sub(r'data-cat="[^"]*"', f'data-cat="{d["cat"]}"', c, count=1)
@@ -447,6 +449,11 @@ for n, st in enumerate(starts):
     c = c[:k] + "\n" + faq + c[k:]
     new_cards.append(c)
 s = s[:starts[0]] + "".join(new_cards) + s[tail_start:]
+
+# reviews in the Detailed Breakdown use the same filter categories as their card
+for anc, cat in CAT_BY_ANCHOR.items():
+    s, nrev = re.subn(r'(<details class="bpa-details-card" data-cat=")[^"]*(" id="%s")' % re.escape(anc), r"\g<1>" + cat + r"\g<2>", s)
+    assert nrev == 1, (anc, nrev)
 
 # ------------------------------------------------------------------ filter box (keeps the AI finder above it)
 fa = s.index("<!-- AI cruise finder (EN river cruises page only) -->")
