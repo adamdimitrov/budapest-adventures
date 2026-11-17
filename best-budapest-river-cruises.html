@@ -894,7 +894,7 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 .bpa-ai-row button{flex:0 0 auto;font-size:14px;font-weight:800;padding:12px 20px;border:0;border-radius:10px;background:#f59e0b;color:#0f172a;cursor:pointer}
 .bpa-ai-row button:hover{background:#d97706;color:#0f172a}
 .bpa-ai-row button:disabled{opacity:.6;cursor:wait}
-@media (max-width:520px){.bpa-ai-row{flex-wrap:wrap;padding:6px;gap:6px}.bpa-ai-row>svg{display:none}.bpa-ai-row input{flex:1 1 0;min-width:0;padding:10px 8px}.bpa-ai-row #bpa-ai-go{flex:1 0 100%;width:100%}}
+.bpa-ai-row{padding:0;border:0;border-radius:0;background:none;gap:8px;align-items:stretch;flex-wrap:nowrap}.bpa-ai-row:focus-within{box-shadow:none}.bpa-ai-field{flex:1 1 auto;min-width:0;display:flex;align-items:center;gap:8px;padding:4px 4px 4px 14px;border:2px solid #0f172a;border-radius:14px;background:#fff;box-shadow:0 4px 14px rgba(15,23,42,.10)}.bpa-ai-field:focus-within{border-color:#b45309;box-shadow:0 0 0 4px rgba(245,158,11,.25)}.bpa-ai-field .bpa-ai-glass{display:block;flex:0 0 auto}.bpa-ai-field input{flex:1 1 auto;min-width:0;font-size:16px;padding:12px 0;border:0;background:transparent;-webkit-appearance:none;appearance:none}.bpa-ai-field input::placeholder{color:#64748b;opacity:1}.bpa-ai-row #bpa-ai-go{min-height:52px;padding:0 22px}@media (max-width:520px){.bpa-ai-row{flex-direction:column}.bpa-ai-field{padding:4px 4px 4px 12px}.bpa-ai-row #bpa-ai-go{width:100%;font-size:15px}}
 .bpa-ai-row .bpa-ai-mic{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border-radius:10px;background:#f1f5f9;color:#0f172a;border:0;cursor:pointer}
 .bpa-ai-row .bpa-ai-mic:hover{background:#e2e8f0;color:#0f172a}
 .bpa-ai-row .bpa-ai-mic.is-on{background:#fee2e2;color:#b91c1c;animation:bpaMic 1.2s ease-in-out infinite}
@@ -913,9 +913,11 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 <span class="bpa-ai-kicker">Find your cruise</span>
 <label for="bpa-ai-q">What kind of evening do you want?</label>
 <div class="bpa-ai-row">
-<svg aria-hidden="true" fill="none" height="20" stroke="#475569" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24" width="20"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
-<input id="bpa-ai-q" maxlength="300" placeholder="Romantic, under €30, near Vigadó tér…" type="text"/>
+<div class="bpa-ai-field">
+<svg aria-hidden="true" class="bpa-ai-glass" fill="none" height="20" stroke="#475569" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24" width="20"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+<input autocomplete="off" enterkeyhint="search" id="bpa-ai-q" maxlength="300" placeholder="Search: romantic, under €30, sunset…" type="search"/>
 <button aria-label="Speak your search" class="bpa-ai-mic" hidden="" id="bpa-ai-mic" type="button"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"><rect height="12" rx="3" width="6" x="9" y="2"></rect><path d="M5 10a7 7 0 0 0 14 0"></path><path d="M12 17v4"></path></svg></button>
+</div>
 <button id="bpa-ai-go" type="submit">Find my cruise</button>
 </div>
 <p class="bpa-ai-hint">Matched against the 12 cruises I compared on this page.</p>

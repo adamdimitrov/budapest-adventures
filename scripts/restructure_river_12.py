@@ -208,7 +208,16 @@ s = re.sub(r'<p class="bprv-callout"[^>]*><strong>Short on time\?</strong>.*?</p
 MIC_BTN = ('<button aria-label="Speak your search" class="bpa-ai-mic" hidden="" id="bpa-ai-mic" type="button">'
            '<svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20">'
            '<rect height="12" rx="3" width="6" x="9" y="2"></rect><path d="M5 10a7 7 0 0 0 14 0"></path><path d="M12 17v4"></path></svg></button>\n')
-s = s.replace('<button id="bpa-ai-go" type="submit">Find my cruise</button>', MIC_BTN + '<button id="bpa-ai-go" type="submit">Find my cruise</button>', 1)
+# the input, search icon and mic form one clearly visible search field; the button sits next to / below it
+FIELD = [
+    ('<div class="bpa-ai-row">\n<svg aria-hidden="true"', '<div class="bpa-ai-row">\n<div class="bpa-ai-field">\n<svg aria-hidden="true" class="bpa-ai-glass"'),
+    ('<input id="bpa-ai-q" maxlength="300" placeholder="Romantic, under €30, near Vigadó tér…" type="text"/>',
+     '<input autocomplete="off" enterkeyhint="search" id="bpa-ai-q" maxlength="300" placeholder="Search: romantic, under €30, sunset…" type="search"/>'),
+]
+for a, b in FIELD:
+    assert s.count(a) == 1, a[:60]
+    s = s.replace(a, b)
+s = s.replace('<button id="bpa-ai-go" type="submit">Find my cruise</button>', MIC_BTN + '</div>\n<button id="bpa-ai-go" type="submit">Find my cruise</button>', 1)
 MIC_CSS = ('.bpa-ai-row .bpa-ai-mic{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border-radius:10px;'
            'background:#f1f5f9;color:#0f172a;border:0;cursor:pointer}\n.bpa-ai-row .bpa-ai-mic:hover{background:#e2e8f0;color:#0f172a}\n'
            '.bpa-ai-row .bpa-ai-mic.is-on{background:#fee2e2;color:#b91c1c;animation:bpaMic 1.2s ease-in-out infinite}\n'
@@ -217,9 +226,15 @@ MIC_CSS = ('.bpa-ai-row .bpa-ai-mic{flex:0 0 auto;display:inline-flex;align-item
 s = s.replace('.bpa-ai-hint{', MIC_CSS + '.bpa-ai-hint{', 1)
 # phone layout: input and mic side by side, "Find my cruise" full width below (the old rule also hid the mic icon)
 OLD_MOBILE = "@media (max-width:520px){.bpa-ai-row{flex-wrap:wrap;padding:6px}.bpa-ai-row svg{display:none}.bpa-ai-row input{flex-basis:100%;padding:10px 8px}.bpa-ai-row button{width:100%}}"
-NEW_MOBILE = ("@media (max-width:520px){.bpa-ai-row{flex-wrap:wrap;padding:6px;gap:6px}.bpa-ai-row>svg{display:none}"
-              ".bpa-ai-row input{flex:1 1 0;min-width:0;padding:10px 8px}"
-              ".bpa-ai-row #bpa-ai-go{flex:1 0 100%;width:100%}}")
+NEW_MOBILE = (".bpa-ai-row{padding:0;border:0;border-radius:0;background:none;gap:8px;align-items:stretch;flex-wrap:nowrap}"
+              ".bpa-ai-row:focus-within{box-shadow:none}"
+              ".bpa-ai-field{flex:1 1 auto;min-width:0;display:flex;align-items:center;gap:8px;padding:4px 4px 4px 14px;border:2px solid #0f172a;border-radius:14px;background:#fff;box-shadow:0 4px 14px rgba(15,23,42,.10)}"
+              ".bpa-ai-field:focus-within{border-color:#b45309;box-shadow:0 0 0 4px rgba(245,158,11,.25)}"
+              ".bpa-ai-field .bpa-ai-glass{display:block;flex:0 0 auto}"
+              ".bpa-ai-field input{flex:1 1 auto;min-width:0;font-size:16px;padding:12px 0;border:0;background:transparent;-webkit-appearance:none;appearance:none}"
+              ".bpa-ai-field input::placeholder{color:#64748b;opacity:1}"
+              ".bpa-ai-row #bpa-ai-go{min-height:52px;padding:0 22px}"
+              "@media (max-width:520px){.bpa-ai-row{flex-direction:column}.bpa-ai-field{padding:4px 4px 4px 12px}.bpa-ai-row #bpa-ai-go{width:100%;font-size:15px}}")
 assert s.count(OLD_MOBILE) == 1, "mobile css"
 s = s.replace(OLD_MOBILE, NEW_MOBILE)
 MIC_JS = r"""  // Microphone dictation (browser speech recognition; hidden where it is not supported)
