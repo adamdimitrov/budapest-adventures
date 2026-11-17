@@ -548,11 +548,11 @@ def btn(cat, label):
 
 fbox = (
     '<div class="ltt-integrated-filter-bar cd-fbox" id="cd-filters" role="group" aria-label="Filter cruises">'
-    '<div class="cd-frow fbm-mrow"><span class="cd-flab fbm-mhead">🌇 When are you cruising?</span>'
+    '<div class="cd-frow fbm-mrow"><span class="cd-flab fbm-mhead">🌇 Catch the sunset or the lit-up city</span>'
+    '<span class="fbm-msub">Pick your day: every cruise below then marks the sailings that catch it.</span>'
     '<div class="fbm-days" role="group" aria-label="Pick your cruise date">'
-    '<button type="button" class="fbm-day is-on" data-day="0" aria-pressed="true">Tonight</button>'
+    '<button type="button" class="fbm-day is-on" data-day="0" aria-pressed="true">Today</button>'
     '<button type="button" class="fbm-day" data-day="1" aria-pressed="false">Tomorrow</button>'
-    '<button type="button" class="fbm-day" data-day="sat" aria-pressed="false">Saturday</button>'
     '<label class="fbm-day fbm-other">📅 <span>Other date</span><input type="date" id="fbm-date" aria-label="Pick another cruise date"></label>'
     '</div><span class="fbm-mnote" id="fbm-mnote"></span></div>'
     '<div class="cd-frow"><span class="cd-flab">Who is coming</span><div class="cd-fchips">'
@@ -599,6 +599,9 @@ def block(tag, i):
 
 css = block("style", "cd-cards-css") + block("style", "cd-tested-css") + block("style", "cd-filters-css") + block("style", "fbm-css")
 js = block("script", "cd-cards-js") + block("script", "cd-filters-js") + block("script", "fbm-js")
+_old_note = "note.textContent='Sunset '+SUN+', fully dark by '+DARK+' on '+name+'. Each card shows which sailings are lit up.';"
+assert js.count(_old_note) == 1
+js = js.replace(_old_note, "note.textContent='\U0001F305 Sunset '+SUN+'  \u00b7  \U0001F303 City fully lit from '+DARK+' ('+name+')';")
 # one-tap date chips on top of the date field (fbm-js listens to the field's change event)
 css += """<style id="fbm-days-css">
 .fbm-mrow{display:flex!important;flex-direction:column;align-items:flex-start!important;gap:10px!important;padding:14px 16px!important;border:1px solid #fde68a}
@@ -612,6 +615,7 @@ css += """<style id="fbm-days-css">
 .fbm-other,.fbm-other span{text-transform:none!important;letter-spacing:0!important;margin:0!important}
 .fbm-mrow .fbm-mnote{text-align:left!important;align-self:stretch}
 .fbm-other input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;border:0;padding:0}
+  .fbm-msub{font:500 13.5px/1.4 'Plus Jakarta Sans',sans-serif;color:#475569;margin-top:-4px}
 .fbm-mrow .fbm-mnote{font:700 14px/1.45 'Plus Jakarta Sans',sans-serif!important;color:#92400e!important}
 </style>"""
 js += r"""<script id="fbm-days-js">
@@ -629,6 +633,8 @@ js += r"""<script id="fbm-days-js">
     c.addEventListener('click',function(){ inp.value=dayFor(k); inp.dispatchEvent(new Event('change',{bubbles:true})); mark(inp.value); }); });
   inp.addEventListener('change',function(){ if(inp.value) mark(inp.value); });
   var other=document.querySelector('.fbm-other'); if(other) other.addEventListener('click',function(){ try{ inp.showPicker(); }catch(e){} });
+  var DF=new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short'});
+  chips.forEach(function(c){ var k=c.getAttribute('data-day'); if(k===null) return; c.textContent=c.textContent.split(' \u00b7 ')[0]+' \u00b7 '+DF.format(new Date(dayFor(k)+'T12:00:00')); });
   mark(inp.value||dayFor(0));
 })();
 </script>"""
