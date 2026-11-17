@@ -337,7 +337,10 @@ def build(spec_path, photos):
     for f in filters:
         cnt = len(spec["items"]) if f["cat"] == "all" else sum(f["cat"] in it["cat"].split() for it in spec["items"])
         act = " active" if f["cat"] == "all" else ""
-        btns.append(f'<button class="ltt-tab-btn{act}" data-cat="{f["cat"]}" data-label="{esc_attr(f["label"])}" onclick="lttFilterItems(\'{f["cat"]}\', this)" type="button">{E(f["label"])} <span class="ltt-cnt">({cnt})</span></button>')
+        # the filter runtime only treats grouped buttons as filters; ungrouped ones
+        # behave like "All" and would all render active
+        grp = "" if f["cat"] == "all" else f' data-group="{f.get("group", "fit")}"'
+        btns.append(f'<button class="ltt-tab-btn{act}" data-cat="{f["cat"]}"{grp} data-label="{esc_attr(f["label"])}" onclick="lttFilterItems(\'{f["cat"]}\', this)" type="button">{E(f["label"])} <span class="ltt-cnt">({cnt})</span></button>')
     lead = "".join(f"<p>{p}</p>" for p in spec["lead"])
     hero = f'''<div class="ltt-hero-wrap">
 <div class="ltt-clean-card">
