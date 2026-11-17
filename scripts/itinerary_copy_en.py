@@ -110,7 +110,7 @@ C["legenda"] = dict(
     place="Dock 7, Vigadó tér", map="Vigadó tér Dock 7 Budapest",
     psub="per adult • day or night sailings",
     tested_pop="<strong>I rode this cruise myself</strong> while testing 10 Budapest river cruises, and it is the one I would book. "
-               "<a href=\"/best-budapest-river-cruise\">Why it won →</a>",
+               "<a href=\"/best-budapest-river-cruises#card-1\">Why it won →</a>",
     pills=[("🌃", "Go after dark", "The point of a Danube cruise is the <strong>Parliament, Buda Castle and the bridges lit up</strong>. Take an evening departure, it is dark by about 16:00 in winter and after 20:30 in summer."),
            ("🎧", "30 languages", "Individual headsets with commentary in 30 languages, plus a welcome drink (champagne, wine, beer or soda)."),
            ("👶", "Kids under 10 free", "Free for children up to 9. Ages 10 to 14 pay €14 by day or €17.50 in the evening.")],
@@ -121,7 +121,7 @@ C["legenda"] = dict(
     body="""<p>End day 1 on the water. A <strong>one-hour evening cruise</strong> passes the lit-up Parliament you toured this morning, Buda Castle and every central bridge, and it is the single best hour in Budapest for a first visit.</p>
 <p>I rode 10 Budapest cruises to rank them, and <strong>Legenda</strong> is the one I would book: an open top deck, a welcome drink and commentary in 30 languages on your own headset, from <strong>€20</strong>.</p>
 <h3>Who Should Book It</h3>
-<p><strong>Pick it</strong> for the classic night view. <strong>Skip it</strong> if you would rather eat on the river: the <a href="/best-dinner-cruise-budapest">best dinner cruise</a> fits day 3's evening better. Want drinks flowing? Compare the <a href="/unlimited-prosecco-cruises-budapest">unlimited prosecco cruises</a>.</p>
+<p><strong>Pick it</strong> for the classic night view. <strong>Skip it</strong> if you would rather eat on the river: the <a href="/best-dinner-cruises-budapest">best dinner cruise</a> fits day 3's evening better. Want drinks flowing? Compare the <a href="/unlimited-prosecco-cruises-budapest">unlimited prosecco cruises</a>.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ Dock 7, Vigadó tér (Pest side), about 10 minutes on foot from the Basilica.<br/>🚇 Vörösmarty tér (M1) or tram 2.</p>""",
     qf_badge="Day 1 evening", qf=[("Duration", "60-70 minutes"), ("Pier", "Dock 7 (Vigadó tér), 1051 Budapest"),
@@ -248,7 +248,7 @@ PLAN_COLS = ["Day", "Morning", "Afternoon", "Evening", "To book"]
 PLAN_ROWS = [
     ["Day 1: Pest", f'<a href="{A("parliament")}">Parliament tour</a> (9:00 or 10:00)', f'<a href="{A("basilica")}">Basilica dome</a>, lunch, riverside to the Chain Bridge', f'<a href="{A("legenda")}">Night cruise</a> from Vigadó tér', "€75"],
     ["Day 2: Buda", f'<a href="{A("food")}">Food tour</a> from the Central Market Hall', f'<a href="{A("castle")}">Castle walk</a> at 14:00, sunset on the Bastion', f'<a href="{A("crawl")}">Ruin bars</a> from 21:10', "€76"],
-    ["Day 3: Baths", f'<a href="{A("szechenyi")}">Széchenyi</a> by 9:00', "City Park, Vajdahunyad Castle, Heroes' Square, Andrássy út", 'Free, or a <a href="/best-dinner-cruise-budapest">dinner cruise</a>', "€39"],
+    ["Day 3: Baths", f'<a href="{A("szechenyi")}">Széchenyi</a> by 9:00', "City Park, Vajdahunyad Castle, Heroes' Square, Andrássy út", 'Free, or a <a href="/best-dinner-cruises-budapest">dinner cruise</a>', "€39"],
 ]
 PLAN_NOTE = "Per person, for the bookings in this plan only (no food, hotel or transport). Total: about €190 for 3 days."
 
@@ -266,7 +266,7 @@ DAYS = [
     ("day-3", "Day 3: Thermal Baths and City Park",
      f"""<p><strong>Morning.</strong> Take the M1 to Széchenyi fürdő and be through the gate by 9:00 for the <a href="{A("szechenyi")}">€39 morning pass</a> (Monday to Thursday). Soak as long as you like.</p>
 <p><strong>Afternoon.</strong> Walk out into City Park: Vajdahunyad Castle is next door and free, Heroes' Square is at the end of the park, and Andrássy út leads you back towards the centre past the Opera.</p>
-<p><strong>Evening.</strong> Your last night is the one for a long dinner. Book the <a href="/best-dinner-cruise-budapest">best dinner cruise</a> for a 4-course meal on the river, or keep it free and eat in the Jewish Quarter.</p>"""),
+<p><strong>Evening.</strong> Your last night is the one for a long dinner. Book the <a href="/best-dinner-cruises-budapest">best dinner cruise</a> for a 4-course meal on the river, or keep it free and eat in the Jewish Quarter.</p>"""),
 ]
 
 TWO_H = "If You Only Have 2 Days in Budapest"

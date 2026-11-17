@@ -114,8 +114,4 @@ if __name__ == "__main__":
         link_once(rel, AMS_LONG, AMS_LONG + SHORT_TXT)
     for rel in ("budapest-amsterdam-river-cruises.html", "scripts/build_budapest_amsterdam.py"):
         link_once(rel, AMS_ROUTE, AMS_ROUTE_NEW)
-    link_once("best-budapest-river-cruise.html",
-              'see the <a href="/budapest-amsterdam-river-cruises">7 best Budapest to Amsterdam river cruises</a>, with 2027 prices from $3,941.</p></details>',
-              'see the <a href="/budapest-amsterdam-river-cruises">7 best Budapest to Amsterdam river cruises</a>, with 2027 prices from $3,941.</p></details>\n'
-              f'        <details><summary>Is there a river cruise from Budapest to Vienna?</summary><p>Yes, on multi-day cruises of 5 to 8 days, from $859. The one-way sailings run at Christmas; see the <a href="{EN}">6 best Budapest to Vienna river cruises</a>.</p></details>')
     link_once("scripts/december_copy_en.py", XMAS_FAQ_ANCHOR, XMAS_FAQ + XMAS_FAQ_ANCHOR)
