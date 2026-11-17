@@ -399,6 +399,7 @@ ACCESS.update({
         "one price for every age; alcohol only from 18, alcohol-free punch for kids; no dogs except service dogs"),
     "cruise-silverline-folklore": ("No wheelchair access", (False, "no wheelchair access"), None, None, "alcohol only from 18, mocktails available; no dogs except service dogs"),
 })
+FAQ_SHORT = {'Can I get a window seat on the folklore cruise?': 'Window seat?', 'Can I go outside during the Legenda candlelit dinner?': 'Go outside?', 'Can I go outside on the River Diva dinner cruise?': 'Go outside?', 'Can I sit outside on the Legenda cruise?': 'Sit outside?', 'Can children come to the Legenda candlelit dinner?': 'Kids?', 'Can kids come on the Silverline prosecco cruise?': 'Kids?', 'Can kids come on the unlimited prosecco cruise?': 'Kids?', 'Can we bring a stroller on the 360° cruise?': 'Stroller?', 'Can we bring a stroller on the Kisfaludy paddle steamer?': 'Stroller?', 'Do I need earphones on La Perla?': 'Earphones?', 'Do I need earphones on the Kisfaludy paddle steamer?': 'Earphones?', 'Do I need earphones on the Legenda cruise?': 'Earphones?', "I don't like prosecco. What else is unlimited?": 'No prosecco fan?', 'Is a drink included on the Silverline sightseeing cruise?': 'Drink included?', 'Is a seat guaranteed on the 360° Panoramic Cruise?': 'Seat guaranteed?', 'Is dinner included on the folklore cruise?': 'Dinner included?', 'Is it only prosecco on the Silverline prosecco cruise?': 'Only prosecco?', 'Is it warm on board?': 'Warm on board?', 'Is the Cosy Cruise OK for food allergies?': 'Food allergies?', 'Is the Kisfaludy cruise quiet?': 'Quiet?', 'Is the Legenda candlelit dinner OK for vegans or food allergies?': 'Vegan / allergies?', "Is the Legenda cruise good if we don't drink?": 'Non-drinkers?', 'Is the Legenda cruise wheelchair accessible?': 'Wheelchair?', 'Is the Mahart night cruise wheelchair accessible?': 'Wheelchair?', 'Is the River Diva dinner cruise wheelchair accessible?': 'Wheelchair?', 'Is the Silverline upper deck worth €5 more?': 'Upper deck worth it?', 'Is the mulled wine cruise warm?': 'Warm?', 'Is the unlimited prosecco cruise a party boat?': 'Party boat?', 'Is there something for kids or non-drinkers?': 'Kids / non-drinkers?', 'What can I bring on La Perla?': 'What to bring?', 'What do you get on the Cosy Cruise?': "What's included?", 'What is the show on the folklore cruise?': 'The show?', 'What is the welcome drink on the 360° cruise?': 'Welcome drink?', 'When do the Parliament lights go off?': 'Lights off when?', 'Which drink is included on the Mahart cruise?': 'Which drink?', 'Which drinks are unlimited on River Diva?': 'Unlimited drinks?', 'Which mulled wines can I try on the Silverline cruise?': 'Which wines?', 'Will the La Perla rooftop be cold?': 'Cold on the roof?'}
 CARD_FAQ[1] = CARD_FAQ[1] + [("Is the Legenda cruise wheelchair accessible?",
     "Some of Legenda's boats are, but not all of them. Ask Legenda which boat runs your sailing before you book.")]
 CARD_FAQ[2] = [qa if not qa[0].startswith("Can kids come") else (qa[0],
@@ -527,11 +528,68 @@ for n, st in enumerate(starts):
     k = c.index("</div>", i) + len("</div>")
     qa = CARD_FAQ[key]
     faq = (f'<details class="fbm-faq"><summary>❓ {len(qa)} questions travellers ask <span class="fbm-faq-chev" aria-hidden="true">▾</span></summary>'
-           f'<div class="fbm-faq-body">' + "".join(f'<div class="fbm-qa"><div class="fbm-q">{E(q)}</div><div class="fbm-a">{E(a)}</div></div>' for q, a in qa)
+           f'<div class="fbm-faq-body">' + "".join(f'<div class="fbm-qa"><div class="fbm-q" data-s="{E(FAQ_SHORT.get(q, q))}">{E(q)}</div><div class="fbm-a">{E(a)}</div></div>' for q, a in qa)
            + "</div></details>")
     c = c[:k] + "\n" + faq + c[k:]
     new_cards.append(c)
 s = s[:starts[0]] + "".join(new_cards) + s[tail_start:]
+
+# Preview-only FAQ layout switcher: ?faq=a|b|c|d restyles every card's questions; without the parameter nothing changes.
+FAQ_VARIANTS = r"""<style id="faqv-css">
+.faqv-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:84px;z-index:9999;display:flex;gap:4px;padding:4px;background:#0f172a;border-radius:9999px;box-shadow:0 6px 20px rgba(15,23,42,.35);font:700 12px 'Plus Jakarta Sans',sans-serif}
+.faqv-bar a{color:#cbd5e1;text-decoration:none;padding:7px 11px;border-radius:9999px;white-space:nowrap}
+.faqv-bar a:hover{color:#fff;background:#1e293b}
+.faqv-bar a.on{background:#fbbf24;color:#0f172a}
+.faqv{margin-top:10px;font:500 13.5px/1.45 'Plus Jakarta Sans',sans-serif;color:#334155}
+.faqv-lbl{font:800 11px 'Plus Jakarta Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#64748b;margin:0 0 6px}
+.faqv-chips{display:flex;flex-wrap:wrap;gap:6px}
+.faqv-chip{border:1px solid #cbd5e1;background:#fff;color:#0f172a;border-radius:9999px;padding:6px 11px;font:700 12.5px 'Plus Jakarta Sans',sans-serif;cursor:pointer}
+.faqv-chip:hover{background:#f1f5f9;color:#0f172a}
+.faqv-chip[aria-pressed="true"]{background:#0f172a;color:#fff;border-color:#0f172a}
+.faqv-ans{margin-top:8px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:9px 12px}
+.faqv-dl{display:grid;grid-template-columns:auto 1fr;gap:5px 12px;margin:0}
+.faqv-dl dt{font-weight:800;color:#0f172a;white-space:nowrap}
+.faqv-dl dd{margin:0;min-width:0}
+.faqv-tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.faqv-tile{border:1px solid #e2e8f0;border-radius:12px;padding:9px 11px;font-size:12.5px;min-width:0;background:#fff}
+.faqv-tile b{display:block;color:#0f172a;font-size:13px;margin:4px 0 2px}
+.faqv-v{display:inline-block;font:800 11px 'Plus Jakarta Sans',sans-serif;border-radius:6px;padding:3px 7px}
+.faqv-v.yes{background:#dcfce7;color:#15803d}.faqv-v.no{background:#fee2e2;color:#b91c1c}.faqv-v.info{background:#e0f2fe;color:#0369a1}
+.faqv-row{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px}
+.faqv-sw{flex:0 0 220px;scroll-snap-align:start;border:1px solid #e2e8f0;border-radius:12px;padding:10px 12px;background:#f8fafc;font-size:12.5px}
+.faqv-sw b{display:block;color:#0f172a;font-size:13px;margin-bottom:3px}
+@media (max-width:767px){.faqv-bar{bottom:76px;font-size:11px}.faqv-bar a{padding:6px 8px}.faqv-dl{grid-template-columns:1fr}.faqv-dl dd{margin-bottom:6px}.faqv-tiles{grid-template-columns:1fr}}
+</style>
+<script id="faqv-js">
+(function(){
+  var m=location.search.match(/[?&]faq=([a-e])/); if(!m) return; var v=m[1];
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function first(a){var x=a.match(/^[^.!?]*[.!?]/);return x?x[0]:a;}
+  function verdict(a){ if(/^yes\b/i.test(a)) return ['yes','✓ Yes']; if(/^no\b/i.test(a)) return ['no','✕ No']; return ['info','ⓘ Good to know']; }
+  function rest(a){ return a.replace(/^(yes|no)[.,]\s*/i,''); }
+  function run(){
+    var names={a:'A · Chips',b:'B · Quick answers',c:'C · Verdict tiles',d:'D · Swipe cards',e:'Today'};
+    var bar=document.createElement('div'); bar.className='faqv-bar';
+    bar.innerHTML=['a','b','c','d','e'].map(function(k){return '<a href="?faq='+k+'#card-1" class="'+(k===v?'on':'')+'">'+names[k]+'</a>';}).join('');
+    document.body.appendChild(bar);
+    if(v==='e') return;
+    document.querySelectorAll('details.fbm-faq').forEach(function(d){
+      var qa=[].map.call(d.querySelectorAll('.fbm-qa'),function(x){var q=x.querySelector('.fbm-q');return {s:q.getAttribute('data-s')||q.textContent,q:q.textContent,a:x.querySelector('.fbm-a').textContent};});
+      var h='';
+      if(v==='a'){ h='<p class="faqv-lbl">Travellers ask</p><div class="faqv-chips">'+qa.map(function(x,i){return '<button type="button" class="faqv-chip" data-i="'+i+'" aria-pressed="'+(i===0)+'">'+esc(x.s)+'</button>';}).join('')+'</div><div class="faqv-ans" aria-live="polite">'+esc(qa[0].a)+'</div>'; }
+      if(v==='b'){ h='<p class="faqv-lbl">Quick answers</p><dl class="faqv-dl">'+qa.map(function(x){return '<dt>'+esc(x.s)+'</dt><dd>'+esc(x.a)+'</dd>';}).join('')+'</dl>'; }
+      if(v==='c'){ h='<div class="faqv-tiles">'+qa.map(function(x){var t=verdict(x.a);return '<div class="faqv-tile"><span class="faqv-v '+t[0]+'">'+t[1]+'</span><b>'+esc(x.s)+'</b>'+esc(first(rest(x.a))||x.a)+'</div>';}).join('')+'</div>'; }
+      if(v==='d'){ h='<p class="faqv-lbl">Travellers ask · swipe →</p><div class="faqv-row">'+qa.map(function(x){return '<div class="faqv-sw"><b>'+esc(x.q)+'</b>'+esc(x.a)+'</div>';}).join('')+'</div>'; }
+      var box=document.createElement('div'); box.className='faqv faqv-'+v; box.innerHTML=h; box._qa=qa;
+      d.replaceWith(box);
+    });
+    document.addEventListener('click',function(e){var c=e.target.closest('.faqv-chip'); if(!c) return; var box=c.closest('.faqv');
+      box.querySelectorAll('.faqv-chip').forEach(function(b){b.setAttribute('aria-pressed',b===c);}); box.querySelector('.faqv-ans').textContent=box._qa[+c.dataset.i].a;});
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
+})();
+</script>"""
+s = s.replace("</body>", FAQ_VARIANTS + "\n</body>", 1)
 
 # reviews in the Detailed Breakdown use the same filter categories as their card
 for anc, cat in CAT_BY_ANCHOR.items():
