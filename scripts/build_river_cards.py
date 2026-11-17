@@ -944,7 +944,10 @@ for anc in [m.group(1) for m in re.finditer(r'<a class="bpa-sublink" href="#([^"
     ci = s.rfind('<div class="bpa-card" data-cat', 0, j)
     tm = re.compile(r'<div class="bpa-trust2">.*?</div>', re.S).search(s, ci, j)
     assert tm, anc
-    s = s[:tm.start()] + '<div class="bpa-trust2">' + "".join(f"<span>{l}</span>" for l in TRUST_LINES[kind]) + "</div>" + s[tm.end():]
+    lines = TRUST_LINES[kind]
+    if anc == "item-4-legenda-candlelit-dinner":  # owner: assume 72 h for Legenda dinners (stricter than 24 h, so never over-promises)
+        lines = ["<b>Free cancellation</b> up to 72 h"] + lines[1:]
+    s = s[:tm.start()] + '<div class="bpa-trust2">' + "".join(f"<span>{l}</span>" for l in lines) + "</div>" + s[tm.end():]
     # review section
     if kind in REVIEW_FIX:
         ri = s.index(f'id="{anc}"', s.index('<details class="bpa-details-card"'))
@@ -1026,6 +1029,8 @@ for anc in [m.group(1) for m in re.finditer(r'<a class="bpa-sublink" href="#([^"
     if rs >= 0:  # review header: same rating component as the card (none when the cruise has no ratings yet)
         blk = blk[:rs] + card_rating + blk[_div_end(blk, rs):]
     blk = blk.replace('<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>', f'<span class="ltt-buy-perk">{PERK_BY_SELLER[kind]}</span>')
+    if anc == "item-4-legenda-candlelit-dinner":
+        blk = blk.replace("Full Refund up to 24h Before", "Full Refund up to 72h Before").replace("Full refund up to 24 hours before departure", "Full refund up to 72 hours before departure")
     if anc == "cruise-1-legenda":  # evening price is the default; "From" would wrongly suggest it is the cheapest
         blk = blk.replace("From €25", "€25")
     if anc == "cruise-2-rubingroup":
