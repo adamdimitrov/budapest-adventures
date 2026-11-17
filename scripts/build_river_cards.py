@@ -540,7 +540,9 @@ PILL_SLOTS = {
 DROPPED_PILLS = {"cruise-silverline-mulled-wine": {"Eat first"}, "cruise-3-kisfaludy-historic-cruise": {"Full city loop"},
                  "cruise-cosy-chimney-cake": {"Not for allergies"}, "cruise-360-panoramic": {"Free Wi-Fi"}}
 PILL_RELABEL = {"cruise-2-rubingroup": {"Unlimited Prosecco, Spritzers & Beer": "Unlimited Prosecco & Beer", "Lemonade unlimited too": "Lemonade too"},
-                "cruise-6-la-perla": {"Guaranteed Rooftop Seat": "Rooftop seat for all", "Relaxed, bring your own": "Relaxed BYOB"}}
+                "cruise-6-la-perla": {"Guaranteed Rooftop Seat": "Rooftop seat for all", "Relaxed, bring your own": "Relaxed BYOB"},
+                "cruise-3-kisfaludy-historic-cruise": {"29-Language Audio": "29-Lang Audio", "Front panorama deck": "Front deck", "Historic paddle steamer": "Paddle steamer"},
+                "cruise-cosy-chimney-cake": {"No guide included": "No guide", "Winter Punch & Chimney Cake": "Punch & Chimney Cake", "Cosy winter warm-up": "Cosy & warm"}}
 
 
 def order_pills(anc, pills):
