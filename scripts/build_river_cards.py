@@ -664,6 +664,7 @@ FINDER_IN_BOX_CSS = ("<style id=\"bpa-ai-in-box-css\">"
 fa_open = fbox.index(">") + 1
 # Interactive dock map (Leaflet + OpenStreetMap), loaded only when scrolled into view.
 # Pontoon coordinates from OpenStreetMap (ferry terminals / piers, 17 Nov 2026); Vigadó 8/A is next to Vigadó 7.
+SHOW_DOCK_MAP = False  # map is built but hidden for now; set True to bring it back
 DOCKS = [
     {"name": "Vigadó tér, Dock 7", "side": "Pest", "lat": 47.4940626, "lon": 19.0486335, "anchors": ["cruise-1-legenda", "item-4-legenda-candlelit-dinner"]},
     {"name": "Vigadó tér, Dock 5", "side": "Pest", "lat": 47.4953512, "lon": 19.0478120, "anchors": ["cruise-10-mahart"]},
@@ -749,7 +750,7 @@ MAP_HTML = ("""<section class="bpa-map" id="cruise-dock-map" aria-labelledby="bp
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
 })();
 </script>""")
-s = s[:fb_start] + fbox[:fa_open] + finder + FINDER_IN_BOX_CSS + fbox[fa_open:] + MAP_HTML + s[fb_end:]
+s = s[:fb_start] + fbox[:fa_open] + finder + FINDER_IN_BOX_CSS + fbox[fa_open:] + (MAP_HTML if SHOW_DOCK_MAP else "") + s[fb_end:]
 
 mini = ('<div class="cd-fmini" aria-hidden="true"><div class="cd-fmini-in"><button type="button" class="cd-fmini-btn" '
         'onclick="cdFiltersJump()">⚙️ Filters <span class="cd-fmini-n" hidden></span></button><span class="cd-fmini-res">'
