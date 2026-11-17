@@ -3677,4 +3677,32 @@ a.cd-editorial-bookmark::after{content:"\203A"!important;position:static!importa
   chips.forEach(function(c){ var k=c.getAttribute('data-day'); if(k===null) return; c.textContent=c.textContent.split(' \u00b7 ')[0]+' \u00b7 '+DF.format(new Date(dayFor(k)+'T12:00:00')); });
   mark(inp.value||dayFor(0));
 })();
-</script></body></html>
+</script><style id="pillv-css">
+.pillv-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:84px;z-index:9999;display:flex;gap:4px;padding:4px;background:#0f172a;border-radius:9999px;box-shadow:0 6px 20px rgba(15,23,42,.35);font:700 12px 'Plus Jakarta Sans',sans-serif}
+.pillv-bar a{color:#cbd5e1;text-decoration:none;padding:7px 11px;border-radius:9999px;white-space:nowrap}.pillv-bar a:hover{color:#fff;background:#1e293b}.pillv-bar a.on{background:#fbbf24;color:#0f172a}
+.pillv-hint{font:600 11.5px 'Plus Jakarta Sans',sans-serif;color:#64748b;margin:2px 0 4px}
+.pillv-hint b{color:#b45309}
+html.pillv-b .bpa-card .bpa-specs-row .bpa-lang>summary{cursor:pointer;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+html.pillv-b .bpa-card .bpa-specs-row .bpa-lang>summary:hover{transform:translateY(-1px);box-shadow:0 3px 8px rgba(15,23,42,.12)}
+html.pillv-b .bpa-card .bpa-specs-row .bpa-lang-chev{display:inline-grid!important;place-items:center;width:16px;height:16px;margin-left:6px;border-radius:50%;background:#0f172a;color:#fff!important;font-size:9px!important;line-height:1!important;opacity:1!important}
+html.pillv-b .bpa-card .bpa-specs-row .bpa-lang.is-open .bpa-lang-chev{background:#b45309}
+@media (max-width:767px){.pillv-bar{bottom:76px;font-size:11px}.pillv-bar a{padding:6px 8px}}
+</style>
+<script id="pillv-js">
+(function(){
+  var m=location.search.match(/[?&]pill=([abc])/); if(!m) return; var v=m[1];
+  function run(){
+    var names={a:'A · Tap-for-details hint',b:'B · Chevron chip',c:'C · Peek the first one'};
+    var bar=document.createElement('div'); bar.className='pillv-bar';
+    bar.innerHTML=['a','b','c'].map(function(k){return '<a href="?pill='+k+'#card-1" class="'+(k===v?'on':'')+'">'+names[k]+'</a>';}).join('')+'<a href="?#card-1">Now</a>';
+    document.body.appendChild(bar);
+    if(v==='a') document.querySelectorAll('.bpa-card .bpa-specs-row').forEach(function(r){ var h=document.createElement('div'); h.className='pillv-hint'; h.innerHTML='<b>Tap any pill</b> for details ▾'; r.parentNode.insertBefore(h,r); });
+    if(v==='b') document.documentElement.classList.add('pillv-b');
+    if(v==='c'){ var card=document.getElementById('card-1'); var sm=card&&card.querySelector('.bpa-specs-row .bpa-lang>summary'); if(!sm) return;
+      var done=false; function peek(){ if(done) return; done=true; sm.click(); setTimeout(function(){ sm.click(); },1600); }
+      if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ io.disconnect(); setTimeout(peek,600); } },{threshold:.6}); io.observe(card); } else setTimeout(peek,1200); }
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
+})();
+</script>
+</body></html>
