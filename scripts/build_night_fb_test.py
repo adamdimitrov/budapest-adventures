@@ -385,41 +385,56 @@ mini = ('<div class="cd-fmini" aria-hidden="true"><div class="cd-fmini-in"><butt
 s = rep(s, '<div class="bpa-deck-wrap" id="ltt-cards-deck">', '<div class="bpa-deck-wrap" id="ltt-cards-deck">' + mini, where="mini")
 
 
-# ------------------------------------------------------------------ FAQ (questions travellers ask in Budapest groups)
-FAQ = [
-    ("Do I need to book a Danube night cruise in advance?",
-     "Weekend evenings and December sailings fill up first, so book a few days ahead. All 10 cruises on this page have free cancellation up to 24 hours before departure, so booking early costs you nothing if your plans change."),
-    ("What time should I book to see Budapest lit up?",
-     "It is fully dark about 35 minutes after sunset. In mid-November that means any sailing from about 16:50; in June you need a boat leaving after 21:30. Pick your date in the filter box above and every card shows which of its sailings are fully lit."),
-    ("Which night cruise is best if we want views, not a party or a dinner?",
-     "The Legenda Danube Legend cruise (€25) has the clearest commentary, with a 30-language guide on individual headsets. The Kisfaludy paddle steamer (€11) is the quiet, historic option with piano music between the narration. La Perla (€11.40) gives every guest a rooftop seat and lets you bring your own drinks. Tick \"Just views, no party, no dinner\" above to see only these."),
-    ("Is the unlimited prosecco cruise relaxing or a booze cruise?",
-     "It is lively. On the Duna-Weser prosecco boat the commentary was hard to hear over the party noise when I tested it, and Silverline's prosecco cruise plays party songs and is 18+ only. For a calmer hour with a drink, book an early sailing or the Legenda cruise instead."),
-    ("I don't like prosecco. What else can I drink on the unlimited cruises?",
-     "The Duna-Weser cruise also pours Aperol, Hugo, Rossini and Limoncello spritzers, beer and lemonade. Floating Lotus adds Hungarian wines, craft beer, Heineken, soft drinks and homemade lemonade. Silverline's prosecco cruise is prosecco only."),
-    ("Which night cruise is good if we don't drink alcohol?",
-     "Legenda's welcome drink can be a soft drink or mineral water, the Kisfaludy paddle steamer offers orange juice, and on La Perla you bring whatever you like. The unlimited cruises include lemonade, but you pay the unlimited-drinks price."),
-    ("Which dock should I choose?",
-     "Most boats leave from the Pest bank: Vigadó tér (Dock 7) by Vörösmarty tér, Akadémia 3 by the Chain Bridge, Petőfi tér 9, and Docks 10 and 11 by Elizabeth Bridge. La Perla is the only one here on the Buda side, at Várkert Bazár below the Castle. Pick the dock closest to your hotel; the dock for each cruise is in its time dropdown."),
-    ("Can I go outside during a dinner cruise to see the views?",
-     "Yes on all three dinner cruises here. Legenda's candlelit cruise has an open top deck you can use at any time, Silverline has open-air areas at the bow and stern, and River Diva opens its rooftop after dinner, weather permitting. Step outside for photos: the cabin lights reflect in the windows."),
-    ("Is there a heated boat for a winter night cruise?",
-     "Legenda, the Kisfaludy paddle steamer, La Perla, Floating Lotus, Silverline's sightseeing boat and the Legenda dinner boat all have heated indoor areas. Tick \"Heated indoor\" above to see them. La Perla's rooftop gets very cold in November, so bring layers."),
-    ("Do I need earphones for the audio guide?",
-     "Legenda hands out individual headsets. On the Kisfaludy paddle steamer, La Perla and Floating Lotus the audio guide runs on your own phone, so bring earphones and a charged phone."),
-    ("Can children come on Budapest night cruises?",
-     "Yes on most. On Legenda's sightseeing cruise children under 10 ride free, and the candlelit dinner is €84 for children 3 to 12. On the Duna-Weser prosecco boat and River Diva, children 4 to 17 pay the adult price and under-4s ride free; Floating Lotus charges a fixed €25 for children 7 and under. Silverline's prosecco cruise is 18+ only, and baby strollers are not allowed on the Kisfaludy paddle steamer or the Duna-Weser prosecco boat."),
-    ("Which Budapest night cruise is wheelchair accessible?",
-     "Of the 10 cruises here, River Diva's dinner boat is the one listed as wheelchair accessible. The Kisfaludy paddle steamer, Legenda's candlelit dinner boat, La Perla, Floating Lotus and all three Silverline cruises are not."),
-]
-faq_html = ('<div class="w-richtext bpa-wt-faq"><h2 id="faq">Frequently Asked Questions</h2>' + "".join(
-    f'<h3 class="cf-faq-questions-2">{E(q)}</h3><div class="cf-faq-answer-wrap-2"><div class="cf-faq-content-2 w-richtext"><p>{E(a)}</p></div></div>'
-    for q, a in FAQ) + "</div>")
-s = rep(s, '<div class="ltt-editorial-wrapper" role="main"></div>', '<div class="ltt-editorial-wrapper" role="main">' + faq_html + "</div>", where="faq")
+# ------------------------------------------------------------------ FAQ inside each card (questions travellers ask in Budapest groups)
+CARD_FAQ = {
+    1: [("Do I need earphones on the Legenda cruise?", "No. Legenda hands out individual headsets for the 30-language audio guide."),
+        ("Can I sit outside on the Legenda cruise?", "Yes. The back of the top deck is open-air, and the cabin below is heated in winter."),
+        ("Is the Legenda cruise good if we don't drink?", "Yes. The included drink can be a soft drink or mineral water, and children under 10 ride free.")],
+    2: [("Is the unlimited prosecco cruise a party boat?", "Yes, it is lively. On my cruise the commentary was hard to hear over the party noise. Take an early sailing for a calmer hour."),
+        ("I don't like prosecco. What else is unlimited?", "Aperol, Hugo, Rossini and Limoncello spritzers, beer, lemonade and lemon-mint water."),
+        ("Can kids come on the unlimited prosecco cruise?", "Yes. Children 4 to 17 pay the adult price and under-4s ride free, but baby strollers are not allowed on board.")],
+    3: [("Do I need earphones on the Kisfaludy paddle steamer?", "Yes. The audio guide runs on your own phone, so bring earphones and a charged phone."),
+        ("Can we bring a stroller on the Kisfaludy paddle steamer?", "No. Strollers are not allowed and the boat is not wheelchair accessible. Children under 3 ride free."),
+        ("Is the Kisfaludy cruise quiet?", "Yes. Classical piano plays between the narration, and the welcome drink can be orange juice.")],
+    4: [("Can I go outside during the Legenda candlelit dinner?", "Yes. The open top deck is free to use at any point of the evening, which is the best spot for photos."),
+        ("Is the Legenda candlelit dinner OK for vegans or food allergies?", "No. There is no vegan menu and it can't cater for food allergies."),
+        ("Can children come to the Legenda candlelit dinner?", "From age 3. Children 3 to 12 pay €84 for 3 courses; it is not for children under 3.")],
+    5: [("Can I go outside on the River Diva dinner cruise?", "Yes, after dinner the rooftop deck opens, weather permitting."),
+        ("Is the River Diva dinner cruise wheelchair accessible?", "Yes. It is the one wheelchair-accessible boat in this list."),
+        ("Which drinks are unlimited on River Diva?", "Cocktails, spirits, Prosecco, wine, beer, soft drinks and water, served to your table all evening.")],
+    6: [("Will the La Perla rooftop be cold?", "In November, yes: bring warm layers. If it gets too cold, the heated cabin downstairs is open to everyone."),
+        ("What can I bring on La Perla?", "Your own drinks and snacks, alcohol-free or not. There is no bar on board."),
+        ("Do I need earphones on La Perla?", "Yes. The audio guide is web-based on your own phone, so bring headphones.")],
+    7: [("Can I go outside during the Silverline dinner cruise?", "Yes, at the open bow and stern. Step out for night photos, because the cabin lights reflect in the glass."),
+        ("Which Silverline dinner option should I book?", "Dinner & Lights (no show) for a quiet dinner, Folk & Operetta for a show, or Piano Battle for requests. Same boat and same 4-course menu."),
+        ("Is there a vegetarian option on the Silverline dinner cruise?", "Yes, a vegetarian option is available.")],
+    8: [("Is a rooftop seat guaranteed on Floating Lotus?", "No. Everyone has a seat on the heated lower deck; rooftop seats are first come, first served."),
+        ("Can kids come on Floating Lotus?", "Yes. Children 7 and under pay a fixed €25; from 8 it is the adult fare. Soft drinks and lemonade are included.")],
+    9: [("Can kids come on the Silverline prosecco cruise?", "No. It is 18+ only and not for pregnant guests."),
+        ("Is it only prosecco on the Silverline prosecco cruise?", "Yes. Prosecco is the one unlimited drink; snacks are for sale and you can't bring your own.")],
+    10: [("Is a drink included on the Silverline sightseeing cruise?", "No. Even water costs extra at the bar on board."),
+         ("Is the Silverline upper deck worth €5 more?", "It has a roof with columns that block part of the view. For photos, the front seats and the open-air section are better.")],
+}
+
+
+def faq_block(num):
+    qa = CARD_FAQ[num]
+    items = "".join(f'<div class="fbm-qa"><div class="fbm-q">{E(q)}</div><div class="fbm-a">{E(a)}</div></div>' for q, a in qa)
+    return (f'<details class="fbm-faq"><summary>❓ {len(qa)} questions travellers ask <span class="fbm-faq-chev" aria-hidden="true">▾</span></summary>'
+            f'<div class="fbm-faq-body">{items}</div></details>')
+
+
+for num in CARD_FAQ:
+    i = s.index(f'id="card-{num}"')
+    j = s.index('<div class="bpa-best-for bpa-pickskip">', i)
+    k = s.index("</div>", j) + len("</div>")
+    s = s[:k] + "\n" + faq_block(num) + s[k:]
+
 jm = re.search(r'(<script id="ltt-schema-jsonld" type="application/ld\+json">)(.*?)(</script>)', s, re.S)
 data = json.loads(jm.group(2))
 node = {"@type": "FAQPage", "@id": "https://www.budapestadventures.com/best-night-cruises-budapest#faq",
-        "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}
+        "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+                       for n in sorted(CARD_FAQ) for q, a in CARD_FAQ[n]]}
 if "@graph" in data:
     data["@graph"].append(node)
 else:
@@ -446,6 +461,17 @@ fbm_css = """<style id="fbm-css">
 .fbm-slot .dusk{background:#fef3c7;color:#92400e}
 .fbm-slot .day{background:#f1f5f9;color:#64748b}
 .fbm-slot.is-none{background:#fff7ed;border-color:#fed7aa}
+.bpa-card .cd-gal{align-self:flex-start}
+.fbm-faq{margin:8px 0 2px;border:1px solid #e2e8f0;border-radius:10px;background:#fff}
+.fbm-faq>summary{list-style:none;cursor:pointer;padding:7px 10px;font:700 13px/1.3 'Plus Jakarta Sans',sans-serif;color:#0f172a;display:flex;align-items:center;gap:6px}
+.fbm-faq>summary::-webkit-details-marker{display:none}
+.fbm-faq>summary:hover{background:#f8fafc;color:#0f172a}
+.fbm-faq-chev{margin-left:auto;font-size:10px;color:#64748b;transition:transform .15s}
+.fbm-faq[open] .fbm-faq-chev{transform:rotate(180deg)}
+.fbm-faq-body{padding:2px 10px 8px}
+.fbm-qa{padding:7px 0;border-top:1px solid #f1f5f9}
+.fbm-q{font:700 13px/1.35 'Plus Jakarta Sans',sans-serif;color:#0f172a;margin-bottom:2px}
+.fbm-a{font:500 13px/1.45 'Plus Jakarta Sans',sans-serif;color:#475569}
 .fbm-verify{background:#fef3c7;color:#92400e!important;font-weight:700}
 @media (max-width:767px){.fbm-mrow{margin:0 -12px;padding:10px 12px!important}}
 </style>"""
