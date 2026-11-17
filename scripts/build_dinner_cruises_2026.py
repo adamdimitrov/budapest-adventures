@@ -509,7 +509,9 @@ def fix_howto(page):
     """The 'How to choose' block after the breakdowns: keep it, but only with checked facts."""
     page = page.replace("FIELD TESTING METHODOLOGY", "HOW TO CHOOSE")
     page = page.replace('Four factors we look at when <a href="/best-dinner-cruise-budapest">comparing Budapest dinner cruises</a>.',
-                        'Four things to decide before you book. Short on time? See <a href="/best-dinner-cruise-budapest">the one dinner cruise I&rsquo;d book</a>.')
+                        'Four things to decide before you book. Short on time? See <a href="#card-1">the one dinner cruise I&rsquo;d book</a>.')
+    # the singular "best dinner cruise" page now 301s to this listicle: point any leftover link at the #1 card
+    page = page.replace('href="/best-dinner-cruise-budapest"', 'href="#card-1"')
     page = page.replace("Jump to Tested Budapest Dinner Cruise", "Jump to a Budapest Dinner Cruise")
 
     def card(old_title, new_title, body):

@@ -108,7 +108,3 @@ if __name__ == "__main__":
         new = (f'it is dark by about 16:00.</li><li><strong>Longer river cruise:</strong> {LONGER_TXT}</li>' if rel.endswith(".html")
                else f"it is dark by about 16:00.'),\n    (\"Longer river cruise\", '{LONGER_TXT}'),")
         link_once(rel, old, new)
-    link_once("best-budapest-river-cruise.html",
-              '<details><summary>Can I cancel?</summary><p>Yes, with a full refund up to 24 hours before the cruise. The ticket is an instant mobile ticket.</p></details>',
-              '<details><summary>Can I cancel?</summary><p>Yes, with a full refund up to 24 hours before the cruise. The ticket is an instant mobile ticket.</p></details>\n'
-              f'        <details><summary>Looking for a multi-day river cruise?</summary><p>This page is about the 1-hour sightseeing cruises in Budapest. For 15 days on the Danube, Main and Rhine, see the <a href="{EN}">7 best Budapest to Amsterdam river cruises</a>, with 2027 prices from $3,941.</p></details>')
