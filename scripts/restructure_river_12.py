@@ -195,6 +195,7 @@ TEXT = [
     ("Matched against the 10 cruises I compared on this page.", "Matched against the 12 cruises I compared on this page.", 1),
     ("Show all 10 again", "Show all 12 again", 1),
     ("All 10 Danube Cruises", "All 12 Danube Cruises", 1),
+    ("What kind of evening do you want?", "What kind of cruise experience do you want?", 1),
 ]
 for old, new, cnt in TEXT:
     n = s.count(old)
@@ -245,7 +246,7 @@ MIC_JS = r"""  // Microphone dictation (browser speech recognition; hidden where
       if(rec){ rec.stop(); return; }
       rec=new SR(); rec.lang=(document.documentElement.lang||navigator.language||'en-GB'); rec.interimResults=true; rec.maxAlternatives=1; heard='';
       rec.onresult=function(ev){ var t=''; for(var i=0;i<ev.results.length;i++){ t+=ev.results[i][0].transcript; } heard=t; q.value=t; };
-      rec.onerror=function(){ say('I couldn’t hear that. Try again, or type your evening instead.'); };
+      rec.onerror=function(){ say('I couldn’t hear that. Try again, or type what you want instead.'); };
       rec.onend=function(){ mic.classList.remove('is-on'); mic.setAttribute('aria-label','Speak your search'); rec=null; if(heard.trim().length>1){ ga('ai_finder_voice',{}); form.requestSubmit(); } };
       mic.classList.add('is-on'); mic.setAttribute('aria-label','Stop listening'); q.placeholder='Listening…';
       try{ rec.start(); }catch(e){ mic.classList.remove('is-on'); rec=null; }

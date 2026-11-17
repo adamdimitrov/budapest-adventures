@@ -79,7 +79,7 @@ def load_cards(page):
 def build_prompt(q, cards, ctx=None):
     return (
         "You are the cruise finder on a Budapest river cruise comparison page. "
-        "The author rode the cruises below. A visitor described the evening they want. "
+        "The author rode the cruises below. A visitor described the cruise or experience they want. "
         "Pick the 1 to 3 cruises that fit best, best first.\n\n"
         "Rules:\n"
         "- Use only the card data below. Never invent prices, times, menus or features.\n"

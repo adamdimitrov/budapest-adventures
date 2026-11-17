@@ -911,7 +911,7 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 </style>
 <form autocomplete="off" class="bpa-ai-finder" id="bpa-ai-finder" role="search">
 <span class="bpa-ai-kicker">Find your cruise</span>
-<label for="bpa-ai-q">What kind of evening do you want?</label>
+<label for="bpa-ai-q">What kind of cruise experience do you want?</label>
 <div class="bpa-ai-row">
 <div class="bpa-ai-field">
 <svg aria-hidden="true" class="bpa-ai-glass" fill="none" height="20" stroke="#475569" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24" width="20"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
@@ -996,7 +996,7 @@ function bpaAiInit(){
       if(rec){ rec.stop(); return; }
       rec=new SR(); rec.lang=(document.documentElement.lang||navigator.language||'en-GB'); rec.interimResults=true; rec.maxAlternatives=1; heard='';
       rec.onresult=function(ev){ var t=''; for(var i=0;i<ev.results.length;i++){ t+=ev.results[i][0].transcript; } heard=t; q.value=t; };
-      rec.onerror=function(){ say('I couldn’t hear that. Try again, or type your evening instead.'); };
+      rec.onerror=function(){ say('I couldn’t hear that. Try again, or type what you want instead.'); };
       rec.onend=function(){ mic.classList.remove('is-on'); mic.setAttribute('aria-label','Speak your search'); rec=null; if(heard.trim().length>1){ ga('ai_finder_voice',{}); form.requestSubmit(); } };
       mic.classList.add('is-on'); mic.setAttribute('aria-label','Stop listening'); q.placeholder='Listening…';
       try{ rec.start(); }catch(e){ mic.classList.remove('is-on'); rec=null; }
