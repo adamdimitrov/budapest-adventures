@@ -191,7 +191,6 @@ TEXT = [
     ("added two well-reviewed newcomers, and compared the 10 worth your evening", "added a few well-reviewed newcomers, and compared the 12 worth your evening", 1),
     ("a guaranteed rooftop seat or a folk-show dinner. Tickets run <strong>from €11 to €79</strong>",
      "a guaranteed rooftop seat or a candlelit dinner. Tickets run <strong>from €11 to €110</strong>", 1),
-    ("Of the 8 cruises I tested, there is one I would book.", "Of the 6 cruises I tested, there is one I would book.", 1),
     ("ranked the 10 best river cruises", "ranked the 12 best river cruises", 1),
     ("Matched against the 10 cruises I compared on this page.", "Matched against the 12 cruises I compared on this page.", 1),
     ("Show all 10 again", "Show all 12 again", 1),
@@ -202,6 +201,8 @@ for old, new, cnt in TEXT:
     if not n or (cnt and n != cnt):
         raise SystemExit(f"text: expected {cnt or '1+'}x, found {n}x: {old[:70]!r}")
     s = s.replace(old, new)
+
+s = re.sub(r'<p class="bprv-callout"[^>]*><strong>Short on time\?</strong>.*?</p>\s*', "", s, count=1, flags=re.S)  # callout removed on request
 
 # ------------------------------------------------------------------ microphone dictation on the AI search box
 MIC_BTN = ('<button aria-label="Speak your search" class="bpa-ai-mic" hidden="" id="bpa-ai-mic" type="button">'
