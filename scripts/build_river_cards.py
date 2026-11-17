@@ -1061,8 +1061,7 @@ UGC = {
         {"id": "7552667337204174100", "h": "imjulesyang", "t": "An evening cruise under the city lights", "v": "5.7K views"},
         {"id": "7321843979073506606", "h": "aliciasessler", "t": "Sunset on the Danube with Legenda", "v": "3K views"},
         {"id": "7692418249618623766", "h": "budapest_insider", "t": "The 1-hour night cruise", "v": "1.2K views"}][:3],
-    "item-4-legenda-candlelit-dinner": [
-        {"id": "7675452863241375009", "h": "travelwithusc", "t": "Candlelit date night on the Danube", "v": "1.9K views"}][:3],
+    # Legenda candlelit dinner: @travelwithusc 7675452863241375009 is a match, but the owner wants videos on the #1 Legenda card only
 }
 assert all(len(v) <= 3 for v in UGC.values()), "max 3 guest videos per card"
 UGC_HTML = """<style id="ugc-css">
