@@ -215,6 +215,7 @@ s = s.replace(cfg, json.dumps(cfgd, ensure_ascii=False))
 # ------------------------------------------------------------------ copy: 10 -> 12, tested count 8 -> 6
 TEXT = [
     ("10 Best River Cruises in Budapest", "13 Best River Cruises in Budapest", None),
+    ("⏱️ 60–70 Mins", "⏱️ 60 Mins (daytime 70)", None),  # legenda.hu: Danube Legend 1 h evening, Duna Bella 1 h 10 m day
     ("I personally tested 8 of these 10 day and night cruises", "I personally tested 6 of these 13 day and night cruises", None),
     ("Experience Budapest's top-rated river cruises in 2026. I personally tested 6 of these 13 day and night cruises: sightseeing cruises, dinner cruises and lively booze cruises.", "I rode 6 of Budapest's most popular Danube river cruises and compared all 13 side by side: price, drinks, docks, audio guide and sunset times. Find yours in 30 seconds with the cruise finder.", None),  # meta/og/twitter/JSON-LD description
     ("8 of 10 Cruises Tested in Person", "6 of 13 Cruises Tested in Person", 1),
