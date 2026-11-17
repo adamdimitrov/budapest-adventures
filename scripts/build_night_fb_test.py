@@ -32,21 +32,62 @@ def rep(text, old, new, count=1, where=""):
     return text.replace(old, new)
 
 
+
+def _ev(a, b, extra=()):
+    out = list(extra)
+    h, m = map(int, a.split(":"))
+    while f"{h:02d}:{m:02d}" <= b:
+        out.append(f"{h:02d}:{m:02d}")
+        m += 20
+        if m >= 60:
+            h, m = h + 1, m - 60
+    return out
+
+
+SRC_LEG = "Legenda's published 2026 timetable"
+LEGENDA_TT = [
+    {"from": "01-01", "to": "01-04", "times": _ev("16:20", "21:00", ["15:40"])},
+    {"from": "01-05", "to": "02-11", "times": _ev("16:20", "21:00")},
+    {"from": "02-12", "to": "02-24", "times": _ev("16:40", "21:00")},
+    {"from": "02-25", "to": "03-09", "times": _ev("17:00", "21:00")},
+    {"from": "03-10", "to": "03-28", "times": _ev("17:40", "21:00")},
+    {"from": "03-29", "to": "04-05", "times": _ev("19:00", "22:00")},
+    {"from": "04-06", "to": "05-21", "times": _ev("19:20", "22:00")},
+    {"from": "05-22", "to": "07-23", "times": ["19:30", "20:15", "20:20", "20:30", "20:45", "21:30", "21:40", "21:45", "22:00"]},
+    {"from": "07-24", "to": "09-03", "times": _ev("19:20", "22:00")},
+    {"from": "09-04", "to": "09-13", "times": _ev("19:00", "22:00")},
+    {"from": "09-14", "to": "09-22", "times": _ev("18:40", "22:00")},
+    {"from": "09-23", "to": "10-02", "times": _ev("18:20", "22:00")},
+    {"from": "10-03", "to": "10-24", "times": _ev("17:40", "22:00")},
+    {"from": "10-25", "to": "11-22", "times": _ev("16:20", "21:00")},
+    {"from": "11-23", "to": "12-31", "times": _ev("16:20", "21:00", ["15:40"])},
+]
+for r in LEGENDA_TT:
+    r["src"] = SRC_LEG
+LEGENDA_DINNER_TT = [
+    {"from": "04-20", "to": "08-23", "times": ["19:45"], "src": SRC_LEG},
+    {"from": "08-24", "to": "04-19", "times": ["19:00"], "src": SRC_LEG},
+]
+
+
+def nd(nov, dec=None):
+    """Known times: November listing and 19 December booking calendar. Other dates: not open yet."""
+    return [{"from": "11-01", "to": "11-30", "times": nov}, {"from": "12-01", "to": "12-31", "times": dec or nov}]
+
 # ------------------------------------------------------------------ card data
 # times = listed evening sailings (from each card's own time dropdown), dur = minutes
 CARDS = {
     1: dict(cat="tested calm nodrink opendeck heated hour", dur=60,
             times=[f"{h:02d}:{m:02d}" for h in range(16, 22) for m in (0, 20, 40)
                    if "16:20" <= f"{h:02d}:{m:02d}" <= "21:00"], every="every 20 min",
-            tt=[{"from": "11-23", "to": "12-31", "times": ["15:40"] + [f"{h:02d}:{m:02d}" for h in range(16, 22) for m in (0, 20, 40)
-                   if "16:20" <= f"{h:02d}:{m:02d}" <= "21:00"]}],
+            tt=LEGENDA_TT,
             vibe=("🙂", "Calm sightseeing",
                   "Seated sightseeing with a 30-language audio guide on headsets, not a party boat.",
                   "Open-air seats at the back of the top deck, heated cabin below. The welcome drink can be a soft drink or water, so non-drinkers pay for nothing they skip."),
             dock=("Vigadó tér, Dock 7",
                   "Pest side, 2 minutes from Vörösmarty tér and the top of Váci utca.",
                   "Covered floating dock with restrooms and a rooftop waiting area.")),
-    2: dict(cat="tested unlimited party opendeck hour", dur=75,
+    2: dict(cat="tested unlimited party opendeck hour", tt=nd(["15:30", "15:45", "17:15", "18:45", "22:15", "22:30", "23:00"], ["17:15", "17:45", "18:45", "20:30"]), dur=75,
             times=["15:30", "15:45", "17:15", "18:45", "22:15", "22:30", "23:00"],
             vibe=("🎉", "Cocktail-party feel",
                   "Lively, not a quiet sightseeing hour.",
@@ -54,7 +95,7 @@ CARDS = {
             dock=("3 docks to choose from",
                   "Akadémia 3 is by the Chain Bridge, best from Parliament or the Basilica. Vigadó 8/A is by Vörösmarty tér, best from Váci utca. Carl Lutz rakpart Dock 0 is further north on the Pest bank.",
                   "Pick the dock when you choose your time slot.")),
-    3: dict(cat="tested calm nodrink opendeck heated hour under20", dur=60,
+    3: dict(cat="tested calm nodrink opendeck heated hour under20", tt=nd(["16:00", "17:30", "19:00", "20:30"]), dur=60,
             times=["16:00", "17:30", "19:00", "20:30"],
             vibe=("🎹", "Quiet and historic",
                   "Classical piano plays between the narration on a historic paddle steamer.",
@@ -62,21 +103,21 @@ CARDS = {
             dock=("Dock 10, Elizabeth Bridge",
                   "Pest side next to Elizabeth Bridge, a short walk from Ferenciek tere metro.",
                   "No baby strollers and no wheelchair access on board.")),
-    4: dict(cat="tested dinner nodrink opendeck heated", dur=150, times=["19:00"],
+    4: dict(cat="tested dinner nodrink opendeck heated", tt=LEGENDA_DINNER_TT, dur=150, times=["19:00"],
             vibe=("🕯️", "Romantic and quiet",
                   "Candlelit tables for two along the windows, a pianist and singer, no loud folk show.",
                   "Open top deck for photos at any point of the evening. Not for children under 3, and there is no vegan menu."),
             dock=("Vigadó tér, Dock 7",
                   "Pest side, 2 minutes from Vörösmarty tér and the top of Váci utca.",
                   "Legenda's covered dock has restrooms, so you can wait out of the rain.")),
-    5: dict(cat="dinner unlimited opendeck", dur=150, times=["19:30"],
+    5: dict(cat="dinner unlimited opendeck", tt=nd(["19:30"], ["18:30"]), dur=150, times=["19:30"],
             vibe=("🎻", "All-inclusive evening",
                   "A seasonal buffet, unlimited drinks served to your table and live music in the Grand Salon.",
                   "After dinner you can go up to the rooftop deck, weather permitting."),
             dock=("Akadémia 3",
                   "Pest side by the Chain Bridge, best if you stay near Parliament, the Basilica or Széchenyi tér.",
                   "Bring a passport or ID card with the voucher.")),
-    6: dict(cat="calm nodrink opendeck heated hour under20", dur=50,
+    6: dict(cat="calm nodrink opendeck heated hour under20", tt=nd(["16:10", "17:20", "18:30", "19:40", "20:50"], ["16:10", "20:50"]), dur=50,
             times=["16:10", "17:20", "18:30", "19:40", "20:50"],
             vibe=("🧺", "Relaxed, bring your own",
                   "A small boat with at most 150 guests, and everyone gets a rooftop seat.",
@@ -84,14 +125,14 @@ CARDS = {
             dock=("Várkert Bazár, Buda side",
                   "Below the Castle on the Buda bank, the easy pick if you stay in Buda.",
                   "Most other boats leave from the Pest bank, so check which side you are on.")),
-    7: dict(cat="tested dinner opendeck", dur=120, times=["19:00"],
+    7: dict(cat="tested dinner opendeck", tt=nd(["19:00"]), dur=120, times=["19:00"],
             vibe=("🍷", "Intimate dinner",
                   "Dinner on the upper deck at 2 or 4-person tables; it never felt overcrowded.",
                   "Pick the no-show option for background music only. For night photos step out to the open bow or stern: the cabin lights reflect in the glass."),
             dock=("Dock 11, Elizabeth Bridge",
                   "Pest side next to Elizabeth Bridge, a short walk from Ferenciek tere metro.",
                   "Same boat and menu for all 3 show options.")),
-    8: dict(cat="unlimited party opendeck heated hour under20", dur=75,
+    8: dict(cat="unlimited party opendeck heated hour under20", tt=nd(["18:00", "19:30", "21:00"]), dur=75,
             times=["18:00", "19:30", "21:00"],
             vibe=("🎶", "Lively rooftop",
                   "Guests keep mentioning the music and the friendly crew.",
@@ -99,14 +140,14 @@ CARDS = {
             dock=("Petőfi tér 9",
                   "Pest bank between Elizabeth Bridge and Vigadó tér, an easy walk from Váci utca.",
                   "Arrive 15 minutes early: boarding closes 5 minutes before departure.")),
-    9: dict(cat="unlimited party hour", dur=60, times=["16:30", "19:30", "21:00"],
+    9: dict(cat="unlimited party hour", tt=nd(["16:30", "19:30", "21:00"], ["16:30", "18:00", "19:30", "21:00"]), dur=60, times=["16:30", "19:30", "21:00"],
             vibe=("🍾", "Pre-party",
                   "Party songs from the loudspeakers, pitched as a warm-up before a night out.",
                   "Adults only: under-18s are not allowed, and it is not for pregnant guests."),
             dock=("Dock 11, Elizabeth Bridge",
                   "Pest side next to Elizabeth Bridge, a short walk from Ferenciek tere metro.",
                   "The upper deck is the spot for photos of the lit-up Parliament.")),
-    10: dict(cat="tested calm nodrink heated hour under20", dur=60,
+    10: dict(cat="tested calm nodrink heated hour under20", tt=nd(["16:30", "17:00", "17:20", "18:20", "18:40", "19:40", "20:00", "21:00", "21:15"]), dur=60,
              times=["16:30", "17:00", "17:20", "18:20", "18:40", "19:40", "20:00", "21:00", "21:15"],
              vibe=("🙂", "No-frills sightseeing",
                    "A plain sightseeing hour with no drink included.",
@@ -154,23 +195,29 @@ NEW_DRINK = {10: ("🥤", "No drink included", "No drink in the ticket price: ev
 
 # Access and kids pill (third in the fixed Seine order). None = not stated on the listing yet.
 ACCESS = {
-    1: ("👶", "Under 10 free", "Children under 10 ride free; 10 to 14 pay €17.50.", "Step-free access: not stated on the listing yet."),
-    2: ("♿", "Access: to check", "Kids prices and step-free access are not stated on the listing yet.", ""),
-    3: ("♿", "No strollers or wheelchairs", "Baby strollers are not allowed and the boat is not wheelchair accessible.", "Kids prices: not stated on the listing yet."),
+    1: ("👶", "Under 10 free", "Children under 10 ride free; 10 to 14 pay €17.50.", "Legenda doesn't state step-free access for this boat."),
+    2: ("👶", "Kids 4+ full price · no strollers", "Children 4 to 17 pay the adult price; under 4 ride free.", "Baby strollers are not allowed on board."),
+    3: ("♿", "No strollers or wheelchairs", "Baby strollers are not allowed and the boat is not wheelchair accessible.", "Under 3 free; everyone else pays the full fare."),
     4: ("👶", "Kids 3-12 €84 · not step-free", "Children 3 to 12 pay €84 for 3 courses; not suitable for children under 3.", "Not wheelchair accessible."),
-    5: ("♿", "Access: to check", "Kids prices and step-free access are not stated on the listing yet.", "Pets are not allowed; assistance dogs are."),
-    6: ("♿", "Not step-free · pets OK", "Not suitable for wheelchair users.", "Pets are allowed on board. Kids prices: not stated on the listing yet."),
-    7: ("♿", "Not step-free", "Not wheelchair accessible.", "Kids prices: not stated on the listing yet."),
-    8: ("♿", "Not step-free", "Not wheelchair accessible.", "Kids prices: not stated on the listing yet."),
+    5: ("♿", "Wheelchair accessible", "The boat is wheelchair accessible.", "Children 4 to 17 pay the full €99; under 4 free. Pets not allowed, assistance dogs are."),
+    6: ("♿", "Not step-free · one price", "Not suitable for wheelchair users.", "One ticket price for every age. Pets are allowed on board."),
+    7: ("♿", "Not step-free · under 4 free", "Not wheelchair accessible.", "Under 4 free; everyone else pays the adult fare."),
+    8: ("👶", "Kids up to 7 €25 · not step-free", "Children 7 and under pay a fixed €25; from 8 it's the adult fare.", "Not wheelchair accessible."),
     9: ("🔞", "18+ only", "Under-18s are not allowed.", "Not suitable for pregnant guests."),
-    10: ("👶", "Under 4 free", "Infants up to 3 ride free.", "Step-free access: not stated on the listing yet."),
+    10: ("♿", "Not step-free · under 4 free", "The boat has no wheelchair access.", "Infants up to 3 ride free; everyone else pays the full fare."),
 }
 # Price dropdown rows: (label, small, price). "verify" = still to check on the listing.
 KIDS = {
     1: ([("Student", "", "€22.50"), ("Child", "10-14", "€17.50"), ("Under 10", "", "Free")], ("2 adults + 2 kids (10-14)", "€85")),
+    2: ([("Child", "4-17", "€24.80"), ("Under 4", "", "Free")], ("2 adults + 2 kids (4-17)", "€99.20")),
+    3: ([("Child", "3 and over", "€11"), ("Under 3", "", "Free")], ("2 adults + 2 kids (3+)", "€44")),
     4: ([("Child", "3-12, 3 courses", "€84"), ("Under 3", "", "Not allowed")], ("2 adults + 2 kids (3-12)", "€388")),
+    5: ([("Child", "4-17", "€99"), ("Under 4", "", "Free")], ("2 adults + 2 kids (4-17)", "€396")),
+    6: ([("Child", "every age", "€11.40")], ("2 adults + 2 kids", "€45.60")),
+    7: ([("Child", "4 and over", "€77"), ("Under 4", "", "Free")], ("2 adults + 2 kids (4+)", "€308")),
+    8: ([("Child", "7 and under", "€25"), ("Age 8+", "", "Adult fare")], None),
     9: ([("Under 18", "", "Not allowed")], None),
-    10: ([("Infant", "0-3", "Free"), ("Kids 4+", "", "verify")], None),
+    10: ([("Child", "4 and over", "€12"), ("Infant", "0-3", "Free")], ("2 adults + 2 kids (4+)", "€48")),
 }
 
 E = H.escape
@@ -271,8 +318,8 @@ for n, st in enumerate(starts):
     v, a = d["vibe"], ACCESS[num]
     new = (time + comm + [pill(a[0], a[1], a[2], a[3], "fbm-access")] + drinks
            + [pill(v[0], v[1], v[2], v[3], "fbm-vibe")] + extra)
-    tt = (d.get("tt") or []) + [{"from": "", "to": "", "times": d["times"]}]
-    slot = (f"<div class=\"fbm-slot\" data-tt='{json.dumps(tt)}' data-dur=\"{d['dur']}\""
+    tt = d["tt"]
+    slot = (f"<div class=\"fbm-slot\" data-tt=\"{E(json.dumps(tt))}\" data-dur=\"{d['dur']}\""
             + (f' data-every="{d["every"]}"' if d.get("every") else "") + "></div>")
     c = c.replace(sr.group(0), sr.group(1) + "\n" + "\n".join(new) + "\n</div>\n" + slot + "\n" + sr.group(3)[len("</div>\n"):])
     # price -> exact price + dropdown
@@ -281,7 +328,7 @@ for n, st in enumerate(starts):
     pdd = (f'<details class="cd-pdd"><summary><span class="cd-pdd-main">{p}</span><span class="cd-pdd-sub">per adult '
            f'<span class="cd-pdd-chev" aria-hidden="true">▾</span></span></summary><div class="cd-pdd-pop"><div class="cd-pdd-h">All ticket prices</div>'
            f'<table><tr><td>Adult</td><td>{p}</td></tr>' + rows_html(num) + '</table>' + total_html(num) +
-           f'<div class="cd-pdd-note">Final price shown on the booking page before you pay.</div></div></details>')
+           f'<div class="cd-pdd-note">Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay.</div></div></details>')
     c = c.replace(pm.group(0), pdd)
     new_cards.append(c)
 
@@ -345,7 +392,9 @@ FAQ = [
     ("Do I need earphones for the audio guide?",
      "Legenda hands out individual headsets. On the Kisfaludy paddle steamer, La Perla and Floating Lotus the audio guide runs on your own phone, so bring earphones and a charged phone."),
     ("Can children come on Budapest night cruises?",
-     "Yes on most. On Legenda's sightseeing cruise children under 10 ride free, and the candlelit dinner is €84 for children 3 to 12. Silverline's prosecco cruise is 18+ only, and baby strollers are not allowed on the Kisfaludy paddle steamer."),
+     "Yes on most. On Legenda's sightseeing cruise children under 10 ride free, and the candlelit dinner is €84 for children 3 to 12. On the Duna-Weser prosecco boat and River Diva, children 4 to 17 pay the adult price and under-4s ride free; Floating Lotus charges a fixed €25 for children 7 and under. Silverline's prosecco cruise is 18+ only, and baby strollers are not allowed on the Kisfaludy paddle steamer or the Duna-Weser prosecco boat."),
+    ("Which Budapest night cruise is wheelchair accessible?",
+     "Of the 10 cruises here, River Diva's dinner boat is the one listed as wheelchair accessible. The Kisfaludy paddle steamer, Legenda's candlelit dinner boat, La Perla, Floating Lotus and all three Silverline cruises are not."),
 ]
 faq_html = ('<div class="w-richtext bpa-wt-faq"><h2 id="faq">Frequently Asked Questions</h2>' + "".join(
     f'<h3 class="cf-faq-questions-2">{E(q)}</h3><div class="cf-faq-answer-wrap-2"><div class="cf-faq-content-2 w-richtext"><p>{E(a)}</p></div></div>'
@@ -417,8 +466,7 @@ fbm_js = r"""<script id="fbm-js">
     document.querySelectorAll('.fbm-slot').forEach(function(el){
       var tt=JSON.parse(el.getAttribute('data-tt')||'[]'), dur=+el.getAttribute('data-dur');
       var row=null; tt.forEach(function(r){ if(!row && r.from && inSeason(r,key)) row=r; });
-      if(!row) tt.forEach(function(r){ if(!row && !r.from) row=r; });
-      if(!row){ el.innerHTML='📅 <b>'+name+':</b> no sailings in this season.'; el.classList.add('is-none'); return; }
+      if(!row){ el.innerHTML='📅 <b>'+name+':</b> this date is not open for booking yet, so its sailing times are not out. It is fully dark from '+DARK+': pick a sailing after that when you book.'; el.classList.add('is-none'); return; }
       var times=row.times, lit=[],dusk=[];
       times.forEach(function(t){var a=m(t),b=a+dur; if(a>=dark-10) lit.push(t); else if(b>=dark+10&&a>=sun-45) dusk.push(t);});
       el.classList.toggle('is-none',!lit.length&&!dusk.length);
@@ -432,7 +480,7 @@ fbm_js = r"""<script id="fbm-js">
         h='☀️ <b>'+name+':</b> the last sailing ('+times[times.length-1]+') ends before full dark ('+DARK+').';
       } else {
         h='';
-        if(lit.length) h+='🌙 <b>Fully lit on '+name+':</b> '+(el.getAttribute('data-every')&&lit.length>3?span(lit[0],'lit')+' then every 20 min to '+span(lit[lit.length-1],'lit'):lit.map(function(t){return span(t,'lit');}).join(''));
+        if(lit.length) h+='🌙 <b>Fully lit on '+name+':</b> '+(lit.length>3&&lit.every(function(t,k){return !k||m(t)-m(lit[k-1])===20;})?span(lit[0],'lit')+' then every 20 min to '+span(lit[lit.length-1],'lit'):lit.map(function(t){return span(t,'lit');}).join(''));
         if(dusk.length) h+=(h?'<br>':'')+'🌇 <b>Sunset into lights:</b> '+dusk.map(function(t){return span(t,'dusk');}).join('');
       }
       el.innerHTML=h+src;
