@@ -400,30 +400,87 @@ ACCESS.update({
     "cruise-silverline-folklore": ("No wheelchair access", (False, "no wheelchair access"), None, None, "alcohol only from 18, mocktails available; no dogs except service dogs"),
 })
 
-# Edge cases the pills don't cover, from my own tests and recent guest reviews (api/_knowledge). Shown as chips under Pick/Skip.
+# "questions travellers ask" box: 4-5 real questions per card. Sources: my own tests, the pill facts,
+# and recent guest reviews summarised in api/_knowledge/best-budapest-river-cruises.json.
 EDGE_QA = {
-    "cruise-1-legenda": [("Good seats?", "Seats are not assigned, so arrive 15 to 20 minutes early. A few guests felt the boat was busy."),
-                         ("Headset broken?", "Guests say there are plenty of spare headsets on board if one doesn't work.")],
-    "cruise-2-rubingroup": [("Cold or rainy?", "The two indoor decks are warm, so it runs in any weather. Bring a layer for the open top deck."),
-                            ("Do refills keep coming?", "Yes. Guests say the crew keeps topping up drinks.")],
-    "cruise-7-silverline-prosecco": [("Best spot?", "Board early: bigger groups rush upstairs for the best spots on the upper deck."),
-                                     ("Long enough?", "Some guests say the hour feels short. The Duna-Weser unlimited cruise runs 75 minutes.")],
-    "item-5-river-diva-dinner": [("Rainy evening?", "Guests say it works even in pouring rain: dinner and music are indoors."),
-                                 ("Is the food good?", "53 of 64 recent guests talk about the food, almost all of them positively.")],
-    "item-4-legenda-candlelit-dinner": [("Special occasion?", "A popular pick: 10 of 70 recent guests booked it for a birthday, anniversary or engagement."),
-                                        ("Drinks extra?", "Yes. Only the welcome drink is included; every other drink is paid on board.")],
-    "cruise-silverline-mulled-wine": [("Food on board?", "Only crisps are sold, so eat before you board."),
-                                      ("Do refills keep coming?", "Yes. Guests say waiters keep coming round with more mulled wine.")],
-    "cruise-3-kisfaludy-historic-cruise": [("Enough seats outside?", "One guest found too few seats on the top deck, so board early for a spot outside."),
-                                           ("Day or evening?", "Guests recommend a late-afternoon or evening sailing. In November the 16:00 sailing catches sunset into lights.")],
-    "cruise-10-mahart": [("Cold upstairs?", "In winter, yes. The inside is warm, and one guest found the boat half empty, which they liked."),
-                         ("Day or night?", "Guests advise an evening sailing, not daytime.")],
-    "cruise-6-la-perla": [("Good for the lights?", "18 of 64 recent guests mention the lit-up city, the most of any cruise here. On the 16:10 sailing the lights come on only near the end."),
-                          ("Fancy boat?", "No. A few guests call it basic; most say it is good value.")],
-    "cruise-cosy-chimney-cake": [("One cake each?", "Early guests say the chimney cake is big and very sweet, easy to share.")],
-    "cruise-360-panoramic": [("Live guide?", "No. Commentary is a QR-code audio guide on your own phone."),
-                             ("Good with kids?", "Families say kids enjoyed the 16:30 sailing, which catches the sunset."),
-                             ("Cold on the top deck?", "Blankets are handed out on the open top deck.")],
+    "cruise-1-legenda": [
+        ("Do I need to book ahead?", "Evening sailings in December and on weekends can sell out. Cancellation is free up to 24 hours before, so booking early costs nothing."),
+        ("Day or evening?", "Evening: 17 of 64 recent guests name the lit-up city as the highlight. The Parliament's lights go off at 22:00."),
+        ("Will I get a good seat?", "Seats are not assigned, so arrive 15 to 20 minutes early. A few guests felt the boat was busy."),
+        ("What if my headset doesn't work?", "Guests say there are plenty of spare headsets on board."),
+        ("Why does it cost more?", "Guests call it well organised and a bit more upmarket than other boats: headsets in 30 languages, a covered dock with restrooms and a real welcome drink.")],
+    "cruise-2-rubingroup": [
+        ("Is it a real party?", "It is a lively cocktail-party hour, not a club. One younger guest found it quiet and not party enough."),
+        ("Do refills keep coming?", "Yes. Guests say the crew keeps topping up drinks."),
+        ("Can I hear the guide?", "Not always. On my cruise the commentary was hard to hear over the party noise, and one recent guest said the same."),
+        ("Which dock should I pick?", "Akadémia 3 if you stay near Parliament or the Basilica, Vigadó 8/A near Váci utca. Dock 0 is further north on the Pest bank."),
+        ("Cold or rainy?", "The two indoor decks are warm, so it runs in any weather. Bring a layer for the open top deck.")],
+    "cruise-7-silverline-prosecco": [
+        ("Where is the best spot?", "The upper deck. Board early: bigger groups rush upstairs for the best spots."),
+        ("Is the staff good?", "38 of 64 recent guests praise the friendly, attentive staff, the most of any cruise here."),
+        ("Is one hour enough?", "Some guests say the hour feels short. The Duna-Weser unlimited cruise runs 75 minutes."),
+        ("Can I bring my own drinks?", "No. Snacks are for sale, and you can't bring your own food or drinks."),
+        ("Cold on deck?", "4 of 64 recent guests mention the cold. Bring a warm layer if you want photos outside.")],
+    "item-5-river-diva-dinner": [
+        ("Is the food good?", "53 of 64 recent guests talk about the food, almost all positively. One said it could have been hotter."),
+        ("What if it rains?", "Guests say it works even in pouring rain: dinner and music are indoors."),
+        ("Is there live music?", "Yes, violin and saxophone in the Grand Salon. 21 of 64 recent guests mention it."),
+        ("Is there sightseeing commentary?", "No. An English-speaking host runs the evening, but there is no commentary: it is a dinner night, not a tour."),
+        ("What should I bring?", "A passport or ID card along with your voucher.")],
+    "item-4-legenda-candlelit-dinner": [
+        ("Good for a special occasion?", "Yes: 10 of 70 recent guests booked it for a birthday, anniversary or engagement."),
+        ("Is the food good?", "55 of 70 recent guests talk about the food, nearly all positively."),
+        ("Is it loud?", "No. A pianist and singer play lounge music, quiet enough to talk. There is no loud folk show."),
+        ("Are drinks included?", "Only the welcome drink. Every other drink is paid on board."),
+        ("What if it rains?", "Dinner is inside at window tables, and Legenda's covered dock has restrooms, so you can wait out of the rain.")],
+    "cruise-silverline-mulled-wine": [
+        ("Do refills keep coming?", "Yes. 33 of 63 recent guests praise the staff, and waiters keep coming round with more mulled wine."),
+        ("Is the mulled wine good?", "8 of 63 recent guests praise the taste; 2 found it weak."),
+        ("Is there food on board?", "Only crisps are sold, so eat before you board."),
+        ("Is one hour enough?", "Some guests say it feels short."),
+        ("When should I arrive?", "15 to 20 minutes early. One guest found check-in chaotic.")],
+    "cruise-3-kisfaludy-historic-cruise": [
+        ("Day or evening?", "Guests recommend a late-afternoon or evening sailing. In November the 16:00 sailing catches sunset into lights."),
+        ("Is it cold?", "On deck, yes: 5 of 64 recent guests mention the cold, and 4 mention the warm heated cabin."),
+        ("Will I get a seat outside?", "One guest found too few seats on the top deck, so board early for a spot outside."),
+        ("What is the boat like?", "A historic paddle steamer. Guests describe it as clean, stable and beautiful."),
+        ("Is the staff friendly?", "10 of 64 recent guests praise the friendly staff.")],
+    "cruise-10-mahart": [
+        ("Is it good value?", "16 of 64 recent guests say so: a 50-minute night cruise with a drink for €12."),
+        ("Day or night?", "Night. Guests advise an evening sailing, not daytime."),
+        ("Do I need earphones?", "Yes. The audio guide runs on your phone, and one guest had to bring their own headphones."),
+        ("Which dock?", "Most sailings leave Vigadó tér Dock 5 on the Pest side; some leave Batthyány tér on the Buda side, so check your ticket."),
+        ("Cold upstairs?", "In winter, yes. 6 of 64 recent guests mention the warm inside.")],
+    "cruise-5-silverline-no-frills": [
+        ("Is a drink included?", "No. Even water costs extra at the bar on board."),
+        ("Is the upper deck worth €5 more?", "It has a roof with columns that block part of the view. For photos, the front seats and the open-air section are better."),
+        ("Is it warm inside?", "Yes, the main deck is heated."),
+        ("Do kids pay?", "Under-4s ride free; full price from 4."),
+        ("Can I just turn up?", "With 14 sailings a day from 11:00 to 21:15 it is easy to fit in, but book the evening slots ahead in December.")],
+    "cruise-6-la-perla": [
+        ("Good for the lights?", "Yes: 18 of 64 recent guests mention the lit-up city, the most of any cruise here. On the 16:10 sailing the lights come on only near the end."),
+        ("What can I bring?", "Your own drinks and snacks, alcohol-free or not. There is no bar on board."),
+        ("Will the rooftop be cold?", "In November, yes: 14 of 64 recent guests mention it. The heated cabin downstairs is open to everyone."),
+        ("Do I need earphones?", "Yes. The audio guide runs on your own phone."),
+        ("Is it a fancy boat?", "No. A few guests call it basic; 13 of 64 say it is good value.")],
+    "cruise-cosy-chimney-cake": [
+        ("What do I get?", "A mug of hot spiced pomegranate winter punch and a Cinnabon chimney cake."),
+        ("One cake each?", "Early guests say the chimney cake is big and very sweet, easy to share."),
+        ("Is it warm on board?", "Yes. The cabin is heated, and there is a bar for more drinks and snacks."),
+        ("OK for food allergies?", "No. The chimney cake has a fixed recipe with gluten and dairy."),
+        ("Can I bring my own food?", "No, but the bar on board sells drinks and snacks.")],
+    "cruise-360-panoramic": [
+        ("Is a seat guaranteed?", "Yes, every guest gets a seat, but seats are not assigned: arrive 15 to 20 minutes early."),
+        ("Is there a live guide?", "No. Commentary is a QR-code audio guide on your own phone, so bring headphones."),
+        ("Good with kids?", "Families say kids enjoyed the 16:30 sailing, which catches the sunset."),
+        ("Cold on the top deck?", "Blankets are handed out on the open top deck."),
+        ("Is it crowded?", "5 of 64 recent guests found it crowded; others enjoyed a quiet boat.")],
+    "cruise-silverline-folklore": [
+        ("Is dinner included?", "No. You get 3 drinks and the live show; Silverline runs a separate dinner cruise with the same show."),
+        ("What is the show?", "A Hungarian string quartet playing folk music and operetta favourites through the evening."),
+        ("Can I get a window seat?", "Yes, a window table costs €25 extra per person when you book."),
+        ("What if I don't drink?", "Mocktails are available, and alcohol is only served from 18."),
+        ("When should I arrive?", "20 minutes before departure for check-in.")],
 }
 FAQ_SHORT = {'Can I get a window seat on the folklore cruise?': 'Window seat?', 'Can I go outside during the Legenda candlelit dinner?': 'Go outside?', 'Can I go outside on the River Diva dinner cruise?': 'Go outside?', 'Can I sit outside on the Legenda cruise?': 'Sit outside?', 'Can children come to the Legenda candlelit dinner?': 'Kids?', 'Can kids come on the Silverline prosecco cruise?': 'Kids?', 'Can kids come on the unlimited prosecco cruise?': 'Kids?', 'Can we bring a stroller on the 360° cruise?': 'Stroller?', 'Can we bring a stroller on the Kisfaludy paddle steamer?': 'Stroller?', 'Do I need earphones on La Perla?': 'Earphones?', 'Do I need earphones on the Kisfaludy paddle steamer?': 'Earphones?', 'Do I need earphones on the Legenda cruise?': 'Earphones?', "I don't like prosecco. What else is unlimited?": 'No prosecco fan?', 'Is a drink included on the Silverline sightseeing cruise?': 'Drink included?', 'Is a seat guaranteed on the 360° Panoramic Cruise?': 'Seat guaranteed?', 'Is dinner included on the folklore cruise?': 'Dinner included?', 'Is it only prosecco on the Silverline prosecco cruise?': 'Only prosecco?', 'Is it warm on board?': 'Warm on board?', 'Is the Cosy Cruise OK for food allergies?': 'Food allergies?', 'Is the Kisfaludy cruise quiet?': 'Quiet?', 'Is the Legenda candlelit dinner OK for vegans or food allergies?': 'Vegan / allergies?', "Is the Legenda cruise good if we don't drink?": 'Non-drinkers?', 'Is the Legenda cruise wheelchair accessible?': 'Wheelchair?', 'Is the Mahart night cruise wheelchair accessible?': 'Wheelchair?', 'Is the River Diva dinner cruise wheelchair accessible?': 'Wheelchair?', 'Is the Silverline upper deck worth €5 more?': 'Upper deck worth it?', 'Is the mulled wine cruise warm?': 'Warm?', 'Is the unlimited prosecco cruise a party boat?': 'Party boat?', 'Is there something for kids or non-drinkers?': 'Kids / non-drinkers?', 'What can I bring on La Perla?': 'What to bring?', 'What do you get on the Cosy Cruise?': "What's included?", 'What is the show on the folklore cruise?': 'The show?', 'What is the welcome drink on the 360° cruise?': 'Welcome drink?', 'When do the Parliament lights go off?': 'Lights off when?', 'Which drink is included on the Mahart cruise?': 'Which drink?', 'Which drinks are unlimited on River Diva?': 'Unlimited drinks?', 'Which mulled wines can I try on the Silverline cruise?': 'Which wines?', 'Will the La Perla rooftop be cold?': 'Cold on the roof?'}
 CARD_FAQ[1] = CARD_FAQ[1] + [("Is the Legenda cruise wheelchair accessible?",
@@ -760,6 +817,7 @@ s = rep(s, '<div class="bpa-deck-wrap" id="ltt-cards-deck">', '<div class="bpa-d
 
 # answers that used to sit only in the card FAQ now live in their pill
 for _old, _new in [
+    ('<span class="bpa-lang-label">Day & evening sailings</span>', '<span class="bpa-lang-label">19 sailings · 11:00–21:00</span>'),
     ("Film and audio guide on your own headset.", "Film and audio guide on headsets Legenda hands out, so no earphones needed."),
     ("Scan the QR code on board, or open mahart.info on your phone.", "Scan the QR code on board, or open mahart.info on your phone. Bring your own earphones."),
     ("It has a roof with columns that block part of the view.<", "It has a roof with columns that block part of the view. For photos, the front seats and the open-air section are better.<"),
@@ -788,8 +846,7 @@ jm = re.search(r'(<script id="ltt-schema-jsonld" type="application/ld\+json">)(.
 data = json.loads(jm.group(2))
 node = {"@type": "FAQPage", "@id": "https://www.budapestadventures.com/best-budapest-river-cruises#faq",
         "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
-                       for n in FAQ_ORDER for q, a in CARD_FAQ[n]]
-        + [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for v in EDGE_QA.values() for q, a in v]}
+                       for v in EDGE_QA.values() for q, a in v]}
 data.setdefault("@graph", []).append(node)
 s = s.replace(jm.group(0), jm.group(1) + json.dumps(data, ensure_ascii=False) + jm.group(3))
 
