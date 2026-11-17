@@ -47,7 +47,7 @@ SHORT = {
     "item-5-river-diva-dinner": "River Diva Buffet Dinner Cruise",
     "cruise-5-silverline-no-frills": "Silverline Sightseeing Cruise, Pay Only for What You Drink",
 }
-PRICE_FIX = {"cruise-10-mahart": 12}
+PRICE_FIX = {"cruise-10-mahart": 12, "cruise-1-legenda": 25}  # Legenda: evening price shown by default
 SILVERLINE = "https://budapestrivercruise.eu/product/{}/?code=bpadventures"
 # Silverline's own booking page (better commission) instead of the GYG listing
 DIRECT = {"cruise-7-silverline-prosecco": SILVERLINE.format("unlimited-prosecco-and-wine-cruise")}

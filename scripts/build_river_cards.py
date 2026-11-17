@@ -192,8 +192,9 @@ ACCESS = {
 
 # Price dropdown rows (label, small, price) and an optional family total
 KIDS = {
-    1: ([("Student", "with ID", "€18"), ("Child", "10-14", "€14"), ("Under 10", "", "Free"), ("Evening cruise", "adult", "€25")],
-        ("2 adults + 2 kids (10-14), daytime", "€68")),
+    1: ([("Child", "10-14, evening", "€17.50"), ("Under 10", "", "Free"), ("Daytime cruise", "adult", "€20"),
+         ("Student", "with ID, daytime", "€18"), ("Child", "10-14, daytime", "€14")],
+        ("2 adults + 2 kids (10-14), evening", "€85")),
     2: ([("Child", "4-17", "€24.80"), ("Under 4", "", "Free")], ("2 adults + 2 kids (4-17)", "€99.20")),
     3: ([("Child", "3 and over", "€11"), ("Under 3", "", "Free")], ("2 adults + 2 kids (3+)", "€44")),
     4: ([("Child", "3 and over", "€15.50"), ("Under 3", "", "Free")], ("2 adults + 2 kids (3+)", "€62")),
@@ -891,6 +892,7 @@ s = rep(s, '<div class="bpa-deck-wrap" id="ltt-cards-deck">', '<div class="bpa-d
 for _old, _new in [
     ('<span class="bpa-lang-label">Day & evening sailings</span>', '<span class="bpa-lang-label">19 sailings · 11:00–21:00</span>'),
     ('<span class="bpa-lang-label">16:30 · 19:30 · 21:00</span>', '<span class="bpa-lang-label">3 sailings · 16:30–21:00</span>'),
+    ('<tr><td>Adult</td><td>€25</td></tr>', '<tr><td>Adult<small>evening</small></td><td>€25</td></tr>'),
     ("Film and audio guide on your own headset.", "Film and audio guide on headsets Legenda hands out, so no earphones needed."),
     ("Scan the QR code on board, or open mahart.info on your phone.", "Scan the QR code on board, or open mahart.info on your phone. Bring your own earphones."),
     ("It has a roof with columns that block part of the view.<", "It has a roof with columns that block part of the view. For photos, the front seats and the open-air section are better.<"),
