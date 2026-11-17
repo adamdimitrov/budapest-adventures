@@ -62,11 +62,9 @@ LEGENDA_TT = [
     {"from": "10-25", "to": "11-22", "times": _ev("16:20", "21:00")},
     {"from": "11-23", "to": "12-31", "times": _ev("16:20", "21:00", ["15:40"])},
 ]
-for r in LEGENDA_TT:
-    r["src"] = SRC_LEG
 LEGENDA_DINNER_TT = [
-    {"from": "04-20", "to": "08-23", "times": ["19:45"], "src": SRC_LEG},
-    {"from": "08-24", "to": "04-19", "times": ["19:00"], "src": SRC_LEG},
+    {"from": "04-20", "to": "08-23", "times": ["19:45"]},
+    {"from": "08-24", "to": "04-19", "times": ["19:00"]},
 ]
 
 
@@ -194,18 +192,33 @@ NEW_DRINK = {10: ("🥤", "No drink included", "No drink in the ticket price: ev
                   "There is a bar on board.")}
 
 # Access and kids pill (third in the fixed Seine order). None = not stated on the listing yet.
-ACCESS = {
-    1: ("👶", "Under 10 free", "Children under 10 ride free; 10 to 14 pay €17.50.", "Legenda doesn't state step-free access for this boat."),
-    2: ("👶", "Kids 4+ full price · no strollers", "Children 4 to 17 pay the adult price; under 4 ride free.", "Baby strollers are not allowed on board."),
-    3: ("♿", "No strollers or wheelchairs", "Baby strollers are not allowed and the boat is not wheelchair accessible.", "Under 3 free; everyone else pays the full fare."),
-    4: ("👶", "Kids 3-12 €84 · not step-free", "Children 3 to 12 pay €84 for 3 courses; not suitable for children under 3.", "Not wheelchair accessible."),
-    5: ("♿", "Wheelchair accessible", "The boat is wheelchair accessible.", "Children 4 to 17 pay the full €99; under 4 free. Pets not allowed, assistance dogs are."),
-    6: ("♿", "Not step-free · one price", "Not suitable for wheelchair users.", "One ticket price for every age. Pets are allowed on board."),
-    7: ("♿", "Not step-free · under 4 free", "Not wheelchair accessible.", "Under 4 free; everyone else pays the adult fare."),
-    8: ("👶", "Kids up to 7 €25 · not step-free", "Children 7 and under pay a fixed €25; from 8 it's the adult fare.", "Not wheelchair accessible."),
-    9: ("🔞", "18+ only", "Under-18s are not allowed.", "Not suitable for pregnant guests."),
-    10: ("♿", "Not step-free · under 4 free", "The boat has no wheelchair access.", "Infants up to 3 ride free; everyone else pays the full fare."),
+ACCESS = {  # label, wheelchair (True/False/None, note), stroller, toilet, kids
+    1: ("Access &amp; kids", None, None, None, "free under 10, €17.50 for ages 10-14"),
+    2: ("No strollers", None, (False, "not allowed on board"), None, "free under 4, full price for 4-17"),
+    3: ("No wheelchairs or strollers", (False, "not wheelchair accessible"), (False, "not allowed on board"), (True, ""), "free under 3, full price from 3"),
+    4: ("No wheelchair access", (False, "not wheelchair accessible"), None, None, "€84 for ages 3-12 (3 courses); not for children under 3"),
+    5: ("Wheelchair OK", (True, "wheelchair-accessible boat"), None, None, "free under 4, full price for 4-17"),
+    6: ("Not for wheelchairs", (False, "not suitable for wheelchair users"), None, (True, ""), "one price for every age; pets allowed"),
+    7: ("No wheelchair access", (False, "not wheelchair accessible"), None, None, "free under 4, full price from 4"),
+    8: ("Not for wheelchairs", (False, "not wheelchair accessible"), None, None, "€25 for 7 and under, adult fare from 8"),
+    9: ("Adults only (18+)", None, None, None, "under-18s not allowed; not for pregnant guests"),
+    10: ("No wheelchair access", (False, "the boat has no wheelchair access"), None, None, "free under 4, full price from 4"),
 }
+
+
+def access_pill(num):
+    lab, wc, st, wc2, kids = ACCESS[num]
+    mark = lambda v: '<span class="cd-yes">✓</span>' if v else '<span class="cd-no">✕</span>'
+    rows = ""
+    if wc:
+        rows += f'<span class="bpa-lang-note">♿ <b>Wheelchair:</b> {mark(wc[0])} {E(wc[1])}</span>'
+    if st:
+        rows += f'<span class="bpa-lang-note">👶 <b>Stroller:</b> {mark(st[0])} {E(st[1])}</span>'
+    if wc2:
+        rows += f'<span class="bpa-lang-note">🚻 <b>Toilet on board:</b> {mark(wc2[0])}</span>'
+    rows += f'<span class="bpa-lang-note">🎟️ <b>Kids:</b> {E(kids)}</span>'
+    return (f'<details class="bpa-lang cd-access"><summary class="bpa-sp">♿ <span class="bpa-lang-label">{lab}</span> '
+            f'<span class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop">{rows}</div></details>')
 # Price dropdown rows: (label, small, price). "verify" = still to check on the listing.
 KIDS = {
     1: ([("Student", "", "€22.50"), ("Child", "10-14", "€17.50"), ("Under 10", "", "Free")], ("2 adults + 2 kids (10-14)", "€85")),
@@ -313,10 +326,13 @@ for n, st in enumerate(starts):
     # dock facts go into the time dropdown instead of their own pill
     dk = d["dock"]
     if time:
+        time[0] = time[0].replace("The listing runs ", "Sailings at ").replace(" On Saturday 28 November the calendar showed 16:10 and 19:40.", "")
+        time[0] = re.sub(r'<span class="bpa-lang-note">(?:Checked on|From Legenda)[^<]*</span>', "", time[0])
+        time[0] = re.sub(r'\s*(?:From Legenda[’\']s official timetable \(legenda\.hu\), checked [^.]*\.|Checked on the booking calendar[^.]*\.(?:[^.<]*times change by season\.)?)', "", time[0])
         time[0] = time[0].replace("</div></details>",
                                   f'<span class="bpa-lang-note"><b>📍 {E(dk[0])}:</b> {E(dk[1])} {E(dk[2])}</span></div></details>', 1)
-    v, a = d["vibe"], ACCESS[num]
-    new = (time + comm + [pill(a[0], a[1], a[2], a[3], "fbm-access")] + drinks
+    v = d["vibe"]
+    new = (time + comm + [access_pill(num)] + drinks
            + [pill(v[0], v[1], v[2], v[3], "fbm-vibe")] + extra)
     tt = d["tt"]
     slot = (f"<div class=\"fbm-slot\" data-tt=\"{E(json.dumps(tt))}\" data-dur=\"{d['dur']}\""
@@ -430,7 +446,6 @@ fbm_css = """<style id="fbm-css">
 .fbm-slot .dusk{background:#fef3c7;color:#92400e}
 .fbm-slot .day{background:#f1f5f9;color:#64748b}
 .fbm-slot.is-none{background:#fff7ed;border-color:#fed7aa}
-.fbm-src{display:block;margin-top:3px;font-size:11.5px;color:#64748b}
 .fbm-verify{background:#fef3c7;color:#92400e!important;font-weight:700}
 @media (max-width:767px){.fbm-mrow{margin:0 -12px;padding:10px 12px!important}}
 </style>"""
@@ -470,7 +485,7 @@ fbm_js = r"""<script id="fbm-js">
       var times=row.times, lit=[],dusk=[];
       times.forEach(function(t){var a=m(t),b=a+dur; if(a>=dark-10) lit.push(t); else if(b>=dark+10&&a>=sun-45) dusk.push(t);});
       el.classList.toggle('is-none',!lit.length&&!dusk.length);
-      var h, src=row.src?' <span class="fbm-src">'+row.src+'</span>':'';
+      var h;
       if(dur>=120&&times.length===1){
         var a=m(times[0]),b=a+dur,left=b-Math.max(a,dark);
         h=left>=15?('🌙 <b>'+name+':</b> dark from '+DARK+', so the last '+(left>=60?Math.floor(left/60)+' h'+(left%60?' '+left%60+' min':''):left+' min')+' of dinner ('+times[0]+' to '+hm(b)+') is under the lights.')
@@ -480,10 +495,10 @@ fbm_js = r"""<script id="fbm-js">
         h='☀️ <b>'+name+':</b> the last sailing ('+times[times.length-1]+') ends before full dark ('+DARK+').';
       } else {
         h='';
-        if(lit.length) h+='🌙 <b>Fully lit on '+name+':</b> '+(lit.length>3&&lit.every(function(t,k){return !k||m(t)-m(lit[k-1])===20;})?span(lit[0],'lit')+' then every 20 min to '+span(lit[lit.length-1],'lit'):lit.map(function(t){return span(t,'lit');}).join(''));
-        if(dusk.length) h+=(h?'<br>':'')+'🌇 <b>Sunset into lights:</b> '+dusk.map(function(t){return span(t,'dusk');}).join('');
+        if(lit.length) h+='🌙 <b>Dark the whole cruise ('+name+'):</b> '+(lit.length>3&&lit.every(function(t,k){return !k||m(t)-m(lit[k-1])===20;})?span(lit[0],'lit')+' then every 20 min to '+span(lit[lit.length-1],'lit'):lit.map(function(t){return span(t,'lit');}).join(''));
+        if(dusk.length) h+=(h?'<br>':'')+'🌇 <b>Sunset first, then the city lights up:</b> '+dusk.map(function(t){return span(t,'dusk');}).join('');
       }
-      el.innerHTML=h+src;
+      el.innerHTML=h;
     });
   }
   var inp=document.getElementById('fbm-date'); if(!inp) return;
