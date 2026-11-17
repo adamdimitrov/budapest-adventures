@@ -3549,7 +3549,12 @@ a.cd-editorial-bookmark::after{content:"\203A"!important;position:static!importa
         h='🌃 <b>City lit up on '+name+': '+DARK+' to 22:00</b> <span class="fbm-why" title="Lights are on from dusk, about 30 minutes after sunset, until the Parliament switches its floodlights off at 22:00.">ⓘ</span>';
         h+=inLit.length?'<br><span class="fbm-sub">Board for the lights: '+(ev?span(inLit[0],'lit')+' then every '+step+' min to '+span(inLit[inLit.length-1],'lit'):inLit.map(function(t){return span(t,'lit');}).join(''))+(late?' (later sailings: city lit, Parliament dark)':'')+'</span>'
                        :'<br><span class="fbm-sub">'+(late?'Its sailings start after 22:00: the city is lit, the Parliament is dark.':'No sailing starts after dark on this date.')+'</span>';
-        h+='<br>🌇 <b>Sunset '+SUN+'</b>'+(dusk.length?': board the '+dusk.map(function(t){return span(t,'dusk');}).join(' or ')+' to watch the lights come on':': no sailing catches the lights coming on');
+        var seeSun=dusk.filter(function(t){return m(t)<=sun;}), seeLights=dusk.filter(function(t){return m(t)>sun;});
+        function lst(a){return a.map(function(t){return span(t,'dusk');}).join(' or ');}
+        h+='<br>🌇 <b>Sunset '+SUN+'</b>';
+        if(seeSun.length) h+=': board the '+lst(seeSun)+' to see the sunset, then the city light up'+(seeLights.length?'; the '+lst(seeLights)+' leaves after sunset and sees the lights come on':'');
+        else if(seeLights.length) h+=': every sailing leaves after sunset. Board the '+lst(seeLights)+' to see the city light up during the cruise';
+        else h+=': no sailing catches the lights coming on';
       }
       el.innerHTML=h;
     });
