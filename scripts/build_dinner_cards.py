@@ -242,9 +242,9 @@ FILTER_CATS = {
 #    100% of the amount is to be refunded"; within 24 h not refundable. (Their T&C mentions a 10% fee; the owner chose the FAQ.)
 TRUST = {
     "gyg": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
-    "legenda": ["<b>Free cancellation</b> up to 72 h", "<b>Book for tonight</b>, same day", "<b>Change your date</b> at the pier"],
-    "silverline": ["<b>Free cancellation</b> up to 24 h", "<b>Free date change</b> up to 24 h", "<b>Book for tonight</b>, same day"],
-}
+    "legenda": ["<b>Change your date</b> at the Legenda pier", "<b>Free cancellation</b> up to 72 h before, full refund"],
+    "silverline": ["<b>Free date change</b> up to 24 h before", "<b>Free cancellation</b> up to 24 h before, full refund"],
+}  # exactly 2 per card, free cancellation always 2nd (owner's rule)
 REVIEW_TERMS = {  # (buy-card perk, buy-card trust line, quick-facts cancellation row)
     "gyg": ("Free cancellation up to 24 h", "Free cancellation up to 24 hours before", "Free cancellation up to 24 hours before; pay nothing today"),
     "legenda": ("Free cancellation up to 72 h", "Free cancellation up to 72 hours before",
@@ -448,6 +448,7 @@ TEXT = [
     ('<span class="hybrid-active-trust">Free 24h Cancellation</span>', '<span class="hybrid-active-trust" id="sticky-trust">Free cancellation</span>', 1),
     ('data-sub="Free cancellation up to 24h" data-title="4-Course Romantic Candlelit', 'data-sub="Free cancellation up to 72h" data-title="4-Course Romantic Candlelit', 1),
     ('data-sub="3 shows • €77 or €91"', 'data-sub="Free cancellation up to 24h"', None),
+    ('<div class="bpa-via">Booked securely via Silverline</div>', '<div class="bpa-via">via Silverline</div>', 1),
 ]
 for old, new, cnt in TEXT:
     k = s.count(old)
@@ -551,7 +552,8 @@ def block(tag, i):
 css = "".join(block("style", i) for i in ("cd-cards-css", "cd-tested-css", "cd-filters-css", "fbm-css", "fbm-hide-slot",
                                           "fbm-lights-css", "cd-fmore-css", "fbm-days-css", "cd-trust-css"))
 css += ('<style id="dc-rate-plain-css">.bpa-rev-badge:not(.is-link){cursor:default}</style>')
-js = "".join(block("script", i) for i in ("cd-cards-js", "cd-filters-js", "fbm-js", "cd-fmore-js", "fbm-days-js", "cd-sticky-trust-js"))
+# no cd-sticky-trust-js: the sticky bar always shows "Free cancellation"
+js = "".join(block("script", i) for i in ("cd-cards-js", "cd-filters-js", "fbm-js", "cd-fmore-js", "fbm-days-js"))
 s = rep(s, "</head>", css + "</head>", where="css")
 k = s.rfind("</body>")
 s = s[:k] + js + "\n" + s[k:]
@@ -570,8 +572,9 @@ for m in re.finditer(r'<a [^>]*href="(https://(?:www\.getyourguide\.com|legenda\
     rel = re.search(r'rel="([^"]*)"', tag)
     assert rel and {"nofollow", "sponsored", "noopener"} <= set(rel.group(1).split()), tag[:160]
 assert "0.0" not in re.findall(r'bpa-rate-score">([^<]*)', s)
-for m in re.finditer(r'<div class="bpa-trust2">(.*?)</div>', s):  # free cancellation is always one of the promises
-    assert "<b>Free cancellation</b>" in m.group(1), m.group(1)
+for m in re.finditer(r'<div class="bpa-trust2">(.*?)</div>', s):  # exactly 2 promises, free cancellation 2nd
+    spans = re.findall(r"<span>(.*?)</span>", m.group(1))
+    assert len(spans) == 2 and spans[1].startswith("<b>Free cancellation</b>"), m.group(1)
 assert not re.search(r"10% fee|Full refund up to 24 hours before departure", s)
 
 (ROOT / PAGE).write_text(s, encoding="utf-8")
