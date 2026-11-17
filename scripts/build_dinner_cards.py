@@ -582,6 +582,37 @@ css = "".join(block("style", i) for i in ("cd-cards-css", "cd-tested-css", "cd-f
 css += ('<style id="dc-rate-plain-css">.bpa-rev-badge:not(.is-link){cursor:default}</style>')
 # no cd-sticky-trust-js: the sticky bar always shows "Free cancellation"
 js = "".join(block("script", i) for i in ("cd-cards-js", "cd-filters-js", "fbm-js", "cd-fmore-js", "fbm-days-js"))
+# Price dropdown opens on hover like the pills (mouse only): hover opens, leaving closes, a click pins it open.
+js += """<script id="cd-pdd-hover-js">
+(function(){
+  if(!(window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches)) return;
+  document.querySelectorAll('.cd-pdd').forEach(function(d){
+    var sum=d.querySelector('summary'), pinned=false, t=null;
+    d.addEventListener('mouseenter',function(){ clearTimeout(t); if(!d.open){ pinned=false; d.open=true; } });
+    d.addEventListener('mouseleave',function(){ if(pinned) return; t=setTimeout(function(){ d.open=false; },120); });
+    sum.addEventListener('click',function(e){
+      if(d.open && !pinned){ e.preventDefault(); pinned=true; return; }  // opened by hover: the click pins it
+      pinned=!d.open;
+    });
+    d.addEventListener('toggle',function(){ if(!d.open) pinned=false; });
+  });
+})();
+</script>"""
+# "Peek C" (owner's pick, same code as the river page, feat/river-pill-peek e6496eb): when the #1 card scrolls into view,
+# its first pill opens for 1.5 s and closes. Once per load, skipped if the visitor already opened a pill. No layout change.
+js += """<script id="pill-peek-js">
+/* Show that pills open: when the #1 card scrolls into view, its first pill opens for 1.5 s and closes. Once per load; skipped if the visitor already opened a pill. */
+(function(){
+  function run(){
+    var card=document.getElementById('card-1'), sm=card&&card.querySelector('.bpa-specs-row .bpa-lang>summary'); if(!sm||!('IntersectionObserver' in window)) return;
+    var touched=false; document.addEventListener('click',function(e){ if(e.isTrusted&&e.target.closest('.bpa-lang')) touched=true; },true);
+    var io=new IntersectionObserver(function(es){ if(!es[0].isIntersecting) return; io.disconnect();
+      setTimeout(function(){ if(touched) return; sm.click(); setTimeout(function(){ if(sm.parentNode.classList.contains('is-open')||sm.parentNode.open) sm.click(); },1500); },600); },{threshold:.6});
+    io.observe(card);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
+})();
+</script>"""
 s = rep(s, "</head>", css + "</head>", where="css")
 k = s.rfind("</body>")
 s = s[:k] + js + "\n" + s[k:]
