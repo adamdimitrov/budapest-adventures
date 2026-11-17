@@ -237,14 +237,101 @@ CARD_FAQ = {
 }
 
 
+# ------------------------------------------------------------------ top-12 additions (keyed by the card's review anchor)
+# old river card number for the cruises that stayed; new cruises are keyed by their anchor
+OLD = {"cruise-1-legenda": 1, "cruise-2-rubingroup": 2, "cruise-3-kisfaludy-historic-cruise": 3,
+       "cruise-5-silverline-no-frills": 5, "cruise-6-la-perla": 6, "cruise-7-silverline-prosecco": 7, "cruise-10-mahart": 10}
+LEGENDA_DINNER_TT = [{"from": "04-20", "to": "08-23", "times": ["19:45"]}, {"from": "08-24", "to": "04-19", "times": ["19:00"]}]
+CARDS.update({
+    "cruise-360-panoramic": dict(cat="calm nodrink opendeck heated hour under20 historic",
+        vibe=("🌐", "360° views, calm", "An open-air panorama deck with 360° views, plus a climate-controlled cabin with panoramic windows.",
+              "Every guest gets a seat (unassigned), with free Wi-Fi, toilets and blankets when it is cold. The welcome glass is Tokaji frizzante or orange juice."),
+        dock=("Dock 10, Elizabeth Bridge", "Pest side next to Elizabeth Bridge, a short walk from Ferenciek tere metro.",
+              "Arrive 15 to 20 minutes early: seats are first come, first served.")),
+    "cruise-cosy-chimney-cake": dict(cat="calm heated hour under20",
+        vibe=("🧣", "Cosy winter warm-up", "A heated cabin, a mug of hot winter punch and a Cinnabon chimney cake.",
+              "A seasonal cruise for cold evenings. There is a bar for more drinks and snacks, but you can't bring your own food or drinks."),
+        dock=(DOCK11[0], DOCK11[1], "Silverline's dock, next to the no-frills and prosecco cruises.")),
+    "item-8-floating-lotus-prosecco": dict(cat="unlimited party opendeck heated hour",
+        vibe=("🎶", "Lively rooftop", "Guests keep mentioning the music and the friendly crew.",
+              "Everyone has a seat on the heated lower deck; rooftop seats are first come, first served. Soft drinks and homemade lemonade are included."),
+        dock=("Petőfi tér 9", "Pest bank between Elizabeth Bridge and Vigadó tér, an easy walk from Váci utca.",
+              "Arrive 15 minutes early: boarding closes 5 minutes before departure.")),
+    "item-4-legenda-candlelit-dinner": dict(cat="tested dinner nodrink opendeck heated",
+        vibe=("🕯️", "Romantic and quiet", "Candlelit tables for two along the windows, a pianist and singer, no loud folk show.",
+              "Open top deck for photos at any point of the evening. Not for children under 3, and there is no vegan menu."),
+        dock=("Vigadó tér, Dock 7", "Pest side, 2 minutes from Vörösmarty tér and the top of Váci utca.",
+              "Legenda's covered dock has restrooms, so you can wait out of the rain.")),
+    "item-5-river-diva-dinner": dict(cat="dinner unlimited opendeck",
+        vibe=("🎻", "All-inclusive evening", "A seasonal buffet, unlimited drinks served to your table and live music in the Grand Salon.",
+              "After dinner you can go up to the rooftop deck, weather permitting."),
+        dock=("Akadémia 3", "Pest side by the Chain Bridge, best if you stay near Parliament, the Basilica or Széchenyi tér.",
+              "Bring a passport or ID card with the voucher.")),
+})
+PILLS.update({
+    "item-4-legenda-candlelit-dinner": {
+        "4-Course Dinner": ("4 courses picked from the menu at the table: starter, soup, main course and dessert.",
+                            "Children 3 to 12 get 3 courses. No vegan menu, and not for food allergies."),
+        "Welcome Drink": ("1 drink included: champagne, wine, beer, a soft drink or mineral water.", "Every other drink is paid on board."),
+        "Live Music": ("A pianist and singer play lounge music all evening.", "Quiet enough to talk: no loud folk show.")},
+    "item-5-river-diva-dinner": {
+        "Seasonal Buffet": ("A seasonal buffet by Executive Chef Viktor Moldován: starters, mains, sides, vegetarian dishes and desserts.",
+                            "Flag dietary needs when you book."),
+        "Live Music": ("Live music in the Grand Salon through the evening.", "There is no sightseeing commentary, just an English-speaking host.")},
+})
+ACCESS.update({
+    "cruise-360-panoramic": ("No wheelchairs or strollers", (False, "not suitable for wheelchair users"), (False, "baby strollers not allowed"), (True, ""), "free under 3, full price from 3"),
+    "cruise-cosy-chimney-cake": ("Not for wheelchairs", (False, "not suitable for wheelchair users"), None, None, "one price for every age; not for food allergies, gluten or lactose intolerance"),
+    "item-8-floating-lotus-prosecco": ("Not for wheelchairs", (False, "not wheelchair accessible"), None, None, "€25 for 7 and under, adult fare from 8"),
+    "item-4-legenda-candlelit-dinner": ("No wheelchair access", (False, "not wheelchair accessible"), None, None, "€84 for ages 3-12 (3 courses); not for children under 3"),
+    "item-5-river-diva-dinner": ("Wheelchair OK", (True, "wheelchair-accessible boat"), None, None, "free under 4, full price for 4-17"),
+})
+KIDS.update({
+    "cruise-360-panoramic": ([("Child", "3 and over", "€12"), ("Under 3", "", "Free")], ("2 adults + 2 kids (3+)", "€48")),
+    "cruise-cosy-chimney-cake": ([("Child", "every age", "€17")], ("2 adults + 2 kids", "€68")),
+    "item-8-floating-lotus-prosecco": ([("Child", "7 and under", "€25"), ("Age 8+", "", "Adult fare")], None),
+    "item-4-legenda-candlelit-dinner": ([("Child", "3-12, 3 courses", "€84"), ("Under 3", "", "Not allowed")], ("2 adults + 2 kids (3-12)", "€388")),
+    "item-5-river-diva-dinner": ([("Child", "4-17", "€99"), ("Under 4", "", "Free")], ("2 adults + 2 kids (4-17)", "€396")),
+})
+CARD_FAQ.update({
+    "cruise-360-panoramic": [
+        ("Is a seat guaranteed on the 360° Panoramic Cruise?", "Yes, every guest gets a seat, but seats are not assigned: arrive 15 to 20 minutes early for the best spots."),
+        ("What is the welcome drink on the 360° cruise?", "A glass of premium Tokaji frizzante, or orange juice."),
+        ("Can we bring a stroller on the 360° cruise?", "No. Baby strollers are not allowed and the boat is not suitable for wheelchair users. Children under 3 ride free.")],
+    "cruise-cosy-chimney-cake": [
+        ("What do you get on the Cosy Cruise?", "A mug of spiced pomegranate winter punch and a Cinnabon chimney cake: a crisp kürtőskalács with cinnamon-roll frosting."),
+        ("Is the Cosy Cruise OK for food allergies?", "No. The chimney cake has a fixed recipe with gluten and dairy, so it can't cater for allergies or intolerances."),
+        ("Is it warm on board?", "Yes. The cabin is heated, and there is a bar for more drinks and snacks.")],
+    "item-8-floating-lotus-prosecco": [
+        ("Is a rooftop seat guaranteed on Floating Lotus?", "No. Everyone has a seat on the heated lower deck; rooftop seats are first come, first served."),
+        ("Can kids come on Floating Lotus?", "Yes. Children 7 and under pay a fixed €25; from 8 it is the adult fare. Soft drinks and lemonade are included.")],
+    "item-4-legenda-candlelit-dinner": [
+        ("Can I go outside during the Legenda candlelit dinner?", "Yes. The open top deck is free to use at any point of the evening, which is the best spot for photos."),
+        ("Is the Legenda candlelit dinner OK for vegans or food allergies?", "No. There is no vegan menu and it can't cater for food allergies."),
+        ("Can children come to the Legenda candlelit dinner?", "From age 3. Children 3 to 12 pay €84 for 3 courses; it is not for children under 3.")],
+    "item-5-river-diva-dinner": [
+        ("Can I go outside on the River Diva dinner cruise?", "Yes, after dinner the rooftop deck opens, weather permitting."),
+        ("Is the River Diva dinner cruise wheelchair accessible?", "Yes. It is the one wheelchair-accessible boat in this list."),
+        ("Which drinks are unlimited on River Diva?", "Cocktails, spirits, Prosecco, wine, beer, soft drinks and water, served to your table all evening.")],
+})
+TT.update({
+    "cruise-360-panoramic": (nd(["13:30", "15:00", "16:30", "18:00", "19:30", "21:00"]), 60, None),
+    "cruise-cosy-chimney-cake": (nd(["15:30", "17:00", "18:20", "19:40", "21:00"]), 60, None),
+    "item-8-floating-lotus-prosecco": (nd(["18:00", "19:30", "21:00"]), 75, None),
+    "item-4-legenda-candlelit-dinner": (LEGENDA_DINNER_TT, 150, None),
+    "item-5-river-diva-dinner": (nd(["19:30"], ["18:30"]), 150, None),
+})
+FAQ_ORDER = []
+
+
 def pill(emoji, label, lead, note, cls=""):
     return (f'<details class="bpa-lang {cls}"><summary class="bpa-sp">{emoji} <span class="bpa-lang-label">{E(label)}</span>'
             f'<span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>{E(lead)}</strong> '
             f'{E(note)}</div></details>')
 
 
-def access_pill(num):
-    lab, wc, st, wc2, kids = ACCESS[num]
+def access_pill(key):
+    lab, wc, st, wc2, kids = ACCESS[key]
     mark = lambda v: '<span class="cd-yes">✓</span>' if v else '<span class="cd-no">✕</span>'
     rows = ""
     if wc:
@@ -258,13 +345,13 @@ def access_pill(num):
             f'<span class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop">{rows}</div></details>')
 
 
-def rows_html(num):
+def rows_html(key):
     return "".join(f"<tr><td>{E(lab)}{f'<small>{E(sm)}</small>' if sm else ''}</td><td>{E(pr)}</td></tr>"
-                   for lab, sm, pr in KIDS[num][0])
+                   for lab, sm, pr in KIDS[key][0])
 
 
-def total_html(num):
-    t = KIDS[num][1]
+def total_html(key):
+    t = KIDS[key][1]
     return f'<div class="cd-pdd-total"><span>{E(t[0])}</span><span>{E(t[1])}</span></div>' if t else ""
 
 
@@ -285,15 +372,18 @@ def thumbs(media):
 
 # ------------------------------------------------------------------ cards
 starts = [m.start() for m in re.finditer(r'<div class="bpa-card" data-cat="[^"]*" id="card-\d+">', s)]
-assert len(starts) == 10, len(starts)
+assert len(starts) == 12, len(starts)
 last_sub = s.find('class="bpa-sublink"', starts[-1])
 tail_start = s.find("</div>\n</div>\n</div>", last_sub) + len("</div>\n</div>\n</div>")
 ends = starts[1:] + [tail_start]
 new_cards = []
 for n, st in enumerate(starts):
     num = n + 1
+    anc = re.search(r'class="bpa-sublink" href="#([^"]+)"', s[st:ends[n]]).group(1)
+    key = OLD.get(anc, anc)
+    FAQ_ORDER.append(key)
     c = s[st:ends[n]]
-    d = CARDS[num]
+    d = CARDS[key]
     c = re.sub(r'data-cat="[^"]*"', f'data-cat="{d["cat"]}"', c, count=1)
     mi, ii = c.find('<div class="bpa-media">'), c.find('\n<div class="bpa-info">')
     media = c[mi:ii]
@@ -317,11 +407,11 @@ for n, st in enumerate(starts):
             lab = m.group(2)
             if lab == "18+ only":
                 continue  # now the access pill
-            lead, note = PILLS[num][lab]
+            lead, note = PILLS[key][lab]
             x = pill(m.group(1), H.unescape(lab), lead, note)
         conv.append(x)
-    if num in NEW_DRINK:
-        conv.insert(0, pill(*NEW_DRINK[num]))
+    if key in NEW_DRINK:
+        conv.insert(0, pill(*NEW_DRINK[key]))
     isdrink = lambda x: any(k in x[:160] for k in ("🥂", "🍾", "🍸", "🥤"))
     drinks = [x for x in conv if isdrink(x)]
     extra = [x for x in conv if not isdrink(x)]
@@ -334,8 +424,8 @@ for n, st in enumerate(starts):
         time[0] = t0.replace("</div></details>",
                              f'<span class="bpa-lang-note"><b>📍 {E(dk[0])}:</b> {E(dk[1])} {E(dk[2])}</span></div></details>', 1)
     v = d["vibe"]
-    new = time + comm + [access_pill(num)] + drinks + [pill(v[0], v[1], v[2], v[3], "fbm-vibe")] + extra
-    tt, dur, every = TT[num]
+    new = time + comm + [access_pill(key)] + drinks + [pill(v[0], v[1], v[2], v[3], "fbm-vibe")] + extra
+    tt, dur, every = TT[key]
     slot = (f"<div class=\"fbm-slot\" data-tt=\"{E(json.dumps(tt))}\" data-dur=\"{dur}\""
             + (f' data-every="{every}"' if every else "") + "></div>")
     c = c.replace(sr.group(0), sr.group(1) + "\n" + "\n".join(new) + "\n</div>\n" + slot + "\n" + sr.group(3)[len("</div>\n"):])
@@ -345,12 +435,12 @@ for n, st in enumerate(starts):
     wasrow = f'<tr><td>Regular price</td><td><s>{E(was.group(1).split()[0])}</s></td></tr>' if was else ""
     pdd = (f'<details class="cd-pdd"><summary><span class="cd-pdd-main">{p}</span><span class="cd-pdd-sub">per adult '
            f'<span class="cd-pdd-chev" aria-hidden="true">▾</span></span></summary><div class="cd-pdd-pop"><div class="cd-pdd-h">All ticket prices</div>'
-           f'<table><tr><td>Adult</td><td>{p}</td></tr>{wasrow}' + rows_html(num) + '</table>' + total_html(num) +
+           f'<table><tr><td>Adult</td><td>{p}</td></tr>{wasrow}' + rows_html(key) + '</table>' + total_html(key) +
            '<div class="cd-pdd-note">Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay.</div></div></details>')
     c = c.replace(pm.group(0), pdd)
     i = c.index('<div class="bpa-best-for bpa-pickskip">')
     k = c.index("</div>", i) + len("</div>")
-    qa = CARD_FAQ[num]
+    qa = CARD_FAQ[key]
     faq = (f'<details class="fbm-faq"><summary>❓ {len(qa)} questions travellers ask <span class="fbm-faq-chev" aria-hidden="true">▾</span></summary>'
            f'<div class="fbm-faq-body">' + "".join(f'<div class="fbm-qa"><div class="fbm-q">{E(q)}</div><div class="fbm-a">{E(a)}</div></div>' for q, a in qa)
            + "</div></details>")
@@ -389,7 +479,7 @@ fbox = (
     + btn("hour", "⏱️ About 1 hour") + "</div></div>"
     '<div class="cd-frow"><span class="cd-flab">Budget &amp; proof</span><div class="cd-fchips">'
     + btn("tested", "✓ Personally tested") + btn("under20", "💶 Under €20") + "</div></div>"
-    '<div class="cd-ffoot"><span class="cd-fcount" aria-live="polite">Showing <b>10</b> of 10 cruises</span>'
+    '<div class="cd-ffoot"><span class="cd-fcount" aria-live="polite">Showing <b>12</b> of 12 cruises</span>'
     '<div class="cd-fapplied"></div><button type="button" class="cd-fclear" hidden onclick="lttFilterCruises(\'all\')">Clear all</button></div></div>'
 )
 fb_start = s.index('<div class="ltt-integrated-filter-bar">')
@@ -399,7 +489,7 @@ s = s[:fb_start] + finder + "\n" + fbox + s[fb_end:]
 
 mini = ('<div class="cd-fmini" aria-hidden="true"><div class="cd-fmini-in"><button type="button" class="cd-fmini-btn" '
         'onclick="cdFiltersJump()">⚙️ Filters <span class="cd-fmini-n" hidden></span></button><span class="cd-fmini-res">'
-        '<b>10</b> of 10 cruises</span></div></div>')
+        '<b>12</b> of 12 cruises</span></div></div>')
 s = rep(s, '<div class="bpa-deck-wrap" id="ltt-cards-deck">', '<div class="bpa-deck-wrap" id="ltt-cards-deck">' + mini, where="mini")
 
 # ------------------------------------------------------------------ FAQPage from the in-card questions
@@ -407,7 +497,7 @@ jm = re.search(r'(<script id="ltt-schema-jsonld" type="application/ld\+json">)(.
 data = json.loads(jm.group(2))
 node = {"@type": "FAQPage", "@id": "https://www.budapestadventures.com/best-budapest-river-cruises#faq",
         "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
-                       for n in sorted(CARD_FAQ) for q, a in CARD_FAQ[n]]}
+                       for n in FAQ_ORDER for q, a in CARD_FAQ[n]]}
 data.setdefault("@graph", []).append(node)
 s = s.replace(jm.group(0), jm.group(1) + json.dumps(data, ensure_ascii=False) + jm.group(3))
 
