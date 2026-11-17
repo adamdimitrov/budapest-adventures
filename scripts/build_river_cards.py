@@ -365,6 +365,28 @@ EXTRA_CATS = {
     "cruise-5-silverline-no-frills": " kids", "cruise-6-la-perla": " kids", "cruise-cosy-chimney-cake": " kids",
     "cruise-360-panoramic": " kids",
 }
+# Fact-checked filter tags (17 Nov 2026). Sources: each card's own review and pills, the operator/GYG listing.
+#  party: party music / pre-party pitch | romantic: candlelit or pitched for couples (listing) | kids: free/reduced child
+#  fares and no 18+ or party focus | calm: plain sightseeing, no party, no dinner | unlimited: unlimited drinks in the price
+#  drinkincl: a set drink (or drinks) in the price | dinner | music: live music or show on board | nodrinkprice: no drink in
+#  the price (BYOB or pay at the bar) | audio: audio guide or commentary confirmed | hour: sailing of 75 minutes or less
+#  wheelchair: confirmed wheelchair-accessible | under20 | tested: I rode it.
+# Not used as filters: heated indoor (all 13 have it) and open-air deck (11 of 13), they would not narrow anything.
+FILTER_CATS = {
+    "cruise-1-legenda": "calm kids drinkincl audio hour tested",
+    "cruise-2-rubingroup": "party unlimited audio hour tested",
+    "cruise-7-silverline-prosecco": "party unlimited audio hour",
+    "item-5-river-diva-dinner": "romantic kids dinner unlimited music wheelchair",
+    "item-4-legenda-candlelit-dinner": "romantic kids dinner drinkincl music tested",
+    "cruise-silverline-mulled-wine": "romantic kids unlimited audio hour",
+    "cruise-3-kisfaludy-historic-cruise": "calm kids drinkincl audio hour under20 tested",
+    "cruise-10-mahart": "calm kids drinkincl audio hour under20 tested",
+    "cruise-5-silverline-no-frills": "calm kids nodrinkprice audio hour under20 tested",
+    "cruise-6-la-perla": "calm kids nodrinkprice audio hour under20",
+    "cruise-cosy-chimney-cake": "calm kids drinkincl hour under20",
+    "cruise-360-panoramic": "calm kids drinkincl audio hour under20",
+    "cruise-silverline-folklore": "romantic drinkincl music",
+}
 FAQ_ORDER = []
 CAT_BY_ANCHOR = {}
 
@@ -427,7 +449,7 @@ for n, st in enumerate(starts):
     anc = re.search(r'class="bpa-sublink" href="#([^"]+)"', s[st:ends[n]]).group(1)
     key = OLD.get(anc, anc)
     FAQ_ORDER.append(key)
-    CAT_BY_ANCHOR[anc] = CARDS[key]["cat"] + EXTRA_CATS.get(anc, "")
+    CAT_BY_ANCHOR[anc] = FILTER_CATS[anc]
     c = s[st:ends[n]]
     d = CARDS[key]
     c = re.sub(r'data-cat="[^"]*"', f'data-cat="{CAT_BY_ANCHOR[anc]}"', c, count=1)
@@ -565,14 +587,14 @@ fbox = (
     '<button type="button" class="fbm-day" data-day="1" aria-pressed="false">Tomorrow</button>'
     '<label class="fbm-day fbm-other">📅 <span>Other date</span><input type="date" id="fbm-date" aria-label="Pick another cruise date"></label>'
     '</div><span class="fbm-mnote" id="fbm-mnote"></span></div>'
-    '<div class="cd-frow cd-frow-main"><span class="cd-flab">What\'s the plan?</span><div class="cd-fchips">'
-    + btn("unlimited", "🍾 Unlimited drinks") + btn("dinner", "🍽️ Dinner") + btn("calm", "🌃 Just the views")
-    + btn("party", "🎉 Party crowd") + btn("music", "🎻 Live music &amp; shows") + "</div></div>"
-    '<div class="cd-frow cd-frow-more"><span class="cd-flab">Who\'s coming</span><div class="cd-fchips">'
-    + btn("nodrink", "🥤 Non-drinkers welcome") + btn("kids", "👶 Good with kids") + btn("wheelchair", "♿ Wheelchair access") + "</div></div>"
-    '<div class="cd-frow cd-frow-more"><span class="cd-flab">On board</span><div class="cd-fchips">'
-    + btn("historic", "🎧 Audio guide") + btn("opendeck", "☀️ Open-air deck") + btn("heated", "🔥 Heated indoor")
-    + btn("hour", "⏱️ About 1 hour") + "</div></div>"
+    '<div class="cd-frow cd-frow-main"><span class="cd-flab">Occasion</span><div class="cd-fchips">'
+    + btn("party", "🎉 Party night") + btn("romantic", "💑 Romantic evening") + btn("kids", "👨‍👩‍👧 With kids")
+    + btn("calm", "🌃 Just sightseeing") + "</div></div>"
+    '<div class="cd-frow cd-frow-more"><span class="cd-flab">What\'s included</span><div class="cd-fchips">'
+    + btn("unlimited", "🍾 Unlimited drinks") + btn("drinkincl", "🥂 A drink included") + btn("dinner", "🍽️ Dinner")
+    + btn("music", "🎻 Live music or show") + btn("nodrinkprice", "🧾 No drink in the price") + "</div></div>"
+    '<div class="cd-frow cd-frow-more"><span class="cd-flab">Practical</span><div class="cd-fchips">'
+    + btn("audio", "🎧 Audio guide") + btn("hour", "⏱️ About 1 hour") + btn("wheelchair", "♿ Wheelchair access") + "</div></div>"
     '<div class="cd-frow cd-frow-more"><span class="cd-flab">Budget &amp; proof</span><div class="cd-fchips">'
     + btn("under20", "💶 Under €20") + btn("tested", "✓ Personally tested") + "</div></div>"
     '<button type="button" class="cd-fmore" aria-expanded="false" hidden>More filters <span class="cd-fmore-n"></span> ▾</button>'
