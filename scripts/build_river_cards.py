@@ -560,7 +560,14 @@ fbox = (
 fb_start = s.index('<div class="ltt-integrated-filter-bar">')
 end_marker = "Historic &amp; Sightseeing (4)</button>\n</div>\n\n</div>"
 fb_end = s.index(end_marker, fb_start) + len(end_marker)
-s = s[:fb_start] + finder + "\n" + fbox + s[fb_end:]
+# one "Find your cruise" panel: the search sits at the top of the filter box, same card and width
+FINDER_IN_BOX_CSS = ("<style id=\"bpa-ai-in-box-css\">"
+    ".cd-fbox>.bpa-ai-finder{margin:4px 0 12px!important;padding:6px 2px 16px!important;border-bottom:1px solid #f1f5f9}"
+    ".cd-fbox>.bpa-ai-finder .bpa-ai-row{max-width:none}"
+    "@media (max-width:767px){.cd-fbox>.bpa-ai-finder{padding:4px 0 14px!important}}"
+    "</style>")
+fa_open = fbox.index(">") + 1
+s = s[:fb_start] + fbox[:fa_open] + finder + FINDER_IN_BOX_CSS + fbox[fa_open:] + s[fb_end:]
 
 mini = ('<div class="cd-fmini" aria-hidden="true"><div class="cd-fmini-in"><button type="button" class="cd-fmini-btn" '
         'onclick="cdFiltersJump()">⚙️ Filters <span class="cd-fmini-n" hidden></span></button><span class="cd-fmini-res">'
