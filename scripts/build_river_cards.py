@@ -557,9 +557,9 @@ for n, st in enumerate(starts):
     edge = EDGE_QA.get(anc, [])
     faq = ""
     if edge:
-        faq = ('<div class="cd-tq"><div class="cd-tq-l">Travellers also ask</div><div class="cd-tq-chips">'
-               + "".join(f'<button type="button" class="cd-tq-chip" aria-pressed="{str(i == 0).lower()}" aria-controls="tq-{anc}-{i}">{E(q)}</button>' for i, (q, a) in enumerate(edge))
-               + '</div>' + "".join(f'<div class="cd-tq-a" id="tq-{anc}-{i}"{"" if i == 0 else " hidden"}>{E(a)}</div>' for i, (q, a) in enumerate(edge)) + '</div>')
+        faq = (f'<details class="fbm-faq"><summary>❓ {len(edge)} questions travellers ask <span class="fbm-faq-chev" aria-hidden="true">▾</span></summary>'
+               '<div class="fbm-faq-body">' + "".join(f'<div class="fbm-qa"><div class="fbm-q">{E(q)}</div><div class="fbm-a">{E(a)}</div></div>' for q, a in edge)
+               + "</div></details>")
     if faq:
         c = c[:k] + "\n" + faq + c[k:]
     new_cards.append(c)
@@ -781,7 +781,7 @@ ASK_CSS_JS = """<style id="cd-tq-css">
 document.addEventListener('click',function(e){var c=e.target.closest('.cd-tq-chip'); if(!c) return; var box=c.closest(".cd-tq");
   box.querySelectorAll('.cd-tq-chip').forEach(function(b){var on=b===c; b.setAttribute('aria-pressed',on); document.getElementById(b.getAttribute('aria-controls')).hidden=!on;});});
 </script>"""
-s = s.replace("</body>", ASK_CSS_JS + "\n</body>", 1)
+# chips layout (ASK_CSS_JS) not used: the collapsed box was picked
 
 # ------------------------------------------------------------------ FAQPage from the in-card questions
 jm = re.search(r'(<script id="ltt-schema-jsonld" type="application/ld\+json">)(.*?)(</script>)', s, re.S)
