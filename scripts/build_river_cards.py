@@ -7,7 +7,8 @@ Ported from scripts/build_night_fb_test.py (branch test/night-fb-questions):
 - every plain pill becomes a dropdown; fixed pill order: time -> commentary -> access -> drinks -> vibe -> extras
 - ♿ access & kids pill, drinks dropdown, atmosphere pill, dock facts inside the time dropdown
 - "questions travellers ask" inside each card, plus a FAQPage built from them
-The night-only "your cruise date" lighting row is left out on purpose.
+- "Your cruise date" row: each card shows which of its sailings are fully lit, sunset-into-lights,
+  or end before dark (daytime sailings), from the timetables in TT
 
 All facts come from the card's own review, the night page's verified data for the same
 products, and the live listings (GetYourGuide, legenda.hu prices, Budapest Xplore) checked
@@ -37,6 +38,56 @@ def rep(text, old, new, count=1, where=""):
 # ------------------------------------------------------------------ card data (river card number -> facts)
 DOCK11 = ("Dock 11, Elizabeth Bridge", "Pest side next to Elizabeth Bridge, a short walk from Ferenciek tere metro.")
 AKADEMIA2 = ("Akadémia 2", "Pest side between the Chain Bridge and Parliament: the second dock from the Chain Bridge.")
+
+
+def _ev(a, b, extra=()):
+    out = list(extra)
+    h, m = map(int, a.split(":"))
+    while f"{h:02d}:{m:02d}" <= b:
+        out.append(f"{h:02d}:{m:02d}")
+        m += 20
+        if m >= 60:
+            h, m = h + 1, m - 60
+    return sorted(out)
+
+
+def nd(nov, dec=None):
+    """Known times: November listing and December booking calendar. Other dates: not open yet."""
+    return [{"from": "11-01", "to": "11-30", "times": nov}, {"from": "12-01", "to": "12-31", "times": dec or nov}]
+
+
+# Legenda's published 2026 evening timetable (same as the night page)
+LEGENDA_TT = [
+    {"from": "01-01", "to": "01-04", "times": _ev("16:20", "21:00", ["15:40"])},
+    {"from": "01-05", "to": "02-11", "times": _ev("16:20", "21:00")},
+    {"from": "02-12", "to": "02-24", "times": _ev("16:40", "21:00")},
+    {"from": "02-25", "to": "03-09", "times": _ev("17:00", "21:00")},
+    {"from": "03-10", "to": "03-28", "times": _ev("17:40", "21:00")},
+    {"from": "03-29", "to": "04-05", "times": _ev("19:00", "22:00")},
+    {"from": "04-06", "to": "05-21", "times": _ev("19:20", "22:00")},
+    {"from": "05-22", "to": "07-23", "times": ["19:30", "20:15", "20:20", "20:30", "20:45", "21:30", "21:40", "21:45", "22:00"]},
+    {"from": "07-24", "to": "09-03", "times": _ev("19:20", "22:00")},
+    {"from": "09-04", "to": "09-13", "times": _ev("19:00", "22:00")},
+    {"from": "09-14", "to": "09-22", "times": _ev("18:40", "22:00")},
+    {"from": "09-23", "to": "10-02", "times": _ev("18:20", "22:00")},
+    {"from": "10-03", "to": "10-24", "times": _ev("17:40", "22:00")},
+    {"from": "10-25", "to": "11-22", "times": _ev("16:20", "21:00")},
+    {"from": "11-23", "to": "12-31", "times": _ev("16:20", "21:00", ["15:40"])},
+]
+
+# card -> (timetable, cruise length in minutes, optional "every" note); times from each card's own time dropdown
+TT = {
+    1: (LEGENDA_TT, 60, "every 20 min"),
+    2: (nd(["15:30", "15:45", "17:15", "18:45", "22:15", "22:30", "23:00"], ["17:15", "17:45", "18:45", "20:30"]), 75, None),
+    3: (nd(["13:00", "14:30", "16:00", "17:30", "19:00", "20:30"]), 60, None),
+    4: (nd(["17:00", "18:20", "19:40", "21:00"]), 60, None),
+    5: (nd(["11:00", "12:30", "14:00", "15:30", "16:30", "17:00", "17:20", "18:20", "18:40", "19:30", "19:40", "20:00", "21:00", "21:15"]), 60, None),
+    6: (nd(["16:10", "17:20", "18:30", "19:40", "20:50"], ["16:10", "20:50"]), 50, None),
+    7: (nd(["16:30", "19:30", "21:00"], ["16:30", "18:00", "19:30", "21:00"]), 60, None),
+    8: (nd(["19:00"]), 90, None),
+    9: (nd(["16:00", "17:00", "18:00", "19:00", "20:00", "21:00"]), 50, None),
+    10: (nd(["16:20", "17:00", "17:30", "18:30", "18:40", "19:50", "20:00", "20:30", "21:40"]), 50, None),
+}
 CARDS = {
     1: dict(cat="tested calm nodrink opendeck heated hour",
             vibe=("🙂", "Calm sightseeing",
@@ -284,7 +335,10 @@ for n, st in enumerate(starts):
                              f'<span class="bpa-lang-note"><b>📍 {E(dk[0])}:</b> {E(dk[1])} {E(dk[2])}</span></div></details>', 1)
     v = d["vibe"]
     new = time + comm + [access_pill(num)] + drinks + [pill(v[0], v[1], v[2], v[3], "fbm-vibe")] + extra
-    c = c.replace(sr.group(0), sr.group(1) + "\n" + "\n".join(new) + "\n" + sr.group(3))
+    tt, dur, every = TT[num]
+    slot = (f"<div class=\"fbm-slot\" data-tt=\"{E(json.dumps(tt))}\" data-dur=\"{dur}\""
+            + (f' data-every="{every}"' if every else "") + "></div>")
+    c = c.replace(sr.group(0), sr.group(1) + "\n" + "\n".join(new) + "\n</div>\n" + slot + "\n" + sr.group(3)[len("</div>\n"):])
     pm = re.search(r'(?:<div class="bpa-was">[^<]*</div>\s*)?<div class="bpa-price">(?:From )?(€[\d.,]+)</div>\s*<div class="bpa-psub">[^<]*</div>', c)
     p = pm.group(1)
     was = re.search(r'<div class="bpa-was">([^<]*)</div>', pm.group(0))
@@ -324,6 +378,9 @@ def btn(cat, label):
 
 fbox = (
     '<div class="ltt-integrated-filter-bar cd-fbox" id="cd-filters" role="group" aria-label="Filter cruises">'
+    '<div class="cd-frow fbm-mrow"><span class="cd-flab">Your cruise date</span><div class="cd-fchips">'
+    '<label class="fbm-msel"><span class="sr-only">Cruise date</span><input type="date" id="fbm-date" aria-label="Cruise date"></label>'
+    '<span class="fbm-mnote" id="fbm-mnote"></span></div></div>'
     '<div class="cd-frow"><span class="cd-flab">Who is coming</span><div class="cd-fchips">'
     + btn("nodrink", "🥤 Good if you don't drink") + btn("party", "🎉 Party crowd") + "</div></div>"
     '<div class="cd-frow"><span class="cd-flab">The trip</span><div class="cd-fchips">'
@@ -359,11 +416,8 @@ def block(tag, i):
     return re.search(r'<%s id="%s"[^>]*>.*?</%s>' % (tag, i, tag), night, re.S).group(0)
 
 
-fbm = block("style", "fbm-css")
-fbm = re.sub(r"\.fbm-(?:mrow|msel|mnote|slot)[^{]*\{[^}]*\}\n?", "", fbm)
-fbm = re.sub(r"@media \(max-width:767px\)\{\.fbm-mrow[^}]*\}\}\n?", "", fbm)
-css = block("style", "cd-cards-css") + block("style", "cd-tested-css") + block("style", "cd-filters-css") + fbm
-js = block("script", "cd-cards-js") + block("script", "cd-filters-js")
+css = block("style", "cd-cards-css") + block("style", "cd-tested-css") + block("style", "cd-filters-css") + block("style", "fbm-css")
+js = block("script", "cd-cards-js") + block("script", "cd-filters-js") + block("script", "fbm-js")
 s = rep(s, "</head>", css + "</head>", where="css")
 k = s.rfind("</body>")
 s = s[:k] + js + s[k:]
