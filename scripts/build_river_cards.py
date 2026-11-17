@@ -490,19 +490,23 @@ EXTRA_PILLS = {
                          ("🏛️", "Covered dock", "Vigadó tér Dock 7 is a covered floating dock with restrooms and a rooftop waiting area.", "2 minutes from Vörösmarty tér.")],
     "cruise-2-rubingroup": [("🌬️", "Open top deck", "Open top deck plus two warm indoor decks.", "Board early for the best top-deck spots."),
                             ("🍋", "Lemonade unlimited too", "Lemonade and lemon-mint water are part of the unlimited drinks.", "Self-service, so non-drinkers are covered.")],
-    "cruise-7-silverline-prosecco": [("📸", "Upper deck views", "The upper deck is the spot for photos of the lit-up Parliament.", "Board early: bigger groups rush upstairs."),
+    "cruise-7-silverline-prosecco": [("🎶", "Party music", "Party songs from the loudspeakers.", "A warm-up before a night out."),
+                                     ("📸", "Upper deck views", "The upper deck is the spot for photos of the lit-up Parliament.", "Board early: bigger groups rush upstairs."),
                                      ("🙂", "Staff guests love", "38 of 64 recent guests praise the friendly, attentive staff.", "The most of any cruise here.")],
     "item-5-river-diva-dinner": [("🌬️", "Rooftop after dinner", "After dinner the rooftop deck opens, weather permitting.", "Bring a passport or ID card with your voucher.")],
     "item-4-legenda-candlelit-dinner": [("🪟", "Window tables", "Candlelit tables for two along the windows.", "Open top deck for photos at any point of the evening.")],
-    "cruise-silverline-mulled-wine": [("🧃", "Alcohol-free punch", "Two alcohol-free winter punches, apple and pomegranate.", "Alcohol is only served from 18."),
+    "cruise-silverline-mulled-wine": [("🎧", "Audio guide app", "A free audio guide app in several languages.", "Bring headphones to listen on your phone."),
+                                      ("🧃", "Alcohol-free punch", "Two alcohol-free winter punches, apple and pomegranate.", "Alcohol is only served from 18."),
                                       ("🪟", "Big windows", "A heated cabin with large windows.", "See the sights without going outside."),
                                       ("🍟", "Eat first", "Only crisps are sold on board.", "Have dinner before you board.")],
-    "cruise-3-kisfaludy-historic-cruise": [("🚂", "Historic paddle steamer", "A historic paddle steamer with an open-air panorama deck at the front.", "Guests call it clean, stable and beautiful.")],
+    "cruise-3-kisfaludy-historic-cruise": [("🌬️", "Front panorama deck", "Open-air panorama deck at the front.", "Heated indoor area in winter."),
+                                           ("🚂", "Historic paddle steamer", "A historic paddle steamer from the 19th century.", "Guests call it clean, stable and beautiful.")],
     "cruise-10-mahart": [("⛴️", "Pest or Buda dock", "Most sailings leave Vigadó tér Dock 5 on the Pest side.", "Some leave Batthyány tér on the Buda side: check your ticket."),
                          ("🔥", "Warm inside", "Comfortable indoor areas, so it runs in any weather.", "The upper deck is cold in winter.")],
     "cruise-5-silverline-no-frills": [("🔥", "Heated main deck", "The main deck is heated.", "14 sailings a day, so it is easy to fit in.")],
     "cruise-6-la-perla": [("🐶", "Pets welcome", "Pets are allowed on board.", "One price for every age.")],
-    "cruise-cosy-chimney-cake": [("🔥", "Heated cabin", "A heated cabin for cold evenings.", "Bar on board for more drinks and snacks."),
+    "cruise-cosy-chimney-cake": [("🎧", "No guide included", "No audio guide is included in this ticket.", "It is an hour for the views, the punch and the cake."),
+                                 ("🔥", "Heated cabin", "A heated cabin for cold evenings.", "Bar on board for more drinks and snacks."),
                                  ("🍰", "Cake to share", "Early guests say the chimney cake is big and very sweet.", "Easy to share."),
                                  ("🌾", "Not for allergies", "The chimney cake has a fixed recipe with gluten and dairy.", "It can't cater for allergies or intolerances.")],
     "cruise-360-panoramic": [("🪑", "Seat for everyone", "Every guest gets a seat, but seats are not assigned.", "Arrive 15 to 20 minutes early for the best spots."),
@@ -511,6 +515,42 @@ EXTRA_PILLS = {
     "cruise-silverline-folklore": [("🪟", "Window table +€25", "Window tables cost €25 extra per person.", "Choose it when you book."),
                                    ("🍹", "Mocktails", "Mocktails if you don't drink alcohol.", "Alcohol is only served from 18.")],
 }
+
+# Fixed pill order on every card (Baymard): time, guide/show, access & kids, drinks, vibe, deck & seating,
+# then 1-2 pills unique to the cruise. Time, access and vibe are found by class; the rest by label.
+PILL_SLOTS = {
+    "cruise-1-legenda": ("30-Lang Audio", "Welcome Drink", "Open-air top deck", ["Free under 10", "Covered dock"]),
+    "cruise-2-rubingroup": ("English guide", "Unlimited Prosecco, Spritzers & Beer", "Open top deck", ["Lemonade unlimited too"]),
+    "cruise-7-silverline-prosecco": ("Party music", "Unlimited Prosecco", "Upper deck views", ["Staff guests love"]),
+    "item-5-river-diva-dinner": ("Live Music", "Unlimited drinks", "Rooftop after dinner", ["Seasonal Buffet"]),
+    "item-4-legenda-candlelit-dinner": ("Live Music", "Welcome Drink", "Window tables", ["4-Course Dinner"]),
+    "cruise-silverline-mulled-wine": ("Audio guide app", "Unlimited Mulled Wine", "Big windows", ["Alcohol-free punch", "Eat first"]),
+    "cruise-3-kisfaludy-historic-cruise": ("29-Language Audio", "Welcome Drink", "Front panorama deck", ["Historic paddle steamer", "Full city loop"]),
+    "cruise-10-mahart": ("8-Language Audio", "Prosecco or Juice", "Warm inside", ["Pest or Buda dock"]),
+    "cruise-5-silverline-no-frills": ("15-Language Audio", "No drink included", "Upper Deck +€5", ["Heated main deck"]),
+    "cruise-6-la-perla": ("10-Language Audio", "Bring Your Own Drinks", "Guaranteed Rooftop Seat", ["Pets welcome"]),
+    "cruise-cosy-chimney-cake": ("No guide included", "Winter Punch & Chimney Cake", "Heated cabin", ["Cake to share", "Not for allergies"]),
+    "cruise-360-panoramic": ("30-Lang Audio", "Tokaji Frizzante", "Seat for everyone", ["Blankets on deck", "Free Wi-Fi"]),
+    "cruise-silverline-folklore": ("Live Folk & Operetta", "3 Drinks Included", "Window table +€25", ["Mocktails"]),
+}
+
+
+def order_pills(anc, pills):
+    def lab(x):
+        m = re.search(r'<span class="bpa-lang-label">(.*?)</span>', x, re.S)
+        return H.unescape(m.group(1)).strip() if m else ""
+    by = {lab(x): x for x in pills}
+    one = lambda cls: [x for x in pills if f'class="bpa-lang {cls}' in x[:80] or f'class="bpa-lang {cls}"' in x[:80]]
+    time, acc, vibe = one("bpa-time") or [x for x in pills if "🕒" in x[:200]][:1], one("cd-access"), one("fbm-vibe")
+    assert len(time) == len(acc) == len(vibe) == 1, (anc, len(time), len(acc), len(vibe))
+    g, d, k, uniq = PILL_SLOTS[anc]
+    for l in [g, d, k] + uniq:
+        assert l in by, (anc, l, list(by))
+    out = [time[0], by[g], acc[0], by[d], vibe[0], by[k]] + [by[l] for l in uniq]
+    left = [l for l in by if by[l] not in out]
+    assert not left, (anc, "unplaced pills", left)
+    return out
+
 FAQ_SHORT = {'Can I get a window seat on the folklore cruise?': 'Window seat?', 'Can I go outside during the Legenda candlelit dinner?': 'Go outside?', 'Can I go outside on the River Diva dinner cruise?': 'Go outside?', 'Can I sit outside on the Legenda cruise?': 'Sit outside?', 'Can children come to the Legenda candlelit dinner?': 'Kids?', 'Can kids come on the Silverline prosecco cruise?': 'Kids?', 'Can kids come on the unlimited prosecco cruise?': 'Kids?', 'Can we bring a stroller on the 360° cruise?': 'Stroller?', 'Can we bring a stroller on the Kisfaludy paddle steamer?': 'Stroller?', 'Do I need earphones on La Perla?': 'Earphones?', 'Do I need earphones on the Kisfaludy paddle steamer?': 'Earphones?', 'Do I need earphones on the Legenda cruise?': 'Earphones?', "I don't like prosecco. What else is unlimited?": 'No prosecco fan?', 'Is a drink included on the Silverline sightseeing cruise?': 'Drink included?', 'Is a seat guaranteed on the 360° Panoramic Cruise?': 'Seat guaranteed?', 'Is dinner included on the folklore cruise?': 'Dinner included?', 'Is it only prosecco on the Silverline prosecco cruise?': 'Only prosecco?', 'Is it warm on board?': 'Warm on board?', 'Is the Cosy Cruise OK for food allergies?': 'Food allergies?', 'Is the Kisfaludy cruise quiet?': 'Quiet?', 'Is the Legenda candlelit dinner OK for vegans or food allergies?': 'Vegan / allergies?', "Is the Legenda cruise good if we don't drink?": 'Non-drinkers?', 'Is the Legenda cruise wheelchair accessible?': 'Wheelchair?', 'Is the Mahart night cruise wheelchair accessible?': 'Wheelchair?', 'Is the River Diva dinner cruise wheelchair accessible?': 'Wheelchair?', 'Is the Silverline upper deck worth €5 more?': 'Upper deck worth it?', 'Is the mulled wine cruise warm?': 'Warm?', 'Is the unlimited prosecco cruise a party boat?': 'Party boat?', 'Is there something for kids or non-drinkers?': 'Kids / non-drinkers?', 'What can I bring on La Perla?': 'What to bring?', 'What do you get on the Cosy Cruise?': "What's included?", 'What is the show on the folklore cruise?': 'The show?', 'What is the welcome drink on the 360° cruise?': 'Welcome drink?', 'When do the Parliament lights go off?': 'Lights off when?', 'Which drink is included on the Mahart cruise?': 'Which drink?', 'Which drinks are unlimited on River Diva?': 'Unlimited drinks?', 'Which mulled wines can I try on the Silverline cruise?': 'Which wines?', 'Will the La Perla rooftop be cold?': 'Cold on the roof?'}
 CARD_FAQ[1] = CARD_FAQ[1] + [("Is the Legenda cruise wheelchair accessible?",
     "Some of Legenda's boats are, but not all of them. Ask Legenda which boat runs your sailing before you book.")]
@@ -625,6 +665,7 @@ for n, st in enumerate(starts):
     new = time + comm + [access_pill(key)] + drinks + [pill(v[0], v[1], v[2], v[3], "fbm-vibe")] + extra
     _anc = re.search(r'class="bpa-sublink" href="#([^"]+)"', c).group(1)
     new += [pill(*p) for p in EXTRA_PILLS.get(_anc, [])]
+    new = order_pills(_anc, new)
     tt, dur, every = TT[key]
     slot = (f"<div class=\"fbm-slot\" data-tt=\"{E(json.dumps(tt))}\" data-dur=\"{dur}\""
             + (f' data-every="{every}"' if every else "") + "></div>")
@@ -849,6 +890,7 @@ s = rep(s, '<div class="bpa-deck-wrap" id="ltt-cards-deck">', '<div class="bpa-d
 # answers that used to sit only in the card FAQ now live in their pill
 for _old, _new in [
     ('<span class="bpa-lang-label">Day & evening sailings</span>', '<span class="bpa-lang-label">19 sailings · 11:00–21:00</span>'),
+    ('<span class="bpa-lang-label">16:30 · 19:30 · 21:00</span>', '<span class="bpa-lang-label">3 sailings · 16:30–21:00</span>'),
     ("Film and audio guide on your own headset.", "Film and audio guide on headsets Legenda hands out, so no earphones needed."),
     ("Scan the QR code on board, or open mahart.info on your phone.", "Scan the QR code on board, or open mahart.info on your phone. Bring your own earphones."),
     ("It has a roof with columns that block part of the view.<", "It has a roof with columns that block part of the view. For photos, the front seats and the open-air section are better.<"),
