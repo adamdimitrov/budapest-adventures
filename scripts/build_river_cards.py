@@ -974,6 +974,37 @@ STICKY_TRUST_JS = """<script id="cd-sticky-trust-js">
 </script>"""
 s = s.replace("</body>", STICKY_TRUST_JS + "\n</body>", 1)
 
+# ---- extra review sites found 17 Nov 2026 (same operator, product and dock checked on each listing) ----
+from urllib.parse import quote as _q
+def _tp(campaign, p, url):
+    return f"https://tp.media/r?campaign_id={campaign}&amp;marker=404154&amp;p={p}&amp;sub_id=best_budapest_river_cruises_en_pop&amp;trs=204442&amp;u={_q(url, safe='')}"
+EXTRA_SITES = {
+    "cruise-360-panoramic": [("Viator", 4.5, 540, _tp(47, 1922, "https://www.viator.com/tours/Budapest/Budapest-Premium-Prosecco-Boat-Cruises-and-Live-Music-Option/d499-334886P1")),
+                             ("Tripadvisor", 4.6, 397, _tp(149, 4456, "https://www.tripadvisor.com/AttractionProductReview-g274887-d25128291-Budapest_360_Panoramic_Cruise_with_Premium_Welcome_Drink-Budapest_Central_Hungary.html"))],
+    "cruise-silverline-mulled-wine": [("Tripadvisor", 4.8, 13, _tp(149, 4456, "https://www.tripadvisor.com/AttractionProductReview-g274887-d33326084-Budapest_Unlimited_Mulled_Wine_Cruise_on_the_Danube-Budapest_Central_Hungary.html"))],
+}
+def _compact(n):
+    return f"{(n // 100) / 10:.1f}".rstrip("0").rstrip(".") + "k+" if n >= 1000 else str(n)
+_icons = {alt: src for src, alt in re.findall(r'<img alt="(?:[^"]*)" class="bpa-rev-icon" loading="lazy" src="([^"]+)"/><span class="bpa-rev-site">([^<]+)</span>', s)}
+_icons = {m.group(2): m.group(1) for m in re.finditer(r'<img alt="[^"]*" class="bpa-rev-icon" loading="lazy" src="([^"]+)"/><span class="bpa-rev-site">([^<]+)</span>', s)}
+EXTRA_LD = {}
+for anc, extra in EXTRA_SITES.items():
+    j = s.index(f'<a class="bpa-sublink" href="#{anc}">Read Review')
+    ci = s.rfind('<div class="bpa-card" data-cat', 0, j)
+    cs = s.index('<div class="bpa-summary-reviews bpa-rate">', ci)
+    old = s[cs:s.index('</details></div>', cs) + len('</details></div>')]
+    g = re.search(r'href="([^"]+)"[^>]*>.*?<span class="bpa-rev-score">([\d.]+)</span><span class="bpa-rev-count">\(([^)]+)\)', old, re.S)
+    gyg_n = {"cruise-360-panoramic": 3252, "cruise-silverline-mulled-wine": 264}[anc]
+    sites = [("GetYourGuide", float(g.group(2)), gyg_n, g.group(1))] + extra
+    tot = sum(x[2] for x in sites); avg = sum(x[1] * x[2] for x in sites) / tot
+    badges = "".join(f'<a class="bpa-rev-badge is-link" href="{h}" rel="noopener nofollow sponsored" target="_blank"><img alt="{n}" class="bpa-rev-icon" loading="lazy" src="{_icons[n]}"/>'
+                     f'<span class="bpa-rev-site">{n}</span><span class="bpa-rev-score">{r:.1f}</span><span class="bpa-rev-count">({_compact(c)})</span><span class="bpa-rev-go" aria-hidden="true">→</span></a>'
+                     for n, r, c, h in sites)
+    new = (f'<div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:{avg:.2f}" aria-hidden="true"></span>'
+           f'<b class="bpa-rate-score">{avg:.1f}</b><span class="bpa-rate-meta">{_compact(tot)} reviews · {len(sites)} sites</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary>'
+           f'<div class="bpa-lang-pop"><strong>Average of {len(sites)} booking sites, weighted by number of reviews</strong><span class="bpa-rate-list">{badges}</span></div></details></div>')
+    s = s[:cs] + new + s[cs + len(old):]
+    EXTRA_LD[anc] = (round(avg, 2), tot)
 # ---- QC fixes (17 Nov 2026) ----
 def _div_end(src, start):
     """Index just past the </div> that closes the <div ...> starting at start."""
@@ -996,6 +1027,8 @@ for anc in [m.group(1) for m in re.finditer(r'<a class="bpa-sublink" href="#([^"
     re_end = re_end if re_end > 0 else ri + 90000
     blk = s[ri:re_end]
     rs = blk.find('<div class="bpa-summary-reviews">')
+    blk = re.sub(r'<div class="bpa-summary-reviews" hidden="">.*?</div></div>', "", blk, flags=re.S)
+    blk = blk.replace('<span class="bpa-rate-meta">New listing, no reviews yet</span>', '<span class="bpa-rate-meta">Live folk &amp; operetta show by Silverline Cruises</span>')
     if rs >= 0:  # review header: same rating component as the card (none when the cruise has no ratings yet)
         blk = blk[:rs] + card_rating + blk[_div_end(blk, rs):]
     blk = blk.replace('<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>', f'<span class="ltt-buy-perk">{PERK_BY_SELLER[kind]}</span>')
@@ -1045,6 +1078,9 @@ for _n in data["@graph"]:
             _it = _el.get("item", {})
             if isinstance(_it.get("aggregateRating"), dict) and not _it["aggregateRating"].get("ratingValue"):
                 del _it["aggregateRating"]  # folklore: no ratings yet; an empty rating is invalid
+            for _anc, _nm in (("cruise-360-panoramic", "360° Panoramic"), ("cruise-silverline-mulled-wine", "Unlimited Mulled Wine")):
+                if _nm in _it.get("name", "") and _anc in EXTRA_LD:
+                    _it["aggregateRating"] = {"@type": "AggregateRating", "ratingValue": str(EXTRA_LD[_anc][0]), "bestRating": "5", "worstRating": "1", "reviewCount": str(EXTRA_LD[_anc][1])}
             _of = _it.get("offers")
             if isinstance(_of, dict) and not _of.get("price"):
                 _nm = _it.get("name", "")
