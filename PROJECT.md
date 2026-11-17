@@ -100,16 +100,16 @@
 - Language switcher rule: On the tourism statistics pages (`budapest-tourism-statistics.html` and `hu/budapest-turizmus-statisztika`), the language switcher shows EN and HU only. On ALL other pages, the language switcher retains the full 22 languages — never overwrite or truncate standard pages to EN/HU.
 - The footer lists only the five cruise money pages plus About and Contact. Do not add other guides to it.
 
-## Photos and lazy loading (QC: `scripts/check_lazy_images.py`, runs in CI)
+## Photos and lazy loading (QC: `kit/checks/check_lazy_images.py`, runs in CI)
 - Carousel photos after the first may ship as placeholders with the real URL in `data-src` / `data-srcset`.
   Any page that does this MUST ship the slider loader (`loadSliderImages()` called from `bpaSlide()` and wired
   to swipe/touch), or slides 2+ stay blank. The first photo of every carousel keeps a real `src`.
 - Image paths are absolute (`/assets/...`), never relative (`assets/...`): relative paths break on language subpages.
-- After any script that rewrites images (e.g. Lighthouse/perf passes), run `python3 scripts/check_lazy_images.py`;
+- After any script that rewrites images (e.g. Lighthouse/perf passes), run `python3 kit/checks/check_lazy_images.py`;
   `--fix` upgrades old slider runtimes in place. CI fails the PR on any problem.
 - No photos hotlinked from other sites: only our own files or the hosts in `ALLOWED_IMAGE_HOSTS`.
 
-## Filter pills (QC: `scripts/check_filters.py`, runs in CI)
+## Filter pills (QC: `kit/checks/check_filters.py`, runs in CI)
 - The filter runtime (`lttFilterItems` + `btnGroup`) only treats buttons WITH `data-group` as filters.
   Every `.ltt-tab-btn` except `data-cat="all"` MUST carry `data-group` (single-group pages use `"fit"`),
   and only the "all" button is `active` in the markup. Without it every pill renders orange/active and
