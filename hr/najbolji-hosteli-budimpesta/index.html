@@ -8633,12 +8633,41 @@ window.LTT_PAGE_CONFIG = {"deckId": "budapest-hostels-deck", "tocDeckLabel": "To
     new MutationObserver(purgeWebflowBadge).observe(document.documentElement, { childList: true, subtree: true });
   }
 
-  // 1. Slider controls
+  // 1. Slider controls with Progressive Lazy-Loading
+  function loadSliderImages(slider) {
+    if (!slider || slider._loaded) return;
+    slider._loaded = true;
+    var lazyImgs = slider.querySelectorAll('img[data-src]');
+    for (var i = 0; i < lazyImgs.length; i++) {
+      var img = lazyImgs[i];
+      if (img.getAttribute('data-srcset')) {
+        img.setAttribute('srcset', img.getAttribute('data-srcset'));
+        img.removeAttribute('data-srcset');
+      }
+      img.src = img.getAttribute('data-src');
+      img.removeAttribute('data-src');
+    }
+  }
+
+  function initLazySliders() {
+    document.querySelectorAll('.bpa-slider').forEach(function(slider) {
+      if (slider._lazyBound) return;
+      slider._lazyBound = true;
+      var media = slider.closest('.bpa-media');
+      if (media) {
+        media.addEventListener('mouseenter', function() { loadSliderImages(slider); }, { once: true, passive: true });
+        media.addEventListener('touchstart', function() { loadSliderImages(slider); }, { once: true, passive: true });
+      }
+      slider.addEventListener('scroll', function() { loadSliderImages(slider); }, { once: true, passive: true });
+    });
+  }
+
   window.bpaSlide = function(btn, dir) {
     var media = btn.closest('.bpa-media');
     if (!media) return;
     var slider = media.querySelector('.bpa-slider');
     if (!slider) return;
+    loadSliderImages(slider);
     var w = slider.clientWidth;
     slider.scrollBy({ left: dir * w, behavior: 'smooth' });
   };
@@ -9201,6 +9230,7 @@ window.LTT_PAGE_CONFIG = {"deckId": "budapest-hostels-deck", "tocDeckLabel": "To
   }, { passive: true });
 
   function initAll() {
+    initLazySliders();
     initHybridSheet();
     syncSidebarTOC();
     initAllFilmstrips();
