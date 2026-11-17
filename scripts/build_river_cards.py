@@ -387,6 +387,23 @@ FILTER_CATS = {
     "cruise-360-panoramic": "calm kids drinkincl audio hour under20",
     "cruise-silverline-folklore": "romantic drinkincl music",
 }
+# Accessibility re-checked 17 Nov 2026 on the operator sites and listings (label, wheelchair, stroller, toilet, kids & pets)
+ACCESS.update({
+    1: ("Access &amp; kids", (None, "some Legenda boats are accessible, not all: ask Legenda which boat runs your sailing"), None, None,
+        "free under 10; €14 for ages 10-14 by day, €17.50 in the evening"),
+    2: ("Folding strollers only", (None, "varies by boat and dock; mobility scooters not allowed"), (True, "folding strollers only, non-folding ones are not allowed"), None,
+        "free under 4, full price for 4-17; small dogs welcome on a lead with a muzzle"),
+    5: ("No wheelchair access", (False, "the boat has no wheelchair access"), None, None, "free under 4, full price from 4; no dogs except service dogs"),
+    7: ("Adults only (18+)", (False, "no wheelchair access"), None, None, "under-18s not allowed; not for pregnant guests; no dogs except service dogs"),
+    "cruise-silverline-mulled-wine": ("No wheelchair access", (False, "not suitable for wheelchair users; no electric wheelchairs"), None, None,
+        "one price for every age; alcohol only from 18, alcohol-free punch for kids; no dogs except service dogs"),
+    "cruise-silverline-folklore": ("No wheelchair access", (False, "no wheelchair access"), None, None, "alcohol only from 18, mocktails available; no dogs except service dogs"),
+})
+CARD_FAQ[1] = CARD_FAQ[1] + [("Is the Legenda cruise wheelchair accessible?",
+    "Some of Legenda's boats are, but not all of them. Ask Legenda which boat runs your sailing before you book.")]
+CARD_FAQ[2] = [qa if not qa[0].startswith("Can kids come") else (qa[0],
+    "Yes. Children 4 to 17 pay the adult price and under-4s ride free. Folding strollers are fine; non-folding ones are not allowed.")
+    for qa in CARD_FAQ[2]]
 FAQ_ORDER = []
 CAT_BY_ANCHOR = {}
 
@@ -399,7 +416,7 @@ def pill(emoji, label, lead, note, cls=""):
 
 def access_pill(key):
     lab, wc, st, wc2, kids = ACCESS[key]
-    mark = lambda v: '<span class="cd-yes">✓</span>' if v else '<span class="cd-no">✕</span>'
+    mark = lambda v: '<span class="cd-yes">✓</span>' if v is True else ('<span class="cd-no">✕</span>' if v is False else '<span class="cd-ask">ⓘ</span>')
     rows = ""
     if wc:
         rows += f'<span class="bpa-lang-note">♿ <b>Wheelchair:</b> {mark(wc[0])} {E(wc[1])}</span>'
@@ -682,6 +699,7 @@ css += """<style id="fbm-days-css">
 .fbm-mrow .fbm-mnote{text-align:left!important;align-self:stretch}
 .fbm-other input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;border:0;padding:0}
   .fbm-msub{font:500 13.5px/1.4 'Plus Jakarta Sans',sans-serif;color:#475569;margin-top:-4px}
+.cd-ask{color:#b45309;font-weight:800}
 .fbm-mrow .fbm-mnote{font:700 14px/1.45 'Plus Jakarta Sans',sans-serif!important;color:#92400e!important}
 </style>"""
 js += r"""<script id="fbm-days-js">
