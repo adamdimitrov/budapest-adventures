@@ -1178,6 +1178,7 @@ def block(tag, i):
 
 css = block("style", "cd-cards-css") + block("style", "cd-tested-css") + block("style", "cd-filters-css") + block("style", "fbm-css")
 js = block("script", "cd-cards-js") + block("script", "cd-filters-js") + block("script", "fbm-js")
+import sys as _sys, os as _os; _sys.path.insert(0, _os.path.dirname(__file__)); import gallery_fix; js = gallery_fix.patch(js)
 _old_note = "note.textContent='Sunset '+SUN+', fully dark by '+DARK+' on '+name+'. Each card shows which sailings are lit up.';"
 assert js.count(_old_note) == 1
 js = js.replace(_old_note, "note.textContent='\U0001F307 Sunset '+SUN+': board about 20 min before ('+hm(sun-20)+') to catch it  \u00b7  \U0001F303 City lit up '+DARK+' to 22:00 ('+name+')';")
