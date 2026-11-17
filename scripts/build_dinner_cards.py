@@ -582,6 +582,22 @@ css = "".join(block("style", i) for i in ("cd-cards-css", "cd-tested-css", "cd-f
 css += ('<style id="dc-rate-plain-css">.bpa-rev-badge:not(.is-link){cursor:default}</style>')
 # no cd-sticky-trust-js: the sticky bar always shows "Free cancellation"
 js = "".join(block("script", i) for i in ("cd-cards-js", "cd-filters-js", "fbm-js", "cd-fmore-js", "fbm-days-js"))
+# Price dropdown opens on hover like the pills (mouse only): hover opens, leaving closes, a click pins it open.
+js += """<script id="cd-pdd-hover-js">
+(function(){
+  if(!(window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches)) return;
+  document.querySelectorAll('.cd-pdd').forEach(function(d){
+    var sum=d.querySelector('summary'), pinned=false, t=null;
+    d.addEventListener('mouseenter',function(){ clearTimeout(t); if(!d.open){ pinned=false; d.open=true; } });
+    d.addEventListener('mouseleave',function(){ if(pinned) return; t=setTimeout(function(){ d.open=false; },120); });
+    sum.addEventListener('click',function(e){
+      if(d.open && !pinned){ e.preventDefault(); pinned=true; return; }  // opened by hover: the click pins it
+      pinned=!d.open;
+    });
+    d.addEventListener('toggle',function(){ if(!d.open) pinned=false; });
+  });
+})();
+</script>"""
 s = rep(s, "</head>", css + "</head>", where="css")
 k = s.rfind("</body>")
 s = s[:k] + js + "\n" + s[k:]
