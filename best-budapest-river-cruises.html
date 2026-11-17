@@ -804,7 +804,7 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 <div aria-live="polite" class="bpa-ai-answer" hidden="" id="bpa-ai-answer"></div>
 </form>
 <script>
-(function(){
+function bpaAiInit(){
   var form=document.getElementById('bpa-ai-finder'); if(!form) return;
   var q=document.getElementById('bpa-ai-q'), go=document.getElementById('bpa-ai-go'), out=document.getElementById('bpa-ai-answer');
   var deck=document.getElementById('ltt-cards-deck'), original=null, used=false, picked={};
@@ -862,7 +862,8 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
     var card=a.closest('.bpa-card');
     ga('cruise_cta_click',{card_id:card?card.id:'',used_ai_finder:used?'yes':'no',ai_pick:(card&&picked[card.id])?'yes':'no'});
   });
-})();
+}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',bpaAiInit);}else{bpaAiInit();}
 </script>
 <span class="ltt-filter-label">Or tap a quick pick:</span>
 <div class="ltt-integrated-pills">
