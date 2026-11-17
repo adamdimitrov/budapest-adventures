@@ -33,8 +33,8 @@ _client = None
 # Abuse limits, so a bot can't run up Anthropic costs. Counters live in the function instance's memory
 # (Fluid Compute reuses instances), on top of the CDN cache that serves repeated questions for free.
 # The hard money cap is the monthly spend limit set in the Anthropic Console.
-PER_IP_MINUTE = int(os.environ.get("CRUISE_FINDER_IP_PER_MIN", "8"))
-PER_IP_DAY = int(os.environ.get("CRUISE_FINDER_IP_PER_DAY", "40"))
+PER_IP_MINUTE = int(os.environ.get("CRUISE_FINDER_IP_PER_MIN", "10"))
+PER_IP_DAY = int(os.environ.get("CRUISE_FINDER_IP_PER_DAY", "80"))
 INSTANCE_DAY = int(os.environ.get("CRUISE_FINDER_DAILY_CAP", "1500"))
 ALLOWED_HOSTS = re.compile(r"^(www\.)?budapestadventures\.com$|^budapest-adventures[a-z0-9-]*\.vercel\.app$|^localhost(:\d+)?$")
 _hits = {}          # ip -> list of request times in the last 24 h
@@ -62,11 +62,22 @@ def over_limit(ip):
     return False
 
 
-def from_our_site(headers):
-    """Browsers send Sec-Fetch-Site and Referer on the page's own fetch; plain scripts usually don't."""
-    if headers.get("Sec-Fetch-Site") == "same-origin":
-        return True
-    ref = headers.get("Referer") or headers.get("Origin") or ""
+BOT_UA = re.compile(r"bot|crawl|spider|slurp|scrapy|curl|wget|python|httpx|aiohttp|go-http|node-fetch|undici|axios|okhttp|"
+                    r"java/|libwww|postman|insomnia|headless|phantom|puppeteer|playwright|selenium|^$", re.I)
+
+
+def looks_like_a_person(headers):
+    """The page's own fetch from a real browser. Scripts and crawlers fail at least one of these checks;
+    no browser a visitor uses does (older Safari without Sec-Fetch still sends Referer)."""
+    ua = headers.get("User-Agent") or ""
+    if BOT_UA.search(ua) or "Mozilla/" not in ua:
+        return False
+    if not headers.get("Accept-Language"):
+        return False
+    site = headers.get("Sec-Fetch-Site")
+    if site is not None and site != "same-origin":
+        return False
+    ref = headers.get("Referer") or ""
     host = urlparse(ref).netloc.lower()
     return bool(host and ALLOWED_HOSTS.match(host))
 
@@ -251,7 +262,7 @@ class handler(BaseHTTPRequestHandler):
             return self._send(400, {"error": "unknown_page"})
         if len(q) < 2:
             return self._send(400, {"error": "empty_question"})
-        if not from_our_site(self.headers):
+        if not looks_like_a_person(self.headers):
             return self._send(403, {"error": "forbidden"})
         ip = (self.headers.get("X-Forwarded-For") or self.headers.get("X-Real-Ip") or "?").split(",")[0].strip()
         if over_limit(ip):
