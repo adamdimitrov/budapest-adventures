@@ -404,7 +404,7 @@ ACCESS.update({
 # and recent guest reviews summarised in api/_knowledge/best-budapest-river-cruises.json.
 EDGE_QA = {
     "cruise-1-legenda": [
-        ("Do I need to book ahead?", "Evening sailings in December and on weekends can sell out. Cancellation is free up to 24 hours before, so booking early costs nothing."),
+        ("Do I need to book ahead?", "No, you can book on the same day too. Evening sailings in December and on weekends can sell out, though, and cancellation is free up to 24 hours before, so booking early costs nothing."),
         ("Day or evening?", "Evening: 17 of 64 recent guests name the lit-up city as the highlight. The Parliament's lights go off at 22:00."),
         ("Will I get a good seat?", "Seats are not assigned, so arrive 15 to 20 minutes early. A few guests felt the boat was busy."),
         ("What if my headset doesn't work?", "Guests say there are plenty of spare headsets on board."),
@@ -859,7 +859,22 @@ css = block("style", "cd-cards-css") + block("style", "cd-tested-css") + block("
 js = block("script", "cd-cards-js") + block("script", "cd-filters-js") + block("script", "fbm-js")
 _old_note = "note.textContent='Sunset '+SUN+', fully dark by '+DARK+' on '+name+'. Each card shows which sailings are lit up.';"
 assert js.count(_old_note) == 1
-js = js.replace(_old_note, "note.textContent='\U0001F305 Sunset '+SUN+'  \u00b7  \U0001F303 City fully lit from '+DARK+' ('+name+')';")
+js = js.replace(_old_note, "note.textContent='\U0001F307 Sunset '+SUN+'  \u00b7  \U0001F303 City lit up '+DARK+' to 22:00 ('+name+')';")
+# Lights row on every card: when the city is lit (dusk to the Parliament's 22:00 switch-off), which sailings fall in it,
+# then the exact sunset and the sailing to board to watch the lights come on.
+_old_rows = """        h='';
+        if(lit.length) h+='🌙 <b>Fully lit on '+name+':</b> '+(lit.length>3&&lit.every(function(t,k){return !k||m(t)-m(lit[k-1])===20;})?span(lit[0],'lit')+' then every 20 min to '+span(lit[lit.length-1],'lit'):lit.map(function(t){return span(t,'lit');}).join(''));
+        if(dusk.length) h+=(h?'<br>':'')+'🌇 <b>Sunset into lights:</b> '+dusk.map(function(t){return span(t,'dusk');}).join('');"""
+_new_rows = """        var OFF=22*60, inLit=lit.filter(function(t){return m(t)<OFF;}), late=lit.length-inLit.length;
+        var ev=inLit.length>3&&inLit.every(function(t,k){return !k||m(t)-m(inLit[k-1])===m(inLit[1])-m(inLit[0]);}), step=inLit.length>1?m(inLit[1])-m(inLit[0]):0;
+        h='🌃 <b>City lit up on '+name+': '+DARK+' to 22:00</b> <span class="fbm-why" title="Lights are on from dusk, about 30 minutes after sunset, until the Parliament switches its floodlights off at 22:00.">ⓘ</span>';
+        h+=inLit.length?'<br><span class="fbm-sub">Board for the lights: '+(ev?span(inLit[0],'lit')+' then every '+step+' min to '+span(inLit[inLit.length-1],'lit'):inLit.map(function(t){return span(t,'lit');}).join(''))+(late?' (later sailings: city lit, Parliament dark)':'')+'</span>'
+                       :'<br><span class="fbm-sub">'+(late?'Its sailings start after 22:00: the city is lit, the Parliament is dark.':'No sailing starts after dark on this date.')+'</span>';
+        h+='<br>🌇 <b>Sunset '+SUN+'</b>'+(dusk.length?': board the '+dusk.map(function(t){return span(t,'dusk');}).join(' or ')+' to watch the lights come on':': no sailing catches the lights coming on');"""
+assert js.count(_old_rows) == 1, "rows"
+js = js.replace(_old_rows, _new_rows)
+css += '<style id="fbm-lights-css">.fbm-slot .fbm-sub{font-weight:500;color:#475569}.fbm-why{cursor:help;color:#b45309;font-weight:800}</style>'
+
 # Baymard on phones: truncate the long filter list behind "More filters (N)"; rows with an active filter stay open
 css += """<style id="cd-fmore-css">
 .cd-fmore{display:none}
