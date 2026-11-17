@@ -3690,4 +3690,18 @@ a.cd-editorial-bookmark::after{content:"\203A"!important;position:static!importa
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
 })();
 </script>
+<script id="pdd-hover-js">
+/* Price dropdown opens on hover like the pills (desktop with a mouse only); a click pins it open. */
+(function(){
+  if(!(window.matchMedia&&matchMedia('(hover: hover) and (pointer: fine)').matches)) return;
+  function init(){ document.querySelectorAll('.cd-pdd').forEach(function(d){
+    var t, pinned=false, sm=d.querySelector('summary'); if(!sm) return;
+    d.addEventListener('mouseenter',function(){ clearTimeout(t); if(!d.open){ d.dataset.hov='1'; d.open=true; } });
+    d.addEventListener('mouseleave',function(){ if(pinned) return; t=setTimeout(function(){ if(d.dataset.hov){ delete d.dataset.hov; d.open=false; } },180); });
+    sm.addEventListener('click',function(e){ if(d.dataset.hov){ e.preventDefault(); delete d.dataset.hov; pinned=true; } else { pinned=!d.open; } });
+    d.addEventListener('toggle',function(){ if(!d.open){ pinned=false; delete d.dataset.hov; } });
+  }); }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
 </body></html>
