@@ -193,7 +193,7 @@ EDGE_QA = {
         ("Is the food good?", "55 of 70 recent guests talk about the food, nearly all positively. I chose from 17 dishes on my test dinner."),
         ("Is it loud?", "No. A pianist and singer play lounge music, quiet enough to talk. There is no loud folk show."),
         ("Can I reserve a window table?", "No. Legenda doesn't take seat or table requests, whatever you book: tables are assigned on board."),
-        ("Can I cancel or change the date?", "Booked direct with Legenda, cancellation is free up to 72 hours before. Legenda can also move your ticket to another day at its pier, if seats are free.")],
+        ("Can I cancel or change the date?", "Booked direct with Legenda, cancellation is free up to 72 hours before. You can also move your ticket to another day, if seats are free; it doesn't have to be done at the pier.")],
     HK: [("Is the food good?", "44 of 61 recent guests talk about the food, almost all positively. 2 found it lukewarm or a bit dry."),
          ("Show or sightseeing?", "A show night. The band plays requests at the tables and the dancers come round for photos; you can step out on deck to watch the city."),
          ("Set menu or buffet?", "The listing shows three set menus served at your table. 6 of 61 recent guests had a buffet on their date."),
@@ -238,18 +238,18 @@ FILTER_CATS = {
 # Booking terms per seller (bold promise + lighter detail). Owner's rule: free cancellation is always one of the promises.
 #  GetYourGuide listings: "Free cancellation: cancel up to 24 hours in advance for a full refund"; "Reserve now and pay later".
 #  Legenda direct: free cancellation confirmed by the owner (a Legenda partner), 72 h for dinner cruises (24 h for sightseeing);
-#    Legenda FAQ: tickets can be moved to another day at the pier, subject to availability.
+#    Date change: possible anywhere, not only at the Legenda pier (owner, 17 Nov 2026), subject to availability.
 #  Silverline direct: silver-line.hu/faq (checked 17 Nov 2026): "Cancelling or modifying a reservation 24 hours before departure -
 #    100% of the amount is to be refunded"; within 24 h not refundable. (Their T&C mentions a 10% fee; the owner chose the FAQ.)
 TRUST = {
     "gyg": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
-    "legenda": ["<b>Change your date</b> at the Legenda pier", "<b>Free cancellation</b> up to 72 h before, full refund"],
+    "legenda": ["<b>Change your date</b> anywhere, not just at the pier", "<b>Free cancellation</b> up to 72 h before, full refund"],
     "silverline": ["<b>Free date change</b> up to 24 h before", "<b>Free cancellation</b> up to 24 h before, full refund"],
 }  # exactly 2 per card, free cancellation always 2nd (owner's rule)
 REVIEW_TERMS = {  # (buy-card perk, buy-card trust line, quick-facts cancellation row)
     "gyg": ("Free cancellation up to 24 h", "Free cancellation up to 24 hours before", "Free cancellation up to 24 hours before; pay nothing today"),
     "legenda": ("Free cancellation up to 72 h", "Free cancellation up to 72 hours before",
-                "Free cancellation up to 72 hours before; date change at the Legenda pier, if seats are free"),
+                "Free cancellation up to 72 hours before; date change anywhere, if seats are free"),
     "silverline": ("Free cancellation up to 24 h", "Free cancellation or date change up to 24 hours before",
                    "Free cancellation or date change up to 24 hours before departure; no refund within 24 hours"),
 }
@@ -637,5 +637,8 @@ for m in re.finditer(r'<div class="bpa-trust2">(.*?)</div>', s):  # exactly 2 pr
     assert len(spans) == 2 and spans[1].startswith("<b>Free cancellation</b>"), m.group(1)
 assert not re.search(r"10% fee|Full refund up to 24 hours before departure", s)
 
+# the shared runtime version moves with the kit: take it from the current river page, not from the old base
+_rt = re.search(r'/js/site-runtime\.js\?v=([0-9a-f]+)', (ROOT / "best-budapest-river-cruises.html").read_text(encoding="utf-8")).group(1)
+s = re.sub(r'(/js/site-runtime\.js\?v=)[0-9a-f]+', r"\g<1>" + _rt, s)
 (ROOT / PAGE).write_text(s, encoding="utf-8")
 print("ok", PAGE, len(s))
