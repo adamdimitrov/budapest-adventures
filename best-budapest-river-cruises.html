@@ -3431,10 +3431,6 @@ a.cd-editorial-bookmark::after{content:"\203A"!important;position:static!importa
   function upd(){ var n=(r.textContent.match(/#(\d+)/)||[])[1], c=n&&document.getElementById('card-'+n), b=c&&c.querySelector('.bpa-trust2 b'); if(b) t.textContent=b.textContent; }
   new MutationObserver(upd).observe(r,{childList:true,characterData:true,subtree:true}); upd(); })();
 </script>
-<script id="cd-rate-in-summary-js">
-document.addEventListener('click',function(e){ var sm=e.target.closest('.bpa-details-card .bpa-rate-sum'); if(!sm) return;
-  e.preventDefault(); e.stopPropagation(); var d=sm.parentNode; d.open=!d.open; },true);
-</script>
 <style id="cd-trust-css">
 .bpa-card .bpa-trust2{display:flex!important;flex-direction:column!important;align-items:stretch;gap:5px!important;width:100%;box-sizing:border-box;
   margin-top:8px;padding:8px 10px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;

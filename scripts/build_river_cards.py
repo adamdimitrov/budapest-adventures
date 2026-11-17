@@ -1044,7 +1044,7 @@ RATE_IN_SUMMARY_JS = """<script id="cd-rate-in-summary-js">
 document.addEventListener('click',function(e){ var sm=e.target.closest('.bpa-details-card .bpa-rate-sum'); if(!sm) return;
   e.preventDefault(); e.stopPropagation(); var d=sm.parentNode; d.open=!d.open; },true);
 </script>"""
-s = s.replace("</body>", RATE_IN_SUMMARY_JS + "\n</body>", 1)
+# RATE_IN_SUMMARY_JS not needed: clicking the rating only toggles its own <details>, and the card script floats the list
 
 # Trust lines under the CTA: bold promise + lighter detail, check-circle icons, soft green box
 for _old, _new in [("✓ Instant mobile ticket", "<b>Instant mobile ticket</b> on your phone"),
