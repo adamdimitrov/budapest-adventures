@@ -17,7 +17,7 @@ What it ports from the river page (scripts/build_river_cards.py):
 - review headers use the card's rating component; FAQPage built from the card questions
 
 Facts were checked on 17 November 2026 on each seller's own page: legenda.hu (via the river page data),
-budapestrivercruise.eu (Dinner & Lights, Folk & Operetta, T&C), GetYourGuide t1593, t408084, t401526,
+budapestrivercruise.eu (Dinner & Lights, Folk & Operetta), silver-line.hu/faq, GetYourGuide t1593, t408084, t401526,
 t494832 and t54081. Guest-review themes: api/_knowledge/best-dinner-cruises-budapest.json.
 """
 import html as H
@@ -192,7 +192,7 @@ EDGE_QA = {
         ("Is the food good?", "55 of 70 recent guests talk about the food, nearly all positively. I chose from 17 dishes on my test dinner."),
         ("Is it loud?", "No. A pianist and singer play lounge music, quiet enough to talk. There is no loud folk show."),
         ("Are drinks included?", "Only the welcome drink. Every other drink is paid on board."),
-        ("Can I change the date?", "Legenda can move your ticket to another day at its pier, if seats are free. Same-day booking works too.")],
+        ("Can I cancel or change the date?", "Booked direct with Legenda, cancellation is free up to 72 hours before. Legenda can also move your ticket to another day at its pier, if seats are free.")],
     HK: [("Is the food good?", "44 of 61 recent guests talk about the food, almost all positively. 2 found it lukewarm or a bit dry."),
          ("Show or sightseeing?", "A show night. The band plays requests at the tables and the dancers come round for photos; you can step out on deck to watch the city."),
          ("Set menu or buffet?", "The listing shows three set menus served at your table. 6 of 61 recent guests had a buffet on their date."),
@@ -201,7 +201,7 @@ EDGE_QA = {
     S: [("Which option should I book?", "Dinner &amp; Lights (€77) for a quiet dinner and the views, or the Folk &amp; Operetta Show (€91) for singers and folk dancers. Same boat, same menu."),
         ("Are drinks included?", "Only the welcome drink. 2 of 31 recent guests wish more were included at this price."),
         ("Is the window seat worth it?", "It costs €15 extra on Dinner &amp; Lights. One recent guest said the window table was worth the money."),
-        ("Can I cancel?", "Booked direct with Silverline: cancel more than 24 hours ahead for a refund minus a 10% fee; no refund within 24 hours."),
+        ("Can I cancel or change the date?", "Yes, free up to 24 hours before departure when you book direct with Silverline. Within 24 hours there is no refund."),
         ("When should I arrive?", "Boarding opens 45 minutes before the 19:00 departure. Arrive at least 30 minutes early.")],
     SE: [("Is the food good?", "39 of 52 recent guests talk about the food, mostly positively; a few call it fine rather than special."),
          ("Can I go outside?", "Yes. Guests say you can step out on deck for photos of the lit-up Parliament at any point."),
@@ -234,21 +234,23 @@ FILTER_CATS = {
     G: "folk supper short under70",
 }
 
-# Booking terms per seller, verified 17 Nov 2026 (bold promise + lighter detail)
+# Booking terms per seller (bold promise + lighter detail). Owner's rule: free cancellation is always one of the promises.
 #  GetYourGuide listings: "Free cancellation: cancel up to 24 hours in advance for a full refund"; "Reserve now and pay later".
-#  Legenda FAQ: tickets can be transferred to another day at the pier, subject to availability; no published refund policy.
-#  Silverline T&C: cancel over 24 h ahead = refund minus 10% handling fee, within 24 h no refund; e-ticket by email.
+#  Legenda direct: free cancellation confirmed by the owner (a Legenda partner), 72 h for dinner cruises (24 h for sightseeing);
+#    Legenda FAQ: tickets can be moved to another day at the pier, subject to availability.
+#  Silverline direct: silver-line.hu/faq (checked 17 Nov 2026): "Cancelling or modifying a reservation 24 hours before departure -
+#    100% of the amount is to be refunded"; within 24 h not refundable. (Their T&C mentions a 10% fee; the owner chose the FAQ.)
 TRUST = {
     "gyg": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
-    "legenda": ["<b>Book for tonight</b>: same-day booking works", "<b>Change your date</b> at the Legenda pier, if seats are free"],
-    "silverline": ["<b>Book for tonight</b>: same-day booking works", "<b>E-ticket by email</b> as soon as you book"],
+    "legenda": ["<b>Free cancellation</b> up to 72 h", "<b>Book for tonight</b>, same day", "<b>Change your date</b> at the pier"],
+    "silverline": ["<b>Free cancellation</b> up to 24 h", "<b>Free date change</b> up to 24 h", "<b>Book for tonight</b>, same day"],
 }
 REVIEW_TERMS = {  # (buy-card perk, buy-card trust line, quick-facts cancellation row)
     "gyg": ("Free cancellation up to 24 h", "Free cancellation up to 24 hours before", "Free cancellation up to 24 hours before; pay nothing today"),
-    "legenda": ("Date change at the pier", "Change your date at the Legenda pier, if seats are free",
-                "Tickets can be moved to another day at the Legenda pier, if seats are free"),
-    "silverline": ("E-ticket by email", "E-ticket by email as soon as you book",
-                   "Cancel over 24 h ahead: refund minus a 10% fee; no refund within 24 h"),
+    "legenda": ("Free cancellation up to 72 h", "Free cancellation up to 72 hours before",
+                "Free cancellation up to 72 hours before; date change at the Legenda pier, if seats are free"),
+    "silverline": ("Free cancellation up to 24 h", "Free cancellation or date change up to 24 hours before",
+                   "Free cancellation or date change up to 24 hours before departure; no refund within 24 hours"),
 }
 
 
@@ -443,8 +445,9 @@ TEXT = [
     ("Operating custom-built all-glass panoramic vessels, they deliver", "They deliver", 1),
     ('<div class="qf1-val">From €66 (€73.80 on Sat 28 Nov 2026)</div>', '<div class="qf1-val">From €66; weekend evenings can cost more</div>', 1),
     ('<span class="hybrid-active-price" id="sticky-price">From €110</span>', '<span class="hybrid-active-price" id="sticky-price">€110</span>', 1),
-    ('<span class="hybrid-active-trust">Free 24h Cancellation</span>', '<span class="hybrid-active-trust" id="sticky-trust">Book for tonight</span>', 1),
-    ('data-sub="Free cancellation up to 24h" data-title="4-Course Romantic Candlelit', 'data-sub="Date change at the Legenda pier" data-title="4-Course Romantic Candlelit', 1),
+    ('<span class="hybrid-active-trust">Free 24h Cancellation</span>', '<span class="hybrid-active-trust" id="sticky-trust">Free cancellation</span>', 1),
+    ('data-sub="Free cancellation up to 24h" data-title="4-Course Romantic Candlelit', 'data-sub="Free cancellation up to 72h" data-title="4-Course Romantic Candlelit', 1),
+    ('data-sub="3 shows • €77 or €91"', 'data-sub="Free cancellation up to 24h"', None),
 ]
 for old, new, cnt in TEXT:
     k = s.count(old)
@@ -567,10 +570,9 @@ for m in re.finditer(r'<a [^>]*href="(https://(?:www\.getyourguide\.com|legenda\
     rel = re.search(r'rel="([^"]*)"', tag)
     assert rel and {"nofollow", "sponsored", "noopener"} <= set(rel.group(1).split()), tag[:160]
 assert "0.0" not in re.findall(r'bpa-rate-score">([^<]*)', s)
-for anc in (L, S):  # never a free-cancellation claim on the direct sellers
-    blk = s[s.index(f'id="{anc}"', s.index('<details class="bpa-details-card"')):]
-    blk = blk[:blk.find('<details class="bpa-details-card"', 10) if blk.find('<details class="bpa-details-card"', 10) > 0 else 90000]
-    assert not re.search(r"(?i)free cancellation|full refund", blk), anc
+for m in re.finditer(r'<div class="bpa-trust2">(.*?)</div>', s):  # free cancellation is always one of the promises
+    assert "<b>Free cancellation</b>" in m.group(1), m.group(1)
+assert not re.search(r"10% fee|Full refund up to 24 hours before departure", s)
 
 (ROOT / PAGE).write_text(s, encoding="utf-8")
 print("ok", PAGE, len(s))
