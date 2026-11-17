@@ -67,7 +67,8 @@
     if (!pillOnly) loadSliderImages(slider);
     var media = slider.closest('.bpa-media');
     if (!media) return;
-    var pill = media.querySelector('.bpa-pill');
+    // older guide pages (airport, parliament, things to do, statistics) name it .bpa-counter-pill
+    var pill = media.querySelector('.bpa-pill, .bpa-counter-pill');
     if (!pill) return;
     var first = slider.firstElementChild;
     var w = (first ? first.getBoundingClientRect().width + (parseFloat(getComputedStyle(slider).columnGap) || 0) : slider.clientWidth) || 1;
