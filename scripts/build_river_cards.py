@@ -355,6 +355,16 @@ TT.update({
     "cruise-silverline-mulled-wine": (nd(["16:30", "18:00", "19:30", "21:00"]), 60, None),
     "cruise-silverline-folklore": (nd(["19:00"]), 135, None),
 })
+# Baymard: thematic filters for real needs. Live music/show, good with kids (free or reduced child fares,
+# no party/18+ boats), wheelchair-accessible boat. Keyed by the card's review anchor.
+EXTRA_CATS = {
+    "item-5-river-diva-dinner": " music kids wheelchair",
+    "item-4-legenda-candlelit-dinner": " music kids",
+    "cruise-silverline-folklore": " music",
+    "cruise-1-legenda": " kids", "cruise-3-kisfaludy-historic-cruise": " kids", "cruise-10-mahart": " kids",
+    "cruise-5-silverline-no-frills": " kids", "cruise-6-la-perla": " kids", "cruise-cosy-chimney-cake": " kids",
+    "cruise-360-panoramic": " kids",
+}
 FAQ_ORDER = []
 CAT_BY_ANCHOR = {}
 
@@ -417,10 +427,10 @@ for n, st in enumerate(starts):
     anc = re.search(r'class="bpa-sublink" href="#([^"]+)"', s[st:ends[n]]).group(1)
     key = OLD.get(anc, anc)
     FAQ_ORDER.append(key)
-    CAT_BY_ANCHOR[anc] = CARDS[key]["cat"]
+    CAT_BY_ANCHOR[anc] = CARDS[key]["cat"] + EXTRA_CATS.get(anc, "")
     c = s[st:ends[n]]
     d = CARDS[key]
-    c = re.sub(r'data-cat="[^"]*"', f'data-cat="{d["cat"]}"', c, count=1)
+    c = re.sub(r'data-cat="[^"]*"', f'data-cat="{CAT_BY_ANCHOR[anc]}"', c, count=1)
     mi, ii = c.find('<div class="bpa-media">'), c.find('\n<div class="bpa-info">')
     media = c[mi:ii]
     c = c[:mi] + '<div class="cd-gal">' + media + thumbs(media) + "</div>" + c[ii:]
@@ -555,14 +565,17 @@ fbox = (
     '<button type="button" class="fbm-day" data-day="1" aria-pressed="false">Tomorrow</button>'
     '<label class="fbm-day fbm-other">📅 <span>Other date</span><input type="date" id="fbm-date" aria-label="Pick another cruise date"></label>'
     '</div><span class="fbm-mnote" id="fbm-mnote"></span></div>'
-    '<div class="cd-frow"><span class="cd-flab">Who is coming</span><div class="cd-fchips">'
-    + btn("nodrink", "🥤 Good if you don't drink") + btn("party", "🎉 Party crowd") + "</div></div>"
-    '<div class="cd-frow"><span class="cd-flab">The trip</span><div class="cd-fchips">'
-    + btn("calm", "🌃 Just views, no party, no dinner") + btn("historic", "🏛️ Sightseeing commentary") + btn("dinner", "🍽️ Dinner")
-    + btn("unlimited", "🍾 Unlimited drinks") + btn("opendeck", "☀️ Open-air deck") + btn("heated", "🔥 Heated indoor")
+    '<div class="cd-frow cd-frow-main"><span class="cd-flab">What\'s the plan?</span><div class="cd-fchips">'
+    + btn("unlimited", "🍾 Unlimited drinks") + btn("dinner", "🍽️ Dinner") + btn("calm", "🌃 Just the views")
+    + btn("party", "🎉 Party crowd") + btn("music", "🎻 Live music &amp; shows") + "</div></div>"
+    '<div class="cd-frow cd-frow-more"><span class="cd-flab">Who\'s coming</span><div class="cd-fchips">'
+    + btn("nodrink", "🥤 Non-drinkers welcome") + btn("kids", "👶 Good with kids") + btn("wheelchair", "♿ Wheelchair access") + "</div></div>"
+    '<div class="cd-frow cd-frow-more"><span class="cd-flab">On board</span><div class="cd-fchips">'
+    + btn("historic", "🎧 Audio guide") + btn("opendeck", "☀️ Open-air deck") + btn("heated", "🔥 Heated indoor")
     + btn("hour", "⏱️ About 1 hour") + "</div></div>"
-    '<div class="cd-frow"><span class="cd-flab">Budget &amp; proof</span><div class="cd-fchips">'
-    + btn("tested", "✓ Personally tested") + btn("under20", "💶 Under €20") + "</div></div>"
+    '<div class="cd-frow cd-frow-more"><span class="cd-flab">Budget &amp; proof</span><div class="cd-fchips">'
+    + btn("under20", "💶 Under €20") + btn("tested", "✓ Personally tested") + "</div></div>"
+    '<button type="button" class="cd-fmore" aria-expanded="false" hidden>More filters <span class="cd-fmore-n"></span> ▾</button>'
     '<div class="cd-ffoot"><span class="cd-fcount" aria-live="polite">Showing <b>13</b> of 13 cruises</span>'
     '<div class="cd-fapplied"></div><button type="button" class="cd-fclear" hidden onclick="lttFilterCruises(\'all\')">Clear all</button></div></div>'
 )
@@ -602,6 +615,37 @@ js = block("script", "cd-cards-js") + block("script", "cd-filters-js") + block("
 _old_note = "note.textContent='Sunset '+SUN+', fully dark by '+DARK+' on '+name+'. Each card shows which sailings are lit up.';"
 assert js.count(_old_note) == 1
 js = js.replace(_old_note, "note.textContent='\U0001F305 Sunset '+SUN+'  \u00b7  \U0001F303 City fully lit from '+DARK+' ('+name+')';")
+# Baymard on phones: truncate the long filter list behind "More filters (N)"; rows with an active filter stay open
+css += """<style id="cd-fmore-css">
+.cd-fmore{display:none}
+@media (max-width:767px){
+  .cd-fbox.is-collapsed .cd-frow-more:not(.has-on){display:none!important}
+  .cd-fmore{display:inline-flex;align-items:center;gap:6px;margin:6px 0 2px;min-height:44px;padding:0 16px;border-radius:9999px;border:1px solid #cbd5e1;background:#fff;
+    font:700 14px/1 'Plus Jakarta Sans',sans-serif;color:#0f172a;cursor:pointer}
+  .cd-fmore:hover{background:#f8fafc;color:#0f172a}
+  .cd-fmore[hidden]{display:none}
+}
+.cd-fbox .ltt-tab-btn.is-empty{opacity:.45;cursor:not-allowed}
+</style>"""
+js += r"""<script id="cd-fmore-js">
+(function(){
+  var box=document.getElementById('cd-filters'); if(!box) return;
+  var btn=box.querySelector('.cd-fmore'), rows=[].slice.call(box.querySelectorAll('.cd-frow-more'));
+  function hiddenCount(){ return rows.filter(function(r){ return !r.classList.contains('has-on'); }).reduce(function(n,r){ return n+r.querySelectorAll('.ltt-tab-btn').length; },0); }
+  function sync(){
+    rows.forEach(function(r){ r.classList.toggle('has-on', !!r.querySelector('.ltt-tab-btn[aria-pressed="true"]')); });
+    var n=hiddenCount(), open=!box.classList.contains('is-collapsed');
+    btn.hidden=n===0; btn.setAttribute('aria-expanded', open?'true':'false');
+    btn.firstChild.nodeValue=open?'Fewer filters ':'More filters ';
+    btn.querySelector('.cd-fmore-n').textContent=open?'':'('+n+')';
+  }
+  box.classList.add('is-collapsed');
+  btn.addEventListener('click',function(){ box.classList.toggle('is-collapsed'); sync(); });
+  box.addEventListener('click',function(e){ if(e.target.closest('.ltt-tab-btn, .cd-fclear, .cd-fchip')) setTimeout(sync,40); });
+  sync();
+})();
+</script>"""
+
 # one-tap date chips on top of the date field (fbm-js listens to the field's change event)
 css += """<style id="fbm-days-css">
 .fbm-mrow{display:flex!important;flex-direction:column;align-items:flex-start!important;gap:10px!important;padding:14px 16px!important;border:1px solid #fde68a}
