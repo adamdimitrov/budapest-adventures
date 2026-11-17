@@ -720,7 +720,7 @@ def btn(cat, label):
 fbox = (
     '<div class="ltt-integrated-filter-bar cd-fbox" id="cd-filters" role="group" aria-label="Filter cruises">'
     '<div class="cd-frow fbm-mrow"><span class="cd-flab fbm-mhead">🌇 Catch the sunset or the lit-up city</span>'
-    '<span class="fbm-msub">Pick your day: every cruise below then marks the sailings that catch it.</span>'
+    '<span class="fbm-msub">Pick your day to see when the sun sets and when the city is lit up.</span>'
     '<div class="fbm-days" role="group" aria-label="Pick your cruise date">'
     '<button type="button" class="fbm-day is-on" data-day="0" aria-pressed="true">Today</button>'
     '<button type="button" class="fbm-day" data-day="1" aria-pressed="false">Tomorrow</button>'
@@ -903,6 +903,7 @@ _new_rows = """        var OFF=22*60, inLit=lit.filter(function(t){return m(t)<O
                        :'<br><span class="fbm-sub">'+(late?'Its sailings start after 22:00: the city is lit, the Parliament is dark.':'No sailing starts after dark on this date.')+'</span>';"""
 assert js.count(_old_rows) == 1, "rows"
 js = js.replace(_old_rows, _new_rows)
+css += '<style id="fbm-hide-slot">.bpa-card .fbm-slot{display:none!important}</style>'  # kept for the AI finder's context, hidden on the cards
 css += '<style id="fbm-lights-css">.fbm-slot .fbm-sub{font-weight:500;color:#475569}.fbm-why{cursor:help;color:#b45309;font-weight:800}</style>'
 
 # Baymard on phones: truncate the long filter list behind "More filters (N)"; rows with an active filter stay open
