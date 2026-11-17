@@ -3,9 +3,11 @@ name: Layout check
 # Fails the PR when any published page's menu or footer drifts from its
 # language master, a floating bar links to something not on the page, or a
 # page is live without being in the sitemap, or an affiliate/OTA link lacks
-# rel="nofollow sponsored noopener". Fix with:
+# rel="nofollow sponsored noopener", or a lazy-loaded photo (data-src) has no
+# loader / points at a missing file. Fix with:
 #   python3 scripts/sync_layout.py
 #   python3 scripts/fix_affiliate_rel.py
+#   python3 scripts/check_lazy_images.py --fix
 on:
   pull_request:
   push:
@@ -21,3 +23,4 @@ jobs:
           python-version: "3.12"
       - run: python3 scripts/sync_layout.py --check
       - run: python3 scripts/fix_affiliate_rel.py --check
+      - run: python3 scripts/check_lazy_images.py

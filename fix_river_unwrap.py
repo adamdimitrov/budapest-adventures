@@ -125,7 +125,7 @@ updated_js = """<script>
       m.forEach(f => {
         if (!f) return;
         const img = document.createElement("img");
-        img.src = f.startsWith("http") ? f : BPA_CDN + f;
+        img.src = (f.startsWith("http") || f.startsWith("/")) ? f : BPA_CDN + f;
         img.loading = "lazy";
         img.alt = "Budapest River Cruise";
         c.appendChild(img);
