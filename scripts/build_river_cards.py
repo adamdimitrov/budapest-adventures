@@ -1043,15 +1043,17 @@ RATE_IN_SUMMARY_JS = """<script id="cd-rate-in-summary-js">
 document.addEventListener('click',function(e){ var sm=e.target.closest('.bpa-details-card .bpa-rate-sum'); if(!sm) return;
   e.preventDefault(); e.stopPropagation(); var d=sm.parentNode; d.open=!d.open; },true);
 </script>"""
-# ---- UGC preview (?ugc=a|b|c): public TikTok videos by guests, official TikTok player, loaded only on click ----
+# ---- Guest videos (UGC): public TikTok videos whose captions name the operator; official TikTok player, loaded only on click.
+# Layout A (a 'guest videos' tile in the photo strip), picked by the owner. Strict maximum: 3 videos per card.
 UGC = {
     "cruise-1-legenda": [
         {"id": "7552667337204174100", "h": "imjulesyang", "t": "An evening cruise under the city lights", "v": "5.7K views"},
         {"id": "7321843979073506606", "h": "aliciasessler", "t": "Sunset on the Danube with Legenda", "v": "3K views"},
-        {"id": "7692418249618623766", "h": "budapest_insider", "t": "The 1-hour night cruise", "v": "1.2K views"}],
+        {"id": "7692418249618623766", "h": "budapest_insider", "t": "The 1-hour night cruise", "v": "1.2K views"}][:3],
     "item-4-legenda-candlelit-dinner": [
-        {"id": "7675452863241375009", "h": "travelwithusc", "t": "Candlelit date night on the Danube", "v": "1.9K views"}],
+        {"id": "7675452863241375009", "h": "travelwithusc", "t": "Candlelit date night on the Danube", "v": "1.9K views"}][:3],
 }
+assert all(len(v) <= 3 for v in UGC.values()), "max 3 guest videos per card"
 UGC_HTML = """<style id="ugc-css">
 .ugc-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:84px;z-index:9999;display:flex;gap:4px;padding:4px;background:#0f172a;border-radius:9999px;box-shadow:0 6px 20px rgba(15,23,42,.35);font:700 12px 'Plus Jakarta Sans',sans-serif}
 .ugc-bar a{color:#cbd5e1;text-decoration:none;padding:7px 11px;border-radius:9999px;white-space:nowrap}.ugc-bar a:hover{color:#fff;background:#1e293b}.ugc-bar a.on{background:#fbbf24;color:#0f172a}
@@ -1060,7 +1062,7 @@ UGC_HTML = """<style id="ugc-css">
 .ugc-tile:hover{filter:brightness(1.15);color:#fff}
 .ugc-tile .ugc-play{position:absolute;inset:0;margin:auto;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;color:#0f172a;font-size:14px;padding-left:3px;box-sizing:border-box}
 .ugc-tile b{font-weight:800}.ugc-tile small{opacity:.75;font-size:10px}
-.ugc-thumb{aspect-ratio:1/1}.ugc-thumb .ugc-play{width:26px;height:26px;font-size:11px}.ugc-thumb .ugc-cap{font:800 9.5px/1.15 'Plus Jakarta Sans',sans-serif;position:relative}
+.ugc-thumb{aspect-ratio:1/1;padding:5px 6px}.ugc-thumb .ugc-play{inset:auto;top:16%;left:50%;transform:translateX(-50%);width:24px;height:24px;font-size:10px;padding-left:2px}.ugc-thumb .ugc-cap{font:800 9.5px/1.15 'Plus Jakarta Sans',sans-serif;position:relative;text-align:center;width:100%}
 .ugc-row{margin-top:10px}.ugc-row-h{font:800 11px 'Plus Jakarta Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#64748b;margin:0 0 6px}
 .ugc-row-list{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.ugc-row .ugc-tile{aspect-ratio:9/14}
 .ugc-slide{flex:0 0 100%;scroll-snap-align:start;display:flex;align-items:center;justify-content:center;background:#020617;position:relative;height:100%}
@@ -1079,7 +1081,7 @@ UGC_HTML = """<style id="ugc-css">
 </style>
 <script id="ugc-js">
 (function(){
-  var m=location.search.match(/[?&]ugc=([abc])/); if(!m) return; var v=m[1];
+  var v='a';
   var UGC=""" + json.dumps(UGC, ensure_ascii=False) + r""";
   function esc(x){return String(x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   function player(id){return 'https://www.tiktok.com/player/v1/'+id+'?autoplay=1&description=1&music_info=1&rel=0';}
@@ -1097,12 +1099,8 @@ UGC_HTML = """<style id="ugc-css">
     document.addEventListener('keydown',key); show(); document.body.appendChild(md);
   }
   function run(){
-    var names={a:'A · Photo strip tile',b:'B · Guests filmed it',c:'C · In the slider'};
-    var bar=document.createElement('div'); bar.className='ugc-bar';
-    bar.innerHTML=['a','b','c'].map(function(k){return '<a href="?ugc='+k+'#card-1" class="'+(k===v?'on':'')+'">'+names[k]+'</a>';}).join('')+'<a href="?#card-1">Off</a>';
-    document.body.appendChild(bar);
     Object.keys(UGC).forEach(function(anc){
-      var a=document.querySelector('.bpa-card a.bpa-sublink[href="#'+anc+'"]'); if(!a) return; var card=a.closest('.bpa-card'), list=UGC[anc];
+      var a=document.querySelector('.bpa-card a.bpa-sublink[href="#'+anc+'"]'); if(!a) return; var card=a.closest('.bpa-card'), list=UGC[anc].slice(0,3);
       if(v==='a'){ var th=card.querySelector('.cd-thumbs'); var vis=[].filter.call(th.querySelectorAll('.cd-thumb'),function(b){return !b.classList.contains('is-hid');});
         var slot=vis[vis.length-2]||vis[0]; var t=document.createElement('div'); t.innerHTML=tile(list[0],0,'ugc-thumb cd-thumb','<span class="ugc-cap">'+list.length+' guest video'+(list.length>1?'s':'')+'</span>'); t=t.firstChild;
         slot.replaceWith(t); t.addEventListener('click',function(e){ e.stopPropagation(); openModal(list,0); }); }
