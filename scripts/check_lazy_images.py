@@ -40,10 +40,32 @@ import sys
 import urllib.parse
 from html.parser import HTMLParser
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from sync_layout import vercel_ignored  # noqa: E402
+import fnmatch
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def vercel_ignored():
+    """Patterns from .vercelignore: those files never reach the live site.
+    Self-contained so the same file works in every site repo."""
+    try:
+        with open(os.path.join(ROOT, ".vercelignore"), encoding="utf-8") as fh:
+            lines = fh.read().splitlines()
+    except OSError:
+        return lambda f: False
+    pats = [ln.strip() for ln in lines if ln.strip() and not ln.startswith("#") and not ln.startswith("!")]
+
+    def ignored(f):
+        for p in pats:
+            anchored = p.startswith("/")
+            p2 = p.strip("/")
+            if anchored and (fnmatch.fnmatch(f, p2) or f.startswith(p2 + "/")):
+                return True
+            if not anchored and (fnmatch.fnmatch(os.path.basename(f), p2) or fnmatch.fnmatch(f, p2)
+                                 or f.startswith(p2 + "/") or ("/" + p2 + "/") in ("/" + f)):
+                return True
+        return False
+    return ignored
 LAZY_ATTRS = ("data-src", "data-srcset", "data-bg", "data-background",
               "data-lazy", "data-lazy-src", "data-original", "data-bg-src")
 DATA_MORE_CDN = "/assets/cdn/60e43c7d6d05b671dff0dc1a/"
@@ -96,6 +118,8 @@ NEW_SLIDER = """  // 1. Slider controls with Progressive Lazy-Loading
     if (!slider) return;
     loadSliderImages(slider);
     var w = slider.clientWidth;"""
+OLD_COUNT = "  window.bpaCount = function(slider) {\n    var media"
+NEW_COUNT = "  window.bpaCount = function(slider) {\n    loadSliderImages(slider);\n    var media"
 OLD_INIT = "  function initAll() {\n    initHybridSheet();\n"
 NEW_INIT = "  function initAll() {\n    initLazySliders();\n    initHybridSheet();\n"
 
@@ -196,8 +220,11 @@ def page_problems(path, html):
             wired_delegated = any(
                 "loadSliderImages(" in scripts[m.end():m.end() + 500]
                 for m in re.finditer(r"document\.addEventListener\('(?:touchstart|scroll)'", scripts))
-            if not (wired_events or wired_observer or wired_delegated):
-                probs.append("swipe/touch loading is not wired: no initLazySliders() call, no delegated touch/scroll listener and no "
+            mc = re.search(r"window\.bpaCount\s*=\s*function[^{]*\{(.*?)\n  \};", scripts, flags=re.S)
+            wired_count = bool(mc) and "loadSliderImages(" in mc.group(1) and 'onscroll="bpaCount(this)"' in html
+            if not (wired_events or wired_observer or wired_delegated or wired_count):
+                probs.append("swipe/touch loading is not wired: no initLazySliders() call, no delegated touch/scroll listener, no "
+                             "loadSliderImages() in bpaCount() and no "
                              "IntersectionObserver that calls loadSliderImages()")
             if s.slider_srcset and "data-srcset" not in scripts:
                 probs.append("carousel photos use data-srcset but the loader never copies it")
@@ -244,6 +271,11 @@ def published_html():
 
 def fix(rel, html):
     html = html.replace(OLD_DATA_MORE, NEW_DATA_MORE)
+    if (OLD_COUNT in html and "function loadSliderImages" in html
+            and page_problems(rel, html)[0] and "loadSliderImages(slider);\n    var media" not in html):
+        probs = page_problems(rel, html)[0]
+        if any("swipe/touch loading is not wired" in p for p in probs):
+            return html.replace(OLD_COUNT, NEW_COUNT, 1)
     if OLD_SLIDER in html and "function loadSliderImages" not in html and html.count(OLD_INIT) == 1:
         return html.replace(OLD_SLIDER, NEW_SLIDER, 1).replace(OLD_INIT, NEW_INIT, 1)
     return html
