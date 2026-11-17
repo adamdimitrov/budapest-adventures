@@ -552,13 +552,15 @@ js = block("script", "cd-cards-js") + block("script", "cd-filters-js") + block("
 # one-tap date chips on top of the date field (fbm-js listens to the field's change event)
 css += """<style id="fbm-days-css">
 .fbm-mrow{display:flex!important;flex-direction:column;align-items:flex-start!important;gap:10px!important;padding:14px 16px!important;border:1px solid #fde68a}
-.fbm-mrow .fbm-mhead{font:800 15px/1.3 'Plus Jakarta Sans',sans-serif!important;color:#0f172a!important;text-transform:none!important;letter-spacing:0!important}
+.fbm-mrow .fbm-mhead{flex:0 0 auto!important;width:auto!important;min-width:0!important;height:auto!important;margin:0!important;font:800 15px/1.3 'Plus Jakarta Sans',sans-serif!important;color:#0f172a!important;text-transform:none!important;letter-spacing:0!important}
 .fbm-days{display:flex;flex-wrap:wrap;gap:8px}
 .fbm-day{position:relative;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 16px;border-radius:9999px;border:1px solid #fcd34d;background:#fff;
   font:700 14px/1 'Plus Jakarta Sans',sans-serif;color:#0f172a;cursor:pointer}
 .fbm-day:hover{border-color:#b45309;color:#0f172a;background:#fff}
 .fbm-day.is-on{background:#0f172a;border-color:#0f172a;color:#fff}
 .fbm-day.is-on:hover{color:#fff;background:#0f172a}
+.fbm-other,.fbm-other span{text-transform:none!important;letter-spacing:0!important;margin:0!important}
+.fbm-mrow .fbm-mnote{text-align:left!important;align-self:stretch}
 .fbm-other input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;border:0;padding:0}
 .fbm-mrow .fbm-mnote{font:700 14px/1.45 'Plus Jakarta Sans',sans-serif!important;color:#92400e!important}
 </style>"""
