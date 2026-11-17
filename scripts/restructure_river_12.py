@@ -221,10 +221,12 @@ TEXT = [
     ("a guaranteed rooftop seat or a folk-show dinner. Tickets run <strong>from €11 to €79</strong>",
      "a guaranteed rooftop seat or a candlelit dinner. Tickets run <strong>from €11 to €110</strong>", 1),
     ("ranked the 10 best river cruises", "ranked the 13 best river cruises", 1),
-    ("Matched against the 10 cruises I compared on this page.", "Ask a question (is it cold? can kids come?) or describe what you want.", 1),
+    ("Matched against the 10 cruises I compared on this page.", "Try: \u201cIs it cold on deck?\u201d \u00b7 \u201cCan kids come?\u201d \u00b7 \u201cRomantic, under \u20ac30\u201d", 1),
     ("Show all 10 again", "Show all 13 again", 1),
     ("All 10 Danube Cruises", "All 13 Danube Cruises", 1),
-    ("What kind of evening do you want?", "What kind of cruise experience do you want?", 1),
+    ('<span class="bpa-ai-kicker">Find your cruise</span>', '<span class="bpa-ai-kicker">Ask or find your cruise</span>', 1),
+    ('<button id="bpa-ai-go" type="submit">Find my cruise</button>', '<button id="bpa-ai-go" type="submit">Ask</button>', 1),
+    ("What kind of evening do you want?", "Ask me anything about Budapest cruises", 1),
 ]
 for old, new, cnt in TEXT:
     n = s.count(old)
@@ -242,12 +244,13 @@ MIC_BTN = ('<button aria-label="Speak your search" class="bpa-ai-mic" hidden="" 
 FIELD = [
     ('<div class="bpa-ai-row">\n<svg aria-hidden="true"', '<div class="bpa-ai-row">\n<div class="bpa-ai-field">\n<svg aria-hidden="true" class="bpa-ai-glass"'),
     ('<input id="bpa-ai-q" maxlength="300" placeholder="Romantic, under €30, near Vigadó tér…" type="text"/>',
-     '<input autocomplete="off" enterkeyhint="search" id="bpa-ai-q" maxlength="300" placeholder="Romantic, sunset, €30…" type="search"/>'),
+     '<input autocomplete="off" enterkeyhint="search" id="bpa-ai-q" maxlength="300" placeholder="Ask a question or describe…" type="search"/>'),
 ]
 for a, b in FIELD:
     assert s.count(a) == 1, a[:60]
     s = s.replace(a, b)
-s = s.replace('<button id="bpa-ai-go" type="submit">Find my cruise</button>', MIC_BTN + '</div>\n<button id="bpa-ai-go" type="submit">Find my cruise</button>', 1)
+assert s.count('<button id="bpa-ai-go" type="submit">Ask</button>') == 1
+s = s.replace('<button id="bpa-ai-go" type="submit">Ask</button>', MIC_BTN + '</div>\n<button id="bpa-ai-go" type="submit">Ask</button>', 1)
 MIC_CSS = ('.bpa-ai-row .bpa-ai-mic{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border-radius:10px;'
            'background:#f1f5f9;color:#0f172a;border:0;cursor:pointer}\n.bpa-ai-row .bpa-ai-mic:hover{background:#e2e8f0;color:#0f172a}\n'
            '.bpa-ai-row .bpa-ai-mic.is-on{background:#fee2e2;color:#b91c1c;animation:bpaMic 1.2s ease-in-out infinite}\n'
