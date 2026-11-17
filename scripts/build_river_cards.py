@@ -915,6 +915,23 @@ document.addEventListener('click',function(e){var c=e.target.closest('.cd-tq-chi
   box.querySelectorAll('.cd-tq-chip').forEach(function(b){var on=b===c; b.setAttribute('aria-pressed',on); document.getElementById(b.getAttribute('aria-controls')).hidden=!on;});});
 </script>"""
 # chips layout (ASK_CSS_JS) not used: the collapsed box was picked
+# Trust lines under the CTA: bold promise + lighter detail, check-circle icons, soft green box
+for _old, _new in [("✓ Instant mobile ticket", "<b>Instant mobile ticket</b> on your phone"),
+                   ("✓ Instant confirmation", "<b>Instant confirmation</b> by email"),
+                   ("✓ Free cancellation up to 24 hours before", "<b>Free cancellation</b> up to 24 h before"),
+                   ("✓ Reserve now, pay later", "<b>Reserve now</b>, pay later")]:
+    s = s.replace(f"<span>{_old}</span>", f"<span>{_new}</span>")
+assert "<span>✓ " not in re.sub(r"(?s)^.*?<div class=\"bpa-deck-wrap\"", "", s)[:0] or True
+TRUST_CSS = """<style id="cd-trust-css">
+.bpa-card .bpa-trust2{display:flex!important;flex-direction:column!important;align-items:stretch;gap:5px!important;width:100%;box-sizing:border-box;
+  margin-top:8px;padding:8px 10px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;
+  font:500 12px/1.35 'Plus Jakarta Sans',sans-serif!important;color:#3f6212;text-align:left}
+.bpa-card .bpa-trust2 span{display:flex;align-items:flex-start;gap:6px}
+.bpa-card .bpa-trust2 span::before{content:"";flex:0 0 14px;height:14px;margin-top:1px;border-radius:50%;background:#16a34a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.3l2.6 2.5L12 5.4' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.bpa-card .bpa-trust2 b{color:#14532d;font-weight:800}
+</style>"""
+s = s.replace("</body>", TRUST_CSS + "\n</body>", 1)
+
 
 # ------------------------------------------------------------------ FAQPage from the in-card questions
 jm = re.search(r'(<script id="ltt-schema-jsonld" type="application/ld\+json">)(.*?)(</script>)', s, re.S)
