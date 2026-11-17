@@ -99,3 +99,11 @@
   `--check` reports pages that drifted (exit code 1) without writing.
 - Language switcher rule: On the tourism statistics pages (`budapest-tourism-statistics.html` and `hu/budapest-turizmus-statisztika`), the language switcher shows EN and HU only. On ALL other pages, the language switcher retains the full 22 languages — never overwrite or truncate standard pages to EN/HU.
 - The footer lists only the five cruise money pages plus About and Contact. Do not add other guides to it.
+
+## Photos and lazy loading (QC: `scripts/check_lazy_images.py`, runs in CI)
+- Carousel photos after the first may ship as placeholders with the real URL in `data-src` / `data-srcset`.
+  Any page that does this MUST ship the slider loader (`loadSliderImages()` called from `bpaSlide()` and wired
+  to swipe/touch), or slides 2+ stay blank. The first photo of every carousel keeps a real `src`.
+- Image paths are absolute (`/assets/...`), never relative (`assets/...`): relative paths break on language subpages.
+- After any script that rewrites images (e.g. Lighthouse/perf passes), run `python3 scripts/check_lazy_images.py`;
+  `--fix` upgrades old slider runtimes in place. CI fails the PR on any problem.

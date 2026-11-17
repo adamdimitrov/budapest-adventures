@@ -1223,7 +1223,7 @@ def build_river_deck_and_sticky() -> str:
     m.forEach(f => {{
       if (!f) return;
       const img = document.createElement("img");
-      img.src = f.startsWith("http") ? f : BPA_CDN + f;
+      img.src = (f.startsWith("http") || f.startsWith("/")) ? f : BPA_CDN + f;
       img.loading = "lazy";
       img.alt = "Budapest Danube River Cruise";
       c.appendChild(img);
@@ -1391,7 +1391,7 @@ def build_dinner_deck_and_sticky() -> str:
     m.forEach(f => {
       if (!f) return;
       const img = document.createElement("img");
-      img.src = f.startsWith("http") ? f : BPA_CDN + f;
+      img.src = (f.startsWith("http") || f.startsWith("/")) ? f : BPA_CDN + f;
       img.loading = "lazy";
       img.alt = "Budapest Dinner Cruise";
       c.appendChild(img);

@@ -59,7 +59,7 @@ PIZZA_PHOTOS = [
     '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3ecb963489a0ad4d4a7_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-5.webp',
     '/assets/cdn/60e43c7d6d05b671dff0dc1a/6638d3ea5240bf0d972917c8_best-river-cruises-silverline-cocktail-pizza-drinks-cruise-8.webp',
     '/assets/cdn/60e43c7d6d05b671dff0dc1a/64958b013eea741396853973_4-pizza-beer-cruise.webp',
-    '/assets/cdn/60e43c7d6d05b671dff0dc1a/688ae4671ab9d4a938f7c715_felto%CC%88ltheto%CC%8B%20pizzalap%20angol.avif'
+    '/assets/cdn/60e43c7d6d05b671dff0dc1a/688ae4671ab9d4a938f7c715_feltoltheto-pizzalap-angol.avif'
 ]
 
 BUFFET_DINNER_PHOTOS = [
