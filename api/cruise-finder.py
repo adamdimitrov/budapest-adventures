@@ -76,7 +76,7 @@ def load_cards(page):
     return cards
 
 
-def build_prompt(q, cards):
+def build_prompt(q, cards, ctx=None):
     return (
         "You are the cruise finder on a Budapest river cruise comparison page. "
         "The author rode the cruises below. A visitor described the evening they want. "
@@ -89,13 +89,38 @@ def build_prompt(q, cards):
         "(price, drinks, length, pier, audio guide). No em dashes. Do not mention booking websites.\n"
         "- lead: one short sentence summarising the recommendation. No em dashes.\n"
         "- Answer in the visitor's language.\n"
-        "- If the request has nothing to do with choosing a cruise, return the #1 card with a short lead.\n\n"
-        f"Cards:\n{json.dumps(cards, ensure_ascii=False)}\n\n"
+        "- If the request has nothing to do with choosing a cruise, return the #1 card with a short lead.\n"
+        "- If the visitor mentions sunset, night, the lights, dark or a time of day, use the lighting info for their date "
+        "and name the exact sailing time to book in the why (for example 'book the 16:30 sailing for sunset into lights'). "
+        "A cruise whose sailings all end before dark does not fit a night or lights request.\n\n"
+        + (f"Visitor's context: {json.dumps(ctx, ensure_ascii=False)}\n\n" if ctx else "")
+        + f"Cards:\n{json.dumps(cards, ensure_ascii=False)}\n\n"
         f"Visitor request: {json.dumps(q, ensure_ascii=False)}"
     )
 
 
-def ask_claude(q, cards):
+def visitor_context(params, cards):
+    """Date, lighting and active filters sent by the page, trimmed to safe sizes."""
+    one = lambda k, n: re.sub(r"\s+", " ", (params.get(k) or [""])[0]).strip()[:n]
+    ctx = {}
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", one("date", 10)):
+        ctx["cruise_date"] = one("date", 10)
+    if one("light", 160):
+        ctx["light_on_that_date"] = one("light", 160)
+    if one("filters", 200):
+        ctx["active_filters"] = one("filters", 200)
+    try:
+        slots = json.loads((params.get("slots") or ["{}"])[0])
+        valid = {c["id"] for c in cards}
+        slots = {str(k): re.sub(r"\s+", " ", str(v))[:180] for k, v in slots.items() if str(k) in valid}
+        if slots:
+            ctx["sailing_lights_per_card"] = slots
+    except (ValueError, AttributeError):
+        pass
+    return ctx
+
+
+def ask_claude(q, cards, ctx=None):
     global _client
     if _client is None:
         _client = anthropic.Anthropic(max_retries=1, timeout=20.0)
@@ -103,7 +128,7 @@ def ask_claude(q, cards):
         model=MODEL,
         max_tokens=2000,
         output_config={"effort": "low", "format": {"type": "json_schema", "schema": SCHEMA}},
-        messages=[{"role": "user", "content": build_prompt(q, cards)}],
+        messages=[{"role": "user", "content": build_prompt(q, cards, ctx)}],
     )
     if response.stop_reason == "refusal":
         raise ValueError("refused")
@@ -138,7 +163,11 @@ class handler(BaseHTTPRequestHandler):
         if len(q) < 2:
             return self._send(400, {"error": "empty_question"})
         try:
-            return self._send(200, ask_claude(q, load_cards(page)), cache=True)
+            cards = load_cards(page)
+            # only the cards the visitor's filters leave on screen (all of them if none sent)
+            ids = [i for i in (params.get("ids") or [""])[0].split(",") if i]
+            pool = [c for c in cards if c["id"] in ids] or cards
+            return self._send(200, ask_claude(q, pool, visitor_context(params, pool)), cache=True)
         except anthropic.RateLimitError:
             return self._send(429, {"error": "busy"})
         except anthropic.APIConnectionError:

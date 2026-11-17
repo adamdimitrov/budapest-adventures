@@ -925,20 +925,35 @@ function bpaAiInit(){
   function say(html){ out.innerHTML=html; out.hidden=false; }
   function esc(s){ return String(s).replace(/[&<>"]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m];}); }
   function resetLink(){ return '<button type="button" id="bpa-ai-reset">Show all 12 again</button>'; }
-  out.addEventListener('click',function(e){ if(e.target.id==='bpa-ai-reset'){ clearAI(); out.hidden=true; q.value=''; } });
-  // Filter chips keep working instantly; using one clears the AI order.
-  document.querySelectorAll('.ltt-tab-btn').forEach(function(b){ b.addEventListener('click',function(){ if(Object.keys(picked).length){ clearAI(); out.hidden=true; } }); });
+  out.addEventListener('click',function(e){ if(e.target.id==='bpa-ai-reset'){ clearAI(); out.hidden=true; q.value=''; lastText=''; } });
+  var lastText='';
+  function visibleCards(){ return cards().filter(function(c){ return c.offsetParent!==null; }); }
+  // What the search should know: cards left by the filters, the filters, the cruise date and its lighting.
+  function context(){
+    var p='', vis=visibleCards(), all=cards();
+    if(vis.length && vis.length<all.length) p+='&ids='+encodeURIComponent(vis.map(function(c){return c.id;}).join(','));
+    var act=Array.prototype.slice.call(document.querySelectorAll('#cd-filters .ltt-tab-btn[aria-pressed="true"]')).map(function(b){ return b.textContent.replace(/\s*\(?\d+\)?\s*$/,'').trim(); });
+    if(act.length) p+='&filters='+encodeURIComponent(act.join(', '));
+    var d=document.getElementById('fbm-date'); if(d && d.value) p+='&date='+d.value;
+    var note=document.getElementById('fbm-mnote'); if(note && note.textContent) p+='&light='+encodeURIComponent(note.textContent.replace(/\s*Each card.*$/,''));
+    var slots={}; vis.forEach(function(c){ var s=c.querySelector('.fbm-slot'); if(s && s.textContent.trim()) slots[c.id]=s.textContent.replace(/\s+/g,' ').trim().slice(0,160); });
+    if(Object.keys(slots).length) p+='&slots='+encodeURIComponent(JSON.stringify(slots));
+    return p;
+  }
+  // Changing a filter or the date re-runs the last search inside the new selection.
+  function rerun(){ if(!lastText) return; setTimeout(function(){ q.value=lastText; form.requestSubmit(); }, 80); }
+  document.querySelectorAll('#cd-filters .ltt-tab-btn, #cd-filters .cd-fclear').forEach(function(b){ b.addEventListener('click',function(){ if(lastText){ clearAI(); rerun(); } }); });
+  var dateIn=document.getElementById('fbm-date'); if(dateIn) dateIn.addEventListener('change',function(){ if(lastText) rerun(); });
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var text=q.value.replace(/\s+/g,' ').trim().toLowerCase();
     if(text.length<2){ q.focus(); return; }
     if(!deck) return;
     go.disabled=true; say('Finding your best match…');
-    used=true; ga('ai_finder_search',{search_term:text.slice(0,100)});
-    fetch('/api/cruise-finder?page=best-budapest-river-cruises&q='+encodeURIComponent(text))
+    used=true; lastText=text; ga('ai_finder_search',{search_term:text.slice(0,100)});
+    fetch('/api/cruise-finder?page=best-budapest-river-cruises&q='+encodeURIComponent(text)+context())
       .then(function(r){ return r.json().then(function(d){ if(!r.ok) throw d; return d; }); })
       .then(function(d){
-        if(window.lttFilterCruises) window.lttFilterCruises('all');
         clearAI();
         var list=(d.picks||[]).filter(function(p){ return document.getElementById(p.id); });
         if(!list.length) throw {error:'no_answer'};

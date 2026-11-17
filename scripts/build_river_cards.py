@@ -455,10 +455,40 @@ finder = s[fa:fz]
 s = s[:fa] + s[fz:]
 finder = re.sub(r"/\* quick-pick pills \(layout B\) \*/.*?(?=</style>)", "", finder, flags=re.S)
 finder = finder.replace(".bpa-ai-finder{margin:0 0 16px 0;", ".bpa-ai-finder{margin:18px 0 16px 0;")
-finder = finder.replace(
-    "        var all=document.querySelector('.ltt-tab-btn[data-cat=\"all\"]');\n        if(all && window.lttFilterItems) window.lttFilterItems('all',all);",
-    "        if(window.lttFilterCruises) window.lttFilterCruises('all');")
-assert "lttFilterCruises('all')" in finder
+# The search works inside the active filters and knows the visitor's date and lighting.
+FINDER_JS = [
+    ("        var all=document.querySelector('.ltt-tab-btn[data-cat=\"all\"]');\n        if(all && window.lttFilterItems) window.lttFilterItems('all',all);\n", ""),
+    ("  // Filter chips keep working instantly; using one clears the AI order.\n"
+     "  document.querySelectorAll('.ltt-tab-btn').forEach(function(b){ b.addEventListener('click',function(){ if(Object.keys(picked).length){ clearAI(); out.hidden=true; } }); });\n",
+     "  var lastText='';\n"
+     "  function visibleCards(){ return cards().filter(function(c){ return c.offsetParent!==null; }); }\n"
+     "  // What the search should know: cards left by the filters, the filters, the cruise date and its lighting.\n"
+     "  function context(){\n"
+     "    var p='', vis=visibleCards(), all=cards();\n"
+     "    if(vis.length && vis.length<all.length) p+='&ids='+encodeURIComponent(vis.map(function(c){return c.id;}).join(','));\n"
+     "    var act=Array.prototype.slice.call(document.querySelectorAll('#cd-filters .ltt-tab-btn[aria-pressed=\"true\"]')).map(function(b){ return b.textContent.replace(/\\s*\\(?\\d+\\)?\\s*$/,'').trim(); });\n"
+     "    if(act.length) p+='&filters='+encodeURIComponent(act.join(', '));\n"
+     "    var d=document.getElementById('fbm-date'); if(d && d.value) p+='&date='+d.value;\n"
+     "    var note=document.getElementById('fbm-mnote'); if(note && note.textContent) p+='&light='+encodeURIComponent(note.textContent.replace(/\\s*Each card.*$/,''));\n"
+     "    var slots={}; vis.forEach(function(c){ var s=c.querySelector('.fbm-slot'); if(s && s.textContent.trim()) slots[c.id]=s.textContent.replace(/\\s+/g,' ').trim().slice(0,160); });\n"
+     "    if(Object.keys(slots).length) p+='&slots='+encodeURIComponent(JSON.stringify(slots));\n"
+     "    return p;\n"
+     "  }\n"
+     "  // Changing a filter or the date re-runs the last search inside the new selection.\n"
+     "  function rerun(){ if(!lastText) return; setTimeout(function(){ q.value=lastText; form.requestSubmit(); }, 80); }\n"
+     "  document.querySelectorAll('#cd-filters .ltt-tab-btn, #cd-filters .cd-fclear').forEach(function(b){ b.addEventListener('click',function(){ if(lastText){ clearAI(); rerun(); } }); });\n"
+     "  var dateIn=document.getElementById('fbm-date'); if(dateIn) dateIn.addEventListener('change',function(){ if(lastText) rerun(); });\n"),
+    ("    used=true; ga('ai_finder_search',{search_term:text.slice(0,100)});\n",
+     "    used=true; lastText=text; ga('ai_finder_search',{search_term:text.slice(0,100)});\n"),
+    ("fetch('/api/cruise-finder?page=best-budapest-river-cruises&q='+encodeURIComponent(text))",
+     "fetch('/api/cruise-finder?page=best-budapest-river-cruises&q='+encodeURIComponent(text)+context())"),
+    ("if(e.target.id==='bpa-ai-reset'){ clearAI(); out.hidden=true; q.value=''; }",
+     "if(e.target.id==='bpa-ai-reset'){ clearAI(); out.hidden=true; q.value=''; lastText=''; }"),
+]
+for a, b in FINDER_JS:
+    assert finder.count(a) == 1, a[:80]
+    finder = finder.replace(a, b)
+assert "context()" in finder and "lttFilterItems" not in finder
 
 
 def btn(cat, label):
