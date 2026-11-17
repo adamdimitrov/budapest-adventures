@@ -762,26 +762,20 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 </figure>
 </div>
 <div class="ltt-integrated-filter-bar">
-<span class="ltt-filter-label">Filters:</span>
-<div class="ltt-integrated-pills">
-<button class="ltt-tab-btn active" data-cat="all" onclick="lttFilterItems('all', this)" type="button">All (10)</button>
-<button class="ltt-tab-btn" data-cat="tested" onclick="lttFilterItems('tested', this)" type="button">Personally Tested (8)</button>
-<button class="ltt-tab-btn" data-cat="under20" onclick="lttFilterItems('under20', this)" type="button">Under €20 (6)</button>
-<button class="ltt-tab-btn" data-cat="drinks" onclick="lttFilterItems('drinks', this)" type="button">Drinks &amp; Prosecco (5)</button>
-<button class="ltt-tab-btn" data-cat="dining" onclick="lttFilterItems('dining', this)" type="button">Dinner &amp; Food (1)</button>
-<button class="ltt-tab-btn" data-cat="historic" onclick="lttFilterItems('historic', this)" type="button">Historic &amp; Sightseeing (4)</button>
-</div>
 <!-- AI cruise finder (EN river cruises page only) -->
 <style id="bpa-ai-finder-css">
-.bpa-ai-finder{margin:14px 0 0 0;padding:14px 0 0 0;border-top:1px solid #f1f5f9;display:flex;flex-direction:column;gap:8px}
-.bpa-ai-finder label{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:14px;font-weight:800;color:#0f172a;margin:0}
-.bpa-ai-row{display:flex;gap:8px;flex-wrap:wrap}
-.bpa-ai-row input{flex:1 1 240px;min-width:0;font-size:16px;line-height:1.3;padding:11px 14px;border:1px solid #cbd5e1;border-radius:10px;background:#f8fafc;color:#0f172a;box-sizing:border-box;margin:0}
-.bpa-ai-row input:focus{outline:none;border-color:#f59e0b;box-shadow:0 0 0 3px rgba(245,158,11,0.2);background:#fff}
-.bpa-ai-row button{font-size:13.5px;font-weight:800;padding:11px 18px;border:0;border-radius:10px;background:#0f172a;color:#fff;cursor:pointer}
-.bpa-ai-row button:hover{background:#1e293b;color:#fff}
+.bpa-ai-finder{margin:0 0 16px 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.bpa-ai-kicker{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#b45309}
+.bpa-ai-finder label{font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;color:#0f172a;margin:-6px 0 0 0;line-height:1.25}
+.bpa-ai-row{display:flex;align-items:center;gap:10px;padding:6px 6px 6px 14px;border:2px solid #0f172a;border-radius:14px;background:#fff}
+.bpa-ai-row:focus-within{box-shadow:0 0 0 3px rgba(245,158,11,.3)}
+.bpa-ai-row svg{flex:0 0 auto}
+.bpa-ai-row input{flex:1 1 auto;min-width:0;font-size:16px;line-height:1.3;padding:11px 0;border:0;background:transparent;color:#0f172a;margin:0;outline:none;box-shadow:none}
+.bpa-ai-row button{flex:0 0 auto;font-size:14px;font-weight:800;padding:12px 20px;border:0;border-radius:10px;background:#f59e0b;color:#0f172a;cursor:pointer}
+.bpa-ai-row button:hover{background:#d97706;color:#0f172a}
 .bpa-ai-row button:disabled{opacity:.6;cursor:wait}
-.bpa-ai-hint{font-size:12.5px;color:#64748b;margin:0}
+@media (max-width:520px){.bpa-ai-row{flex-wrap:wrap;padding:6px}.bpa-ai-row svg{display:none}.bpa-ai-row input{flex-basis:100%;padding:10px 8px}.bpa-ai-row button{width:100%}}
+.bpa-ai-hint{font-size:12.5px;color:#475569;margin:-4px 0 0 0}
 .bpa-ai-answer{font-size:14px;color:#0f172a;background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
 .bpa-ai-answer[hidden]{display:none}
 .bpa-ai-answer a,.bpa-ai-answer button{font-size:13px;font-weight:700;color:#b45309;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
@@ -789,14 +783,24 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 .bpa-ai-why{background:#fffbeb;border-bottom:1px solid #fde68a;color:#0f172a;font-size:14px;font-weight:600;line-height:1.45;padding:10px 16px}
 .bpa-ai-why b{color:#b45309}
 .bpa-card.bpa-ai-match{outline:2px solid #f59e0b;outline-offset:-2px}
+/* quick-pick pills (layout B) */
+.ltt-integrated-filter-bar{flex-wrap:wrap !important;row-gap:10px !important}
+.ltt-integrated-filter-bar>.bpa-ai-finder{flex:0 0 100%;min-width:0}
+.ltt-integrated-filter-bar>.ltt-integrated-pills{min-width:0}
+.ltt-integrated-filter-bar .ltt-filter-label{font-size:12.5px !important;font-weight:700 !important;color:#475569 !important;text-transform:none !important;letter-spacing:0 !important}
+.ltt-integrated-filter-bar .ltt-tab-btn{border-radius:999px !important;background:#fff !important;border:1px solid #cbd5e1 !important;color:#334155 !important;padding:8px 14px !important}
+.ltt-integrated-filter-bar .ltt-tab-btn:hover{border-color:#0f172a !important;color:#0f172a !important;background:#fff !important}
+.ltt-integrated-filter-bar .ltt-tab-btn.active{background:#0f172a !important;border-color:#0f172a !important;color:#fff !important;box-shadow:none !important}
 </style>
-<form class="bpa-ai-finder" id="bpa-ai-finder" autocomplete="off" role="search">
-<label for="bpa-ai-q">Or describe your evening</label>
+<form autocomplete="off" class="bpa-ai-finder" id="bpa-ai-finder" role="search">
+<span class="bpa-ai-kicker">Find your cruise</span>
+<label for="bpa-ai-q">What kind of evening do you want?</label>
 <div class="bpa-ai-row">
-<input id="bpa-ai-q" maxlength="300" placeholder="e.g. romantic, under €30, near Vigadó tér" type="text"/>
+<svg aria-hidden="true" fill="none" height="20" stroke="#475569" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24" width="20"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+<input id="bpa-ai-q" maxlength="300" placeholder="Romantic, under €30, near Vigadó tér…" type="text"/>
 <button id="bpa-ai-go" type="submit">Find my cruise</button>
 </div>
-<p class="bpa-ai-hint">I'll match it against the 10 cruises on this page.</p>
+<p class="bpa-ai-hint">Matched against the 10 cruises I compared on this page.</p>
 <div aria-live="polite" class="bpa-ai-answer" hidden="" id="bpa-ai-answer"></div>
 </form>
 <script>
@@ -860,6 +864,16 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
   });
 })();
 </script>
+<span class="ltt-filter-label">Or tap a quick pick:</span>
+<div class="ltt-integrated-pills">
+<button class="ltt-tab-btn active" data-cat="all" onclick="lttFilterItems('all', this)" type="button">All (10)</button>
+<button class="ltt-tab-btn" data-cat="tested" onclick="lttFilterItems('tested', this)" type="button">Personally Tested (8)</button>
+<button class="ltt-tab-btn" data-cat="under20" onclick="lttFilterItems('under20', this)" type="button">Under €20 (6)</button>
+<button class="ltt-tab-btn" data-cat="drinks" onclick="lttFilterItems('drinks', this)" type="button">Drinks &amp; Prosecco (5)</button>
+<button class="ltt-tab-btn" data-cat="dining" onclick="lttFilterItems('dining', this)" type="button">Dinner &amp; Food (1)</button>
+<button class="ltt-tab-btn" data-cat="historic" onclick="lttFilterItems('historic', this)" type="button">Historic &amp; Sightseeing (4)</button>
+</div>
+
 </div>
 </div>
 </div>
