@@ -926,8 +926,8 @@ SELLER = {"cruise-1-legenda": "legenda", "item-4-legenda-candlelit-dinner": "leg
           "cruise-cosy-chimney-cake": "silverline", "cruise-silverline-folklore": "silverline"}  # everything else: GetYourGuide
 TRUST_LINES = {
     "gyg": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
-    "legenda": ["<b>Free cancellation</b> up to 24 h", "<b>Book for tonight</b>, same day", "<b>Change your date</b> at the pier"],
-    "silverline": ["<b>Free cancellation</b> up to 24 h", "<b>Free date change</b> up to 24 h", "<b>Book for tonight</b>, same day"],
+    "legenda": ["<b>Change your date</b> at the Legenda pier", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "silverline": ["<b>Free date change</b> up to 24 h before", "<b>Free cancellation</b> up to 24 h before, full refund"],
 }
 REVIEW_FIX = {
     "legenda": [],  # free cancellation confirmed by the owner, so the review keeps its refund text
@@ -946,7 +946,7 @@ for anc in [m.group(1) for m in re.finditer(r'<a class="bpa-sublink" href="#([^"
     assert tm, anc
     lines = TRUST_LINES[kind]
     if anc == "item-4-legenda-candlelit-dinner":  # owner: assume 72 h for Legenda dinners (stricter than 24 h, so never over-promises)
-        lines = ["<b>Free cancellation</b> up to 72 h"] + lines[1:]
+        lines = lines[:1] + ["<b>Free cancellation</b> up to 72 h before, full refund"]
     s = s[:tm.start()] + '<div class="bpa-trust2">' + "".join(f"<span>{l}</span>" for l in lines) + "</div>" + s[tm.end():]
     # review section
     if kind in REVIEW_FIX:
@@ -966,7 +966,7 @@ assert s.count('<span class="hybrid-active-trust">Free 24h Cancellation</span>')
 s = s.replace('<span class="hybrid-active-trust">Free 24h Cancellation</span>', '<span class="hybrid-active-trust" id="sticky-trust">Book for tonight</span>')
 STICKY_TRUST_JS = """<script id="cd-sticky-trust-js">
 (function(){ var r=document.getElementById('sticky-rank'), t=document.getElementById('sticky-trust'); if(!r||!t) return;
-  function upd(){ var n=(r.textContent.match(/#(\\d+)/)||[])[1], c=n&&document.getElementById('card-'+n), b=c&&c.querySelector('.bpa-trust2 b'); if(b) t.textContent=b.textContent; }
+  function upd(){ var n=(r.textContent.match(/#(\\d+)/)||[])[1], c=n&&document.getElementById('card-'+n), bs=c?[].slice.call(c.querySelectorAll('.bpa-trust2 b')):[], b=bs.filter(function(x){return /Free cancellation/.test(x.textContent);})[0]||bs[0]; if(b) t.textContent=b.textContent; }
   new MutationObserver(upd).observe(r,{childList:true,characterData:true,subtree:true}); upd(); })();
 </script>"""
 s = s.replace("</body>", STICKY_TRUST_JS + "\n</body>", 1)
