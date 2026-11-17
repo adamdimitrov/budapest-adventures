@@ -37,6 +37,15 @@ def gyg_link(path_or_url, cmp):
     return f"{u}?partner_id={GYG_PARTNER}&utm_medium=online_publisher&cmp={cmp}&mkt_cmp=true"
 
 
+TIQETS_PARTNER = "thecruisedetective.com-176436"
+TIQETS_ICON = "/assets/cdn/652d0405192ba076b04f74a3/6852917a8b23e16d4296b394_tiqets-logo.avif"
+
+
+def tiqets_link(url, cmp):
+    u = url.split("?")[0]
+    return f"{u}?partner={TIQETS_PARTNER}&tq_campaign={cmp}"
+
+
 def compact(n):
     n = int(n)
     if n >= 1000:
@@ -61,7 +70,8 @@ def fetch_photos(spec, slug):
             name = f"{n:02d}-{it['photo_slug']}-{k:02d}.avif"
             dst = out_dir / name
             if not dst.exists():
-                req = urllib.request.Request(CDN.format(h), headers={"User-Agent": "Mozilla/5.0"})
+                src = h if h.startswith("http") else CDN.format(h)
+                req = urllib.request.Request(src, headers={"User-Agent": "Mozilla/5.0"})
                 data = urllib.request.urlopen(req, timeout=30).read()
                 im = Image.open(io.BytesIO(data)).convert("RGB")
                 im.save(dst, "AVIF", quality=55)
@@ -83,8 +93,8 @@ def rating_html(it, gyg_icon):
     return (f'<div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum">'
             f'<span class="bpa-stars" style="--r:{it["rating"]:.2f}" aria-hidden="true"></span><b class="bpa-rate-score">{it["rating"]:.1f}</b>'
             f'<span class="bpa-rate-meta">{compact(it["reviews"])} reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary>'
-            f'<div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="{esc_attr(it["link"])}" rel="nofollow sponsored noopener" target="_blank">'
-            f'<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="{gyg_icon}"/><span class="bpa-rev-site">GetYourGuide</span>'
+            f'<div class="bpa-lang-pop"><strong>Rating on {it["_pname"]}</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="{esc_attr(it["link"])}" rel="nofollow sponsored noopener" target="_blank">'
+            f'<img alt="{it["_pname"]}" class="bpa-rev-icon" loading="lazy" src="{it["_picon"]}"/><span class="bpa-rev-site">{it["_pname"]}</span>'
             f'<span class="bpa-rev-score">{it["rating"]:.1f}</span><span class="bpa-rev-count">({compact(it["reviews"])})</span>'
             f'<span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div>')
 
@@ -141,7 +151,7 @@ def card_html(n, it, gyg_icon):
 <div class="bpa-psub">{E(it.get("price_unit", "per person"))}</div>
 </div>
 <a class="bpa-btn" href="{esc_attr(it["link"])}" {REL}>Check Availability →</a>
-<div class="bpa-via">Booked securely via GetYourGuide</div>
+<div class="bpa-via">Booked securely via {it["_pname"]}</div>
 <div class="bpa-trust2">{trust}</div>
 <a class="bpa-sublink" href="#{it["anchor"]}">Read Review ↓</a>
 </div>
@@ -168,7 +178,7 @@ def details_html(n, it, gyg_icon):
 </div>
 <h3 class="bpa-details-title">{E(it["title"])}</h3>
 <div class="bpa-reviews-line">
-{rating_html(it, gyg_icon) if not it.get("reviews") else ""}<div class="bpa-summary-reviews"{' hidden=""' if not it.get("reviews") else ""}><div class="div-block-53"><a class="bpa-rev-badge" href="{esc_attr(it["link"])}" onclick="event.stopPropagation()" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="{gyg_icon}"/><span class="bpa-rev-score">{(it.get("rating") or 0):.1f}</span><span class="bpa-rev-count">({compact(it.get("reviews") or 0)})</span></a></div></div>
+{rating_html(it, gyg_icon) if not it.get("reviews") else ""}<div class="bpa-summary-reviews"{' hidden=""' if not it.get("reviews") else ""}><div class="div-block-53"><a class="bpa-rev-badge" href="{esc_attr(it["link"])}" onclick="event.stopPropagation()" rel="nofollow sponsored noopener" target="_blank"><img alt="{it["_pname"]}" class="bpa-rev-icon" loading="lazy" src="{it["_picon"]}"/><span class="bpa-rev-score">{(it.get("rating") or 0):.1f}</span><span class="bpa-rev-count">({compact(it.get("reviews") or 0)})</span></a></div></div>
 </div>
 </div>
 <div class="bpa-details-right">
@@ -288,11 +298,18 @@ def build(spec_path, photos):
     today_h = dt.date.today().strftime("%b %-d, %Y")
     for n, it in enumerate(spec["items"], 1):
         it.setdefault("anchor", f"item-{n}-" + re.sub(r"[^a-z0-9]+", "-", it["short_title"].lower()).strip("-")[:40])
-        if not it["link"].startswith("http") or "partner_id" not in it["link"]:
+        if it.get("platform") == "tiqets":
+            if "partner=" not in it["link"]:
+                it["link"] = tiqets_link(it["link"], spec.get("cmp", slug))
+        elif not it["link"].startswith("http") or "partner_id" not in it["link"]:
             it["link"] = gyg_link(it["link"], spec.get("cmp", slug))
     raw = SHELL.read_text(encoding="utf-8")
     s = BeautifulSoup(raw, "html.parser")
     gyg_icon = s.select_one('img.bpa-rev-icon[alt="GetYourGuide"]')["src"]
+    for it in spec["items"]:
+        tq = it.get("platform") == "tiqets"
+        it["_pname"] = "Tiqets" if tq else "GetYourGuide"
+        it["_picon"] = TIQETS_ICON if tq else gyg_icon
     url = f"{SITE}/{slug}"
 
     # head
