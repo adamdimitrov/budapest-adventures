@@ -213,8 +213,15 @@ MIC_CSS = ('.bpa-ai-row .bpa-ai-mic{flex:0 0 auto;display:inline-flex;align-item
            'background:#f1f5f9;color:#0f172a;border:0;cursor:pointer}\n.bpa-ai-row .bpa-ai-mic:hover{background:#e2e8f0;color:#0f172a}\n'
            '.bpa-ai-row .bpa-ai-mic.is-on{background:#fee2e2;color:#b91c1c;animation:bpaMic 1.2s ease-in-out infinite}\n'
            '@keyframes bpaMic{50%{box-shadow:0 0 0 6px rgba(185,28,28,.15)}}\n@media (prefers-reduced-motion:reduce){.bpa-ai-row .bpa-ai-mic.is-on{animation:none}}\n'
-           '@media (max-width:520px){.bpa-ai-row .bpa-ai-mic{order:3}}\n')
+           '')
 s = s.replace('.bpa-ai-hint{', MIC_CSS + '.bpa-ai-hint{', 1)
+# phone layout: input and mic side by side, "Find my cruise" full width below (the old rule also hid the mic icon)
+OLD_MOBILE = "@media (max-width:520px){.bpa-ai-row{flex-wrap:wrap;padding:6px}.bpa-ai-row svg{display:none}.bpa-ai-row input{flex-basis:100%;padding:10px 8px}.bpa-ai-row button{width:100%}}"
+NEW_MOBILE = ("@media (max-width:520px){.bpa-ai-row{flex-wrap:wrap;padding:6px;gap:6px}.bpa-ai-row>svg{display:none}"
+              ".bpa-ai-row input{flex:1 1 0;min-width:0;padding:10px 8px}"
+              ".bpa-ai-row #bpa-ai-go{flex:1 0 100%;width:100%}}")
+assert s.count(OLD_MOBILE) == 1, "mobile css"
+s = s.replace(OLD_MOBILE, NEW_MOBILE)
 MIC_JS = r"""  // Microphone dictation (browser speech recognition; hidden where it is not supported)
   var SR=window.SpeechRecognition||window.webkitSpeechRecognition, mic=document.getElementById('bpa-ai-mic');
   if(SR && mic){
