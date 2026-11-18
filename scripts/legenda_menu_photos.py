@@ -117,7 +117,7 @@ def process(path):
     txt = PHOTOS_TXT[lang].format(n=N)
     dna = s.index('<div class="dc-dna">', m.end())
     end = s.index("</div>", dna) + 6
-    keys = ("scallop", "goose-liver", "duck-breast", "panna-cotta")
+    keys = ("scallop", "beef-tartare", "duck-breast", "panna-cotta")
     more = f' class="more" data-more="+{N - 3}"'
     thumbs = "".join(f'<span{more if i == 3 else ""}><img src="{A}{k}-tile.webp" alt="" width="240" height="240" loading="lazy" decoding="async"></span>'
                      for i, k in enumerate(keys))
