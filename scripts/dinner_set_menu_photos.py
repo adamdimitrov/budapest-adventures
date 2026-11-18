@@ -24,21 +24,33 @@ MAP = {
     ("Budapest Sightseeing", "m2"): {"main": ["ss-veal-stew"]},
     ("Budapest Sightseeing", "veg"): {"main": ["ss-goat-cheese"]},
     ("Budapest Sightseeing", "m4"): {"main": ["ss-chicken-paprikash"]},
-    # Silverline: only the lemon curd is both on the current menu and in our own test-dinner photos
-    ("Silverline", "all"): {"dessert": ["sl-lemon-curd", None, None]},
+    # Silverline (GYG listing photos, current menu): panzanella, beef ragout soup, cod, sweet potato, lemon curd
+    ("Silverline", "all"): {"starter": ["sl-panzanella"], "soup": ["sl-beef-ragout-soup", None],
+                            "main": ["sl-walnut-cod", None, None, "sl-sweet-potato"],
+                            "dessert": ["sl-coriander-lemon-curd", None, None]},
+    # River Diva winter buffet (EN only; translations still carry an older buffet): sections are all
+    # data-sec="x", so they are keyed by index. #3 = mains, Korean-style fried chicken thigh is 5th.
+    ("River Diva", "buffet"): {"#3": [None, None, None, None, "rd-korean-chicken", None, None]},
 }
+EN_ONLY = {("River Diva", "buffet")}
+# River Diva: a buffet gallery at the top of its carte (EN only)
+BUFFET = ["rd-buffet-salmon", "rd-buffet-croquettes", "rd-buffet-chicken-rice", "rd-buffet-line"]
 # Food-box photo button (EN page only): data-dc-menu -> thumbnails in display order (all photos of that menu)
 TEASER = {
     "hk": ["hk-pork-tenderloin", "hk-chicken-paprikash", "hk-pasta-marinara", "hk-somloi-galuska", "hk-starter-dips", "gl-goulash-soup"],
     "seesight": ["ss-roast-duck", "ss-veal-stew", "ss-goat-cheese", "ss-chicken-paprikash", "ss-goulash-soup"],
     "goulash": ["gl-goulash-soup"],
-    "silverline": ["sl-lemon-curd"],
+    "silverline": ["sl-walnut-cod", "sl-sweet-potato", "sl-panzanella", "sl-coriander-lemon-curd", "sl-beef-ragout-soup"],
+    "diva": ["rd-buffet-salmon", "rd-buffet-croquettes", "rd-korean-chicken", "rd-buffet-line", "rd-buffet-chicken-rice"],
 }
+TEASER_WORD = {"diva": "buffet photo"}
 EN = "best-dinner-cruises-budapest.html"
 CSS = """<style id="dc-set-photos-css">
 .dc-pms .dish .dc-dish-photo{display:block;width:min(300px,100%);height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin:6px auto 6px;border:1px solid #eadfca;background:#fff}
 @media (max-width:600px){.dc-pms .dish .dc-dish-photo{width:min(260px,100%)}}
 @media (min-width:601px){.dc-food-photos .th.n1{grid-template-columns:72px}.dc-food-photos .th.n2{grid-template-columns:repeat(2,72px)}.dc-food-photos .th.n3{grid-template-columns:repeat(3,72px)}}
+.dc-buffet-pics{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0 4px}
+.dc-buffet-pics img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid #eadfca}
 @media (max-width:600px){.dc-food-photos.one{display:flex;align-items:center;gap:12px}.dc-food-photos.one .th{grid-template-columns:72px;flex:0 0 auto}.dc-food-photos.one .tx{flex-direction:column;align-items:flex-start;gap:3px;margin-top:0}}
 </style>"""
 
@@ -56,7 +68,7 @@ def teaser(s, menu, keys):
     tiles = "".join(
         f'<span{more if (i == 3 and n > 4) else ""}><img src="{A}{k}-sq.webp" alt="" width="240" height="240" loading="lazy" decoding="async"></span>'
         for i, k in enumerate(shown))
-    txt = f"{n} dish photo" + ("s" if n != 1 else "")
+    txt = f"{n} {TEASER_WORD.get(menu, 'dish photo')}" + ("s" if n != 1 else "")
     btn = (f'<button class="dc-food-photos{" one" if n == 1 else ""}" data-dc-menu="{menu}" aria-haspopup="dialog" type="button">'
            f'<span class="th n{len(shown)}" aria-hidden="true">{tiles}</span><span class="tx"><span>📷 {txt}</span> <b>{label} ↗</b></span></button>')
     return s[:food_end] + btn + s[food_end:]
@@ -69,8 +81,13 @@ CARTE = re.compile(r'<div class="dc-carte(?: dc-pms)?(?: on)?"[^>]*data-tier="([
 def do_carte(blk, plan, brand, path):
     blk = re.sub(r'<img class="dc-dish-photo"[^>]*>', "", blk)
 
+    idx = [-1]
+
     def fix_sec(m):
+        idx[0] += 1
         head, key, body = m.group(1), m.group(2), m.group(3)
+        if key not in plan:
+            key = f"#{idx[0]}"
         if key not in plan:
             return m.group(0)
         dishes = list(DISH.finditer(body))
@@ -98,13 +115,18 @@ def process(path):
         a = m.start(); b = s.index('<div class="foot">', a)
         blk = s[a:b]
         brand = re.search(r'class="brand">([^<·]*)', blk).group(1).strip()
-        plan = next((v for (bp, t), v in MAP.items() if brand.startswith(bp) and t == m.group(1)), None)
-        if not plan:
+        hit = next(((bp, t) for (bp, t) in MAP if brand.startswith(bp) and t == m.group(1)), None)
+        if not hit or (hit in EN_ONLY and path != EN):
             continue
+        plan = MAP[hit]
         tag = m.group(0)
         if "dc-pms" not in tag:
             tag = tag.replace('class="dc-carte', 'class="dc-carte dc-pms', 1)
         blk = tag + do_carte(blk[len(m.group(0)):], plan, brand, path)
+        blk = re.sub(r'<div class="dc-buffet-pics">.*?</div>', "", blk, flags=re.S)
+        if hit == ("River Diva", "buffet"):
+            pics = "".join(f'<img src="{A}{k}.webp" alt="River Diva winter buffet" width="600" height="450" loading="lazy" decoding="async">' for k in BUFFET)
+            blk = blk.replace('<div class="dc-hl-count"></div>', '<div class="dc-hl-count"></div><div class="dc-buffet-pics">' + pics + '</div>', 1)
         s = s[:a] + blk + s[b:]
         n += sum(1 for v in plan.values() for k in v if k)
     s = re.sub(r'<button class="dc-food-photos[^"]*" data-dc-menu="(?!legenda")[^"]*".*?</button>', "", s, flags=re.S)
