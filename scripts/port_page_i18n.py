@@ -41,7 +41,7 @@ from legenda_links import localize as localize_legenda
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://www.budapestadventures.com"
-MODEL = os.environ.get("PORT_TRANSLATE_MODEL", "claude-opus-5-5")
+MODEL = os.environ.get("PORT_I18N_MODEL", "claude-opus-5-5")
 LANG_NAMES = {
     "hu": "Hungarian", "de": "German", "fr": "French", "it": "Italian", "es": "Spanish",
     "ro": "Romanian", "pl": "Polish", "nl": "Dutch", "cs": "Czech", "sk": "Slovak",
