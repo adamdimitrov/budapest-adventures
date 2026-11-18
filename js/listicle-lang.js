@@ -12,6 +12,7 @@
     var pop=document.createElement('div');
     pop.id='bpa-lang-float';
     pop.setAttribute('role','tooltip');
+    pop.setAttribute('aria-label',({hu:'Nyelvek',de:'Sprachen',fr:'Langues',es:'Idiomas',it:'Lingue',pt:'Idiomas',nl:'Talen',pl:'Języki'})[(document.documentElement.lang||'').slice(0,2)]||'Languages');
     document.body.appendChild(pop);
     var current=null, pinned=false, hideTimer=null;
     var canHover=window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
