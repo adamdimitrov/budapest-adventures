@@ -1,0 +1,2103 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["romantic", "kids", "served", "deck", "tested"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Overall &amp; Most Romantic",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/663224a0b9517f8a892517a9_best-dinner-cruises-budapest-legenda-city-cruises-11.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/690332b608818ef6e357242b_candlelit-dinner-cruise-00002-p-800.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64c683ce54d6bc13eb860a03_Legenda-dinner-cruise%20(1).webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320ed9bd523888f1d2aa1f_best-dinner-cruises-budapest-legenda-city-cruises-9.webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320defac2b58c3877cdbe5_best-dinner-cruises-budapest-legenda-city-cruises-2.webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320e04d3230ba7d3c2276e_best-dinner-cruises-budapest-legenda-city-cruises-3.webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320e4a4d501246b56e9d59_best-dinner-cruises-budapest-legenda-city-cruises-5.webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/6632100d16cd1e9d193ff6d6_best-dinner-cruises-budapest-legenda-city-cruises-6.webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/6632102a9455a44b8ba053fb_best-dinner-cruises-budapest-legenda-city-cruises-12.webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/66322994ce51b39cdb68bb77_best-dinner-cruises-budapest-legenda-city-cruises-8.webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/66322a0f443d1321ca0ccc05_best-dinner-cruises-budapest-legenda-city-cruises-13.webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/66322a2409d6d58a16b06276_best-dinner-cruises-budapest-legenda-city-cruises-16.webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ]
+    ],
+    "_photo_sep": "\n",
+    "_photo_sep_end": false,
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/663224a0b9517f8a892517a9_best-dinner-cruises-budapest-legenda-city-cruises-11-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/690332b608818ef6e357242b_candlelit-dinner-cruise-00002-p-800.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64c683ce54d6bc13eb860a03_Legenda-dinner-cruise%20(1)-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320ed9bd523888f1d2aa1f_best-dinner-cruises-budapest-legenda-city-cruises-9-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320defac2b58c3877cdbe5_best-dinner-cruises-budapest-legenda-city-cruises-2-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320e04d3230ba7d3c2276e_best-dinner-cruises-budapest-legenda-city-cruises-3-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320e4a4d501246b56e9d59_best-dinner-cruises-budapest-legenda-city-cruises-5-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/6632100d16cd1e9d193ff6d6_best-dinner-cruises-budapest-legenda-city-cruises-6-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/6632102a9455a44b8ba053fb_best-dinner-cruises-budapest-legenda-city-cruises-12-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/66322994ce51b39cdb68bb77_best-dinner-cruises-budapest-legenda-city-cruises-8-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/66322a0f443d1321ca0ccc05_best-dinner-cruises-budapest-legenda-city-cruises-13-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/66322a2409d6d58a16b06276_best-dinner-cruises-budapest-legenda-city-cruises-16-p-500.webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Legenda City Cruises",
+    "⏱️ 2.5 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Legenda+City+Cruises+Dock+7+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Dock 7 (Vigadó tér)"
+    }
+   ],
+   "title": {
+    "url": "https://legenda.hu/en/ticket-purchase?partner=38585",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "_order": ["class", "href", "target", "rel"],
+    "text": "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.69",
+     "score": "4.7",
+     "meta": "5.4k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "plain",
+       "site": "GetYourGuide",
+       "score": "4.7",
+       "count": "(2.4k+)",
+       "_nl": "\n"
+      },
+      {
+       "kind": "plain",
+       "site": "Viator",
+       "score": "4.7",
+       "count": "(2k+)",
+       "_nl": "\n"
+      },
+      {
+       "kind": "plain",
+       "site": "Tripadvisor",
+       "score": "4.6",
+       "count": "(1k+)",
+       "_nl": "\n"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "Personally tested",
+     "pop_html": "<strong>I rode this cruise myself.</strong> The photos and video in the review are my own.<span class=\"bpa-lang-note\">What I checked: food, service, live music, seating and views. <a href=\"#cruise-1-legenda\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "19:00 · 2.5 h",
+     "pop_html": "<strong>Daily at 19:00 from late August to mid-April, 19:45 in summer.</strong> 2.5 hours on board.<span class=\"bpa-lang-note\"><b>📍 Vigadó tér, Dock 7:</b> Pest side, 2 minutes from Vörösmarty tér and the top of Váci utca. Legenda's covered dock has restrooms, so you can wait out of the rain.</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🎶",
+     "label": "Pianist & singer",
+     "pop_html": "<strong>A pianist and singer play lounge music all evening.</strong> Quiet enough to talk: no loud folk show."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "No wheelchair access",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> not wheelchair accessible</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> €84 for ages 3-12 (3 courses); not for children under 3</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🥂",
+     "label": "Welcome drink",
+     "pop_html": "<strong>1 drink included: champagne, wine, beer, a soft drink or mineral water.</strong> Every other drink is paid on board."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🕯️",
+     "label": "Romantic and quiet",
+     "pop_html": "<strong>Candlelit tables for two along the windows, a pianist and singer, no loud folk show.</strong> 10 of 70 recent guests booked it for a birthday, anniversary or engagement."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🌬️",
+     "label": "Open top deck",
+     "pop_html": "<strong>The open top deck is free to use at any point of the evening.</strong> Seats can't be reserved, not even a window table: Legenda assigns the tables on board."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍽️",
+     "label": "4 courses, 17 dishes",
+     "pop_html": "<strong>Chosen at your table: 6 starters, 2 soups, 6 mains (trout, pork, duck, beef, cauliflower steak or tuna) and 3 desserts.</strong> Children 3 to 12 get 3 courses."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🌱",
+     "label": "Diet notes",
+     "pop_html": "<strong>Gluten-free and lactose-free dishes are marked on the menu.</strong> No vegan menu, and it can't cater for food allergies."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "04-20",
+      "to": "08-23",
+      "times": ["19:45"]
+     },
+     {
+      "from": "08-24",
+      "to": "04-19",
+      "times": ["19:00"]
+     }
+    ],
+    "dur": "150"
+   },
+   "best_for": {
+    "pick_html": "for a romantic 4-course candlelit dinner with live lounge music and the lit-up Parliament.",
+    "skip_html": "on a tight budget, if you are vegan, or with food allergies: the listing can't cater for them."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Good for a special occasion?",
+      "a": "Yes: 10 of 70 recent guests booked it for a birthday, anniversary or engagement."
+     },
+     {
+      "q": "Is the food good?",
+      "a": "55 of 70 recent guests talk about the food, nearly all positively. I chose from 17 dishes on my test dinner."
+     },
+     {
+      "q": "Is it loud?",
+      "a": "No. A pianist and singer play lounge music, quiet enough to talk. There is no loud folk show."
+     },
+     {
+      "q": "Can I reserve a window table?",
+      "a": "No. Legenda doesn't take seat or table requests, whatever you book: tables are assigned on board."
+     },
+     {
+      "q": "Can I cancel or change the date?",
+      "a": "Booked direct with Legenda, cancellation is free up to 72 hours before. You can also move your ticket to another day, if seats are free."
+     }
+    ]
+   },
+   "extras_after_faq": "<div class=\"dc-food\"><div class=\"dc-food-head\"><span class=\"dc-food-lbl\">🍽️ Food</span><span aria-hidden=\"true\" class=\"dc-meter\" data-l=\"3\" title=\"Food level 3 of 3: Fine dining\"><i></i><i></i><i></i></span><span class=\"dc-food-tier\" data-l=\"3\">Fine dining</span><span class=\"dc-food-lvl\">4-course à la carte · 17 dishes to pick from</span><button aria-haspopup=\"dialog\" class=\"dc-food-btn\" data-dc-menu=\"legenda\" type=\"button\">Full menu ↗</button></div><div class=\"dc-food-strip\">Scallop or goose liver<span class=\"sep\">›</span>Sour-cherry soup<span class=\"sep\">›</span>Duck, beef or tuna<span class=\"sep\">›</span>Panna cotta</div><div class=\"dc-dna\"><button aria-label=\"Starter: 6 choices\" class=\"dc-c\" data-sec=\"starter\" type=\"button\"><b>Starter</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"v\"></i></span><em>6</em></button><span class=\"dc-arrow\">›</span><button aria-label=\"Soup: 2 choices\" class=\"dc-c\" data-sec=\"soup\" type=\"button\"><b>Soup</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i></span><em>2</em></button><span class=\"dc-arrow\">›</span><button aria-label=\"Main: 6 choices\" class=\"dc-c\" data-sec=\"main\" type=\"button\"><b>Main</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"v\"></i><i class=\"\"></i></span><em>6</em></button><span class=\"dc-arrow\">›</span><button aria-label=\"Dessert: 3 choices\" class=\"dc-c\" data-sec=\"dessert\" type=\"button\"><b>Dessert</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i></span><em>3</em></button></div></div>",
+   "price": {
+    "main": "€110",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "evening dinner",
+      "price": "€110"
+     },
+     {
+      "label": "Child",
+      "small": "3-12, 3 courses",
+      "price": "€84"
+     },
+     {
+      "label": "Under 3",
+      "price": "Not allowed"
+     }
+    ],
+    "total": {
+     "label": "2 adults + 2 kids (3-12)",
+     "price": "€388"
+    },
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://legenda.hu/en/ticket-purchase?partner=38585",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "_order": ["class", "href", "target", "rel"],
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Legenda",
+    "trust": ["<b>Change your date</b> if your plans change", "<b>Free cancellation</b> up to 72 h before, full refund"],
+    "sublink": {
+     "url": "#cruise-1-legenda",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: Hungária Koncert Dinner & Folk Show -->\n",
+   "id": "card-2",
+   "cats": ["folk", "kids", "served", "deck", "short", "under70", "tested"],
+   "gallery": {
+    "rank": {
+     "text": "🥈 #2 Best Folk Show",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      ["alt", "Hungária Koncert dinner cruise with Rajkó folk music on the Gróf Széchenyi"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c97991129dcb5fa59a_Budapest-river-cruises-hungaria-koncert-3.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Hungária Koncert dinner cruise with Rajkó folk music on the Gróf Széchenyi"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858cee7351cbee9beb832_Budapest-river-cruises-hungaria-koncert-13.webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Hungária Koncert dinner cruise with Rajkó folk music on the Gróf Széchenyi"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858cdb4ae8b56a4597bf5_Budapest-river-cruises-hungaria-koncert-10.webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Hungária Koncert dinner cruise with Rajkó folk music on the Gróf Széchenyi"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/6a1718a5c527a0f3579e0080_hungaria-koncert-00007.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Hungária Koncert dinner cruise with Rajkó folk music on the Gróf Széchenyi"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/6a1717ab3b109f5aababa165_hungaria-koncert-00005.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Hungária Koncert dinner cruise with Rajkó folk music on the Gróf Széchenyi"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c9482e8373089e515f_Budapest-river-cruises-hungaria-koncert-4.webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Hungária Koncert dinner cruise with Rajkó folk music on the Gróf Széchenyi"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/6a17137547d8b03e7ab7dbfa_hungaria-koncert-00002.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Hungária Koncert dinner cruise with Rajkó folk music on the Gróf Széchenyi"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/6a1713758036c41f2768ca87_hungaria-koncert-00006.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Hungária Koncert dinner cruise with Rajkó folk music on the Gróf Széchenyi"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c9a4e49ca09097411c_Budapest-river-cruises-hungaria-koncert-6.webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Hungária Koncert dinner cruise with Rajkó folk music on the Gróf Széchenyi"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c9ab14b20add2d136a_Budapest-river-cruises-hungaria-koncert-8.webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Hungária Koncert dinner cruise with Rajkó folk music on the Gróf Széchenyi"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858cff69a68768c2aa8c0_Budapest-river-cruises-hungaria-koncert-16.webp"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Hungária Koncert dinner cruise with Rajkó folk music on the Gróf Széchenyi"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/6a1713752e3e5a94222ca4d1_hungaria-koncert-00001.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ]
+    ],
+    "_photo_sep": "\n",
+    "_photo_sep_end": false,
+    "_gallery_label": "Photo gallery 3",
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c97991129dcb5fa59a_Budapest-river-cruises-hungaria-koncert-3-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858cee7351cbee9beb832_Budapest-river-cruises-hungaria-koncert-13-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858cdb4ae8b56a4597bf5_Budapest-river-cruises-hungaria-koncert-10-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/6a1718a5c527a0f3579e0080_hungaria-koncert-00007.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/6a1717ab3b109f5aababa165_hungaria-koncert-00005.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c9482e8373089e515f_Budapest-river-cruises-hungaria-koncert-4-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/6a17137547d8b03e7ab7dbfa_hungaria-koncert-00002-p-500.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/6a1713758036c41f2768ca87_hungaria-koncert-00006-p-500.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c9a4e49ca09097411c_Budapest-river-cruises-hungaria-koncert-6-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c9ab14b20add2d136a_Budapest-river-cruises-hungaria-koncert-8-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858cff69a68768c2aa8c0_Budapest-river-cruises-hungaria-koncert-16-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/6a1713752e3e5a94222ca4d1_hungaria-koncert-00001-p-500.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Hungária Koncert",
+    "⏱️ 1.5 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Akadémia+2+ponton+Antall+József+rakpart+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Akadémia 2 (Gróf Széchenyi)"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/15-hour-danube-cruise-dinner-with-live-music-t1593/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-dinner-cruises-card-hungaria-koncert-dinner&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "_order": ["class", "href", "target", "rel"],
+    "text": "4-Course Hungarian Dinner Cruise With Rajkó Folk Music &amp; Dance"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.38",
+     "score": "4.4",
+     "meta": "2.2k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.4",
+       "count": "(2.2k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/15-hour-danube-cruise-dinner-with-live-music-t1593/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-dinner-cruises-rating-hungaria-koncert-dinner&mkt_cmp=true",
+       "rel": "nofollow sponsored noopener",
+       "target": "_blank",
+       "_order": ["class", "href", "target", "rel"],
+       "_nl": "\n"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "Personally tested",
+     "pop_html": "<strong>I rode this cruise myself.</strong> The photos and video in the review are my own.<span class=\"bpa-lang-note\">What I checked: food, the folk show, seating and views. <a href=\"#cruise-5-hungaria-koncert\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "19:00 · 1.5 h",
+     "pop_html": "<strong>Departs at 19:00, back after 90 minutes.</strong> Arrive at least 15 minutes early.<span class=\"bpa-lang-note\"><b>📍 Akadémia 2:</b> Pest side, the second dock from the Chain Bridge towards Parliament. Look for the Gróf Széchenyi or Stadt Wien.</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "💃",
+     "label": "Rajkó folk show",
+     "pop_html": "<strong>Musicians of the Rajkó Folk Orchestra play with a cimbalom, and folk dancers perform in costume.</strong> Guests say the band plays requests at the tables and the dancers come round for photos."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "Kids 6 and under free",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not stated on the listing: ask the operator before you book</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> free for 6 and under (add them to the booking); child (7-12), student (13-25) and senior (66+) tickets</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🥂",
+     "label": "Welcome drink",
+     "pop_html": "<strong>1 welcome drink included.</strong> Other drinks are paid on board; a couple of guests suggest bringing change for tips."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🎉",
+     "label": "Lively folk evening",
+     "pop_html": "<strong>A show night more than a sightseeing cruise: dinner, live Rajkó music and costumed dancers.</strong> 34 of 61 recent guests mention the dancers, 34 the music."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🌬️",
+     "label": "Deck for the views",
+     "pop_html": "<strong>Guests say you can step out on deck to watch the lit-up city quietly.</strong> Guests who arrived 30 minutes early got a window table without booking one."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍽️",
+     "label": "3 set menus",
+     "pop_html": "<strong>Served at your table: dips to start, then Urban Classic (goulash soup, pork tenderloin), Paprika Mood (chicken paprikash) or Veggie Flow (vegetable soup, pasta marinara), and Somlói sponge cake.</strong> Some past dates served a buffet instead: 6 of 61 recent guests mention one."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🚢",
+     "label": "Historic ship",
+     "pop_html": "<strong>An evening cruise on a historic ship, the Gróf Széchenyi or Stadt Wien.</strong> One guest calls it a well-kept vintage boat."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": ["19:00"]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": ["19:00"]
+     }
+    ],
+    "dur": "90"
+   },
+   "best_for": {
+    "pick_html": "for a lively Hungarian evening with a 4-course dinner, Rajkó folk music and costumed dancers.",
+    "skip_html": "if sightseeing is your priority: the show and the dinner take centre stage, and the views from the ship are limited."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is the food good?",
+      "a": "44 of 61 recent guests talk about the food, almost all positively. 2 found it lukewarm or a bit dry."
+     },
+     {
+      "q": "Show or sightseeing?",
+      "a": "A show night. The band plays requests at the tables and the dancers come round for photos; you can step out on deck to watch the city."
+     },
+     {
+      "q": "Set menu or buffet?",
+      "a": "The listing shows three set menus served at your table. 6 of 61 recent guests had a buffet on their date."
+     },
+     {
+      "q": "Can kids come?",
+      "a": "Yes. Children 6 and under go free but must be added to the booking. Families say kids got to dance with the dancers."
+     },
+     {
+      "q": "How early should I arrive?",
+      "a": "At least 15 minutes. Guests who came 30 minutes early got a window table without booking one."
+     }
+    ]
+   },
+   "extras_after_faq": "<div class=\"dc-food\"><div class=\"dc-food-head\"><span class=\"dc-food-lbl\">🍽️ Food</span><span aria-hidden=\"true\" class=\"dc-meter\" data-l=\"2\" title=\"Food level 2 of 3: Full dinner\"><i></i><i></i><i></i></span><span class=\"dc-food-tier\" data-l=\"2\">Full dinner</span><span class=\"dc-food-lvl\">4-course set menu · pick A, B or C</span><button aria-haspopup=\"dialog\" class=\"dc-food-btn\" data-dc-menu=\"hk\" type=\"button\">Full menu ↗</button></div><div class=\"dc-food-strip\">Dip trio<span class=\"sep\">›</span>Goulash<span class=\"sep\">›</span>Széchenyi pork or paprikash<span class=\"sep\">›</span>Somlói galuska</div><div class=\"dc-dna\"><button aria-label=\"Starter: 1 choice\" class=\"dc-c\" data-sec=\"starter\" type=\"button\"><b>Starter</b><span class=\"dc-dots\"><i class=\"v\"></i></span><em>1</em></button><span class=\"dc-arrow\">›</span><button aria-label=\"Soup: 3 choices\" class=\"dc-c\" data-sec=\"soup\" type=\"button\"><b>Soup</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i><i class=\"v\"></i></span><em>3</em></button><span class=\"dc-arrow\">›</span><button aria-label=\"Main: 3 choices\" class=\"dc-c\" data-sec=\"main\" type=\"button\"><b>Main</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i><i class=\"v\"></i></span><em>3</em></button><span class=\"dc-arrow\">›</span><button aria-label=\"Dessert: 1 choice\" class=\"dc-c\" data-sec=\"dessert\" type=\"button\"><b>Dessert</b><span class=\"dc-dots\"><i class=\"v\"></i></span><em>1</em></button></div><div class=\"dc-sets\"><span class=\"dc-sets-lbl\">Pick a set menu</span><button class=\"dc-set\" data-go=\"a\" type=\"button\">A Urban Classic</button><button class=\"dc-set\" data-go=\"b\" type=\"button\">B Paprika Mood</button><button class=\"dc-set veg\" data-go=\"c\" type=\"button\">C Veggie Flow</button></div></div>",
+   "price": {
+    "main": "€67",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€67"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€79</s>"
+     },
+     {
+      "label": "Age 6 and under",
+      "small": "add to the booking",
+      "price": "Free"
+     },
+     {
+      "label": "Child 7-12, student, senior",
+      "price": "At checkout"
+     }
+    ],
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/15-hour-danube-cruise-dinner-with-live-music-t1593/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-dinner-cruises-button-hungaria-koncert-dinner&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "_order": ["class", "href", "target", "rel"],
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#cruise-5-hungaria-koncert",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #3: Silverline 4-Course Dinner Cruise -->\n",
+   "id": "card-3",
+   "cats": ["romantic", "folk", "served", "vegan", "tested"],
+   "gallery": {
+    "rank": {
+     "text": "🥉 #3 Best Show Choice",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      ["alt", "Silverline 4-Course Dinner Cruise"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41e56d6fe9d92b22c15ed_best-budapest-dinner-cruises-silverline-113.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Silverline 4-Course Dinner Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4ca4cf389c00f1d86d_best-budapest-dinner-cruises-silverline-7.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Silverline 4-Course Dinner Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4cc77b0bf60d90e732_best-budapest-dinner-cruises-silverline-31.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Silverline 4-Course Dinner Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c76d60be8879c4c56_best-budapest-dinner-cruises-silverline-68.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Silverline 4-Course Dinner Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4cb924ed0b010c12d6_best-budapest-dinner-cruises-silverline-43.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Silverline 4-Course Dinner Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c4eb37345f0ae26a5_best-budapest-dinner-cruises-silverline-81.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Silverline 4-Course Dinner Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4ce41432b98e5ea0d5_best-budapest-dinner-cruises-silverline-90.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Silverline 4-Course Dinner Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4cc07e68f39d183c3d_best-budapest-dinner-cruises-silverline-96.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Silverline 4-Course Dinner Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c49f552630c60894a_best-budapest-dinner-cruises-silverline-102.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Silverline 4-Course Dinner Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4b17cb3aefbd5b6237_best-budapest-dinner-cruises-silverline-98.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Silverline 4-Course Dinner Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c7d21d3f5803a13ec_best-budapest-dinner-cruises-silverline-161.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Silverline 4-Course Dinner Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c853fe56d60faa043_best-budapest-dinner-cruises-silverline-79.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ]
+    ],
+    "_photo_sep": "\n",
+    "_photo_sep_end": false,
+    "_gallery_label": "Photo gallery 2",
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41e56d6fe9d92b22c15ed_best-budapest-dinner-cruises-silverline-113-p-500.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4ca4cf389c00f1d86d_best-budapest-dinner-cruises-silverline-7.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4cc77b0bf60d90e732_best-budapest-dinner-cruises-silverline-31.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c76d60be8879c4c56_best-budapest-dinner-cruises-silverline-68.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4cb924ed0b010c12d6_best-budapest-dinner-cruises-silverline-43.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c4eb37345f0ae26a5_best-budapest-dinner-cruises-silverline-81.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4ce41432b98e5ea0d5_best-budapest-dinner-cruises-silverline-90.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4cc07e68f39d183c3d_best-budapest-dinner-cruises-silverline-96.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c49f552630c60894a_best-budapest-dinner-cruises-silverline-102.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4b17cb3aefbd5b6237_best-budapest-dinner-cruises-silverline-98.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c7d21d3f5803a13ec_best-budapest-dinner-cruises-silverline-161.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c853fe56d60faa043_best-budapest-dinner-cruises-silverline-79.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Silverline Cruises",
+    "⏱️ 2 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Silverline+Cruises+Dock+11+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Dock 11 (Elizabeth Bridge)"
+    }
+   ],
+   "title": {
+    "url": "https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "_order": ["class", "href", "target", "rel"],
+    "text": "Silverline 4-Course Dinner Cruises: No Show, Folk &amp; Operetta or Piano Show"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.54",
+     "score": "4.5",
+     "meta": "2.5k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "plain",
+       "site": "GetYourGuide",
+       "score": "4.4",
+       "count": "(1.4k+)",
+       "_nl": "\n"
+      },
+      {
+       "kind": "plain",
+       "site": "Viator",
+       "score": "4.7",
+       "count": "(570+)",
+       "_nl": "\n"
+      },
+      {
+       "kind": "plain",
+       "site": "Tripadvisor",
+       "score": "4.7",
+       "count": "(480+)",
+       "_nl": "\n"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "Personally tested",
+     "pop_html": "<strong>I rode this cruise myself.</strong> The photos and video in the review are my own.<span class=\"bpa-lang-note\">What I checked: food, service, seating, the show and the views. <a href=\"#cruise-2-silverline-no-show\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "19:00 · 2 h",
+     "pop_html": "<strong>Departs at 19:00, timed to start around sunset; 2 hours.</strong> Boarding opens 45 minutes before; arrive at least 30 minutes early.<span class=\"bpa-lang-note\"><b>📍 Dock 11, Elizabeth Bridge:</b> Jane Haining rakpart on the Pest side, next to Elizabeth Bridge. The boat sails south to Lágymányosi Bridge, then north to Margaret Bridge.</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🎭",
+     "label": "3 show options",
+     "pop_html": "<strong>Dinner & Lights (no show, background music) from €77, or the Folk & Operetta Show with singers and folk dancers from €91.</strong> Same boat, same 4-course menu. Silverline also lists a Live Piano Show."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "No wheelchair access",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> no wheelchair access</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> infant tickets don't include dinner (order on board); alcohol only from 18; service dogs only</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🥂",
+     "label": "Welcome drink",
+     "pop_html": "<strong>1 welcome drink included: Prosecco on Dinner & Lights, champagne on the folk show.</strong> Other drinks are paid on board, and you can't bring your own. 2 of 31 recent guests wish more were included."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🕯️",
+     "label": "Calm, sunset start",
+     "pop_html": "<strong>A quiet dinner with background music on Dinner & Lights, timed to start around sunset.</strong> 18 of 31 recent guests praise the staff, many naming their waiter."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🪟",
+     "label": "Window seat +€15",
+     "pop_html": "<strong>A window seat costs €15 more per person on Dinner & Lights, €25 on the Folk & Operetta show.</strong> Choose it when you book; one guest said the window table was worth it."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍽️",
+     "label": "4-course menu",
+     "pop_html": "<strong>Panzanella with pear and burrata, then a choice of 2 soups, 4 mains (walnut cod, pork tenderloin, curry lamb chops or a vegetarian sweet potato boat) and 3 desserts.</strong> Same menu on every option."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🌱",
+     "label": "Veg, GF & LF",
+     "pop_html": "<strong>A vegetarian main is on the menu, and most dishes are made with gluten-free and/or lactose-free ingredients.</strong> No allergen-free kitchen; tell Silverline about special diets in advance."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": ["19:00"]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": ["19:00"]
+     }
+    ],
+    "dur": "120"
+   },
+   "best_for": {
+    "pick_html": "for a good-value 4-course dinner with no show or a folk and operetta show, on the same boat.",
+    "skip_html": "if you want drinks included or a window table at no extra cost: only one welcome drink is included and window seats cost more."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Which option should I book?",
+      "a": "Dinner &amp; Lights (€77) for a quiet dinner and the views, or the Folk &amp; Operetta Show (€91) for singers and folk dancers. Same boat, same menu."
+     },
+     {
+      "q": "Are drinks included?",
+      "a": "Only the welcome drink. 2 of 31 recent guests wish more were included at this price."
+     },
+     {
+      "q": "Is the window seat worth it?",
+      "a": "It costs €15 extra on Dinner &amp; Lights. One recent guest said the window table was worth the money."
+     },
+     {
+      "q": "Can I cancel or change the date?",
+      "a": "Yes, free up to 24 hours before departure when you book direct with Silverline. Within 24 hours there is no refund."
+     },
+     {
+      "q": "When should I arrive?",
+      "a": "Boarding opens 45 minutes before the 19:00 departure. Arrive at least 30 minutes early."
+     }
+    ]
+   },
+   "extras_after_faq": "<div class=\"dc-opts\"><a class=\"dc-opt\" href=\"https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures\" onclick=\"event.stopPropagation()\" target=\"_blank\" rel=\"nofollow sponsored noopener\"><span class=\"dc-opt-name\">🕯️ Dinner &amp; Lights: no show</span><span class=\"dc-opt-meta\">Sunset departure • background music • upper deck</span><span class=\"dc-opt-price\">€77<small>Book →</small></span></a><a class=\"dc-opt\" href=\"https://budapestrivercruise.eu/product/budapest-danube-dinner-cruise/?code=bpadventures\" onclick=\"event.stopPropagation()\" target=\"_blank\" rel=\"nofollow sponsored noopener\"><span class=\"dc-opt-name\">💃 Folk &amp; Operetta Show</span><span class=\"dc-opt-meta\">Operetta singers, folk dancers, csárdás lesson</span><span class=\"dc-opt-price\">€91<small>Book →</small></span></a><div aria-disabled=\"true\" class=\"dc-opt dc-opt-off\"><span class=\"dc-opt-name\">🎹 Live Piano Show</span><span class=\"dc-opt-meta\">No bookable dates in Nov or Dec 2026</span><span class=\"dc-opt-price\">€91<small>Not bookable now</small></span></div></div><div class=\"dc-food\"><div class=\"dc-food-head\"><span class=\"dc-food-lbl\">🍽️ Food</span><span aria-hidden=\"true\" class=\"dc-meter\" data-l=\"3\" title=\"Food level 3 of 3: Fine dining\"><i></i><i></i><i></i></span><span class=\"dc-food-tier\" data-l=\"3\">Fine dining</span><span class=\"dc-food-lvl\">4-course gourmet · same menu on all 3 cruises</span><button aria-haspopup=\"dialog\" class=\"dc-food-btn\" data-dc-menu=\"silverline\" type=\"button\">Full menu ↗</button></div><div class=\"dc-food-strip\">Burrata panzanella<span class=\"sep\">›</span>Beef ragout soup<span class=\"sep\">›</span>Cod, pork, lamb or sweet potato<span class=\"sep\">›</span>Lemon curd</div><div class=\"dc-dna\"><button aria-label=\"Starter: 1 choice\" class=\"dc-c\" data-sec=\"starter\" type=\"button\"><b>Starter</b><span class=\"dc-dots\"><i class=\"\"></i></span><em>1</em></button><span class=\"dc-arrow\">›</span><button aria-label=\"Soup: 2 choices\" class=\"dc-c\" data-sec=\"soup\" type=\"button\"><b>Soup</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i></span><em>2</em></button><span class=\"dc-arrow\">›</span><button aria-label=\"Main: 4 choices\" class=\"dc-c\" data-sec=\"main\" type=\"button\"><b>Main</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"v\"></i></span><em>4</em></button><span class=\"dc-arrow\">›</span><button aria-label=\"Dessert: 3 choices\" class=\"dc-c\" data-sec=\"dessert\" type=\"button\"><b>Dessert</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i></span><em>3</em></button></div></div>",
+   "price": {
+    "main": "€77",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€77"
+     },
+     {
+      "label": "Folk &amp; Operetta Show",
+      "small": "same menu",
+      "price": "€91"
+     },
+     {
+      "label": "Window seat",
+      "small": "Dinner &amp; Lights",
+      "price": "+€15"
+     },
+     {
+      "label": "Window seat",
+      "small": "Folk &amp; Operetta",
+      "price": "+€25"
+     }
+    ],
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "_order": ["class", "href", "target", "rel"],
+     "text": "Check Availability →"
+    },
+    "via": "via Silverline",
+    "trust": ["<b>Free date change</b> up to 24 h before", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#cruise-2-silverline-no-show",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: 4-Course Dinner Cruise With Live Folk Music -->\n",
+   "id": "card-4",
+   "cats": ["romantic", "folk", "kids", "served", "deck", "under70"],
+   "gallery": {
+    "rank": {
+     "text": "💶 #4 Best Value 4-Course Dinner",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "4-course dinner cruise with live Hungarian folk music on the Danube in Budapest"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-course dinner cruise with live Hungarian folk music on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-02.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-course dinner cruise with live Hungarian folk music on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-03.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-course dinner cruise with live Hungarian folk music on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-04.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-course dinner cruise with live Hungarian folk music on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-05.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-course dinner cruise with live Hungarian folk music on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-06.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-course dinner cruise with live Hungarian folk music on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-07.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-course dinner cruise with live Hungarian folk music on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-08.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-course dinner cruise with live Hungarian folk music on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-09.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-course dinner cruise with live Hungarian folk music on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-10.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-course dinner cruise with live Hungarian folk music on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-11.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "4-course dinner cruise with live Hungarian folk music on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-12.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ]
+    ],
+    "_photo_sep": "\n",
+    "_photo_sep_end": false,
+    "thumbs": [
+     {
+      "src": "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-01.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-02.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-03.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-04.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-05.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-06.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-07.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-08.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-09.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-10.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-11.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-12.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Budapest Sightseeing",
+    "⏱️ 2 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Seesight+Dock+6+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Dock 6 (Seesight)"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-dinner-cruises-card-seesight-folk-dinner&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "_order": ["class", "href", "target", "rel"],
+    "text": "4-Course Dinner River Cruise With Live Folk Music &amp; Dance"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.64",
+     "score": "4.6",
+     "meta": "2.2k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.6",
+       "count": "(2.2k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-dinner-cruises-rating-seesight-folk-dinner&mkt_cmp=true",
+       "rel": "nofollow sponsored noopener",
+       "target": "_blank",
+       "_order": ["class", "href", "target", "rel"],
+       "_nl": "\n"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "19:30 · 2 h",
+     "pop_html": "<strong>Departs at 19:30; about 2 hours.</strong> One guest found a long queue at boarding, so come early.<span class=\"bpa-lang-note\"><b>📍 Seesight Dock 6:</b> Pest embankment near Vigadó tér. A queue can form before boarding, so come early.</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🎻",
+     "label": "Folk music & dance",
+     "pop_html": "<strong>Live music by the Hungarian Ökrös Band and a live folklore performance.</strong> Guests call it lively but not too loud to talk."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "No wheelchair access",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> not suitable for wheelchair users; no electric or non-folding wheelchairs</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> under 3 free if not eating (tell the operator so they can set a seat)</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🥂",
+     "label": "Welcome Prosecco",
+     "pop_html": "<strong>A welcome glass of Prosecco.</strong> Extra drinks are bought on board; you can't bring your own."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🙂",
+     "label": "Warm folk evening",
+     "pop_html": "<strong>A 4-course dinner with live folk music and dancers, pitched as a romantic evening.</strong> 39 of 52 recent guests talk about the food, most of them positively."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🌬️",
+     "label": "Step out on deck",
+     "pop_html": "<strong>Guests say you can go out on deck for photos at any point.</strong> Inside stays warm on a cold November night."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍽️",
+     "label": "4 menus to pick",
+     "pop_html": "<strong>Table service, 4 courses: Roast Duck (duck liver pâté, goulash soup, roast duck leg, strudel), Veal Stew, Poultry (chicken paprika) or Vegetarian (grilled goat's cheese, Gundel pancake).</strong> Kids' menus are listed on some dates."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": ["19:30"]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": ["19:30"]
+     }
+    ],
+    "dur": "120"
+   },
+   "best_for": {
+    "pick_html": "for the lowest-priced full 4-course served dinner here, with live Hungarian folk music and dancers.",
+    "skip_html": "if you use a wheelchair: the listing says it is not suitable for wheelchair users."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is the food good?",
+      "a": "39 of 52 recent guests talk about the food, mostly positively; a few call it fine rather than special."
+     },
+     {
+      "q": "Can I go outside?",
+      "a": "Yes. Guests say you can step out on deck for photos of the lit-up Parliament at any point."
+     },
+     {
+      "q": "Is the music loud?",
+      "a": "No. Guests call the folk music and dancing lively but not too loud to talk."
+     },
+     {
+      "q": "Is there a vegetarian menu?",
+      "a": "Yes, one of the four menus is vegetarian: grilled goat's cheese, then a Gundel pancake to finish."
+     },
+     {
+      "q": "What about boarding?",
+      "a": "One guest found a long queue at Dock 6, so come early."
+     }
+    ]
+   },
+   "extras_after_faq": "<div class=\"dc-food\"><div class=\"dc-food-head\"><span class=\"dc-food-lbl\">🍽️ Food</span><span aria-hidden=\"true\" class=\"dc-meter\" data-l=\"2\" title=\"Food level 2 of 3: Full dinner\"><i></i><i></i><i></i></span><span class=\"dc-food-tier\" data-l=\"2\">Full dinner</span><span class=\"dc-food-lvl\">Served set menu · 4 to choose from</span><button aria-haspopup=\"dialog\" class=\"dc-food-btn\" data-dc-menu=\"seesight\" type=\"button\">Full menu ↗</button></div><div class=\"dc-food-strip\">Pâté or aubergine cream<span class=\"sep\">›</span>Goulash, Újházi or pea soup<span class=\"sep\">›</span>Duck, veal, chicken or goat&rsquo;s cheese<span class=\"sep\">›</span>Strudel, Somlói or pancake</div><div class=\"dc-dna\"><button aria-label=\"Starter: 4 choices\" class=\"dc-c\" data-sec=\"starter\" type=\"button\"><b>Starter</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"v\"></i></span><em>4</em></button><span class=\"dc-arrow\">›</span><button aria-label=\"Soup: 4 choices\" class=\"dc-c\" data-sec=\"soup\" type=\"button\"><b>Soup</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"v\"></i></span><em>4</em></button><span class=\"dc-arrow\">›</span><button aria-label=\"Main: 4 choices\" class=\"dc-c\" data-sec=\"main\" type=\"button\"><b>Main</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"v\"></i></span><em>4</em></button><span class=\"dc-arrow\">›</span><button aria-label=\"Dessert: 4 choices\" class=\"dc-c\" data-sec=\"dessert\" type=\"button\"><b>Dessert</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"v\"></i></span><em>4</em></button></div><div class=\"dc-sets\"><span class=\"dc-sets-lbl\">Pick a set menu</span><button class=\"dc-set\" data-go=\"m1\" type=\"button\">Roast Duck</button><button class=\"dc-set\" data-go=\"m2\" type=\"button\">Veal Stew</button><button class=\"dc-set veg\" data-go=\"veg\" type=\"button\">Vegetarian</button><button class=\"dc-set\" data-go=\"m4\" type=\"button\">Poultry</button></div></div>",
+   "price": {
+    "main": "€66",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€66"
+     },
+     {
+      "label": "Under 3",
+      "small": "not eating",
+      "price": "Free"
+     }
+    ],
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-dinner-cruises-button-seesight-folk-dinner&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "_order": ["class", "href", "target", "rel"],
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#cruise-6-eurama",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: River Diva Buffet Dinner Cruise -->\n",
+   "id": "card-5",
+   "cats": ["kids", "buffet", "unlimited", "vegan", "deck", "wheelchair"],
+   "gallery": {
+    "rank": {
+     "text": "🍸 #5 Best Buffet &amp; Unlimited Drinks",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "River Diva buffet dinner cruise with unlimited drinks on the Danube in Budapest"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/dinner-cruises-2026/river-diva-buffet-dinner-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "River Diva buffet dinner cruise with unlimited drinks on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/river-diva-buffet-dinner-02.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "River Diva buffet dinner cruise with unlimited drinks on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/river-diva-buffet-dinner-03.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "River Diva buffet dinner cruise with unlimited drinks on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/river-diva-buffet-dinner-04.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "River Diva buffet dinner cruise with unlimited drinks on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/river-diva-buffet-dinner-05.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "River Diva buffet dinner cruise with unlimited drinks on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/river-diva-buffet-dinner-06.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "River Diva buffet dinner cruise with unlimited drinks on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/river-diva-buffet-dinner-07.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "River Diva buffet dinner cruise with unlimited drinks on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/river-diva-buffet-dinner-08.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "River Diva buffet dinner cruise with unlimited drinks on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/river-diva-buffet-dinner-09.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "River Diva buffet dinner cruise with unlimited drinks on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/river-diva-buffet-dinner-10.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "River Diva buffet dinner cruise with unlimited drinks on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/river-diva-buffet-dinner-11.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "River Diva buffet dinner cruise with unlimited drinks on the Danube in Budapest"],
+      ["data-src", "/assets/dinner-cruises-2026/river-diva-buffet-dinner-12.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ]
+    ],
+    "_photo_sep": "\n",
+    "_photo_sep_end": false,
+    "thumbs": [
+     {
+      "src": "/assets/dinner-cruises-2026/river-diva-buffet-dinner-01.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/river-diva-buffet-dinner-02.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/river-diva-buffet-dinner-03.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/river-diva-buffet-dinner-04.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/river-diva-buffet-dinner-05.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/river-diva-buffet-dinner-06.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/river-diva-buffet-dinner-07.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/river-diva-buffet-dinner-08.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/river-diva-buffet-dinner-09.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/river-diva-buffet-dinner-10.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/river-diva-buffet-dinner-11.avif"
+     },
+     {
+      "src": "/assets/dinner-cruises-2026/river-diva-buffet-dinner-12.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "River Diva (Duna-Weser)",
+    "⏱️ 2.5 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Akadémia+3+ponton+Széchenyi+rakpart+2+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Akadémia 3"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-premium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-dinner-cruises-card-river-diva-buffet&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "_order": ["class", "href", "target", "rel"],
+    "text": "Buffet Dinner Cruise With Live Music &amp; Unlimited Drinks"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.76",
+     "score": "4.8",
+     "meta": "2.8k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(2.7k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-premium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-dinner-cruises-rating-river-diva-buffet&mkt_cmp=true",
+       "rel": "nofollow sponsored noopener",
+       "target": "_blank",
+       "_order": ["class", "href", "target", "rel"],
+       "_nl": "\n"
+      },
+      {
+       "kind": "link",
+       "site": "Viator",
+       "score": "4.7",
+       "count": "(60+)",
+       "url": "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=best_dinner_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FBudapest-Festive-Dinner-Cruise-River-Diva-Exclusive%2Fd499-337865P6",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "_nl": "\n"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.7",
+       "count": "(30+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_dinner_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FAttractionProductReview-g274887-d32709423-Budapest_Premium_Dinner_Cruise_Live_Music_Unlimited_Drinks-Budapest_Central_Hungar.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "_nl": "\n"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "19:30 · 2.5 h",
+     "pop_html": "<strong>Departs at 19:30 in November, 18:30 in December; about 2.5 hours.</strong> Arrive 20 to 30 minutes early with your QR voucher and ID.<span class=\"bpa-lang-note\"><b>📍 Akadémia 3:</b> Pest side by the Chain Bridge. Bring a passport or ID card with your QR voucher.</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🎶",
+     "label": "Live music",
+     "pop_html": "<strong>Live music in the Grand Salon all evening; guests mention violin and saxophone.</strong> No sightseeing commentary, just an English-speaking host."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "Wheelchair OK",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-yes\">✓</span> wheelchair-accessible boat</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> free under 4, full price for 4-17</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍸",
+     "label": "Unlimited drinks",
+     "pop_html": "<strong>Included all evening: cocktails, spirits, Prosecco, wine, beer, soft drinks and water, served to your table.</strong> 25 of 64 recent guests mention the unlimited drinks."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🎻",
+     "label": "All-inclusive evening",
+     "pop_html": "<strong>A seasonal buffet, unlimited drinks and live music, so nothing to pay on board.</strong> Guests say it works even in pouring rain."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🌬️",
+     "label": "Rooftop after dinner",
+     "pop_html": "<strong>After dinner the rooftop deck opens, weather permitting.</strong> Tables and window seats can't be guaranteed."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍽️",
+     "label": "Seasonal buffet",
+     "pop_html": "<strong>Buffet stations by Executive Chef Viktor Moldován: starters, mains, sides, vegetarian dishes and desserts.</strong> The winter menu (26 Nov to 25 Dec 2026) includes bean goulash, duck breast, venison ragout and pike-perch."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🌱",
+     "label": "Diet notes",
+     "pop_html": "<strong>Vegetarian buffet options, and vegan dishes are marked on the menu.</strong> Tell the operator about gluten-free or other needs in advance."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": ["19:30"]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": ["18:30"]
+     }
+    ],
+    "dur": "150"
+   },
+   "best_for": {
+    "pick_html": "for a buffet dinner with unlimited cocktails, wine and Prosecco served at your table, plus live music.",
+    "skip_html": "if you want a guaranteed window table: the listing says tables and window seats can't be promised."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is the food good?",
+      "a": "53 of 64 recent guests talk about the food, almost all positively. One said it could have been hotter."
+     },
+     {
+      "q": "What if it rains?",
+      "a": "Guests say it works even in pouring rain: dinner and music are indoors."
+     },
+     {
+      "q": "Is there live music?",
+      "a": "Yes, violin and saxophone in the Grand Salon. 21 of 64 recent guests mention it."
+     },
+     {
+      "q": "Is there sightseeing commentary?",
+      "a": "No. An English-speaking host runs the evening, but there is no commentary."
+     },
+     {
+      "q": "What should I bring?",
+      "a": "A passport or ID card along with your QR voucher."
+     }
+    ]
+   },
+   "extras_after_faq": "<div class=\"dc-food\"><div class=\"dc-food-head\"><span class=\"dc-food-lbl\">🍽️ Food</span><span aria-hidden=\"true\" class=\"dc-meter\" data-l=\"2\" title=\"Food level 2 of 3: Full dinner\"><i></i><i></i><i></i></span><span class=\"dc-food-tier\" data-l=\"2\">Full dinner</span><span class=\"dc-food-lvl\">Chef&rsquo;s buffet · go back for seconds</span><button aria-haspopup=\"dialog\" class=\"dc-food-btn\" data-dc-menu=\"diva\" type=\"button\">Full menu ↗</button></div><div class=\"dc-food-strip\">Starters<span class=\"sep\">›</span>Mains &amp; sides<span class=\"sep\">›</span>Desserts<span class=\"mid\">🍸 Open bar</span></div><div class=\"dc-dna\"><span class=\"dc-c dc-buf\"><b>Starters</b><span class=\"dc-dots\"><i class=\"inf\">∞</i></span></span><span class=\"dc-arrow\">›</span><span class=\"dc-c dc-buf\"><b>Mains</b><span class=\"dc-dots\"><i class=\"inf\">∞</i></span></span><span class=\"dc-arrow\">›</span><span class=\"dc-c dc-buf\"><b>Soups</b><span class=\"dc-dots\"><i class=\"inf\">∞</i></span></span><span class=\"dc-arrow\">›</span><span class=\"dc-c dc-buf\"><b>Veg</b><span class=\"dc-dots\"><i class=\"inf v\">∞</i></span></span><span class=\"dc-arrow\">›</span><span class=\"dc-c dc-buf\"><b>Desserts</b><span class=\"dc-dots\"><i class=\"inf\">∞</i></span></span><span class=\"dc-arrow\">+</span><span class=\"dc-c dc-buf\"><b>Open bar</b><span class=\"dc-dots\"><i class=\"inf bar\">🍸 ∞</i></span></span></div></div>",
+   "price": {
+    "main": "€99",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€99"
+     },
+     {
+      "label": "Child",
+      "small": "4-17",
+      "price": "€99"
+     },
+     {
+      "label": "Under 4",
+      "price": "Free"
+     }
+    ],
+    "total": {
+     "label": "2 adults + 2 kids (4-17)",
+     "price": "€396"
+    },
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-premium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-dinner-cruises-button-river-diva-buffet&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "_order": ["class", "href", "target", "rel"],
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#cruise-7-unlimited-drinks",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #6: Goulash & Lángos Cruise -->\n",
+   "id": "card-6",
+   "cats": ["folk", "supper", "short", "under70"],
+   "gallery": {
+    "rank": {
+     "text": "🥣 #6 Best Budget",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Goulash soup and lángos served on the Hungária Koncert Danube cruise"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-goulash-langos-hero.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "The Gróf Széchenyi paddle steamer moored at the Akadémia pier"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-grof-szechenyi-ship.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Boarding the Gróf Széchenyi for the goulash and lángos cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-boarding.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Welcome drink poured on board the Gróf Széchenyi"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-welcome-drink.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Goulash in a cast iron pot with lángos on the side"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-goulash-langos-table.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Rajkó musicians playing violin at the dinner tables"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-violinist.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Cimbalom and double bass from the folk ensemble"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-cimbalom-band.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Folk dancers in Hungarian costume visiting the tables"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-folk-dancers.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Guest posing with the folk dancers on board"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/6a1718a5c527a0f3579e0080_hungaria-koncert-00007.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Guests clapping along to the live folk music"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-guests-applause.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "The bar on board the Gróf Széchenyi"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-bar.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Outer deck with the Chain Bridge behind"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-deck-chain-bridge.avif"],
+      ["decoding", "async"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"],
+      ["width", "800"]
+     ]
+    ],
+    "_photo_sep": "\n",
+    "_photo_sep_end": false,
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-goulash-langos-hero-p-500.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-grof-szechenyi-ship-p-500.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-boarding-p-500.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-welcome-drink-p-500.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-goulash-langos-table-p-500.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-violinist-p-500.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-cimbalom-band-p-500.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-folk-dancers-p-500.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/6a1718a5c527a0f3579e0080_hungaria-koncert-00007.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-guests-applause-p-500.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-bar-p-500.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-deck-chain-bridge-p-500.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Hungária Koncert",
+    "⏱️ 1.5 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Akadémia+2+ponton+Antall+József+rakpart+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Akadémia 2 (Gróf Széchenyi)"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-danube-cruise-with-hungarian-dinner-and-live-music-t401526/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-dinner-cruises-card-goulash-langos&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "_order": ["class", "href", "target", "rel"],
+    "text": "Danube Cruise With Goulash &amp; Lángos"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.35",
+     "score": "4.4",
+     "meta": "2.6k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.4",
+       "count": "(2.6k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-danube-cruise-with-hungarian-dinner-and-live-music-t401526/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-dinner-cruises-rating-goulash-langos&mkt_cmp=true",
+       "rel": "nofollow sponsored noopener",
+       "target": "_blank",
+       "_order": ["class", "href", "target", "rel"],
+       "_nl": "\n"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "19:00 sharp · 1.5 h",
+     "pop_html": "<strong>Departs exactly at 19:00; boarding from 18:30.</strong> 90 minutes on the Danube.<span class=\"bpa-lang-note\"><b>📍 Akadémia 2:</b> Pest side, the second dock from the Chain Bridge towards Parliament, on the historic Gróf Széchenyi.</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🎻",
+     "label": "Live Rajkó music",
+     "pop_html": "<strong>Live entertainment by the Rajkó Folk Ensemble.</strong> 2 of 30 recent guests saw only the musicians and no dancers."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "No wheelchair access",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> not suitable for wheelchair users</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> child prices shown when you pick a date</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🥂",
+     "label": "Prosecco or juice",
+     "pop_html": "<strong>1 welcome drink: Prosecco or juice.</strong> Other drinks are paid on board."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🙂",
+     "label": "Casual supper",
+     "pop_html": "<strong>A light Hungarian supper with live folk music, not a full dinner.</strong> 21 of 30 recent guests talk about the food, nearly all positively."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🪑",
+     "label": "Assigned seats",
+     "pop_html": "<strong>Seats are assigned, so there is no rush to board.</strong> One guest was seated in a smaller dining room downstairs."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🥣",
+     "label": "Goulash and/or lángos",
+     "pop_html": "<strong>Three options from €40: a bowl of goulash soup, a crispy lángos, or both, served at your table.</strong> A vegetarian soup substitute is available, and the lángos is vegetarian."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": ["19:00"]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": ["19:00"]
+     }
+    ],
+    "dur": "90"
+   },
+   "best_for": {
+    "pick_html": "for the cheapest way to eat on the Danube: goulash and/or lángos, a welcome drink and live folk music.",
+    "skip_html": "if you want a full dinner or a guaranteed folk dance show: it is a light supper, and some guests saw only the musicians."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is it a full dinner?",
+      "a": "No, a light supper: a bowl of goulash, a lángos, or both, with a welcome drink."
+     },
+     {
+      "q": "Is there a dance show?",
+      "a": "Not always. The Rajkó Folk Ensemble plays; 2 of 30 recent guests saw only the musicians."
+     },
+     {
+      "q": "Vegetarian?",
+      "a": "Yes. There is a vegetarian soup substitute, and the lángos is vegetarian."
+     },
+     {
+      "q": "When should I arrive?",
+      "a": "Boarding opens at 18:30 and the boat leaves at exactly 19:00. Seats are assigned."
+     },
+     {
+      "q": "Is it good value?",
+      "a": "It is the cheapest way to eat on the Danube here, from €40 with live music and a drink."
+     }
+    ]
+   },
+   "extras_after_faq": "<div class=\"dc-food\"><div class=\"dc-food-head\"><span class=\"dc-food-lbl\">🍽️ Food</span><span aria-hidden=\"true\" class=\"dc-meter\" data-l=\"1\" title=\"Food level 1 of 3: Light supper\"><i></i><i></i><i></i></span><span class=\"dc-food-tier\" data-l=\"1\">Light supper</span><span class=\"dc-food-lvl\">Goulash and/or lángos · not a full dinner</span><button aria-haspopup=\"dialog\" class=\"dc-food-btn\" data-dc-menu=\"goulash\" type=\"button\">Full menu ↗</button></div><div class=\"dc-food-strip\">Goulash soup<span class=\"sep\">›</span>Lángos</div><div class=\"dc-dna\"><button aria-label=\"Soup: 1 choice\" class=\"dc-c\" data-sec=\"soup\" type=\"button\"><b>Soup</b><span class=\"dc-dots\"><i class=\"\"></i></span><em>1</em></button><span class=\"dc-arrow\">›</span><button aria-label=\"Lángos: 1 choice\" class=\"dc-c\" data-sec=\"langos\" type=\"button\"><b>Lángos</b><span class=\"dc-dots\"><i class=\"v\"></i></span><em>1</em></button></div></div>",
+   "price": {
+    "main": "€40",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Person",
+      "price": "€40"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€44</s>"
+     },
+     {
+      "label": "Goulash, lángos or both",
+      "price": "Same price"
+     }
+    ],
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-danube-cruise-with-hungarian-dinner-and-live-music-t401526/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-dinner-cruises-button-goulash-langos&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "_order": ["class", "href", "target", "rel"],
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#cruise-8-goulash-langos",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}
