@@ -109,7 +109,7 @@ def process(path):
         done += 1
     assert done == 2, (path, done)
     # photo teaser button at the bottom of Legenda's Food box (deck card)
-    s = re.sub(r'<button class="dc-food-photos".*?</button>', "", s, flags=re.S)
+    s = re.sub(r'<button class="dc-food-photos" data-dc-menu="legenda".*?</button>', "", s, flags=re.S)
     m = re.search(r'<button aria-haspopup="dialog" class="dc-food-btn" data-dc-menu="legenda" type="button">([^<]*)</button>', s)
     assert m, path
     label = m.group(1).replace("↗", "").strip()

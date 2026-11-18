@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Dish photos in the set-menu cartes on /best-dinner-cruises-budapest and all translations:
-Hungária Koncert (menus A/B/C), Budapest Sightseeing (4 set menus) and the Goulash & Lángos supper.
+Hungária Koncert (menus A/B/C), Budapest Sightseeing (4 set menus), the Goulash & Lángos supper
+and Silverline (one dessert, from our own test dinner). On the EN page only, each of those cards'
+Food box also gets a Legenda-style photo button (thumbnails + "N dish photos" + Full menu).
 
 Photos are the operators' own listing photos (GetYourGuide galleries), cropped to one dish each,
 only where the plate clearly is the menu dish. Placed by carte tier + course + position, so it
@@ -14,7 +16,7 @@ import html, re, subprocess, sys
 A = "/assets/best-dinner-cruises-budapest/menu-photos/"
 # (brand prefix, data-tier) -> {course: [photo per dish position, None = no photo]}
 MAP = {
-    ("Hungária Koncert", "a"): {"starter": ["hk-starter-dips"], "main": ["hk-pork-tenderloin"], "dessert": ["hk-somloi-galuska"]},
+    ("Hungária Koncert", "a"): {"starter": ["hk-starter-dips"], "soup": ["gl-goulash-soup"], "main": ["hk-pork-tenderloin"], "dessert": ["hk-somloi-galuska"]},
     ("Hungária Koncert", "b"): {"starter": ["hk-starter-dips"], "main": ["hk-chicken-paprikash"], "dessert": ["hk-somloi-galuska"]},
     ("Hungária Koncert", "c"): {"starter": ["hk-starter-dips"], "main": ["hk-pasta-marinara"], "dessert": ["hk-somloi-galuska"]},
     ("Hungária Koncert", "light"): {"soup": ["gl-goulash-soup"]},
@@ -22,11 +24,42 @@ MAP = {
     ("Budapest Sightseeing", "m2"): {"main": ["ss-veal-stew"]},
     ("Budapest Sightseeing", "veg"): {"main": ["ss-goat-cheese"]},
     ("Budapest Sightseeing", "m4"): {"main": ["ss-chicken-paprikash"]},
+    # Silverline: only the lemon curd is both on the current menu and in our own test-dinner photos
+    ("Silverline", "all"): {"dessert": ["sl-lemon-curd", None, None]},
 }
+# Food-box photo button (EN page only): data-dc-menu -> thumbnails in display order (all photos of that menu)
+TEASER = {
+    "hk": ["hk-pork-tenderloin", "hk-chicken-paprikash", "hk-pasta-marinara", "hk-somloi-galuska", "hk-starter-dips", "gl-goulash-soup"],
+    "seesight": ["ss-roast-duck", "ss-veal-stew", "ss-goat-cheese", "ss-chicken-paprikash", "ss-goulash-soup"],
+    "goulash": ["gl-goulash-soup"],
+    "silverline": ["sl-lemon-curd"],
+}
+EN = "best-dinner-cruises-budapest.html"
 CSS = """<style id="dc-set-photos-css">
 .dc-pms .dish .dc-dish-photo{display:block;width:min(300px,100%);height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin:6px auto 6px;border:1px solid #eadfca;background:#fff}
 @media (max-width:600px){.dc-pms .dish .dc-dish-photo{width:min(260px,100%)}}
+@media (min-width:601px){.dc-food-photos .th.n1{grid-template-columns:72px}.dc-food-photos .th.n2{grid-template-columns:repeat(2,72px)}.dc-food-photos .th.n3{grid-template-columns:repeat(3,72px)}}
+@media (max-width:600px){.dc-food-photos.one{display:flex;align-items:center;gap:12px}.dc-food-photos.one .th{grid-template-columns:72px;flex:0 0 auto}.dc-food-photos.one .tx{flex-direction:column;align-items:flex-start;gap:3px;margin-top:0}}
 </style>"""
+
+
+def teaser(s, menu, keys):
+    m = re.search(r'<button aria-haspopup="dialog" class="dc-food-btn" data-dc-menu="%s" type="button">([^<]*)</button>' % menu, s)
+    assert m, menu
+    label = m.group(1).replace("↗", "").strip()
+    food_end = s.index('<div class="dc-dna">', m.end())
+    food_end = s.index("</div>", food_end) + 6
+    if s.startswith('<div class="dc-sets">', food_end):
+        food_end = s.index("</div>", food_end) + 6
+    n = len(keys); shown = keys[:4]
+    more = f' class="more" data-more="+{n - 3}"'
+    tiles = "".join(
+        f'<span{more if (i == 3 and n > 4) else ""}><img src="{A}{k}-sq.webp" alt="" width="240" height="240" loading="lazy" decoding="async"></span>'
+        for i, k in enumerate(shown))
+    txt = f"{n} dish photo" + ("s" if n != 1 else "")
+    btn = (f'<button class="dc-food-photos{" one" if n == 1 else ""}" data-dc-menu="{menu}" aria-haspopup="dialog" type="button">'
+           f'<span class="th n{len(shown)}" aria-hidden="true">{tiles}</span><span class="tx"><span>📷 {txt}</span> <b>{label} ↗</b></span></button>')
+    return s[:food_end] + btn + s[food_end:]
 
 DISH = re.compile(r'<div class="dish([^"]*)" data-diet="([^"]*)">(.*?)</div>', re.S)
 SEC = re.compile(r'(<div class="sec" data-sec="([^"]+)">)(.*?)(?=<div class="sec"|$)', re.S)
@@ -74,6 +107,10 @@ def process(path):
         blk = tag + do_carte(blk[len(m.group(0)):], plan, brand, path)
         s = s[:a] + blk + s[b:]
         n += sum(1 for v in plan.values() for k in v if k)
+    s = re.sub(r'<button class="dc-food-photos[^"]*" data-dc-menu="(?!legenda")[^"]*".*?</button>', "", s, flags=re.S)
+    if path == EN:
+        for menu, keys in TEASER.items():
+            s = teaser(s, menu, keys)
     s = re.sub(r'<style id="dc-set-photos-css">.*?</style>', "", s, flags=re.S)
     s = s.replace("</head>", CSS + "</head>", 1)
     return s, n
@@ -89,12 +126,12 @@ if __name__ == "__main__":
     bad = 0
     for p in pages():
         new, n = process(p)
-        cnt = new.count(f'src="{A}')
+        cnt = new.count(f'class="dc-dish-photo" src="{A}')
         if cnt != n or n < 19:
             print("unexpected photo count:", p, cnt, "planned", n); bad += 1
         if check:
             cur = open(p, encoding="utf-8").read()
-            if cur.count(f'src="{A}') != n:
+            if cur.count(f'class="dc-dish-photo" src="{A}') != n:
                 print("missing photos:", p); bad += 1
         else:
             cur = open(p, encoding="utf-8").read()
