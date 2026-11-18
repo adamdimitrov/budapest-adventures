@@ -32,6 +32,27 @@ CSS = {
 .dc-pm .dish .pair{margin-top:3px}
 """,
 }
+MOBILE = {
+"common": """
+@media (max-width:600px){
+.ltt-bento-group-body>.dc-carte-wrap:has(.dc-pm){margin-left:-12px;margin-right:-12px}
+.dc-carte.dc-pm{padding:20px 10px}
+.dc-carte.dc-pm::before{inset:5px}
+}""",
+"grid": """
+@media (max-width:600px){
+.dc-pm .sec{grid-template-columns:1fr 1fr;gap:12px 8px}
+.dc-pm .dish{font-size:12.5px;line-height:1.25}
+.dc-pm .dish .pair{font-size:10.5px}
+.dc-pm .dish:not(:has(.dc-dish-photo))::before{font-size:18px}
+}""",
+"list": """
+@media (max-width:600px){
+.dc-pm .dish{gap:10px;font-size:14px;padding:6px 0}
+.dc-pm .dish .dc-dish-photo{flex-basis:56px;width:56px;height:56px;border-radius:6px}
+.dc-pm .dish:not(:has(.dc-dish-photo)){padding-left:66px}
+}""",
+}
 OUT = {"grid": "best-dinner-cruises-budapest-test-menu.html", "list": "best-dinner-cruises-budapest-test-menu-list.html"}
 
 base = open(SRC, encoding="utf-8").read()
@@ -56,6 +77,6 @@ for variant in ("grid", "list"):
     for marker in ('id="dc-menu-legenda"', '<span class="ltt-bento-group-title">🍽️ Gourmet Dinner Menu'):
         a = s.index(marker); a = s.index('<div class="dc-carte on"', a); b = s.index('<div class="foot">', a)
         s = s[:a] + addpics(s[a:b], variant) + s[b:]
-    s = s.replace("</head>", f'<style id="legenda-menu-photos-test">{CSS[variant]}</style></head>', 1)
+    s = s.replace("</head>", f'<style id="legenda-menu-photos-test">{CSS[variant]}{MOBILE["common"]}{MOBILE[variant]}</style></head>', 1)
     open(OUT[variant], "w", encoding="utf-8").write(s)
     print(variant, "photos:", s.count('class="dc-dish-photo"'))

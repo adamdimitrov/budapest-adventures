@@ -303,7 +303,17 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 .dc-pm .dish:not(:has(.dc-dish-photo)){padding-left:84px}
 .dc-pm .dish .dc-dish-photo{flex:0 0 72px;width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid #eadfca;background:#fff}
 .dc-pm .dish .pair{margin-top:3px}
-</style></head><body><header class="ltt-navbar" role="banner">
+
+@media (max-width:600px){
+.ltt-bento-group-body>.dc-carte-wrap:has(.dc-pm){margin-left:-12px;margin-right:-12px}
+.dc-carte.dc-pm{padding:20px 10px}
+.dc-carte.dc-pm::before{inset:5px}
+}
+@media (max-width:600px){
+.dc-pm .dish{gap:10px;font-size:14px;padding:6px 0}
+.dc-pm .dish .dc-dish-photo{flex-basis:56px;width:56px;height:56px;border-radius:6px}
+.dc-pm .dish:not(:has(.dc-dish-photo)){padding-left:66px}
+}</style></head><body><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
