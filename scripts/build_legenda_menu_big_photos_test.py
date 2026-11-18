@@ -15,10 +15,12 @@ MENU = {"Great scallop": "scallop", "Cold goose liver": "goose-liver", "Goat che
 
 CSS = {
 "grid": """
-.dc-pm .sec{display:grid;grid-template-columns:1fr 1fr;gap:14px 12px;align-items:start}
+.dc-pm .sec{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 10px;align-items:start}
+@media (max-width:480px){.dc-pm .sec{grid-template-columns:1fr 1fr}}
+.dc-pm .dish:not(:has(.dc-dish-photo))::before{content:"🍽";display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:4/3;box-sizing:border-box;margin:0 0 6px;border-radius:6px;border:1px dashed #d9c79e;background:#fdf8ec;font-size:22px;opacity:.7}
 .dc-pm .sec h4{grid-column:1/-1;margin-bottom:0}
 .dc-pm .sec .ou{display:none}
-.dc-pm .dish{margin:0;font-size:14px;line-height:1.3}
+.dc-pm .dish{margin:0;font-size:13px;line-height:1.3}
 .dc-pm .dish .dc-dish-photo{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin:0 0 6px;border:1px solid #eadfca;background:#fff}
 """,
 "list": """
