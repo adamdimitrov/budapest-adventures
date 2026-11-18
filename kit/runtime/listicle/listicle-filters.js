@@ -57,7 +57,7 @@
     while(el && el!==document.body){ var p=getComputedStyle(el).position; if(p==='fixed'||p==='sticky'){ h=el.getBoundingClientRect().bottom; break; } el=el.parentElement; }
     document.documentElement.style.setProperty('--cd-hdr',(h>0&&h<160?h:64)+'px');
   }
-  hdr(); window.addEventListener('resize',hdr);
+  window.addEventListener('resize',hdr);
   // show the mini-bar only once the filter box has scrolled away and while the deck is on screen
   var box=document.getElementById('cd-filters'), mini=document.querySelector('.cd-fmini');
   var deck=document.getElementById('ltt-cards-deck'), ticking=false;
@@ -67,9 +67,13 @@
     var bb=box.getBoundingClientRect(), db=deck.getBoundingClientRect();
     var on = bb.bottom < top && db.bottom > top + 160;
     if(mini.classList.contains('is-on')!==on){ mini.classList.toggle('is-on',on); mini.setAttribute('aria-hidden',on?'false':'true'); }
+    // hidden bar: keep its button out of the tab order too (aria-hidden alone leaves it focusable)
+    if(mini.inert===on) mini.inert=!on;
   }
   window.addEventListener('scroll',function(){ if(!ticking){ ticking=true; requestAnimationFrame(upd); } },{passive:true});
   window.addEventListener('resize',upd);
-  upd();
+  // hidden until scrolled past the filters: inert now (a write only), measure in the next frame
+  if(mini && !mini.classList.contains('is-on')) mini.inert=true;
+  requestAnimationFrame(function(){ hdr(); upd(); });
   apply();
 })();
