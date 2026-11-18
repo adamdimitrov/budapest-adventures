@@ -11,7 +11,7 @@ A page carries its date in up to three places:
     python3 scripts/stamp_updated.py --page best-budapest-river-cruises.html   # force one page to today
 
 A page counts as changed when its visible content differs from main (or from the last commit, for
-uncommitted edits): text, links and images. Scripts, styles, the synced menu and footer, and the dates
+uncommitted edits): text, links and images. Scripts, styles (inline or <link rel="stylesheet">), the synced menu and footer, and the dates
 themselves are ignored, so a menu sync or a JS fix never makes a page look freshly updated.
 Changed pages get today's date (Budapest time) in all three places. A page whose content matches main
 but whose date went backwards (a builder re-run from an older base) gets main's date back.
@@ -34,6 +34,7 @@ PILL = re.compile(r"(<strong>Last updated</strong>: )(%s)[a-z]* (\d{1,2}), (\d{4
 AUTHOR = re.compile(r"(\bUpdated )(\d{1,2}) (%s)[a-z]* (\d{4})(?=\s*<)" % M)
 LD = re.compile(r'("dateModified":\s*")(\d{4})-(\d{2})-(\d{2})')
 STRIP = [re.compile(p, re.S | re.I) for p in (r"<script\b.*?</script>", r"<style\b.*?</style>",
+                                              r"<link\b[^>]*\brel=\"stylesheet\"[^>]*>",
                                               r'<header class="ltt-navbar".*?</header>', r"<footer\b.*?</footer>",
                                               r"<!--.*?-->")]
 
