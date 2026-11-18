@@ -208,7 +208,7 @@ CARDS.append(dict(
     skip="on a tight budget, if you are vegan, or with food allergies: the listing can't cater for them.",
     pros=[("Restaurant-grade dinner", "4 courses for adults, picked from a menu at the table; children 3 to 12 get 3 courses."),
           ("Live music", "A pianist and singer play lounge music through the evening."),
-          ("Romantic setting", "Candlelit tables for two along the windows, and an open top deck for photos."),
+          ("Romantic setting", "Candlelit tables for two along the panoramic windows."),
           ("2.5 hours on the river", "Plenty of time to see the whole lit-up riverfront.")],
     cons=[("Not cheap", "€110 per adult and €84 per child (3 to 12) on legenda.hu."),
           ("Extra drinks cost extra", "Only the welcome drink is included."),
@@ -221,7 +221,7 @@ CARDS.append(dict(
         ("Drinks Included", "Welcome drink: champagne, wine, beer, soft drink or mineral water"),
         ("Ticket Format", "Instant mobile ticket"),
         ("Cancellation Policy", "Full refund up to 24 hours before departure")],
-    amen=[("yes", "Open-Air Top Deck"), ("yes", "Live Music"), ("no", "Not Wheelchair Accessible"),
+    amen=[("yes", "Live Music"), ("no", "No Open Deck"), ("no", "Not Wheelchair Accessible"),
           ("no", "No Vegan Menu"), ("no", "No Pets")],
     getthere=None,
 ))

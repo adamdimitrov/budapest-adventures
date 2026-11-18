@@ -92,7 +92,7 @@ CARDS.append(dict(
         ("Ticket Format", "Instant mobile ticket"),
         ("Kids Policy", "Children 3–12 pay €84 and get 3 courses; not suitable for children under 3"),
         ("Cancellation Policy", "Full refund up to 24 hours before departure")],
-    amen=[("yes", "Open-Air Top Deck"), ("yes", "Live Music"), ("no", "Not Wheelchair Accessible"),
+    amen=[("yes", "Live Music"), ("no", "No Open Deck"), ("no", "Not Wheelchair Accessible"),
           ("no", "No Pets"), ("no", "No Luggage or Large Bags")],
     getthere=[
         maplink("Legenda City Cruises Dock 7 Budapest", "Meeting point: Legenda City Cruises, Jane Haining rakpart 7, Dock 7 (Vigadó tér), 1052 Budapest"),
