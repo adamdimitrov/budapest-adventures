@@ -127,7 +127,7 @@ body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-titl
 body:is(:has(.ltt-guide-featured),:has(.ltt-about-header),:has(.form-header-title),:has(.calc-title)) h2.ltt-section-title,body:has(.calc-title) main.container h2{font-size:28px!important}
 }
 </style>
-<link rel="stylesheet" href="/css/listicle-cards.css?v=478df8b48f"></head><body><header class="ltt-navbar" role="banner">
+<link rel="stylesheet" href="/css/listicle-cards.css?v=f4baaa5885"></head><body><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -1236,7 +1236,7 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
 <details class="bpa-lang "><summary class="bpa-sp">🔥 <span class="bpa-lang-label">Heated main deck</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>The main deck is heated.</strong> 14 sailings a day, so it is easy to fit in.</div></details>
 </div>
 <div class="fbm-slot" data-tt="[{&quot;from&quot;: &quot;11-01&quot;, &quot;to&quot;: &quot;11-30&quot;, &quot;times&quot;: [&quot;11:00&quot;, &quot;12:30&quot;, &quot;14:00&quot;, &quot;15:30&quot;, &quot;16:30&quot;, &quot;17:00&quot;, &quot;17:20&quot;, &quot;18:20&quot;, &quot;18:40&quot;, &quot;19:30&quot;, &quot;19:40&quot;, &quot;20:00&quot;, &quot;21:00&quot;, &quot;21:15&quot;]}, {&quot;from&quot;: &quot;12-01&quot;, &quot;to&quot;: &quot;12-31&quot;, &quot;times&quot;: [&quot;11:00&quot;, &quot;12:30&quot;, &quot;14:00&quot;, &quot;15:30&quot;, &quot;16:30&quot;, &quot;17:00&quot;, &quot;17:20&quot;, &quot;18:20&quot;, &quot;18:40&quot;, &quot;19:30&quot;, &quot;19:40&quot;, &quot;20:00&quot;, &quot;21:00&quot;, &quot;21:15&quot;]}]" data-dur="60"></div>
-<div class="bpa-best-for bpa-pickskip"><span class="bpa-pick">✓ Pick it</span> No drink in the price, so you only pay for what you order. for the cheapest central sightseeing loop, right by Elizabeth Bridge. <span class="bpa-skip">✕ Skip it</span> if you want a drink included: even water costs extra, and the audio guide runs on your phone.</div>
+<div class="bpa-best-for bpa-pickskip"><span class="bpa-pick">✓ Pick it</span> for the cheapest central sightseeing loop, right by Elizabeth Bridge. No drink in the price, so you only pay for what you order. <span class="bpa-skip">✕ Skip it</span> if you want a drink included: even water costs extra, and the audio guide runs on your phone.</div>
 <details class="fbm-faq"><summary>❓ 5 questions travellers ask <span class="fbm-faq-chev" aria-hidden="true">▾</span></summary><div class="fbm-faq-body"><div class="fbm-qa"><div class="fbm-q">Is a drink included?</div><div class="fbm-a">No. Even water costs extra at the bar on board.</div></div><div class="fbm-qa"><div class="fbm-q">Is the upper deck worth €5 more?</div><div class="fbm-a">It has a roof with columns that block part of the view. For photos, the front seats and the open-air section are better.</div></div><div class="fbm-qa"><div class="fbm-q">Is it warm inside?</div><div class="fbm-a">Yes, the main deck is heated.</div></div><div class="fbm-qa"><div class="fbm-q">Do kids pay?</div><div class="fbm-a">Under-4s ride free; full price from 4.</div></div><div class="fbm-qa"><div class="fbm-q">Can I book on the day?</div><div class="fbm-a">Yes, same-day booking works, and with 14 sailings a day from 11:00 to 21:15 it is easy to fit in. Evening slots in December can sell out, though.</div></div></div></details>
 </div>
 <div class="bpa-cta-cell">
@@ -3096,7 +3096,7 @@ window.LTT_PAGE_CONFIG = {"deckId": "budapest-river-cruise-deck", "tocDeckLabel"
     if (cur) cur.closest('.ltt-mobile-acc').open = true;
   } catch(e) {}
 
-})();</script><script src="/js/listicle-lang.js?v=abfb4cb378"></script>
+})();</script><script src="/js/listicle-lang.js?v=f5be00535c"></script>
 <style id="cd-bookmark-compact">
 .cd-bookmark-wrapper{margin:14px 0 6px!important}
 a.cd-editorial-bookmark{text-decoration:none!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:12px!important;min-height:0!important;padding:8px 12px 8px 8px!important;border-radius:14px!important;box-shadow:none!important}
@@ -3141,17 +3141,20 @@ a.cd-editorial-bookmark::after{content:"\203A"!important;position:static!importa
 <script id="ugc-js">
 (function(){
   var v='a';
+  /* UI strings: English defaults; a language page overrides them in its #listicle-ui JSON block (listicle.py build-lang) */
+  var UI=(function(){try{var e=document.getElementById('listicle-ui');return e?JSON.parse(e.textContent):{};}catch(x){return {};}})();
+  function tr(k,d,o){var s=UI[k]!=null?UI[k]:d;return o?s.replace(/\{(\w+)\}/g,function(m,n){return o[n]!=null?o[n]:m;}):s;}
   var UGC={"cruise-1-legenda": [{"id": "7552667337204174100", "h": "imjulesyang", "t": "An evening cruise under the city lights", "v": "5.7K views"}, {"id": "7321843979073506606", "h": "aliciasessler", "t": "Sunset on the Danube with Legenda", "v": "3K views"}, {"id": "7692418249618623766", "h": "budapest_insider", "t": "The 1-hour night cruise", "v": "1.2K views"}]};
   function esc(x){return String(x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   function player(id){return 'https://www.tiktok.com/player/v1/'+id+'?autoplay=1&description=1&music_info=1&rel=0';}
   function link(x){return 'https://www.tiktok.com/@'+x.h+'/video/'+x.id;}
-  function tile(x,i,cls,inner){return '<button type="button" class="ugc-tile '+cls+'" data-i="'+i+'" aria-label="Play guest video by @'+esc(x.h)+'"><span class="ugc-play" aria-hidden="true">▶</span>'+inner+'</button>';}
+  function tile(x,i,cls,inner){return '<button type="button" class="ugc-tile '+cls+'" data-i="'+i+'" aria-label="'+tr('ugc_play','Play guest video by @{h}',{h:esc(x.h)})+'"><span class="ugc-play" aria-hidden="true">▶</span>'+inner+'</button>';}
   function openModal(list,i){
-    var md=document.createElement('div'); md.className='ugc-modal'; md.setAttribute('role','dialog'); md.setAttribute('aria-label','Guest videos');
+    var md=document.createElement('div'); md.className='ugc-modal'; md.setAttribute('role','dialog'); md.setAttribute('aria-label',tr('ugc_dialog','Guest videos'));
     function show(){ var x=list[i];
-      md.innerHTML='<div class="ugc-box"><button type="button" class="ugc-x" aria-label="Close">✕</button>'+(list.length>1?'<button type="button" class="ugc-nav prev" aria-label="Previous video">‹</button><button type="button" class="ugc-nav next" aria-label="Next video">›</button>':'')
-        +'<iframe src="'+player(x.id)+'" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen title="Guest video by @'+esc(x.h)+'"></iframe>'
-        +'<div class="ugc-meta"><span>@'+esc(x.h)+' · '+esc(x.v)+'</span><a href="'+link(x)+'" target="_blank" rel="nofollow noopener">View on TikTok</a></div></div>'; }
+      md.innerHTML='<div class="ugc-box"><button type="button" class="ugc-x" aria-label="'+tr('ugc_close','Close')+'">✕</button>'+(list.length>1?'<button type="button" class="ugc-nav prev" aria-label="'+tr('ugc_prev','Previous video')+'">‹</button><button type="button" class="ugc-nav next" aria-label="'+tr('ugc_next','Next video')+'">›</button>':'')
+        +'<iframe src="'+player(x.id)+'" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen title="'+tr('ugc_title','Guest video by @{h}',{h:esc(x.h)})+'"></iframe>'
+        +'<div class="ugc-meta"><span>@'+esc(x.h)+' · '+esc(x.v)+'</span><a href="'+link(x)+'" target="_blank" rel="nofollow noopener">'+tr('ugc_view','View on TikTok')+'</a></div></div>'; }
     md.addEventListener('click',function(e){ if(e.target===md||e.target.closest('.ugc-x')){ md.remove(); document.removeEventListener('keydown',key); }
       else if(e.target.closest('.ugc-nav')){ i=(i+(e.target.closest('.next')?1:list.length-1))%list.length; show(); } });
     function key(e){ if(e.key==='Escape'){ md.remove(); document.removeEventListener('keydown',key);} }
@@ -3161,15 +3164,15 @@ a.cd-editorial-bookmark::after{content:"\203A"!important;position:static!importa
     Object.keys(UGC).forEach(function(anc){
       var a=document.querySelector('.bpa-card a.bpa-sublink[href="#'+anc+'"]'); if(!a) return; var card=a.closest('.bpa-card'), list=UGC[anc].slice(0,3);
       if(v==='a'){ var th=card.querySelector('.cd-thumbs'); var vis=[].filter.call(th.querySelectorAll('.cd-thumb'),function(b){return !b.classList.contains('is-hid');});
-        var slot=vis[vis.length-2]||vis[0]; var t=document.createElement('div'); t.innerHTML=tile(list[0],0,'ugc-thumb cd-thumb','<span class="ugc-cap">'+list.length+' guest video'+(list.length>1?'s':'')+'</span>'); t=t.firstChild;
+        var slot=vis[vis.length-2]||vis[0]; var t=document.createElement('div'); t.innerHTML=tile(list[0],0,'ugc-thumb cd-thumb','<span class="ugc-cap">'+(list.length>1?tr('ugc_caption_n','{n} guest videos',{n:list.length}):tr('ugc_caption_1','1 guest video'))+'</span>'); t=t.firstChild;
         slot.replaceWith(t); t.addEventListener('click',function(e){ e.stopPropagation(); openModal(list,0); }); }
       if(v==='b'){ var gal=card.querySelector('.cd-gal'); var row=document.createElement('div'); row.className='ugc-row';
-        row.innerHTML='<p class="ugc-row-h">📱 Guests filmed it</p><div class="ugc-row-list">'+list.map(function(x,i){return tile(x,i,'','<b>@'+esc(x.h)+'</b><small>'+esc(x.v)+'</small>');}).join('')+'</div>';
+        row.innerHTML='<p class="ugc-row-h">'+tr('ugc_row','📱 Guests filmed it')+'</p><div class="ugc-row-list">'+list.map(function(x,i){return tile(x,i,'','<b>@'+esc(x.h)+'</b><small>'+esc(x.v)+'</small>');}).join('')+'</div>';
         gal.appendChild(row); row.addEventListener('click',function(e){ var b=e.target.closest('.ugc-tile'); if(b) openModal(list,+b.dataset.i); }); }
       if(v==='c'){ var sl=card.querySelector('.bpa-slider'); var s=document.createElement('div'); s.className='ugc-slide';
-        s.innerHTML=tile(list[0],0,'','<div><b>Guest video</b><br><small>@'+esc(list[0].h)+' · '+esc(list[0].v)+'</small><br><small>'+esc(list[0].t)+'</small></div>');
+        s.innerHTML=tile(list[0],0,'','<div><b>'+tr('ugc_slide','Guest video')+'</b><br><small>@'+esc(list[0].h)+' · '+esc(list[0].v)+'</small><br><small>'+esc(list[0].t)+'</small></div>');
         var first=sl.children[0]; first.after(s); var pill=card.querySelector('.bpa-pill'); if(pill) pill.textContent=pill.textContent.replace(/\/ (\d+)/,function(_,n){return '/ '+(+n+1);});
-        s.addEventListener('click',function(e){ if(!e.target.closest('.ugc-tile')) return; s.innerHTML='<iframe src="'+player(list[0].id)+'" allow="autoplay; encrypted-media; fullscreen" allowfullscreen title="Guest video by @'+esc(list[0].h)+'"></iframe>'; }); }
+        s.addEventListener('click',function(e){ if(!e.target.closest('.ugc-tile')) return; s.innerHTML='<iframe src="'+player(list[0].id)+'" allow="autoplay; encrypted-media; fullscreen" allowfullscreen title="'+tr('ugc_title','Guest video by @{h}',{h:esc(list[0].h)})+'"></iframe>'; }); }
     });
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
@@ -3184,7 +3187,7 @@ a.cd-editorial-bookmark::after{content:"\203A"!important;position:static!importa
 .bpa-card .bpa-trust2 b{color:#14532d;font-weight:800}
 .bpa-card .bpa-via{line-height:1.35!important}
 </style>
-<script src="/js/listicle-cards.js?v=6a797452a6"></script><script src="/js/listicle-filters.js?v=d33a27a9a2"></script><script src="/js/listicle-fbm.js?v=2f113c957a"></script><script src="/js/listicle-fmore.js?v=3f8064b325"></script><script src="/js/listicle-days.js?v=bc4478d141"></script><script src="/js/listicle-peek.js?v=32ada60842"></script>
+<script src="/js/listicle-cards.js?v=17954a28f6"></script><script src="/js/listicle-filters.js?v=78060172db"></script><script src="/js/listicle-fbm.js?v=efbbd4fd87"></script><script src="/js/listicle-fmore.js?v=9670249abb"></script><script src="/js/listicle-days.js?v=01bea18ba7"></script><script src="/js/listicle-peek.js?v=32ada60842"></script>
 <script id="pdd-hover-js">
 /* Price dropdown opens on hover like the pills (desktop with a mouse only); a click pins it open. */
 (function(){
