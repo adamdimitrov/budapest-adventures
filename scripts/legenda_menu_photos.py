@@ -19,6 +19,15 @@ PHOTOS = {
     "dessert": ["panna-cotta", "cheesecake", "chocolate-cake"],
 }
 N = sum(1 for v in PHOTOS.values() for k in v if k)
+# "14 dish photos" per language (path prefix; EN page has none)
+PHOTOS_TXT = {
+    "en": "{n} dish photos", "bg": "{n} снимки на ястията", "cs": "{n} fotek jídel", "de": "{n} Fotos der Gerichte",
+    "el": "{n} φωτογραφίες πιάτων", "es": "{n} fotos de los platos", "fr": "{n} photos des plats",
+    "he": "{n} תמונות של המנות", "hr": "{n} fotografija jela", "hu": "{n} ételfotó", "it": "{n} foto dei piatti",
+    "ja": "料理の写真{n}枚", "ko": "요리 사진 {n}장", "nl": "{n} foto's van de gerechten", "pl": "{n} zdjęć dań",
+    "pt": "{n} fotos dos pratos", "ro": "{n} fotografii cu preparatele", "ru": "{n} фото блюд",
+    "sk": "{n} fotografií jedál", "sr": "{n} фотографија јела", "tr": "{n} yemek fotoğrafı", "uk": "{n} фото страв",
+}
 
 CSS = """<style id="dc-menu-photos-css">
 .dc-pm .sec:has(.dc-dish-photo){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 10px;align-items:start}
@@ -27,7 +36,17 @@ CSS = """<style id="dc-menu-photos-css">
 .dc-pm .sec:has(.dc-dish-photo) .dish{margin:0;font-size:13px;line-height:1.3}
 .dc-pm .dish .dc-dish-photo{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin:0 0 6px;border:1px solid #eadfca;background:#fff}
 .dc-pm .sec:has(.dc-dish-photo) .dish:not(:has(.dc-dish-photo))::before{content:"\\1F37D";display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:4/3;box-sizing:border-box;margin:0 0 6px;border-radius:6px;border:1px dashed #d9c79e;background:#fdf8ec;font-size:22px;opacity:.7}
+.dc-food-photos{display:flex;align-items:center;gap:10px;width:100%;margin-top:8px;padding:7px 10px;border:1px solid #e9d8ae;border-radius:10px;background:#fdf3d8;cursor:pointer;font:inherit;text-align:left}
+.dc-food-photos .th{display:flex;flex:0 0 auto}
+.dc-food-photos .th img{width:40px;height:40px;border-radius:8px;object-fit:cover;border:2px solid #fff;box-shadow:0 1px 3px rgba(60,40,10,.18);background:#fff}
+.dc-food-photos .th img+img{margin-left:-10px}
+.dc-food-photos .tx{flex:1 1 auto;min-width:0;font-size:13px;font-weight:800;color:#92400e;line-height:1.25}
+.dc-food-photos .tx b{display:block;font-size:11.5px;font-weight:700;color:#0369a1;text-decoration:underline}
+.dc-food-photos:hover{border-color:#d9b867;background:#fbecc4}
+.dc-food-photos:hover .tx,.dc-food-photos:hover .tx b{color:#92400e}
+.dc-food:has(.dc-food-photos) .dc-food-head .dc-food-btn{display:none}
 @media (max-width:600px){
+.dc-food-head .dc-food-lvl{order:9;flex-basis:100%}
 .ltt-bento-group-body>.dc-carte-wrap:has(.dc-pm){margin-left:-12px;margin-right:-12px}
 .dc-carte.dc-pm{padding:20px 10px}
 .dc-carte.dc-pm::before{display:none}
@@ -81,6 +100,20 @@ def process(path):
         s = s[:a] + do_carte(blk, path) + s[b:]
         done += 1
     assert done == 2, (path, done)
+    # photo teaser button at the bottom of Legenda's Food box (deck card)
+    s = re.sub(r'<button class="dc-food-photos".*?</button>', "", s, flags=re.S)
+    m = re.search(r'<button aria-haspopup="dialog" class="dc-food-btn" data-dc-menu="legenda" type="button">([^<]*)</button>', s)
+    assert m, path
+    label = m.group(1).replace("↗", "").strip()
+    lang = path.split("/")[0] if "/" in path else "en"
+    txt = PHOTOS_TXT[lang].format(n=N)
+    dna = s.index('<div class="dc-dna">', m.end())
+    end = s.index("</div>", dna) + 6
+    thumbs = "".join(f'<img src="{A}{k}-sq.webp" alt="" width="40" height="40" loading="lazy" decoding="async">'
+                     for k in ("scallop", "goose-liver", "duck-breast", "panna-cotta"))
+    teaser = (f'<button class="dc-food-photos" data-dc-menu="legenda" aria-haspopup="dialog" type="button">'
+              f'<span class="th" aria-hidden="true">{thumbs}</span><span class="tx">📷 {txt} <b>{label} ↗</b></span></button>')
+    s = s[:end] + teaser + s[end:]
     s = re.sub(r'<style id="dc-menu-photos-css">.*?</style>', "", s, flags=re.S)
     s = s.replace("</head>", CSS + "</head>", 1)
     return s
