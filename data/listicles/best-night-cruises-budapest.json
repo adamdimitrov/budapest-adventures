@@ -1,0 +1,5584 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAN1ElEQVR4nOWcCXRURRaG/3qdPSEJgQRCIJ0QVoMoJCxuiCDInDHKIAHFSYCB0RlAlFXnOKOoiMedkcVlBoGAGhEUBWZEREBgEEmCskckG4QsZOuQpDvp9Ks5t2JCv15fpxMg4TunIV1dr6refVW37r1V9RiuIol8E3LOV0OWJTBKoH9kJv5n4OC/5aNkTv9SgsQBmQNMApNMiOrhj8/YpKvWZtHO1mTYhY3dTcb6RM7YKAaMABDoXolMBy5/zyS220PC5kM9pua3VFtt1tYahd52fpOvUa5JBGfJAO6hftAa9VD/A/AdGEvxlHw2H+oxSX9dCyi2eFOAn14/g3MsBtANV5dL4FhdD3n5T9HTK64rAcWlve/JQr3nMc6e4UBHXFvKGPgrckntP9PjHzdecwENyVo3gktsFYABuL74hTHMPqKd+u01EdDI7LU+VRJ7G5w9fjWUfTPhAF8dwPnCvdHTDc0poFk3NvTc+j6yBp8CuBVtg6Makzz5cMz0s60uoMHZKfdJjH8GoAPaFpVg0sQ0bdIuVy5yafqNy0mZIjG+rQ0KhwgEl7fHZ697pFUEFJe97q8MfAMAT7RdvMDYxrjslL+06BCLJ6kztrEVDb6rDQfj09K001LcFtCQ3HWjOWc7AHijfWGUOUvIiE7e2WwBDW2YrdLaqM5RQ6WskeIyeiT9ai+D5MjOkTVIbcfCIQIlk7yFfEeXBVTNNG8BGIT2z0CjqeZ1l4bY4LwNd0myvO86tpBbGg4uj0qLnr7XaQ8ayfd4SCa+6gYSDsHApJXkdMOZgKrycueD8Ztx4xGLzj5PWCYqesmwsxsDZU9TTmuGLOorqlGV9gv0p/JQk3kBdRdLxUc2GGG6XCPyaDr4QfLxhFe3TuLj17c7fGO16BDfG5ogf7QiZd6G+qiD/WZcbkzwUDTeQ57FWkE4dfklKPvqB5TvzEDN8WxwEwUC7WPSVcOkA4xFFag+eg7lO34U6UwjwW9gNDqOjUPIg8OF8FqYkDofDUUn3rDqQSJ8waQsAOEtUhXn0O07jqI1O1F54KT43qJIDIF3xKLLzHEIGjEAYC2lMnmRp8YvujF829SDLkOazFpIOJUHTuLCq5tQczwHrYbMUbn/hPj49u2ObnMfRMffD22BglmXelPNBAAfKQTEGJLcLbquoAx5/0hBxbdHneb1DA2C302R8IkJh7e2CyR/b2h8G7wZk74WcnUtanOLYcgqQM2pPBiL7YeZ9ZkXcG72KgRv/R8iX0yGV3iIezfCWFKjgES/vO38+gijCbmkH23lr80tRvaCDyDXOg7x1mYVwlRtP3Dnf2sMQh4YjsC7YuHbO8KlNht+vYjKg6dQ9uUhVGXY9Qyg8feBd8+uDsuSvD0R/eZj8NaG2csie2oQSUtKogcZ6/kkMGZTOAQVRGM9a/YqpwrWHtT9I5f8UfSc5uDTq5v4hNw/FHnPb0DZ9gbFbQk9IEdDmxR9z1WzHQmHkOpk0DBb0WAHMWm0swZ2HBePyKVTm60MaSY6dsd8XFiWCrmm1uXrZUMd8l/fjGN3LLArHKcwJu6B7sVpVs5Hif9H8j2oys3TqV3xLFi1TTTUHby7d0bPFbPgPyhGVf6aEznImrMahpwit+qNWDQR4bMT1GaviNb6dpSqz4vuqHo5OHx2AsKmjYE71F4oQebDr6Bs2w9O85bvTMeZScvcFg612QXhEMHn8mrg0bSRQCXcWA/DuQK7v3uEdIBfrBaeYUGQ9XWou1gmegCvNynykcLPfup9ME8Pu12eZkOh9yyuJZiHBn43R4kZS/L1grFYh5qTuagvazKCFdTmFIly6Dq1aGSAxeWsb9xH4RzOkfXke8IqtiTwrgEIn5OAgPg+QhFauhfUWwpWfGU1XdOM0nfTs/C/JVqRTjd7ZuJSIWRzPMOCEf7EAwhJGA6PYKXbQRMIuTEFK7cJ+8iSzpNGIOq1GVAL42AsPnt9w94TFZR+fhDZ8z9Q3qCPl6iUpm9nyNUGZC9e0+Q6NEJT/k07XgTzajDLeF09TiU8L+wbc2gGi3ptJiQ/59Ffeog5i9cI5W5Orw/mInhsnNPrRTsaNt2oygu6ufzXaDnsCnRDfTYsUiUcQvL3QczKWQh9ZKQiXX82X7gkjRSt+dpKOHQNKXY1wiGoTdS2RqE3cv7lVPEA1MBcWaW4lLoPdYXlirTIJUkIGNJHbRG/1coQ+VKyMBrNKfpwp9BL9Cn68BvFbzTb0TWumhjUNrK9LI3eks37VZehFK8Dyv9zRPGd3ITQh+9WZuIcJZ/tR3HKbhjO5gvlGXjnAHR7arww8hohRdnjuSk489DSJifWeEkH3e6fxHf6+0pmhsjnHrVSrvpf8lHwzlbh95Ge8ukTgbCp96LzQ3cqBBn68Ehc2vidcFcaKd1yEKFTaNuSc1T1IGNxBaqOKs37sD+NFR61OTl/WyvGPc1a1BOEct5+GKceWILLh88o8gYM7oUACzuIFKvue6VypTyW9tLlQ6dxevwLwmCkOqgusp5zFv4buc+us7hD1tBWM6p/OgdTZUPsqUUEpCd9QPsEzSoNHqXct0CNLUmlMLY1ZDlnP/melcIMule5JkAPgRpvTvAYZR7qLTST2rPGL328F+X/TVOWQW01e5g021nqOLcEVFek1D2eIYHC3jGn5NN9jssoLIdu7zFFmm9v5SY0smUUw0v4YEqnVrfnZ4eevWhLqjL2Tm2lNivac7EULSageotGe3TqYNMQc0ZtdqGyHAsh11dUiY+jutRY1IYsZT22ynEWmWi6Tu30bI6t8asJ9LNKs8pjEU+uL1MKQzGM7dTl0Yx6bJWjNrYtqTERPcOCFd9pGFhauEH33OKwDJqFAkcoF0soGOYMmpbNoTIsLXVLgkYp20L6ynLoenV1HnoX27TVGIo+UcoAFPk0lfuPK9K6/nmc8NLt0cXG72oij5Z6yzsyFF1m3Gc3P/3edeY4RVrlgRNKf05i8O4R6rRu0uuSmvVB374R8IrobDVbWHbZPql/Q0B8b0U6WbJkB3VflKhIrzmdh6p05zviyM6pzbukSOv+zGSEz33QykoOGNoXfT95xmq4W7Y1YFAvK/1nE5nBg7b3c9mJrmYMwWMHoXjtLsWTpcYH3hnblEY9pN/mvws7SJ+ZL+LMHYb2tW4M57iw9BObOsdW9IAWAGJWzb6SKDFEzJ+ALtPG4PKPmSJ+7duvu4giWCJsK4teGDx2MNRgkmQwOj+RnauneVypaGzEcE6Melrhx9CN99/6vOjWrpD/1ucoeOdLl64hl8HVOBRN5acSlqC+tFLR02/e97pVJMBuwIwOhnDggLPc3t07I/RRpXlOsZfMycvUL+9wjovLvxBhD1fJe+Ejca3a9TX9mfPInLRMIRyi25wENcIhmewh2YixxTjbrabSiHkT4NMz3Gqp50ziy8LTpxVRe9BQOD3hJVxcvrV5i4hCuFuROeVVVP9M65u2oTZQW06Pf1H0enNIP6rthYzOgKhd9jHHkF0oKrclDIoOdhjeD34DouAVFgzZUIva/FJUfn/cStG6i090VxGk8wrvCMnHG3XFFUL3Xf7hjNBbltAydf+vnodnZ1WrKiYOqUd6VFJB0xQWn7OeNPC9aq6uOZmLX2cuF72n2TCGTn+4XUQJLH00c31Bk4BlgM1VfPtEoNe/nnK21GPeuK/TopJ/R39dmb6Y2OKrCr9YLfpvWyKeYHOgG4957wlEv/UYYt6dYzNOTKGS3mvmidlL+8p0EblsDiH3D0O/L55zQThC/2xosc0Lur3HxDIQ9Spn0Kpn2PSxwqg0N/UpXk0eeuO0TwKLeX8ugkdfiRiQg1qwejsufbxHVUSQzIuIpxMREKe0y1RQ6Knx7dm4eUFhJcbnrlsMzl5FMzBkFaDimwyhQIVXXqITT53cFNIXQSMHosNt/UXPsAXdeO6z68Xf0W/MRCcKfNnAVKVH5f6TwpI35BSjvkQnBOYRGgSvLh2FIqYQiaVhqxYOtjA9KvnNxu8KAQ0sTPH3MnCas5tXupsUvrsD0Ejo+pgY/teCUr2fb9TJsElNXrSVnzEkZ91CDmZ312e7hrN5adHJy82TrHwMf62WMiht8xuDE7xUT5tX4VBAe9k99Zwxcnw4bhw442yOrSOcNr3UdG3yATqphxuHlUeik23GjO268RXGygUAz0A7hwHpFUbdIge/22fYubW9TRopzf2XAVyvMB2X5Lj0yGnKpRQzHAaCDsdMP8uB8RTtQPujDowlOhKOqlWN9Kipe8DZtN/ectBekBnjSWrOr6pa9kmLTk7lXMxs7UFIMjhmHdFO26Qms0u7AYbkpEzg4LQ9VrkO1HaoA2dT6YGrvcDlHZnxuRvGgMub257iZjoZmJARlSwCYWpx+ZBumjZpl0n2GEg6HG0GniFrWLyrwkFzTzEf7floboVRdzcgzpVdzxY3tW1FhbHydkfnUh3h9gmQwXQ6kQ7gXX9nzDIZwxx3X27i9jn4jMik/bxUH8eBBRQuwLWnBJzPD9BGDnBXOGjpY5cDC1P8vWv5TJljEQNcO4zhJgwo5hzvctnwdnrM47oWLLflGZm91qdakiZyIAkcdMxB/eZk1zABbBeDvNGf8y3NfQWOI1r94O6gvDXdJO7xEANGg+NuZyu4zmBAOQffB7DdHNIWWpppudbarO/qkcg3gbb3S5zRJu3GNwQ2vRjQumkNrw6kNwVysdtdQk+t91V9TeD/ARozoWuLuPVZAAAAAElFTkSuQmCC"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": [
+    "tested",
+    "calm",
+    "nodrink",
+    "opendeck",
+    "heated",
+    "hour"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Overall",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Best Sightseeing Night Cruise With Welcome Drink and Audio Guide"
+      ],
+      [
+       "fetchpriority",
+       "high"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "eager"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/68f3738fe72bf6e25526e991_best-budapest-river-cruises-legenda-sightseeing-cruise-00025.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Best Sightseeing Night Cruise With Welcome Drink and Audio Guide"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858906a0cee5e84e26277_Budapest-river-cruises-legenda-13.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858906a0cee5e84e26277_Budapest-river-cruises-legenda-13-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/63b858906a0cee5e84e26277_Budapest-river-cruises-legenda-13-p-800.webp 800w, /assets/cdn/60e43c7d6d05b671dff0dc1a/63b858906a0cee5e84e26277_Budapest-river-cruises-legenda-13.webp 889w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "100vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Best Sightseeing Night Cruise With Welcome Drink and Audio Guide"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b85890a4459bd8db363d3c_Budapest-river-cruises-legenda-17.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b85890a4459bd8db363d3c_Budapest-river-cruises-legenda-17-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/63b85890a4459bd8db363d3c_Budapest-river-cruises-legenda-17-p-800.webp 800w, /assets/cdn/60e43c7d6d05b671dff0dc1a/63b85890a4459bd8db363d3c_Budapest-river-cruises-legenda-17.webp 889w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "100vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Best Sightseeing Night Cruise With Welcome Drink and Audio Guide"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588eb2b66207c4939d92_Budapest-river-cruises-legenda-10.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588eb2b66207c4939d92_Budapest-river-cruises-legenda-10-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588eb2b66207c4939d92_Budapest-river-cruises-legenda-10-p-800.webp 800w, /assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588eb2b66207c4939d92_Budapest-river-cruises-legenda-10.webp 889w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "100vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Best Sightseeing Night Cruise With Welcome Drink and Audio Guide"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588a79911245005fa221_Budapest-river-cruises-legenda-2.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588a79911245005fa221_Budapest-river-cruises-legenda-2-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588a79911245005fa221_Budapest-river-cruises-legenda-2-p-800.webp 800w, /assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588a79911245005fa221_Budapest-river-cruises-legenda-2.webp 889w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "100vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Best Sightseeing Night Cruise With Welcome Drink and Audio Guide"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588bb4ae8bb6155979a8_Budapest-river-cruises-legenda-8.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588bb4ae8bb6155979a8_Budapest-river-cruises-legenda-8-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588bb4ae8bb6155979a8_Budapest-river-cruises-legenda-8-p-800.webp 800w, /assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588bb4ae8bb6155979a8_Budapest-river-cruises-legenda-8.webp 889w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "100vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Best Sightseeing Night Cruise With Welcome Drink and Audio Guide"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b85889ad92774aa6d9b7ca_Budapest-river-cruises-legenda-5.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b85889ad92774aa6d9b7ca_Budapest-river-cruises-legenda-5-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/63b85889ad92774aa6d9b7ca_Budapest-river-cruises-legenda-5-p-800.webp 800w, /assets/cdn/60e43c7d6d05b671dff0dc1a/63b85889ad92774aa6d9b7ca_Budapest-river-cruises-legenda-5.webp 889w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "100vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Best Sightseeing Night Cruise With Welcome Drink and Audio Guide"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588a0f543b35796e5996_Budapest-river-cruises-legenda-1.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588a0f543b35796e5996_Budapest-river-cruises-legenda-1-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588a0f543b35796e5996_Budapest-river-cruises-legenda-1-p-800.webp 800w, /assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588a0f543b35796e5996_Budapest-river-cruises-legenda-1.webp 888w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "100vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68f3738fe72bf6e25526e991_best-budapest-river-cruises-legenda-sightseeing-cruise-00025.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858906a0cee5e84e26277_Budapest-river-cruises-legenda-13-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b85890a4459bd8db363d3c_Budapest-river-cruises-legenda-17-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588eb2b66207c4939d92_Budapest-river-cruises-legenda-10-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588a79911245005fa221_Budapest-river-cruises-legenda-2-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588bb4ae8bb6155979a8_Budapest-river-cruises-legenda-8-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b85889ad92774aa6d9b7ca_Budapest-river-cruises-legenda-5-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b8588a0f543b35796e5996_Budapest-river-cruises-legenda-1-p-500.webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Legenda City Cruises",
+    "⏱️ 1 Hour",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Legenda+City+Cruises+Dock+7+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Dock 7 (Vigadó tér)"
+    }
+   ],
+   "title": {
+    "url": "https://legenda.hu/en/ticket-purchase?partner=38585",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Danube Legend Evening Cruise With Welcome Drink &amp; 30-Language Audio Guide"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.43",
+     "score": "4.4",
+     "meta": "17k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.5",
+       "count": "(10.9k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-1-hour-evening-sightseeing-cruise-with-drink-t105820/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=best-night-cruises-budapest-en-pop&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Viator",
+       "score": "4.3",
+       "count": "(4.2k+)",
+       "url": "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=best_night_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FLegenda-Danube-Legend-Cruise-Budapest%2Fd499-35015P1",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.3",
+       "count": "(2.2k+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_night_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FAttractionProductReview-g274887-d11991250-Budapest_Danube_River_Sightseeing_Night_Cruise_with_Drink-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "Personally tested",
+     "pop_html": "<strong>I rode this cruise myself.</strong> Most of the photos in the review are my own, and so is the video.<span class=\"bpa-lang-note\">What I checked: deck views, commentary, drinks and value for money. <a href=\"#item-1-legenda-danube-legend\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "Every 20 min · 16:20–21:00",
+     "pop_html": "<strong>Until 22 November:</strong> every 20 minutes from 16:20 to 21:00. <strong>23 November to 31 December:</strong> 15:40, then every 20 minutes from 16:20 to 21:00. About 1 hour.<span class=\"bpa-lang-note\"><b>📍 Vigadó tér, Dock 7:</b> Pest side, 2 minutes from Vörösmarty tér and the top of Váci utca. Covered floating dock with restrooms and a rooftop waiting area.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "data": {
+      "langs": "en,hu,de,it,fr,es,pt,nl,da,sv,no,fi,et,lv,lt,pl,cs,sk,sl,hr,ro,el,tr,ru,he,ar,zh,ja,ko,th"
+     },
+     "emoji": "🎧",
+     "label": "30-Lang Audio",
+     "pop_html": "<strong>Audio languages:</strong> <span class=\"bpa-lang-names\">English, Hungarian, German, Italian, French, Spanish, Portuguese, Dutch, Danish, Swedish, Norwegian, Finnish, Estonian, Latvian, Lithuanian, Polish, Czech, Slovak, Slovenian, Croatian, Romanian, Greek, Turkish, Russian, Hebrew, Arabic, Chinese, Japanese, Korean, Thai</span><span class=\"bpa-lang-note\">Film and audio guide on headsets Legenda hands out, so no earphones needed. From the language list on legenda.hu.</span>"
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "Access &amp; kids",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> some Legenda boats are accessible, not all: ask Legenda which boat runs your sailing</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> free under 10; €14 for ages 10-14 by day, €17.50 in the evening</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🥂",
+     "label": "Welcome Drink",
+     "pop_html": "<strong>1 drink included: champagne, wine, beer, a soft drink or mineral water.</strong> In summer you get a free lemonade on top. More drinks at the bar on board."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🙂",
+     "label": "Calm sightseeing",
+     "pop_html": "<strong>Seated sightseeing with a 30-language audio guide on headsets, not a party boat.</strong> Open-air seats at the back of the top deck, heated cabin below. The welcome drink can be a soft drink or water, so non-drinkers pay for nothing they skip."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🌬️",
+     "label": "Open-air top deck",
+     "pop_html": "<strong>Open-air seats at the back of the top deck.</strong> Heated cabin below in winter."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🧒",
+     "label": "Free under 10",
+     "pop_html": "<strong>Children under 10 ride free.</strong> €14 for ages 10-14 by day, €17.50 in the evening."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🏛️",
+     "label": "Covered dock",
+     "pop_html": "<strong>Vigadó tér Dock 7 is a covered floating dock with restrooms and a rooftop waiting area.</strong> 2 minutes from Vörösmarty tér."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "01-01",
+      "to": "01-04",
+      "times": [
+       "15:40",
+       "16:20",
+       "16:40",
+       "17:00",
+       "17:20",
+       "17:40",
+       "18:00",
+       "18:20",
+       "18:40",
+       "19:00",
+       "19:20",
+       "19:40",
+       "20:00",
+       "20:20",
+       "20:40",
+       "21:00"
+      ]
+     },
+     {
+      "from": "01-05",
+      "to": "02-11",
+      "times": [
+       "16:20",
+       "16:40",
+       "17:00",
+       "17:20",
+       "17:40",
+       "18:00",
+       "18:20",
+       "18:40",
+       "19:00",
+       "19:20",
+       "19:40",
+       "20:00",
+       "20:20",
+       "20:40",
+       "21:00"
+      ]
+     },
+     {
+      "from": "02-12",
+      "to": "02-24",
+      "times": [
+       "16:40",
+       "17:00",
+       "17:20",
+       "17:40",
+       "18:00",
+       "18:20",
+       "18:40",
+       "19:00",
+       "19:20",
+       "19:40",
+       "20:00",
+       "20:20",
+       "20:40",
+       "21:00"
+      ]
+     },
+     {
+      "from": "02-25",
+      "to": "03-09",
+      "times": [
+       "17:00",
+       "17:20",
+       "17:40",
+       "18:00",
+       "18:20",
+       "18:40",
+       "19:00",
+       "19:20",
+       "19:40",
+       "20:00",
+       "20:20",
+       "20:40",
+       "21:00"
+      ]
+     },
+     {
+      "from": "03-10",
+      "to": "03-28",
+      "times": [
+       "17:40",
+       "18:00",
+       "18:20",
+       "18:40",
+       "19:00",
+       "19:20",
+       "19:40",
+       "20:00",
+       "20:20",
+       "20:40",
+       "21:00"
+      ]
+     },
+     {
+      "from": "03-29",
+      "to": "04-05",
+      "times": [
+       "19:00",
+       "19:20",
+       "19:40",
+       "20:00",
+       "20:20",
+       "20:40",
+       "21:00",
+       "21:20",
+       "21:40",
+       "22:00"
+      ]
+     },
+     {
+      "from": "04-06",
+      "to": "05-21",
+      "times": [
+       "19:20",
+       "19:40",
+       "20:00",
+       "20:20",
+       "20:40",
+       "21:00",
+       "21:20",
+       "21:40",
+       "22:00"
+      ]
+     },
+     {
+      "from": "05-22",
+      "to": "07-23",
+      "times": [
+       "19:30",
+       "20:15",
+       "20:20",
+       "20:30",
+       "20:45",
+       "21:30",
+       "21:40",
+       "21:45",
+       "22:00"
+      ]
+     },
+     {
+      "from": "07-24",
+      "to": "09-03",
+      "times": [
+       "19:20",
+       "19:40",
+       "20:00",
+       "20:20",
+       "20:40",
+       "21:00",
+       "21:20",
+       "21:40",
+       "22:00"
+      ]
+     },
+     {
+      "from": "09-04",
+      "to": "09-13",
+      "times": [
+       "19:00",
+       "19:20",
+       "19:40",
+       "20:00",
+       "20:20",
+       "20:40",
+       "21:00",
+       "21:20",
+       "21:40",
+       "22:00"
+      ]
+     },
+     {
+      "from": "09-14",
+      "to": "09-22",
+      "times": [
+       "18:40",
+       "19:00",
+       "19:20",
+       "19:40",
+       "20:00",
+       "20:20",
+       "20:40",
+       "21:00",
+       "21:20",
+       "21:40",
+       "22:00"
+      ]
+     },
+     {
+      "from": "09-23",
+      "to": "10-02",
+      "times": [
+       "18:20",
+       "18:40",
+       "19:00",
+       "19:20",
+       "19:40",
+       "20:00",
+       "20:20",
+       "20:40",
+       "21:00",
+       "21:20",
+       "21:40",
+       "22:00"
+      ]
+     },
+     {
+      "from": "10-03",
+      "to": "10-24",
+      "times": [
+       "17:40",
+       "18:00",
+       "18:20",
+       "18:40",
+       "19:00",
+       "19:20",
+       "19:40",
+       "20:00",
+       "20:20",
+       "20:40",
+       "21:00",
+       "21:20",
+       "21:40",
+       "22:00"
+      ]
+     },
+     {
+      "from": "10-25",
+      "to": "11-22",
+      "times": [
+       "16:20",
+       "16:40",
+       "17:00",
+       "17:20",
+       "17:40",
+       "18:00",
+       "18:20",
+       "18:40",
+       "19:00",
+       "19:20",
+       "19:40",
+       "20:00",
+       "20:20",
+       "20:40",
+       "21:00"
+      ]
+     },
+     {
+      "from": "11-23",
+      "to": "12-31",
+      "times": [
+       "15:40",
+       "16:20",
+       "16:40",
+       "17:00",
+       "17:20",
+       "17:40",
+       "18:00",
+       "18:20",
+       "18:40",
+       "19:00",
+       "19:20",
+       "19:40",
+       "20:00",
+       "20:20",
+       "20:40",
+       "21:00"
+      ]
+     }
+    ],
+    "dur": "60",
+    "every": "every 20 min"
+   },
+   "best_for": {
+    "pick_html": "for the classic lit-up Danube loop with a welcome drink and the clearest audio guide on the river.",
+    "skip_html": "on a tight budget: at €25 it costs more than most sightseeing cruises."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Do I need to book ahead?",
+      "a": "No, you can book on the same day too. Evening sailings in December and on weekends can sell out, though, and cancellation is free up to 24 hours before, so booking early costs nothing."
+     },
+     {
+      "q": "Day or evening?",
+      "a": "Evening: 17 of 64 recent guests name the lit-up city as the highlight. The Parliament&#x27;s lights go off at 22:00."
+     },
+     {
+      "q": "Will I get a good seat?",
+      "a": "Seats are not assigned, so arrive 15 to 20 minutes early. A few guests felt the boat was busy."
+     },
+     {
+      "q": "What if my headset doesn&#x27;t work?",
+      "a": "Guests say there are plenty of spare headsets on board."
+     },
+     {
+      "q": "Why does it cost more?",
+      "a": "Guests call it well organised and a bit more upmarket than other boats: headsets in 30 languages, a covered dock with restrooms and a real welcome drink."
+     }
+    ]
+   },
+   "price": {
+    "main": "€25",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€25"
+     },
+     {
+      "label": "Student",
+      "price": "€22.50"
+     },
+     {
+      "label": "Child",
+      "small": "10-14",
+      "price": "€17.50"
+     },
+     {
+      "label": "Under 10",
+      "price": "Free"
+     }
+    ],
+    "total": {
+     "label": "2 adults + 2 kids (10-14)",
+     "price": "€85"
+    },
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://legenda.hu/en/ticket-purchase?partner=38585",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Legenda",
+    "trust": [
+     "<b>Change your date</b> if your plans change",
+     "<b>Free cancellation</b> up to 24 h before, full refund"
+    ],
+    "sublink": {
+     "url": "#item-1-legenda-danube-legend",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-2",
+   "cats": [
+    "tested",
+    "unlimited",
+    "party",
+    "opendeck",
+    "hour"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🥂 #2 Best Unlimited Drinks",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Budapest Night Cruise with Unlimited Prosecco and Lemonade"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e8a4e49cb177974356_Budapest-river-cruises-portum-14.webp"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Budapest Night Cruise with Unlimited Prosecco and Lemonade"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Budapest Night Cruise with Unlimited Prosecco and Lemonade"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858ea56f82257ea9e0c70_Budapest-river-cruises-portum-16.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Budapest Night Cruise with Unlimited Prosecco and Lemonade"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858eda4b537601bf3ceab_Budapest-river-cruises-portum-21.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Budapest Night Cruise with Unlimited Prosecco and Lemonade"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e8f731d90165d271cc_Budapest-river-cruises-portum-11.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Budapest Night Cruise with Unlimited Prosecco and Lemonade"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e9803ea5e532e13df1_Budapest-river-cruises-portum-15.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e8a4e49cb177974356_Budapest-river-cruises-portum-14.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858ea56f82257ea9e0c70_Budapest-river-cruises-portum-16.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858eda4b537601bf3ceab_Budapest-river-cruises-portum-21.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e8f731d90165d271cc_Budapest-river-cruises-portum-11.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e9803ea5e532e13df1_Budapest-river-cruises-portum-15.webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Duna-Weser",
+    "⏱️ 75 Mins",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Akadémia+3+ponton+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "3 docks"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-unlimited-prosecco-beer-and-aperol-spritz-cruise-t416276/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-card-duna-weser-unlimited-prosecco&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Unlimited Prosecco, Beer, Aperol &amp; Limoncello Spritz Cruise"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.78",
+     "score": "4.8",
+     "meta": "57k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(51.2k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-unlimited-prosecco-beer-and-aperol-spritz-cruise-t416276/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-rating-duna-weser-unlimited-prosecco&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Viator",
+       "score": "4.6",
+       "count": "(3.8k+)",
+       "url": "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=best_night_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2F1-5-hours-evening-cruise-with-unlimited-Torley-sparkling-wine%2Fd499-337865P1",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.6",
+       "count": "(2.2k+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_night_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FAttractionProductReview-g274887-d23953331-Budapest_Unlimited_Prosecco_Beer_Aperol_Spritz_Cruise-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "Personally tested",
+     "pop_html": "<strong>I rode the original Rubin Group version of this cruise.</strong> The GetYourGuide ticket is now run by Duna-Weser, so every fact on this card comes from the current listing.<span class=\"bpa-lang-note\">What I checked: deck views, commentary, drinks and value for money. <a href=\"#item-2-unlimited-prosecco\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "3 docks · 15:30–23:00",
+     "pop_html": "<strong>Carl Lutz rakpart Dock 0:</strong> 15:45, 18:45, 22:15. <strong>Akadémia 3:</strong> 15:30, 17:15, 22:30. <strong>Vigadó 8/A:</strong> 23:00. About 75 minutes.<span class=\"bpa-lang-note\"><b>📍 3 docks to choose from:</b> Akadémia 3 is by the Chain Bridge, best from Parliament or the Basilica. Vigadó 8/A is by Vörösmarty tér, best from Váci utca. Carl Lutz rakpart Dock 0 is further north on the Pest bank. Pick the dock when you choose your time slot.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "data": {
+      "langs": "en"
+     },
+     "emoji": "🎧",
+     "label": "English guide",
+     "pop_html": "<strong>Guide language: English only.</strong><span class=\"bpa-lang-note\">As listed for this ticket.</span>"
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "Folding strollers only",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> varies by boat and dock; mobility scooters not allowed</span><span class=\"bpa-lang-note\">👶 <b>Stroller:</b> <span class=\"cd-yes\">✓</span> folding strollers only, non-folding ones are not allowed</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> free under 4, full price for 4-17; small dogs welcome on a lead with a muzzle</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍾",
+     "label": "Unlimited Prosecco &amp; Beer",
+     "pop_html": "<strong>Unlimited for 75 minutes: Hungarian sparkling wine, Aperol, Hugo, Rossini and Limoncello spritzers, beer, lemonade and lemon-mint water.</strong> You start with a welcome glass of sparkling wine; refills at the bar. Food costs extra."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🎉",
+     "label": "Cocktail-party feel",
+     "pop_html": "<strong>Lively, not a quiet sightseeing hour.</strong> On my cruise the commentary was hard to hear over the party noise. Open top deck plus two indoor decks; board early for the best top-deck spots. Lemonade is self-service, so non-drinkers are covered too."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🌬️",
+     "label": "Open top deck",
+     "pop_html": "<strong>Open top deck plus two warm indoor decks.</strong> Board early for the best top-deck spots."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍋",
+     "label": "Lemonade too",
+     "pop_html": "<strong>Lemonade and lemon-mint water are part of the unlimited drinks.</strong> Self-service, so non-drinkers are covered."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": [
+       "15:30",
+       "15:45",
+       "17:15",
+       "18:45",
+       "22:15",
+       "22:30",
+       "23:00"
+      ]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": [
+       "17:15",
+       "17:45",
+       "18:45",
+       "20:30"
+      ]
+     }
+    ],
+    "dur": "75"
+   },
+   "best_for": {
+    "pick_html": "for 75 minutes of unlimited sparkling wine, spritzers and beer, with the lit-up Parliament on the way.",
+    "skip_html": "if you want commentary in another language: it is English only, and food costs extra."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is it a real party?",
+      "a": "It is a lively cocktail-party hour, not a club. One younger guest found it quiet and not party enough."
+     },
+     {
+      "q": "Do refills keep coming?",
+      "a": "Yes. Guests say the crew keeps topping up drinks."
+     },
+     {
+      "q": "Can I hear the guide?",
+      "a": "Not always. On my cruise the commentary was hard to hear over the party noise, and one recent guest said the same."
+     },
+     {
+      "q": "Which dock should I pick?",
+      "a": "Akadémia 3 if you stay near Parliament or the Basilica, Vigadó 8/A near Váci utca. Dock 0 is further north on the Pest bank."
+     },
+     {
+      "q": "Cold or rainy?",
+      "a": "The two indoor decks are warm, so it runs in any weather. Bring a layer for the open top deck."
+     }
+    ]
+   },
+   "price": {
+    "main": "€24.80",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€24.80"
+     },
+     {
+      "label": "Child",
+      "small": "4-17",
+      "price": "€24.80"
+     },
+     {
+      "label": "Under 4",
+      "price": "Free"
+     }
+    ],
+    "total": {
+     "label": "2 adults + 2 kids (4-17)",
+     "price": "€99.20"
+    },
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-unlimited-prosecco-beer-and-aperol-spritz-cruise-t416276/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-button-duna-weser-unlimited-prosecco&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": [
+     "<b>Pay nothing today</b>, pay closer to the date",
+     "<b>Free cancellation</b> up to 24 h before, full refund"
+    ],
+    "sublink": {
+     "url": "#item-2-unlimited-prosecco",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-3",
+   "cats": [
+    "tested",
+    "calm",
+    "nodrink",
+    "opendeck",
+    "heated",
+    "hour",
+    "under20"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "⚓ #3 Best Historic Boat",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Historic 19th Century Steam Boat Cruise"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eb8e0e233b7bcba36b79ca_Kisdalufy%20historic%20paddle%20steam%20cruise%20(15).webp"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Historic 19th Century Steam Boat Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eda0f72a95bec78d110945_Kisdalufy%20historic%20paddle%20steam%20cruise%20(16).webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Historic 19th Century Steam Boat Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eb8e09dbce9b580c818930_Kisdalufy%20historic%20paddle%20steam%20cruise%20(10).webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Historic 19th Century Steam Boat Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eda3552af2724a8aea45e7_Kisdalufy%20historic%20paddle%20steam%20cruise%20(17).avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Historic 19th Century Steam Boat Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eb8e07233b7bcba36b7081_Kisdalufy%20historic%20paddle%20steam%20cruise%20(6).webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Historic 19th Century Steam Boat Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eb8e07a2dc265f519b2a83_Kisdalufy%20historic%20paddle%20steam%20cruise%20(7).webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Historic 19th Century Steam Boat Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eb8e060f9044a1a9e4900c_Kisdalufy%20historic%20paddle%20steam%20cruise%20(5).webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Historic 19th Century Steam Boat Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eda40ea110f471e61d0537_Kisdalufy%20historic%20paddle%20steam%20cruise%20(18).avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Historic 19th Century Steam Boat Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eb8e08627363a3b67f4967_Kisdalufy%20historic%20paddle%20steam%20cruise%20(8).webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Historic 19th Century Steam Boat Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eb8e0db7f9f26521c0cca8_Kisdalufy%20historic%20paddle%20steam%20cruise%20(13).webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eb8e0e233b7bcba36b79ca_Kisdalufy%20historic%20paddle%20steam%20cruise%20(15).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eda0f72a95bec78d110945_Kisdalufy%20historic%20paddle%20steam%20cruise%20(16).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eb8e09dbce9b580c818930_Kisdalufy%20historic%20paddle%20steam%20cruise%20(10).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eda3552af2724a8aea45e7_Kisdalufy%20historic%20paddle%20steam%20cruise%20(17).avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eb8e07233b7bcba36b7081_Kisdalufy%20historic%20paddle%20steam%20cruise%20(6).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eb8e07a2dc265f519b2a83_Kisdalufy%20historic%20paddle%20steam%20cruise%20(7).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eb8e060f9044a1a9e4900c_Kisdalufy%20historic%20paddle%20steam%20cruise%20(5).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eda40ea110f471e61d0537_Kisdalufy%20historic%20paddle%20steam%20cruise%20(18).avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eb8e08627363a3b67f4967_Kisdalufy%20historic%20paddle%20steam%20cruise%20(8).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64eb8e0db7f9f26521c0cca8_Kisdalufy%20historic%20paddle%20steam%20cruise%20(13).webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Dunai Sétahajózási",
+    "⏱️ 60 Mins",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Duna+Cruises+Dock+10+Jane+Haining+rakpart+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Dock 10 (Elizabeth Bridge)"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-city-lights-evening-cruise-with-audio-guide-t437737/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-card-kisfaludy-paddle-steamer&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Historical Night Cruise on the Kisfaludy Paddle Steamer"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.70",
+     "score": "4.7",
+     "meta": "10k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.7",
+       "count": "(9.3k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-city-lights-evening-cruise-with-audio-guide-t437737/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-rating-kisfaludy-paddle-steamer&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Viator",
+       "score": "4.6",
+       "count": "(490+)",
+       "url": "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=best_night_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FBudapest-Historic-Cruise-with-Audio-Guide-and-Welcome-Drink%2Fd499-334886P2",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.7",
+       "count": "(280+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_night_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FAttractionProductReview-g274887-d26662986-Budapest_Danube_Cruise_with_Kisfaludy_Paddle_Steamer-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "Personally tested",
+     "pop_html": "<strong>I rode this cruise myself.</strong> Most of the photos in the review are my own.<span class=\"bpa-lang-note\">What I checked: deck views, commentary, drinks and value for money. <a href=\"#item-3-kisfaludy-paddle-steamer\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "Evening · 16:00–20:30",
+     "pop_html": "Sailings at 13:00, 14:30, 16:00, 17:30, 19:00 and 20:30. About 1 hour. The 17:30, 19:00 and 20:30 sailings are after dark, with the city lights on.<span class=\"bpa-lang-note\"><b>📍 Dock 10, Elizabeth Bridge:</b> Pest side next to Elizabeth Bridge, a short walk from Ferenciek tere metro. No baby strollers and no wheelchair access on board.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "data": {
+      "langs": "en,zh,cs,fr,de,el,hu,it,ko,ro,ru,es,uk,ja,pl,sv,pt,ar,tr,hi,fi,nl,no,hr,da,sk,vi,bg,tl"
+     },
+     "emoji": "🎧",
+     "label": "29-Lang Audio",
+     "pop_html": "<strong>Audio languages:</strong> <span class=\"bpa-lang-names\">English, Chinese, Czech, French, German, Greek, Hungarian, Italian, Korean, Romanian, Russian, Spanish, Ukrainian, Japanese, Polish, Swedish, Portuguese, Arabic, Turkish, Hindi, Finnish, Dutch, Norwegian, Croatian, Danish, Slovak, Vietnamese, Bulgarian, Tagalog</span><span class=\"bpa-lang-note\">Online guide on your own phone: scan the QR code on board and bring earphones. Free Wi-Fi on board.</span>"
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "No wheelchairs or strollers",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> not wheelchair accessible</span><span class=\"bpa-lang-note\">👶 <b>Stroller:</b> <span class=\"cd-no\">✕</span> not allowed on board</span><span class=\"bpa-lang-note\">🚻 <b>Toilet on board:</b> <span class=\"cd-yes\">✓</span></span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> free under 3, full price from 3</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🥂",
+     "label": "Welcome Drink",
+     "pop_html": "<strong>1 drink included: a glass of prosecco or orange juice.</strong> When I tested it, water and beer were offered too."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🎹",
+     "label": "Quiet and historic",
+     "pop_html": "<strong>Classical piano plays between the narration on a historic paddle steamer.</strong> Open-air panorama deck at the front, heated indoor area in winter. The welcome glass is prosecco or orange juice."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🌬️",
+     "label": "Front deck",
+     "pop_html": "<strong>Open-air panorama deck at the front.</strong> Heated indoor area in winter."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🚂",
+     "label": "Paddle steamer",
+     "pop_html": "<strong>A historic paddle steamer from the 19th century.</strong> Guests call it clean, stable and beautiful."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": [
+       "16:00",
+       "17:30",
+       "19:00",
+       "20:30"
+      ]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": [
+       "16:00",
+       "17:30",
+       "19:00",
+       "20:30"
+      ]
+     }
+    ],
+    "dur": "60"
+   },
+   "best_for": {
+    "pick_html": "to sail at night on a replica 19th-century paddle steamer with a small onboard museum.",
+    "skip_html": "if you want space at the rail: the open deck is small and fills up fast, and strollers are not allowed."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Day or evening?",
+      "a": "Guests recommend a late-afternoon or evening sailing. In November the 16:00 sailing catches sunset into lights."
+     },
+     {
+      "q": "Is it cold?",
+      "a": "On deck, yes: 5 of 64 recent guests mention the cold, and 4 mention the warm heated cabin."
+     },
+     {
+      "q": "Will I get a seat outside?",
+      "a": "One guest found too few seats on the top deck, so board early for a spot outside."
+     },
+     {
+      "q": "What is the boat like?",
+      "a": "A historic paddle steamer. Guests describe it as clean, stable and beautiful."
+     },
+     {
+      "q": "Is the staff friendly?",
+      "a": "10 of 64 recent guests praise the friendly staff."
+     }
+    ]
+   },
+   "price": {
+    "main": "€11",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€11"
+     },
+     {
+      "label": "Child",
+      "small": "3 and over",
+      "price": "€11"
+     },
+     {
+      "label": "Under 3",
+      "price": "Free"
+     }
+    ],
+    "total": {
+     "label": "2 adults + 2 kids (3+)",
+     "price": "€44"
+    },
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-city-lights-evening-cruise-with-audio-guide-t437737/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-button-kisfaludy-paddle-steamer&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": [
+     "<b>Pay nothing today</b>, pay closer to the date",
+     "<b>Free cancellation</b> up to 24 h before, full refund"
+    ],
+    "sublink": {
+     "url": "#item-3-kisfaludy-paddle-steamer",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-4",
+   "cats": [
+    "tested",
+    "dinner",
+    "nodrink",
+    "opendeck",
+    "heated"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🕯️ #4 Best Romantic Dinner",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 100vw, (max-width: 991px) 15vw, (max-width: 1439px) 19vw, 21vw"
+      ],
+      [
+       "src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/663224a0b9517f8a892517a9_best-dinner-cruises-budapest-legenda-city-cruises-11.webp"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"
+      ],
+      [
+       "fetchpriority",
+       "high"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "eager"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/690332b608818ef6e357242b_candlelit-dinner-cruise-00002-p-800.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64c683ce54d6bc13eb860a03_Legenda-dinner-cruise%20(1).webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64c683ce54d6bc13eb860a03_Legenda-dinner-cruise%20(1)-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/64c683ce54d6bc13eb860a03_Legenda-dinner-cruise%20(1).webp 800w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 100vw, (max-width: 991px) 15vw, (max-width: 1439px) 19vw, 21vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320ed9bd523888f1d2aa1f_best-dinner-cruises-budapest-legenda-city-cruises-9.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320ed9bd523888f1d2aa1f_best-dinner-cruises-budapest-legenda-city-cruises-9-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/66320ed9bd523888f1d2aa1f_best-dinner-cruises-budapest-legenda-city-cruises-9.webp 800w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 100vw, (max-width: 991px) 15vw, (max-width: 1439px) 19vw, 21vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320e4a4d501246b56e9d59_best-dinner-cruises-budapest-legenda-city-cruises-5.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320e4a4d501246b56e9d59_best-dinner-cruises-budapest-legenda-city-cruises-5-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/66320e4a4d501246b56e9d59_best-dinner-cruises-budapest-legenda-city-cruises-5.webp 800w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 100vw, (max-width: 991px) 15vw, (max-width: 1439px) 19vw, 21vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320defac2b58c3877cdbe5_best-dinner-cruises-budapest-legenda-city-cruises-2.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320defac2b58c3877cdbe5_best-dinner-cruises-budapest-legenda-city-cruises-2-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/66320defac2b58c3877cdbe5_best-dinner-cruises-budapest-legenda-city-cruises-2.webp 800w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 100vw, (max-width: 991px) 15vw, (max-width: 1439px) 19vw, 21vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/6632102a9455a44b8ba053fb_best-dinner-cruises-budapest-legenda-city-cruises-12.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/6632102a9455a44b8ba053fb_best-dinner-cruises-budapest-legenda-city-cruises-12-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/6632102a9455a44b8ba053fb_best-dinner-cruises-budapest-legenda-city-cruises-12.webp 800w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 100vw, (max-width: 991px) 15vw, (max-width: 1439px) 19vw, 21vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/66322a0f443d1321ca0ccc05_best-dinner-cruises-budapest-legenda-city-cruises-13.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/66322a0f443d1321ca0ccc05_best-dinner-cruises-budapest-legenda-city-cruises-13-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/66322a0f443d1321ca0ccc05_best-dinner-cruises-budapest-legenda-city-cruises-13.webp 800w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 100vw, (max-width: 991px) 15vw, (max-width: 1439px) 19vw, 21vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/6632100d16cd1e9d193ff6d6_best-dinner-cruises-budapest-legenda-city-cruises-6.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/6632100d16cd1e9d193ff6d6_best-dinner-cruises-budapest-legenda-city-cruises-6-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/6632100d16cd1e9d193ff6d6_best-dinner-cruises-budapest-legenda-city-cruises-6.webp 800w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 100vw, (max-width: 991px) 15vw, (max-width: 1439px) 19vw, 21vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/66322994ce51b39cdb68bb77_best-dinner-cruises-budapest-legenda-city-cruises-8.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/66322994ce51b39cdb68bb77_best-dinner-cruises-budapest-legenda-city-cruises-8-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/66322994ce51b39cdb68bb77_best-dinner-cruises-budapest-legenda-city-cruises-8.webp 800w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 100vw, (max-width: 991px) 15vw, (max-width: 1439px) 19vw, 21vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/66322a2409d6d58a16b06276_best-dinner-cruises-budapest-legenda-city-cruises-16.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/66322a2409d6d58a16b06276_best-dinner-cruises-budapest-legenda-city-cruises-16-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/66322a2409d6d58a16b06276_best-dinner-cruises-budapest-legenda-city-cruises-16.webp 800w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 100vw, (max-width: 991px) 15vw, (max-width: 1439px) 19vw, 21vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "4-Course Romantic Candlelit Dinner Cruise With Live Lounge Music"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/663229b884ffc8297ddcb52a_best-dinner-cruises-budapest-legenda-city-cruises-15.webp"
+      ],
+      [
+       "data-srcset",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/663229b884ffc8297ddcb52a_best-dinner-cruises-budapest-legenda-city-cruises-15-p-500.webp 500w, /assets/cdn/60e43c7d6d05b671dff0dc1a/663229b884ffc8297ddcb52a_best-dinner-cruises-budapest-legenda-city-cruises-15.webp 800w"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 100vw, (max-width: 991px) 15vw, (max-width: 1439px) 19vw, 21vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/663224a0b9517f8a892517a9_best-dinner-cruises-budapest-legenda-city-cruises-11.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/690332b608818ef6e357242b_candlelit-dinner-cruise-00002-p-800.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64c683ce54d6bc13eb860a03_Legenda-dinner-cruise%20(1)-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320ed9bd523888f1d2aa1f_best-dinner-cruises-budapest-legenda-city-cruises-9-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320e4a4d501246b56e9d59_best-dinner-cruises-budapest-legenda-city-cruises-5-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/66320defac2b58c3877cdbe5_best-dinner-cruises-budapest-legenda-city-cruises-2-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/6632102a9455a44b8ba053fb_best-dinner-cruises-budapest-legenda-city-cruises-12-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/66322a0f443d1321ca0ccc05_best-dinner-cruises-budapest-legenda-city-cruises-13-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/6632100d16cd1e9d193ff6d6_best-dinner-cruises-budapest-legenda-city-cruises-6-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/66322994ce51b39cdb68bb77_best-dinner-cruises-budapest-legenda-city-cruises-8-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/66322a2409d6d58a16b06276_best-dinner-cruises-budapest-legenda-city-cruises-16-p-500.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/663229b884ffc8297ddcb52a_best-dinner-cruises-budapest-legenda-city-cruises-15-p-500.webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Legenda City Cruises",
+    "⏱️ 2.5 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Legenda+City+Cruises+Dock+7+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Dock 7 (Vigadó tér)"
+    }
+   ],
+   "title": {
+    "url": "https://legenda.hu/en/ticket-purchase?partner=38585",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "4-Course Candlelit Dinner Cruise With Live Music"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.69",
+     "score": "4.7",
+     "meta": "5.4k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.7",
+       "count": "(2.4k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-candlelit-dinner-river-cruise-with-live-music-t400893/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=best-night-cruises-budapest-en-pop&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "_nl": "\n"
+      },
+      {
+       "kind": "link",
+       "site": "Viator",
+       "score": "4.7",
+       "count": "(2k+)",
+       "url": "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=best_night_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FCandlelit-Dinner-Cruise-by-Legenda-Cruises-Budapest%2Fd499-35015P4",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "_nl": "\n"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.6",
+       "count": "(1k+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_night_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FAttractionProductReview-g274887-d15534870-Candlelit_Dinner_Cruise_by_Legenda_City_Cruises_Budapest-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "_nl": "\n"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "Personally tested",
+     "pop_html": "<strong>I rode this cruise myself.</strong> The photos and video in the review are my own.<span class=\"bpa-lang-note\">What I checked: deck views, commentary, drinks and value for money. <a href=\"#item-4-legenda-candlelit-dinner\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "19:00 · 2.5 h",
+     "pop_html": "Daily at 19:00. 2.5 hours on board.<span class=\"bpa-lang-note\"><b>📍 Vigadó tér, Dock 7:</b> Pest side, 2 minutes from Vörösmarty tér and the top of Váci utca. Legenda&#x27;s covered dock has restrooms, so you can wait out of the rain.</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🎶",
+     "label": "Live Music",
+     "pop_html": "<strong>A pianist and singer play lounge music all evening.</strong> Quiet enough to talk: no loud folk show."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "No wheelchair access",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> not wheelchair accessible</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> €84 for ages 3-12 (3 courses); not for children under 3</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🥂",
+     "label": "Welcome Drink",
+     "pop_html": "<strong>1 drink included: champagne, wine, beer, a soft drink or mineral water.</strong> Every other drink is paid on board."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🕯️",
+     "label": "Romantic and quiet",
+     "pop_html": "<strong>Candlelit tables for two along the windows, a pianist and singer, no loud folk show.</strong> Open top deck for photos at any point of the evening. Not for children under 3, and there is no vegan menu."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🪟",
+     "label": "Window tables",
+     "pop_html": "<strong>Candlelit tables for two along the windows.</strong> Open top deck for photos at any point of the evening."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍽️",
+     "label": "4-Course Dinner",
+     "pop_html": "<strong>4 courses picked from the menu at the table: starter, soup, main course and dessert.</strong> Children 3 to 12 get 3 courses. No vegan menu, and not for food allergies."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "04-20",
+      "to": "08-23",
+      "times": [
+       "19:45"
+      ]
+     },
+     {
+      "from": "08-24",
+      "to": "04-19",
+      "times": [
+       "19:00"
+      ]
+     }
+    ],
+    "dur": "150"
+   },
+   "best_for": {
+    "pick_html": "for a romantic 4-course dinner at candlelit tables, with live music and the lit-up Parliament.",
+    "skip_html": "on a tight budget, if you are vegan, or with food allergies: the listing can't cater for them."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Good for a special occasion?",
+      "a": "Yes: 10 of 70 recent guests booked it for a birthday, anniversary or engagement."
+     },
+     {
+      "q": "Is the food good?",
+      "a": "55 of 70 recent guests talk about the food, nearly all positively."
+     },
+     {
+      "q": "Is it loud?",
+      "a": "No. A pianist and singer play lounge music, quiet enough to talk. There is no loud folk show."
+     },
+     {
+      "q": "Are drinks included?",
+      "a": "Only the welcome drink. Every other drink is paid on board."
+     },
+     {
+      "q": "What if it rains?",
+      "a": "Dinner is inside at window tables, and Legenda&#x27;s covered dock has restrooms, so you can wait out of the rain."
+     }
+    ]
+   },
+   "price": {
+    "main": "€110",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€110"
+     },
+     {
+      "label": "Child",
+      "small": "3-12, 3 courses",
+      "price": "€84"
+     },
+     {
+      "label": "Under 3",
+      "price": "Not allowed"
+     }
+    ],
+    "total": {
+     "label": "2 adults + 2 kids (3-12)",
+     "price": "€388"
+    },
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://legenda.hu/en/ticket-purchase?partner=38585",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Legenda",
+    "trust": [
+     "<b>Change your date</b> if your plans change",
+     "<b>Free cancellation</b> up to 72 h before, full refund"
+    ],
+    "sublink": {
+     "url": "#item-4-legenda-candlelit-dinner",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-5",
+   "cats": [
+    "dinner",
+    "unlimited",
+    "opendeck"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🎻 #5 Best All-Inclusive Dinner",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "River Diva buffet dinner cruise on the Danube in Budapest"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/night-cruises-2026/river-diva-dinner-05.webp"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "River Diva buffet dinner cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/river-diva-dinner-02.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "River Diva buffet dinner cruise on the Danube in Budapest"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/river-diva-dinner-01.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "River Diva buffet dinner cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/river-diva-dinner-03.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "River Diva buffet dinner cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/river-diva-dinner-04.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "River Diva buffet dinner cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/river-diva-dinner-07.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "River Diva buffet dinner cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/river-diva-dinner-06.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "River Diva buffet dinner cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/river-diva-dinner-09.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "River Diva buffet dinner cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/river-diva-dinner-08.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "River Diva buffet dinner cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/river-diva-dinner-10.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "River Diva buffet dinner cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/river-diva-dinner-11.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/night-cruises-2026/river-diva-dinner-05.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/river-diva-dinner-02.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/river-diva-dinner-01.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/river-diva-dinner-03.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/river-diva-dinner-04.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/river-diva-dinner-07.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/river-diva-dinner-06.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/river-diva-dinner-09.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/river-diva-dinner-08.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/river-diva-dinner-10.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/river-diva-dinner-11.webp"
+     }
+    ]
+   },
+   "kicker": [
+    "River Diva (Duna-Weser)",
+    "⏱️ 2.5 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Akadémia+3+ponton+Széchenyi+rakpart+2+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Akadémia 3"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-premium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-card-river-diva-dinner&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Buffet Dinner Cruise With Live Music &amp; Unlimited Drinks"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.76",
+     "score": "4.8",
+     "meta": "2.8k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(2.7k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-premium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-rating-river-diva-dinner&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "_nl": "\n"
+      },
+      {
+       "kind": "link",
+       "site": "Viator",
+       "score": "4.7",
+       "count": "(60+)",
+       "url": "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=best_night_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FBudapest-Festive-Dinner-Cruise-River-Diva-Exclusive%2Fd499-337865P6",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "_nl": "\n"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.7",
+       "count": "(30+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_night_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FAttractionProductReview-g274887-d32709423-Budapest_Premium_Dinner_Cruise_Live_Music_Unlimited_Drinks-Budapest_Central_Hungar.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "_nl": "\n"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "19:30 · 2.5 h",
+     "pop_html": "Departs at 19:30. About 2.5 hours on board.<span class=\"bpa-lang-note\"><b>📍 Akadémia 3:</b> Pest side by the Chain Bridge, best if you stay near Parliament, the Basilica or Széchenyi tér. Bring a passport or ID card with the voucher.</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🎶",
+     "label": "Live Music",
+     "pop_html": "<strong>Live music in the Grand Salon through the evening.</strong> There is no sightseeing commentary, just an English-speaking host."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "Wheelchair OK",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-yes\">✓</span> wheelchair-accessible boat</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> free under 4, full price for 4-17</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍸",
+     "label": "Unlimited drinks",
+     "pop_html": "<strong>Included all evening:</strong> cocktails, spirits, Prosecco, wine, beer, soft drinks and water, served to your table.<span class=\"bpa-lang-note\">From the listing.</span>"
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🎻",
+     "label": "All-inclusive evening",
+     "pop_html": "<strong>A seasonal buffet, unlimited drinks served to your table and live music in the Grand Salon.</strong> After dinner you can go up to the rooftop deck, weather permitting."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🌬️",
+     "label": "Rooftop after dinner",
+     "pop_html": "<strong>After dinner the rooftop deck opens, weather permitting.</strong> Bring a passport or ID card with your voucher."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍽️",
+     "label": "Seasonal Buffet",
+     "pop_html": "<strong>A seasonal buffet by Executive Chef Viktor Moldován: starters, mains, sides, vegetarian dishes and desserts.</strong> Flag dietary needs when you book."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": [
+       "19:30"
+      ]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": [
+       "18:30"
+      ]
+     }
+    ],
+    "dur": "150"
+   },
+   "best_for": {
+    "pick_html": "for a buffet dinner with unlimited cocktails, wine and Prosecco served at your table, plus live music.",
+    "skip_html": "if you want a guaranteed window table: the listing says tables and window seats can't be promised."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is the food good?",
+      "a": "53 of 64 recent guests talk about the food, almost all positively. One said it could have been hotter."
+     },
+     {
+      "q": "What if it rains?",
+      "a": "Guests say it works even in pouring rain: dinner and music are indoors."
+     },
+     {
+      "q": "Is there live music?",
+      "a": "Yes, violin and saxophone in the Grand Salon. 21 of 64 recent guests mention it."
+     },
+     {
+      "q": "Is there sightseeing commentary?",
+      "a": "No. An English-speaking host runs the evening, but there is no commentary: it is a dinner night, not a tour."
+     },
+     {
+      "q": "What should I bring?",
+      "a": "A passport or ID card along with your voucher."
+     }
+    ]
+   },
+   "price": {
+    "main": "€99",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€99"
+     },
+     {
+      "label": "Child",
+      "small": "4-17",
+      "price": "€99"
+     },
+     {
+      "label": "Under 4",
+      "price": "Free"
+     }
+    ],
+    "total": {
+     "label": "2 adults + 2 kids (4-17)",
+     "price": "€396"
+    },
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-premium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-button-river-diva-dinner&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": [
+     "<b>Pay nothing today</b>, pay closer to the date",
+     "<b>Free cancellation</b> up to 24 h before, full refund"
+    ],
+    "sublink": {
+     "url": "#item-5-river-diva-dinner",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-6",
+   "cats": [
+    "calm",
+    "nodrink",
+    "opendeck",
+    "heated",
+    "hour",
+    "under20"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "💶 #6 Best Budget",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "La Perla rooftop night cruise on the Danube in Budapest"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/night-cruises-2026/la-perla-rooftop-byob-01.webp"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "La Perla rooftop night cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/la-perla-rooftop-byob-02.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "La Perla rooftop night cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/la-perla-rooftop-byob-03.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "La Perla rooftop night cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/la-perla-rooftop-byob-04.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "La Perla rooftop night cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/la-perla-rooftop-byob-05.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "La Perla rooftop night cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/la-perla-rooftop-byob-06.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "La Perla rooftop night cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/la-perla-rooftop-byob-07.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "La Perla rooftop night cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/la-perla-rooftop-byob-08.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "La Perla rooftop night cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/la-perla-rooftop-byob-09.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "La Perla rooftop night cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/la-perla-rooftop-byob-10.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/night-cruises-2026/la-perla-rooftop-byob-01.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/la-perla-rooftop-byob-02.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/la-perla-rooftop-byob-03.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/la-perla-rooftop-byob-04.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/la-perla-rooftop-byob-05.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/la-perla-rooftop-byob-06.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/la-perla-rooftop-byob-07.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/la-perla-rooftop-byob-08.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/la-perla-rooftop-byob-09.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/la-perla-rooftop-byob-10.webp"
+     }
+    ]
+   },
+   "kicker": [
+    "La Perla",
+    "⏱️ 50 Mins",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Várkert+Bazár+Budapest+1013",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Várkert Bazár (Buda)"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-night-cruise-with-rooftop-seating-and-byob-t1032648/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-card-la-perla-rooftop-byob&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Night Cruise With Guaranteed Rooftop Seating &amp; Bring Your Own Drinks"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.51",
+     "score": "4.5",
+     "meta": "2.7k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.5",
+       "count": "(2.7k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-night-cruise-with-rooftop-seating-and-byob-t1032648/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-rating-la-perla-rooftop-byob&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "_nl": "\n"
+      },
+      {
+       "kind": "static",
+       "site": "Viator",
+       "score": "4.5",
+       "count": "(60+)",
+       "_nl": "\n"
+      },
+      {
+       "kind": "static",
+       "site": "Tripadvisor",
+       "score": "4.6",
+       "count": "(19)",
+       "_nl": "\n"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "5 sailings · 16:10–20:50",
+     "pop_html": "Sailings at <strong>16:10</strong> (sunset; floodlights come on only near the Parliament at the end), <strong>17:20</strong> (dusk, lights on), <strong>18:30</strong>, <strong>19:40</strong> and <strong>20:50</strong> (night). About 50 minutes.<span class=\"bpa-lang-note\"><b>📍 Várkert Bazár, Buda side:</b> Below the Castle on the Buda bank, the easy pick if you stay in Buda. Most other boats leave from the Pest bank, so check which side you are on.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "data": {
+      "langs": "en,es,he,pl,fr,de,it,cs,uk,ko"
+     },
+     "emoji": "🎧",
+     "label": "10-Language Audio",
+     "pop_html": "<strong>Audio languages:</strong> <span class=\"bpa-lang-names\">English, Spanish, Hebrew, Polish, French, German, Italian, Czech, Ukrainian, Korean</span><span class=\"bpa-lang-note\">Web-based guide on your own phone: ask the host for access at check-in and bring headphones.</span>"
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "Not for wheelchairs",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> not suitable for wheelchair users</span><span class=\"bpa-lang-note\">🚻 <b>Toilet on board:</b> <span class=\"cd-yes\">✓</span></span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> one price for every age; pets allowed</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍾",
+     "label": "Bring Your Own Drinks",
+     "pop_html": "<strong>No drink included and no bar on board: bring your own drinks and snacks.</strong> Wine, beer or alcohol-free, your choice, with no bar prices or queues."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🧺",
+     "label": "Relaxed BYOB",
+     "pop_html": "<strong>A small boat with at most 150 guests, and everyone gets a rooftop seat.</strong> No bar on board: bring your own drinks, alcohol-free included. The rooftop gets cold in November, so bring layers; the heated cabin is open to all."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🪑",
+     "label": "Rooftop seat for all",
+     "pop_html": "<strong>Every guest gets a seat on the open rooftop; at most 150 on board.</strong> The heated cabin downstairs is open to everyone if it rains or gets cold."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🐶",
+     "label": "Pets welcome",
+     "pop_html": "<strong>Pets are allowed on board.</strong> One price for every age."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": [
+       "16:10",
+       "17:20",
+       "18:30",
+       "19:40",
+       "20:50"
+      ]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": [
+       "16:10",
+       "20:50"
+      ]
+     }
+    ],
+    "dur": "50"
+   },
+   "best_for": {
+    "pick_html": "for one of the cheapest lit-up loops in this list, with a guaranteed rooftop seat and your own drinks.",
+    "skip_html": "if you want a bar on board or step-free access: there is no bar, and it is not suitable for wheelchair users."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Good for the lights?",
+      "a": "Yes: 18 of 64 recent guests mention the lit-up city, the most of any cruise here. On the 16:10 sailing the lights come on only near the end."
+     },
+     {
+      "q": "What can I bring?",
+      "a": "Your own drinks and snacks, alcohol-free or not. There is no bar on board."
+     },
+     {
+      "q": "Will the rooftop be cold?",
+      "a": "In November, yes: 14 of 64 recent guests mention it. The heated cabin downstairs is open to everyone."
+     },
+     {
+      "q": "Do I need earphones?",
+      "a": "Yes. The audio guide runs on your own phone."
+     },
+     {
+      "q": "Is it a fancy boat?",
+      "a": "No. A few guests call it basic; 13 of 64 say it is good value."
+     }
+    ]
+   },
+   "price": {
+    "main": "€11.40",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€11.40"
+     },
+     {
+      "label": "Child",
+      "small": "every age",
+      "price": "€11.40"
+     }
+    ],
+    "total": {
+     "label": "2 adults + 2 kids",
+     "price": "€45.60"
+    },
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-night-cruise-with-rooftop-seating-and-byob-t1032648/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-button-la-perla-rooftop-byob&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": [
+     "<b>Pay nothing today</b>, pay closer to the date",
+     "<b>Free cancellation</b> up to 24 h before, full refund"
+    ],
+    "sublink": {
+     "url": "#item-6-la-perla-rooftop-byob",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-7",
+   "cats": [
+    "tested",
+    "dinner",
+    "opendeck"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🎹 #7 Best Dinner Value",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Silverline 4-Course Dinner Cruise"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41e56d6fe9d92b22c15ed_best-budapest-dinner-cruises-silverline-113.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline 4-Course Dinner Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4cb924ed0b010c12d6_best-budapest-dinner-cruises-silverline-43.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline 4-Course Dinner Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4cc77b0bf60d90e732_best-budapest-dinner-cruises-silverline-31.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline 4-Course Dinner Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4cc07e68f39d183c3d_best-budapest-dinner-cruises-silverline-96.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline 4-Course Dinner Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4ce41432b98e5ea0d5_best-budapest-dinner-cruises-silverline-90.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline 4-Course Dinner Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c7d21d3f5803a13ec_best-budapest-dinner-cruises-silverline-161.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline 4-Course Dinner Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c49f552630c60894a_best-budapest-dinner-cruises-silverline-102.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline 4-Course Dinner Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4b17cb3aefbd5b6237_best-budapest-dinner-cruises-silverline-98.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline 4-Course Dinner Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c4eb37345f0ae26a5_best-budapest-dinner-cruises-silverline-81.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline 4-Course Dinner Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c853fe56d60faa043_best-budapest-dinner-cruises-silverline-79.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline 4-Course Dinner Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c76d60be8879c4c56_best-budapest-dinner-cruises-silverline-68.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline 4-Course Dinner Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4ca4cf389c00f1d86d_best-budapest-dinner-cruises-silverline-7.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41e56d6fe9d92b22c15ed_best-budapest-dinner-cruises-silverline-113.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4cb924ed0b010c12d6_best-budapest-dinner-cruises-silverline-43.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4cc77b0bf60d90e732_best-budapest-dinner-cruises-silverline-31.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4cc07e68f39d183c3d_best-budapest-dinner-cruises-silverline-96.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4ce41432b98e5ea0d5_best-budapest-dinner-cruises-silverline-90.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c7d21d3f5803a13ec_best-budapest-dinner-cruises-silverline-161.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c49f552630c60894a_best-budapest-dinner-cruises-silverline-102.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4b17cb3aefbd5b6237_best-budapest-dinner-cruises-silverline-98.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c4eb37345f0ae26a5_best-budapest-dinner-cruises-silverline-81.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c853fe56d60faa043_best-budapest-dinner-cruises-silverline-79.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4c76d60be8879c4c56_best-budapest-dinner-cruises-silverline-68.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41f4ca4cf389c00f1d86d_best-budapest-dinner-cruises-silverline-7.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Silverline Cruises",
+    "⏱️ 2 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Silverline+Cruises+Dock+11+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Dock 11 (Elizabeth Bridge)"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/dinner-lights-budapest-evening-cruise-t54081/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-card-silverline-dinner&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "4-Course Dinner Cruise: No Show, Folk &amp; Operetta or Piano Battle"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.54",
+     "score": "4.5",
+     "meta": "2.5k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.4",
+       "count": "(1.4k+)",
+       "_nl": "\n",
+       "url": "https://www.getyourguide.com/budapest-l29/dinner-lights-budapest-evening-cruise-t54081/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-rating-silverline-dinner&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Viator",
+       "score": "4.7",
+       "count": "(570+)",
+       "_nl": "\n",
+       "url": "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=best_night_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2F6-course-Dinner-Cruise-with-Operetta-and-Folk-Show%2Fd499-15186P36",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.7",
+       "count": "(480+)",
+       "_nl": "\n",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_night_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FAttractionProductReview-g274887-d19404916-Dinner_Lights_Budapest_Dinner_Cruise-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "Personally tested",
+     "pop_html": "<strong>I rode this cruise myself.</strong> The photos and video in the review are my own.<span class=\"bpa-lang-note\">What I checked: deck views, commentary, drinks and value for money. <a href=\"#item-7-silverline-dinner\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "19:00 · 2 h",
+     "pop_html": "Departs at 19:00. About 2 hours.<span class=\"bpa-lang-note\"><b>📍 Dock 11, Elizabeth Bridge:</b> Pest side next to Elizabeth Bridge, a short walk from Ferenciek tere metro. Same boat and menu for all 3 show options.</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🎭",
+     "label": "3 show options",
+     "pop_html": "<strong>Dinner & Lights (no show, background music) from €77, or the Folk & Operetta Show with singers and folk dancers from €91.</strong> Same boat, same 4-course menu. Silverline also lists a Live Piano Show."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "No wheelchair access",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> no wheelchair access</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> infant tickets don't include dinner (order on board); alcohol only from 18; service dogs only</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🥂",
+     "label": "Welcome drink",
+     "pop_html": "<strong>1 welcome drink included: Prosecco on Dinner & Lights, champagne on the folk show.</strong> Other drinks are paid on board, and you can't bring your own. 2 of 31 recent guests wish more were included."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🕯️",
+     "label": "Calm, sunset start",
+     "pop_html": "<strong>A quiet dinner with background music on Dinner & Lights, timed to start around sunset.</strong> 18 of 31 recent guests praise the staff, many naming their waiter."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍽️",
+     "label": "4-course menu",
+     "pop_html": "<strong>Panzanella with pear and burrata, then a choice of 2 soups, 4 mains (walnut cod, pork tenderloin, curry lamb chops or a vegetarian sweet potato boat) and 3 desserts.</strong> Same menu on every option."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🌱",
+     "label": "Veg, GF & LF",
+     "pop_html": "<strong>A vegetarian main is on the menu, and most dishes are made with gluten-free and/or lactose-free ingredients.</strong> No allergen-free kitchen; tell Silverline about special diets in advance."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": [
+       "19:00"
+      ]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": [
+       "19:00"
+      ]
+     }
+    ],
+    "dur": "120"
+   },
+   "best_for": {
+    "pick_html": "for a good-value 4-course dinner, with no show, a folk and operetta show, or a piano battle.",
+    "skip_html": "if you want a window table: it costs extra, and the €77 option has background music only."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Which option should I book?",
+      "a": "Dinner &amp; Lights (€77) for a quiet dinner and the views, or the Folk &amp; Operetta Show (€91) for singers and folk dancers. Same boat, same menu."
+     },
+     {
+      "q": "Are drinks included?",
+      "a": "Only the welcome drink. 2 of 31 recent guests wish more were included at this price."
+     },
+     {
+      "q": "When should I arrive?",
+      "a": "Boarding opens 45 minutes before the 19:00 departure. Arrive at least 30 minutes early."
+     },
+     {
+      "q": "Is there a vegetarian or gluten-free option?",
+      "a": "Yes. A vegetarian main (a sweet potato boat) is on the menu, and most dishes are made with gluten-free and/or lactose-free ingredients. There is no allergen-free kitchen, so tell Silverline about special diets in advance."
+     },
+     {
+      "q": "Can kids come on the Silverline dinner cruise?",
+      "a": "Yes. Under 4 ride free; from 4 they pay the adult price (€77). Infant tickets don't include dinner (order on board), and alcohol is served only from 18."
+     }
+    ]
+   },
+   "price": {
+    "main": "€77",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€77"
+     },
+     {
+      "label": "Child",
+      "small": "4 and over",
+      "price": "€77"
+     },
+     {
+      "label": "Under 4",
+      "price": "Free"
+     }
+    ],
+    "total": {
+     "label": "2 adults + 2 kids (4+)",
+     "price": "€308"
+    },
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/dinner-lights-budapest-evening-cruise-t54081/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-button-silverline-dinner&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": [
+     "<b>Pay nothing today</b>, pay closer to the date",
+     "<b>Free cancellation</b> up to 24 h before, full refund"
+    ],
+    "sublink": {
+     "url": "#item-7-silverline-dinner",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-8",
+   "cats": [
+    "unlimited",
+    "party",
+    "opendeck",
+    "heated",
+    "hour",
+    "under20"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🌇 #8 Best Rooftop Prosecco",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Floating Lotus unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-01.webp"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Floating Lotus unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-02.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Floating Lotus unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-03.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Floating Lotus unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-04.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Floating Lotus unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-05.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Floating Lotus unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-06.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Floating Lotus unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-07.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Floating Lotus unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-08.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Floating Lotus unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-09.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Floating Lotus unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-10.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Floating Lotus unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-11.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Floating Lotus unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-12.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-01.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-02.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-03.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-04.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-05.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-06.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-07.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-08.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-09.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-10.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-11.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/floating-lotus-unlimited-prosecco-12.webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Floating Lotus",
+    "⏱️ 75 Mins",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Floating+Lotus+Cruises+Petőfi+tér+9+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Petőfi tér 9"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-lotus-cruise-with-unlimited-aperol-and-prosecco-t1008035/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-card-floating-lotus-prosecco&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Unlimited Prosecco &amp; Aperol Cruise With Open Rooftop Terrace"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.59",
+     "score": "4.6",
+     "meta": "1.7k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.6",
+       "count": "(1.7k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-lotus-cruise-with-unlimited-aperol-and-prosecco-t1008035/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-rating-floating-lotus-prosecco&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "18:00 · 19:30 · 21:00",
+     "pop_html": "Departures at 18:00, 19:30 and 21:00. About 75 minutes.<span class=\"bpa-lang-note\"><b>📍 Petőfi tér 9:</b> Pest bank between Elizabeth Bridge and Vigadó tér, an easy walk from Váci utca. Arrive 15 minutes early: boarding closes 5 minutes before departure.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "data": {
+      "langs": "en"
+     },
+     "emoji": "🎧",
+     "label": "English audio",
+     "pop_html": "<strong>English audio commentary</strong> via QR code on your own phone; bring headphones.<span class=\"bpa-lang-note\">From the listing.</span>"
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "Not for wheelchairs",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> not wheelchair accessible</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> €25 for 7 and under, adult fare from 8</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍾",
+     "label": "Unlimited drinks",
+     "pop_html": "<strong>Included:</strong> Prosecco, Aperol Spritz, Hugo Spritz, selected Hungarian wines, craft beer, Heineken, soft drinks, homemade lemonade and water.<span class=\"bpa-lang-note\">Premium spirits and cocktails are not included. From the listing.</span>"
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🎶",
+     "label": "Lively rooftop",
+     "pop_html": "<strong>Guests keep mentioning the music and the friendly crew.</strong> Everyone has a seat on the heated lower deck; rooftop seats are first come, first served. Soft drinks and homemade lemonade are included."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": [
+       "18:00",
+       "19:30",
+       "21:00"
+      ]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": [
+       "18:00",
+       "19:30",
+       "21:00"
+      ]
+     }
+    ],
+    "dur": "75"
+   },
+   "best_for": {
+    "pick_html": "for unlimited Prosecco and Aperol on the biggest open rooftop terrace of any boat in this list.",
+    "skip_html": "if you need a guaranteed seat upstairs: rooftop seating is first come, first served."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is a rooftop seat guaranteed on Floating Lotus?",
+      "a": "No. Everyone has a seat on the heated lower deck; rooftop seats are first come, first served."
+     },
+     {
+      "q": "Can kids come on Floating Lotus?",
+      "a": "Yes. Children 7 and under pay a fixed €25; from 8 it is the adult fare. Soft drinks and lemonade are included."
+     },
+     {
+      "q": "Which drinks are unlimited on Floating Lotus?",
+      "a": "Prosecco, Aperol Spritz, Hugo Spritz, selected Hungarian wines, craft beer, Heineken, soft drinks, homemade lemonade and water. Premium spirits and cocktails are not included."
+     },
+     {
+      "q": "Is there commentary on Floating Lotus?",
+      "a": "Yes, English audio commentary through a QR code on your own phone, so bring headphones."
+     },
+     {
+      "q": "When should I arrive for Floating Lotus?",
+      "a": "15 minutes early at Petőfi tér 9: boarding closes 5 minutes before each departure (18:00, 19:30 and 21:00)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€17.50",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€17.50"
+     },
+     {
+      "label": "Child",
+      "small": "7 and under",
+      "price": "€25"
+     },
+     {
+      "label": "Age 8+",
+      "price": "Adult fare"
+     }
+    ],
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-lotus-cruise-with-unlimited-aperol-and-prosecco-t1008035/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-button-floating-lotus-prosecco&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": [
+     "<b>Pay nothing today</b>, pay closer to the date",
+     "<b>Free cancellation</b> up to 24 h before, full refund"
+    ],
+    "sublink": {
+     "url": "#item-8-floating-lotus-prosecco",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-9",
+   "cats": [
+    "unlimited",
+    "party",
+    "hour"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🍾 #9 Best Pre-Party Prosecco",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Silverline unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/night-cruises-2026/silverline-unlimited-prosecco-02.webp"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/silverline-unlimited-prosecco-01.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/silverline-unlimited-prosecco-06.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/silverline-unlimited-prosecco-03.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/silverline-unlimited-prosecco-05.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/silverline-unlimited-prosecco-04.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/silverline-unlimited-prosecco-07.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/silverline-unlimited-prosecco-08.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/silverline-unlimited-prosecco-09.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/silverline-unlimited-prosecco-11.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silverline unlimited prosecco cruise on the Danube in Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/night-cruises-2026/silverline-unlimited-prosecco-10.webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/night-cruises-2026/silverline-unlimited-prosecco-02.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/silverline-unlimited-prosecco-01.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/silverline-unlimited-prosecco-06.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/silverline-unlimited-prosecco-03.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/silverline-unlimited-prosecco-05.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/silverline-unlimited-prosecco-04.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/silverline-unlimited-prosecco-07.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/silverline-unlimited-prosecco-08.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/silverline-unlimited-prosecco-09.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/silverline-unlimited-prosecco-11.webp"
+     },
+     {
+      "src": "/assets/night-cruises-2026/silverline-unlimited-prosecco-10.webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Silverline Cruises",
+    "⏱️ 60 Mins",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Silverline+Cruises+Dock+11+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Dock 11 (Elizabeth Bridge)"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-sunset-cocktail-cruise-t408167/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-card-silverline-unlimited-prosecco&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Unlimited Prosecco Cruise From Elizabeth Bridge"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.52",
+     "score": "4.5",
+     "meta": "1.2k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.5",
+       "count": "(1k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-sunset-cocktail-cruise-t408167/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-rating-silverline-unlimited-prosecco&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Viator",
+       "score": "4.4",
+       "count": "(120+)",
+       "url": "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=best_night_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FGin-Tonic-Cocktail-Lounge-Cruise%2Fd499-15186P48",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.7",
+       "count": "(80+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_night_cruises_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FAttractionProductReview-g274887-d25564160-Unlimited_Prosecco_Wine_Cruise_Budapest-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "16:30 · 19:30 · 21:00",
+     "pop_html": "Departures at 16:30, 19:30 and 21:00. About 1 hour.<span class=\"bpa-lang-note\"><b>📍 Dock 11, Elizabeth Bridge:</b> Pest side next to Elizabeth Bridge, a short walk from Ferenciek tere metro. The upper deck is the spot for photos of the lit-up Parliament.</span>"
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "Adults only (18+)",
+     "pop_html": "<span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> under-18s not allowed; not for pregnant guests</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍾",
+     "label": "Unlimited Prosecco",
+     "pop_html": "<strong>Unlimited prosecco for the whole 60 minutes.</strong> Only prosecco is unlimited; snacks are for sale, and you can&#x27;t bring your own food or drinks."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🍾",
+     "label": "Pre-party",
+     "pop_html": "<strong>Party songs from the loudspeakers, pitched as a warm-up before a night out.</strong> Adults only: under-18s are not allowed, and it is not for pregnant guests."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": [
+       "16:30",
+       "19:30",
+       "21:00"
+      ]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": [
+       "16:30",
+       "18:00",
+       "19:30",
+       "21:00"
+      ]
+     }
+    ],
+    "dur": "60"
+   },
+   "best_for": {
+    "pick_html": "for an hour of unlimited prosecco from a central dock before a night out.",
+    "skip_html": "with kids or if you want more than prosecco: it is 18+, and other drinks are not part of the deal."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Can kids come on the Silverline prosecco cruise?",
+      "a": "No. It is 18+ only and not for pregnant guests."
+     },
+     {
+      "q": "Is it only prosecco on the Silverline prosecco cruise?",
+      "a": "Yes. Prosecco is the one unlimited drink; snacks are for sale and you can&#x27;t bring your own."
+     },
+     {
+      "q": "How long is the Silverline prosecco cruise?",
+      "a": "About 1 hour, with unlimited prosecco for the whole 60 minutes. It leaves at 16:30, 19:30 and 21:00 from Dock 11 at Elizabeth Bridge."
+     },
+     {
+      "q": "Where is the best spot for Parliament photos?",
+      "a": "The upper deck: it is the spot for photos of the lit-up Parliament."
+     },
+     {
+      "q": "Is the Silverline prosecco cruise a party?",
+      "a": "A warm-up: party songs from the loudspeakers, pitched as a pre-party before a night out. Adults only (18+)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€27",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€27"
+     },
+     {
+      "label": "Under 18",
+      "price": "Not allowed"
+     }
+    ],
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-sunset-cocktail-cruise-t408167/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-night-cruises-button-silverline-unlimited-prosecco&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": [
+     "<b>Pay nothing today</b>, pay closer to the date",
+     "<b>Free cancellation</b> up to 24 h before, full refund"
+    ],
+    "sublink": {
+     "url": "#item-9-silverline-unlimited-prosecco",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-10",
+   "cats": [
+    "tested",
+    "calm",
+    "nodrink",
+    "heated",
+    "hour",
+    "under20"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "⚡ #10 Central No-Frills",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "No Frills Budget Sightseeing Night Cruise"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ef34962db384577b89c4d5_Silverline%20Sightseeing%20Cruise%20%20(8).webp"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "No Frills Budget Sightseeing Night Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ef3285d01ceeb33c48c392_Silverline%20sightseeing%20cruise%20(5).webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "No Frills Budget Sightseeing Night Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ef32364cb5fd729f72343a_Silverline%20sightseeing%20cruise%20(11).webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "No Frills Budget Sightseeing Night Cruise"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ef321d5eb0ffac9e51c081_Silverline%20sightseeing%20cruise%20(3).webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "No Frills Budget Sightseeing Night Cruise"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "data-src",
+       "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ef32638163f97d5da3ac80_Silverline%20sightseeing%20cruise%20(7).webp"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ef34962db384577b89c4d5_Silverline%20Sightseeing%20Cruise%20%20(8).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ef3285d01ceeb33c48c392_Silverline%20sightseeing%20cruise%20(5).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ef32364cb5fd729f72343a_Silverline%20sightseeing%20cruise%20(11).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ef321d5eb0ffac9e51c081_Silverline%20sightseeing%20cruise%20(3).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ef32638163f97d5da3ac80_Silverline%20sightseeing%20cruise%20(7).webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Silverline Cruises",
+    "⏱️ 60 Mins",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Silverline+Cruises+Dock+11+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Dock 11 (Elizabeth Bridge)"
+    }
+   ],
+   "title": {
+    "url": "https://budapestrivercruise.eu/product/budapest-sightseeing-cruises/?code=bpadventures",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "No-Frills Evening Sightseeing Cruise From Elizabeth Bridge"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "3.8",
+     "score": "3.8",
+     "meta": "400+ reviews · 1 site",
+     "heading": "Rating on Viator",
+     "sites": [
+      {
+       "kind": "static",
+       "site": "Viator",
+       "score": "3.8",
+       "count": "(400+)"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "Personally tested",
+     "pop_html": "<strong>I rode this cruise myself.</strong> Most of the photos in the review are my own.<span class=\"bpa-lang-note\">What I checked: deck views, commentary, drinks and value for money. <a href=\"#item-10-silverline-sightseeing\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "Evening · 16:30–21:15",
+     "pop_html": "Sailings at 11:00, 14:00, 15:30, 16:30, 17:00, 17:20, 18:20, 18:40, 19:40, 20:00, 21:00 and 21:15. 60 minutes.<span class=\"bpa-lang-note\"><b>📍 Dock 11, Elizabeth Bridge:</b> Pest side next to Elizabeth Bridge, a short walk from Ferenciek tere metro. Comfortable indoor meeting point.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎧",
+     "label": "15-Language Audio",
+     "pop_html": "<strong>Audio guide in 15 languages.</strong><span class=\"bpa-lang-note\">Silverline does not publish the list of languages.</span>"
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "No wheelchair access",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> the boat has no wheelchair access</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> free under 4, full price from 4; no dogs except service dogs</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🥤",
+     "label": "No drink included",
+     "pop_html": "<strong>No drink in the ticket price: even water costs extra.</strong> There is a bar on board."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🙂",
+     "label": "No-frills sightseeing",
+     "pop_html": "<strong>A plain sightseeing hour with no drink included.</strong> Heated main deck. The upper deck costs €5 more and has a roof with columns that block part of the view. Infants up to 3 ride free."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "⬆️",
+     "label": "Upper Deck +€5",
+     "pop_html": "<strong>The panoramic upper deck costs €5 more.</strong> It has a roof with columns that block part of the view. For photos, the front seats and the open-air section are better."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🔥",
+     "label": "Heated main deck",
+     "pop_html": "<strong>The main deck is heated.</strong> 14 sailings a day, so it is easy to fit in."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": [
+       "16:30",
+       "17:00",
+       "17:20",
+       "18:20",
+       "18:40",
+       "19:40",
+       "20:00",
+       "21:00",
+       "21:15"
+      ]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": [
+       "16:30",
+       "17:00",
+       "17:20",
+       "18:20",
+       "18:40",
+       "19:40",
+       "20:00",
+       "21:00",
+       "21:15"
+      ]
+     }
+    ],
+    "dur": "60"
+   },
+   "best_for": {
+    "pick_html": "for a cheap, central evening loop with frequent departures right by Elizabeth Bridge.",
+    "skip_html": "if you want a drink included or the best reviews: drinks cost extra, and it rates 3.8 on Viator."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is a drink included?",
+      "a": "No. Even water costs extra at the bar on board."
+     },
+     {
+      "q": "Is the upper deck worth €5 more?",
+      "a": "It has a roof with columns that block part of the view. For photos, the front seats and the open-air section are better."
+     },
+     {
+      "q": "Is it warm inside?",
+      "a": "Yes, the main deck is heated."
+     },
+     {
+      "q": "Do kids pay?",
+      "a": "Under-4s ride free; full price from 4."
+     },
+     {
+      "q": "Can I book on the day?",
+      "a": "Yes, same-day booking works, and with 14 sailings a day from 11:00 to 21:15 it is easy to fit in. Evening slots in December can sell out, though."
+     }
+    ]
+   },
+   "price": {
+    "main": "€12",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€12"
+     },
+     {
+      "label": "Child",
+      "small": "4 and over",
+      "price": "€12"
+     },
+     {
+      "label": "Infant",
+      "small": "0-3",
+      "price": "Free"
+     }
+    ],
+    "total": {
+     "label": "2 adults + 2 kids (4+)",
+     "price": "€48"
+    },
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://budapestrivercruise.eu/product/budapest-sightseeing-cruises/?code=bpadventures",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Silverline Cruises",
+    "trust": [
+     "<b>Free date change</b> up to 24 h before",
+     "<b>Free cancellation</b> up to 24 h before, full refund"
+    ],
+    "sublink": {
+     "url": "#item-10-silverline-sightseeing",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}
