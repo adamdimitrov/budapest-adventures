@@ -54,7 +54,7 @@
     while(el && el!==document.body){ var p=getComputedStyle(el).position; if(p==='fixed'||p==='sticky'){ h=el.getBoundingClientRect().bottom; break; } el=el.parentElement; }
     document.documentElement.style.setProperty('--cd-hdr',(h>0&&h<160?h:64)+'px');
   }
-  hdr(); window.addEventListener('resize',hdr);
+  window.addEventListener('resize',hdr);
   // show the mini-bar only once the filter box has scrolled away and while the deck is on screen
   var box=document.getElementById('cd-filters'), mini=document.querySelector('.cd-fmini');
   var deck=document.getElementById('ltt-cards-deck'), ticking=false;
@@ -69,6 +69,8 @@
   }
   window.addEventListener('scroll',function(){ if(!ticking){ ticking=true; requestAnimationFrame(upd); } },{passive:true});
   window.addEventListener('resize',upd);
-  upd();
+  // hidden until scrolled past the filters: inert now (a write only), measure in the next frame
+  if(mini && !mini.classList.contains('is-on')) mini.inert=true;
+  requestAnimationFrame(function(){ hdr(); upd(); });
   apply();
 })();
