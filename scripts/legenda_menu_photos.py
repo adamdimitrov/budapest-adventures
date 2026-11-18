@@ -141,7 +141,7 @@ if __name__ == "__main__":
         new = process(p)
         cur = open(p, encoding="utf-8").read()
         if check:
-            n = cur.count('class="dc-dish-photo"')
+            n = cur.count(f'class="dc-dish-photo" src="{A}')
             if n != 2 * N:
                 print("missing photos:", p, n); bad += 1
         elif new != cur:
