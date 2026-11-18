@@ -105,14 +105,13 @@ for marker in ('id="dc-menu-legenda"', '<span class="ltt-bento-group-title">🍽
     s = s[:a] + addpics(s[a:b]) + s[b:]
 
 CSS = """<style id="legenda-menu-photos-test">
-.dc-pics{display:flex;gap:8px;margin-top:8px;overflow-x:auto;scrollbar-width:none}
-.dc-pics::-webkit-scrollbar{display:none}
-.dc-pic{flex:0 0 64px;border:0;background:none;padding:0;cursor:pointer;text-align:center;font:inherit}
-.dc-pic img{display:block;width:64px;height:64px;border-radius:10px;object-fit:cover;border:1px solid #eadfca;background:#fff}
+.dc-pics{display:grid;grid-template-columns:repeat(5,minmax(0,64px));gap:8px;margin-top:8px}
+.dc-pic{min-width:0;border:0;background:none;padding:0;cursor:pointer;text-align:center;font:inherit}
+.dc-pic img{display:block;width:100%;height:auto;aspect-ratio:1;border-radius:10px;object-fit:cover;border:1px solid #eadfca;background:#fff}
 .dc-pic span{display:block;font-size:11px;color:#6b645c;margin-top:3px;letter-spacing:.02em}
 .dc-pic:hover img{border-color:#b88214}
 .dc-pic:hover span{color:#92400e}
-.dc-pic-more b{display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:10px;border:1px dashed #d9c79e;background:#fdf3d8;color:#92400e;font-size:15px}
+.dc-pic-more b{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:1;box-sizing:border-box;border-radius:10px;border:1px dashed #d9c79e;background:#fdf3d8;color:#92400e;font-size:15px}
 .dc-carte .dish .dc-dish-img{display:block;width:52px;height:52px;border-radius:50%;object-fit:cover;margin:10px auto 4px;border:1px solid #eadfca;background:#fff;cursor:zoom-in;transition:transform .2s}
 .dc-carte .dish .dc-dish-img.big{width:min(300px,100%);height:auto;border-radius:10px;cursor:zoom-out}
 .dc-wall .dc-carte .dish .dc-dish-img{width:40px;height:40px}
