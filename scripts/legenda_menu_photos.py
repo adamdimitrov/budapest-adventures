@@ -85,7 +85,7 @@ def do_carte(blk, path):
             img = ""
             if photo:
                 name = html.unescape(re.sub(r"<span.*", "", d.group(3), flags=re.S)).strip()
-                img = (f'<img class="dc-dish-photo" src="{A}{photo}-card.webp" alt="Legenda: {html.escape(name, quote=True)}" '
+                img = (f'<img class="dc-dish-photo" src="{A}{photo}-menu.webp" alt="Legenda: {html.escape(name, quote=True)}" '
                        f'width="600" height="450" loading="lazy" decoding="async">')
             out.append(f'<div class="dish{d.group(1)}" data-diet="{d.group(2)}">{img}{d.group(3)}</div>')
             last = d.end()
@@ -119,7 +119,7 @@ def process(path):
     end = s.index("</div>", dna) + 6
     keys = ("scallop", "beef-tartare", "duck-breast", "panna-cotta")
     more = f' class="more" data-more="+{N - 3}"'
-    thumbs = "".join(f'<span{more if i == 3 else ""}><img src="{A}{k}-tile.webp" alt="" width="240" height="240" loading="lazy" decoding="async"></span>'
+    thumbs = "".join(f'<span{more if i == 3 else ""}><img src="{A}{k}-thumb.webp" alt="" width="240" height="240" loading="lazy" decoding="async"></span>'
                      for i, k in enumerate(keys))
     teaser = (f'<button class="dc-food-photos" data-dc-menu="legenda" aria-haspopup="dialog" type="button">'
               f'<span class="th" aria-hidden="true">{thumbs}</span><span class="tx"><span>📷 {txt}</span> <b>{label} ↗</b></span></button>')
