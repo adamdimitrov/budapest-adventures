@@ -32,6 +32,7 @@ Change the kit: edit this repo, bump `VERSION`, PR, merge, tag `vX.Y.Z`, then ru
 | `checks/check_lazy_images.py` | Photos: loaders, first slide, missing files, hotlinks (`--fix` upgrades old slider runtimes) |
 | `checks/check_archive.py` | Nothing (script, workflow, skill, settings) still calls a script in `scripts/archive/` |
 | `checks/check_listicle_layout.py` | Listicle pages measured in a browser at phone and desktop width: rank tags and booking buttons fit on one line (tag not shrunk below 10 px), no sideways overflow. Skipped without Node + Playwright |
+| `checks/check_gallery_clip.py` | No CSS rule unclips a card photo gallery (.cd-gal, thumbnails, slider) when a popover opens: a `*{overflow:visible}` escape hatch must add `:not(.cd-gal):not(.cd-gal *)` |
 | `checks/check_filters.py` | Filter pills: `data-group` on every non-"All" pill, only "All" active |
 | `checks/sitecfg.py`, `checks/kittree.py` | Shared helpers |
 | `ci/layout-check.yml` | The CI workflow every site uses |
