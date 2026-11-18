@@ -119,7 +119,7 @@ def process(path):
     end = s.index("</div>", dna) + 6
     keys = ("scallop", "beef-tartare", "duck-breast", "panna-cotta")
     more = f' class="more" data-more="+{N - 3}"'
-    thumbs = "".join(f'<span{more if i == 3 else ""}><img src="{A}{k}-thumb.webp" alt="" width="240" height="240" loading="lazy" decoding="async"></span>'
+    thumbs = "".join(f'<span{more if i == 3 else ""}><img src="{A}{k}-thumb2.webp" alt="" width="240" height="240" loading="lazy" decoding="async"></span>'
                      for i, k in enumerate(keys))
     teaser = (f'<button class="dc-food-photos" data-dc-menu="legenda" aria-haspopup="dialog" type="button">'
               f'<span class="th" aria-hidden="true">{thumbs}</span><span class="tx"><span>📷 {txt}</span> <b>{label} ↗</b></span></button>')
