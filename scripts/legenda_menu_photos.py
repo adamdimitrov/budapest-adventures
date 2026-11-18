@@ -85,7 +85,7 @@ def do_carte(blk, path):
             img = ""
             if photo:
                 name = html.unescape(re.sub(r"<span.*", "", d.group(3), flags=re.S)).strip()
-                img = (f'<img class="dc-dish-photo" src="{A}{photo}-menu.webp" alt="Legenda: {html.escape(name, quote=True)}" '
+                img = (f'<img class="dc-dish-photo" src="{A}{photo}-plate.webp" alt="Legenda: {html.escape(name, quote=True)}" '
                        f'width="600" height="450" loading="lazy" decoding="async">')
             out.append(f'<div class="dish{d.group(1)}" data-diet="{d.group(2)}">{img}{d.group(3)}</div>')
             last = d.end()
