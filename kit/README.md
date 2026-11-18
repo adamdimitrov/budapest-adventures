@@ -35,6 +35,7 @@ Change the kit: edit this repo, bump `VERSION`, PR, merge, tag `vX.Y.Z`, then ru
 | `checks/sitecfg.py`, `checks/kittree.py` | Shared helpers |
 | `ci/layout-check.yml` | The CI workflow every site uses |
 | `runtime/site-runtime.js` | Shared front-end runtime (sliders, filters, TOC, sticky bar, lazy photos), served as `/js/site-runtime.js?v=<hash>` on sites with `"runtime": {"shared": true}` |
+| `runtime/listicle/i18n/<lang>.json` | Per-language strings of the listicle design: template strings (`ui`), shared JS strings (`js`, written into language pages as `<script type="application/json" id="listicle-ui">`; English pages have none and keep the English defaults), phrases many cards repeat (`text`) |
 | `runtime/listicle/`, `runtime/listicle.py` | Shared listicle card design (river/dinner cruise template): CSS and JS served as `/css/listicle-*.css`, `/js/listicle-*.js?v=<hash>` on the pages listed in site.json `listicle.pages`; `migrate` swaps byte-identical inline copies for the files |
 | `runtime/runtime.py` | `migrate`: move a site's pages from their inline runtime to the shared file (only byte-identical copies); `publish`: used by update.py |
 | `scripts/*.py` | Shared site scripts (see below) |
@@ -67,7 +68,7 @@ A site that still needs its own version of a script lists it in `site.json` as
 | `sync_layout.py` | Header, footer, active menu item and language switcher from the master pages, search index, affiliate rel; settings in the site's `scripts/layout_config.json` |
 | `slider_photo_order.py` | Applies the card photo orders in the site's `scripts/slider_photo_order_data.py` to every language version |
 | `fix_affiliate_rel.py` | Every affiliate link carries `rel="nofollow sponsored noopener"`; settings under `affiliate` in site.json |
-| `listicle.py` | Listicle cards (`bpa-card`, river/dinner cruise design) as data: `extract <page>` writes `data/listicles/<slug>.json`, `build <page>` renders the cards back into the page (only the card region), `stats <page>` shows structured vs raw. Test: `python3 tests/test_listicle_roundtrip.py --site ../budapest-adventures` (extract -> build must be byte-identical) |
+| `listicle.py` | Listicle cards (`bpa-card`, river/dinner cruise design) as data: `extract <page>` writes `data/listicles/<slug>.json`, `build <page>` renders the cards back into the page (only the card region), `stats <page>` shows structured vs raw. Test: `python3 tests/test_listicle_roundtrip.py --site ../budapest-adventures` (extract -> build must be byte-identical). Language versions: `build-lang <english-page> <lang> [--check]` renders the language page's cards (the page its hreflang link names) from the ENGLISH card data plus `data/listicles/i18n/<slug>/<lang>.json` (text keyed by the English fragment, `urls` for localized links) and the kit table `runtime/listicle/i18n/<lang>.json` (template and JS strings, common phrases); `missing <english-page> <lang> [--todo=FILE] [--prune]` lists what is untranslated. Test: `python3 tests/test_listicle_i18n.py` |
 
 ## site.json
 

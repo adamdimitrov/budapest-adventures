@@ -44,7 +44,19 @@ JSON conventions:
 - anything not modelled yet is kept as `raw` / `extras_after_<field>` HTML at its exact
   position, so extract -> build is byte-identical.
 
+Language versions (see "language versions" below for the files):
+  build-lang <english-page> <lang>   the language page (its hreflang link on the English page) gets the
+                                     English cards with text from data/listicles/i18n/<slug>/<lang>.json
+                                     and the kit table runtime/listicle/i18n/<lang>.json; facts, photos
+                                     and links come from English. Refuses while strings are missing
+                                     (--allow-missing builds them in English); --check only compares;
+                                     --page=FILE overrides the target page.
+  missing <english-page> <lang>      untranslated strings, numbers carried over, link/markup differences,
+                                     unused entries; --todo=FILE writes the untranslated strings as
+                                     {"english": ""}; --prune drops unused entries and sorts the file.
+
 Usage: python3 scripts/listicle.py extract|build|stats <page.html> [--data FILE] [--check]
+       python3 scripts/listicle.py build-lang|missing <english-page.html> <lang> [options]
 """
 import html as _html
 import json
@@ -59,6 +71,23 @@ MARKER = "<!-- listicle:cards -->"
 VOID = {"img", "br", "input", "meta", "source", "hr", "wbr", "link"}
 TOKEN = re.compile(r"<!--.*?-->|<(/?)([a-zA-Z][a-zA-Z0-9-]*)((?:[^>\"']|\"[^\"]*\"|'[^']*')*)>", re.S)
 ATTR = re.compile(r' ([^\s="/>]+)="([^"]*)"')
+
+
+# Fixed strings the card template renders itself (not data). English is the default; a language
+# build (build-lang) swaps in the kit table runtime/listicle/i18n/<lang>.json "ui" plus the page's own
+# overrides. Placeholders: {n} count / card number, {i} photo number.
+UI_EN = {
+    "faq_title": "❓ {n} questions travellers ask",
+    "price_heading": "All ticket prices",
+    "pick": "✓ Pick it",
+    "skip": "✕ Skip it",
+    "photo_prev": "Previous photo",
+    "photo_next": "Next photo",
+    "gallery_label": "Photo gallery {n}",
+    "thumbs_label": "Photo thumbnails",
+    "thumb_label": "Show photo {i} of {n}",
+}
+UI = dict(UI_EN)
 
 
 class Unmodelled(Exception):
@@ -213,10 +242,13 @@ def link_tag(cls, f):
 
 
 # ------------------------------------------------------------------ gallery
-ARROW_PREV = ('<button aria-label="Previous photo" class="bpa-arrow prev" onclick="bpaSlide(this,-1)" '
-              'type="button">‹</button>')
-ARROW_NEXT = ('<button aria-label="Next photo" class="bpa-arrow next" onclick="bpaSlide(this,1)" '
-              'type="button">›</button>')
+def arrow(d):
+    """Previous (-1) / next (1) photo button; the aria-label comes from the UI table."""
+    label = UI["photo_prev"] if d < 0 else UI["photo_next"]
+    return (f'<button aria-label="{esc(label)}" class="bpa-arrow {"prev" if d < 0 else "next"}" '
+            f'onclick="bpaSlide(this,{d})" type="button">{"‹" if d < 0 else "›"}</button>')
+
+
 # whitespace before rank tag, prev, next, pill, slider and before </div> of bpa-media
 MEDIA_WS = ["\n", "\n", "", "", "", "\n"]
 THUMB_IMG = ' alt="" loading="lazy" decoding="async" width="80" height="60">'
@@ -234,7 +266,7 @@ def ex_gallery(gal, num):
     if len(items) != 5:
         raise Unmodelled("bpa-media layout")
     rank, prev, nxt, pill, slider = [n for _, n in items]
-    if prev.outer() != ARROW_PREV or nxt.outer() != ARROW_NEXT:
+    if prev.outer() != arrow(-1) or nxt.outer() != arrow(1):
         raise Unmodelled("arrows")
     rcls = expect(rank, "span").cls() or ""
     if not rcls.startswith("bpa-rank-tag ") or len(rank.attrs()) != 1:
@@ -269,7 +301,7 @@ def ex_gallery(gal, num):
         if isinstance(slider.ch[-1], Node):
             out["_photo_sep_end"] = False
     sa = slider.attrs()
-    want = [["aria-label", f"Photo gallery {num}"], ["class", "bpa-slider"],
+    want = [["aria-label", UI["gallery_label"].format(n=num)], ["class", "bpa-slider"],
             ["onscroll", "bpaCount(this)"], ["tabindex", "0"]]
     if sa != want:
         if [k for k, _ in sa] != [k for k, _ in want] or sa[1:] != want[1:]:
@@ -282,7 +314,7 @@ def ex_gallery(gal, num):
             raise Unmodelled("pill")
         out["_pill"] = m.group(1)
     # thumbnails
-    if thumbs.start != '<div class="cd-thumbs" aria-label="Photo thumbnails">':
+    if thumbs.start != thumbs_tag():
         raise Unmodelled("thumbs tag")
     tl = []
     nt = len(thumbs.ch)
@@ -304,7 +336,11 @@ def thumb_tag(i, nt, nimg):
     c = "cd-thumb is-on" if i == 0 else ("cd-thumb is-hid" if i >= 5 else "cd-thumb")
     more = f' data-more="+{nt - 4}"' if (i == 4 and nt > 5) else ""
     return (f'<button type="button" class="{c}" data-i="{i}"{more} '
-            f'aria-label="Show photo {i + 1} of {nt}">')
+            f'aria-label="{esc(UI["thumb_label"].format(i=i + 1, n=nt))}">')
+
+
+def thumbs_tag():
+    return f'<div class="cd-thumbs" aria-label="{esc(UI["thumbs_label"])}">'
 
 
 def render_gallery(g, num):
@@ -314,7 +350,7 @@ def render_gallery(g, num):
     if sep and g.get("_photo_sep_end", True):
         imgs += sep
     pill = g.get("_pill", f"1 / {len(photos)}")
-    label = g.get("_gallery_label", f"Photo gallery {num}")
+    label = g.get("_gallery_label", UI["gallery_label"].format(n=num))
     nt = len(g["thumbs"])
     thumbs = "".join(
         (t.get("_tag") or thumb_tag(i, nt, len(photos)))
@@ -323,11 +359,11 @@ def render_gallery(g, num):
     w = g.get("_media_ws", MEDIA_WS)
     return ('<div class="cd-gal"><div class="bpa-media">' + w[0]
             + el("span", {"class": "bpa-rank-tag " + g["rank"]["medal"]}, g["rank"]["text"]) + w[1]
-            + ARROW_PREV + w[2] + ARROW_NEXT + w[3] + f'<span class="bpa-pill">{pill}</span>' + w[4]
+            + arrow(-1) + w[2] + arrow(1) + w[3] + f'<span class="bpa-pill">{pill}</span>' + w[4]
             + tag("div", [["aria-label", label], ["class", "bpa-slider"],
                           ["onscroll", "bpaCount(this)"], ["tabindex", "0"]])
             + imgs + "</div>" + w[5] + "</div>"
-            + '<div class="cd-thumbs" aria-label="Photo thumbnails">' + thumbs + "</div></div>")
+            + thumbs_tag() + thumbs + "</div></div>")
 
 
 # ------------------------------------------------------------------ kicker / title
@@ -607,10 +643,6 @@ def render_slot(s):
     return tag("div", [[k, vals[k]] for k in order]) + "</div>"
 
 
-PICK = '<span class="bpa-pick">✓ Pick it</span> '
-SKIP = ' <span class="bpa-skip">✕ Skip it</span> '
-
-
 def ex_bestfor(n):
     if n.start != '<div class="bpa-best-for bpa-pickskip">':
         raise Unmodelled("best-for tag")
@@ -619,16 +651,16 @@ def ex_bestfor(n):
     if not m:
         raise Unmodelled("pick/skip shape")
     out = {"pick_html": m.group(2), "skip_html": m.group(4)}
-    if m.group(1) != "✓ Pick it":
+    if m.group(1) != UI["pick"]:
         out["_pick_label"] = m.group(1)
-    if m.group(3) != "✕ Skip it":
+    if m.group(3) != UI["skip"]:
         out["_skip_label"] = m.group(3)
     return out
 
 
 def render_bestfor(b):
-    return ('<div class="bpa-best-for bpa-pickskip"><span class="bpa-pick">' + b.get("_pick_label", "✓ Pick it")
-            + "</span> " + b["pick_html"] + ' <span class="bpa-skip">' + b.get("_skip_label", "✕ Skip it")
+    return ('<div class="bpa-best-for bpa-pickskip"><span class="bpa-pick">' + b.get("_pick_label", UI["pick"])
+            + "</span> " + b["pick_html"] + ' <span class="bpa-skip">' + b.get("_skip_label", UI["skip"])
             + "</span> " + b["skip_html"] + "</div>")
 
 
@@ -636,7 +668,7 @@ FAQ_CHEV = ' <span class="fbm-faq-chev" aria-hidden="true">▾</span>'
 
 
 def faq_title(n):
-    return f"❓ {n} questions travellers ask"
+    return UI["faq_title"].format(n=n)
 
 
 def ex_faq(n):
@@ -739,9 +771,6 @@ def render_info(card, icons):
 
 
 # ------------------------------------------------------------------ price + CTA
-PDD_HEAD = "All ticket prices"
-
-
 def ex_price(n):
     if n.start != "<div>":
         raise Unmodelled("price wrapper")
@@ -760,7 +789,7 @@ def ex_price(n):
         raise Unmodelled("price pop text")
     if kids[0].start != '<div class="cd-pdd-h">':
         raise Unmodelled("price head")
-    if kids[0].inner() != PDD_HEAD:
+    if kids[0].inner() != UI["price_heading"]:
         out["_heading"] = kids[0].inner()
     rest = kids[1:]
     if rest and rest[0].tag == "table":
@@ -805,7 +834,7 @@ def render_price(p):
     return ('<div>\n<details class="cd-pdd"><summary><span class="cd-pdd-main">' + p["main"]
             + '</span><span class="cd-pdd-sub">' + p["sub"]
             + ' <span class="cd-pdd-chev" aria-hidden="true">▾</span></span></summary><div class="cd-pdd-pop">'
-            + f'<div class="cd-pdd-h">{p.get("_heading", PDD_HEAD)}</div>' + rows + total + note
+            + f'<div class="cd-pdd-h">{p.get("_heading", UI["price_heading"])}</div>' + rows + total + note
             + "</div></details>\n</div>")
 
 
@@ -1081,9 +1110,372 @@ def dumps(v, ind=0):
     return json.dumps(v, ensure_ascii=False)
 
 
+# ------------------------------------------------------------------ language versions (i18n)
+# A language version of a listicle page is built from the ENGLISH card data plus translations, so
+# facts (prices, times, ratings, photos, booking links, filter categories) always come from English:
+#
+#   kit table   runtime/listicle/i18n/<lang>.json   {"ui": {...}, "js": {...}, "text": {en: tr}}
+#               shared by every page and site: the template's fixed strings (UI_EN keys), the
+#               strings of the shared JS (JS_UI_EN keys) and phrases many cards repeat
+#               ("Check Availability →", "per adult", "Personally tested", ...)
+#   page file   data/listicles/i18n/<slug>/<lang>.json
+#               {"format": 1, "lang", "ui"?, "js"?, "urls": {en url: lang url},
+#                "text": {English fragment: translation}}
+#               ("js" may also hold strings for the page's own inline scripts, which read the same
+#               #listicle-ui block with English defaults, e.g. the river page's guest-video tiles)
+#
+# "text" is keyed by the English fragment itself, so a translation belongs to one exact English
+# wording. When English changes, its new wording has no translation and `missing` lists it; a change
+# that only touches numbers (a price, a time, a count) is carried into the old translation
+# automatically when every changed number appears in it once ("numbers updated", listed for review).
+# Strings with no words (prices, "4.5", "(10.9k+)", "1 / 9") are facts and pass through as they are.
+# "urls" maps English link targets to the language's (a booking page in that language, an internal
+# page's translated URL); it applies to data URLs and to href="..." inside translated text. Every
+# other URL stays exactly as in English.
+I18N_KIT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "runtime", "listicle", "i18n")
+UI_ELEMENT = "listicle-ui"
+# Strings of the shared JS (runtime/listicle/*.js), English defaults. A language page gets its
+# translations as <script type="application/json" id="listicle-ui"> (written by build-lang).
+JS_UI_EN = {
+    "locale": "en-GB",
+    "more_filters": "More filters",
+    "fewer_filters": "Fewer filters",
+    "remove_filter": "Remove filter {label}",
+    "showing": "Showing <b>{shown}</b> of {total} cruises",
+    "mini_count": "<b>{shown}</b> of {total} cruises",
+    "breakdown_filtered": "Showing {shown} of {total} cruises matching your filters",
+    "other_date": "Other date",
+    "sun_note": "🌇 Sunset {sun}: board about 20 min before ({board}) to catch it  ·  🌃 City lit up {dark} to 22:00 ({date})",
+    "slot_closed": "📅 <b>{date}:</b> this date is not open for booking yet, so its sailing times are not out. "
+                   "It is fully dark from {dark}: pick a sailing after that when you book.",
+    "dur_h": "{h} h",
+    "dur_hm": "{h} h {m} min",
+    "dur_m": "{m} min",
+    "dinner_lit": "🌙 <b>{date}:</b> dark from {dark}, so the last {left} of dinner ({start} to {end}) is under the lights.",
+    "dinner_sunset": "🌇 <b>{date}:</b> sunset ({sun}) happens during dinner; it is fully dark only after you dock ({dark}).",
+    "dinner_day": "☀️ <b>{date}:</b> the cruise ends before sunset ({sun}).",
+    "slot_day": "☀️ <b>{date}:</b> the last sailing ({last}) ends before full dark ({dark}).",
+    "lit_head": "🌃 <b>City lit up on {date}: {dark} to 22:00</b>",
+    "lit_why": "Lights are on from dusk, about 30 minutes after sunset, until the Parliament switches its "
+               "floodlights off at 22:00.",
+    "lit_board": "Board for the lights:",
+    "lit_every": "{first} then every {step} min to {last}",
+    "lit_late": "(later sailings: city lit, Parliament dark)",
+    "lit_after22": "Its sailings start after 22:00: the city is lit, the Parliament is dark.",
+    "lit_none": "No sailing starts after dark on this date.",
+    "audio_in": "Audio in {lang} ✓",
+    "lang_names": {},
+}
+# card keys whose strings are never translated (facts, formatting, brand names)
+FACT_KEYS = {"id", "cats", "attrs", "url", "rel", "target", "onclick", "medal", "stars", "score", "tt",
+             "_tt_raw", "dur", "kind", "icon", "icon_alt", "site", "cls", "data", "emoji", "thumbs", "_order",
+             "_media_ws", "_photo_sep", "_photo_sep_end", "_tag", "_chev", "_nl"}
+PHOTO_TEXT_ATTRS = {"alt", "title"}
+NUM = re.compile(r"\d+(?:[.,:]\d+)*")
+
+
+def translatable(s):
+    """Has words (two letters in a row outside tags): prices, scores and counts do not."""
+    return bool(re.search(r"[^\W\d_]{2}", re.sub(r"<[^>]+>|&[#\w]+;", " ", s)))
+
+
+def text_leaves(data):
+    """(where, getter-path) of every translatable string in the card data, in page order."""
+    out = []
+
+    def walk(v, path, key):
+        if isinstance(v, dict):
+            for k, x in v.items():
+                if k not in FACT_KEYS:
+                    walk(x, path + [k], k)
+        elif isinstance(v, list):
+            if key == "photos":
+                for i, attrs in enumerate(v):
+                    for j, (name, val) in enumerate(attrs):
+                        if name in PHOTO_TEXT_ATTRS and translatable(val):
+                            out.append(path + [i, j, 1])
+                return
+            for i, x in enumerate(v):
+                walk(x, path + [i], key)
+        elif isinstance(v, str) and translatable(v):
+            out.append(path)
+    for n, card in enumerate(data["cards"]):
+        walk(card, ["cards", n], "")
+    return out
+
+
+def get_in(d, path):
+    for k in path:
+        d = d[k]
+    return d
+
+
+def set_in(d, path, v):
+    for k in path[:-1]:
+        d = d[k]
+    d[path[-1]] = v
+
+
+def where(data, path):
+    card = data["cards"][path[1]]
+    rest = "".join(f"[{k}]" if isinstance(k, int) else f".{k}" for k in path[2:]).lstrip(".")
+    return f"{card.get('id', '#%d' % (path[1] + 1))} {rest}"
+
+
+def links_of(h):
+    return sorted(_html.unescape(x) for x in re.findall(r'<a\b[^>]*\bhref="([^"]*)"', h))
+
+
+def tags_of(h):
+    norm = re.sub(r'\b(title|alt|aria-label)="[^"]*"', r'\1=""', h)
+    return sorted(re.findall(r"<[^>]+>", norm))
+
+
+def map_hrefs(h, urls):
+    if not urls:
+        return h
+    return re.sub(r'(\bhref=")([^"]*)(")',
+                  lambda m: m.group(1) + esc(urls.get(_html.unescape(m.group(2)), _html.unescape(m.group(2))))
+                  + m.group(3) if _html.unescape(m.group(2)) in urls else m.group(0), h)
+
+
+class Lang:
+    """Translations for one page and language: page file over the kit table."""
+
+    def __init__(self, en_page, lang):
+        self.lang = lang
+        self.path = i18n_path(en_page, lang)
+        kit = os.path.join(I18N_KIT, lang + ".json")
+        self.kit = json.load(open(kit, encoding="utf-8")) if os.path.exists(kit) else {}
+        self.page = json.load(open(self.path, encoding="utf-8")) if os.path.exists(self.path) else {}
+        self.urls = dict(self.page.get("urls", {}))
+        self.text = dict(self.kit.get("text", {}))
+        self.text.update(self.page.get("text", {}))
+        self.ui = {**UI_EN, **self.kit.get("ui", {}), **self.page.get("ui", {})}
+        self.js = {**self.kit.get("js", {}), **self.page.get("js", {})}
+        if "lang_names" in self.kit.get("js", {}) and "lang_names" in self.page.get("js", {}):
+            self.js["lang_names"] = {**self.kit["js"]["lang_names"], **self.page["js"]["lang_names"]}
+        self.by_shape = {}
+        for en, t in self.text.items():
+            self.by_shape.setdefault(NUM.sub("#", en), []).append((en, t))
+        self.used, self.missing, self.renumbered, self.bad_links, self.bad_tags = set(), [], [], [], []
+
+    def renumber(self, s):
+        """Translation of s via an entry that differs from s only in numbers, or None."""
+        new = NUM.findall(s)
+        for en, t in self.by_shape.get(NUM.sub("#", s), []):
+            old = NUM.findall(en)
+            pairs = {}
+            if len(old) != len(new) or any(pairs.setdefault(a, b) != b for a, b in zip(old, new)):
+                continue
+            changed = {a: b for a, b in pairs.items() if a != b}
+            toks = NUM.findall(t)
+            if any(toks.count(a) != 1 for a in changed):
+                continue
+            return en, NUM.sub(lambda m: changed.get(m.group(0), m.group(0)), t)
+        return None
+
+    def get(self, s, at):
+        if s in self.text:
+            self.used.add(s)
+            t = self.text[s]
+        else:
+            hit = self.renumber(s)
+            if not hit:
+                self.missing.append((at, s))
+                return None
+            self.used.add(hit[0])
+            self.renumbered.append((at, hit[0], s))
+            t = hit[1]
+        t = map_hrefs(t, self.urls)
+        if links_of(t) != links_of(map_hrefs(s, self.urls)):
+            self.bad_links.append((at, s, t))
+        elif tags_of(t) != tags_of(map_hrefs(s, self.urls)):
+            self.bad_tags.append((at, s, t))
+        return t
+
+    def translate(self, data):
+        out = json.loads(json.dumps(data))
+        for path in text_leaves(data):
+            s = get_in(data, path)
+            t = self.get(s, where(data, path))
+            set_in(out, path, map_hrefs(s, self.urls) if t is None else t)
+
+        def urlmap(v):
+            if isinstance(v, dict):
+                for k, x in v.items():
+                    if k == "url" and isinstance(x, str):
+                        v[k] = self.urls.get(x, x)
+                    else:
+                        urlmap(x)
+            elif isinstance(v, list):
+                for x in v:
+                    urlmap(x)
+        urlmap(out["cards"])
+        return out
+
+    def ui_json(self):
+        # kit keys are the shared JS strings; a page file may add keys for the page's own scripts
+        js = {k: v for k, v in self.js.items() if k in JS_UI_EN or k in self.page.get("js", {})}
+        return json.dumps(js, ensure_ascii=False, sort_keys=True).replace("</", "<\\/") if js else ""
+
+
+def slug_of(page):
+    rel = os.path.relpath(os.path.abspath(page), ROOT)
+    return (rel[:-5] if rel.endswith(".html") else rel).replace(os.sep, "--")
+
+
+def i18n_path(en_page, lang):
+    return os.path.join(ROOT, "data", "listicles", "i18n", slug_of(en_page), lang + ".json")
+
+
+def lang_page(en_page, lang):
+    """The language version's file, from the English page's hreflang link."""
+    src = open(en_page, encoding="utf-8").read()
+    m = re.search(r'<link\b(?=[^>]*\bhreflang="%s")[^>]*\bhref="([^"]+)"' % re.escape(lang), src)
+    if not m:
+        raise SystemExit(f"{os.path.relpath(en_page, ROOT)} has no hreflang=\"{lang}\" link")
+    path = _html.unescape(re.sub(r"^https?://[^/]+", "", m.group(1))).strip("/")
+    for c in (path + ".html", os.path.join(path, "index.html"), path):
+        if c and os.path.isfile(os.path.join(ROOT, c)):
+            return os.path.join(ROOT, c)
+    raise SystemExit(f"no file for the {lang} page {m.group(1)}")
+
+
+UI_BLOCK = re.compile(r'<script type="application/json" id="%s">\{.*?\}</script>' % UI_ELEMENT, re.S)
+
+
+def build_lang_page(src, data, tr):
+    """The language page with its card region rendered from data (already translated) and the
+    JS strings block refreshed (inserted just before the cards when the page has none)."""
+    global UI
+    saved, UI = UI, tr.ui
+    try:
+        cards = render_cards(data)
+    finally:
+        UI = saved
+    start, end, _ = region(src)
+    out = src[:start] + cards + src[end:]
+    block = f'<script type="application/json" id="{UI_ELEMENT}">{tr.ui_json()}</script>' if tr.ui_json() else ""
+    m = UI_BLOCK.search(out)
+    if m:
+        out = out[:m.start()] + block + out[m.end():]
+    elif block:
+        out = out[:start] + block + "\n" + out[start:]
+    return out
+
+
+def report(tr, data, verbose=True):
+    """Lines describing what a language build lacks or should be reviewed."""
+    lines = []
+    seen = set()
+    miss = [(a, s) for a, s in tr.missing if not (s in seen or seen.add(s))]
+    if miss:
+        lines.append(f"{len(miss)} untranslated string(s) (built in English until translated):")
+        lines += [f"  {a}: {s[:160]}" for a, s in miss] if verbose else []
+    if tr.renumbered:
+        lines.append(f"{len(tr.renumbered)} translation(s) with numbers carried over from English (review):")
+        lines += [f"  {a}: {old[:70]!r} -> {new[:70]!r}" for a, old, new in tr.renumbered] if verbose else []
+    if tr.bad_links:
+        lines.append(f"{len(tr.bad_links)} translation(s) whose links differ from English (fix or add to \"urls\"):")
+        lines += [f"  {a}: {links_of(s)} vs {links_of(t)}" for a, s, t in tr.bad_links]
+    if tr.bad_tags and verbose:
+        lines.append(f"{len(tr.bad_tags)} translation(s) with other markup than English (check):")
+        lines += [f"  {a}: {s[:90]}" for a, s, t in tr.bad_tags]
+    js_missing = [k for k in JS_UI_EN if k not in tr.js and k != "lang_names"]
+    ui_missing = [k for k in UI_EN if k not in tr.kit.get("ui", {}) and k not in tr.page.get("ui", {})]
+    if ui_missing:
+        lines.append(f"template strings without a {tr.lang} translation: {', '.join(ui_missing)}")
+    if js_missing:
+        lines.append(f"JS strings without a {tr.lang} translation: {', '.join(js_missing)}")
+    unused = [k for k in tr.page.get("text", {}) if k not in tr.used]
+    if unused:
+        lines.append(f"{len(unused)} page translation(s) no longer used by the English cards (prune with --prune)")
+    en_urls = set()
+
+    def collect(v):
+        if isinstance(v, dict):
+            for k, x in v.items():
+                if k == "url" and isinstance(x, str):
+                    en_urls.add(x)
+                else:
+                    collect(x)
+        elif isinstance(v, list):
+            for x in v:
+                collect(x)
+        elif isinstance(v, str):
+            en_urls.update(_html.unescape(u) for u in re.findall(r'\bhref="([^"]*)"', v))
+    collect(data["cards"])
+    stale = [u for u in tr.urls if u not in en_urls]
+    if stale:
+        lines.append(f"{len(stale)} \"urls\" entr(ies) not used by the English cards: " + ", ".join(stale[:5]))
+    internal = sorted(u for u in en_urls if u.startswith("/") and not u.startswith("//") and u not in tr.urls)
+    if internal:
+        lines.append("internal links kept as in English (add a \"urls\" entry if the page has a translation): "
+                     + ", ".join(internal))
+    return lines
+
+
+def lang_main(cmd, en_page, lang, opts):
+    data = json.load(open(opts.get("--data") or data_path(en_page), encoding="utf-8"))
+    tr = Lang(en_page, lang)
+    out_data = tr.translate(data)
+    rel = os.path.relpath(tr.path, ROOT)
+    if cmd == "missing":
+        lines = report(tr, data)
+        print(f"{os.path.relpath(en_page, ROOT)} -> {lang} ({rel}):")
+        print("\n".join("  " + x for x in lines) if lines else "  every card string is translated")
+        if opts.get("--todo"):
+            todo = {s: "" for _, s in tr.missing}
+            with open(opts["--todo"], "w", encoding="utf-8") as fh:
+                fh.write(dumps(todo) + "\n")
+            print(f"  {len(todo)} untranslated string(s) written to {opts['--todo']}")
+        if opts.get("--prune") and os.path.exists(tr.path):
+            page = json.load(open(tr.path, encoding="utf-8"))
+            order = [get_in(data, p) for p in text_leaves(data)]
+            keep = {k: page["text"][k] for k in dict.fromkeys(order + sorted(tr.used)) if k in page.get("text", {})}
+            dropped = len(page.get("text", {})) - len(keep)
+            page["text"] = keep
+            with open(tr.path, "w", encoding="utf-8") as fh:
+                fh.write(dumps(page) + "\n")
+            print(f"  pruned {dropped} unused translation(s), the rest in English card order")
+        return 1 if (tr.missing or tr.bad_links) else 0
+    page = opts.get("--page") or lang_page(en_page, lang)
+    if not os.path.isabs(page):
+        page = os.path.join(ROOT, page)
+    src = open(page, encoding="utf-8").read()
+    out = build_lang_page(src, out_data, tr)
+    prel = os.path.relpath(page, ROOT)
+    problems = report(tr, data, verbose=False)
+    if (tr.missing or tr.bad_links) and not opts.get("--allow-missing"):
+        print(f"{prel}: not built, translations missing or links differ:")
+        print("\n".join("  " + x for x in report(tr, data)))
+        print(f"  (python3 scripts/listicle.py missing {os.path.relpath(en_page, ROOT)} {lang} lists them; "
+              "--allow-missing builds with English in their place)")
+        return 1
+    if opts.get("--check"):
+        if out != src:
+            print(f"{prel}: cards differ from the English data + {rel}")
+            return 1
+        print(f"{prel}: cards match the English data + {rel}")
+        return 0
+    if out != src:
+        with open(page, "w", encoding="utf-8") as fh:
+            fh.write(out)
+        print(f"{prel}: {len(data['cards'])} cards built in {lang}")
+    else:
+        print(f"{prel}: unchanged")
+    for x in problems:
+        print("  " + x)
+    return 0
+
+
 def main(argv):
     args = [a for a in argv if not a.startswith("--")]
     opts = {a.split("=")[0]: (a.split("=", 1)[1] if "=" in a else True) for a in argv if a.startswith("--")}
+    if len(args) == 3 and args[0] in ("build-lang", "missing"):
+        page = args[1] if os.path.isabs(args[1]) or os.path.exists(args[1]) else os.path.join(ROOT, args[1])
+        return lang_main(args[0], page, args[2], opts)
     if len(args) != 2 or args[0] not in ("extract", "build", "stats"):
         print(__doc__)
         return 2

@@ -9,6 +9,12 @@ translated file, so translations get the same layout as English.
     python3 scripts/port_page_i18n.py best-night-cruises-budapest.html --langs de,hu
     python3 scripts/port_page_i18n.py best-night-cruises-budapest.html            # all 21
     python3 scripts/port_page_i18n.py best-night-cruises-budapest.html --dry-run  # no API, keeps EN text
+    python3 scripts/port_page_i18n.py best-budapest-river-cruises.html --langs de --cache-only --listicle-cards
+
+--listicle-cards: for pages whose cards are data (data/listicles/<page>.json). The cards are left
+out of the translation and replaced by the <!-- listicle:cards --> marker; then
+`python3 scripts/listicle.py build-lang <en-page> <lang>` renders them from the English card data
+plus data/listicles/i18n/<page>/<lang>.json. The English-only AI cruise finder is dropped.
 
 Needs ANTHROPIC_API_KEY (environment or the repo .env) and `pip install anthropic bs4`.
 Translations are cached in data/i18n/port/<page>/<lang>.json, so re-runs only send
@@ -351,9 +357,35 @@ def tags_of(h):
 
 
 # ---------------------------------------------------------------- build
-def port(en_file, lang, target_file, links, dry_run):
+def strip_listicle(soup):
+    """Cards -> one <!-- listicle:cards --> marker (listicle.py build-lang renders them); the
+    English-only AI cruise finder (comment, styles, form, script) is removed."""
+    cards = [d for d in soup.find_all("div", class_="bpa-card") if not d.find_parent("div", class_="bpa-card")]
+    if cards:
+        cards[0].insert_before(Comment(" listicle:cards "))
+        for prev, c in zip(cards, cards[1:]):
+            for sib in list(prev.next_siblings):
+                if sib is c:
+                    break
+                if isinstance(sib, NavigableString) and not sib.strip():
+                    sib.extract()
+        for c in cards:
+            c.extract()
+    for com in soup.find_all(string=lambda t: isinstance(t, Comment) and "AI cruise finder" in t):
+        node = com
+        while node is not None:
+            nxt = node.next_sibling
+            if getattr(node, "name", None) == "div" and "cd-frow" in (node.get("class") or []):
+                break
+            node.extract()
+            node = nxt
+
+
+def port(en_file, lang, target_file, links, dry_run, listicle_cards=False):
     en_html = read(en_file)
     soup = BeautifulSoup(en_html, "html.parser")
+    if listicle_cards:
+        strip_listicle(soup)
     segs = collect(soup)
     strings = []
     for kind, ref, src in segs:
@@ -426,6 +458,8 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--cache-only", action="store_true",
                     help="no API: build only from cached translations (fill the cache by hand or another tool)")
+    ap.add_argument("--listicle-cards", action="store_true",
+                    help="leave the cards out (marker for listicle.py build-lang) and drop the EN-only AI finder")
     ap.add_argument("--dump-todo", metavar="DIR",
                     help="with --cache-only: write each language's untranslated segments to DIR/<lang>.json")
     args = ap.parse_args()
@@ -443,7 +477,7 @@ def main():
             print(f"{lang}: no translated URL for {args.en_file}, skipped")
             continue
         try:
-            n, bad = port(args.en_file, lang, target, links, args.dry_run)
+            n, bad = port(args.en_file, lang, target, links, args.dry_run, args.listicle_cards)
         except (_Todo, SystemExit):
             continue
         print(f"{lang}: {target} ({n} strings, {bad} tag mismatches)")

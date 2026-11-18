@@ -65,6 +65,10 @@ only where it is stricter. Breaking one of these costs money or rankings.
      (plus the review count only if it was really counted), then the next step: the finder,
      the filters, or "scroll straight to the ranking".
   No dates in the intro (the "Last updated" pill carries it), no claims the cards don't back.
+- Language versions take their cards from the English card data: translate in
+  `data/listicles/i18n/<slug>/<lang>.json`, then `python3 scripts/listicle.py build-lang <english-page> <lang>`
+  (`missing` lists what is untranslated). Never edit cards on a language page by hand; prices, times,
+  photos and booking links always come from English (`urls` in the file only localizes a link target).
 
 ## 6. Layout
 - Never hand-edit the header, mobile drawer or footer on a page. Edit the language's

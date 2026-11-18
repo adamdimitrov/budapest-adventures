@@ -1,5 +1,8 @@
 
 (function(){
+  /* UI strings: English defaults; a language page overrides them with <script type="application/json" id="listicle-ui"> (written by listicle.py build-lang) */
+  var UI=(function(){try{var e=document.getElementById('listicle-ui');return e?JSON.parse(e.textContent):{};}catch(x){return {};}})();
+  function tr(k,d,o){var s=UI[k]!=null?UI[k]:d;return o?s.replace(/\{(\w+)\}/g,function(m,n){return o[n]!=null?o[n]:m;}):s;}
   /* Multi-select filters, Baymard-based: combinable values, live counts, no 0-result options,
      an applied-filters overview, and a sticky filter shortcut on phones. */
   var active = [];
@@ -22,20 +25,20 @@
       var n=cards.filter(function(card){ return matches(card, on?active:active.concat([c])); }).length;
       var cn=b.querySelector('.cd-n'); if(cn) cn.textContent='('+n+')';
       var dead=!on && n===0; b.disabled=dead; b.classList.toggle('is-empty',dead);
-      if(on) applied.push('<button type="button" class="cd-fchip" onclick="lttFilterSafaris(\''+c+'\')" aria-label="Remove filter '+labelOf(b)+'">'+labelOf(b)+' <span aria-hidden="true">×</span></button>');
+      if(on) applied.push('<button type="button" class="cd-fchip" onclick="lttFilterSafaris(\''+c+'\')" aria-label="'+tr('remove_filter','Remove filter {label}',{label:labelOf(b)})+'">'+labelOf(b)+' <span aria-hidden="true">×</span></button>');
     });
     var box=document.querySelector('.cd-fbox');
     if(box){
-      box.querySelector('.cd-fcount').innerHTML='Showing <b>'+shown+'</b> of '+cards.length+' cruises';
+      box.querySelector('.cd-fcount').innerHTML=tr('showing','Showing <b>{shown}</b> of {total} cruises',{shown:shown,total:cards.length});
       box.querySelector('.cd-fapplied').innerHTML=applied.join('');
       box.querySelector('.cd-fclear').hidden=!active.length;
     }
     var mn=document.querySelector('.cd-fmini-n'); if(mn){ mn.hidden=!active.length; mn.textContent=active.length; }
-    var mr=document.querySelector('.cd-fmini-res'); if(mr) mr.innerHTML='<b>'+shown+'</b> of '+cards.length+' cruises';
+    var mr=document.querySelector('.cd-fmini-res'); if(mr) mr.innerHTML=tr('mini_count','<b>{shown}</b> of {total} cruises',{shown:shown,total:cards.length});
     var sub=document.querySelector('.bpa-breakdown-sub');
     if(sub){
       if(sub._def==null) sub._def=sub.textContent;
-      sub.textContent = active.length ? ('Showing '+shown+' of '+cards.length+' cruises matching your filters') : sub._def;
+      sub.textContent = active.length ? tr('breakdown_filtered','Showing {shown} of {total} cruises matching your filters',{shown:shown,total:cards.length}) : sub._def;
     }
   }
   window.lttFilterItems = window.lttFilterSafaris = window.lttFilterCruises = function(cat){
