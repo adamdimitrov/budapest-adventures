@@ -447,12 +447,30 @@
     n.loaded = true;
     n.version = '2.0';
     n.queue = [];
-    t = b.createElement(e);
-    t.async = true;
-    t.src = v;
-    s = b.getElementsByTagName(e)[0];
-    if (s && s.parentNode) {
-      s.parentNode.insertBefore(t, s);
+    // init + PageView are queued now; fbevents.js (≈300 ms of main-thread work) loads on the
+    // first scroll / tap / click / key / mouse move, or 5 s after load, so it stays off the
+    // page's first seconds. The queued events are sent as soon as it arrives.
+    var loaded = false;
+    var evs = ['scroll', 'touchstart', 'mousemove', 'click', 'keydown'];
+    function loadPixel() {
+      if (loaded) return;
+      loaded = true;
+      evs.forEach(function (ev) { window.removeEventListener(ev, loadPixel, true); });
+      t = b.createElement(e);
+      t.async = true;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      if (s && s.parentNode) {
+        s.parentNode.insertBefore(t, s);
+      } else {
+        (b.head || b.documentElement).appendChild(t);
+      }
+    }
+    evs.forEach(function (ev) { window.addEventListener(ev, loadPixel, { capture: true, passive: true }); });
+    if (b.readyState === 'complete') {
+      setTimeout(loadPixel, 5000);
+    } else {
+      window.addEventListener('load', function () { setTimeout(loadPixel, 5000); });
     }
     window.fbq('init', META_PIXEL_ID);
     window.fbq('track', 'PageView');

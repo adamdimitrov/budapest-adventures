@@ -96,14 +96,14 @@
 
   // set every pill once on load without fetching lazy photos (they load on first swipe/tap)
   // (single-photo carousels are skipped: their .bpa-pill can be a text label, not a counter)
-  // all reads first, then all writes: one layout instead of one per carousel
   (function() {
     var sls = Array.prototype.filter.call(document.querySelectorAll('.bpa-card .bpa-slider'), function(sl) {
       var m = sl.closest('.bpa-media');
       return sl.children.length > 1 && m && m.querySelector('.bpa-pill, .bpa-counter-pill');
     });
-    var idx = sls.map(bpaIndex);
-    sls.forEach(function(sl, k) { bpaPaint(sl, idx[k]); });
+    // on load every carousel is at its first photo, so no measuring is needed (measuring here
+    // forced a full layout of the page before it had rendered); a real swipe re-counts via onscroll
+    sls.forEach(function(sl) { bpaPaint(sl, 0); });
   })();
 
   // 1b. Bento Filmstrip Desktop & Mobile Slider Controls
@@ -495,7 +495,8 @@
 
     var leftCol = toc.closest('.content-left');
     if (leftCol) leftCol.style.display = 'block';
-    updateActiveTOC();
+    // highlight in the next frame instead of measuring right after building the TOC (forced layout)
+    scheduleLayoutSync();
   }
 
   function updateActiveTOC() {
