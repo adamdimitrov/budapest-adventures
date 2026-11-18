@@ -21,6 +21,7 @@ KIT_CHECKS = [
     "kit/checks/check_lazy_images.py",
     "kit/checks/check_filters.py",
     "kit/checks/check_archive.py",
+    "kit/checks/check_listicle_layout.py",
 ]
 
 
