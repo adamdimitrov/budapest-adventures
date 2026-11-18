@@ -36,13 +36,15 @@ CSS = """<style id="dc-menu-photos-css">
 .dc-pm .sec:has(.dc-dish-photo) .dish{margin:0;font-size:13px;line-height:1.3}
 .dc-pm .dish .dc-dish-photo{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin:0 0 6px;border:1px solid #eadfca;background:#fff}
 .dc-pm .sec:has(.dc-dish-photo) .dish:not(:has(.dc-dish-photo))::before{content:"\\1F37D";display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:4/3;box-sizing:border-box;margin:0 0 6px;border-radius:6px;border:1px dashed #d9c79e;background:#fdf8ec;font-size:22px;opacity:.7}
-.dc-food-photos{display:flex;align-items:center;gap:10px;width:100%;margin-top:8px;padding:7px 10px;border:1px solid #e9d8ae;border-radius:10px;background:#fdf3d8;cursor:pointer;font:inherit;text-align:left}
-.dc-food-photos .th{display:flex;flex:0 0 auto}
-.dc-food-photos .th img{width:40px;height:40px;border-radius:8px;object-fit:cover;border:2px solid #fff;box-shadow:0 1px 3px rgba(60,40,10,.18);background:#fff}
-.dc-food-photos .th img+img{margin-left:-10px}
-.dc-food-photos .tx{flex:1 1 auto;min-width:0;font-size:13px;font-weight:800;color:#92400e;line-height:1.25}
-.dc-food-photos .tx b{display:block;font-size:11.5px;font-weight:700;color:#0369a1;text-decoration:underline}
-.dc-food-photos:hover{border-color:#d9b867;background:#fbecc4}
+.dc-food-photos{display:block;width:100%;margin-top:10px;padding:8px;border:1px solid #e9d8ae;border-radius:12px;background:#fdf6e3;cursor:pointer;font:inherit;text-align:left;transition:border-color .2s,box-shadow .2s}
+.dc-food-photos .th{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.dc-food-photos .th span{position:relative;display:block;border-radius:8px;overflow:hidden;aspect-ratio:1;background:#fff;box-shadow:0 1px 3px rgba(60,40,10,.15)}
+.dc-food-photos .th img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.dc-food-photos .th .more::after{content:attr(data-more);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(28,25,23,.5);color:#fff;font-weight:800;font-size:17px;letter-spacing:.02em}
+.dc-food-photos .tx{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:7px;padding:0 2px;font-size:13px;font-weight:800;color:#92400e;line-height:1.25}
+.dc-food-photos .tx b{font-size:12.5px;font-weight:700;color:#0369a1;text-decoration:underline;white-space:nowrap}
+.dc-food-photos:hover{border-color:#d9b867;box-shadow:0 4px 14px rgba(146,64,14,.12)}
+.dc-food-photos:hover .th img{transform:scale(1.06)}
 .dc-food-photos:hover .tx,.dc-food-photos:hover .tx b{color:#92400e}
 .dc-food:has(.dc-food-photos) .dc-food-head .dc-food-btn{display:none}
 @media (max-width:600px){
@@ -109,10 +111,12 @@ def process(path):
     txt = PHOTOS_TXT[lang].format(n=N)
     dna = s.index('<div class="dc-dna">', m.end())
     end = s.index("</div>", dna) + 6
-    thumbs = "".join(f'<img src="{A}{k}-sq.webp" alt="" width="40" height="40" loading="lazy" decoding="async">'
-                     for k in ("scallop", "goose-liver", "duck-breast", "panna-cotta"))
+    keys = ("scallop", "goose-liver", "duck-breast", "panna-cotta")
+    more = f' class="more" data-more="+{N - 3}"'
+    thumbs = "".join(f'<span{more if i == 3 else ""}><img src="{A}{k}-tile.webp" alt="" width="240" height="240" loading="lazy" decoding="async"></span>'
+                     for i, k in enumerate(keys))
     teaser = (f'<button class="dc-food-photos" data-dc-menu="legenda" aria-haspopup="dialog" type="button">'
-              f'<span class="th" aria-hidden="true">{thumbs}</span><span class="tx">📷 {txt} <b>{label} ↗</b></span></button>')
+              f'<span class="th" aria-hidden="true">{thumbs}</span><span class="tx"><span>📷 {txt}</span> <b>{label} ↗</b></span></button>')
     s = s[:end] + teaser + s[end:]
     s = re.sub(r'<style id="dc-menu-photos-css">.*?</style>', "", s, flags=re.S)
     s = s.replace("</head>", CSS + "</head>", 1)
