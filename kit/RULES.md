@@ -53,6 +53,10 @@ only where it is stricter. Breaking one of these costs money or rankings.
 - Every affiliate/OTA link carries `rel="nofollow sponsored noopener"` (the site's
   affiliate check enforces it). Official ticket sites that pay nothing: `rel="nofollow noopener"`.
 
+## 5b. Listicle cards (river/dinner cruise design)
+- Every card has exactly 5 "questions travellers ask", each answered from facts already on
+  the page or the live listing. `check_kit.py` fails on any other count.
+
 ## 6. Layout
 - Never hand-edit the header, mobile drawer or footer on a page. Edit the language's
   master page, then run the site's layout sync (`scripts/sync_layout.py`).
