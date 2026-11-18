@@ -1,0 +1,2034 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAN1ElEQVR4nOWcCXRURRaG/3qdPSEJgQRCIJ0QVoMoJCxuiCDInDHKIAHFSYCB0RlAlFXnOKOoiMedkcVlBoGAGhEUBWZEREBgEEmCskckG4QsZOuQpDvp9Ks5t2JCv15fpxMg4TunIV1dr6refVW37r1V9RiuIol8E3LOV0OWJTBKoH9kJv5n4OC/5aNkTv9SgsQBmQNMApNMiOrhj8/YpKvWZtHO1mTYhY3dTcb6RM7YKAaMABDoXolMBy5/zyS220PC5kM9pua3VFtt1tYahd52fpOvUa5JBGfJAO6hftAa9VD/A/AdGEvxlHw2H+oxSX9dCyi2eFOAn14/g3MsBtANV5dL4FhdD3n5T9HTK64rAcWlve/JQr3nMc6e4UBHXFvKGPgrckntP9PjHzdecwENyVo3gktsFYABuL74hTHMPqKd+u01EdDI7LU+VRJ7G5w9fjWUfTPhAF8dwPnCvdHTDc0poFk3NvTc+j6yBp8CuBVtg6Makzz5cMz0s60uoMHZKfdJjH8GoAPaFpVg0sQ0bdIuVy5yafqNy0mZIjG+rQ0KhwgEl7fHZ697pFUEFJe97q8MfAMAT7RdvMDYxrjslL+06BCLJ6kztrEVDb6rDQfj09K001LcFtCQ3HWjOWc7AHijfWGUOUvIiE7e2WwBDW2YrdLaqM5RQ6WskeIyeiT9ai+D5MjOkTVIbcfCIQIlk7yFfEeXBVTNNG8BGIT2z0CjqeZ1l4bY4LwNd0myvO86tpBbGg4uj0qLnr7XaQ8ayfd4SCa+6gYSDsHApJXkdMOZgKrycueD8Ztx4xGLzj5PWCYqesmwsxsDZU9TTmuGLOorqlGV9gv0p/JQk3kBdRdLxUc2GGG6XCPyaDr4QfLxhFe3TuLj17c7fGO16BDfG5ogf7QiZd6G+qiD/WZcbkzwUDTeQ57FWkE4dfklKPvqB5TvzEDN8WxwEwUC7WPSVcOkA4xFFag+eg7lO34U6UwjwW9gNDqOjUPIg8OF8FqYkDofDUUn3rDqQSJ8waQsAOEtUhXn0O07jqI1O1F54KT43qJIDIF3xKLLzHEIGjEAYC2lMnmRp8YvujF829SDLkOazFpIOJUHTuLCq5tQczwHrYbMUbn/hPj49u2ObnMfRMffD22BglmXelPNBAAfKQTEGJLcLbquoAx5/0hBxbdHneb1DA2C302R8IkJh7e2CyR/b2h8G7wZk74WcnUtanOLYcgqQM2pPBiL7YeZ9ZkXcG72KgRv/R8iX0yGV3iIezfCWFKjgES/vO38+gijCbmkH23lr80tRvaCDyDXOg7x1mYVwlRtP3Dnf2sMQh4YjsC7YuHbO8KlNht+vYjKg6dQ9uUhVGXY9Qyg8feBd8+uDsuSvD0R/eZj8NaG2csie2oQSUtKogcZ6/kkMGZTOAQVRGM9a/YqpwrWHtT9I5f8UfSc5uDTq5v4hNw/FHnPb0DZ9gbFbQk9IEdDmxR9z1WzHQmHkOpk0DBb0WAHMWm0swZ2HBePyKVTm60MaSY6dsd8XFiWCrmm1uXrZUMd8l/fjGN3LLArHKcwJu6B7sVpVs5Hif9H8j2oys3TqV3xLFi1TTTUHby7d0bPFbPgPyhGVf6aEznImrMahpwit+qNWDQR4bMT1GaviNb6dpSqz4vuqHo5OHx2AsKmjYE71F4oQebDr6Bs2w9O85bvTMeZScvcFg612QXhEMHn8mrg0bSRQCXcWA/DuQK7v3uEdIBfrBaeYUGQ9XWou1gmegCvNynykcLPfup9ME8Pu12eZkOh9yyuJZiHBn43R4kZS/L1grFYh5qTuagvazKCFdTmFIly6Dq1aGSAxeWsb9xH4RzOkfXke8IqtiTwrgEIn5OAgPg+QhFauhfUWwpWfGU1XdOM0nfTs/C/JVqRTjd7ZuJSIWRzPMOCEf7EAwhJGA6PYKXbQRMIuTEFK7cJ+8iSzpNGIOq1GVAL42AsPnt9w94TFZR+fhDZ8z9Q3qCPl6iUpm9nyNUGZC9e0+Q6NEJT/k07XgTzajDLeF09TiU8L+wbc2gGi3ptJiQ/59Ffeog5i9cI5W5Orw/mInhsnNPrRTsaNt2oygu6ufzXaDnsCnRDfTYsUiUcQvL3QczKWQh9ZKQiXX82X7gkjRSt+dpKOHQNKXY1wiGoTdS2RqE3cv7lVPEA1MBcWaW4lLoPdYXlirTIJUkIGNJHbRG/1coQ+VKyMBrNKfpwp9BL9Cn68BvFbzTb0TWumhjUNrK9LI3eks37VZehFK8Dyv9zRPGd3ITQh+9WZuIcJZ/tR3HKbhjO5gvlGXjnAHR7arww8hohRdnjuSk489DSJifWeEkH3e6fxHf6+0pmhsjnHrVSrvpf8lHwzlbh95Ge8ukTgbCp96LzQ3cqBBn68Ehc2vidcFcaKd1yEKFTaNuSc1T1IGNxBaqOKs37sD+NFR61OTl/WyvGPc1a1BOEct5+GKceWILLh88o8gYM7oUACzuIFKvue6VypTyW9tLlQ6dxevwLwmCkOqgusp5zFv4buc+us7hD1tBWM6p/OgdTZUPsqUUEpCd9QPsEzSoNHqXct0CNLUmlMLY1ZDlnP/melcIMule5JkAPgRpvTvAYZR7qLTST2rPGL328F+X/TVOWQW01e5g021nqOLcEVFek1D2eIYHC3jGn5NN9jssoLIdu7zFFmm9v5SY0smUUw0v4YEqnVrfnZ4eevWhLqjL2Tm2lNivac7EULSageotGe3TqYNMQc0ZtdqGyHAsh11dUiY+jutRY1IYsZT22ynEWmWi6Tu30bI6t8asJ9LNKs8pjEU+uL1MKQzGM7dTl0Yx6bJWjNrYtqTERPcOCFd9pGFhauEH33OKwDJqFAkcoF0soGOYMmpbNoTIsLXVLgkYp20L6ynLoenV1HnoX27TVGIo+UcoAFPk0lfuPK9K6/nmc8NLt0cXG72oij5Z6yzsyFF1m3Gc3P/3edeY4RVrlgRNKf05i8O4R6rRu0uuSmvVB374R8IrobDVbWHbZPql/Q0B8b0U6WbJkB3VflKhIrzmdh6p05zviyM6pzbukSOv+zGSEz33QykoOGNoXfT95xmq4W7Y1YFAvK/1nE5nBg7b3c9mJrmYMwWMHoXjtLsWTpcYH3hnblEY9pN/mvws7SJ+ZL+LMHYb2tW4M57iw9BObOsdW9IAWAGJWzb6SKDFEzJ+ALtPG4PKPmSJ+7duvu4giWCJsK4teGDx2MNRgkmQwOj+RnauneVypaGzEcE6Melrhx9CN99/6vOjWrpD/1ucoeOdLl64hl8HVOBRN5acSlqC+tFLR02/e97pVJMBuwIwOhnDggLPc3t07I/RRpXlOsZfMycvUL+9wjovLvxBhD1fJe+Ejca3a9TX9mfPInLRMIRyi25wENcIhmewh2YixxTjbrabSiHkT4NMz3Gqp50ziy8LTpxVRe9BQOD3hJVxcvrV5i4hCuFuROeVVVP9M65u2oTZQW06Pf1H0enNIP6rthYzOgKhd9jHHkF0oKrclDIoOdhjeD34DouAVFgzZUIva/FJUfn/cStG6i090VxGk8wrvCMnHG3XFFUL3Xf7hjNBbltAydf+vnodnZ1WrKiYOqUd6VFJB0xQWn7OeNPC9aq6uOZmLX2cuF72n2TCGTn+4XUQJLH00c31Bk4BlgM1VfPtEoNe/nnK21GPeuK/TopJ/R39dmb6Y2OKrCr9YLfpvWyKeYHOgG4957wlEv/UYYt6dYzNOTKGS3mvmidlL+8p0EblsDiH3D0O/L55zQThC/2xosc0Lur3HxDIQ9Spn0Kpn2PSxwqg0N/UpXk0eeuO0TwKLeX8ugkdfiRiQg1qwejsufbxHVUSQzIuIpxMREKe0y1RQ6Knx7dm4eUFhJcbnrlsMzl5FMzBkFaDimwyhQIVXXqITT53cFNIXQSMHosNt/UXPsAXdeO6z68Xf0W/MRCcKfNnAVKVH5f6TwpI35BSjvkQnBOYRGgSvLh2FIqYQiaVhqxYOtjA9KvnNxu8KAQ0sTPH3MnCas5tXupsUvrsD0Ejo+pgY/teCUr2fb9TJsElNXrSVnzEkZ91CDmZ312e7hrN5adHJy82TrHwMf62WMiht8xuDE7xUT5tX4VBAe9k99Zwxcnw4bhw442yOrSOcNr3UdG3yATqphxuHlUeik23GjO268RXGygUAz0A7hwHpFUbdIge/22fYubW9TRopzf2XAVyvMB2X5Lj0yGnKpRQzHAaCDsdMP8uB8RTtQPujDowlOhKOqlWN9Kipe8DZtN/ectBekBnjSWrOr6pa9kmLTk7lXMxs7UFIMjhmHdFO26Qms0u7AYbkpEzg4LQ9VrkO1HaoA2dT6YGrvcDlHZnxuRvGgMub257iZjoZmJARlSwCYWpx+ZBumjZpl0n2GEg6HG0GniFrWLyrwkFzTzEf7floboVRdzcgzpVdzxY3tW1FhbHydkfnUh3h9gmQwXQ6kQ7gXX9nzDIZwxx3X27i9jn4jMik/bxUH8eBBRQuwLWnBJzPD9BGDnBXOGjpY5cDC1P8vWv5TJljEQNcO4zhJgwo5hzvctnwdnrM47oWLLflGZm91qdakiZyIAkcdMxB/eZk1zABbBeDvNGf8y3NfQWOI1r94O6gvDXdJO7xEANGg+NuZyu4zmBAOQffB7DdHNIWWpppudbarO/qkcg3gbb3S5zRJu3GNwQ2vRjQumkNrw6kNwVysdtdQk+t91V9TeD/ARozoWuLuPVZAAAAAElFTkSuQmCC"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["tested", "party", "kids", "prosecco", "spritz", "beer", "opendeck", "hour", "under25"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Overall",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Unlimited Prosecco, Beer, Aperol & Limoncello Spritz Cruise"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-duna-weser-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco, Beer, Aperol & Limoncello Spritz Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-duna-weser-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco, Beer, Aperol & Limoncello Spritz Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-duna-weser-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco, Beer, Aperol & Limoncello Spritz Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-duna-weser-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco, Beer, Aperol & Limoncello Spritz Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e8a4e49cb177974356_Budapest-river-cruises-portum-14.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco, Beer, Aperol & Limoncello Spritz Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858ea56f82257ea9e0c70_Budapest-river-cruises-portum-16.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco, Beer, Aperol & Limoncello Spritz Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-duna-weser-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco, Beer, Aperol & Limoncello Spritz Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e9803ea5e532e13df1_Budapest-river-cruises-portum-15.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco, Beer, Aperol & Limoncello Spritz Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco, Beer, Aperol & Limoncello Spritz Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e8f731d90165d271cc_Budapest-river-cruises-portum-11.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco, Beer, Aperol & Limoncello Spritz Cruise"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858eda4b537601bf3ceab_Budapest-river-cruises-portum-21.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-duna-weser-01.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-duna-weser-02.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-duna-weser-03.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-duna-weser-04.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e8a4e49cb177974356_Budapest-river-cruises-portum-14.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858ea56f82257ea9e0c70_Budapest-river-cruises-portum-16.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-duna-weser-05.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e9803ea5e532e13df1_Budapest-river-cruises-portum-15.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/650beeaa6847525facb1a507_best-unlimited-prosecco-cruises-hero.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858e8f731d90165d271cc_Budapest-river-cruises-portum-11.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858eda4b537601bf3ceab_Budapest-river-cruises-portum-21.webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Duna-Weser",
+    "⏱️ 75 Mins",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Carl+Lutz+rakpart+Dock+0+Budapest",
+     "rel": "nofollow noopener",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "3 docks"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-unlimited-prosecco-beer-and-aperol-spritz-cruise-t416276/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-card-title-rubin-group&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Unlimited Prosecco, Beer, Aperol &amp; Limoncello Spritz Cruise"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.78",
+     "score": "4.8",
+     "meta": "57k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(51.2k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-unlimited-prosecco-beer-and-aperol-spritz-cruise-t416276/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-rating-rubin-group&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Viator",
+       "score": "4.6",
+       "count": "(3.8k+)",
+       "url": "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=unlimited_prosecco_cruises_b_en_pop&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2F1-5-hours-evening-cruise-with-unlimited-Torley-sparkling-wine%2Fd499-337865P1",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.6",
+       "count": "(2.2k+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=unlimited_prosecco_cruises_b_en_pop&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FAttractionProductReview-g274887-d23953331-Budapest_Unlimited_Prosecco_Beer_Aperol_Spritz_Cruise-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "Personally tested",
+     "pop_html": "<strong>I rode this cruise myself.</strong> Most of the photos in the review are my own, and so is the video.<span class=\"bpa-lang-note\">What I checked: deck views, commentary, drinks and value for money. <a href=\"#item-1-rubingroup\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "3 docks · 15:30–23:00",
+     "pop_html": "<strong>Carl Lutz rakpart Dock 0:</strong> 15:45, 18:45, 22:15. <strong>Akadémia 3:</strong> 15:30, 17:15, 22:30. <strong>Vigadó 8/A:</strong> 23:00. About 75 minutes.<span class=\"bpa-lang-note\"><b>📍 3 docks to choose from:</b> Akadémia 3 is by the Chain Bridge, best from Parliament or the Basilica. Vigadó 8/A is by Vörösmarty tér, best from Váci utca. Carl Lutz rakpart Dock 0 is further north on the Pest bank. Pick the dock when you choose your time slot.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "data": {
+      "langs": "en"
+     },
+     "emoji": "🎧",
+     "label": "English guide",
+     "pop_html": "<strong>Guide language: English only.</strong><span class=\"bpa-lang-note\">As listed for this ticket.</span>"
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "Folding strollers only",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> varies by boat and dock; mobility scooters not allowed</span><span class=\"bpa-lang-note\">👶 <b>Stroller:</b> <span class=\"cd-yes\">✓</span> folding strollers only, non-folding ones are not allowed</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> free under 4, full price for 4-17; small dogs welcome on a lead with a muzzle</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍾",
+     "label": "Unlimited Prosecco &amp; Beer",
+     "pop_html": "<strong>Unlimited for 75 minutes: Hungarian sparkling wine, Aperol, Hugo, Rossini and Limoncello spritzers, beer, lemonade and lemon-mint water.</strong> You start with a welcome glass of sparkling wine; refills at the bar. Food costs extra.<span class=\"bpa-lang-note\">The sparkling wine is dry, plus rosé or semi-sweet when available. Spirits and cocktails cost extra.</span>"
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🎉",
+     "label": "Cocktail-party feel",
+     "pop_html": "<strong>Lively, not a quiet sightseeing hour.</strong> On my cruise the commentary was hard to hear over the party noise. Open top deck plus two indoor decks; board early for the best top-deck spots. Lemonade is self-service, so non-drinkers are covered too."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🌬️",
+     "label": "Open top deck",
+     "pop_html": "<strong>Open top deck plus two warm indoor decks.</strong> Board early for the best top-deck spots."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍋",
+     "label": "Lemonade too",
+     "pop_html": "<strong>Lemonade and lemon-mint water are part of the unlimited drinks.</strong> Self-service, so non-drinkers are covered."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": ["15:30", "15:45", "17:15", "18:45", "22:15", "22:30", "23:00"]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": ["17:15", "17:45", "18:45", "20:30"]
+     }
+    ],
+    "dur": "75"
+   },
+   "best_for": {
+    "pick_html": "for the most refills per euro: 75 minutes of prosecco, spritzers and beer from three central docks.",
+    "skip_html": "if you want food included or commentary in another language: it is English only."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is it a real party?",
+      "a": "It is a lively cocktail-party hour, not a club. One younger guest found it quiet and not party enough."
+     },
+     {
+      "q": "Do refills keep coming?",
+      "a": "Yes. Guests say the crew keeps topping up drinks."
+     },
+     {
+      "q": "Can I hear the guide?",
+      "a": "Not always. On my cruise the commentary was hard to hear over the party noise, and one recent guest said the same."
+     },
+     {
+      "q": "Which dock should I pick?",
+      "a": "Akadémia 3 if you stay near Parliament or the Basilica, Vigadó 8/A near Váci utca. Dock 0 is further north on the Pest bank."
+     },
+     {
+      "q": "Cold or rainy?",
+      "a": "The two indoor decks are warm, so it runs in any weather. Bring a layer for the open top deck."
+     }
+    ]
+   },
+   "price": {
+    "main": "€24.80",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€24.80"
+     },
+     {
+      "label": "Child",
+      "small": "4-17",
+      "price": "€24.80"
+     },
+     {
+      "label": "Under 4",
+      "price": "Free"
+     }
+    ],
+    "total": {
+     "label": "2 adults + 2 kids (4-17)",
+     "price": "€99.20"
+    },
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-unlimited-prosecco-beer-and-aperol-spritz-cruise-t416276/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-card-button-rubin-group&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-1-rubingroup",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: Unlimited Prosecco &amp; Aperol Danube Cruise, Rooftop Terrace -->\n",
+   "id": "card-2",
+   "cats": ["party", "kids", "prosecco", "spritz", "beer", "opendeck", "hour", "under25"],
+   "gallery": {
+    "rank": {
+     "text": "💶 #2 Best Value",
+     "medal": "bpa-emerald"
+    },
+    "photos": [
+     [
+      ["alt", "Unlimited Prosecco & Aperol Danube Cruise, Rooftop Terrace"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco & Aperol Danube Cruise, Rooftop Terrace"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco & Aperol Danube Cruise, Rooftop Terrace"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco & Aperol Danube Cruise, Rooftop Terrace"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco & Aperol Danube Cruise, Rooftop Terrace"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco & Aperol Danube Cruise, Rooftop Terrace"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco & Aperol Danube Cruise, Rooftop Terrace"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco & Aperol Danube Cruise, Rooftop Terrace"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-12.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco & Aperol Danube Cruise, Rooftop Terrace"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco & Aperol Danube Cruise, Rooftop Terrace"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco & Aperol Danube Cruise, Rooftop Terrace"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco & Aperol Danube Cruise, Rooftop Terrace"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-11.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-01.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-03.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-02.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-08.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-06.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-05.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-09.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-12.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-10.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-07.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-04.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-floating-lotus-11.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Floating Lotus",
+    "⏱️ 75 Mins",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Pet%C5%91fi+t%C3%A9r+9%2C+1052+Budapest",
+     "rel": "nofollow noopener",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Petőfi tér"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-lotus-cruise-with-unlimited-aperol-and-prosecco-t1008035/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-card-title-floating-lotus&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Unlimited Prosecco &amp; Aperol Danube Cruise, Rooftop Terrace"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.59",
+     "score": "4.6",
+     "meta": "1.7k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.6",
+       "count": "(1.7k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-lotus-cruise-with-unlimited-aperol-and-prosecco-t1008035/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-rating-floating-lotus&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "18:00 · 19:30 · 21:00",
+     "pop_html": "Departures at 18:00, 19:30 and 21:00. About 75 minutes.<span class=\"bpa-lang-note\"><b>📍 Petőfi tér 9:</b> Pest bank between Elizabeth Bridge and Vigadó tér, an easy walk from Váci utca. Arrive 15 minutes early: boarding closes 5 minutes before departure.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "data": {
+      "langs": "en"
+     },
+     "emoji": "🎧",
+     "label": "English audio",
+     "pop_html": "<strong>English audio commentary</strong> via QR code on your own phone; bring headphones.<span class=\"bpa-lang-note\">From the listing.</span>"
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "Not for wheelchairs",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> not wheelchair accessible</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> €25 for 7 and under, adult fare from 8</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍾",
+     "label": "Unlimited drinks",
+     "pop_html": "<strong>Included:</strong> Prosecco, Aperol Spritz, Hugo Spritz, selected Hungarian wines, craft beer, Heineken, soft drinks, homemade lemonade and water.<span class=\"bpa-lang-note\">Premium spirits and cocktails are not included. From the listing.</span>"
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🎶",
+     "label": "Lively rooftop",
+     "pop_html": "<strong>Guests keep mentioning the music and the friendly crew.</strong> Everyone has a seat on the heated lower deck; rooftop seats are first come, first served. Soft drinks and homemade lemonade are included."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🌇",
+     "label": "Rooftop terrace",
+     "pop_html": "<strong>The largest open rooftop terrace on the Danube</strong>, according to the operator, plus an indoor panoramic deck that is heated in winter and air-conditioned in summer.<span class=\"bpa-lang-note\">Seating upstairs is limited and first come, first served.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "💶",
+     "label": "€17.50 on sale",
+     "pop_html": "<strong>€17.50 per adult</strong> on the date checked, 30% off the €25 list price. A VIP option with a private front area and bar was €35."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": ["18:00", "19:30", "21:00"]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": ["18:00", "19:30", "21:00"]
+     }
+    ],
+    "dur": "75"
+   },
+   "best_for": {
+    "pick_html": "for the lowest price on this list and a huge open rooftop for photos.",
+    "skip_html": "if you need a seat upstairs: rooftop seating is limited and not guaranteed."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is a rooftop seat guaranteed on Floating Lotus?",
+      "a": "No. Everyone has a seat on the heated lower deck; rooftop seats are first come, first served."
+     },
+     {
+      "q": "Can kids come on Floating Lotus?",
+      "a": "Yes. Children 7 and under pay a fixed €25; from 8 it is the adult fare. Soft drinks and lemonade are included."
+     },
+     {
+      "q": "Which drinks are unlimited on Floating Lotus?",
+      "a": "Prosecco, Aperol Spritz, Hugo Spritz, selected Hungarian wines, craft beer, Heineken, soft drinks, homemade lemonade and water. Premium spirits and cocktails are not included."
+     },
+     {
+      "q": "Is there commentary on Floating Lotus?",
+      "a": "Yes, English audio commentary through a QR code on your own phone, so bring headphones."
+     },
+     {
+      "q": "When should I arrive for Floating Lotus?",
+      "a": "15 minutes early at Petőfi tér 9: boarding closes 5 minutes before each departure (18:00, 19:30 and 21:00)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€17.50",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€17.50"
+     },
+     {
+      "label": "Child",
+      "small": "7 and under",
+      "price": "€25"
+     },
+     {
+      "label": "Age 8+",
+      "price": "Adult fare"
+     }
+    ],
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-lotus-cruise-with-unlimited-aperol-and-prosecco-t1008035/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-card-button-floating-lotus&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-2-floating-lotus",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #3: Sip &amp; Sail Prosecco Cruise with Photographer -->\n",
+   "id": "card-3",
+   "cats": ["party", "prosecco", "opendeck", "hour"],
+   "gallery": {
+    "rank": {
+     "text": "🥂 #3 Best Prosecco Choice",
+     "medal": "bpa-blue"
+    },
+    "photos": [
+     [
+      ["alt", "Sip & Sail Prosecco Cruise with Photographer"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-03.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Sip & Sail Prosecco Cruise with Photographer"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-01.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Sip & Sail Prosecco Cruise with Photographer"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Sip & Sail Prosecco Cruise with Photographer"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Sip & Sail Prosecco Cruise with Photographer"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Sip & Sail Prosecco Cruise with Photographer"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Sip & Sail Prosecco Cruise with Photographer"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Sip & Sail Prosecco Cruise with Photographer"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-03.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-01.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-06.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-05.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-02.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-04.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-07.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-sip-and-sail-08.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Budapest Boat Party",
+    "⏱️ 75 Mins",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Akad%C3%A9mia+2+ponton+Budapest",
+     "rel": "nofollow noopener",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Akadémia 2"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-sip-sail-river-cruise-with-unlimited-prosecco-t508106/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-card-title-sip-and-sail&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Sip &amp; Sail Prosecco Cruise with Photographer"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.54",
+     "score": "4.5",
+     "meta": "1.6k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.5",
+       "count": "(920+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-sip-sail-river-cruise-with-unlimited-prosecco-t508106/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-rating-sip-and-sail&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Viator",
+       "score": "4.6",
+       "count": "(720+)",
+       "url": "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=unlimited_prosecco_cruises_b_en_pop&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FBudapest-Sunset-Danube-Cruise-with-Unlimited-Prosecco%2Fd499-69242P4",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "static",
+       "site": "Tripadvisor",
+       "score": "4.7",
+       "count": "(610+)"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "18:00 · 20:00",
+     "pop_html": "Departures at 18:00 and 20:00. About 75 minutes.<span class=\"bpa-lang-note\"><b>📍 Akadémia 2:</b> Pest side by the Chain Bridge, a minute from the tram 2 stop. Last entry is 15 minutes after the start; the boat does not wait for latecomers. Times checked for Saturday 28 November 2026; they change by season.</span>"
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "Adults only (18+)",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> not wheelchair accessible</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> under-18s not allowed; valid ID required</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🥂",
+     "label": "Sweet, medium &amp; dry",
+     "pop_html": "<strong>90 minutes of unlimited Prosecco</strong> in sweet, medium and dry versions, plus Prosecco cocktails, from boarding until the boat docks.<span class=\"bpa-lang-note\">Food and other drinks cost extra. A premium package with spirits was €40.50.</span>"
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🎉",
+     "label": "Drinks-and-music feel",
+     "pop_html": "<strong>More a drinks cruise than a guided tour.</strong> Guests consistently mention constant refills, friendly staff and a social atmosphere; downtempo background music plays on board."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "📸",
+     "label": "Photographer on board",
+     "pop_html": "<strong>A professional photographer</strong> takes pictures during the cruise. The audio guide is in the Ultimate Budapest App on your phone."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": ["18:00", "20:00"]
+     }
+    ],
+    "dur": "75"
+   },
+   "best_for": {
+    "pick_html": "for the widest choice of prosecco and refills brought to you by the crew.",
+    "skip_html": "if you want live commentary on the sights: the audio guide is an app on your phone."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is it 75 or 90 minutes?",
+      "a": "The cruise is 75 minutes, but the unlimited Prosecco runs 90: the clock starts when you board and stops when the boat docks."
+     },
+     {
+      "q": "Do I queue at the bar for refills?",
+      "a": "No. Guests consistently mention staff walking round and topping up glasses."
+     },
+     {
+      "q": "Which Prosecco is poured?",
+      "a": "Sweet, medium and dry Prosecco plus Prosecco cocktails. Food and other drinks cost extra; a premium package with spirits was €40.50."
+     },
+     {
+      "q": "Can teens come?",
+      "a": "No. It is strictly 18+ with a valid ID."
+     },
+     {
+      "q": "Is there commentary?",
+      "a": "Only an audio guide in the Ultimate Budapest App. One reviewer found it a drinking-and-music cruise with little history."
+     }
+    ]
+   },
+   "price": {
+    "main": "€27",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€27"
+     },
+     {
+      "label": "Premium drinks",
+      "price": "€40.50"
+     },
+     {
+      "label": "Under 18",
+      "price": "Not allowed"
+     }
+    ],
+    "note": "Prices on the date checked (Saturday 28 November 2026); other dates can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-sip-sail-river-cruise-with-unlimited-prosecco-t508106/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-card-button-sip-and-sail&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-3-sip-and-sail",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: Unlimited Prosecco Cruise (Silverline) -->\n",
+   "id": "card-4",
+   "cats": ["party", "prosecco", "hour"],
+   "gallery": {
+    "rank": {
+     "text": "⏱️ #4 Best Short Cruise",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Unlimited Prosecco Cruise (Silverline)"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-02.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco Cruise (Silverline)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco Cruise (Silverline)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco Cruise (Silverline)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-01.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco Cruise (Silverline)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco Cruise (Silverline)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco Cruise (Silverline)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco Cruise (Silverline)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Unlimited Prosecco Cruise (Silverline)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-02.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-04.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-03.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-01.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-05.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-07.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-10.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-06.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-silverline-09.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Silverline Cruises",
+    "⏱️ 60 Mins",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Silverline+Cruises+Dokk+11+Jane+Haining+rakpart+Budapest",
+     "rel": "nofollow noopener",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Dock 11"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-sunset-cocktail-cruise-t408167/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-card-title-silverline-prosecco&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Unlimited Prosecco Cruise (Silverline)"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.52",
+     "score": "4.5",
+     "meta": "1.2k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.5",
+       "count": "(1k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-sunset-cocktail-cruise-t408167/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-rating-silverline-prosecco&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Viator",
+       "score": "4.4",
+       "count": "(120+)",
+       "url": "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=unlimited_prosecco_cruises_b_en_pop&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FGin-Tonic-Cocktail-Lounge-Cruise%2Fd499-15186P48",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.7",
+       "count": "(80+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=unlimited_prosecco_cruises_b_en_pop&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FAttractionProductReview-g274887-d25564160-Unlimited_Prosecco_Wine_Cruise_Budapest-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "16:30 · 19:30 · 21:00",
+     "pop_html": "Departures at 16:30, 19:30 and 21:00. About 1 hour.<span class=\"bpa-lang-note\"><b>📍 Dock 11, Elizabeth Bridge:</b> Pest side next to Elizabeth Bridge, a short walk from Ferenciek tere metro. The upper deck is the spot for photos of the lit-up Parliament.</span>"
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "Adults only (18+)",
+     "pop_html": "<span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> under-18s not allowed; not for pregnant guests</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍾",
+     "label": "Unlimited Prosecco",
+     "pop_html": "<strong>Unlimited prosecco for the whole 60 minutes.</strong> Only prosecco is unlimited; snacks are for sale, and you can&#x27;t bring your own food or drinks."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🍾",
+     "label": "Pre-party",
+     "pop_html": "<strong>Party songs from the loudspeakers, pitched as a warm-up before a night out.</strong> Adults only: under-18s are not allowed, and it is not for pregnant guests."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "⚠️",
+     "label": "Late = 50% fee",
+     "pop_html": "<strong>If you miss your cruise,</strong> rebooking is possible subject to availability for a 50% surcharge paid on the spot. Arrive 15 minutes early."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": ["16:30", "19:30", "21:00"]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": ["16:30", "18:00", "19:30", "21:00"]
+     }
+    ],
+    "dur": "60"
+   },
+   "best_for": {
+    "pick_html": "for a quick one-hour prosecco loop from a central dock before a night out.",
+    "skip_html": "if you want spritzers or beer too: only prosecco is unlimited here."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Can kids come on the Silverline prosecco cruise?",
+      "a": "No. It is 18+ only and not for pregnant guests."
+     },
+     {
+      "q": "Is it only prosecco on the Silverline prosecco cruise?",
+      "a": "Yes. Prosecco is the one unlimited drink; snacks are for sale and you can&#x27;t bring your own."
+     },
+     {
+      "q": "How long is the Silverline prosecco cruise?",
+      "a": "About 1 hour, with unlimited prosecco for the whole 60 minutes. It leaves at 16:30, 19:30 and 21:00 from Dock 11 at Elizabeth Bridge."
+     },
+     {
+      "q": "Where is the best spot for Parliament photos?",
+      "a": "The upper deck: it is the spot for photos of the lit-up Parliament."
+     },
+     {
+      "q": "Is the Silverline prosecco cruise a party?",
+      "a": "A warm-up: party songs from the loudspeakers, pitched as a pre-party before a night out. Adults only (18+)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€27",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€27"
+     },
+     {
+      "label": "Under 18",
+      "price": "Not allowed"
+     }
+    ],
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-sunset-cocktail-cruise-t408167/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-card-button-silverline-prosecco&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-4-silverline-prosecco",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: Dinner Cruise with Live Music &amp; Unlimited Drinks (River Diva) -->\n",
+   "id": "card-5",
+   "cats": ["dinner", "kids", "prosecco", "beer", "spirits", "opendeck", "wheelchair"],
+   "gallery": {
+    "rank": {
+     "text": "🍽️ #5 Best with Dinner",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Dinner Cruise with Live Music & Unlimited Drinks (River Diva)"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-03.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Dinner Cruise with Live Music & Unlimited Drinks (River Diva)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dinner Cruise with Live Music & Unlimited Drinks (River Diva)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dinner Cruise with Live Music & Unlimited Drinks (River Diva)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dinner Cruise with Live Music & Unlimited Drinks (River Diva)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dinner Cruise with Live Music & Unlimited Drinks (River Diva)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dinner Cruise with Live Music & Unlimited Drinks (River Diva)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dinner Cruise with Live Music & Unlimited Drinks (River Diva)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dinner Cruise with Live Music & Unlimited Drinks (River Diva)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-11.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dinner Cruise with Live Music & Unlimited Drinks (River Diva)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dinner Cruise with Live Music & Unlimited Drinks (River Diva)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-12.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dinner Cruise with Live Music & Unlimited Drinks (River Diva)"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-01.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-03.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-07.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-06.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-10.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-09.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-08.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-02.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-04.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-11.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-05.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-12.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-river-diva-01.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Duna-Weser (River Diva)",
+    "⏱️ 2.5 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Akad%C3%A9mia+3+ponton%2C+Sz%C3%A9chenyi+rkp.+2%2C+1054+Budapest",
+     "rel": "nofollow noopener",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Akadémia 3"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-premium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-card-title-dinner-drinks&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Dinner Cruise with Live Music &amp; Unlimited Drinks (River Diva)"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.76",
+     "score": "4.8",
+     "meta": "2.8k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(2.7k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-premium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-rating-dinner-drinks&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Viator",
+       "score": "4.7",
+       "count": "(60+)",
+       "url": "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=unlimited_prosecco_cruises_b_en_pop&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FBudapest-Festive-Dinner-Cruise-River-Diva-Exclusive%2Fd499-337865P6",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.7",
+       "count": "(30+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=unlimited_prosecco_cruises_b_en_pop&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FAttractionProductReview-g274887-d32709423-Budapest_Premium_Dinner_Cruise_Live_Music_Unlimited_Drinks-Budapest_Central_Hungar.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "19:30 · 2.5 h",
+     "pop_html": "Departs at 19:30. About 2.5 hours on board.<span class=\"bpa-lang-note\"><b>📍 Akadémia 3:</b> Pest side by the Chain Bridge, best if you stay near Parliament, the Basilica or Széchenyi tér. Bring a passport or ID card with the voucher.</span>"
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🎶",
+     "label": "Live Music",
+     "pop_html": "<strong>Live music in the Grand Salon through the evening.</strong> There is no sightseeing commentary, just an English-speaking host."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "Wheelchair OK",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-yes\">✓</span> wheelchair-accessible boat</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> free under 4, full price for 4-17</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍸",
+     "label": "Unlimited drinks",
+     "pop_html": "<strong>Included all evening:</strong> cocktails, spirits, Prosecco, wine, beer, soft drinks and water, served to your table.<span class=\"bpa-lang-note\">From the listing.</span>"
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🎻",
+     "label": "All-inclusive evening",
+     "pop_html": "<strong>A seasonal buffet, unlimited drinks served to your table and live music in the Grand Salon.</strong> After dinner you can go up to the rooftop deck, weather permitting."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🌬️",
+     "label": "Rooftop after dinner",
+     "pop_html": "<strong>After dinner the rooftop deck opens, weather permitting.</strong> Bring a passport or ID card with your voucher."
+    },
+    {
+     "cls": "bpa-lang ",
+     "emoji": "🍽️",
+     "label": "Seasonal Buffet",
+     "pop_html": "<strong>A seasonal buffet by Executive Chef Viktor Moldován: starters, mains, sides, vegetarian dishes and desserts.</strong> Flag dietary needs when you book."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": ["19:30"]
+     },
+     {
+      "from": "12-01",
+      "to": "12-31",
+      "times": ["18:30"]
+     }
+    ],
+    "dur": "150"
+   },
+   "best_for": {
+    "pick_html": "for a full evening with dinner, table service and unlimited drinks including Prosecco.",
+    "skip_html": "if you only want a quick drink with a view: it is 2.5 hours and €99."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is the food good?",
+      "a": "53 of 64 recent guests talk about the food, almost all positively. One said it could have been hotter."
+     },
+     {
+      "q": "What if it rains?",
+      "a": "Guests say it works even in pouring rain: dinner and music are indoors."
+     },
+     {
+      "q": "Is there live music?",
+      "a": "Yes, violin and saxophone in the Grand Salon. 21 of 64 recent guests mention it."
+     },
+     {
+      "q": "Is there sightseeing commentary?",
+      "a": "No. An English-speaking host runs the evening, but there is no commentary: it is a dinner night, not a tour."
+     },
+     {
+      "q": "What should I bring?",
+      "a": "A passport or ID card along with your voucher."
+     }
+    ]
+   },
+   "price": {
+    "main": "€99",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€99"
+     },
+     {
+      "label": "Child",
+      "small": "4-17",
+      "price": "€99"
+     },
+     {
+      "label": "Under 4",
+      "price": "Free"
+     }
+    ],
+    "total": {
+     "label": "2 adults + 2 kids (4-17)",
+     "price": "€396"
+    },
+    "note": "Prices for the cheapest date; weekend evenings can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-premium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-card-button-dinner-drinks&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-5-unlimited-drinks-dinner",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #6: Sightseeing River Cruise with Unlimited Cocktails -->\n",
+   "id": "card-6",
+   "cats": ["party", "prosecco", "beer", "opendeck", "hour"],
+   "gallery": {
+    "rank": {
+     "text": "🍹 #6 Other Drinks: Best Cocktails",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Sightseeing River Cruise with Unlimited Cocktails"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Sightseeing River Cruise with Unlimited Cocktails"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Sightseeing River Cruise with Unlimited Cocktails"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Sightseeing River Cruise with Unlimited Cocktails"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Sightseeing River Cruise with Unlimited Cocktails"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Sightseeing River Cruise with Unlimited Cocktails"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Sightseeing River Cruise with Unlimited Cocktails"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Sightseeing River Cruise with Unlimited Cocktails"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Sightseeing River Cruise with Unlimited Cocktails"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Sightseeing River Cruise with Unlimited Cocktails"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-01.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-08.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-07.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-05.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-03.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-02.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-04.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-09.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-06.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-unlimited-cocktails-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Budapest Boat Party",
+    "⏱️ 75 Mins",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Akad%C3%A9mia+2+ponton+Budapest",
+     "rel": "nofollow noopener",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Akadémia 2"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-sightseeing-river-cruise-with-unlimited-cocktails-t781483/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-card-title-unlimited-cocktails&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Sightseeing River Cruise with Unlimited Cocktails"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.50",
+     "score": "4.5",
+     "meta": "1.3k+ reviews · 1 site",
+     "heading": "Rating from 1 booking site",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.5",
+       "count": "(1.3k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-sightseeing-river-cruise-with-unlimited-cocktails-t781483/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-rating-unlimited-cocktails&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "18:00 · 20:00",
+     "pop_html": "Departures at 18:00 and 20:00. About 75 minutes.<span class=\"bpa-lang-note\"><b>📍 Akadémia 2:</b> Pest side by the Chain Bridge, a minute from the tram 2 stop; same pier and times as Sip &amp; Sail (#3). Times checked for Saturday 28 November 2026; they change by season.</span>"
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "Adults only (18+)",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> not wheelchair accessible</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> under-18s not allowed; valid ID required</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍹",
+     "label": "Cocktails &amp; beer",
+     "pop_html": "<strong>90 minutes of unlimited beer, Prosecco and Prosecco-based cocktails</strong>, from boarding until the boat docks.<span class=\"bpa-lang-note\">Spirits only with the premium package. Food is for sale on board.</span>"
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🎶",
+     "label": "Music &amp; top-ups",
+     "pop_html": "<strong>Guests consistently mention drinks flowing, good music and good value.</strong> Staff come round to refill glasses."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "📸",
+     "label": "Photographer",
+     "pop_html": "<strong>A professional photographer</strong> on the open deck. The audio guide is in the Ultimate Budapest App."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": ["18:00", "20:00"]
+     }
+    ],
+    "dur": "75"
+   },
+   "best_for": {
+    "pick_html": "if you prefer cocktails and beer to plain bubbles on a 75-minute sightseeing cruise.",
+    "skip_html": "if you are under 18 or need wheelchair access."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "How is it different from Sip &amp; Sail?",
+      "a": "Same operator, pier and times (18:00 and 20:00 from Akadémia 2). Sip &amp; Sail is about three styles of Prosecco; this one adds beer and Prosecco cocktails."
+     },
+     {
+      "q": "Are spirits included?",
+      "a": "No, only with the premium package. The unlimited drinks are beer, Prosecco and Prosecco-based cocktails."
+     },
+     {
+      "q": "Do refills keep coming?",
+      "a": "Yes. Guests consistently mention staff coming round to top up glasses."
+     },
+     {
+      "q": "Is food included?",
+      "a": "No. Food is only available to buy on board."
+     },
+     {
+      "q": "Can under-18s come?",
+      "a": "No. It is 18+ with a valid ID, and the boat is not wheelchair accessible."
+     }
+    ]
+   },
+   "price": {
+    "main": "€27",
+    "sub": "per adult",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€27"
+     },
+     {
+      "label": "Under 18",
+      "price": "Not allowed"
+     }
+    ],
+    "note": "Prices on the date checked (Saturday 28 November 2026); other dates can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-sightseeing-river-cruise-with-unlimited-cocktails-t781483/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-card-button-unlimited-cocktails&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Instant mobile ticket</b> on your phone", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-6-unlimited-cocktails",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #7: Danube Beat Party Cruise with DJ &amp; Drinks Ticket -->\n",
+   "id": "card-7",
+   "cats": ["party", "beer", "spirits"],
+   "gallery": {
+    "rank": {
+     "text": "🎉 #7 Other Drinks: Best Party",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Danube Beat Party Cruise with DJ & Drinks Ticket"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Danube Beat Party Cruise with DJ & Drinks Ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Danube Beat Party Cruise with DJ & Drinks Ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Danube Beat Party Cruise with DJ & Drinks Ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Danube Beat Party Cruise with DJ & Drinks Ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Danube Beat Party Cruise with DJ & Drinks Ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Danube Beat Party Cruise with DJ & Drinks Ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Danube Beat Party Cruise with DJ & Drinks Ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Danube Beat Party Cruise with DJ & Drinks Ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-01.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-04.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-02.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-03.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-08.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-05.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-06.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-07.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/prosecco-cruise-danube-beat-party-09.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Budapest Boat Party",
+    "⏱️ 2.5 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Akad%C3%A9mia+2+ponton+Budapest",
+     "rel": "nofollow noopener",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Akadémia 2"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-boat-party-on-the-river-danube-with-drinks-t333211/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-card-title-party-boat&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Danube Beat Party Cruise with DJ &amp; Drinks Ticket"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.40",
+     "score": "4.4",
+     "meta": "1.9k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.1",
+       "count": "(1.2k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-boat-party-on-the-river-danube-with-drinks-t333211/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-rating-party-boat&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Viator",
+       "score": "4.9",
+       "count": "(750+)",
+       "url": "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=unlimited_prosecco_cruises_b_en_pop&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FDanube-Beat-Boat-Party-Cruise%2Fd499-69242P1",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.9",
+       "count": "(740+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=unlimited_prosecco_cruises_b_en_pop&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FAttractionProductReview-g274887-d26083533-Danube_Beat_Boat_Party_Cruise_Ticket-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "22:45",
+     "pop_html": "One sailing at 22:45. About 2 hours on the river and 2.5 hours of party.<span class=\"bpa-lang-note\"><b>📍 Akadémia 2:</b> Pest side by the Chain Bridge, a minute from the tram 2 stop; one reviewer had trouble finding the boat, so allow extra time. Last entry is 15 minutes after the start. Time checked for Saturday 28 November 2026; it changes by season.</span>"
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "emoji": "♿",
+     "label": "Adults only (18+)",
+     "pop_html": "<span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> not wheelchair accessible</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> under-18s not allowed; valid ID required</span><span class=\"bpa-lang-note\">👟 <b>Dress code:</b> no sandals or flip-flops</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍻",
+     "label": "No prosecco",
+     "pop_html": "<strong>The Drinks In ticket (€62)</strong> adds 2.5 hours of unlimited beer, wine and long drinks (vodka, rum, gin or whisky with mixer). <strong>Prosecco is not listed.</strong><span class=\"bpa-lang-note\">The cheapest Budget ticket (€23) has no drinks included.</span>"
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "emoji": "🎉",
+     "label": "Real party",
+     "pop_html": "<strong>Live DJ, karaoke room and an international crowd</strong>, according to reviewers. The main complaints are bar waits and finding the pier."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎧",
+     "label": "DJ + after-party",
+     "pop_html": "<strong>Live DJ</strong>, photographer, free cloakroom and bottled water. From the All-Nighter ticket up, a Party Bus to Morrisons 2 with skip-the-line entry."
+    }
+   ],
+   "slot": {
+    "tt": [
+     {
+      "from": "11-01",
+      "to": "11-30",
+      "times": ["22:45"]
+     }
+    ],
+    "dur": "150"
+   },
+   "best_for": {
+    "pick_html": "for a late-night party with a DJ and an unlimited bar of beer, wine and long drinks.",
+    "skip_html": "if you came for prosecco: it is not part of the drinks package."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Does the party boat include prosecco?",
+      "a": "No. The Drinks In and All-In tickets include unlimited beer, wine and long drinks, but prosecco is not listed."
+     },
+     {
+      "q": "Which ticket has the unlimited drinks?",
+      "a": "Drinks In (€62) or All-In (€74). The €23 Budget ticket has no drinks included."
+     },
+     {
+      "q": "Is there an after-party?",
+      "a": "Yes, from the All-Nighter ticket up: a Party Bus to Morrisons 2 with skip-the-line entry."
+     },
+     {
+      "q": "Is the bar slow?",
+      "a": "It can be at first: one guest waited more than 20 minutes to order."
+     },
+     {
+      "q": "What should I bring?",
+      "a": "ID, because it is 18+, and closed shoes: no sandals or flip-flops."
+     }
+    ]
+   },
+   "price": {
+    "main": "€62",
+    "sub": "per adult, with drinks",
+    "rows": [
+     {
+      "label": "Budget",
+      "small": "no drinks",
+      "price": "€23"
+     },
+     {
+      "label": "All-Nighter",
+      "price": "€32"
+     },
+     {
+      "label": "Drinks In",
+      "small": "unlimited drinks",
+      "price": "€62"
+     },
+     {
+      "label": "All-In",
+      "price": "€74"
+     },
+     {
+      "label": "Under 18",
+      "price": "Not allowed"
+     }
+    ],
+    "note": "Prices on the date checked (Saturday 28 November 2026); other dates can cost more. Final price shown before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-boat-party-on-the-river-danube-with-drinks-t333211/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-prosecco-cruises-card-button-party-boat&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Instant mobile ticket</b> on your phone", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-7-party-boat",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}
