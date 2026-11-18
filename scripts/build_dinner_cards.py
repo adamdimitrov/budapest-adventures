@@ -193,7 +193,7 @@ EDGE_QA = {
         ("Is the food good?", "55 of 70 recent guests talk about the food, nearly all positively. I chose from 17 dishes on my test dinner."),
         ("Is it loud?", "No. A pianist and singer play lounge music, quiet enough to talk. There is no loud folk show."),
         ("Can I reserve a window table?", "No. Legenda doesn't take seat or table requests, whatever you book: tables are assigned on board."),
-        ("Can I cancel or change the date?", "Booked direct with Legenda, cancellation is free up to 72 hours before. You can also move your ticket to another day, if seats are free; it doesn't have to be done at the pier.")],
+        ("Can I cancel or change the date?", "Booked direct with Legenda, cancellation is free up to 72 hours before. You can also move your ticket to another day, if seats are free.")],
     HK: [("Is the food good?", "44 of 61 recent guests talk about the food, almost all positively. 2 found it lukewarm or a bit dry."),
          ("Show or sightseeing?", "A show night. The band plays requests at the tables and the dancers come round for photos; you can step out on deck to watch the city."),
          ("Set menu or buffet?", "The listing shows three set menus served at your table. 6 of 61 recent guests had a buffet on their date."),
@@ -243,7 +243,7 @@ FILTER_CATS = {
 #    100% of the amount is to be refunded"; within 24 h not refundable. (Their T&C mentions a 10% fee; the owner chose the FAQ.)
 TRUST = {
     "gyg": ["<b>Pay nothing today</b>, pay closer to the date", "<b>Free cancellation</b> up to 24 h before, full refund"],
-    "legenda": ["<b>Change your date</b> anywhere, not just at the pier", "<b>Free cancellation</b> up to 72 h before, full refund"],
+    "legenda": ["<b>Change your date</b> if your plans change", "<b>Free cancellation</b> up to 72 h before, full refund"],
     "silverline": ["<b>Free date change</b> up to 24 h before", "<b>Free cancellation</b> up to 24 h before, full refund"],
 }  # exactly 2 per card, free cancellation always 2nd (owner's rule)
 REVIEW_TERMS = {  # (buy-card perk, buy-card trust line, quick-facts cancellation row)
