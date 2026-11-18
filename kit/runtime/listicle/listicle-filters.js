@@ -64,6 +64,8 @@
     var bb=box.getBoundingClientRect(), db=deck.getBoundingClientRect();
     var on = bb.bottom < top && db.bottom > top + 160;
     if(mini.classList.contains('is-on')!==on){ mini.classList.toggle('is-on',on); mini.setAttribute('aria-hidden',on?'false':'true'); }
+    // hidden bar: keep its button out of the tab order too (aria-hidden alone leaves it focusable)
+    if(mini.inert===on) mini.inert=!on;
   }
   window.addEventListener('scroll',function(){ if(!ticking){ ticking=true; requestAnimationFrame(upd); } },{passive:true});
   window.addEventListener('resize',upd);
