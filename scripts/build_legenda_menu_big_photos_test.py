@@ -17,7 +17,10 @@ CSS = {
 "grid": """
 .dc-pm .sec{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 10px;align-items:start}
 @media (max-width:480px){.dc-pm .sec{grid-template-columns:1fr 1fr}}
-.dc-pm .dish:not(:has(.dc-dish-photo))::before{content:"🍽";display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:4/3;box-sizing:border-box;margin:0 0 6px;border-radius:6px;border:1px dashed #d9c79e;background:#fdf8ec;font-size:22px;opacity:.7}
+.dc-pm .sec:not(:has(.dc-dish-photo)){display:block}
+.dc-pm .sec:not(:has(.dc-dish-photo)) .ou{display:block}
+.dc-pm .sec:not(:has(.dc-dish-photo)) .dish{margin:6px 0;font-size:14px}
+.dc-pm .sec:has(.dc-dish-photo) .dish:not(:has(.dc-dish-photo))::before{content:"🍽";display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:4/3;box-sizing:border-box;margin:0 0 6px;border-radius:6px;border:1px dashed #d9c79e;background:#fdf8ec;font-size:22px;opacity:.7}
 .dc-pm .sec h4{grid-column:1/-1;margin-bottom:0}
 .dc-pm .sec .ou{display:none}
 .dc-pm .dish{margin:0;font-size:13px;line-height:1.3}
@@ -27,7 +30,7 @@ CSS = {
 .dc-pm .sec .ou{display:none}
 .dc-pm .dish{display:flex;align-items:center;gap:12px;text-align:left;max-width:440px;margin:0 auto;padding:7px 0;border-top:1px solid #f1e8d6;font-size:15px;line-height:1.3}
 .dc-pm .sec h4+.dish{border-top:0}
-.dc-pm .dish:not(:has(.dc-dish-photo)){padding-left:84px}
+.dc-pm .sec:has(.dc-dish-photo) .dish:not(:has(.dc-dish-photo)){padding-left:84px}
 .dc-pm .dish .dc-dish-photo{flex:0 0 72px;width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid #eadfca;background:#fff}
 .dc-pm .dish .pair{margin-top:3px}
 """,
@@ -37,20 +40,20 @@ MOBILE = {
 @media (max-width:600px){
 .ltt-bento-group-body>.dc-carte-wrap:has(.dc-pm){margin-left:-12px;margin-right:-12px}
 .dc-carte.dc-pm{padding:20px 10px}
-.dc-carte.dc-pm::before{inset:5px}
+.dc-carte.dc-pm::before{display:none}
 }""",
 "grid": """
 @media (max-width:600px){
 .dc-pm .sec{grid-template-columns:1fr 1fr;gap:12px 8px}
 .dc-pm .dish{font-size:12.5px;line-height:1.25}
 .dc-pm .dish .pair{font-size:10.5px}
-.dc-pm .dish:not(:has(.dc-dish-photo))::before{font-size:18px}
+.dc-pm .sec:has(.dc-dish-photo) .dish:not(:has(.dc-dish-photo))::before{font-size:18px}
 }""",
 "list": """
 @media (max-width:600px){
 .dc-pm .dish{gap:10px;font-size:14px;padding:6px 0}
 .dc-pm .dish .dc-dish-photo{flex-basis:56px;width:56px;height:56px;border-radius:6px}
-.dc-pm .dish:not(:has(.dc-dish-photo)){padding-left:66px}
+.dc-pm .sec:has(.dc-dish-photo) .dish:not(:has(.dc-dish-photo)){padding-left:66px}
 }""",
 }
 OUT = {"grid": "best-dinner-cruises-budapest-test-menu.html", "list": "best-dinner-cruises-budapest-test-menu-list.html"}
