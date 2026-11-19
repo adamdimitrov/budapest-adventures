@@ -109,7 +109,7 @@ def process(path):
         done += 1
     assert done == 2, (path, done)
     # photo teaser button at the bottom of Legenda's Food box (deck card)
-    s = re.sub(r'<button class="dc-food-photos".*?</button>', "", s, flags=re.S)
+    s = re.sub(r'<button class="dc-food-photos" data-dc-menu="legenda".*?</button>', "", s, flags=re.S)
     m = re.search(r'<button aria-haspopup="dialog" class="dc-food-btn" data-dc-menu="legenda" type="button">([^<]*)</button>', s)
     assert m, path
     label = m.group(1).replace("↗", "").strip()
@@ -141,7 +141,7 @@ if __name__ == "__main__":
         new = process(p)
         cur = open(p, encoding="utf-8").read()
         if check:
-            n = cur.count('class="dc-dish-photo"')
+            n = cur.count(f'class="dc-dish-photo" src="{A}')
             if n != 2 * N:
                 print("missing photos:", p, n); bad += 1
         elif new != cur:
