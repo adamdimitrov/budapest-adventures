@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Dish photos in the set-menu cartes on /best-dinner-cruises-budapest and all translations:
 Hungária Koncert (menus A/B/C), Budapest Sightseeing (4 set menus), the Goulash & Lángos supper
-and Silverline (one dessert, from our own test dinner). On the EN page only, each of those cards'
-Food box also gets a Legenda-style photo button (thumbnails + "N dish photos" + Full menu).
+Silverline and River Diva (buffet gallery). On every language, each card's
+Food box also gets a Legenda-style photo button (thumbnails + localized "N dish photos" + Full menu).
 
 Photos are the operators' own listing photos (GetYourGuide galleries), cropped to one dish each,
 only where the plate clearly is the menu dish. Placed by carte tier + course + position, so it
@@ -11,7 +11,9 @@ works in every language. Covers the breakdown cartes and the modal templates. Id
     python3 scripts/dinner_set_menu_photos.py --check  # exit 1 if a page is missing photos
 Legenda (à la carte grid) is handled by scripts/legenda_menu_photos.py.
 """
-import html, re, subprocess, sys
+import html, os, re, subprocess, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from legenda_menu_photos import PHOTOS_TXT  # "{n} dish photos" in all 22 languages
 
 A = "/assets/best-dinner-cruises-budapest/menu-photos/"
 # (brand prefix, data-tier) -> {course: [photo per dish position, None = no photo]}
@@ -28,14 +30,14 @@ MAP = {
     ("Silverline", "all"): {"starter": ["sl-panzanella"], "soup": ["sl-beef-ragout-soup", None],
                             "main": ["sl-walnut-cod", None, None, "sl-sweet-potato"],
                             "dessert": ["sl-coriander-lemon-curd", None, None]},
-    # River Diva winter buffet (EN only; translations still carry an older buffet): sections are all
+    # River Diva winter buffet: sections are all
     # data-sec="x", so they are keyed by index. #3 = mains, Korean-style fried chicken thigh is 5th.
     ("River Diva", "buffet"): {"#3": [None, None, None, None, "rd-korean-chicken", None, None]},
 }
-EN_ONLY = {("River Diva", "buffet")}
-# River Diva: a buffet gallery at the top of its carte (EN only)
+EN_ONLY = set()
+# River Diva: a buffet gallery at the top of its carte
 BUFFET = ["rd-buffet-salmon", "rd-buffet-croquettes", "rd-buffet-chicken-rice", "rd-buffet-line"]
-# Food-box photo button (EN page only): data-dc-menu -> thumbnails in display order (all photos of that menu)
+# Food-box photo button (all languages): data-dc-menu -> thumbnails in display order (all photos of that menu)
 TEASER = {
     "hk": ["hk-pork-tenderloin", "hk-chicken-paprikash", "hk-pasta-marinara", "hk-somloi-galuska", "hk-starter-dips", "gl-goulash-soup"],
     "seesight": ["ss-roast-duck", "ss-veal-stew", "ss-goat-cheese", "ss-chicken-paprikash", "ss-goulash-soup"],
@@ -43,7 +45,22 @@ TEASER = {
     "silverline": ["sl-walnut-cod", "sl-sweet-potato", "sl-panzanella", "sl-coriander-lemon-curd", "sl-beef-ragout-soup"],
     "diva": ["rd-buffet-salmon", "rd-buffet-croquettes", "rd-korean-chicken", "rd-buffet-line", "rd-buffet-chicken-rice"],
 }
-TEASER_WORD = {"diva": "buffet photo"}
+ONE_TXT = {  # "1 dish photo"
+    "en": "1 dish photo", "bg": "1 снимка на ястие", "cs": "1 fotka jídla", "de": "1 Foto vom Gericht",
+    "el": "1 φωτογραφία πιάτου", "es": "1 foto del plato", "fr": "1 photo du plat", "he": "תמונה אחת של המנה",
+    "hr": "1 fotografija jela", "hu": "1 ételfotó", "it": "1 foto del piatto", "ja": "料理の写真1枚",
+    "ko": "요리 사진 1장", "nl": "1 foto van het gerecht", "pl": "1 zdjęcie dania", "pt": "1 foto do prato",
+    "ro": "1 fotografie cu preparatul", "ru": "1 фото блюда", "sk": "1 fotografia jedla", "sr": "1 фотографија јела",
+    "tr": "1 yemek fotoğrafı", "uk": "1 фото страви",
+}
+BUFFET_TXT = {  # "{n} buffet photos" (n = 5)
+    "en": "{n} buffet photos", "bg": "{n} снимки от бюфета", "cs": "{n} fotek z bufetu", "de": "{n} Fotos vom Buffet",
+    "el": "{n} φωτογραφίες από τον μπουφέ", "es": "{n} fotos del bufé", "fr": "{n} photos du buffet", "he": "{n} תמונות מהמזנון",
+    "hr": "{n} fotografija s bifea", "hu": "{n} büféfotó", "it": "{n} foto del buffet", "ja": "ビュッフェの写真{n}枚",
+    "ko": "뷔페 사진 {n}장", "nl": "{n} foto's van het buffet", "pl": "{n} zdjęć bufetu", "pt": "{n} fotos do bufê",
+    "ro": "{n} fotografii de la bufet", "ru": "{n} фото шведского стола", "sk": "{n} fotografií z bufetu",
+    "sr": "{n} фотографија са бифеа", "tr": "{n} açık büfe fotoğrafı", "uk": "{n} фото шведського столу",
+}
 EN = "best-dinner-cruises-budapest.html"
 CSS = """<style id="dc-set-photos-css">
 .dc-pms .dish .dc-dish-photo{display:block;width:min(300px,100%);height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin:6px auto 6px;border:1px solid #eadfca;background:#fff}
@@ -55,7 +72,7 @@ CSS = """<style id="dc-set-photos-css">
 </style>"""
 
 
-def teaser(s, menu, keys):
+def teaser(s, menu, keys, lang):
     m = re.search(r'<button aria-haspopup="dialog" class="dc-food-btn" data-dc-menu="%s" type="button">([^<]*)</button>' % menu, s)
     assert m, menu
     label = m.group(1).replace("↗", "").strip()
@@ -68,7 +85,7 @@ def teaser(s, menu, keys):
     tiles = "".join(
         f'<span{more if (i == 3 and n > 4) else ""}><img src="{A}{k}-sq.webp" alt="" width="240" height="240" loading="lazy" decoding="async"></span>'
         for i, k in enumerate(shown))
-    txt = f"{n} {TEASER_WORD.get(menu, 'dish photo')}" + ("s" if n != 1 else "")
+    txt = (BUFFET_TXT[lang] if menu == "diva" else ONE_TXT[lang] if n == 1 else PHOTOS_TXT[lang]).format(n=n)
     btn = (f'<button class="dc-food-photos{" one" if n == 1 else ""}" data-dc-menu="{menu}" aria-haspopup="dialog" type="button">'
            f'<span class="th n{len(shown)}" aria-hidden="true">{tiles}</span><span class="tx"><span>📷 {txt}</span> <b>{label} ↗</b></span></button>')
     return s[:food_end] + btn + s[food_end:]
@@ -125,14 +142,14 @@ def process(path):
         blk = tag + do_carte(blk[len(m.group(0)):], plan, brand, path)
         blk = re.sub(r'<div class="dc-buffet-pics">.*?</div>', "", blk, flags=re.S)
         if hit == ("River Diva", "buffet"):
-            pics = "".join(f'<img src="{A}{k}.webp" alt="River Diva winter buffet" width="600" height="450" loading="lazy" decoding="async">' for k in BUFFET)
+            pics = "".join(f'<img src="{A}{k}.webp" alt="River Diva" width="600" height="450" loading="lazy" decoding="async">' for k in BUFFET)
             blk = blk.replace('<div class="dc-hl-count"></div>', '<div class="dc-hl-count"></div><div class="dc-buffet-pics">' + pics + '</div>', 1)
         s = s[:a] + blk + s[b:]
         n += sum(1 for v in plan.values() for k in v if k)
     s = re.sub(r'<button class="dc-food-photos[^"]*" data-dc-menu="(?!legenda")[^"]*".*?</button>', "", s, flags=re.S)
-    if path == EN:
-        for menu, keys in TEASER.items():
-            s = teaser(s, menu, keys)
+    lang = path.split("/")[0] if "/" in path else "en"
+    for menu, keys in TEASER.items():
+        s = teaser(s, menu, keys, lang)
     s = re.sub(r'<style id="dc-set-photos-css">.*?</style>', "", s, flags=re.S)
     s = s.replace("</head>", CSS + "</head>", 1)
     return s, n
