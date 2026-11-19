@@ -35,6 +35,9 @@
 .bpa-card:has(.cd-pdd[open]){position:relative;z-index:60}
 .bpa-card:has(.cd-pdd[open]),.bpa-card:has(.cd-pdd[open]) *:not(.cd-gal):not(.cd-gal *){overflow:visible!important}
 @media (max-width:767px){.cd-pdd-pop{right:auto;left:-4px;width:min(270px,calc(100vw - 56px))}}
+/* Right-to-left pages (he): the price box sits on the other side, so the popover opens the other way */
+[dir=rtl] .cd-pdd-pop{right:auto;left:-6px;text-align:right}
+@media (max-width:767px){[dir=rtl] .cd-pdd-pop{left:auto;right:-4px}}
 /* Access pill marks */
 .cd-yes{color:#15803d;font-weight:800}.cd-no{color:#b45309;font-weight:800}
 
