@@ -579,7 +579,11 @@ def build(lang):
 
 
 if __name__ == "__main__":
-    langs = sys.argv[1:] or list(PAGES)
+    langs = sys.argv[1:] or [lg for lg in PAGES if lg != "en"]
+    if "en" in langs:
+        # The English page is on the shared listicle design: its cards come from
+        # data/listicles/best-private-boat-tours-budapest.json (scripts/listicle.py build).
+        sys.exit("en is built from data/listicles/best-private-boat-tours-budapest.json; edit that and run scripts/listicle.py build")
     if "hu" in langs and "de" not in langs:
         langs = ["de"] + langs
     for lg in langs:
