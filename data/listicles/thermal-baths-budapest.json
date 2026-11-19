@@ -1,0 +1,1603 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["palace", "outdoor", "late", "online", "tested"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Overall",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Széchenyi Thermal Bath"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12f890d9668187cda50a6_1_Sz%C3%A9chenyi%20Thermal%20Bath.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Széchenyi Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7a8d6a973a0c983a7095a_11Szechenyi-bath-ourdoor-pool.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Széchenyi Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7a8c8c9fdf77e1c5197bf_10-Szechenyi-bath-outdoor-lap-pool.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Széchenyi Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7b108d4bc082efa13bf83_12-Szechenyi-bath-indoor-pool-1.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Széchenyi Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7b1876a1ea8dedc6fb379_14-Szechenyi-bath-indoor-pool-3.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Széchenyi Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7b4187c0010e65f20f953_15-Szechenyi-bath-aroma-sauna.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Széchenyi Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b6a6449efb8b06f9af724c_01-Szechenyi-bath-entrance.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Széchenyi Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b6a69a5ab0f3b16f839aa2_02-Szechenyi-bath-ticket-office.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Széchenyi Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b6a6b19f9458bcf5a7b66c_03-Szechenyi-bath-online-ticket-validation.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Széchenyi Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7a540343999e752fcbdd0_05-Szechenyi-bath-locker-room.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Széchenyi Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b6b7ed2c5ca7263d3ae36e_08-Szechenyi-bath-cabins.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Széchenyi Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b6bcf22c5ca7263d424207_09-Szechenyi-bath-what-to-bring.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12f890d9668187cda50a6_1_Sz%C3%A9chenyi%20Thermal%20Bath.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7a8d6a973a0c983a7095a_11Szechenyi-bath-ourdoor-pool.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7a8c8c9fdf77e1c5197bf_10-Szechenyi-bath-outdoor-lap-pool.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7b108d4bc082efa13bf83_12-Szechenyi-bath-indoor-pool-1.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7b1876a1ea8dedc6fb379_14-Szechenyi-bath-indoor-pool-3.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7b4187c0010e65f20f953_15-Szechenyi-bath-aroma-sauna.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b6a6449efb8b06f9af724c_01-Szechenyi-bath-entrance.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b6a69a5ab0f3b16f839aa2_02-Szechenyi-bath-ticket-office.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b6a6b19f9458bcf5a7b66c_03-Szechenyi-bath-online-ticket-validation.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7a540343999e752fcbdd0_05-Szechenyi-bath-locker-room.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b6b7ed2c5ca7263d3ae36e_08-Szechenyi-bath-cabins.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64b6bcf22c5ca7263d424207_09-Szechenyi-bath-what-to-bring.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "City Park, District XIV",
+    "⏱️ Half Day",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Sz%C3%A9chenyi+Gy%C3%B3gyf%C3%BCrd%C5%91+%C3%81llatkerti+k%C3%B6r%C3%BAt+9-11+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "M1 Széchenyi fürdő"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-thermal-baths-card-szechenyi&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Széchenyi Thermal Bath"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.27",
+     "score": "4.3",
+     "meta": "32k+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.3",
+       "count": "(29.2k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=november-rating-szechenyi&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Tiqets",
+       "score": "4.4",
+       "count": "(1.2k+)",
+       "url": "https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-szechenyi-spa-full-day-entry-p974376/?partner=thecruisedetective.com-176436&tq_campaign=thermal-baths-budapest-en-pop",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "/assets/cdn/652d0405192ba076b04f74a3/6852917a8b23e16d4296b394_tiqets-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Viator",
+       "score": "3.8",
+       "count": "(2.3k+)",
+       "url": "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=thermal_baths_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FPrivate-Entrance-to-Szechenyi-Spa-in-Budapest-with-Optional-Massage%2Fd499-5808SZECHENYI",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "✓ Personally Tested",
+     "pop_html": "<strong>I visited Széchenyi myself.</strong> Most of the photos on this card are my own.<span class=\"bpa-lang-note\">What I checked: pools, changing rooms, crowds and value for money. <a href=\"#item-1-szechenyi\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "Daily · 7:00–20:00",
+     "pop_html": "<strong>Mon–Thu</strong> 7:00–20:00 · <strong>Fri</strong> 7:00–22:00 · <strong>Sat–Sun</strong> 8:00–20:00. 8 December 2026: closes at 16:00. 18 December 2026 to 6 January 2027: opens at 8:00. 25 and 26 December and 1 January: opens at 10:00.<span class=\"bpa-lang-note\">Hours change by season and on holidays.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🏊",
+     "label": "3 outdoor + 15 indoor pools",
+     "pop_html": "<strong>Outdoor:</strong> swimming pool 26–28 °C, thermal pool 36–38 °C, adventure pool 32–34 °C. <strong>Indoor:</strong> medicinal pools 28–40 °C and plunge pools at 18 °C and 40 °C.<span class=\"bpa-lang-note\">Temperatures from szechenyifurdo.hu; the pool count is from the ticket listings.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎟️",
+     "label": "Locker or cabin",
+     "pop_html": "<strong>GetYourGuide (Thu 19 Nov 2026):</strong> Morning Pass with locker, entry 7:00–9:00, €39 · Weekday Pass with locker €46 · Weekday Pass with private cabin €50. <strong>At the desk (2026):</strong> locker ticket 13,200 HUF Mon–Thu, 14,800 HUF Fri–Sun, 15,800 HUF in peak periods; cabin +1,000 HUF.<span class=\"bpa-lang-note\">Desk prices from szechenyifurdo.hu/arak-2026.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎉",
+     "label": "Sparty on Saturdays",
+     "pop_html": "<strong>Sparty</strong> is the Saturday night pool party at Széchenyi: from €73 on GetYourGuide (start 21:30), or €100 with two drink coupons. 18+ only and <strong>non-refundable</strong>. <a href=\"https://www.getyourguide.com/budapest-l29/budapest-the-ultimate-late-night-spa-party-ticket-t386559/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-sparty-szechenyi&amp;mkt_cmp=true\" rel=\"nofollow sponsored noopener\" target=\"_blank\">See Sparty tickets →</a><span class=\"bpa-lang-note\">Prices for Saturday 21 November 2026.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the classic Budapest bath: big outdoor pools in a yellow neo-baroque palace, open until 22:00 on Fridays.",
+    "skip_html": "if you want quiet: it gets busy from late morning, so come at 7:00 on a weekday or pick Lukács or Veli Bej."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is Széchenyi worth it?",
+      "a": "Yes, for a first visit. It is the biggest and most photogenic bath in Budapest. Go early on a weekday to avoid the crowds."
+     },
+     {
+      "q": "When is it least crowded?",
+      "a": "Between 7:00 and 10:00 on a weekday. By late morning the outdoor pools are packed."
+     },
+     {
+      "q": "Locker or cabin?",
+      "a": "A standard ticket includes a locker in the gender-separated changing area, opened with a plastic wristwatch (3,000 HUF if lost). A private cabin costs 1,000 HUF extra."
+     },
+     {
+      "q": "Are towels included?",
+      "a": "No. Bring a swimsuit, towel and flip-flops; the desk sells a towel for 6,900 HUF, slippers for 4,200 HUF and a swim cap for 2,100 HUF."
+     },
+     {
+      "q": "Can I bathe at night?",
+      "a": "It is open until 22:00 on Fridays. Sparty, the Saturday night pool party, is sold separately: 18+, from €73, non-refundable."
+     }
+    ]
+   },
+   "price": {
+    "main": "€39",
+    "sub": "per adult · Mon–Thu, entry by 9:00",
+    "rows": [
+     {
+      "label": "Morning Pass",
+      "small": "locker, Mon–Thu entry 7:00–9:00",
+      "price": "€39"
+     },
+     {
+      "label": "Weekday Pass",
+      "small": "locker",
+      "price": "€46"
+     },
+     {
+      "label": "Weekday Pass",
+      "small": "private cabin",
+      "price": "€50"
+     },
+     {
+      "label": "At the desk",
+      "small": "locker, Mon–Thu",
+      "price": "13,200 HUF"
+     },
+     {
+      "label": "At the desk",
+      "small": "locker, Fri–Sun",
+      "price": "14,800 HUF"
+     }
+    ],
+    "note": "Online price for Thu 19 Nov 2026; desk prices from the bath's 2026 price list. <a href=\"/szechenyi-baths-budapest\">All Széchenyi tickets →</a>"
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-thermal-baths-button-szechenyi&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-1-szechenyi",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-2",
+   "cats": ["turkish", "outdoor", "late", "online", "tested"],
+   "gallery": {
+    "rank": {
+     "text": "🕌 #2 Best Turkish Bath &amp; Rooftop",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      ["alt", "Rudas Thermal Bath"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12fda4ee7c50a6cee3178_3_1%20Rudas%20Thermal%20Bath.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6d882d74213380c1f24_Rudas-thermal-bath%20(11).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e674b2871f3b832c1681_Rudas-thermal-bath%20(15).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e7021d502805c7a7c112_Rudas-thermal-bath%20(18).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e74e82fd0ed0adc4f09c_Rudas-thermal-bath%20(2).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e65e09406b071f265969_Rudas-thermal-bath%20(14).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6a5a89136c45fd1d9fc_Rudas-thermal-bath%20(20).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e69c6efb73a26f9877f6_Rudas-thermal-bath%20(19).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e79648d7f0b7f7ac4062_Rudas-thermal-bath%20(8).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12fda4ee7c50a6cee3178_3_1%20Rudas%20Thermal%20Bath.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6d882d74213380c1f24_Rudas-thermal-bath%20(11).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e674b2871f3b832c1681_Rudas-thermal-bath%20(15).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e7021d502805c7a7c112_Rudas-thermal-bath%20(18).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e74e82fd0ed0adc4f09c_Rudas-thermal-bath%20(2).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e65e09406b071f265969_Rudas-thermal-bath%20(14).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6a5a89136c45fd1d9fc_Rudas-thermal-bath%20(20).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e69c6efb73a26f9877f6_Rudas-thermal-bath%20(19).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e79648d7f0b7f7ac4062_Rudas-thermal-bath%20(8).webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Elizabeth Bridge, District I",
+    "⏱️ 3–4 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Rudas+Gy%C3%B3gyf%C3%BCrd%C5%91+D%C3%B6brentei+t%C3%A9r+9+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Tram 19, 41 · Bus 7"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-thermal-baths-card-rudas&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Rudas Thermal Bath"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.19",
+     "score": "4.2",
+     "meta": "1.4k+ reviews · GetYourGuide",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.2",
+       "count": "(1.4k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-thermal-baths-rating-rudas&mkt_cmp=true",
+       "rel": "nofollow sponsored noopener",
+       "target": "_blank",
+       "_nl": "\n"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "✓ Personally Tested",
+     "pop_html": "<strong>I visited Rudas myself.</strong><span class=\"bpa-lang-note\">What I checked: pools, changing rooms, crowds and value for money. <a href=\"#item-2-rudas\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "Daily · 6:00–20:00",
+     "pop_html": "<strong>Wellness:</strong> Mon 6:00–22:00, Tue–Sun 6:00–20:00. <strong>Night bathing:</strong> Fri and Sat 22:00–3:00 (15,000 HUF, online tickets only). 8 December 2026: closes at 16:00.<span class=\"bpa-lang-note\">Hours change by season and on holidays.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🚻",
+     "label": "Men / women days",
+     "pop_html": "<strong>Turkish bath, men only:</strong> Mon, Thu and Fri 6:00–10:45, Wed 6:00–20:00. <strong>Women only:</strong> Tue 6:00–20:00. <strong>Mixed:</strong> Mon 11:00–22:00, Thu and Fri 11:00–20:00, Sat and Sun 6:00–20:00.<span class=\"bpa-lang-note\">From the official timetable on rudasfurdo.hu.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🏊",
+     "label": "Rooftop pool 36 °C",
+     "pop_html": "<strong>Panorama pool</strong> on the roof at 36 °C. <strong>Turkish bath:</strong> six pools at 16, 28, 30, 33, 36 and 42 °C. <strong>Wellness:</strong> pools at 11, 32, 36 and 42 °C. <strong>Swimming pool:</strong> 29 °C.<span class=\"bpa-lang-note\">From rudasfurdo.hu.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎟️",
+     "label": "What the ticket includes",
+     "pop_html": "The GetYourGuide ticket is a <strong>day pass plus a 3-course meal</strong> at Rudas Bistro: wellness + coffee €74.99, wellness + wine €76.99, Turkish bath + wellness + coffee €84.99. <strong>At the desk:</strong> all zones 12,000 HUF Mon–Thu, 15,000 HUF Fri–Sun, without a meal.<span class=\"bpa-lang-note\">Prices for Thursday 19 November 2026.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🔞",
+     "label": "14+ · not step-free",
+     "pop_html": "Children under 14 are not admitted. The bath currently cannot receive guests with reduced mobility for technical reasons.<span class=\"bpa-lang-note\">From rudasfurdo.hu.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for an Ottoman-era Turkish bath under a stone dome plus a rooftop hot pool with a Danube view, and for night bathing on weekends.",
+    "skip_html": "if you travel with kids under 14, need step-free access, or only want a bath ticket without the meal."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is Rudas better than Széchenyi?",
+      "a": "For atmosphere, often yes: the Ottoman Turkish bath and the rooftop pool are unique. For a family day out, no: Rudas admits no under-14s."
+     },
+     {
+      "q": "When are the men-only and women-only days?",
+      "a": "Men: Mon, Thu and Fri 6:00–10:45 and all day Wednesday. Women: all day Tuesday. Weekends are mixed."
+     },
+     {
+      "q": "Can I go at night?",
+      "a": "Yes, Friday and Saturday 22:00–3:00. Night tickets are sold online only: 15,000 HUF (18,000 HUF on 1 and 2 January 2027). Night buses 907 and 973 run afterwards."
+     },
+     {
+      "q": "What does this ticket include?",
+      "a": "A day pass plus a 3-course meal at Rudas Bistro, from €74.99. A plain entry ticket is only sold at the desk."
+     },
+     {
+      "q": "Can I bring children?",
+      "a": "No. There are no children under 14, and currently no access for guests with reduced mobility."
+     }
+    ]
+   },
+   "price": {
+    "main": "€74.99",
+    "sub": "per adult · bath + 3-course meal",
+    "rows": [
+     {
+      "label": "Day pass + 3-course meal",
+      "price": "€74.99"
+     },
+     {
+      "label": "At the desk",
+      "small": "all zones, Mon–Thu",
+      "price": "12,000 HUF"
+     },
+     {
+      "label": "At the desk",
+      "small": "all zones, Fri–Sun",
+      "price": "15,000 HUF"
+     },
+     {
+      "label": "Turkish bath only",
+      "small": "Mon, Thu, Fri until 10:45",
+      "price": "8,000 HUF"
+     },
+     {
+      "label": "Night bathing",
+      "small": "Fri–Sat 22:00–3:00, online only",
+      "price": "15,000 HUF"
+     }
+    ],
+    "note": "Online price for Thu 19 Nov 2026; desk prices from the bath's 2026 price list."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-thermal-baths-button-rudas&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "Includes a 3-course meal"],
+    "sublink": {
+     "url": "#item-2-rudas",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-3",
+   "cats": ["late", "quiet", "online"],
+   "gallery": {
+    "rank": {
+     "text": "🌿 #3 Best Local Bath",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      ["alt", "Lukács Thermal Bath"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12ff6ce1b4b5efd14b0fb_5_Luk%C3%A1cs%20Thermal%20Bath.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Lukács Thermal Bath"],
+      ["data-src", "/assets/thermal-baths-2026/lukacs-outdoor-pool-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Lukács Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e8f7b533d16e8b2d5fdc_Lukacs-thermal-bath%20(2).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Lukács Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e84b26762fdfb9cbb893_Lukacs-thermal-bath%20(5).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Lukács Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e92988143c95074f1bf5_Lukacs-thermal-bath%20(3).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Lukács Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e9500da218e95c8c6206_Lukacs-thermal-bath%20(7).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Lukács Thermal Bath"],
+      ["data-src", "/assets/thermal-baths-2026/lukacs-courtyard-01.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Lukács Thermal Bath"],
+      ["data-src", "/assets/thermal-baths-2026/lukacs-courtyard-plaques-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Lukács Thermal Bath"],
+      ["data-src", "/assets/thermal-baths-2026/lukacs-hall-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Lukács Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e96a1d502805c7aa86c8_Lukacs-thermal-bath%20(12).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12ff6ce1b4b5efd14b0fb_5_Luk%C3%A1cs%20Thermal%20Bath.webp"
+     },
+     {
+      "src": "/assets/thermal-baths-2026/lukacs-outdoor-pool-04.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e8f7b533d16e8b2d5fdc_Lukacs-thermal-bath%20(2).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e84b26762fdfb9cbb893_Lukacs-thermal-bath%20(5).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e92988143c95074f1bf5_Lukacs-thermal-bath%20(3).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e9500da218e95c8c6206_Lukacs-thermal-bath%20(7).webp"
+     },
+     {
+      "src": "/assets/thermal-baths-2026/lukacs-courtyard-01.avif"
+     },
+     {
+      "src": "/assets/thermal-baths-2026/lukacs-courtyard-plaques-02.avif"
+     },
+     {
+      "src": "/assets/thermal-baths-2026/lukacs-hall-03.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e96a1d502805c7aa86c8_Lukacs-thermal-bath%20(12).webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Buda, District II",
+    "⏱️ 2–3 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Luk%C3%A1cs+Gy%C3%B3gyf%C3%BCrd%C5%91+Frankel+Le%C3%B3+%C3%BAt+25-29+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Tram 4, 6, 17, 19"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-lukacs-thermal-bath-full-day-spa-ticket-t439700/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-thermal-baths-card-lukacs&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Lukács Thermal Bath"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "3.98",
+     "score": "4.0",
+     "meta": "430+ reviews · 3 sites",
+     "heading": "Average of 3 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.0",
+       "count": "(360+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-lukacs-thermal-bath-full-day-spa-ticket-t439700/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=thermal-baths-budapest-en-pop&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Tiqets",
+       "score": "4.1",
+       "count": "(20+)",
+       "url": "https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-budapest-lukacs-thermal-bath-p1053009/?partner=thecruisedetective.com-176436&tq_campaign=thermal-baths-budapest-en-pop",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "/assets/cdn/652d0405192ba076b04f74a3/6852917a8b23e16d4296b394_tiqets-logo.avif"
+      },
+      {
+       "kind": "static",
+       "site": "Viator",
+       "score": "3.7",
+       "count": "(40+)"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "Daily · 7:00–19:00",
+     "pop_html": "<strong>Mon, Wed–Sun</strong> 7:00–19:00 · <strong>Tue</strong> 7:00–22:00. The online ticket has a 9:00–17:00 window for Thu 19 Nov.<span class=\"bpa-lang-note\">Hours change by season and on holidays.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🏊",
+     "label": "Medicinal pools 32–40 °C",
+     "pop_html": "<strong>Indoor medicinal pools</strong> at 32, 36 and 40 °C, a 20 °C cold pool and a 20 °C Kneipp foot path. <strong>Outdoor:</strong> adventure pool 33–35 °C and swimming pools at 22 and 26 °C.<span class=\"bpa-lang-note\">From lukacsfurdo.hu.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎟️",
+     "label": "Cabin or locker",
+     "pop_html": "The GetYourGuide ticket is a full-day entry with a cabin or locker, depending on availability: €33. <strong>At the desk (2026):</strong> 7,000 HUF Mon–Thu, 8,000 HUF Fri–Sun; sauna world +1,300 HUF.<span class=\"bpa-lang-note\">Prices for Thursday 19 November 2026.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🔞",
+     "label": "14+ · partial closures",
+     "pop_html": "Children under 14 are not admitted. The wheelchair lifts are out of order for technical reasons, and the private tub service is closed for renovation.<span class=\"bpa-lang-note\">From lukacsfurdo.hu.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a smaller bath with strong medicinal pools, open until 22:00 on Tuesdays.",
+    "skip_html": "if you want grand architecture or a party feel, or if you travel with kids under 14."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is Lukács a good alternative to Széchenyi?",
+      "a": "Yes, if you want thermal water without the crowds. It is smaller and plainer, closer to a local bath than a tourist sight."
+     },
+     {
+      "q": "How hot are the pools?",
+      "a": "Indoor medicinal pools at 32, 36 and 40 °C, a 20 °C cold pool, an outdoor adventure pool at 33–35 °C and swimming pools at 22 and 26 °C."
+     },
+     {
+      "q": "Is it open late?",
+      "a": "Until 22:00 every Tuesday. The other days it is open 7:00–19:00."
+     },
+     {
+      "q": "Is it step-free?",
+      "a": "Not right now: the wheelchair lifts are out of order and the private tubs are closed for renovation."
+     },
+     {
+      "q": "How do I find it?",
+      "a": "Frankel Leó út 25-29: tram 4, 6, 17 or 19, bus 9 or 109, or the HÉV to Margit híd, budai hídfő. Veli Bej is on the same street, so do not mix them up."
+     }
+    ]
+   },
+   "price": {
+    "main": "€33",
+    "sub": "per adult · full day",
+    "rows": [
+     {
+      "label": "Full day",
+      "small": "cabin or locker",
+      "price": "€33"
+     },
+     {
+      "label": "At the desk",
+      "small": "Mon–Thu",
+      "price": "7,000 HUF"
+     },
+     {
+      "label": "At the desk",
+      "small": "Fri–Sun",
+      "price": "8,000 HUF"
+     },
+     {
+      "label": "Last 2 hours",
+      "small": "weekdays, desk",
+      "price": "3,800 HUF"
+     },
+     {
+      "label": "Sauna world",
+      "small": "desk",
+      "price": "+1,300 HUF"
+     }
+    ],
+    "note": "Online price for Thu 19 Nov 2026; desk prices from the bath's 2026 price list."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-lukacs-thermal-bath-full-day-spa-ticket-t439700/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-thermal-baths-button-lukacs&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> until the day before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-3-lukacs",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-4",
+   "cats": ["outdoor", "kids", "online", "under30", "tested"],
+   "gallery": {
+    "rank": {
+     "text": "👨‍👩‍👧 #4 Best for Families",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Palatinus Bath on Margaret Island"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8e6b766876604f3f8c23_Palatinus-thermal-bath%20(17).webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Palatinus Bath on Margaret Island"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8f8fd37f8cd657bd715b_Palatinus-thermal-bath%20(8).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Palatinus Bath on Margaret Island"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8fa2df86e673a1cc4b13_Palatinus-thermal-bath%20(14).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Palatinus Bath on Margaret Island"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8ff83b619fe50e977ede_Palatinus-thermal-bath%20(16).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Palatinus Bath on Margaret Island"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8fbc66506a1a5941c104_Palatinus-thermal-bath%20(15).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Palatinus Bath on Margaret Island"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8fc9957c88e6a1b578d2_Palatinus-thermal-bath%20(18).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Palatinus Bath on Margaret Island"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8ee0418a540aded598b6_Palatinus-thermal-bath%20(10).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Palatinus Bath on Margaret Island"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba9593957c88e6a1bb06fc_palatinus-indoor-pool.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Palatinus Bath on Margaret Island"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8eba23c2ba332e4b9e7a_Palatinus-thermal-bath%20(20).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Palatinus Bath on Margaret Island"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8f6ad6fe425eb963097a_Palatinus-thermal-bath%20(4).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Palatinus Bath on Margaret Island"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8f7c93f64f70e3001a37_Palatinus-thermal-bath%20(5).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Palatinus Bath on Margaret Island"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba9954996fdf73d1ec3922_Palatinus-thermal-bath%20(13).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8e6b766876604f3f8c23_Palatinus-thermal-bath%20(17).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8f8fd37f8cd657bd715b_Palatinus-thermal-bath%20(8).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8fa2df86e673a1cc4b13_Palatinus-thermal-bath%20(14).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8ff83b619fe50e977ede_Palatinus-thermal-bath%20(16).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8fbc66506a1a5941c104_Palatinus-thermal-bath%20(15).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8fc9957c88e6a1b578d2_Palatinus-thermal-bath%20(18).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8ee0418a540aded598b6_Palatinus-thermal-bath%20(10).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba9593957c88e6a1bb06fc_palatinus-indoor-pool.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8eba23c2ba332e4b9e7a_Palatinus-thermal-bath%20(20).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8f6ad6fe425eb963097a_Palatinus-thermal-bath%20(4).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8f7c93f64f70e3001a37_Palatinus-thermal-bath%20(5).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba9954996fdf73d1ec3922_Palatinus-thermal-bath%20(13).webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Margaret Island",
+    "⏱️ Half Day",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Palatinus+Strandf%C3%BCrd%C5%91+So%C3%B3+Rezs%C5%91+s%C3%A9t%C3%A1ny+1+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Bus 26"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-palatinus-spa-pools-full-day-admission-t439827/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-thermal-baths-card-palatinus&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Palatinus Bath on Margaret Island"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.27",
+     "score": "4.3",
+     "meta": "490 reviews · 2 sites",
+     "heading": "Average of 2 booking sites, weighted by number of reviews",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.3",
+       "count": "(470+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-palatinus-spa-pools-full-day-admission-t439827/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-thermal-baths-rating-palatinus&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      },
+      {
+       "kind": "link",
+       "site": "Viator",
+       "score": "3.5",
+       "count": "(20+)",
+       "url": "https://tp.media/r?campaign_id=47&marker=404154&p=1922&sub_id=thermal_baths_budapest_en_pop&trs=204442&u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FBudapest-Palatinus-Bath-Full-Day-Admission%2Fd499-5808P202",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "✓ Personally Tested",
+     "pop_html": "<strong>I visited Palatinus myself</strong> in summer.<span class=\"bpa-lang-note\">What I checked: pools, changing rooms, crowds and value for money. <a href=\"#item-4-palatinus\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "Winter · 9:00–16:00",
+     "pop_html": "<strong>Daily 9:00–16:00</strong> since 19 October 2026 (winter season).<span class=\"bpa-lang-note\">Hours change by season and on holidays.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🏊",
+     "label": "11 outdoor + 4 indoor pools",
+     "pop_html": "<strong>Outdoor:</strong> wave pool 28 °C, swimming pool 26 °C, slide pool 26–28 °C, thermal pools 30–32 and 33–36 °C, adventure, beach, kids' and learner pools 30–36 °C. <strong>Indoor:</strong> medicinal pool 36 °C, kids' pool 32–34 °C, plunge pools 20–22 and 40–42 °C.<span class=\"bpa-lang-note\">From palatinusstrand.hu; not every outdoor pool runs in winter.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "👨‍👩‍👧",
+     "label": "Family tickets",
+     "pop_html": "<strong>At the desk (2026):</strong> adult 3,800 HUF weekdays / 4,200 HUF weekends; child (3–14) 2,500 / 2,800 HUF; family ticket for 3 (at least 1 child) 7,600 / 8,400 HUF; for 4 (at least 2 children) 10,100 / 11,200 HUF.<span class=\"bpa-lang-note\">From palatinusstrand.hu/arak-2026.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "⚠️",
+     "label": "Winter limits",
+     "pop_html": "The Finnish sauna is out of service from 14 November 2026, and a broken lift at the main entrance means wheelchair users cannot be received for now.<span class=\"bpa-lang-note\">From palatinusstrand.hu.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a summer day with kids: a wave pool, slides and lawns on Margaret Island, with family tickets.",
+    "skip_html": "if you visit in winter for a long soak: it closes at 16:00, and the slides and many outdoor pools are a summer thing."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is Palatinus worth it in winter?",
+      "a": "Only for a short visit. In winter it closes at 16:00, and the Finnish sauna is out of service from 14 Nov 2026."
+     },
+     {
+      "q": "What is there for kids?",
+      "a": "A shallow outdoor kids' pool (30–32 °C), an indoor one (32–34 °C) and a 28 °C wave pool; the slides open in summer. Child tickets are for ages 3–14."
+     },
+     {
+      "q": "Is it real thermal water?",
+      "a": "Yes: two thermal pools at 30–32 °C and 33–36 °C plus a 36 °C indoor medicinal pool."
+     },
+     {
+      "q": "How do I get there?",
+      "a": "Bus 26 from Nyugati pályaudvar or Árpád híd stops right outside. In summer the bath also runs its own minibus."
+     },
+     {
+      "q": "Are the lockers big?",
+      "a": "Adult tickets include a locker, but I found them small, so pack light. A cabin ticket costs 1,000 HUF."
+     }
+    ]
+   },
+   "price": {
+    "main": "€27",
+    "sub": "per adult · full day",
+    "rows": [
+     {
+      "label": "Full day",
+      "small": "cabin or locker",
+      "price": "€27"
+     },
+     {
+      "label": "At the desk",
+      "small": "adult, weekdays / weekends",
+      "price": "3,800 / 4,200 HUF"
+     },
+     {
+      "label": "Child 3–14",
+      "small": "desk, weekdays / weekends",
+      "price": "2,500 / 2,800 HUF"
+     },
+     {
+      "label": "Family of 3",
+      "small": "desk, weekdays / weekends",
+      "price": "7,600 / 8,400 HUF"
+     }
+    ],
+    "note": "Online price for Thu 19 Nov 2026; desk prices from the bath's 2026 price list."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-palatinus-spa-pools-full-day-admission-t439827/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-thermal-baths-button-palatinus&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-4-palatinus",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-5",
+   "cats": ["outdoor", "late", "quiet", "online", "under30", "tested"],
+   "gallery": {
+    "rank": {
+     "text": "💰 #5 Best Budget Bath",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Dandár Thermal Bath"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c6c9514fe8a2b24014ee27_7_Dand%C3%A1r%20Thermal%20Bath.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Dandár Thermal Bath"],
+      ["data-src", "/assets/thermal-baths-2026/dandar-outdoor-pools-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dandár Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e9d0ff7680c0228646bd_Dandar-thermal-bath%20(8).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dandár Thermal Bath"],
+      ["data-src", "/assets/thermal-baths-2026/dandar-indoor-pool-01.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dandár Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e9f5506d10cbca02cdfa_Dandar-thermal-bath%20(3).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dandár Thermal Bath"],
+      ["data-src", "/assets/thermal-baths-2026/dandar-steam-room-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dandár Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4ea02de2ee369a675e17e_Dandar-thermal-bath%20(1).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dandár Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e9b7d60ebaf810e7eea7_Dandar-thermal-bath%20(6).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dandár Thermal Bath"],
+      ["data-src", "/assets/thermal-baths-2026/dandar-facade-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Dandár Thermal Bath"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4ea144295725d07964e55_Dandar-thermal-bath%20(4).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c6c9514fe8a2b24014ee27_7_Dand%C3%A1r%20Thermal%20Bath.webp"
+     },
+     {
+      "src": "/assets/thermal-baths-2026/dandar-outdoor-pools-04.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e9d0ff7680c0228646bd_Dandar-thermal-bath%20(8).webp"
+     },
+     {
+      "src": "/assets/thermal-baths-2026/dandar-indoor-pool-01.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e9f5506d10cbca02cdfa_Dandar-thermal-bath%20(3).webp"
+     },
+     {
+      "src": "/assets/thermal-baths-2026/dandar-steam-room-02.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4ea02de2ee369a675e17e_Dandar-thermal-bath%20(1).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e9b7d60ebaf810e7eea7_Dandar-thermal-bath%20(6).webp"
+     },
+     {
+      "src": "/assets/thermal-baths-2026/dandar-facade-03.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4ea144295725d07964e55_Dandar-thermal-bath%20(4).webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Ferencváros, District IX",
+    "⏱️ 2 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Dand%C3%A1r+Gy%C3%B3gyf%C3%BCrd%C5%91+Dand%C3%A1r+utca+3+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Tram 2, 24"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-dandar-thermal-bath-full-day-admission-t439882/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-thermal-baths-card-dandar&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Dandár Thermal Bath"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.01",
+     "score": "4.0",
+     "meta": "20+ reviews · GetYourGuide",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.0",
+       "count": "(20+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-dandar-thermal-bath-full-day-admission-t439882/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-thermal-baths-rating-dandar&mkt_cmp=true",
+       "rel": "nofollow sponsored noopener",
+       "target": "_blank",
+       "_nl": "\n"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "✓ Personally Tested",
+     "pop_html": "<strong>I visited Dandár myself.</strong><span class=\"bpa-lang-note\">What I checked: pools, changing rooms, crowds and value for money. <a href=\"#item-5-dandar\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "Daily · 9:00–19:00",
+     "pop_html": "<strong>Mon–Wed, Fri–Sun</strong> 9:00–19:00 · <strong>Thu</strong> 9:00–22:00.<span class=\"bpa-lang-note\">Hours change by season and on holidays.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🏊",
+     "label": "4 thermal pools",
+     "pop_html": "<strong>Indoor:</strong> medicinal pools at 35 and 38 °C, a Finnish sauna and a cold plunge pool. <strong>Outdoor:</strong> pools at 36 and 38 °C with a lawn and sun loungers. The neck shower at the outdoor 38 °C pool is out of service for now.<span class=\"bpa-lang-note\">From dandarfurdo.hu.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎟️",
+     "label": "Cheapest desk price",
+     "pop_html": "<strong>At the desk (2026):</strong> thermal ticket 3,500 HUF weekdays / 4,000 HUF weekends; with sauna world and outdoor pools 4,500 / 5,000 HUF; cabin 800 HUF. The GetYourGuide ticket is €22 for a full day with a cabin or locker.<span class=\"bpa-lang-note\">Desk prices from dandarfurdo.hu/arak-2026; GetYourGuide price for Thu 19 Nov 2026.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🔞",
+     "label": "14+ only",
+     "pop_html": "Only guests aged 14 and over are admitted.<span class=\"bpa-lang-note\">From dandarfurdo.hu.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the cheapest real thermal bath in Budapest, used mostly by locals, with outdoor hot pools.",
+    "skip_html": "if you want grand architecture: Dandár is plain, and it is outside the tourist centre."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is Dandár worth visiting as a tourist?",
+      "a": "Yes, if you want a cheap, local bath and do not care about architecture. It is the opposite of Széchenyi."
+     },
+     {
+      "q": "How cheap is it at the desk?",
+      "a": "3,500 HUF on weekdays and 4,000 HUF at weekends; with the sauna and outdoor pools it is 4,500 / 5,000 HUF."
+     },
+     {
+      "q": "Does it have outdoor pools?",
+      "a": "Two outdoor pools at 36 and 38 °C, with a lawn and sun loungers."
+     },
+     {
+      "q": "When is it open late?",
+      "a": "Thursdays until 22:00. The other days it is open 9:00–19:00."
+     },
+     {
+      "q": "What can I pair it with?",
+      "a": "It is a stone's throw from the Zwack Unicum factory. Tram 2 or 24, or bus 23 or 54, take you there."
+     }
+    ]
+   },
+   "price": {
+    "main": "€22",
+    "sub": "per adult · full day",
+    "rows": [
+     {
+      "label": "Full day",
+      "small": "cabin or locker",
+      "price": "€22"
+     },
+     {
+      "label": "At the desk",
+      "small": "thermal, weekdays / weekends",
+      "price": "3,500 / 4,000 HUF"
+     },
+     {
+      "label": "With sauna + outdoor",
+      "small": "desk",
+      "price": "4,500 / 5,000 HUF"
+     },
+     {
+      "label": "Cabin",
+      "small": "desk",
+      "price": "+800 HUF"
+     }
+    ],
+    "note": "Online price for Thu 19 Nov 2026; desk prices from the bath's 2026 price list."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-dandar-thermal-bath-full-day-admission-t439882/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-thermal-baths-button-dandar&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-5-dandar",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-6",
+   "cats": ["turkish", "quiet", "under30"],
+   "gallery": {
+    "rank": {
+     "text": "🕌 #6 Best Quiet Ottoman Bath",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Veli Bej Bath"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c1302ece1b4bdfbf14b859_6_Veli%20Bej%20Thermal%20Bath.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Veli Bej Bath"],
+      ["data-src", "/assets/thermal-baths-2026/veli-bej-domes-01.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Veli Bej Bath"],
+      ["data-src", "/assets/thermal-baths-2026/veli-bej-domes-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Veli Bej Bath"],
+      ["data-src", "/assets/thermal-baths-2026/veli-bej-lounge-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Veli Bej Bath"],
+      ["data-src", "/assets/thermal-baths-2026/veli-bej-plaque-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c1302ece1b4bdfbf14b859_6_Veli%20Bej%20Thermal%20Bath.webp"
+     },
+     {
+      "src": "/assets/thermal-baths-2026/veli-bej-domes-01.avif"
+     },
+     {
+      "src": "/assets/thermal-baths-2026/veli-bej-domes-02.avif"
+     },
+     {
+      "src": "/assets/thermal-baths-2026/veli-bej-lounge-03.avif"
+     },
+     {
+      "src": "/assets/thermal-baths-2026/veli-bej-plaque-04.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Buda, District II",
+    "⏱️ 2–3 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Irgalmasok+Veli+Bej+F%C3%BCrd%C5%91je+%C3%81rp%C3%A1d+fejedelem+%C3%BAtja+7+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Tram 4, 6 · HÉV"
+    }
+   ],
+   "title": {
+    "url": "https://www.irgalmasrend.hu/hu/velibej/araink",
+    "rel": "nofollow noopener",
+    "target": "_blank",
+    "text": "Veli Bej Bath"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.50",
+     "score": "4.5",
+     "meta": "3.4k+ reviews · Google",
+     "heading": "Rating on Google Maps",
+     "sites": [
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.5",
+       "count": "(3.4k+)",
+       "_nl": "\n"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "6:00–12:00 · 15:00–21:00",
+     "pop_html": "<strong>Mon–Tue</strong> 15:00–21:00 · <strong>Wed–Sun</strong> 6:00–12:00 and 15:00–21:00. Closed every day 12:00–15:00 to change the water. Cashier closes at 11:00 and 20:00. Closed on 23, 24 and 25 December 2026.<span class=\"bpa-lang-note\">Hours change by season and on holidays.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🏊",
+     "label": "Octagonal pool 36–38 °C",
+     "pop_html": "<strong>Turkish bath:</strong> five pools, the octagonal central pool at 36–38 °C and four smaller pools at different temperatures. <strong>Wellness:</strong> two steam baths, Finnish sauna, infrared sauna, jacuzzi, Kneipp path and a 15 m pool at 32 °C.<span class=\"bpa-lang-note\">From the official Veli Bej pages on irgalmasrend.hu.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎟️",
+     "label": "Desk only",
+     "pop_html": "<strong>No online tickets or booking</strong>: pay at the cashier. Morning 5,700 HUF (Wed–Fri); afternoon 6,700 HUF (Mon–Thu); Fri afternoon, Sat and Sun 7,200 HUF.<span class=\"bpa-lang-note\">From irgalmasrend.hu/hu/velibej/araink.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🔞",
+     "label": "14+ only",
+     "pop_html": "Under-14s are not admitted, even with a parent; bring an ID that shows the date of birth.<span class=\"bpa-lang-note\">From irgalmasrend.hu.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a quiet, authentic Ottoman bath under the old domes, without the crowds of Rudas.",
+    "skip_html": "if you want to book online or bathe at midday: it is desk-only and closed 12:00–15:00."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "How is Veli Bej different from Rudas?",
+      "a": "Both are Ottoman baths, but Veli Bej is smaller, quieter and cheaper, and you cannot book it online."
+     },
+     {
+      "q": "Can I book online?",
+      "a": "No. Tickets are sold only at the cashier, so just turn up."
+     },
+     {
+      "q": "When is it open?",
+      "a": "Mon–Tue 15:00–21:00; Wed–Sun 6:00–12:00 and 15:00–21:00. It closes every day from 12:00 to 15:00."
+     },
+     {
+      "q": "Is it crowded?",
+      "a": "Visitors consistently describe it as calm, with empty pools early in the morning."
+     },
+     {
+      "q": "Can children come?",
+      "a": "No under-14s, even with a parent."
+     }
+    ]
+   },
+   "price": {
+    "main": "5,700 HUF",
+    "sub": "per adult · Wed–Fri morning",
+    "rows": [
+     {
+      "label": "Morning",
+      "small": "Wed–Fri",
+      "price": "5,700 HUF"
+     },
+     {
+      "label": "Afternoon",
+      "small": "Mon–Thu",
+      "price": "6,700 HUF"
+     },
+     {
+      "label": "Fri afternoon, Sat, Sun",
+      "price": "7,200 HUF"
+     },
+     {
+      "label": "Towel / slippers",
+      "small": "desk",
+      "price": "1,100 / 1,900 HUF"
+     }
+    ],
+    "note": "Official desk prices; there is no online ticket."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.irgalmasrend.hu/hu/velibej/araink",
+     "rel": "nofollow noopener",
+     "target": "_blank",
+     "text": "Official Prices →"
+    },
+    "via": "Tickets sold at the bath's ticket desk (no online booking)",
+    "trust": ["Pay at the desk", "No booking needed"],
+    "sublink": {
+     "url": "#item-6-veli-bej",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}

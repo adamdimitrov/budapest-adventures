@@ -5,7 +5,9 @@
 
 Copy comes from scripts/hostels_pills_<lang>.py (PILLS[n] = 4 x (emoji, lead, text, note)).
 The pill labels already on the page are kept as they are, so translated pages keep their labels.
-CSS and JS are copied from best-private-boat-tours-budapest.html, the reference page for the pattern.
+CSS and JS are copied from de/private-bootsfahrten-budapest/index.html, which still carries the inline pattern
+(the English pages now load the shared kit listicle files). Not for best-hostels-budapest.html: its cards are
+built from data/listicles/best-hostels-budapest.json.
 Idempotent: a page whose pills are already dropdowns is rebuilt from scratch.
 """
 import html, importlib, os, re, sys
@@ -23,7 +25,7 @@ else:
     PILLS = _M.PILLS
 PAGE = os.path.join(ROOT, rel)
 
-ref = open(os.path.join(ROOT, 'best-private-boat-tours-budapest.html'), encoding='utf-8').read()
+ref = open(os.path.join(ROOT, 'de', 'private-bootsfahrten-budapest', 'index.html'), encoding='utf-8').read()
 CSS = re.search(r'<style id="bpa-lang-css">.*?</style>', ref, re.S).group(0)
 JS = re.search(r'<script id="bpa-lang-js">.*?</script>', ref, re.S).group(0)
 

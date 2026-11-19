@@ -1,0 +1,2498 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAN1ElEQVR4nOWcCXRURRaG/3qdPSEJgQRCIJ0QVoMoJCxuiCDInDHKIAHFSYCB0RlAlFXnOKOoiMedkcVlBoGAGhEUBWZEREBgEEmCskckG4QsZOuQpDvp9Ks5t2JCv15fpxMg4TunIV1dr6refVW37r1V9RiuIol8E3LOV0OWJTBKoH9kJv5n4OC/5aNkTv9SgsQBmQNMApNMiOrhj8/YpKvWZtHO1mTYhY3dTcb6RM7YKAaMABDoXolMBy5/zyS220PC5kM9pua3VFtt1tYahd52fpOvUa5JBGfJAO6hftAa9VD/A/AdGEvxlHw2H+oxSX9dCyi2eFOAn14/g3MsBtANV5dL4FhdD3n5T9HTK64rAcWlve/JQr3nMc6e4UBHXFvKGPgrckntP9PjHzdecwENyVo3gktsFYABuL74hTHMPqKd+u01EdDI7LU+VRJ7G5w9fjWUfTPhAF8dwPnCvdHTDc0poFk3NvTc+j6yBp8CuBVtg6Makzz5cMz0s60uoMHZKfdJjH8GoAPaFpVg0sQ0bdIuVy5yafqNy0mZIjG+rQ0KhwgEl7fHZ697pFUEFJe97q8MfAMAT7RdvMDYxrjslL+06BCLJ6kztrEVDb6rDQfj09K001LcFtCQ3HWjOWc7AHijfWGUOUvIiE7e2WwBDW2YrdLaqM5RQ6WskeIyeiT9ai+D5MjOkTVIbcfCIQIlk7yFfEeXBVTNNG8BGIT2z0CjqeZ1l4bY4LwNd0myvO86tpBbGg4uj0qLnr7XaQ8ayfd4SCa+6gYSDsHApJXkdMOZgKrycueD8Ztx4xGLzj5PWCYqesmwsxsDZU9TTmuGLOorqlGV9gv0p/JQk3kBdRdLxUc2GGG6XCPyaDr4QfLxhFe3TuLj17c7fGO16BDfG5ogf7QiZd6G+qiD/WZcbkzwUDTeQ57FWkE4dfklKPvqB5TvzEDN8WxwEwUC7WPSVcOkA4xFFag+eg7lO34U6UwjwW9gNDqOjUPIg8OF8FqYkDofDUUn3rDqQSJ8waQsAOEtUhXn0O07jqI1O1F54KT43qJIDIF3xKLLzHEIGjEAYC2lMnmRp8YvujF829SDLkOazFpIOJUHTuLCq5tQczwHrYbMUbn/hPj49u2ObnMfRMffD22BglmXelPNBAAfKQTEGJLcLbquoAx5/0hBxbdHneb1DA2C302R8IkJh7e2CyR/b2h8G7wZk74WcnUtanOLYcgqQM2pPBiL7YeZ9ZkXcG72KgRv/R8iX0yGV3iIezfCWFKjgES/vO38+gijCbmkH23lr80tRvaCDyDXOg7x1mYVwlRtP3Dnf2sMQh4YjsC7YuHbO8KlNht+vYjKg6dQ9uUhVGXY9Qyg8feBd8+uDsuSvD0R/eZj8NaG2csie2oQSUtKogcZ6/kkMGZTOAQVRGM9a/YqpwrWHtT9I5f8UfSc5uDTq5v4hNw/FHnPb0DZ9gbFbQk9IEdDmxR9z1WzHQmHkOpk0DBb0WAHMWm0swZ2HBePyKVTm60MaSY6dsd8XFiWCrmm1uXrZUMd8l/fjGN3LLArHKcwJu6B7sVpVs5Hif9H8j2oys3TqV3xLFi1TTTUHby7d0bPFbPgPyhGVf6aEznImrMahpwit+qNWDQR4bMT1GaviNb6dpSqz4vuqHo5OHx2AsKmjYE71F4oQebDr6Bs2w9O85bvTMeZScvcFg612QXhEMHn8mrg0bSRQCXcWA/DuQK7v3uEdIBfrBaeYUGQ9XWou1gmegCvNynykcLPfup9ME8Pu12eZkOh9yyuJZiHBn43R4kZS/L1grFYh5qTuagvazKCFdTmFIly6Dq1aGSAxeWsb9xH4RzOkfXke8IqtiTwrgEIn5OAgPg+QhFauhfUWwpWfGU1XdOM0nfTs/C/JVqRTjd7ZuJSIWRzPMOCEf7EAwhJGA6PYKXbQRMIuTEFK7cJ+8iSzpNGIOq1GVAL42AsPnt9w94TFZR+fhDZ8z9Q3qCPl6iUpm9nyNUGZC9e0+Q6NEJT/k07XgTzajDLeF09TiU8L+wbc2gGi3ptJiQ/59Ffeog5i9cI5W5Orw/mInhsnNPrRTsaNt2oygu6ufzXaDnsCnRDfTYsUiUcQvL3QczKWQh9ZKQiXX82X7gkjRSt+dpKOHQNKXY1wiGoTdS2RqE3cv7lVPEA1MBcWaW4lLoPdYXlirTIJUkIGNJHbRG/1coQ+VKyMBrNKfpwp9BL9Cn68BvFbzTb0TWumhjUNrK9LI3eks37VZehFK8Dyv9zRPGd3ITQh+9WZuIcJZ/tR3HKbhjO5gvlGXjnAHR7arww8hohRdnjuSk489DSJifWeEkH3e6fxHf6+0pmhsjnHrVSrvpf8lHwzlbh95Ge8ukTgbCp96LzQ3cqBBn68Ehc2vidcFcaKd1yEKFTaNuSc1T1IGNxBaqOKs37sD+NFR61OTl/WyvGPc1a1BOEct5+GKceWILLh88o8gYM7oUACzuIFKvue6VypTyW9tLlQ6dxevwLwmCkOqgusp5zFv4buc+us7hD1tBWM6p/OgdTZUPsqUUEpCd9QPsEzSoNHqXct0CNLUmlMLY1ZDlnP/melcIMule5JkAPgRpvTvAYZR7qLTST2rPGL328F+X/TVOWQW01e5g021nqOLcEVFek1D2eIYHC3jGn5NN9jssoLIdu7zFFmm9v5SY0smUUw0v4YEqnVrfnZ4eevWhLqjL2Tm2lNivac7EULSageotGe3TqYNMQc0ZtdqGyHAsh11dUiY+jutRY1IYsZT22ynEWmWi6Tu30bI6t8asJ9LNKs8pjEU+uL1MKQzGM7dTl0Yx6bJWjNrYtqTERPcOCFd9pGFhauEH33OKwDJqFAkcoF0soGOYMmpbNoTIsLXVLgkYp20L6ynLoenV1HnoX27TVGIo+UcoAFPk0lfuPK9K6/nmc8NLt0cXG72oij5Z6yzsyFF1m3Gc3P/3edeY4RVrlgRNKf05i8O4R6rRu0uuSmvVB374R8IrobDVbWHbZPql/Q0B8b0U6WbJkB3VflKhIrzmdh6p05zviyM6pzbukSOv+zGSEz33QykoOGNoXfT95xmq4W7Y1YFAvK/1nE5nBg7b3c9mJrmYMwWMHoXjtLsWTpcYH3hnblEY9pN/mvws7SJ+ZL+LMHYb2tW4M57iw9BObOsdW9IAWAGJWzb6SKDFEzJ+ALtPG4PKPmSJ+7duvu4giWCJsK4teGDx2MNRgkmQwOj+RnauneVypaGzEcE6Melrhx9CN99/6vOjWrpD/1ucoeOdLl64hl8HVOBRN5acSlqC+tFLR02/e97pVJMBuwIwOhnDggLPc3t07I/RRpXlOsZfMycvUL+9wjovLvxBhD1fJe+Ejca3a9TX9mfPInLRMIRyi25wENcIhmewh2YixxTjbrabSiHkT4NMz3Gqp50ziy8LTpxVRe9BQOD3hJVxcvrV5i4hCuFuROeVVVP9M65u2oTZQW06Pf1H0enNIP6rthYzOgKhd9jHHkF0oKrclDIoOdhjeD34DouAVFgzZUIva/FJUfn/cStG6i090VxGk8wrvCMnHG3XFFUL3Xf7hjNBbltAydf+vnodnZ1WrKiYOqUd6VFJB0xQWn7OeNPC9aq6uOZmLX2cuF72n2TCGTn+4XUQJLH00c31Bk4BlgM1VfPtEoNe/nnK21GPeuK/TopJ/R39dmb6Y2OKrCr9YLfpvWyKeYHOgG4957wlEv/UYYt6dYzNOTKGS3mvmidlL+8p0EblsDiH3D0O/L55zQThC/2xosc0Lur3HxDIQ9Spn0Kpn2PSxwqg0N/UpXk0eeuO0TwKLeX8ugkdfiRiQg1qwejsufbxHVUSQzIuIpxMREKe0y1RQ6Knx7dm4eUFhJcbnrlsMzl5FMzBkFaDimwyhQIVXXqITT53cFNIXQSMHosNt/UXPsAXdeO6z68Xf0W/MRCcKfNnAVKVH5f6TwpI35BSjvkQnBOYRGgSvLh2FIqYQiaVhqxYOtjA9KvnNxu8KAQ0sTPH3MnCas5tXupsUvrsD0Ejo+pgY/teCUr2fb9TJsElNXrSVnzEkZ91CDmZ312e7hrN5adHJy82TrHwMf62WMiht8xuDE7xUT5tX4VBAe9k99Zwxcnw4bhw442yOrSOcNr3UdG3yATqphxuHlUeik23GjO268RXGygUAz0A7hwHpFUbdIge/22fYubW9TRopzf2XAVyvMB2X5Lj0yGnKpRQzHAaCDsdMP8uB8RTtQPujDowlOhKOqlWN9Kipe8DZtN/ectBekBnjSWrOr6pa9kmLTk7lXMxs7UFIMjhmHdFO26Qms0u7AYbkpEzg4LQ9VrkO1HaoA2dT6YGrvcDlHZnxuRvGgMub257iZjoZmJARlSwCYWpx+ZBumjZpl0n2GEg6HG0GniFrWLyrwkFzTzEf7floboVRdzcgzpVdzxY3tW1FhbHydkfnUh3h9gmQwXQ6kQ7gXX9nzDIZwxx3X27i9jn4jMik/bxUH8eBBRQuwLWnBJzPD9BGDnBXOGjpY5cDC1P8vWv5TJljEQNcO4zhJgwo5hzvctnwdnrM47oWLLflGZm91qdakiZyIAkcdMxB/eZk1zABbBeDvNGf8y3NfQWOI1r94O6gvDXdJO7xEANGg+NuZyu4zmBAOQffB7DdHNIWWpppudbarO/qkcg3gbb3S5zRJu3GNwQ2vRjQumkNrw6kNwVysdtdQk+t91V9TeD/ARozoWuLuPVZAAAAAElFTkSuQmCC"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["tested", "quiet", "nomad", "kitchen", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Overall Hostel",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Maverick Central Market"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64a94406fe5dca443dcfeee5_03-maverick-urban-lodge-roof-terrace-area.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Maverick Central Market"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b460511ecae0707a91a9fc_Budapest-hostels-maverick-urban-lodge.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Maverick Central Market"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef926eb85a17e98e01193_Budapest-hostels-93.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Maverick Central Market"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef92513fcc88a48350ee7_Budapest-hostels-missing-ones-1.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Maverick Central Market"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef922493ff733d6613db2_Budapest-hostels-99.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Maverick Central Market"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef921d9415442ca96647b_Budapest-hostels-100.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Maverick Central Market"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9266c21e68d16e4b16a_Budapest-hostels-96.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Maverick Central Market"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef926910c7054c7cefa1f_Budapest-hostels-94.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Maverick Central Market"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9203ba6d19eab0b717a_Budapest-hostels-103.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64a94406fe5dca443dcfeee5_03-maverick-urban-lodge-roof-terrace-area.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b460511ecae0707a91a9fc_Budapest-hostels-maverick-urban-lodge.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef926eb85a17e98e01193_Budapest-hostels-93.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef92513fcc88a48350ee7_Budapest-hostels-missing-ones-1.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef922493ff733d6613db2_Budapest-hostels-99.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef921d9415442ca96647b_Budapest-hostels-100.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9266c21e68d16e4b16a_Budapest-hostels-96.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef926910c7054c7cefa1f_Budapest-hostels-94.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9203ba6d19eab0b717a_Budapest-hostels-103.webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Maverick Hostels",
+    "IX District",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Lonyay+utca+31+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Central Market Hall"
+    }
+   ],
+   "title": {
+    "url": "https://hostelworld.tp.st/4klGcrSU",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Maverick Central Market"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.51",
+     "score": "9.0",
+     "meta": "8k+ reviews · 2 sites",
+     "heading": "Average of 2 booking sites, weighted by number of reviews (scores out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.9",
+       "count": "(5k+)",
+       "url": "https://booking.tp.st/dh6nVtcX",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "link",
+       "site": "Hostelworld",
+       "score": "9.2",
+       "count": "(3k+)",
+       "url": "https://hostelworld.tp.st/KNQwT8Cx",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDk2IDk2Ij48cGF0aCBmaWxsPSIjRjI1NjIxIiBkPSJNOTYgODIuNjM4Qzk2IDkwLjAzOCA5MC4wMzggOTYgODIuNjM4IDk2SDEzLjM2MkM1Ljk2MiA5NiAwIDkwLjAzOCAwIDgyLjYzOFYxMy4zNjJDMCA1Ljk2MiA1Ljk2MSAwIDEzLjM2MiAwaDY5LjI3NkM5MC4wMzggMCA5NiA1Ljk2MSA5NiAxMy4zNjJ2NjkuMjc2WiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03OS40NTIgMTUuMzE1aC0xOS4yMmExLjM2IDEuMzYgMCAwIDAtMS4zMzcgMS4zMzZ2MTcuMTY1aDIuMTU5Yy4zMDggMCAuNTE0LjMwOC41MTQuNjE3IDAgLjEwMiAwIC4yMDUtLjEwMy4zMDhMNDkuMjMzIDQ3LjE3OGMtLjQxLjUxNC0uNDEgMS4xMyAwIDEuNjQ0bDEyLjMzNSAxMi41NGMuMTAyLjEwMy4xMDIuMjA2LjEwMi4zMDggMCAuMzA5LS4yMDUuNTE0LS41MTQuNjE3aC0yLjE1OHYxNy4xNjVjMCAuNzIuNjE3IDEuMzM2IDEuMzM2IDEuMzM2aDE5LjIyYTEuMzYgMS4zNiAwIDAgMCAxLjMzNy0xLjMzNlYxNi41NDhjLS4yMDYtLjcyLS43Mi0xLjIzMy0xLjQ0LTEuMjMzWk0zNC42MzggMzQuNzRjLS4yMDUtLjIwNi0uMjA1LS42MTcgMC0uODIyLjEwMy0uMTAzLjIwNi0uMjA2LjQxMS0uMjA2aDIuMTU5VjE2LjU0OGExLjM2IDEuMzYgMCAwIDAtMS4zMzYtMS4zMzZoLTE5LjIyYTEuMzYgMS4zNiAwIDAgMC0xLjMzNyAxLjMzNlY3OS4zNWMwIC43Mi42MTcgMS4zMzYgMS4zMzYgMS4zMzZoMTkuMjJhMS4zNiAxLjM2IDAgMCAwIDEuMzM3LTEuMzM2VjYyLjI4N2gtMi4xNTljLS4zMDggMC0uNjE2LS4zMDgtLjUxNC0uNjE3IDAtLjEwMi4xMDMtLjMwOC4yMDYtLjQxbDEyLjIzMS0xMi40MzhjLjQxMS0uNTE0LjQxMS0xLjEzIDAtMS42NDRMMzQuNjM4IDM0Ljc0WiIvPjwvc3ZnPg=="
+      }
+     ]
+    },
+    "tested": {
+     "chip": "✓ Personally Tested",
+     "pop_html": "<strong>I stayed at Maverick Central Market myself.</strong> Everything on this card comes from my own stay.<span class=\"bpa-lang-note\">What I checked: dorms, bathrooms, kitchen, noise and long-stay value. <a href=\"#section-1-maverick-urban-lodge\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🛏️",
+     "label": "Privacy Curtains",
+     "pop_html": "<strong>Curtain on every bed.</strong> Modern dorms with privacy curtains and large lockers, so even a full room feels calm.<span class=\"bpa-lang-note\">Lock your valuables: I had a pullover stolen during my stay.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🌇",
+     "label": "Rooftop Terrace",
+     "pop_html": "<strong>A guest terrace up top.</strong> Social without being a party hostel: easy to meet people in the evening, then sleep.<span class=\"bpa-lang-note\">Crowd: solo travelers, long-stayers and remote workers.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🤫",
+     "label": "Quiet Side Street",
+     "pop_html": "<strong>Lónyay utca, District IX.</strong> A smaller side street away from the District VII party streets. Street noise was minimal across my 30 nights.<span class=\"bpa-lang-note\">Kálvin tér (M3, M4) and Fővám tér (M4, trams 2, 47, 49) are a short walk.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "💶",
+     "label": "Long-Stay Value",
+     "pop_html": "<strong>30 nights for €280.</strong> That's about €9.33 a night in March, the best long-stay value I've found in central Budapest.<span class=\"bpa-lang-note\">Dorms from about €10 on near dates, privates from €28.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for solo travelers, digital nomads and long-stay backpackers who want a social hostel without party noise.",
+    "skip_html": "if you want a party hostel next to the ruin bars."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is Maverick a party hostel?",
+      "a": "No. It is social without party noise: you meet people easily in the common areas, without 4 AM shouting in the corridors."
+     },
+     {
+      "q": "Is it good for a long stay?",
+      "a": "Yes. I paid €280 for 30 nights in March, about €9.33 a night. Dorm beds start from about €10 on near dates."
+     },
+     {
+      "q": "Is it quiet at night?",
+      "a": "Yes. It is on Lónyay utca, a smaller side street in District IX, and street noise was minimal across my 30 nights."
+     },
+     {
+      "q": "What should I watch out for?",
+      "a": "The kitchen gets cramped at peak times and the fridge is always full. I had a pullover stolen, so use the large lockers."
+     },
+     {
+      "q": "How do I get there?",
+      "a": "Kálvin tér (M3, M4) and Fővám tér (M4, trams 2, 47, 49) are a short walk. Check-in from 15:00, check-out by 11:00, no curfew."
+     }
+    ]
+   },
+   "price": {
+    "main": "€10",
+    "sub": "dorm bed per night",
+    "rows": [
+     {
+      "label": "Dorm bed",
+      "price": "€10"
+     },
+     {
+      "label": "Private room",
+      "price": "€28"
+     },
+     {
+      "label": "My 30-night stay",
+      "small": "March",
+      "price": "€280"
+     }
+    ],
+    "note": "Lowest price for near dates, checked 14 Nov 2026; prices change by date and the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://hostelworld.tp.st/4klGcrSU",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Prices &amp; Dates →"
+    },
+    "trust": ["<b>No curfew</b>, check-in from 15:00", "<b>Privacy curtains</b> and large lockers"],
+    "sublink": {
+     "url": "#section-1-maverick-urban-lodge",
+     "text": "Read Review ↓"
+    },
+    "via": "Booked securely via Hostelworld"
+   }
+  },
+  {
+   "before": "\n<!-- #2: Onefam Budapest -->\n",
+   "id": "card-2",
+   "cats": ["tested", "party"],
+   "gallery": {
+    "rank": {
+     "text": "#2 Best Social Hostel for Solo Travelers",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      ["alt", "Onefam Budapest"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9157013f819d68e2e1c_Budapest-hostels-67.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Onefam Budapest"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9185808d3607b270498_Budapest-hostels-75.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Onefam Budapest"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef918a6bbf6adff3a3e94_Budapest-hostels-77.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Onefam Budapest"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64a7dab4164c44de40679311_02-Hostel-one-bed.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Onefam Budapest"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9166c21e60003e4b009_Budapest-hostels-64.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Onefam Budapest"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9150e332a523f9f300e_Budapest-hostels-69.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Onefam Budapest"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef912493ff722e7613c9e_Budapest-hostels-66.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Onefam Budapest"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9153ca6980829000f48_Budapest-hostels-65.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9157013f819d68e2e1c_Budapest-hostels-67.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9185808d3607b270498_Budapest-hostels-75.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef918a6bbf6adff3a3e94_Budapest-hostels-77.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64a7dab4164c44de40679311_02-Hostel-one-bed.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9166c21e60003e4b009_Budapest-hostels-64.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9150e332a523f9f300e_Budapest-hostels-69.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef912493ff722e7613c9e_Budapest-hostels-66.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9153ca6980829000f48_Budapest-hostels-65.webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Onefam",
+    "VII District",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Rumbach+Sebestyen+utca+6+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Jewish Quarter"
+    }
+   ],
+   "title": {
+    "url": "https://hostelworld.tp.st/pwL5wYcC",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Onefam Budapest"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.83",
+     "score": "9.7",
+     "meta": "7.5k+ reviews · 2 sites",
+     "heading": "Average of 2 booking sites, weighted by number of reviews (scores out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.4",
+       "count": "(1k+)",
+       "url": "https://booking.tp.st/mv0FAdXu",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "link",
+       "site": "Hostelworld",
+       "score": "9.7",
+       "count": "(6.5k+)",
+       "url": "https://hostelworld.tp.st/Hf6BkNko",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDk2IDk2Ij48cGF0aCBmaWxsPSIjRjI1NjIxIiBkPSJNOTYgODIuNjM4Qzk2IDkwLjAzOCA5MC4wMzggOTYgODIuNjM4IDk2SDEzLjM2MkM1Ljk2MiA5NiAwIDkwLjAzOCAwIDgyLjYzOFYxMy4zNjJDMCA1Ljk2MiA1Ljk2MSAwIDEzLjM2MiAwaDY5LjI3NkM5MC4wMzggMCA5NiA1Ljk2MSA5NiAxMy4zNjJ2NjkuMjc2WiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03OS40NTIgMTUuMzE1aC0xOS4yMmExLjM2IDEuMzYgMCAwIDAtMS4zMzcgMS4zMzZ2MTcuMTY1aDIuMTU5Yy4zMDggMCAuNTE0LjMwOC41MTQuNjE3IDAgLjEwMiAwIC4yMDUtLjEwMy4zMDhMNDkuMjMzIDQ3LjE3OGMtLjQxLjUxNC0uNDEgMS4xMyAwIDEuNjQ0bDEyLjMzNSAxMi41NGMuMTAyLjEwMy4xMDIuMjA2LjEwMi4zMDggMCAuMzA5LS4yMDUuNTE0LS41MTQuNjE3aC0yLjE1OHYxNy4xNjVjMCAuNzIuNjE3IDEuMzM2IDEuMzM2IDEuMzM2aDE5LjIyYTEuMzYgMS4zNiAwIDAgMCAxLjMzNy0xLjMzNlYxNi41NDhjLS4yMDYtLjcyLS43Mi0xLjIzMy0xLjQ0LTEuMjMzWk0zNC42MzggMzQuNzRjLS4yMDUtLjIwNi0uMjA1LS42MTcgMC0uODIyLjEwMy0uMTAzLjIwNi0uMjA2LjQxMS0uMjA2aDIuMTU5VjE2LjU0OGExLjM2IDEuMzYgMCAwIDAtMS4zMzYtMS4zMzZoLTE5LjIyYTEuMzYgMS4zNiAwIDAgMC0xLjMzNyAxLjMzNlY3OS4zNWMwIC43Mi42MTcgMS4zMzYgMS4zMzYgMS4zMzZoMTkuMjJhMS4zNiAxLjM2IDAgMCAwIDEuMzM3LTEuMzM2VjYyLjI4N2gtMi4xNTljLS4zMDggMC0uNjE2LS4zMDgtLjUxNC0uNjE3IDAtLjEwMi4xMDMtLjMwOC4yMDYtLjQxbDEyLjIzMS0xMi40MzhjLjQxMS0uNTE0LjQxMS0xLjEzIDAtMS42NDRMMzQuNjM4IDM0Ljc0WiIvPjwvc3ZnPg=="
+      }
+     ]
+    },
+    "tested": {
+     "chip": "✓ Personally Tested",
+     "pop_html": "<strong>I stayed at Onefam Budapest myself.</strong> Everything on this card comes from my own stay.<span class=\"bpa-lang-note\">What I checked: rooms, storage, showers, activities and noise. <a href=\"#section-2-hostel-one\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎯",
+     "label": "Free Daily Activities",
+     "pop_html": "<strong>Something every day.</strong> Free daytime activities, then drinking games at the bar in the evening. The staff pull everyone in.<span class=\"bpa-lang-note\">Easiest place on this list to arrive solo and leave with a crew.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍻",
+     "label": "Bar Crawls",
+     "pop_html": "<strong>Pub crawls into the ruin bars.</strong> The hostel party winds down around 11 PM to midnight, then the group heads out to the Jewish Quarter.<span class=\"bpa-lang-note\">No curfew; check-in 15:00 to 23:00.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🪪",
+     "label": "Ages 18 to 39",
+     "pop_html": "<strong>Strictly 18 to 39.</strong> Only guests aged 18 to 39 can stay, which keeps the crowd young and social.<span class=\"bpa-lang-note\">Over 39? Maverick has the social side without the age limit.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🚇",
+     "label": "Deák tér",
+     "pop_html": "<strong>4 minutes to Deák Ferenc tér.</strong> M1, M2, M3 and the 100E airport bus, from Rumbach Sebestyén utca 6.<span class=\"bpa-lang-note\">Walking distance home from the bars.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for solo travelers aged 18 to 39 who want an instant crew, daily activities and nights out.",
+    "skip_html": "if you are over 39, travel as a couple wanting privacy, or want early nights."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is there an age limit?",
+      "a": "Yes. Onefam takes guests aged 18 to 39 only."
+     },
+     {
+      "q": "What activities are included?",
+      "a": "Free daytime activities, then drinking games at the bar and pub crawls into the Jewish Quarter at night."
+     },
+     {
+      "q": "When does it get quiet?",
+      "a": "The party usually winds down around 11 PM to midnight, when the crowd heads out to the ruin bars."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "There is no shelf on the bunks for your phone or wallet, the shower temperature can fluctuate, and it costs more than most Budapest hostels."
+     },
+     {
+      "q": "How do I get there from the airport?",
+      "a": "Take the 100E airport bus to Deák Ferenc tér (also M1, M2, M3), about a 4-minute walk. Check-in runs 15:00 to 23:00."
+     }
+    ]
+   },
+   "price": {
+    "main": "€14",
+    "sub": "dorm bed per night",
+    "rows": [
+     {
+      "label": "Dorm bed",
+      "price": "€14"
+     }
+    ],
+    "note": "Lowest price for near dates, checked 14 Nov 2026; prices change by date and the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://hostelworld.tp.st/pwL5wYcC",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Prices &amp; Dates →"
+    },
+    "trust": ["<b>Free daily activities</b> and pub crawls", "<b>No curfew</b>, ages 18 to 39"],
+    "sublink": {
+     "url": "#section-2-hostel-one",
+     "text": "Read Review ↓"
+    },
+    "via": "Booked securely via Hostelworld"
+   }
+  },
+  {
+   "before": "\n<!-- #3: Avenue Hostel -->\n",
+   "id": "card-3",
+   "cats": ["tested", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "#3 Best Budget Hostel",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      ["alt", "Avenue Hostel"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9910e332a1f839f36d1_Budapest-hostels-91.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Avenue Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9915b5d512baed7e33d_Budapest-hostels-92.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Avenue Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef991a6bbf62b7e3a516e_Budapest-hostels-89.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Avenue Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef991917c0c464343e0c1_Budapest-hostels-81.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Avenue Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef99467bbedd0c4716ced_Budapest-hostels-82.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Avenue Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9965808d3a2d5270bdc_Budapest-hostels-84.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Avenue Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9963ca698878f001df5_Budapest-hostels-83.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Avenue Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9905808d3c5ad270b9b_Budapest-hostels-85.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9910e332a1f839f36d1_Budapest-hostels-91.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9915b5d512baed7e33d_Budapest-hostels-92.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef991a6bbf62b7e3a516e_Budapest-hostels-89.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef991917c0c464343e0c1_Budapest-hostels-81.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef99467bbedd0c4716ced_Budapest-hostels-82.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9965808d3a2d5270bdc_Budapest-hostels-84.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9963ca698878f001df5_Budapest-hostels-83.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9905808d3c5ad270b9b_Budapest-hostels-85.webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Avenue Hostel",
+    "VI District",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Oktogon+ter+4+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Oktogon"
+    }
+   ],
+   "title": {
+    "url": "https://hostelworld.tp.st/HpiYT6P3",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Avenue Hostel"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.36",
+     "score": "8.7",
+     "meta": "25k+ reviews · 2 sites",
+     "heading": "Average of 2 booking sites, weighted by number of reviews (scores out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.6",
+       "count": "(15.6k+)",
+       "url": "https://booking.tp.st/MTHZrwNN",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "link",
+       "site": "Hostelworld",
+       "score": "8.9",
+       "count": "(9.4k+)",
+       "url": "https://hostelworld.tp.st/O8ObO6Gy",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDk2IDk2Ij48cGF0aCBmaWxsPSIjRjI1NjIxIiBkPSJNOTYgODIuNjM4Qzk2IDkwLjAzOCA5MC4wMzggOTYgODIuNjM4IDk2SDEzLjM2MkM1Ljk2MiA5NiAwIDkwLjAzOCAwIDgyLjYzOFYxMy4zNjJDMCA1Ljk2MiA1Ljk2MSAwIDEzLjM2MiAwaDY5LjI3NkM5MC4wMzggMCA5NiA1Ljk2MSA5NiAxMy4zNjJ2NjkuMjc2WiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03OS40NTIgMTUuMzE1aC0xOS4yMmExLjM2IDEuMzYgMCAwIDAtMS4zMzcgMS4zMzZ2MTcuMTY1aDIuMTU5Yy4zMDggMCAuNTE0LjMwOC41MTQuNjE3IDAgLjEwMiAwIC4yMDUtLjEwMy4zMDhMNDkuMjMzIDQ3LjE3OGMtLjQxLjUxNC0uNDEgMS4xMyAwIDEuNjQ0bDEyLjMzNSAxMi41NGMuMTAyLjEwMy4xMDIuMjA2LjEwMi4zMDggMCAuMzA5LS4yMDUuNTE0LS41MTQuNjE3aC0yLjE1OHYxNy4xNjVjMCAuNzIuNjE3IDEuMzM2IDEuMzM2IDEuMzM2aDE5LjIyYTEuMzYgMS4zNiAwIDAgMCAxLjMzNy0xLjMzNlYxNi41NDhjLS4yMDYtLjcyLS43Mi0xLjIzMy0xLjQ0LTEuMjMzWk0zNC42MzggMzQuNzRjLS4yMDUtLjIwNi0uMjA1LS42MTcgMC0uODIyLjEwMy0uMTAzLjIwNi0uMjA2LjQxMS0uMjA2aDIuMTU5VjE2LjU0OGExLjM2IDEuMzYgMCAwIDAtMS4zMzYtMS4zMzZoLTE5LjIyYTEuMzYgMS4zNiAwIDAgMC0xLjMzNyAxLjMzNlY3OS4zNWMwIC43Mi42MTcgMS4zMzYgMS4zMzYgMS4zMzZoMTkuMjJhMS4zNiAxLjM2IDAgMCAwIDEuMzM3LTEuMzM2VjYyLjI4N2gtMi4xNTljLS4zMDggMC0uNjE2LS4zMDgtLjUxNC0uNjE3IDAtLjEwMi4xMDMtLjMwOC4yMDYtLjQxbDEyLjIzMS0xMi40MzhjLjQxMS0uNTE0LjQxMS0xLjEzIDAtMS42NDRMMzQuNjM4IDM0Ljc0WiIvPjwvc3ZnPg=="
+      }
+     ]
+    },
+    "tested": {
+     "chip": "✓ Personally Tested",
+     "pop_html": "<strong>I stayed at Avenue Hostel myself.</strong> Everything on this card comes from my own stay.<span class=\"bpa-lang-note\">What I checked: my 10-bed room, meals, staff and noise. <a href=\"#section-3-avenue-hostel\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🥐",
+     "label": "Free Breakfast",
+     "pop_html": "<strong>Breakfast included.</strong> Plus discounted dinners. With Hungary's food prices, the meals save you more per day than the bed costs.<span class=\"bpa-lang-note\">When I stayed, the dinner discount came with a small minimum bar spend.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🛏️",
+     "label": "Privacy Curtains",
+     "pop_html": "<strong>Curtained bunks.</strong> My 10-bed room had curtained beds but was the weak spot. The 4, 8 and 12-bed rooms are nicer for a few euros more.<span class=\"bpa-lang-note\">Padlocks aren't included: bring one or buy one for about €3.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🚋",
+     "label": "24/7 Trams",
+     "pop_html": "<strong>Night trams at the door.</strong> M1 and the 24 hour trams 4 and 6 stop right outside, so getting home at 3 AM is easy.<span class=\"bpa-lang-note\">The flip side: trams pass all night. Bring earplugs.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "📍",
+     "label": "Oktogon",
+     "pop_html": "<strong>Oktogon tér 4, District VI.</strong> On the Andrássy út and Grand Boulevard junction, walkable to the center.<span class=\"bpa-lang-note\">Reception open 24/7, check-in 14:00 to midnight.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for budget travelers who want the cheapest central bed, free breakfast and cheap dinners.",
+    "skip_html": "if you are a light sleeper or want a social, personal vibe."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "What meals are included?",
+      "a": "A free breakfast, plus discounted dinners (with a small minimum bar spend when I stayed)."
+     },
+     {
+      "q": "Is it noisy?",
+      "a": "Yes. It sits on the Oktogon junction with trams passing all night, so bring earplugs."
+     },
+     {
+      "q": "Which room should I book?",
+      "a": "My 10-bed room was the weak spot. The 4, 8 and 12-bed rooms are nicer and worth the few extra euros."
+     },
+     {
+      "q": "Do I need a padlock?",
+      "a": "Yes. Padlocks are not included for the lockers; bring one or buy one at reception for about €3."
+     },
+     {
+      "q": "Who can stay?",
+      "a": "Ages 6 to 49. Check-in runs 14:00 to midnight, reception is open 24/7 and there is no curfew."
+     }
+    ]
+   },
+   "price": {
+    "main": "€8",
+    "sub": "dorm bed per night",
+    "rows": [
+     {
+      "label": "Dorm bed",
+      "small": "breakfast included",
+      "price": "€8"
+     },
+     {
+      "label": "Padlock",
+      "small": "at reception",
+      "price": "about €3"
+     }
+    ],
+    "note": "Lowest price for near dates, checked 14 Nov 2026; prices change by date and the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://hostelworld.tp.st/HpiYT6P3",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Prices &amp; Dates →"
+    },
+    "trust": ["<b>Free breakfast</b>, cheap dinners", "<b>24/7 reception</b>, no curfew"],
+    "sublink": {
+     "url": "#section-3-avenue-hostel",
+     "text": "Read Review ↓"
+    },
+    "via": "Booked securely via Hostelworld"
+   }
+  },
+  {
+   "before": "\n<!-- #4: Flow Spaces -->\n",
+   "id": "card-4",
+   "cats": ["tested", "budget", "nomad", "kitchen"],
+   "gallery": {
+    "rank": {
+     "text": "#4 Best for Digital Nomads",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Flow Spaces"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9bf3ca6989a610020e7_Budapest-hostels-12.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Flow Spaces"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9be32bfdbdc4e3f5dea_Budapest-hostels-16.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Flow Spaces"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64a956ee944d79396c9730c2_flow-spaces-workspace.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Flow Spaces"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9c2cee58c44bb1960ee_Budapest-hostels-15.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Flow Spaces"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9be32bfdbd0533f5de9_Budapest-hostels-missing-ones-3.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Flow Spaces"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9be892ff658fb9ca33f_Budapest-hostels-8.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Flow Spaces"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9be32bfdb7d663f5de8_Budapest-hostels-9.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Flow Spaces"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9bf92392d479560aae3_Budapest-hostels-missing-ones-2.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9bf3ca6989a610020e7_Budapest-hostels-12.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9be32bfdbdc4e3f5dea_Budapest-hostels-16.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64a956ee944d79396c9730c2_flow-spaces-workspace.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9c2cee58c44bb1960ee_Budapest-hostels-15.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9be32bfdbd0533f5de9_Budapest-hostels-missing-ones-3.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9be892ff658fb9ca33f_Budapest-hostels-8.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9be32bfdb7d663f5de8_Budapest-hostels-9.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9bf92392d479560aae3_Budapest-hostels-missing-ones-2.webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Flow Spaces",
+    "IX District",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Gonczy+Pal+utca+2+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Central Market Hall"
+    }
+   ],
+   "title": {
+    "url": "https://hostelworld.tp.st/mx9SOFXZ",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Flow Spaces"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.27",
+     "score": "8.5",
+     "meta": "11k+ reviews · 2 sites",
+     "heading": "Average of 2 booking sites, weighted by number of reviews (scores out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.3",
+       "count": "(6.8k+)",
+       "url": "https://booking.tp.st/yToYukQt",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "link",
+       "site": "Hostelworld",
+       "score": "8.9",
+       "count": "(4.5k+)",
+       "url": "https://hostelworld.tp.st/iL9FnqCe",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDk2IDk2Ij48cGF0aCBmaWxsPSIjRjI1NjIxIiBkPSJNOTYgODIuNjM4Qzk2IDkwLjAzOCA5MC4wMzggOTYgODIuNjM4IDk2SDEzLjM2MkM1Ljk2MiA5NiAwIDkwLjAzOCAwIDgyLjYzOFYxMy4zNjJDMCA1Ljk2MiA1Ljk2MSAwIDEzLjM2MiAwaDY5LjI3NkM5MC4wMzggMCA5NiA1Ljk2MSA5NiAxMy4zNjJ2NjkuMjc2WiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03OS40NTIgMTUuMzE1aC0xOS4yMmExLjM2IDEuMzYgMCAwIDAtMS4zMzcgMS4zMzZ2MTcuMTY1aDIuMTU5Yy4zMDggMCAuNTE0LjMwOC41MTQuNjE3IDAgLjEwMiAwIC4yMDUtLjEwMy4zMDhMNDkuMjMzIDQ3LjE3OGMtLjQxLjUxNC0uNDEgMS4xMyAwIDEuNjQ0bDEyLjMzNSAxMi41NGMuMTAyLjEwMy4xMDIuMjA2LjEwMi4zMDggMCAuMzA5LS4yMDUuNTE0LS41MTQuNjE3aC0yLjE1OHYxNy4xNjVjMCAuNzIuNjE3IDEuMzM2IDEuMzM2IDEuMzM2aDE5LjIyYTEuMzYgMS4zNiAwIDAgMCAxLjMzNy0xLjMzNlYxNi41NDhjLS4yMDYtLjcyLS43Mi0xLjIzMy0xLjQ0LTEuMjMzWk0zNC42MzggMzQuNzRjLS4yMDUtLjIwNi0uMjA1LS42MTcgMC0uODIyLjEwMy0uMTAzLjIwNi0uMjA2LjQxMS0uMjA2aDIuMTU5VjE2LjU0OGExLjM2IDEuMzYgMCAwIDAtMS4zMzYtMS4zMzZoLTE5LjIyYTEuMzYgMS4zNiAwIDAgMC0xLjMzNyAxLjMzNlY3OS4zNWMwIC43Mi42MTcgMS4zMzYgMS4zMzYgMS4zMzZoMTkuMjJhMS4zNiAxLjM2IDAgMCAwIDEuMzM3LTEuMzM2VjYyLjI4N2gtMi4xNTljLS4zMDggMC0uNjE2LS4zMDgtLjUxNC0uNjE3IDAtLjEwMi4xMDMtLjMwOC4yMDYtLjQxbDEyLjIzMS0xMi40MzhjLjQxMS0uNTE0LjQxMS0xLjEzIDAtMS42NDRMMzQuNjM4IDM0Ljc0WiIvPjwvc3ZnPg=="
+      }
+     ]
+    },
+    "tested": {
+     "chip": "✓ Personally Tested",
+     "pop_html": "<strong>I stayed at Flow Spaces myself.</strong> Everything on this card comes from my own stay.<span class=\"bpa-lang-note\">What I checked: pod beds, bathrooms, kitchen and the work lounge. <a href=\"#section-4-flow-spaces\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "💻",
+     "label": "Coworking Space",
+     "pop_html": "<strong>A real work area.</strong> The lounge has a laptop-friendly work area, the best setup here for remote work.<span class=\"bpa-lang-note\">Social but calm: think college dorm, not bar crawl HQ.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🔒",
+     "label": "Free Padlock",
+     "pop_html": "<strong>Padlock included.</strong> Your storage box comes with a free padlock, no €3 extra like elsewhere.<span class=\"bpa-lang-note\">Front desk staffed 24/7.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🛏️",
+     "label": "Pod Beds",
+     "pop_html": "<strong>Pods with everything.</strong> Each bed has a privacy curtain, power socket, lamp, item tray and storage box.<span class=\"bpa-lang-note\">Rooms are tight: little space when everyone unpacks.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🏛️",
+     "label": "Market Hall",
+     "pop_html": "<strong>Gönczy Pál utca 2.</strong> One building from the Central Market Hall, a few minutes' walk to the Danube.<span class=\"bpa-lang-note\">3rd floor, no elevator. Fővám tér (M4, trams 2, 47, 49) is close.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for digital nomads and travelers who want a laptop-friendly lounge, pod beds and a sociable but calm vibe.",
+    "skip_html": "if you have heavy luggage (3rd floor, no elevator) or want private bathrooms."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is it good for remote work?",
+      "a": "Yes. The lounge has a laptop-friendly work area and the hostel lists a coworking space, the best setup on this list."
+     },
+     {
+      "q": "What do the beds have?",
+      "a": "A privacy curtain, a socket, a lamp, an item tray and a storage box, plus a free padlock."
+     },
+     {
+      "q": "Is there an elevator?",
+      "a": "No. The hostel is on the 3rd floor, so heavy luggage is a pain."
+     },
+     {
+      "q": "Are the bathrooms private?",
+      "a": "No. They are co-ed and communal, with little privacy."
+     },
+     {
+      "q": "Where is it?",
+      "a": "Gönczy Pál utca 2, next to the Central Market Hall: Fővám tér (M4, trams 2, 47, 49) and Kálvin tér (M3, M4)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€10",
+    "sub": "dorm bed per night",
+    "rows": [
+     {
+      "label": "Dorm bed",
+      "price": "€10"
+     }
+    ],
+    "note": "Lowest price for near dates, checked 14 Nov 2026; prices change by date and the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://hostelworld.tp.st/mx9SOFXZ",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Prices &amp; Dates →"
+    },
+    "trust": ["<b>Free padlock</b> and curtained pods", "<b>24/7 reception</b>, no curfew"],
+    "sublink": {
+     "url": "#section-4-flow-spaces",
+     "text": "Read Review ↓"
+    },
+    "via": "Booked securely via Hostelworld"
+   }
+  },
+  {
+   "before": "\n<!-- #5: A&O Budapest City Hostel -->\n",
+   "id": "card-5",
+   "cats": ["tested", "quiet", "private", "nomad"],
+   "gallery": {
+    "rank": {
+     "text": "#5 Best Hotel-Style Hostel",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "a&o Budapest City"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b45ede9dfe51ce60f63c17_Budapest-hostels-a&o-4.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "a&o Budapest City"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b45d25d5b3809762c22aed_Budapest-hostels-a&o-1.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "a&o Budapest City"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef937493ff750c5613e6a_Budapest-hostels-3.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "a&o Budapest City"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/6442664309951f1a6d28e8b2_Budapest-hostels-missing-ones-6.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "a&o Budapest City"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b45d28eb88351b48fc92ff_Budapest-hostels-a&o-2.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "a&o Budapest City"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64a955153bb29577389129e8_a&o-city-hostel-budapest-locker.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "a&o Budapest City"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b45f5e52440eb825de072a_Budapest-hostels-a&o-5.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "a&o Budapest City"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64a955ce7dba1d1588c93325_a&o-city-hostel-budapest-courtyard.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "a&o Budapest City"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b45edb52787cbf17c70440_Budapest-hostels-a&o-3.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b45ede9dfe51ce60f63c17_Budapest-hostels-a&o-4.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b45d25d5b3809762c22aed_Budapest-hostels-a&o-1.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef937493ff750c5613e6a_Budapest-hostels-3.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/6442664309951f1a6d28e8b2_Budapest-hostels-missing-ones-6.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b45d28eb88351b48fc92ff_Budapest-hostels-a&o-2.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64a955153bb29577389129e8_a&o-city-hostel-budapest-locker.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b45f5e52440eb825de072a_Budapest-hostels-a&o-5.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64a955ce7dba1d1588c93325_a&o-city-hostel-budapest-courtyard.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b45edb52787cbf17c70440_Budapest-hostels-a&o-3.webp"
+     }
+    ]
+   },
+   "kicker": [
+    "a&amp;o Hostels",
+    "VII District",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Csengery+utca+11+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "near Oktogon"
+    }
+   ],
+   "title": {
+    "url": "https://hostelworld.tp.st/RQSFFzzX",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "a&amp;o Budapest City"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "3.89",
+     "score": "7.8",
+     "meta": "5.8k+ reviews · 2 sites",
+     "heading": "Average of 2 booking sites, weighted by number of reviews (scores out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "7.7",
+       "count": "(5.3k+)",
+       "url": "https://booking.tp.st/OGL6i3mx",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "link",
+       "site": "Hostelworld",
+       "score": "8.6",
+       "count": "(500+)",
+       "url": "https://hostelworld.tp.st/WSCBNWXg",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDk2IDk2Ij48cGF0aCBmaWxsPSIjRjI1NjIxIiBkPSJNOTYgODIuNjM4Qzk2IDkwLjAzOCA5MC4wMzggOTYgODIuNjM4IDk2SDEzLjM2MkM1Ljk2MiA5NiAwIDkwLjAzOCAwIDgyLjYzOFYxMy4zNjJDMCA1Ljk2MiA1Ljk2MSAwIDEzLjM2MiAwaDY5LjI3NkM5MC4wMzggMCA5NiA1Ljk2MSA5NiAxMy4zNjJ2NjkuMjc2WiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03OS40NTIgMTUuMzE1aC0xOS4yMmExLjM2IDEuMzYgMCAwIDAtMS4zMzcgMS4zMzZ2MTcuMTY1aDIuMTU5Yy4zMDggMCAuNTE0LjMwOC41MTQuNjE3IDAgLjEwMiAwIC4yMDUtLjEwMy4zMDhMNDkuMjMzIDQ3LjE3OGMtLjQxLjUxNC0uNDEgMS4xMyAwIDEuNjQ0bDEyLjMzNSAxMi41NGMuMTAyLjEwMy4xMDIuMjA2LjEwMi4zMDggMCAuMzA5LS4yMDUuNTE0LS41MTQuNjE3aC0yLjE1OHYxNy4xNjVjMCAuNzIuNjE3IDEuMzM2IDEuMzM2IDEuMzM2aDE5LjIyYTEuMzYgMS4zNiAwIDAgMCAxLjMzNy0xLjMzNlYxNi41NDhjLS4yMDYtLjcyLS43Mi0xLjIzMy0xLjQ0LTEuMjMzWk0zNC42MzggMzQuNzRjLS4yMDUtLjIwNi0uMjA1LS42MTcgMC0uODIyLjEwMy0uMTAzLjIwNi0uMjA2LjQxMS0uMjA2aDIuMTU5VjE2LjU0OGExLjM2IDEuMzYgMCAwIDAtMS4zMzYtMS4zMzZoLTE5LjIyYTEuMzYgMS4zNiAwIDAgMC0xLjMzNyAxLjMzNlY3OS4zNWMwIC43Mi42MTcgMS4zMzYgMS4zMzYgMS4zMzZoMTkuMjJhMS4zNiAxLjM2IDAgMCAwIDEuMzM3LTEuMzM2VjYyLjI4N2gtMi4xNTljLS4zMDggMC0uNjE2LS4zMDgtLjUxNC0uNjE3IDAtLjEwMi4xMDMtLjMwOC4yMDYtLjQxbDEyLjIzMS0xMi40MzhjLjQxMS0uNTE0LjQxMS0xLjEzIDAtMS42NDRMMzQuNjM4IDM0Ljc0WiIvPjwvc3ZnPg=="
+      }
+     ]
+    },
+    "tested": {
+     "chip": "✓ Personally Tested",
+     "pop_html": "<strong>I stayed at a&amp;o Budapest City myself.</strong> Everything on this card comes from my own stay.<span class=\"bpa-lang-note\">What I checked: room, shower, secure storage and the work lounge. <a href=\"#section-5-a-o-budapest-city-hostel\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🤫",
+     "label": "Quiet Rooms",
+     "pop_html": "<strong>Budget hotel calm.</strong> Simple, quiet, clean rooms with few hostel-style mixers, built for sleeping well.<span class=\"bpa-lang-note\">Suits couples, families and anyone who wants privacy.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🚿",
+     "label": "Great Shower",
+     "pop_html": "<strong>A mind-blowing shower.</strong> In a simple, quiet and clean room, the shower stood out.<span class=\"bpa-lang-note\">Linens and towels cost extra: 1,150 HUF (about €3).</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "💻",
+     "label": "Work Lounge",
+     "pop_html": "<strong>Laptop-friendly lounge.</strong> A superb work area in the lounge, and reception kept my laptop in secure storage while I was out.<span class=\"bpa-lang-note\">Optional hotel-style breakfast for about €8.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🚪",
+     "label": "Private Rooms",
+     "pop_html": "<strong>Privates for 2 or more.</strong> Private rooms alongside the dorms, with a 24 hour reception for check-in at any time.<span class=\"bpa-lang-note\">Csengery utca 11, a few minutes from Oktogon (M1, trams 4 and 6).</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for couples, families and anyone who wants a quiet, simple, clean room over a social scene.",
+    "skip_html": "if you want a social hostel or hate paying extra for linens."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is it good for couples and families?",
+      "a": "Yes. The rooms are simple, quiet and clean, there are private options, and families and groups are welcome."
+     },
+     {
+      "q": "Are linens included?",
+      "a": "No. Bed linen and towels cost an extra 1,150 HUF (about €3)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "No. An optional hotel-style breakfast costs about €8."
+     },
+     {
+      "q": "Do I need a padlock?",
+      "a": "Yes, for the item cage in the room; one is not included."
+     },
+     {
+      "q": "Can I leave my laptop?",
+      "a": "Yes. Reception stored my laptop safely in its secure storage, and the lounge has a good laptop-friendly work area."
+     }
+    ]
+   },
+   "price": {
+    "main": "€12",
+    "sub": "dorm bed per night",
+    "rows": [
+     {
+      "label": "Dorm bed",
+      "price": "€12"
+     },
+     {
+      "label": "Linen and towel",
+      "price": "1,150 HUF"
+     },
+     {
+      "label": "Breakfast",
+      "small": "optional",
+      "price": "about €8"
+     }
+    ],
+    "note": "Lowest price for near dates, checked 14 Nov 2026; prices change by date and the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://hostelworld.tp.st/RQSFFzzX",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Prices &amp; Dates →"
+    },
+    "trust": ["<b>24-hour reception</b>", "<b>Private rooms</b> for couples and families"],
+    "sublink": {
+     "url": "#section-5-a-o-budapest-city-hostel",
+     "text": "Read Review ↓"
+    },
+    "via": "Booked securely via Hostelworld"
+   }
+  },
+  {
+   "before": "\n<!-- #6: Wombat's City Hostel -->\n",
+   "id": "card-6",
+   "cats": ["tested", "party", "private"],
+   "gallery": {
+    "rank": {
+     "text": "#6 Best Low-key Party Hostel",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Wombat's City Hostel"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/hostels/wombats-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Wombat's City Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef953eb85a192f0e0139d_Budapest-hostels-33.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Wombat's City Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef954917c0c23e143dfc6_Budapest-hostels-32.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Wombat's City Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef950917c0c24b843dfba_Budapest-hostels-26.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Wombat's City Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef950917c0ccbc643dfb9_Budapest-hostels-24.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Wombat's City Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef94f0e332a1b5d9f3327_Budapest-hostels-22.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Wombat's City Hostel"],
+      ["data-src", "/assets/hostels/wombats-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Wombat's City Hostel"],
+      ["data-src", "/assets/hostels/wombats-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Wombat's City Hostel"],
+      ["data-src", "/assets/hostels/wombats-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Wombat's City Hostel"],
+      ["data-src", "/assets/hostels/wombats-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/hostels/wombats-01.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef953eb85a192f0e0139d_Budapest-hostels-33.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef954917c0c23e143dfc6_Budapest-hostels-32.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef950917c0c24b843dfba_Budapest-hostels-26.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef950917c0ccbc643dfb9_Budapest-hostels-24.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef94f0e332a1b5d9f3327_Budapest-hostels-22.webp"
+     },
+     {
+      "src": "/assets/hostels/wombats-02.avif"
+     },
+     {
+      "src": "/assets/hostels/wombats-03.avif"
+     },
+     {
+      "src": "/assets/hostels/wombats-04.avif"
+     },
+     {
+      "src": "/assets/hostels/wombats-05.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Wombat's",
+    "VI District",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Kiraly+utca+20+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Király utca"
+    }
+   ],
+   "title": {
+    "url": "https://hostelworld.tp.st/19dbOWJE",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Wombat's City Hostel"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.46",
+     "score": "8.9",
+     "meta": "17k+ reviews · 2 sites",
+     "heading": "Average of 2 booking sites, weighted by number of reviews (scores out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.4",
+       "count": "(2.5k+)",
+       "url": "https://booking.tp.st/IIjcSwBJ",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "link",
+       "site": "Hostelworld",
+       "score": "9.0",
+       "count": "(14.9k+)",
+       "url": "https://hostelworld.tp.st/nXroq7oq",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDk2IDk2Ij48cGF0aCBmaWxsPSIjRjI1NjIxIiBkPSJNOTYgODIuNjM4Qzk2IDkwLjAzOCA5MC4wMzggOTYgODIuNjM4IDk2SDEzLjM2MkM1Ljk2MiA5NiAwIDkwLjAzOCAwIDgyLjYzOFYxMy4zNjJDMCA1Ljk2MiA1Ljk2MSAwIDEzLjM2MiAwaDY5LjI3NkM5MC4wMzggMCA5NiA1Ljk2MSA5NiAxMy4zNjJ2NjkuMjc2WiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03OS40NTIgMTUuMzE1aC0xOS4yMmExLjM2IDEuMzYgMCAwIDAtMS4zMzcgMS4zMzZ2MTcuMTY1aDIuMTU5Yy4zMDggMCAuNTE0LjMwOC41MTQuNjE3IDAgLjEwMiAwIC4yMDUtLjEwMy4zMDhMNDkuMjMzIDQ3LjE3OGMtLjQxLjUxNC0uNDEgMS4xMyAwIDEuNjQ0bDEyLjMzNSAxMi41NGMuMTAyLjEwMy4xMDIuMjA2LjEwMi4zMDggMCAuMzA5LS4yMDUuNTE0LS41MTQuNjE3aC0yLjE1OHYxNy4xNjVjMCAuNzIuNjE3IDEuMzM2IDEuMzM2IDEuMzM2aDE5LjIyYTEuMzYgMS4zNiAwIDAgMCAxLjMzNy0xLjMzNlYxNi41NDhjLS4yMDYtLjcyLS43Mi0xLjIzMy0xLjQ0LTEuMjMzWk0zNC42MzggMzQuNzRjLS4yMDUtLjIwNi0uMjA1LS42MTcgMC0uODIyLjEwMy0uMTAzLjIwNi0uMjA2LjQxMS0uMjA2aDIuMTU5VjE2LjU0OGExLjM2IDEuMzYgMCAwIDAtMS4zMzYtMS4zMzZoLTE5LjIyYTEuMzYgMS4zNiAwIDAgMC0xLjMzNyAxLjMzNlY3OS4zNWMwIC43Mi42MTcgMS4zMzYgMS4zMzYgMS4zMzZoMTkuMjJhMS4zNiAxLjM2IDAgMCAwIDEuMzM3LTEuMzM2VjYyLjI4N2gtMi4xNTljLS4zMDggMC0uNjE2LS4zMDgtLjUxNC0uNjE3IDAtLjEwMi4xMDMtLjMwOC4yMDYtLjQxbDEyLjIzMS0xMi40MzhjLjQxMS0uNTE0LjQxMS0xLjEzIDAtMS42NDRMMzQuNjM4IDM0Ljc0WiIvPjwvc3ZnPg=="
+      }
+     ]
+    },
+    "tested": {
+     "chip": "✓ Personally Tested",
+     "pop_html": "<strong>I stayed at Wombat's City Hostel myself.</strong> Everything on this card comes from my own stay.<span class=\"bpa-lang-note\">What I checked: noise at night, the bar, rooms and facilities. <a href=\"#section-6-wombat-s-city-hostel\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🚿",
+     "label": "En-Suite Dorms",
+     "pop_html": "<strong>Bathroom in every room.</strong> Every room is en-suite with air conditioning, so no corridor queues for the shower.<span class=\"bpa-lang-note\">Clean but ordinary: don't book it for design.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🛏️",
+     "label": "Bed Curtains",
+     "pop_html": "<strong>Personal bed curtains.</strong> For a party hostel it's quiet at night. I slept well.<span class=\"bpa-lang-note\">Free security lockers.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍸",
+     "label": "Hostel Bar",
+     "pop_html": "<strong>A social hostel bar.</strong> Easy to meet people at the hostel bar, then the Gozsdu Udvar bars are steps away.<span class=\"bpa-lang-note\">The international crowd was the best part of my stay.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "📍",
+     "label": "Király utca",
+     "pop_html": "<strong>Király utca 20.</strong> A 3 minute walk to Deák Ferenc tér (M1, M2, M3 and the 100E airport bus).<span class=\"bpa-lang-note\">Check-in 14:00 to 23:00, check-out by 10:00.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for backpackers who want a social bar and nightlife on the doorstep, but still a good night's sleep.",
+    "skip_html": "if you want the cheapest bed or a hostel with real character."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is it a party hostel?",
+      "a": "A low-key one. It is easy to meet people at the hostel bar and the Gozsdu Udvar bars are steps away, but it was quiet at night and I slept well."
+     },
+     {
+      "q": "Do rooms have their own bathroom?",
+      "a": "Yes. Every room has an en-suite bathroom and air conditioning, and dorm beds have personal curtains, per the hostel."
+     },
+     {
+      "q": "Is it good value?",
+      "a": "It is priced above most Budapest hostels, and the facilities are clean but ordinary. You pay for the location and the crowd."
+     },
+     {
+      "q": "What are the check-in times?",
+      "a": "Check-in 14:00 to 23:00, check-out by 10:00. There is no curfew."
+     },
+     {
+      "q": "How far is the airport bus?",
+      "a": "Deák Ferenc tér (M1, M2, M3 and the 100E airport bus) is a 3-minute walk."
+     }
+    ]
+   },
+   "price": {
+    "main": "€11",
+    "sub": "dorm bed per night",
+    "rows": [
+     {
+      "label": "Dorm bed",
+      "price": "€11"
+     }
+    ],
+    "note": "Lowest price for near dates, checked 14 Nov 2026; prices change by date and the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://hostelworld.tp.st/19dbOWJE",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Prices &amp; Dates →"
+    },
+    "trust": ["<b>En-suite rooms</b> with air conditioning", "<b>No curfew</b>, 24-hour reception"],
+    "sublink": {
+     "url": "#section-6-wombat-s-city-hostel",
+     "text": "Read Review ↓"
+    },
+    "via": "Booked securely via Hostelworld"
+   }
+  },
+  {
+   "before": "\n<!-- #7: Central Market Hall Zen Hostel -->\n",
+   "id": "card-7",
+   "cats": ["tested", "quiet", "private"],
+   "gallery": {
+    "rank": {
+     "text": "#7 Best Quiet &amp; Homely Hostel",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Central Market Hall Zen Hostel"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef969d94154f616966c40_Budapest-hostels-42.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Central Market Hall Zen Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef969a6bbf6d4603a4b50_Budapest-hostels-35.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Central Market Hall Zen Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef969cee58c73f519585b_Budapest-hostels-36.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Central Market Hall Zen Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b4631ae4929f71abdcc0e0_Budapest-hostels-zen-hostel.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Central Market Hall Zen Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9679c2695daf8aca622_Budapest-hostels-44.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Central Market Hall Zen Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef96892392d38d560a51d_Budapest-hostels-41.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Central Market Hall Zen Hostel"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef96692392d624960a4cc_Budapest-hostels-39.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Central Market Hall Zen Hostel"],
+      ["data-src", "/assets/hostels/zen-01.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Central Market Hall Zen Hostel"],
+      ["data-src", "/assets/hostels/zen-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Central Market Hall Zen Hostel"],
+      ["data-src", "/assets/hostels/zen-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef969d94154f616966c40_Budapest-hostels-42.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef969a6bbf6d4603a4b50_Budapest-hostels-35.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef969cee58c73f519585b_Budapest-hostels-36.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b4631ae4929f71abdcc0e0_Budapest-hostels-zen-hostel.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9679c2695daf8aca622_Budapest-hostels-44.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef96892392d38d560a51d_Budapest-hostels-41.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef96692392d624960a4cc_Budapest-hostels-39.webp"
+     },
+     {
+      "src": "/assets/hostels/zen-01.avif"
+     },
+     {
+      "src": "/assets/hostels/zen-02.avif"
+     },
+     {
+      "src": "/assets/hostels/zen-03.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Zen Hostel",
+    "IX District",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Vamhaz+korut+5+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Central Market Hall"
+    }
+   ],
+   "title": {
+    "url": "https://hostelworld.tp.st/LV5kBsYQ",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Central Market Hall Zen Hostel"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.21",
+     "score": "8.4",
+     "meta": "2.4k+ reviews · 2 sites",
+     "heading": "Average of 2 booking sites, weighted by number of reviews (scores out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.4",
+       "count": "(1.9k+)",
+       "url": "https://booking.tp.st/b95bIWBG",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "link",
+       "site": "Hostelworld",
+       "score": "8.5",
+       "count": "(510+)",
+       "url": "https://hostelworld.tp.st/E1Otfx4m",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDk2IDk2Ij48cGF0aCBmaWxsPSIjRjI1NjIxIiBkPSJNOTYgODIuNjM4Qzk2IDkwLjAzOCA5MC4wMzggOTYgODIuNjM4IDk2SDEzLjM2MkM1Ljk2MiA5NiAwIDkwLjAzOCAwIDgyLjYzOFYxMy4zNjJDMCA1Ljk2MiA1Ljk2MSAwIDEzLjM2MiAwaDY5LjI3NkM5MC4wMzggMCA5NiA1Ljk2MSA5NiAxMy4zNjJ2NjkuMjc2WiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03OS40NTIgMTUuMzE1aC0xOS4yMmExLjM2IDEuMzYgMCAwIDAtMS4zMzcgMS4zMzZ2MTcuMTY1aDIuMTU5Yy4zMDggMCAuNTE0LjMwOC41MTQuNjE3IDAgLjEwMiAwIC4yMDUtLjEwMy4zMDhMNDkuMjMzIDQ3LjE3OGMtLjQxLjUxNC0uNDEgMS4xMyAwIDEuNjQ0bDEyLjMzNSAxMi41NGMuMTAyLjEwMy4xMDIuMjA2LjEwMi4zMDggMCAuMzA5LS4yMDUuNTE0LS41MTQuNjE3aC0yLjE1OHYxNy4xNjVjMCAuNzIuNjE3IDEuMzM2IDEuMzM2IDEuMzM2aDE5LjIyYTEuMzYgMS4zNiAwIDAgMCAxLjMzNy0xLjMzNlYxNi41NDhjLS4yMDYtLjcyLS43Mi0xLjIzMy0xLjQ0LTEuMjMzWk0zNC42MzggMzQuNzRjLS4yMDUtLjIwNi0uMjA1LS42MTcgMC0uODIyLjEwMy0uMTAzLjIwNi0uMjA2LjQxMS0uMjA2aDIuMTU5VjE2LjU0OGExLjM2IDEuMzYgMCAwIDAtMS4zMzYtMS4zMzZoLTE5LjIyYTEuMzYgMS4zNiAwIDAgMC0xLjMzNyAxLjMzNlY3OS4zNWMwIC43Mi42MTcgMS4zMzYgMS4zMzYgMS4zMzZoMTkuMjJhMS4zNiAxLjM2IDAgMCAwIDEuMzM3LTEuMzM2VjYyLjI4N2gtMi4xNTljLS4zMDggMC0uNjE2LS4zMDgtLjUxNC0uNjE3IDAtLjEwMi4xMDMtLjMwOC4yMDYtLjQxbDEyLjIzMS0xMi40MzhjLjQxMS0uNTE0LjQxMS0xLjEzIDAtMS42NDRMMzQuNjM4IDM0Ljc0WiIvPjwvc3ZnPg=="
+      }
+     ]
+    },
+    "tested": {
+     "chip": "✓ Personally Tested",
+     "pop_html": "<strong>I stayed at Central Market Hall Zen Hostel myself.</strong> Everything on this card comes from my own stay.<span class=\"bpa-lang-note\">What I checked: check-in, the host, the living room and storage. <a href=\"#section-7-zen-hostel\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🛋️",
+     "label": "Homely Vibe",
+     "pop_html": "<strong>A real living room.</strong> The sofa is where everyone ends up chatting, with board games during the day.<span class=\"bpa-lang-note\">If you like a cozy, homely feel, this is heaven.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🏠",
+     "label": "Small Hostel",
+     "pop_html": "<strong>Small and personal.</strong> One friendly host ran the whole hostel when I stayed. She's the reason for the 9/10 ratings.<span class=\"bpa-lang-note\">No lockable stash and no desk with sockets.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "☕",
+     "label": "Free Tea &amp; Coffee",
+     "pop_html": "<strong>Free all day.</strong> Self-service tea and coffee through the day, served in the living room.<span class=\"bpa-lang-note\">Check-in 14:00 to 21:00 only: late arrivals should book elsewhere.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🏛️",
+     "label": "Market Hall",
+     "pop_html": "<strong>Vámház körút 5.</strong> Next to the Central Market Hall and Liberty Bridge, a few minutes from the Danube.<span class=\"bpa-lang-note\">Fővám tér (M4, trams 2, 47, 49) is at the door.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for introverts and slow travelers who want a small, cozy, home-like place by the Danube.",
+    "skip_html": "if you arrive late at night, need a locker, or need a desk with a socket."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Can I check in late?",
+      "a": "No. Check-in runs 14:00 to 21:00 and reception hours are limited. With a late flight, book elsewhere."
+     },
+     {
+      "q": "Is there a locker?",
+      "a": "There was no lockable storage when I stayed, so keep valuables on you."
+     },
+     {
+      "q": "Can I work there?",
+      "a": "Not really: there is no desk with sockets. Digital nomads should pick Flow Spaces or Maverick."
+     },
+     {
+      "q": "What is the vibe?",
+      "a": "Small, peaceful and home-like. Everyone ends up chatting on the living room sofa, with free tea and coffee."
+     },
+     {
+      "q": "Where is it?",
+      "a": "Vámház körút 5, by the Central Market Hall and Liberty Bridge, with M4 and tram 2 at Fővám tér."
+     }
+    ]
+   },
+   "price": {
+    "main": "€11",
+    "sub": "dorm bed per night",
+    "rows": [
+     {
+      "label": "Dorm bed",
+      "price": "€11"
+     },
+     {
+      "label": "Private room",
+      "price": "€15"
+     }
+    ],
+    "note": "Lowest price for near dates, checked 14 Nov 2026; prices change by date and the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://hostelworld.tp.st/LV5kBsYQ",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Prices &amp; Dates →"
+    },
+    "trust": ["<b>Free tea and coffee</b> all day", "<b>Check in by 21:00</b>"],
+    "sublink": {
+     "url": "#section-7-zen-hostel",
+     "text": "Read Review ↓"
+    },
+    "via": "Booked securely via Hostelworld"
+   }
+  },
+  {
+   "before": "\n<!-- #8: Adagio Hostel 2.0 Basilica -->\n",
+   "id": "card-8",
+   "cats": ["tested", "budget", "quiet", "private"],
+   "gallery": {
+    "rank": {
+     "text": "#8 Best Location for Sightseeing",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Adagio Hostel 2.0 Basilica"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef94632bfdb4b043f5539_Budapest-hostels-53.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Adagio Hostel 2.0 Basilica"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9422c152d3712e95a3d_Budapest-hostels-61.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Adagio Hostel 2.0 Basilica"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b460a5eb8835761bfce593_Budapest-hostels-adagio-hostel.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Adagio Hostel 2.0 Basilica"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef94192392de8b160a1af_Budapest-hostels-56.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Adagio Hostel 2.0 Basilica"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64a950e4a4d8d06ce556b46a_Adagio-kitchen.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Adagio Hostel 2.0 Basilica"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef946da54a218662cf8a8_Budapest-hostels-50.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Adagio Hostel 2.0 Basilica"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9405808d36a7a27074c_Budapest-hostels-45.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Adagio Hostel 2.0 Basilica"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9412c152dd671e95a27_Budapest-hostels-62.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Adagio Hostel 2.0 Basilica"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef941f706a176e0ea4e4c_Budapest-hostels-46.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Adagio Hostel 2.0 Basilica"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef94692392d481960a1bf_Budapest-hostels-55.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef94632bfdb4b043f5539_Budapest-hostels-53.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9422c152d3712e95a3d_Budapest-hostels-61.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63b460a5eb8835761bfce593_Budapest-hostels-adagio-hostel.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef94192392de8b160a1af_Budapest-hostels-56.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64a950e4a4d8d06ce556b46a_Adagio-kitchen.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef946da54a218662cf8a8_Budapest-hostels-50.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9405808d36a7a27074c_Budapest-hostels-45.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef9412c152dd671e95a27_Budapest-hostels-62.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef941f706a176e0ea4e4c_Budapest-hostels-46.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63aef94692392d481960a1bf_Budapest-hostels-55.webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Adagio Hostels",
+    "VI District",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Andrassy+ut+2+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Andrássy út"
+    }
+   ],
+   "title": {
+    "url": "https://hostelworld.tp.st/GpKMoQF5",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Adagio Hostel 2.0 Basilica"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.31",
+     "score": "8.6",
+     "meta": "6.5k+ reviews · 2 sites",
+     "heading": "Average of 2 booking sites, weighted by number of reviews (scores out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.5",
+       "count": "(4.4k+)",
+       "url": "https://booking.tp.st/Z6h249ue",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "link",
+       "site": "Hostelworld",
+       "score": "8.9",
+       "count": "(2.1k+)",
+       "url": "https://hostelworld.tp.st/9kVWwhdP",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDk2IDk2Ij48cGF0aCBmaWxsPSIjRjI1NjIxIiBkPSJNOTYgODIuNjM4Qzk2IDkwLjAzOCA5MC4wMzggOTYgODIuNjM4IDk2SDEzLjM2MkM1Ljk2MiA5NiAwIDkwLjAzOCAwIDgyLjYzOFYxMy4zNjJDMCA1Ljk2MiA1Ljk2MSAwIDEzLjM2MiAwaDY5LjI3NkM5MC4wMzggMCA5NiA1Ljk2MSA5NiAxMy4zNjJ2NjkuMjc2WiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03OS40NTIgMTUuMzE1aC0xOS4yMmExLjM2IDEuMzYgMCAwIDAtMS4zMzcgMS4zMzZ2MTcuMTY1aDIuMTU5Yy4zMDggMCAuNTE0LjMwOC41MTQuNjE3IDAgLjEwMiAwIC4yMDUtLjEwMy4zMDhMNDkuMjMzIDQ3LjE3OGMtLjQxLjUxNC0uNDEgMS4xMyAwIDEuNjQ0bDEyLjMzNSAxMi41NGMuMTAyLjEwMy4xMDIuMjA2LjEwMi4zMDggMCAuMzA5LS4yMDUuNTE0LS41MTQuNjE3aC0yLjE1OHYxNy4xNjVjMCAuNzIuNjE3IDEuMzM2IDEuMzM2IDEuMzM2aDE5LjIyYTEuMzYgMS4zNiAwIDAgMCAxLjMzNy0xLjMzNlYxNi41NDhjLS4yMDYtLjcyLS43Mi0xLjIzMy0xLjQ0LTEuMjMzWk0zNC42MzggMzQuNzRjLS4yMDUtLjIwNi0uMjA1LS42MTcgMC0uODIyLjEwMy0uMTAzLjIwNi0uMjA2LjQxMS0uMjA2aDIuMTU5VjE2LjU0OGExLjM2IDEuMzYgMCAwIDAtMS4zMzYtMS4zMzZoLTE5LjIyYTEuMzYgMS4zNiAwIDAgMC0xLjMzNyAxLjMzNlY3OS4zNWMwIC43Mi42MTcgMS4zMzYgMS4zMzYgMS4zMzZoMTkuMjJhMS4zNiAxLjM2IDAgMCAwIDEuMzM3LTEuMzM2VjYyLjI4N2gtMi4xNTljLS4zMDggMC0uNjE2LS4zMDgtLjUxNC0uNjE3IDAtLjEwMi4xMDMtLjMwOC4yMDYtLjQxbDEyLjIzMS0xMi40MzhjLjQxMS0uNTE0LjQxMS0xLjEzIDAtMS42NDRMMzQuNjM4IDM0Ljc0WiIvPjwvc3ZnPg=="
+      }
+     ]
+    },
+    "tested": {
+     "chip": "✓ Personally Tested",
+     "pop_html": "<strong>I stayed at Adagio Hostel 2.0 Basilica myself.</strong> Everything on this card comes from my own stay.<span class=\"bpa-lang-note\">What I checked: room, bathroom, traffic noise and location. <a href=\"#section-8-adagio-hostel-2-0-basilica\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "⛪",
+     "label": "Basilica Views",
+     "pop_html": "<strong>Views of St. Stephen's Basilica.</strong> At the start of Andrássy út, a few minutes' walk from the Basilica, the Opera and Deák Ferenc tér.<span class=\"bpa-lang-note\">Best base on this list for sightseeing on foot.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🚿",
+     "label": "Private Bathrooms",
+     "pop_html": "<strong>Your own bathroom.</strong> Dorms and doubles with private bathrooms; mine was excellent and clean.<span class=\"bpa-lang-note\">Privates from about €22.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "☕",
+     "label": "Free Tea &amp; Coffee",
+     "pop_html": "<strong>Free tea, coffee and linen.</strong> Self-service tea and coffee and fully equipped guest kitchens, per the hostel.<span class=\"bpa-lang-note\">Calm, not social: no events or personal touch.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "📍",
+     "label": "Andrássy út",
+     "pop_html": "<strong>Andrássy út 2, 1st floor.</strong> Bajcsy-Zsilinszky út (M1) at the door, Deák Ferenc tér (M1, M2, M3) a short walk.<span class=\"bpa-lang-note\">Main road: ask for a courtyard-side room. One flight of stairs, no elevator.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for sightseers who want a calm, clean bed at the start of Andrássy út, steps from St. Stephen's Basilica.",
+    "skip_html": "if you want a social hostel or are sensitive to traffic noise."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is it close to the sights?",
+      "a": "Yes. It is at the start of Andrássy út, a few minutes' walk from St. Stephen's Basilica, the Opera and Deák Ferenc tér."
+     },
+     {
+      "q": "Is it noisy?",
+      "a": "My room was noisy from traffic on Andrássy út. Bring earplugs or ask for a courtyard-side room."
+     },
+     {
+      "q": "Are there private bathrooms?",
+      "a": "Yes. Dorms and doubles with private bathrooms are available; mine was excellent and clean."
+     },
+     {
+      "q": "Is there an elevator?",
+      "a": "No. It is on the first floor of a palace building, one flight of stairs up."
+     },
+     {
+      "q": "Is there a kitchen?",
+      "a": "Yes: fully equipped kitchens with free self-service tea and coffee, and free linen, per the hostel."
+     }
+    ]
+   },
+   "price": {
+    "main": "€11",
+    "sub": "dorm bed per night",
+    "rows": [
+     {
+      "label": "Dorm bed",
+      "price": "€11"
+     },
+     {
+      "label": "Private room",
+      "price": "€22"
+     }
+    ],
+    "note": "Lowest price for near dates, checked 14 Nov 2026; prices change by date and the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://hostelworld.tp.st/GpKMoQF5",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Prices &amp; Dates →"
+    },
+    "trust": ["<b>Steps from the Basilica</b>", "<b>Free linen</b>, tea and coffee"],
+    "sublink": {
+     "url": "#section-8-adagio-hostel-2-0-basilica",
+     "text": "Read Review ↓"
+    },
+    "via": "Booked securely via Hostelworld"
+   }
+  },
+  {
+   "before": "\n<!-- #9: Das Nest Budapest -->\n",
+   "id": "card-9",
+   "cats": ["tested", "private", "kitchen"],
+   "gallery": {
+    "rank": {
+     "text": "#9 Best Small Homely Hostel",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Das Nest Budapest"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/hostels/das-nest-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Das Nest Budapest"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/6746a7b330865f569be03f07_Das Nest Budapest.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Das Nest Budapest"],
+      ["data-src", "/assets/hostels/das-nest-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Das Nest Budapest"],
+      ["data-src", "/assets/hostels/das-nest-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Das Nest Budapest"],
+      ["data-src", "/assets/hostels/das-nest-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Das Nest Budapest"],
+      ["data-src", "/assets/hostels/das-nest-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Das Nest Budapest"],
+      ["data-src", "/assets/hostels/das-nest-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Das Nest Budapest"],
+      ["data-src", "/assets/hostels/das-nest-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Das Nest Budapest"],
+      ["data-src", "/assets/hostels/das-nest-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Das Nest Budapest"],
+      ["data-src", "/assets/hostels/das-nest-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/hostels/das-nest-01.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/6746a7b330865f569be03f07_Das Nest Budapest.webp"
+     },
+     {
+      "src": "/assets/hostels/das-nest-02.avif"
+     },
+     {
+      "src": "/assets/hostels/das-nest-03.avif"
+     },
+     {
+      "src": "/assets/hostels/das-nest-04.avif"
+     },
+     {
+      "src": "/assets/hostels/das-nest-05.avif"
+     },
+     {
+      "src": "/assets/hostels/das-nest-06.avif"
+     },
+     {
+      "src": "/assets/hostels/das-nest-07.avif"
+     },
+     {
+      "src": "/assets/hostels/das-nest-08.avif"
+     },
+     {
+      "src": "/assets/hostels/das-nest-09.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Das Nest",
+    "VII District",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Akacfa+utca+10+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Jewish Quarter"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.article-best-hostels-budapest-das-nest-comparison-list&trs=204442&p=3518&u=https%3A%2F%2Fwww.hostelworld.com%2Fst%2Fhostels%2Fp%2F47301%2Fdas-nest-budapest%2F&campaign_id=93",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Das Nest Budapest"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.28",
+     "score": "8.6",
+     "meta": "2.9k+ reviews · 2 sites",
+     "heading": "Average of 2 booking sites, weighted by number of reviews (scores out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.4",
+       "count": "(1.4k+)",
+       "url": "https://tp.media/r?marker=404154.article-best-hostels-budapest-das-nest-reviews&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fdas-nest-budapest.en-gb.html%3Faid%3D311984%26label%3Ddas-nest-budapest-enZa79X5FHamO%252AzCrzowvQS624837106487%253Apl%253Ata%253Ap1%253Ap2%253Aac%253Aap%253Aneg%253Afi%253Atikwd-1215458816765%253Alp1011173%253Ali%253Adec%253Adm%26sid%3D7696e4fa198ebb1f1642cf73ddf40697%26all_sr_blocks%3D297249606_247510315_0_0_0_214265%26checkin%3D2024-12-01%26checkout%3D2024-12-02%26dest_id%3D-850553%26dest_type%3Dcity%26dist%3D0%26group_adults%3D1%26group_children%3D0%26hapos%3D1%26highlighted_blocks%3D297249606_247510315_0_0_0_214265%26hpos%3D1%26matching_block_id%3D297249606_247510315_0_0_0_214265%26no_rooms%3D1%26req_adults%3D1%26req_children%3D0%26room1%3DA%26sb_price_type%3Dtotal%26sr_order%3Dpopularity%26sr_pri_blocks%3D297249606_247510315_0_0_0_214265_1377%26srepoch%3D1732681513%26srpvid%3Df4601d3018d801fd%26type%3Dtotal%26ucfs%3D1%26&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "link",
+       "site": "Hostelworld",
+       "score": "8.7",
+       "count": "(1.5k+)",
+       "url": "https://tp.media/r?marker=404154.article-best-hostels-budapest-das-nest-reviews&trs=204442&p=3518&u=https%3A%2F%2Fwww.hostelworld.com%2Fst%2Fhostels%2Fp%2F47301%2Fdas-nest-budapest%2F&campaign_id=93",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDk2IDk2Ij48cGF0aCBmaWxsPSIjRjI1NjIxIiBkPSJNOTYgODIuNjM4Qzk2IDkwLjAzOCA5MC4wMzggOTYgODIuNjM4IDk2SDEzLjM2MkM1Ljk2MiA5NiAwIDkwLjAzOCAwIDgyLjYzOFYxMy4zNjJDMCA1Ljk2MiA1Ljk2MSAwIDEzLjM2MiAwaDY5LjI3NkM5MC4wMzggMCA5NiA1Ljk2MSA5NiAxMy4zNjJ2NjkuMjc2WiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03OS40NTIgMTUuMzE1aC0xOS4yMmExLjM2IDEuMzYgMCAwIDAtMS4zMzcgMS4zMzZ2MTcuMTY1aDIuMTU5Yy4zMDggMCAuNTE0LjMwOC41MTQuNjE3IDAgLjEwMiAwIC4yMDUtLjEwMy4zMDhMNDkuMjMzIDQ3LjE3OGMtLjQxLjUxNC0uNDEgMS4xMyAwIDEuNjQ0bDEyLjMzNSAxMi41NGMuMTAyLjEwMy4xMDIuMjA2LjEwMi4zMDggMCAuMzA5LS4yMDUuNTE0LS41MTQuNjE3aC0yLjE1OHYxNy4xNjVjMCAuNzIuNjE3IDEuMzM2IDEuMzM2IDEuMzM2aDE5LjIyYTEuMzYgMS4zNiAwIDAgMCAxLjMzNy0xLjMzNlYxNi41NDhjLS4yMDYtLjcyLS43Mi0xLjIzMy0xLjQ0LTEuMjMzWk0zNC42MzggMzQuNzRjLS4yMDUtLjIwNi0uMjA1LS42MTcgMC0uODIyLjEwMy0uMTAzLjIwNi0uMjA2LjQxMS0uMjA2aDIuMTU5VjE2LjU0OGExLjM2IDEuMzYgMCAwIDAtMS4zMzYtMS4zMzZoLTE5LjIyYTEuMzYgMS4zNiAwIDAgMC0xLjMzNyAxLjMzNlY3OS4zNWMwIC43Mi42MTcgMS4zMzYgMS4zMzYgMS4zMzZoMTkuMjJhMS4zNiAxLjM2IDAgMCAwIDEuMzM3LTEuMzM2VjYyLjI4N2gtMi4xNTljLS4zMDggMC0uNjE2LS4zMDgtLjUxNC0uNjE3IDAtLjEwMi4xMDMtLjMwOC4yMDYtLjQxbDEyLjIzMS0xMi40MzhjLjQxMS0uNTE0LjQxMS0xLjEzIDAtMS42NDRMMzQuNjM4IDM0Ljc0WiIvPjwvc3ZnPg=="
+      }
+     ]
+    },
+    "tested": {
+     "chip": "✓ Personally Tested",
+     "pop_html": "<strong>I stayed at Das Nest Budapest myself.</strong> Everything on this card comes from my own stay.<span class=\"bpa-lang-note\">What I checked: rooms, kitchen, hosts' tips, payment and noise. <a href=\"#section-9-das-nest-budapest\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🏠",
+     "label": "Homely Loft",
+     "pop_html": "<strong>A rooftop loft apartment.</strong> Renovated and intimate, it feels like staying at a friend's place.<span class=\"bpa-lang-note\">4 and 6-bed mixed or female-only dorms, plus a private double.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🗺️",
+     "label": "Local Tips",
+     "pop_html": "<strong>Tips you won't find online.</strong> The hosts gave me bar, restaurant and festival tips that weren't in any guidebook.<span class=\"bpa-lang-note\">Friendly, welcoming staff.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍳",
+     "label": "Guest Kitchen",
+     "pop_html": "<strong>Fully equipped kitchen.</strong> Cook your own meals and save on Budapest's restaurant prices.<span class=\"bpa-lang-note\">It was cash only when I stayed: bring forints just in case.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "📍",
+     "label": "Jewish Quarter",
+     "pop_html": "<strong>Akácfa utca 10, District VII.</strong> In the nightlife district, near the top sights and the ruin bars.<span class=\"bpa-lang-note\">Trams 4 and 6 at Wesselényi utca. Pack earplugs for weekend nights.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for solo backpackers and small groups who want a cozy, apartment-style hostel with friendly hosts in the nightlife district.",
+    "skip_html": "if you need card payments, step-free access or silence on weekend nights."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Can I pay by card?",
+      "a": "It was cash only when I stayed. Check your booking terms and bring forints just in case."
+     },
+     {
+      "q": "What rooms are there?",
+      "a": "4 and 6-bed mixed or female-only dorms and a private double."
+     },
+     {
+      "q": "Is it noisy?",
+      "a": "It is in the nightlife district, so light sleepers should pack earplugs for Friday and Saturday."
+     },
+     {
+      "q": "Is there a kitchen?",
+      "a": "Yes, a fully equipped guest kitchen, good for saving money on meals."
+     },
+     {
+      "q": "Is it accessible?",
+      "a": "Not fully: it is not accessible for all disabilities."
+     }
+    ]
+   },
+   "price": {
+    "main": "€15",
+    "sub": "dorm bed per night",
+    "rows": [
+     {
+      "label": "Dorm bed",
+      "price": "€15"
+     },
+     {
+      "label": "Private double",
+      "price": "€17"
+     }
+    ],
+    "note": "Lowest price for near dates, checked 14 Nov 2026; prices change by date and the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.article-best-hostels-budapest-das-nest-comparison-list&trs=204442&p=3518&u=https%3A%2F%2Fwww.hostelworld.com%2Fst%2Fhostels%2Fp%2F47301%2Fdas-nest-budapest%2F&campaign_id=93",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Prices &amp; Dates →"
+    },
+    "trust": ["<b>Female-only dorms</b> available", "<b>No curfew</b>, check-in 12:00 to 23:00"],
+    "sublink": {
+     "url": "#section-9-das-nest-budapest",
+     "text": "Read Review ↓"
+    },
+    "via": "Booked securely via Hostelworld"
+   }
+  },
+  {
+   "before": "\n<!-- #10: The Hive Party Hostel -->\n",
+   "id": "card-10",
+   "cats": ["party", "private"],
+   "gallery": {
+    "rank": {
+     "text": "#10 Best Big Party Hostel",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "The Hive Party Hostel"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/hostels/hive-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "The Hive Party Hostel"],
+      ["data-src", "/assets/hostels/hive-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "The Hive Party Hostel"],
+      ["data-src", "/assets/hostels/hive-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "The Hive Party Hostel"],
+      ["data-src", "/assets/hostels/hive-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "The Hive Party Hostel"],
+      ["data-src", "/assets/hostels/hive-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "The Hive Party Hostel"],
+      ["data-src", "/assets/hostels/hive-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "The Hive Party Hostel"],
+      ["data-src", "/assets/hostels/hive-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "The Hive Party Hostel"],
+      ["data-src", "/assets/hostels/hive-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "The Hive Party Hostel"],
+      ["data-src", "/assets/hostels/hive-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "The Hive Party Hostel"],
+      ["data-src", "/assets/hostels/hive-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/hostels/hive-01.avif"
+     },
+     {
+      "src": "/assets/hostels/hive-02.avif"
+     },
+     {
+      "src": "/assets/hostels/hive-03.avif"
+     },
+     {
+      "src": "/assets/hostels/hive-04.avif"
+     },
+     {
+      "src": "/assets/hostels/hive-05.avif"
+     },
+     {
+      "src": "/assets/hostels/hive-06.avif"
+     },
+     {
+      "src": "/assets/hostels/hive-07.avif"
+     },
+     {
+      "src": "/assets/hostels/hive-08.avif"
+     },
+     {
+      "src": "/assets/hostels/hive-09.avif"
+     },
+     {
+      "src": "/assets/hostels/hive-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "The Hive",
+    "VII District",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Dob+utca+19+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Jewish Quarter"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.article-best-hostels-budapest-the-hive-comparison-list&trs=204442&p=3518&u=https%3A%2F%2Fwww.hostelworld.com%2Fhostels%2Fp%2F96091%2Fthe-hive-party-hostel-budapest%2F&campaign_id=93",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "The Hive Party Hostel"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.50",
+     "score": "9.0",
+     "meta": "7k+ reviews · 1 site",
+     "heading": "Rating on the booking site (scores out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Hostelworld",
+       "score": "9.0",
+       "count": "(7k+)",
+       "url": "https://tp.media/r?marker=404154.article-best-hostels-budapest-the-hive-comparison-list&trs=204442&p=3518&u=https%3A%2F%2Fwww.hostelworld.com%2Fhostels%2Fp%2F96091%2Fthe-hive-party-hostel-budapest%2F&campaign_id=93",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDk2IDk2Ij48cGF0aCBmaWxsPSIjRjI1NjIxIiBkPSJNOTYgODIuNjM4Qzk2IDkwLjAzOCA5MC4wMzggOTYgODIuNjM4IDk2SDEzLjM2MkM1Ljk2MiA5NiAwIDkwLjAzOCAwIDgyLjYzOFYxMy4zNjJDMCA1Ljk2MiA1Ljk2MSAwIDEzLjM2MiAwaDY5LjI3NkM5MC4wMzggMCA5NiA1Ljk2MSA5NiAxMy4zNjJ2NjkuMjc2WiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03OS40NTIgMTUuMzE1aC0xOS4yMmExLjM2IDEuMzYgMCAwIDAtMS4zMzcgMS4zMzZ2MTcuMTY1aDIuMTU5Yy4zMDggMCAuNTE0LjMwOC41MTQuNjE3IDAgLjEwMiAwIC4yMDUtLjEwMy4zMDhMNDkuMjMzIDQ3LjE3OGMtLjQxLjUxNC0uNDEgMS4xMyAwIDEuNjQ0bDEyLjMzNSAxMi41NGMuMTAyLjEwMy4xMDIuMjA2LjEwMi4zMDggMCAuMzA5LS4yMDUuNTE0LS41MTQuNjE3aC0yLjE1OHYxNy4xNjVjMCAuNzIuNjE3IDEuMzM2IDEuMzM2IDEuMzM2aDE5LjIyYTEuMzYgMS4zNiAwIDAgMCAxLjMzNy0xLjMzNlYxNi41NDhjLS4yMDYtLjcyLS43Mi0xLjIzMy0xLjQ0LTEuMjMzWk0zNC42MzggMzQuNzRjLS4yMDUtLjIwNi0uMjA1LS42MTcgMC0uODIyLjEwMy0uMTAzLjIwNi0uMjA2LjQxMS0uMjA2aDIuMTU5VjE2LjU0OGExLjM2IDEuMzYgMCAwIDAtMS4zMzYtMS4zMzZoLTE5LjIyYTEuMzYgMS4zNiAwIDAgMC0xLjMzNyAxLjMzNlY3OS4zNWMwIC43Mi42MTcgMS4zMzYgMS4zMzYgMS4zMzZoMTkuMjJhMS4zNiAxLjM2IDAgMCAwIDEuMzM3LTEuMzM2VjYyLjI4N2gtMi4xNTljLS4zMDggMC0uNjE2LS4zMDgtLjUxNC0uNjE3IDAtLjEwMi4xMDMtLjMwOC4yMDYtLjQxbDEyLjIzMS0xMi40MzhjLjQxMS0uNTE0LjQxMS0xLjEzIDAtMS42NDRMMzQuNjM4IDM0Ljc0WiIvPjwvc3ZnPg=="
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🌇",
+     "label": "Rooftop Bar",
+     "pop_html": "<strong>Guests-only rooftop bar.</strong> Happy hour every day from 4 to 7 PM.<span class=\"bpa-lang-note\">300+ beds, open since 2015, per the hostel.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍻",
+     "label": "Daily Pub Crawls",
+     "pop_html": "<strong>A party every night.</strong> Daily pub crawls, plus bingo crawls, SPArties and party boats run by the hostel.<span class=\"bpa-lang-note\">Guests mention noise from the club downstairs.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🔞",
+     "label": "18+ Only",
+     "pop_html": "<strong>Strictly 18 and over.</strong> Built for nights out, not early mornings.<span class=\"bpa-lang-note\">Check-in 15:00 to midnight; pay by cash or card.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "📍",
+     "label": "Jewish Quarter",
+     "pop_html": "<strong>Dob utca 19, District VII.</strong> A short walk to Gozsdu Udvar and Szimpla Kert.<span class=\"bpa-lang-note\">Astoria (M2) and Deák Ferenc tér (M1, M2, M3) a few minutes away.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for 18+ groups and solo partygoers who want a big, loud party hostel with a rooftop bar in the ruin bar district.",
+    "skip_html": "if you are a light sleeper, an early riser or want bed curtains."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is it 18+ only?",
+      "a": "Yes. The Hive is strictly 18 and over."
+     },
+     {
+      "q": "Is it loud?",
+      "a": "Yes. The hostel itself warns light sleepers and early risers, and guests mention noise from the club downstairs."
+     },
+     {
+      "q": "What is on the party programme?",
+      "a": "Daily pub crawls, bingo crawls, SPArties and party boats, per the hostel, plus a rooftop bar with happy hour from 4 to 7 PM."
+     },
+     {
+      "q": "Do the beds have curtains?",
+      "a": "No. Privacy curtains are a common guest request."
+     },
+     {
+      "q": "Can I pay by card?",
+      "a": "Yes, cash or card. There is a 24-hour reception and security lockers."
+     }
+    ]
+   },
+   "price": {
+    "main": "€13",
+    "sub": "dorm bed per night",
+    "rows": [
+     {
+      "label": "Dorm bed",
+      "price": "€13"
+     },
+     {
+      "label": "Private room",
+      "price": "€20"
+     }
+    ],
+    "note": "Lowest price for near dates, checked 14 Nov 2026; prices change by date and the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.article-best-hostels-budapest-the-hive-comparison-list&trs=204442&p=3518&u=https%3A%2F%2Fwww.hostelworld.com%2Fhostels%2Fp%2F96091%2Fthe-hive-party-hostel-budapest%2F&campaign_id=93",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Prices &amp; Dates →"
+    },
+    "trust": ["<b>Rooftop bar</b>, happy hour 4 to 7 PM", "<b>24-hour reception</b>, no curfew"],
+    "sublink": {
+     "url": "#section-10-the-hive-party-hostel",
+     "text": "Read Review ↓"
+    },
+    "via": "Booked securely via Hostelworld"
+   }
+  }
+ ]
+}
