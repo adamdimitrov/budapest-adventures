@@ -95,7 +95,7 @@ PILLS = {
         ("drinks", "🥂", "Welcome drink", "1 drink included: champagne, wine, beer, a soft drink or mineral water.", "Every other drink is paid on board."),
         ("vibe", "🕯️", "Romantic and quiet", "Candlelit tables for two along the windows, a pianist and singer, no loud folk show.",
          "10 of 70 recent guests booked it for a birthday, anniversary or engagement."),
-        ("deck", "🌬️", "Open top deck", "The open top deck is free to use at any point of the evening.",
+        ("deck", "🪟", "No open deck", "There is no open deck: you stay in the glass-walled dining room all evening.",
          "Seats can't be reserved, not even a window table: Legenda assigns the tables on board."),
         ("menu", "🍽️", "4 courses, 17 dishes", "Chosen at your table: 6 starters, 2 soups, 6 mains (trout, pork, duck, beef, cauliflower steak or tuna) and 3 desserts.",
          "Children 3 to 12 get 3 courses."),
@@ -227,7 +227,7 @@ EDGE_QA = {
 #  vegan: vegan dishes marked or on request | deck: open deck confirmed (seller or guests) | short: 90 minutes
 #  wheelchair: confirmed wheelchair-accessible boat | under70: adult price under €70 | tested: I rode it
 FILTER_CATS = {
-    L: "romantic kids served deck tested",
+    L: "romantic kids served tested",
     HK: "folk kids served deck short under70 tested",
     S: "romantic folk served vegan tested",
     SE: "romantic folk kids served deck under70",
