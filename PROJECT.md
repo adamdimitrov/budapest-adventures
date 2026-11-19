@@ -116,3 +116,13 @@
   shows the total count (hit 12 pages from `build_article.py` in Nov 2026).
 - After building or editing a page with filters, open it and check: on load only "All" is orange,
   the other pills are grey with their own counts, and clicking one filters the cards.
+
+## Dinner cruise translations: rebuild order (QC: `local_checks` in `site.json`, runs in CI)
+- The dish photos and the "N dish photos" button in each Food box are NOT in the card data
+  (`data/listicles/best-dinner-cruises-budapest.json`): two scripts add them after the build.
+  `kit/scripts/listicle.py build-lang best-dinner-cruises-budapest.html <lang>` alone removes them.
+- After any `build-lang` of a dinner language page, always run, in this order:
+  `python3 scripts/legenda_menu_photos.py` then `python3 scripts/dinner_set_menu_photos.py`.
+  Both are idempotent; their `--check` runs in CI and fails if a page lost its photos.
+- To fix a single sentence on a language page, change it in `data/listicles/i18n/best-dinner-cruises-budapest/<lang>.json`
+  as well as on the page, so the next rebuild keeps it.

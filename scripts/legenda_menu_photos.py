@@ -129,9 +129,14 @@ def process(path):
     return s
 
 
+def _no_css(s):
+    """Page without the two photo stylesheets, whose order depends on which script ran last."""
+    return re.sub(r'<style id="dc-(?:menu|set)-photos-css">.*?</style>', "", s, flags=re.S)
+
+
 def pages():
-    out = subprocess.check_output(["git", "grep", "-l", 'id="dc-menu-legenda"', "--", "*.html"], text=True).split()
-    return [p for p in out if "-test" not in p]
+    out = subprocess.check_output(["git", "grep", "-lz", 'id="dc-menu-legenda"', "--", "*.html"], text=True).split("\0")
+    return [p for p in out if p and "-test" not in p]
 
 
 if __name__ == "__main__":
@@ -144,6 +149,9 @@ if __name__ == "__main__":
             n = cur.count(f'class="dc-dish-photo" src="{A}')
             if n != 2 * N:
                 print("missing photos:", p, n); bad += 1
+            elif _no_css(new) != _no_css(cur) or 'id="dc-menu-photos-css"' not in cur:
+                # e.g. a build-lang run dropped the Food-box photo button: rerun this script
+                print("out of date (run scripts/legenda_menu_photos.py):", p); bad += 1
         elif new != cur:
             open(p, "w", encoding="utf-8").write(new)
         if not check:
