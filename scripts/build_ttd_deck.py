@@ -205,6 +205,10 @@ def main():
         out = SRC
     else:
         out = OUT
+    if live and 'href="/css/listicle-cards.css' in SRC.read_text():
+        # The live page is on the shared listicle design now: cards come from
+        # data/listicles/best-things-to-do-budapest.json (scripts/listicle.py build).
+        raise SystemExit("best-things-to-do-budapest.html is built from data/listicles/; edit the card data instead")
     out.write_text(s)
     print("wrote", out.name, len(s))
 
