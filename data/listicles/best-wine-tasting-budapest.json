@@ -1,0 +1,2004 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["city"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Overall",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Hungarian Wine Tasting with 8 Wines and Tapas"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-wine-tasting-budapest/01-wine-the-gap-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Wine Tasting with 8 Wines and Tapas"],
+      ["data-src", "/assets/best-wine-tasting-budapest/01-wine-the-gap-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Wine Tasting with 8 Wines and Tapas"],
+      ["data-src", "/assets/best-wine-tasting-budapest/01-wine-the-gap-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Wine Tasting with 8 Wines and Tapas"],
+      ["data-src", "/assets/best-wine-tasting-budapest/01-wine-the-gap-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Wine Tasting with 8 Wines and Tapas"],
+      ["data-src", "/assets/best-wine-tasting-budapest/01-wine-the-gap-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Wine Tasting with 8 Wines and Tapas"],
+      ["data-src", "/assets/best-wine-tasting-budapest/01-wine-the-gap-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Wine Tasting with 8 Wines and Tapas"],
+      ["data-src", "/assets/best-wine-tasting-budapest/01-wine-the-gap-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Wine Tasting with 8 Wines and Tapas"],
+      ["data-src", "/assets/best-wine-tasting-budapest/01-wine-the-gap-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Wine Tasting with 8 Wines and Tapas"],
+      ["data-src", "/assets/best-wine-tasting-budapest/01-wine-the-gap-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Wine Tasting with 8 Wines and Tapas"],
+      ["data-src", "/assets/best-wine-tasting-budapest/01-wine-the-gap-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-wine-tasting-budapest/01-wine-the-gap-01.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/01-wine-the-gap-02.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/01-wine-the-gap-03.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/01-wine-the-gap-04.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/01-wine-the-gap-05.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/01-wine-the-gap-06.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/01-wine-the-gap-07.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/01-wine-the-gap-08.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/01-wine-the-gap-09.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/01-wine-the-gap-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Wine the Gap",
+    "⏱️ 2 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Wine+the+Gap+Tompa+utca+26a+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Wine the Gap, Tompa utca"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-hungarian-wine-tasting-with-8-wines-and-tapas-t347031/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Hungarian Wine Tasting with 8 Wines and Tapas"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.90",
+     "score": "4.9",
+     "meta": "499 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(499)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-hungarian-wine-tasting-with-8-wines-and-tapas-t347031/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍷 <span class=\"bpa-lang-label\">8 wines</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What's poured:</strong> Whites from cserszegi fűszeres (the \"unpronounceable grape\") and furmint, Hungary's best-known grape, then reds such as kadarka and Bull's Blood, from both larger and lesser-known producers. Works out at about <strong>€7.53 a wine</strong>."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧀 <span class=\"bpa-lang-label\">Farm tapas</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>On the plate:</strong> Olives, ham, sausages, tomatoes and several cheeses, all from farms just outside Budapest, served through the tasting along with bottled water."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎓 <span class=\"bpa-lang-label\">Wine judge host</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Who leads it:</strong> A local wine expert and wine judge walks you through the history of Hungarian wine and its regions. You get tasting notes and a map of the wine regions."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Wheelchair-accessible</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> One of only two venues on this list marked wheelchair-accessible (the other is the Smúz Tokaji flight). Not suitable for under-18s or pregnant women."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a first proper Hungarian wine session, because it names its native grapes up front (cserszegi fűszeres, furmint, kadarka, Bull's Blood) with farm tapas included, at about €7.53 a wine.",
+    "skip_html": "if Tokaji aszú is the one wine you came for: this line-up does not promise a sweet Tokaj, the Tasting Table sessions (#3, #6) do."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Wine the Gap, Tompa u. 26a, 1094 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Guided tasting with a wine expert, 8 wines, tapas, bottled water, tasting notes, map of Hungary's wine regions."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Hotel pickup and drop-off."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "No Tokaji aszú promised in the line-up. €11 more than the 8-wine Bortodoor tasting (#2). Hotel pickup not included."
+     },
+     {
+      "q": "Why pick it?",
+      "a": "8 wines from both big names and small producers. Farm tapas included, not a paid add-on. Native grapes most visitors never meet: cserszegi fűszeres, kadarka."
+     }
+    ]
+   },
+   "price": {
+    "main": "€60",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2 hours",
+      "price": "€60"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-hungarian-wine-tasting-with-8-wines-and-tapas-t347031/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later", "Wheelchair-accessible"],
+    "sublink": {
+     "url": "#item-1-wine-the-gap-8-wines-farm-tapas",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: 8-Wine Hungarian Tasting in a Cosy City Centre Wine Bar -->\n",
+   "id": "card-2",
+   "cats": ["city", "under50"],
+   "gallery": {
+    "rank": {
+     "text": "🥈 #2 Best Value",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      ["alt", "8-Wine Hungarian Tasting in a Cosy City Centre Wine Bar"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-wine-tasting-budapest/02-bortodoor-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "8-Wine Hungarian Tasting in a Cosy City Centre Wine Bar"],
+      ["data-src", "/assets/best-wine-tasting-budapest/02-bortodoor-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "8-Wine Hungarian Tasting in a Cosy City Centre Wine Bar"],
+      ["data-src", "/assets/best-wine-tasting-budapest/02-bortodoor-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "8-Wine Hungarian Tasting in a Cosy City Centre Wine Bar"],
+      ["data-src", "/assets/best-wine-tasting-budapest/02-bortodoor-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "8-Wine Hungarian Tasting in a Cosy City Centre Wine Bar"],
+      ["data-src", "/assets/best-wine-tasting-budapest/02-bortodoor-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-wine-tasting-budapest/02-bortodoor-01.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/02-bortodoor-02.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/02-bortodoor-03.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/02-bortodoor-04.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/02-bortodoor-05.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Bortodoor",
+    "⏱️ 2 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Bortodoor+Zichy+Jenő+utca+32+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Bortodoor, Zichy Jenő utca"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/8-tier-hungarian-wine-tasting-in-a-cosy-city-centre-wine-bar-t668996/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "8-Wine Hungarian Tasting in a Cosy City Centre Wine Bar"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.85",
+     "score": "4.8",
+     "meta": "402 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(402)",
+       "url": "https://www.getyourguide.com/budapest-l29/8-tier-hungarian-wine-tasting-in-a-cosy-city-centre-wine-bar-t668996/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍷 <span class=\"bpa-lang-label\">8 wines</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The line-up:</strong> 1 sparkling, 3 whites, 1 light red and 3 reds, bought directly from small local producers the bar works with. About <strong>€6.16 a wine</strong>, the lowest of the 8-wine tastings."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧀 <span class=\"bpa-lang-label\">Charcuterie board</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>On the board:</strong> Local Hungarian cheeses, hams, salamis, olives and bread. A vegetarian board is available if you ask in advance; flag allergies when you book."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📝 <span class=\"bpa-lang-label\">Take-home notes</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>You leave with:</strong> A note page covering Hungary's wine regions, a wine-tasting how-to and space for your own tasting notes."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⏱️ <span class=\"bpa-lang-label\">120 minutes</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Pace:</strong> Two hours for 8 wines, about 15 minutes a glass, led by the bar's sommeliers. Transport to the bar is not included."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the best price per glass in town: 8 wines plus a charcuterie board for €49, about €6.16 a wine, in a District VI wine bar.",
+    "skip_html": "if you want Tokaji: the 8 wines are sparkling, whites and reds, with no sweet wine listed."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Bortodoor, Zichy Jenő u. 32, 1066 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Guided tasting with a sommelier, 1 sparkling and 7 still wines, charcuterie board with cheeses, meats and bread, take-home notes."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Transport."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "No Tokaji or sweet wine in the line-up. Transport not included. Not suitable for under-18s."
+     },
+     {
+      "q": "Why pick it?",
+      "a": "Cheapest 8-wine tasting on the list. Sparkling, whites, light red and reds in one flight. Charcuterie board included, vegetarian on request."
+     }
+    ]
+   },
+   "price": {
+    "main": "€49",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2 hours",
+      "price": "€49"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/8-tier-hungarian-wine-tasting-in-a-cosy-city-centre-wine-bar-t668996/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-2-bortodoor-8-wine-tasting-charcuterie",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #3: Budapest: Essentials of Hungarian Wine Tasting Class -->\n",
+   "id": "card-3",
+   "cats": ["city", "tokaji"],
+   "gallery": {
+    "rank": {
+     "text": "🥉 #3 Best for Tokaji",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Essentials of Hungarian Wine Tasting Class"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Essentials of Hungarian Wine Tasting Class"],
+      ["data-src", "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Essentials of Hungarian Wine Tasting Class"],
+      ["data-src", "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Essentials of Hungarian Wine Tasting Class"],
+      ["data-src", "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Essentials of Hungarian Wine Tasting Class"],
+      ["data-src", "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Essentials of Hungarian Wine Tasting Class"],
+      ["data-src", "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Essentials of Hungarian Wine Tasting Class"],
+      ["data-src", "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Essentials of Hungarian Wine Tasting Class"],
+      ["data-src", "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-01.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-02.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-03.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-04.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-05.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-06.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-07.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/03-tasting-table-essentials-08.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Tasting Table Budapest",
+    "⏱️ 2 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Tasting+Table+Budapest+Bródy+Sándor+utca+9",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Tasting Table, Bródy Sándor utca"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-essentials-of-hungarian-wine-tasting-class-t61317/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Essentials of Hungarian Wine Tasting Class"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.78",
+     "score": "4.8",
+     "meta": "196 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(196)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-essentials-of-hungarian-wine-tasting-class-t61317/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍷 <span class=\"bpa-lang-label\">8 wines</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Running order:</strong> An aperitif, then whites and reds (sometimes a rosé), finishing with a sweet botrytised Tokaj aszú. Mostly from small producers, bought directly from winemakers the hosts know."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍯 <span class=\"bpa-lang-label\">Tokaj aszú finale</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Why it matters:</strong> Aszú is Hungary's signature sweet wine and only 2 options here name it. This one pours it at the end of a full 8-wine class, at about <strong>€7.37 a wine</strong>."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧀 <span class=\"bpa-lang-label\">Food pairings</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>On the plate:</strong> Pairings of local Hungarian delicacies plus mineral water, and tasting sheets with a map of the wine regions for notes."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌙 <span class=\"bpa-lang-label\">6–8 pm</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>When:</strong> Runs on most evenings from 6.00 to 8.00 pm. It needs at least 2 guests, otherwise you are offered another option or a full refund."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a structured evening class that ends on Tokaj aszú: a sommelier, 8 wines and food pairings at about €7.37 a glass.",
+    "skip_html": "if you only have the afternoon free: it runs 6–8 pm. The sister tasting (#6) at the same address runs 3–5 pm."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Tasting Table Budapest, Bródy Sándor u. 9, 1088 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Sommelier-led tasting, 8 wines, mineral water, food pairings, tasting sheets with a wine-region map."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Tips (optional)."
+     },
+     {
+      "q": "How long is it?",
+      "a": "Most evenings, 6.00–8.00 pm."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Evening slot only (6–8 pm). €10 more than Bortodoor's 8 wines. Needs a minimum of 2 guests to run."
+     }
+    ]
+   },
+   "price": {
+    "main": "€59",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2 hours",
+      "price": "€59"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-essentials-of-hungarian-wine-tasting-class-t61317/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-3-tasting-table-8-wine-evening-class",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: Budapest: Half-Day Countryside Wine Tour with Meal and Transfer -->\n",
+   "id": "card-4",
+   "cats": ["countryside"],
+   "gallery": {
+    "rank": {
+     "text": "#4 Best Countryside Trip",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Half-Day Countryside Wine Tour with Meal and Transfer"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-wine-tasting-budapest/04-etyek-countryside-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Countryside Wine Tour with Meal and Transfer"],
+      ["data-src", "/assets/best-wine-tasting-budapest/04-etyek-countryside-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Countryside Wine Tour with Meal and Transfer"],
+      ["data-src", "/assets/best-wine-tasting-budapest/04-etyek-countryside-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Countryside Wine Tour with Meal and Transfer"],
+      ["data-src", "/assets/best-wine-tasting-budapest/04-etyek-countryside-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Countryside Wine Tour with Meal and Transfer"],
+      ["data-src", "/assets/best-wine-tasting-budapest/04-etyek-countryside-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Countryside Wine Tour with Meal and Transfer"],
+      ["data-src", "/assets/best-wine-tasting-budapest/04-etyek-countryside-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Countryside Wine Tour with Meal and Transfer"],
+      ["data-src", "/assets/best-wine-tasting-budapest/04-etyek-countryside-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Countryside Wine Tour with Meal and Transfer"],
+      ["data-src", "/assets/best-wine-tasting-budapest/04-etyek-countryside-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Countryside Wine Tour with Meal and Transfer"],
+      ["data-src", "/assets/best-wine-tasting-budapest/04-etyek-countryside-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Countryside Wine Tour with Meal and Transfer"],
+      ["data-src", "/assets/best-wine-tasting-budapest/04-etyek-countryside-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-wine-tasting-budapest/04-etyek-countryside-01.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/04-etyek-countryside-02.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/04-etyek-countryside-03.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/04-etyek-countryside-04.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/04-etyek-countryside-05.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/04-etyek-countryside-06.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/04-etyek-countryside-07.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/04-etyek-countryside-08.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/04-etyek-countryside-09.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/04-etyek-countryside-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "City &amp; Wine",
+    "⏱️ 4–5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Etyek+Hungary",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Etyek wine region"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/from-budapest-half-day-countryside-wine-tour-with-meal-t72950/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Half-Day Countryside Wine Tour with Meal and Transfer"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.78",
+     "score": "4.8",
+     "meta": "837 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(837)",
+       "url": "https://www.getyourguide.com/budapest-l29/from-budapest-half-day-countryside-wine-tour-with-meal-t72950/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚐 <span class=\"bpa-lang-label\">Hotel pickup</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Transport:</strong> Air-conditioned minibus from 11 selected central pick-up points (Hilton, Corinthia, InterContinental, Marriott and others) for the drive of about half an hour. Contact City &amp; Wine before the day for your exact pickup time."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍇 <span class=\"bpa-lang-label\">2–3 wineries</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What's poured:</strong> 4 wines at each family-owned boutique winery, so 8–12 in all, with snacks and finger food in the cellars and time with the winemakers."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍲 <span class=\"bpa-lang-label\">Home-cooked meal</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Lunch:</strong> A rustic 2-course home-cooked meal of classic Hungarian dishes at a local farm, with water. Vegetarian and gluten-free on request if you tell them before the tour."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€85 all-in</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price maths:</strong> Transfers, wines, meal and an English-speaking guide for €85, about €7–11 a wine before you count the lunch and the drive. Tips are extra."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a countryside day without a car: hotel pickup, 2–3 family wineries in Etyek, 8–12 wines and a farm lunch for €85.",
+    "skip_html": "if you have less than five hours: the city tastings pour 8 wines in 2 hours."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is there hotel pickup?",
+      "a": "Selected central pick-up points, including Hilton Budapest, Corinthia, InterContinental, Four Seasons Gresham Palace, Marriott, Anantara New York Palace and the Hungarian State Opera."
+     },
+     {
+      "q": "What is included?",
+      "a": "Return minibus transfers, 4 wines at each winery, snacks in the cellars, home-cooked meal, water, English-speaking guide."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Tips."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Takes 4–5 hours of your day. Pickup only from 11 selected central points. 2-person minimum or you are moved to another date."
+     },
+     {
+      "q": "Why pick it?",
+      "a": "Hotel pickup and drop-off by air-conditioned minibus. 2–3 family wineries, 4 wines at each. Home-cooked Hungarian meal included."
+     }
+    ]
+   },
+   "price": {
+    "main": "€85",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "4–5 hours",
+      "price": "€85"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/from-budapest-half-day-countryside-wine-tour-with-meal-t72950/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later", "Hotel pickup"],
+    "sublink": {
+     "url": "#item-4-etyek-winery-trip-with-meal-pickup",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: From Budapest: Páty Wine Village Tour with Tastings -->\n",
+   "id": "card-5",
+   "cats": ["countryside"],
+   "gallery": {
+    "rank": {
+     "text": "#5 Best Small Group",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "From Budapest: Páty Wine Village Tour with Tastings"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-wine-tasting-budapest/05-paty-wine-village-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "From Budapest: Páty Wine Village Tour with Tastings"],
+      ["data-src", "/assets/best-wine-tasting-budapest/05-paty-wine-village-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "From Budapest: Páty Wine Village Tour with Tastings"],
+      ["data-src", "/assets/best-wine-tasting-budapest/05-paty-wine-village-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "From Budapest: Páty Wine Village Tour with Tastings"],
+      ["data-src", "/assets/best-wine-tasting-budapest/05-paty-wine-village-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "From Budapest: Páty Wine Village Tour with Tastings"],
+      ["data-src", "/assets/best-wine-tasting-budapest/05-paty-wine-village-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "From Budapest: Páty Wine Village Tour with Tastings"],
+      ["data-src", "/assets/best-wine-tasting-budapest/05-paty-wine-village-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "From Budapest: Páty Wine Village Tour with Tastings"],
+      ["data-src", "/assets/best-wine-tasting-budapest/05-paty-wine-village-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "From Budapest: Páty Wine Village Tour with Tastings"],
+      ["data-src", "/assets/best-wine-tasting-budapest/05-paty-wine-village-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "From Budapest: Páty Wine Village Tour with Tastings"],
+      ["data-src", "/assets/best-wine-tasting-budapest/05-paty-wine-village-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "From Budapest: Páty Wine Village Tour with Tastings"],
+      ["data-src", "/assets/best-wine-tasting-budapest/05-paty-wine-village-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-wine-tasting-budapest/05-paty-wine-village-01.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/05-paty-wine-village-02.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/05-paty-wine-village-03.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/05-paty-wine-village-04.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/05-paty-wine-village-05.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/05-paty-wine-village-06.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/05-paty-wine-village-07.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/05-paty-wine-village-08.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/05-paty-wine-village-09.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/05-paty-wine-village-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Páty village tour",
+    "⏱️ 3 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Páty+Hungary",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Páty wine village"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/paty-l143933/from-budapest-paty-wine-village-tour-with-tastings-t345116/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "From Budapest: Páty Wine Village Tour with Tastings"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.94",
+     "score": "4.9",
+     "meta": "172 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(172)",
+       "url": "https://www.getyourguide.com/paty-l143933/from-budapest-paty-wine-village-tour-with-tastings-t345116/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👥 <span class=\"bpa-lang-label\">Max 8 guests</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Group size:</strong> Capped at 8 people, the only wine tour here with a stated group limit. It needs at least 2 guests to run, or you are offered another date."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏚️ <span class=\"bpa-lang-label\">1880s cellars</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Where you taste:</strong> Páty's old wine cellars, some built as early as 1880, about a 20–30 minute drive from the centre. One of the wineries makes organic wine."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍷 <span class=\"bpa-lang-label\">4 wines per cellar</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What's poured:</strong> At least 4 wines at each of 1 or 2 wineries, poured by the winemakers themselves, with plenty of time for questions."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧀 <span class=\"bpa-lang-label\">Tapas plate</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Food:</strong> Olives, ham, sausages and several cheeses made by local farmers, served at the final cellar."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a small-group cellar visit: max 8 guests, winemakers pouring in 1880s cellars, 3 hours there and back from Erzsébet tér.",
+    "skip_html": "if price per glass is what matters: at €96 for 4–8 wines it is the most expensive pour on this list."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Al Habtoor Palace Budapest, Erzsébet tér 9-10, 1051 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Round-trip transfers by car, at least 4 wines at each cellar, tapas plate of olives, ham, sausages and local cheeses."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Max 8."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Most expensive option per wine. 1 or 2 wineries, so the wine count varies. Not suitable for under-18s."
+     },
+     {
+      "q": "Why pick it?",
+      "a": "Max 8 guests. Winemakers pour and answer questions themselves. Historic cellars, one winery organic."
+     }
+    ]
+   },
+   "price": {
+    "main": "€96",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "3 hours",
+      "price": "€96"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/paty-l143933/from-budapest-paty-wine-village-tour-with-tastings-t345116/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later", "Max 8 guests"],
+    "sublink": {
+     "url": "#item-5-p-ty-wine-village-small-group-tour",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #6: Budapest: Wine, Cheese and Charcuterie Tasting -->\n",
+   "id": "card-6",
+   "cats": ["city", "tokaji", "under50"],
+   "gallery": {
+    "rank": {
+     "text": "#6 Best Afternoon Tasting",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Wine, Cheese and Charcuterie Tasting"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Wine, Cheese and Charcuterie Tasting"],
+      ["data-src", "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Wine, Cheese and Charcuterie Tasting"],
+      ["data-src", "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Wine, Cheese and Charcuterie Tasting"],
+      ["data-src", "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Wine, Cheese and Charcuterie Tasting"],
+      ["data-src", "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Wine, Cheese and Charcuterie Tasting"],
+      ["data-src", "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Wine, Cheese and Charcuterie Tasting"],
+      ["data-src", "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Wine, Cheese and Charcuterie Tasting"],
+      ["data-src", "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-01.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-02.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-03.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-04.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-05.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-06.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-07.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/06-tasting-table-cheese-08.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Tasting Table Budapest",
+    "⏱️ 1.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Tasting+Table+Budapest+Bródy+Sándor+utca+9",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Tasting Table, Bródy Sándor utca"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-wine-cheese-and-charcuterie-tasting-t313228/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Wine, Cheese and Charcuterie Tasting"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.83",
+     "score": "4.8",
+     "meta": "759 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(759)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-wine-cheese-and-charcuterie-tasting-t313228/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍷 <span class=\"bpa-lang-label\">5 wines</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The line-up:</strong> 5 Hungarian wines with a focus on native grapes and local styles, ending with a glass of sweet wine from Tokaj. About <strong>€9.07 a wine</strong>."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧀 <span class=\"bpa-lang-label\">Cheese &amp; charcuterie</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>On the board:</strong> Producer-sourced Mangalica pork sausage, water buffalo salami, smoked duck breast, grey beef sausage and several cheeses, plus bread and artisan oils."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "☀️ <span class=\"bpa-lang-label\">3–5 pm</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>When:</strong> Runs on most days from 3.00 to 5.00 pm, so it fits before dinner. A minimum of 2 guests is needed."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€45</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price maths:</strong> The cheapest sommelier-led tasting on the list that includes a Tokaj sweet wine. Extra food or drinks are charged separately."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for an afternoon slot with the best food on the list: Mangalica, buffalo salami and smoked duck with 5 wines ending on Tokaj, for €45.",
+    "skip_html": "if you want more wines: €14 more buys the 8-wine evening class (#3) at the same venue."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Tasting Table Budapest, Bródy Sándor u. 9, 1088 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "5 glasses of Hungarian wine, cheese and charcuterie plate, bread and artisan oil, tasting sheets with a wine-region map."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Additional food or drinks, tips."
+     },
+     {
+      "q": "How long is it?",
+      "a": "Most days, 3.00–5.00 pm."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Only 5 wines. Costs more per wine than the 8-wine bars. Extra food and drinks cost more."
+     }
+    ]
+   },
+   "price": {
+    "main": "€45",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1.5 hours",
+      "price": "€45"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-wine-cheese-and-charcuterie-tasting-t313228/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-6-wine-cheese-charcuterie-tasting",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #7: Budapest: Tokaji Wine Tasting with Parliament Panorama -->\n",
+   "id": "card-7",
+   "cats": ["city", "tokaji", "under50"],
+   "gallery": {
+    "rank": {
+     "text": "#7 Best Tokaji with a View",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Tokaji Wine Tasting with Parliament Panorama"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-wine-tasting-budapest/07-smuz-tokaji-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Tokaji Wine Tasting with Parliament Panorama"],
+      ["data-src", "/assets/best-wine-tasting-budapest/07-smuz-tokaji-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Tokaji Wine Tasting with Parliament Panorama"],
+      ["data-src", "/assets/best-wine-tasting-budapest/07-smuz-tokaji-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Tokaji Wine Tasting with Parliament Panorama"],
+      ["data-src", "/assets/best-wine-tasting-budapest/07-smuz-tokaji-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Tokaji Wine Tasting with Parliament Panorama"],
+      ["data-src", "/assets/best-wine-tasting-budapest/07-smuz-tokaji-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Tokaji Wine Tasting with Parliament Panorama"],
+      ["data-src", "/assets/best-wine-tasting-budapest/07-smuz-tokaji-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Tokaji Wine Tasting with Parliament Panorama"],
+      ["data-src", "/assets/best-wine-tasting-budapest/07-smuz-tokaji-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Tokaji Wine Tasting with Parliament Panorama"],
+      ["data-src", "/assets/best-wine-tasting-budapest/07-smuz-tokaji-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Tokaji Wine Tasting with Parliament Panorama"],
+      ["data-src", "/assets/best-wine-tasting-budapest/07-smuz-tokaji-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Tokaji Wine Tasting with Parliament Panorama"],
+      ["data-src", "/assets/best-wine-tasting-budapest/07-smuz-tokaji-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-wine-tasting-budapest/07-smuz-tokaji-01.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/07-smuz-tokaji-02.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/07-smuz-tokaji-03.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/07-smuz-tokaji-04.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/07-smuz-tokaji-05.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/07-smuz-tokaji-06.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/07-smuz-tokaji-07.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/07-smuz-tokaji-08.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/07-smuz-tokaji-09.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/07-smuz-tokaji-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Smúz Café",
+    "⏱️ 1 hour",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Smúz+Café+Kossuth+Lajos+tér+18+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Smúz Café, Kossuth Lajos tér"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-tokaji-wine-tasting-with-parliament-panorama-t1356564/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Tokaji Wine Tasting with Parliament Panorama"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.08",
+     "score": "4.1",
+     "meta": "6 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.1",
+       "count": "(6)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-tokaji-wine-tasting-with-parliament-panorama-t1356564/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍯 <span class=\"bpa-lang-label\">3 Tokaji wines</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What's poured:</strong> 3 Holdvölgy Tokaji wines, including a sweet Aszú, from Hungary's most famous wine region. About <strong>€10.40 a glass</strong>."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏛️ <span class=\"bpa-lang-label\">Parliament view</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Your seat:</strong> Reserved seating facing the Hungarian Parliament, on the terrace or at indoor tables, so it runs in any weather."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧀 <span class=\"bpa-lang-label\">Artisan platter</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Food:</strong> Local cheeses, fresh fruit and snacks. Food and drinks beyond the tasting menu are charged separately."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚋 <span class=\"bpa-lang-label\">Tram 2 stop</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting there:</strong> Tram 2 stops in front of the café at Parlament, látogatóközpont. Entry to the café's antique coffee-maker collection is included."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a Tokaji-only hour with the Parliament across the square, for €31.",
+    "skip_html": "if you want a guided wine lesson: it is 3 wines poured by the café's host rather than a sommelier class."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Smúz Café, Kossuth Lajos tér 18, 1055 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "3 Holdvölgy Tokaji wines incl. Aszú, artisan platter, reserved seat with Parliament view, entry to the antique coffee-maker collection, English-speaking host."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Additional food and drinks, hotel pickup, tips."
+     },
+     {
+      "q": "How do I get there?",
+      "a": "Tram 2, Parlament, látogatóközpont stop."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Only 3 wines. Café host rather than a sommelier. New listing with few reviews so far."
+     }
+    ]
+   },
+   "price": {
+    "main": "€31",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1 hour",
+      "price": "€31"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€39</s>"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-tokaji-wine-tasting-with-parliament-panorama-t1356564/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later", "Wheelchair-accessible"],
+    "sublink": {
+     "url": "#item-7-tokaji-tasting-with-parliament-view",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #8: Hungarian Pálinka Tasting: Discover Hungary&#x27;s National Drink -->\n",
+   "id": "card-8",
+   "cats": ["city", "spirits", "under50"],
+   "gallery": {
+    "rank": {
+     "text": "#8 Best Pálinka Tasting",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Hungarian Pálinka Tasting: Discover Hungary's National Drink"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-wine-tasting-budapest/08-palinka-color-bar-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Hungarian Pálinka Tasting: Discover Hungary's National Drink"],
+      ["data-src", "/assets/best-wine-tasting-budapest/08-palinka-color-bar-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Hungarian Pálinka Tasting: Discover Hungary's National Drink"],
+      ["data-src", "/assets/best-wine-tasting-budapest/08-palinka-color-bar-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Hungarian Pálinka Tasting: Discover Hungary's National Drink"],
+      ["data-src", "/assets/best-wine-tasting-budapest/08-palinka-color-bar-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Hungarian Pálinka Tasting: Discover Hungary's National Drink"],
+      ["data-src", "/assets/best-wine-tasting-budapest/08-palinka-color-bar-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Hungarian Pálinka Tasting: Discover Hungary's National Drink"],
+      ["data-src", "/assets/best-wine-tasting-budapest/08-palinka-color-bar-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Hungarian Pálinka Tasting: Discover Hungary's National Drink"],
+      ["data-src", "/assets/best-wine-tasting-budapest/08-palinka-color-bar-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Hungarian Pálinka Tasting: Discover Hungary's National Drink"],
+      ["data-src", "/assets/best-wine-tasting-budapest/08-palinka-color-bar-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Hungarian Pálinka Tasting: Discover Hungary's National Drink"],
+      ["data-src", "/assets/best-wine-tasting-budapest/08-palinka-color-bar-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-wine-tasting-budapest/08-palinka-color-bar-01.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/08-palinka-color-bar-02.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/08-palinka-color-bar-03.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/08-palinka-color-bar-04.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/08-palinka-color-bar-05.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/08-palinka-color-bar-06.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/08-palinka-color-bar-07.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/08-palinka-color-bar-08.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/08-palinka-color-bar-09.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Color Bar",
+    "⏱️ 1.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Color+Bar+Madách+Imre+út+11+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Color Bar, Madách Imre út"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/hungarian-palinka-tasting-discover-hungary-s-national-drink-t1439087/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Hungarian Pálinka Tasting: Discover Hungary's National Drink"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.24",
+     "score": "4.2",
+     "meta": "4 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.2",
+       "count": "(4)",
+       "url": "https://www.getyourguide.com/budapest-l29/hungarian-palinka-tasting-discover-hungary-s-national-drink-t1439087/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥃 <span class=\"bpa-lang-label\">3 pálinkas</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What's poured:</strong> Nobilis Irsai Olivér grape (40%), Sáppusztai Piros Vilmos pear (42%) and Árpád Pálinkaház Dupla Kajszi apricot (60%)."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧪 <span class=\"bpa-lang-label\">2 cl each</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Pour size:</strong> Each 2 cl measure is served in a tulip glass that concentrates the fruit aroma, 6 cl in all. About <strong>€6.53 a pour</strong>."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🫒 <span class=\"bpa-lang-label\">Olives &amp; water</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Food:</strong> Olives and water are included. A cheese and meat platter for two can be added at checkout, worth it before a 60% apricot finale."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍸 <span class=\"bpa-lang-label\">Stay after</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Afterwards:</strong> The bar is a short walk from Gozsdu Courtyard and serves dinner, cocktails and over 200 drinks if you want to stay on."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for Hungary's national spirit instead of wine: 3 premium pálinkas, from a 40% grape to a 60% apricot, for €20.",
+    "skip_html": "if you want food included: only olives come with it, the platter costs extra."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Color Bar &amp; Bistro, Madách Imre út 11, 1075 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Guided tasting of 3 pálinkas (2 cl each), olives, water."
+     },
+     {
+      "q": "Which languages?",
+      "a": "Hungarian, English."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Spirits only, no wine. Only olives included, platter extra. 60% finale is strong for beginners."
+     },
+     {
+      "q": "Why pick it?",
+      "a": "Cheapest option on the list. 3 premium pálinkas named in advance. Guided by a host in English or Hungarian."
+     }
+    ]
+   },
+   "price": {
+    "main": "€20",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1.5 hours",
+      "price": "€20"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/hungarian-palinka-tasting-discover-hungary-s-national-drink-t1439087/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-8-p-linka-tasting-at-color-bar",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #9: Guided wine tasting at Rókusfalvy Estate -->\n",
+   "id": "card-9",
+   "cats": ["countryside", "under50"],
+   "gallery": {
+    "rank": {
+     "text": "#9 Best Estate Visit",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Guided wine tasting at Rókusfalvy Estate"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-wine-tasting-budapest/09-rokusfalvy-estate-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Guided wine tasting at Rókusfalvy Estate"],
+      ["data-src", "/assets/best-wine-tasting-budapest/09-rokusfalvy-estate-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Guided wine tasting at Rókusfalvy Estate"],
+      ["data-src", "/assets/best-wine-tasting-budapest/09-rokusfalvy-estate-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Guided wine tasting at Rókusfalvy Estate"],
+      ["data-src", "/assets/best-wine-tasting-budapest/09-rokusfalvy-estate-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Guided wine tasting at Rókusfalvy Estate"],
+      ["data-src", "/assets/best-wine-tasting-budapest/09-rokusfalvy-estate-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Guided wine tasting at Rókusfalvy Estate"],
+      ["data-src", "/assets/best-wine-tasting-budapest/09-rokusfalvy-estate-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Guided wine tasting at Rókusfalvy Estate"],
+      ["data-src", "/assets/best-wine-tasting-budapest/09-rokusfalvy-estate-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-wine-tasting-budapest/09-rokusfalvy-estate-01.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/09-rokusfalvy-estate-02.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/09-rokusfalvy-estate-03.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/09-rokusfalvy-estate-04.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/09-rokusfalvy-estate-05.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/09-rokusfalvy-estate-06.avif"
+     },
+     {
+      "src": "/assets/best-wine-tasting-budapest/09-rokusfalvy-estate-07.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Rókusfalvy Birtok",
+    "⏱️ 1.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Rókusfalvy+Birtok+Etyek+Újhegy+89",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Rókusfalvy Estate, Etyek"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/etyek-l87267/guided-wine-tasting-at-the-rokusfalvy-estate-t604930/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Guided wine tasting at Rókusfalvy Estate"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.27",
+     "score": "4.3",
+     "meta": "8 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.3",
+       "count": "(8)",
+       "url": "https://www.getyourguide.com/etyek-l87267/guided-wine-tasting-at-the-rokusfalvy-estate-t604930/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍾 <span class=\"bpa-lang-label\">4 wines or sparkling</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What's poured:</strong> 4 Rókusfalvy wines or sparkling wines in the estate's press house, which seats up to 20. About <strong>€6.16 a glass</strong>."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍇 <span class=\"bpa-lang-label\">Cellar &amp; vine walk</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Included:</strong> A short walk among the vines plus a look into the barrel cellar and the sparkling-wine cellar."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥐 <span class=\"bpa-lang-label\">Fresh scones</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Food:</strong> Freshly baked scones and unlimited soft drinks. A cheese and ham tasting plate is available on request."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚗 <span class=\"bpa-lang-label\">Own transport</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting there:</strong> No transfer is included: the estate is at Újhegy 89 in Etyek, though it can help you order one. Book at least 48 hours ahead."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for travellers with a car already heading to Etyek: €25 at the winery itself, with a vineyard walk and cellar tour.",
+    "skip_html": "if you need an English presentation or transport: it is presented in Hungarian and you get there on your own."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Rókusfalvy Estate, Újhegy 89, 2091 Etyek."
+     },
+     {
+      "q": "What is included?",
+      "a": "Guided tasting of 4 wines or sparkling wines, cellar tour, vineyard walk, freshly baked scones, unlimited soft drinks."
+     },
+     {
+      "q": "Which languages?",
+      "a": "Hungarian."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Presentation in Hungarian. No transport included. Book 48 hours ahead."
+     },
+     {
+      "q": "Why pick it?",
+      "a": "Cheapest wine option on the list. Tasting at the winery itself. Vineyard walk and sparkling-wine cellar."
+     }
+    ]
+   },
+   "price": {
+    "main": "€25",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1.5 hours",
+      "price": "€25"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/etyek-l87267/guided-wine-tasting-at-the-rokusfalvy-estate-t604930/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=wine_tasting_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-9-r-kusfalvy-estate-tasting-in-etyek",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}

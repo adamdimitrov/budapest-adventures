@@ -1,0 +1,1833 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["ebike", "private"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Overall",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Guided City Centre Electric Bike Tour"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-bike-tours-budapest/01-city-centre-e-bike-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Centre Electric Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/01-city-centre-e-bike-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Centre Electric Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/01-city-centre-e-bike-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Centre Electric Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/01-city-centre-e-bike-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Centre Electric Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/01-city-centre-e-bike-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Centre Electric Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/01-city-centre-e-bike-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Centre Electric Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/01-city-centre-e-bike-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Centre Electric Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/01-city-centre-e-bike-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Centre Electric Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/01-city-centre-e-bike-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Centre Electric Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/01-city-centre-e-bike-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-bike-tours-budapest/01-city-centre-e-bike-01.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/01-city-centre-e-bike-02.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/01-city-centre-e-bike-03.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/01-city-centre-e-bike-04.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/01-city-centre-e-bike-05.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/01-city-centre-e-bike-06.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/01-city-centre-e-bike-07.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/01-city-centre-e-bike-08.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/01-city-centre-e-bike-09.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/01-city-centre-e-bike-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Bike &amp; Relax",
+    "⏱️ 3.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Bike+&+Relax+Madách+Imre+út+12+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Madách Imre út 12"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-comfortable-35-hour-guided-e-bike-tour-t371910/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Guided City Centre Electric Bike Tour"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.92",
+     "score": "4.9",
+     "meta": "731 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(731)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-comfortable-35-hour-guided-e-bike-tour-t371910/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⚡ <span class=\"bpa-lang-label\">E-bike up Castle Hill</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The climb:</strong> After the Chain Bridge, now closed to private cars, the route climbs Castle Hill to <strong>Matthias Church and Fisherman's Bastion</strong> with electric support. You still pedal: the bikes are wooden-frame my-esel or KTM Cento e-bikes."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📍 <span class=\"bpa-lang-label\">19 stops, both banks</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> Jewish Quarter, House of Terror, Heroes' Square, City Park and Vajdahunyad Castle, Andrássy Avenue, the Opera, St Stephen's Basilica, Parliament, Castle Hill, Rudas and Gellért Baths, Liberty Bridge, Central Market Hall, the National Museum and Dohány Street Synagogue. All seen from outside, no entries."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👥 <span class=\"bpa-lang-label\">Max 10 riders</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Group:</strong> Shared departures are capped at <strong>10 participants</strong>, and the same route can be booked as a private tour. Guides speak English, German and French."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📏 <span class=\"bpa-lang-label\">13+, 160 cm, 110 kg</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Who can ride:</strong> Not suitable for children under 13, riders under 160 cm or over 110 kg, or anyone without cycling experience. Helmets are provided but optional."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for first-timers who want Buda and Pest in one ride without sweating up Castle Hill, because the motor handles the climb and the loop covers 19 stops in 3.5 hours.",
+    "skip_html": "if you are under 160 cm, over 110 kg or have never ridden a bike in traffic: the Segway tours at #4 and #6 have looser limits."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Bike &amp; Relax, Madách Imre út 12, 1075 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "E-bike rental, tour guide, helmet (optional)."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Under 13, under 160 cm, over 110 kg, no cycling experience."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, German, French."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Max 10, private option."
+     }
+    ]
+   },
+   "price": {
+    "main": "€54",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "3.5 hours",
+      "price": "€54"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-comfortable-35-hour-guided-e-bike-tour-t371910/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-1-city-centre-e-bike-tour-with-castle-hill",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: Budapest: Grand Sightseeing Bike Tour -->\n",
+   "id": "card-2",
+   "cats": ["bike"],
+   "gallery": {
+    "rank": {
+     "text": "🥈 #2 Best Value",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Grand Sightseeing Bike Tour"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Grand Sightseeing Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Grand Sightseeing Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Grand Sightseeing Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Grand Sightseeing Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Grand Sightseeing Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Grand Sightseeing Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Grand Sightseeing Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Grand Sightseeing Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Grand Sightseeing Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-01.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-02.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-03.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-04.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-05.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-06.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-07.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-08.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-09.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/02-grand-sightseeing-bike-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Classic bike, shared group",
+    "⏱️ 3 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Semmelweis+u.+14+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Semmelweis u. 14"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/grand-budapest-sightseeing-bike-tour-t168708/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Grand Sightseeing Bike Tour"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.76",
+     "score": "4.8",
+     "meta": "1.1k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(1.1k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/grand-budapest-sightseeing-bike-tour-t168708/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏰 <span class=\"bpa-lang-label\">Castle Hill + Margaret Island</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Buda side:</strong> Ride Duna Corso to Elizabeth Bridge, climb the Castle District for a <strong>25-minute stop with free time</strong> and the Fisherman's Bastion view, then drop to Margaret Bridge for a 20-minute break on Margaret Island."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💧 <span class=\"bpa-lang-label\">Water, sunscreen, toilet</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Included:</strong> Bike, helmet, live guide, a bottle of mineral water, sunscreen and a clean toilet at the start office. Tips are extra."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⚡ <span class=\"bpa-lang-label\">E-bike version €50</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Same route:</strong> The same route and timetable is also sold as an e-bike tour from the same meeting point, for €50. The €12 difference buys electric help on the Castle Hill climb."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Andrássy if time permits</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Pest finale:</strong> After Parliament, Liberty Square and St Stephen's Basilica, the ride continues down Andrássy Avenue past the Opera and House of Terror to Heroes' Square and City Park <strong>only if time permits</strong>. Those stops are marked optional."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for riders happy to pedal who want Castle Hill and Margaret Island, because €12.67 an hour is the lowest price per hour of any tour here that guarantees the Buda climb.",
+    "skip_html": "if pedalling uphill puts you off: Castle Hill is a real climb on a classic bike, so take #1 or the €50 e-bike version of this route."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Semmelweis u. 14, 1052 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Bike, helmet, live guide, bottle of mineral water, sunscreen, clean toilet."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Tips."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Children under 12, pregnant women."
+     },
+     {
+      "q": "How long is it?",
+      "a": "3 hours."
+     }
+    ]
+   },
+   "price": {
+    "main": "€38",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "3 hours",
+      "price": "€38"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/grand-budapest-sightseeing-bike-tour-t168708/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-2-grand-sightseeing-bike-tour",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #3: Budapest: Small-Group MonsteRoller E-Scooter Tours -->\n",
+   "id": "card-3",
+   "cats": ["scooter", "private"],
+   "gallery": {
+    "rank": {
+     "text": "🥉 #3 Best E-Scooter",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Small-Group MonsteRoller E-Scooter Tours"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Small-Group MonsteRoller E-Scooter Tours"],
+      ["data-src", "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Small-Group MonsteRoller E-Scooter Tours"],
+      ["data-src", "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Small-Group MonsteRoller E-Scooter Tours"],
+      ["data-src", "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Small-Group MonsteRoller E-Scooter Tours"],
+      ["data-src", "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Small-Group MonsteRoller E-Scooter Tours"],
+      ["data-src", "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Small-Group MonsteRoller E-Scooter Tours"],
+      ["data-src", "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Small-Group MonsteRoller E-Scooter Tours"],
+      ["data-src", "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Small-Group MonsteRoller E-Scooter Tours"],
+      ["data-src", "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Small-Group MonsteRoller E-Scooter Tours"],
+      ["data-src", "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-01.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-02.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-03.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-04.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-05.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-06.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-07.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-08.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-09.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/03-monsteroller-e-scooter-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "E-Magine Rides",
+    "⏱️ 1–4 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=E-Magine+Rides+Bécsi+u.+8+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Bécsi u. 8"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-small-group-monsteroller-e-scooter-tours-t74891/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Small-Group MonsteRoller E-Scooter Tours"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.89",
+     "score": "4.9",
+     "meta": "1.4k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(1.4k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-small-group-monsteroller-e-scooter-tours-t74891/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🛴 <span class=\"bpa-lang-label\">9.5-inch wide wheels</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The vehicle:</strong> MonsteRollers have 9.5-inch-wide wheels, a low platform and a <strong>top speed of 25 km/h</strong>. No driving licence needed, though bike or scooter experience is recommended. Every tour starts with a short training and practice session."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗺️ <span class=\"bpa-lang-label\">Pick your route</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Routes:</strong> Choose an express highlights ride, a themed tour, a long Buda, Pest and Margaret Island loop or a half-day option with food tastings. Optional stops include Buda Castle, Fisherman's Bastion, <strong>Citadella on Gellért Hill</strong> and Margaret Island, so check which your route covers."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👥 <span class=\"bpa-lang-label\">Small groups</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Group:</strong> Small-group departures are capped at 8 to 10 riders and larger parties are split; bigger groups can book privately."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧒 <span class=\"bpa-lang-label\">14+ to drive</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Age rules:</strong> Drivers must be 14 or older. Kids aged 10 to 18 can ride on the back seat of a double-seater if you request it when booking, and every participant pays. No high heels; skirts are not advised."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for anyone who wants the hills without pedalling, because the route menu runs from a short express ride to a 4-hour loop and is the only one here listing the Citadella on Gellért Hill.",
+    "skip_html": "if you are unsure you can ride: if you cannot handle the MonsteRoller after the practice session, there is no refund."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "E-Magine Rides, Bécsi u. 8, 1052 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "MonsteRoller e-scooter, local tour guide, helmet, rain poncho and warm gloves when needed."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Under 14 (as driver), pregnant women, people with mobility impairments."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Small groups up to 8 to 10, private on request."
+     },
+     {
+      "q": "How long is it?",
+      "a": "1 to 4 hours, by route."
+     }
+    ]
+   },
+   "price": {
+    "main": "€34",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1–4 hours",
+      "price": "€34"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€40</s>"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-small-group-monsteroller-e-scooter-tours-t74891/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-3-monsteroller-e-scooter-tours",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: Budapest: City Highlights Segway Live Guided Tour -->\n",
+   "id": "card-4",
+   "cats": ["segway", "private"],
+   "gallery": {
+    "rank": {
+     "text": "🛞 #4 Best Segway Tour",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: City Highlights Segway Live Guided Tour"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-bike-tours-budapest/04-segway-highlights-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: City Highlights Segway Live Guided Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/04-segway-highlights-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: City Highlights Segway Live Guided Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/04-segway-highlights-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: City Highlights Segway Live Guided Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/04-segway-highlights-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: City Highlights Segway Live Guided Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/04-segway-highlights-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: City Highlights Segway Live Guided Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/04-segway-highlights-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: City Highlights Segway Live Guided Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/04-segway-highlights-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: City Highlights Segway Live Guided Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/04-segway-highlights-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: City Highlights Segway Live Guided Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/04-segway-highlights-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: City Highlights Segway Live Guided Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/04-segway-highlights-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-bike-tours-budapest/04-segway-highlights-01.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/04-segway-highlights-02.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/04-segway-highlights-03.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/04-segway-highlights-04.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/04-segway-highlights-05.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/04-segway-highlights-06.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/04-segway-highlights-07.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/04-segway-highlights-08.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/04-segway-highlights-09.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/04-segway-highlights-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "GetSegway",
+    "⏱️ 2.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=GetSegway+Galamb+u.+3+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Galamb u. 3"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-25-hour-private-grand-city-segway-tour-t187656/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: City Highlights Segway Live Guided Tour"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.91",
+     "score": "4.9",
+     "meta": "323 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(323)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-25-hour-private-grand-city-segway-tour-t187656/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏰 <span class=\"bpa-lang-label\">Up to Matthias Church</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Buda half:</strong> Over Elizabeth Bridge to the St Gerard statue, Castle Garden Bazaar and Adam Clark Square, then up past Buda Castle to Fisherman's Bastion and a <strong>10-minute break at Matthias Church</strong>."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏛️ <span class=\"bpa-lang-label\">Parliament and Basilica</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Pest half:</strong> Back over the Chain Bridge to the Shoes on the Danube Bank, a Parliament photo stop, Liberty Square and St Stephen's Basilica before returning to Galamb utca."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "☕ <span class=\"bpa-lang-label\">Photos, coffee, water</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Included:</strong> Safety training and a supervised test drive, all equipment, <strong>photos of your tour</strong>, coffee and water, rain ponchos and winter gloves. Tips optional."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⚖️ <span class=\"bpa-lang-label\">30–140 kg</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Who can ride:</strong> Riders must weigh between 30 and 140 kg, and under-16s ride with an adult. Pregnant women cannot join. In heavy rain (more than 1 mm per hour) the tour can be rescheduled."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a both-banks overview with zero pedalling, because it is the only Segway tour here that climbs to Matthias Church and still covers Parliament and the Basilica.",
+    "skip_html": "if price per hour matters most: at €27.60 an hour it costs nearly double the e-bike at #1."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Galamb u. 3, 1052 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Live guiding, safety training and supervised test drive, all equipment, photos of your tour, coffee and water, rain ponchos, winter gloves."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Tips (optional)."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Pregnant women, people over 140 kg or under 30 kg."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, Russian, Kazakh, French, Spanish, German."
+     }
+    ]
+   },
+   "price": {
+    "main": "€69",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2.5 hours",
+      "price": "€69"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-25-hour-private-grand-city-segway-tour-t187656/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-4-segway-highlights-tour-buda-and-pest",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: Budapest: Monster Bike Roller Guided City Tour -->\n",
+   "id": "card-5",
+   "cats": ["scooter", "private"],
+   "gallery": {
+    "rank": {
+     "text": "⭐ #5 Highest Rated",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Monster Bike Roller Guided City Tour"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-bike-tours-budapest/05-monster-roller-city-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Monster Bike Roller Guided City Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/05-monster-roller-city-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Monster Bike Roller Guided City Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/05-monster-roller-city-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Monster Bike Roller Guided City Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/05-monster-roller-city-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Monster Bike Roller Guided City Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/05-monster-roller-city-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Monster Bike Roller Guided City Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/05-monster-roller-city-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Monster Bike Roller Guided City Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/05-monster-roller-city-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-bike-tours-budapest/05-monster-roller-city-01.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/05-monster-roller-city-02.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/05-monster-roller-city-03.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/05-monster-roller-city-04.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/05-monster-roller-city-05.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/05-monster-roller-city-06.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/05-monster-roller-city-07.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "GetSegway",
+    "⏱️ 1.5–3 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=GetSegway+Galamb+u.+3+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Galamb u. 3"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-monster-bike-roller-guided-city-tour-t662749/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Monster Bike Roller Guided City Tour"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.96",
+     "score": "5.0",
+     "meta": "935 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(935)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-monster-bike-roller-guided-city-tour-t662749/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏰 <span class=\"bpa-lang-label\">20 min at Fisherman's Bastion</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> Elizabeth Bridge, Buda Castle, a <strong>20-minute break with free time at Fisherman's Bastion</strong>, then Chain Bridge, St Stephen's Basilica, Liberty Square, Parliament and the Shoes on the Danube Bank. The option you book makes it shorter or longer."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧒 <span class=\"bpa-lang-label\">15+ solo, kids ride behind</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Age rules:</strong> Riders under 15 cannot drive alone but can ride behind an adult. Maximum weight 136 kg; pregnant women cannot join."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "☕ <span class=\"bpa-lang-label\">Coffee or tea</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Included:</strong> Briefing and supervised test ride, a helmet in all sizes, rain poncho and cold-season gloves, plus coffee or tea in the office. Tips optional."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗣️ <span class=\"bpa-lang-label\">English, Spanish, Russian</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Languages:</strong> Shared tours run in English, Spanish and Russian; private tours can be guided in another language."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for couples and families with teens who want Castle Hill on wheels with the best guest score on the page (4.96 out of 5), because the route builds in 20 minutes of free time at Fisherman's Bastion.",
+    "skip_html": "if you want to choose your stops: the route is fixed and only its length changes with the option, so pick #3 for a route menu."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Galamb u. 3, 1052 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Monster bike ride, live guide, briefing and supervised test ride, helmet (all sizes), rain poncho, cold-season gloves, coffee or tea in the office."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Tips (optional)."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Under 15 as driver, pregnant women, over 136 kg."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, Spanish, Russian."
+     }
+    ]
+   },
+   "price": {
+    "main": "€45",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1.5–3 hours",
+      "price": "€45"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-monster-bike-roller-guided-city-tour-t662749/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-5-monster-roller-city-tour",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #6: Budapest: 1.5-Hour Fun Segway Sightseeing -->\n",
+   "id": "card-6",
+   "cats": ["segway", "private"],
+   "gallery": {
+    "rank": {
+     "text": "⏱️ #6 Best Short Private Ride",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: 1.5-Hour Fun Segway Sightseeing"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-bike-tours-budapest/06-segway-90-minutes-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: 1.5-Hour Fun Segway Sightseeing"],
+      ["data-src", "/assets/best-bike-tours-budapest/06-segway-90-minutes-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 1.5-Hour Fun Segway Sightseeing"],
+      ["data-src", "/assets/best-bike-tours-budapest/06-segway-90-minutes-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 1.5-Hour Fun Segway Sightseeing"],
+      ["data-src", "/assets/best-bike-tours-budapest/06-segway-90-minutes-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 1.5-Hour Fun Segway Sightseeing"],
+      ["data-src", "/assets/best-bike-tours-budapest/06-segway-90-minutes-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 1.5-Hour Fun Segway Sightseeing"],
+      ["data-src", "/assets/best-bike-tours-budapest/06-segway-90-minutes-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-bike-tours-budapest/06-segway-90-minutes-01.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/06-segway-90-minutes-02.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/06-segway-90-minutes-03.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/06-segway-90-minutes-04.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/06-segway-90-minutes-05.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/06-segway-90-minutes-06.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Private Segway tour",
+    "⏱️ 1.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Galamb+u.+3+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Galamb u. 3"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-15-hour-private-segway-tour-of-the-city-centre-t190586/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: 1.5-Hour Fun Segway Sightseeing"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.91",
+     "score": "4.9",
+     "meta": "675 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(675)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-15-hour-private-segway-tour-of-the-city-centre-t190586/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🔒 <span class=\"bpa-lang-label\">Private guide</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Format:</strong> Sold as a <strong>private tour</strong>: your guide rides only with your party, and you pick from multiple start times through the day."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📍 <span class=\"bpa-lang-label\">Pest centre only</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> Erzsébet Square, St Stephen's Basilica, Liberty Square, a Parliament photo stop and the Shoes on the Danube Bank, with views across to Buda Castle and Fisherman's Bastion from the waterfront. No Buda climb."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📸 <span class=\"bpa-lang-label\">Photos included</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Included:</strong> Full guided training, all equipment, photos of your tour, rain ponchos and winter gloves. Tips optional."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧒 <span class=\"bpa-lang-label\">From age 8, 30 kg</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Who can ride:</strong> Children from 8 who weigh at least 30 kg. Bring a passport or ID card (a copy is accepted). Guides speak 7 languages, including Arabic and Hungarian."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a first-afternoon orientation or a nervous first-time rider, because it is private, starts with a 15-minute training session and is over in 90 minutes for €45.",
+    "skip_html": "if you want Buda: the route stays on the Pest side, so take #4 for Matthias Church."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Galamb u. 3, 1052 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Professional guide, full guided training, all equipment, photos of your tour, rain ponchos, winter gloves."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Tips (optional)."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Under 8, under 30 kg, pregnant women."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, Russian, Spanish, Hungarian, French, German, Arabic."
+     }
+    ]
+   },
+   "price": {
+    "main": "€45",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1.5 hours",
+      "price": "€45"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-15-hour-private-segway-tour-of-the-city-centre-t190586/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-6-90-minute-private-segway-pest",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #7: Budapest Bike Tour with a Certified Local Guide -->\n",
+   "id": "card-7",
+   "cats": ["bike", "ebike"],
+   "gallery": {
+    "rank": {
+     "text": "💶 #7 Cheapest per Hour",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest Bike Tour with a Certified Local Guide"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-bike-tours-budapest/07-certified-guide-bike-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest Bike Tour with a Certified Local Guide"],
+      ["data-src", "/assets/best-bike-tours-budapest/07-certified-guide-bike-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Bike Tour with a Certified Local Guide"],
+      ["data-src", "/assets/best-bike-tours-budapest/07-certified-guide-bike-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Bike Tour with a Certified Local Guide"],
+      ["data-src", "/assets/best-bike-tours-budapest/07-certified-guide-bike-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Bike Tour with a Certified Local Guide"],
+      ["data-src", "/assets/best-bike-tours-budapest/07-certified-guide-bike-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Bike Tour with a Certified Local Guide"],
+      ["data-src", "/assets/best-bike-tours-budapest/07-certified-guide-bike-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Bike Tour with a Certified Local Guide"],
+      ["data-src", "/assets/best-bike-tours-budapest/07-certified-guide-bike-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Bike Tour with a Certified Local Guide"],
+      ["data-src", "/assets/best-bike-tours-budapest/07-certified-guide-bike-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Bike Tour with a Certified Local Guide"],
+      ["data-src", "/assets/best-bike-tours-budapest/07-certified-guide-bike-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Bike Tour with a Certified Local Guide"],
+      ["data-src", "/assets/best-bike-tours-budapest/07-certified-guide-bike-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-bike-tours-budapest/07-certified-guide-bike-01.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/07-certified-guide-bike-02.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/07-certified-guide-bike-03.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/07-certified-guide-bike-04.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/07-certified-guide-bike-05.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/07-certified-guide-bike-06.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/07-certified-guide-bike-07.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/07-certified-guide-bike-08.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/07-certified-guide-bike-09.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/07-certified-guide-bike-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Bike or e-bike, small group",
+    "⏱️ 3.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Rumbach+Sebestyén+u.+10+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Rumbach Sebestyén u. 10"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-guided-bike-e-bike-tour-with-a-goulash-t11477/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest Bike Tour with a Certified Local Guide"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.84",
+     "score": "4.8",
+     "meta": "233 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(233)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-guided-bike-e-bike-tour-with-a-goulash-t11477/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€10.29 per hour</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Value:</strong> 3.5 hours for €36 is the <strong>lowest hourly price on this page</strong>. Bike, helmet, a refreshment and an English-speaking guide are included."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📍 <span class=\"bpa-lang-label\">15 scenic stops</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> Andrássy Avenue, Elizabeth Square, Vajdahunyad Castle, City Park, Széchenyi Thermal Bath, Heroes' Square, House of Music, Parliament, St Stephen's Basilica, Chain Bridge, Liberty Square, Castle Garden Bazaar and Elizabeth Bridge. Castle Hill is a pass-by, not a climb."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⚡ <span class=\"bpa-lang-label\">E-bike upgrade</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Option:</strong> Book an e-bike as an extra if you want electric help. The ride is in English and starts in all weather."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧒 <span class=\"bpa-lang-label\">12+, confident riders</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Who can ride:</strong> Minimum age 12. You need to ride safely and confidently in city traffic and keep an easy pace with the group."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for budget travellers who want the longest guided ride for the money, because €36 buys 3.5 hours, 15 stops and a refreshment.",
+    "skip_html": "if Fisherman's Bastion is the point: this route passes Castle Hill without climbing it, so take #2."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Rumbach Sebestyén u. 10, 1075 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Bicycle or e-bike, helmet, refreshment, local English-speaking guide."
+     },
+     {
+      "q": "What is not included?",
+      "a": "E-bike upgrade costs extra."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Children under 12, people who cannot ride a bike."
+     },
+     {
+      "q": "How long is it?",
+      "a": "About 3.5 hours."
+     }
+    ]
+   },
+   "price": {
+    "main": "€36",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "3.5 hours",
+      "price": "€36"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-guided-bike-e-bike-tour-with-a-goulash-t11477/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-7-3-5-hour-bike-tour-with-certified-guide",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #8: Budapest: Guided City Discovery Bike Tour -->\n",
+   "id": "card-8",
+   "cats": ["bike"],
+   "gallery": {
+    "rank": {
+     "text": "🌳 #8 Best Flat Ride for Kids",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Guided City Discovery Bike Tour"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-bike-tours-budapest/08-city-discovery-bike-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Discovery Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/08-city-discovery-bike-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Discovery Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/08-city-discovery-bike-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Discovery Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/08-city-discovery-bike-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Discovery Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/08-city-discovery-bike-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Discovery Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/08-city-discovery-bike-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Discovery Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/08-city-discovery-bike-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Discovery Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/08-city-discovery-bike-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Discovery Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/08-city-discovery-bike-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Guided City Discovery Bike Tour"],
+      ["data-src", "/assets/best-bike-tours-budapest/08-city-discovery-bike-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-bike-tours-budapest/08-city-discovery-bike-01.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/08-city-discovery-bike-02.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/08-city-discovery-bike-03.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/08-city-discovery-bike-04.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/08-city-discovery-bike-05.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/08-city-discovery-bike-06.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/08-city-discovery-bike-07.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/08-city-discovery-bike-08.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/08-city-discovery-bike-09.avif"
+     },
+     {
+      "src": "/assets/best-bike-tours-budapest/08-city-discovery-bike-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Classic bike",
+    "⏱️ 2.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Szent+István+tér+4+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Szent István tér 4"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/discover-budapest-half-day-bike-tour-t22836/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Guided City Discovery Bike Tour"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.75",
+     "score": "4.8",
+     "meta": "735 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(735)",
+       "url": "https://www.getyourguide.com/budapest-l29/discover-budapest-half-day-bike-tour-t22836/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌳 <span class=\"bpa-lang-label\">Flat, on bike lanes</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Terrain:</strong> Pest only, mostly on cycle lanes: Liberty Square, Shoes on the Danube Bank, Parliament, Andrássy Avenue, Heroes' Square, a walk into City Park and Vajdahunyad Castle, Széchenyi Thermal Bath and the Zoo."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗣️ <span class=\"bpa-lang-label\">English, German, Dutch</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Languages:</strong> One of two bike tours here with guides beyond English. The route passes Nagymező utca, the theatre and bar street, and guides share night-out tips there."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧒 <span class=\"bpa-lang-label\">Kids from 8</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Who can ride:</strong> Not suitable under 8, the <strong>lowest bike age on this page</strong>. No strollers, luggage or large bags."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏁 <span class=\"bpa-lang-label\">3 drop-off points</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Finish:</strong> Starts at Szent István tér 4 by St Stephen's Basilica and returns through the old streets past the Dohány Street Synagogue, with 3 drop-off locations."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for families with kids aged 8 to 12 and anyone who wants a flat, low-stress ride, because it sticks to Pest bike lanes and costs €33.",
+    "skip_html": "if you want Buda views from the top: it never climbs to the Castle District."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Szent István tér 4, 1051 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Personal guide, bike, helmet."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Children under 8."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, German, Dutch."
+     },
+     {
+      "q": "How long is it?",
+      "a": "2.5 hours."
+     }
+    ]
+   },
+   "price": {
+    "main": "€33",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2.5 hours",
+      "price": "€33"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/discover-budapest-half-day-bike-tour-t22836/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=bike_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-8-2-5-hour-flat-city-discovery-bike-tour",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}

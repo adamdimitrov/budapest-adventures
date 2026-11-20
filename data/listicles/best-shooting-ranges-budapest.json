@@ -1,0 +1,2096 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["centre"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Overall",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest City Centre: Real Shooting Experience with 40 Shots and 6 Guns"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-shooting-ranges-budapest/01-capital-6-guns-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest City Centre: Real Shooting Experience with 40 Shots and 6 Guns"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/01-capital-6-guns-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest City Centre: Real Shooting Experience with 40 Shots and 6 Guns"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/01-capital-6-guns-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest City Centre: Real Shooting Experience with 40 Shots and 6 Guns"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/01-capital-6-guns-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest City Centre: Real Shooting Experience with 40 Shots and 6 Guns"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/01-capital-6-guns-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest City Centre: Real Shooting Experience with 40 Shots and 6 Guns"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/01-capital-6-guns-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-shooting-ranges-budapest/01-capital-6-guns-01.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/01-capital-6-guns-02.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/01-capital-6-guns-03.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/01-capital-6-guns-04.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/01-capital-6-guns-05.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/01-capital-6-guns-06.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Capital Shooting Range Budapest",
+    "⏱️ 1.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Capital+Shooting+Range+Dob+utca+89+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Dob utca 89, District VII"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-city-centre-attraction-fast-fierce-shooting-package-t652192/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest City Centre: Real Shooting Experience with 40 Shots and 6 Guns"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.90",
+     "score": "4.9",
+     "meta": "203 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(203)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-city-centre-attraction-fast-fierce-shooting-package-t652192/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🔫 <span class=\"bpa-lang-label\">6 guns, 40 shots</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The line-up:</strong> Ruger MK IV .22 (10 shots), FÉG P9 \"Browning\" 9 mm (5), Grand Power P45 .45 ACP (5), Stribog SP9A1 submachine gun (10), M4-style AR carbine in .223 (5) and a Kalashnikov AK-47 in 7.62×39 (5). That works out at <strong>€2.16 per shot</strong>."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👤 <span class=\"bpa-lang-label\">Instructor per shooter</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>How it runs:</strong> An 8-minute safety briefing, about an hour on the lanes, then an optional 15-minute photo stop. The package lists an instructor for every shooter, plus all equipment, ammunition and range fees."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "☕ <span class=\"bpa-lang-label\">Coffee + targets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Small extras included:</strong> Free coffee and water while you register, and your paper targets to take home. Arrive 15 minutes early for the paperwork."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🪪 <span class=\"bpa-lang-label\">18+, bring ID</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rules:</strong> Every shooter needs a passport or ID card. Under-18s and pregnant women cannot shoot, and anyone intoxicated is turned away. No licence or experience needed."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for first-timers who want a central indoor range with one instructor per shooter and the classic AK-47 plus M4 combination for €86",
+    "skip_html": "if you want the most shots per euro: the Shooting2 packages give 44–60 rounds for €74–90"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Capital Shooting Range Budapest, Dob utca 89, 1077 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "40 shots with 6 weapons, ammunition, range fees, safety briefing, an instructor for every shooter, equipment, coffee and water, paper targets."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Transport to the range, extra guns and rounds (bookable on site)."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, Hungarian."
+     },
+     {
+      "q": "What should I bring?",
+      "a": "Passport or ID card."
+     }
+    ]
+   },
+   "price": {
+    "main": "€86",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1.5 hours",
+      "price": "€86"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-city-centre-attraction-fast-fierce-shooting-package-t652192/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-1-capital-range-6-guns-40-shots",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: Budapest: Outdoor Shooting Experience + Hotel Pick-up -->\n",
+   "id": "card-2",
+   "cats": ["pickup", "variety", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🥈 #2 Best Outdoor Range",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Outdoor Shooting Experience + Hotel Pick-up"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Outdoor Shooting Experience + Hotel Pick-up"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Outdoor Shooting Experience + Hotel Pick-up"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Outdoor Shooting Experience + Hotel Pick-up"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Outdoor Shooting Experience + Hotel Pick-up"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Outdoor Shooting Experience + Hotel Pick-up"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Outdoor Shooting Experience + Hotel Pick-up"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Outdoor Shooting Experience + Hotel Pick-up"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Outdoor Shooting Experience + Hotel Pick-up"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Outdoor Shooting Experience + Hotel Pick-up"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-01.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-02.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-03.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-04.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-05.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-06.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-07.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-08.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-09.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/02-ranger-outdoor-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "RANGER Shooting Range",
+    "⏱️ 2–3.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=RANGER+Shooting+Range+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 City-centre pickup, range 20 min out"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-shooting-experience-3-to-10-guns-hotel-pick-up-t1065480/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Outdoor Shooting Experience + Hotel Pick-up"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.89",
+     "score": "4.9",
+     "meta": "186 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(186)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-shooting-experience-3-to-10-guns-hotel-pick-up-t1065480/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚐 <span class=\"bpa-lang-label\">Transfer included</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting there:</strong> An air-conditioned bus collects you from pick-up points in central Budapest and drives you about 20 minutes to the outdoor range and back. Be at the pick-up point 10 minutes before departure."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🔫 <span class=\"bpa-lang-label\">Up to 10 guns</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Choose your package:</strong> You pick from pistols, machine guns and assault rifles on arrival. Focus on a single gun or try up to 10 different firearms. €85 is the entry price, and extra guns and ammunition cost more."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌳 <span class=\"bpa-lang-label\">Outdoor range</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What's different:</strong> This is the only open-air range on the page, with a 2-hour guided lesson and full kit: eye and ear protection, protective vests and targets. Drinks are included with the session."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🪪 <span class=\"bpa-lang-label\">18+, bring ID</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rules:</strong> Every shooter must be over 18 and bring a passport or ID card (a copy is accepted). Alcohol and drugs are not allowed."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for groups who want a proper half-day outing at an outdoor range with the transfer sorted, because the bus from the centre is included",
+    "skip_html": "if you have an hour between sights: the round trip makes this a 2–3.5 hour commitment"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is there hotel pickup?",
+      "a": "Pick-up points in central Budapest, about 20 minutes' drive to the range."
+     },
+     {
+      "q": "What is included?",
+      "a": "Transfer to the site and back, weapons, ammunition and equipment for your package, instructor-guide, drinks during the session, 2-hour guided lesson."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Extra guns and ammunition."
+     },
+     {
+      "q": "What should I bring?",
+      "a": "Passport or ID card (copy accepted)."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Number of shots per package not stated up front. Extra guns and ammo cost more on top of €85. Takes 2–3.5 hours including the drive."
+     }
+    ]
+   },
+   "price": {
+    "main": "€85",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2–3.5 hours",
+      "price": "€85"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-shooting-experience-3-to-10-guns-hotel-pick-up-t1065480/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later", "Pick-up included"],
+    "sublink": {
+     "url": "#item-2-ranger-outdoor-range-pickup",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #3: Budapest: Basic Gun-Shooting Package -->\n",
+   "id": "card-3",
+   "cats": ["centre", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🥉 #3 Most Reviewed",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Basic Gun-Shooting Package"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-shooting-ranges-budapest/03-churchill-basic-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Basic Gun-Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/03-churchill-basic-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Basic Gun-Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/03-churchill-basic-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Basic Gun-Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/03-churchill-basic-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Basic Gun-Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/03-churchill-basic-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Basic Gun-Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/03-churchill-basic-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Basic Gun-Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/03-churchill-basic-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Basic Gun-Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/03-churchill-basic-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Basic Gun-Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/03-churchill-basic-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Basic Gun-Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/03-churchill-basic-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-shooting-ranges-budapest/03-churchill-basic-01.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/03-churchill-basic-02.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/03-churchill-basic-03.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/03-churchill-basic-04.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/03-churchill-basic-05.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/03-churchill-basic-06.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/03-churchill-basic-07.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/03-churchill-basic-08.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/03-churchill-basic-09.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/03-churchill-basic-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Churchill Lövész",
+    "⏱️ 1 hour",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Holló+utca+6+Budapest+shooting+range",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Holló utca 6, District VII"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-basic-gun-shooting-package-t560085/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Basic Gun-Shooting Package"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.87",
+     "score": "4.9",
+     "meta": "431 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(431)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-basic-gun-shooting-package-t560085/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🔫 <span class=\"bpa-lang-label\">4 guns, 45 shots</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The line-up:</strong> CZ 512 Tactical (20 shots), AR-9 (10), CZ Scorpion EVO (10) and AR-15 (5). No AK-47 in this package. €1.88 a shot."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎖️ <span class=\"bpa-lang-label\">Veteran instructors</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Who teaches you:</strong> Sessions run under a range master's supervision, and the operator highlights American and British veterans among its instructors. Safety equipment is provided."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Wheelchair-accessible</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> The indoor range is wheelchair-accessible, which is not stated for the Shooting2 or Capital ranges."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍺 <span class=\"bpa-lang-label\">Must be sober</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rules:</strong> All visitors must be sober. 18+ only; not suitable for people over 80, pregnant women or people with heart problems or pre-existing medical conditions."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a short, well-proven first session in District VII, because it has the longest track record of any package here",
+    "skip_html": "if the AK-47 is the point: this package does not include one"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Holló utca 6, 1075 Budapest (District VII)."
+     },
+     {
+      "q": "What is included?",
+      "a": "Target shooting, safety equipment, range masters."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Hotel pickup and drop-off, food and drinks."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, French."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "No AK-47. Only 4 guns, the fewest on the page. Session is short."
+     }
+    ]
+   },
+   "price": {
+    "main": "€85",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1 hour",
+      "price": "€85"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€94</s>"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-basic-gun-shooting-package-t560085/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-3-churchill-basic-4-guns-45-shots",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: Budapest: 10-Gun Shooting Experience with Historic Classics -->\n",
+   "id": "card-4",
+   "cats": ["centre", "variety", "historic"],
+   "gallery": {
+    "rank": {
+     "text": "🔫 #4 Most Guns per Euro",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: 10-Gun Shooting Experience with Historic Classics"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: 10-Gun Shooting Experience with Historic Classics"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 10-Gun Shooting Experience with Historic Classics"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 10-Gun Shooting Experience with Historic Classics"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 10-Gun Shooting Experience with Historic Classics"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 10-Gun Shooting Experience with Historic Classics"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 10-Gun Shooting Experience with Historic Classics"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 10-Gun Shooting Experience with Historic Classics"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 10-Gun Shooting Experience with Historic Classics"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 10-Gun Shooting Experience with Historic Classics"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-01.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-02.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-03.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-04.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-05.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-06.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-07.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-08.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-09.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/04-shooting2-10-guns-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Budapest Shooting2",
+    "⏱️ 1.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Budapest+Shooting2+Podmaniczky+Frigyes+tér+2+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Podmaniczky Frigyes tér, near St Stephen's Basilica"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-10-gun-shooting-experience-with-historic-classics-t1526687/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: 10-Gun Shooting Experience with Historic Classics"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.75",
+     "score": "4.7",
+     "meta": "4 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.7",
+       "count": "(4)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-10-gun-shooting-experience-with-historic-classics-t1526687/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🔫 <span class=\"bpa-lang-label\">10 guns, 60 shots</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The line-up:</strong> Handguns: Smith &amp; Wesson 2206 (10 shots), Glock 17 (5), Tokarev TT (5), Colt 1911 Government (5), Rossi R351 revolver (5). Rifles: Hammerli TAC R1 M4 (10), Heckler &amp; Koch SP5 (5), AK-47 (5), Tula SKS (5) and an Oberland Arms OA-16 \"Vietnam Retro\" (5)."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€1.50 per shot</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The maths:</strong> €89.98 for 60 rounds is €1.50 a shot and €9 a gun. Its two sister packages sit at the same €9 a gun, the lowest per-gun prices on this page."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👥 <span class=\"bpa-lang-label\">Max 6 people</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Group size:</strong> Sessions are capped at 6 participants, with instructors explaining each gun before you fire it. Photos with the guns and your target sheet come with the package, plus coffee."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎖️ <span class=\"bpa-lang-label\">Historic classics</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Why this one:</strong> It is the only package here that puts a Colt 1911, a Soviet Tokarev TT and a Tula SKS side by side with a Glock and an AK-47, so you feel how designs changed across the 20th century."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for anyone who wants the widest gun line-up per euro, because 10 guns and 60 rounds for €90 is €9 a gun and €1.50 a shot",
+    "skip_html": "if you only care about the big rifles: half the rounds here go through pistols"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Budapest Shooting2, Podmaniczky Frigyes tér 2, near St Stephen's Basilica."
+     },
+     {
+      "q": "What is included?",
+      "a": "60 shots across 10 firearms, instructors, safety education, photos with the firearms, souvenir target sheets, coffee."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, Hungarian."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Up to 6 participants."
+     },
+     {
+      "q": "What should I bring?",
+      "a": "Passport or ID card."
+     }
+    ]
+   },
+   "price": {
+    "main": "€90",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1.5 hours",
+      "price": "€90"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-10-gun-shooting-experience-with-historic-classics-t1526687/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-4-shooting2-10-historic-guns-60-shots",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: Budapest: 9-Gun Shooting Experience with Sniper Rifles -->\n",
+   "id": "card-5",
+   "cats": ["centre", "variety", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🎯 #5 Best for Sniper Rifles",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: 9-Gun Shooting Experience with Sniper Rifles"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: 9-Gun Shooting Experience with Sniper Rifles"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 9-Gun Shooting Experience with Sniper Rifles"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 9-Gun Shooting Experience with Sniper Rifles"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 9-Gun Shooting Experience with Sniper Rifles"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 9-Gun Shooting Experience with Sniper Rifles"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 9-Gun Shooting Experience with Sniper Rifles"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 9-Gun Shooting Experience with Sniper Rifles"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 9-Gun Shooting Experience with Sniper Rifles"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 9-Gun Shooting Experience with Sniper Rifles"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-01.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-02.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-03.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-04.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-05.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-06.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-07.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-08.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-09.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/05-shooting2-sniper-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Budapest Shooting2",
+    "⏱️ 1.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Budapest+Shooting2+Podmaniczky+Frigyes+tér+2+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Podmaniczky Frigyes tér, near St Stephen's Basilica"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-9-gun-shooting-experience-with-scoped-rifles-t1527407/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: 9-Gun Shooting Experience with Sniper Rifles"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "5.00",
+     "score": "5.0",
+     "meta": "5 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(5)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-9-gun-shooting-experience-with-scoped-rifles-t1527407/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎯 <span class=\"bpa-lang-label\">3 sniper rifles</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The precision part:</strong> Ruger 10/22 Mini Sniper in .22 LR (5 shots), Mossberg MMR with scope (7) and a Bergara B14 BMP in .308 Winchester (3). Three rifles from light to full-power calibre."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🔫 <span class=\"bpa-lang-label\">9 guns, 55 shots</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The rest:</strong> Smith &amp; Wesson 2206 (10), Glock 17 (5), Rossi R351 revolver (5), Hammerli TAC R1 M4 (10), Heckler &amp; Koch SP5 (5) and an AK-47 (5)."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€1.47 per shot</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The maths:</strong> €80.94 for 55 rounds is €1.47 a shot, the lowest per-round price on this page, and about €9 a gun."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👥 <span class=\"bpa-lang-label\">Max 6 people</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Group size:</strong> Capped at 6 participants. Photos with the firearms and your target sheet are included."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for anyone who prefers aiming to spraying, because three scoped rifles up to .308 come with the AK-47 for €81",
+    "skip_html": "if shotguns or Soviet history are the draw: see #6 and #8"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Budapest Shooting2, Podmaniczky Frigyes tér 2, near St Stephen's Basilica."
+     },
+     {
+      "q": "What is included?",
+      "a": "55 shots across 9 firearms, instructors, safety education, photos with the firearms, souvenir target sheets."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, Hungarian."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Up to 6 participants."
+     },
+     {
+      "q": "What should I bring?",
+      "a": "Passport or ID card."
+     }
+    ]
+   },
+   "price": {
+    "main": "€81",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1.5 hours",
+      "price": "€81"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-9-gun-shooting-experience-with-scoped-rifles-t1527407/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-5-shooting2-9-guns-3-sniper-rifles",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #6: Budapest: 8-Gun Shooting Experience with 3 Shotguns -->\n",
+   "id": "card-6",
+   "cats": ["centre", "variety", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "💥 #6 Cheapest + Shotguns",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: 8-Gun Shooting Experience with 3 Shotguns"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: 8-Gun Shooting Experience with 3 Shotguns"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 8-Gun Shooting Experience with 3 Shotguns"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 8-Gun Shooting Experience with 3 Shotguns"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 8-Gun Shooting Experience with 3 Shotguns"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 8-Gun Shooting Experience with 3 Shotguns"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 8-Gun Shooting Experience with 3 Shotguns"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 8-Gun Shooting Experience with 3 Shotguns"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 8-Gun Shooting Experience with 3 Shotguns"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-01.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-02.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-03.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-04.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-05.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-06.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-07.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-08.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/06-shooting2-shotguns-09.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Budapest Shooting2",
+    "⏱️ 1.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Budapest+Shooting2+Podmaniczky+Frigyes+tér+2+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Podmaniczky Frigyes tér, near St Stephen's Basilica"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-8-gun-shooting-experience-with-3-shotguns-t1535090/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: 8-Gun Shooting Experience with 3 Shotguns"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "5.00",
+     "score": "5.0",
+     "meta": "7 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(7)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-8-gun-shooting-experience-with-3-shotguns-t1535090/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💥 <span class=\"bpa-lang-label\">3 shotguns</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The shotgun part:</strong> Remington 870 pump-action, Derya Bullpup and Derya MK-12 IPSC, all in 12/70, with 3 shots each. Three very different designs in one session."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🔫 <span class=\"bpa-lang-label\">8 guns, 44 shots</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The rest:</strong> Ruger Mark IV .22 (10 shots), Smith &amp; Wesson 617 .22 revolver (10), Glock 19 9 mm (5), Stribog SP9 A2 9 mm (5) and an AK-47 (5)."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€73.65, cheapest</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The maths:</strong> The lowest entry price on the page: €1.67 a shot and €9.21 a gun. Coffee, photos with the guns and your target sheet are included."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Arany János utca</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Finding it:</strong> Near St Stephen's Basilica and Arany János utca metro station; the entrance sits between the café and the burger restaurant. Arrive 15 minutes early to register."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for budget-minded first-timers who want the AK-47 and a shotgun for the lowest price on the page",
+    "skip_html": "if you want more rifle time: 9 of the 44 rounds are shotgun and 20 are .22"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Budapest Shooting2, Podmaniczky Frigyes tér, near St Stephen's Basilica and Arany János utca metro."
+     },
+     {
+      "q": "What is included?",
+      "a": "44 shots across 8 firearms, instructors, safety education, photos with the firearms, souvenir target sheets, coffee."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Additional firearms and extra shots (available on site)."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, Hungarian."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Up to 6 participants."
+     }
+    ]
+   },
+   "price": {
+    "main": "€74",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1.5 hours",
+      "price": "€74"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-8-gun-shooting-experience-with-3-shotguns-t1535090/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-6-shooting2-8-guns-3-shotguns",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #7: Budapest: Hollywood Gun Range Shooting Package -->\n",
+   "id": "card-7",
+   "cats": ["centre"],
+   "gallery": {
+    "rank": {
+     "text": "🎬 #7 Most Rounds at Churchill",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Hollywood Gun Range Shooting Package"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Hollywood Gun Range Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hollywood Gun Range Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hollywood Gun Range Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hollywood Gun Range Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hollywood Gun Range Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hollywood Gun Range Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hollywood Gun Range Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hollywood Gun Range Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hollywood Gun Range Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-01.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-02.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-03.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-04.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-05.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-06.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-07.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-08.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-09.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/07-churchill-hollywood-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Churchill Lövész",
+    "⏱️ 1 hour",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Holló+utca+6+Budapest+shooting+range",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Holló utca 6, District VII"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-hollywood-gun-shooting-package-t564979/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Hollywood Gun Range Shooting Package"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.88",
+     "score": "4.9",
+     "meta": "424 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(424)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-hollywood-gun-shooting-package-t564979/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🔫 <span class=\"bpa-lang-label\">5 guns, 60 shots</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The line-up:</strong> The operator advertises two line-ups of 60 rounds: one with a CZ 512 Tactical (20), AR-9 (15), Scorpion EVO (15), M4 (5) and HS VHS-2 (5), the other with a Ruger P10/22 (20), Scorpion EVO (15), UZI (15), CZ Bren (5) and AK-47 (5). Ask at check-in which set you get."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€1.95 per shot</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The maths:</strong> €117 (down from €130) for 60 rounds is €1.95 a shot and €23.40 a gun, the same round count as Shooting2's 10-gun package for €27 more."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📸 <span class=\"bpa-lang-label\">Photos encouraged</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>On the lane:</strong> Your range master gives you tips on each gun and feedback on your targets, and you can take pictures to share."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🪪 <span class=\"bpa-lang-label\">18+, min 40 kg</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rules:</strong> 18+ only, no licence needed. Not suitable for people under 40 kg, over 80, with epilepsy or heart problems, or pregnant women."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for Churchill fans who want 60 rounds and an UZI or M4 in the mix, because it is the range's biggest standard package",
+    "skip_html": "if you are price-sensitive: Shooting2 gives you 60 rounds over 10 guns for €90"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Holló utca 6, 1075 Budapest (District VII)."
+     },
+     {
+      "q": "What is included?",
+      "a": "Safety equipment, target shooting, range master, 60 rounds over 5 guns."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Transport to the meeting point."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, Spanish, Hungarian."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "€117 for 5 guns is pricier than the Shooting2 packages. Two different advertised gun line-ups. Transport to the range not included."
+     }
+    ]
+   },
+   "price": {
+    "main": "€117",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1 hour",
+      "price": "€117"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€130</s>"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-hollywood-gun-shooting-package-t564979/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-7-churchill-hollywood-5-guns-60-shots",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #8: Budapest: Soviet Firearm Shooting Package -->\n",
+   "id": "card-8",
+   "cats": ["centre", "historic"],
+   "gallery": {
+    "rank": {
+     "text": "☭ #8 Best Soviet Guns",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Soviet Firearm Shooting Package"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-shooting-ranges-budapest/08-churchill-soviet-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Soviet Firearm Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/08-churchill-soviet-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Soviet Firearm Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/08-churchill-soviet-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Soviet Firearm Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/08-churchill-soviet-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Soviet Firearm Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/08-churchill-soviet-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Soviet Firearm Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/08-churchill-soviet-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Soviet Firearm Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/08-churchill-soviet-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Soviet Firearm Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/08-churchill-soviet-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Soviet Firearm Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/08-churchill-soviet-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Soviet Firearm Shooting Package"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/08-churchill-soviet-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-shooting-ranges-budapest/08-churchill-soviet-01.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/08-churchill-soviet-02.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/08-churchill-soviet-03.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/08-churchill-soviet-04.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/08-churchill-soviet-05.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/08-churchill-soviet-06.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/08-churchill-soviet-07.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/08-churchill-soviet-08.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/08-churchill-soviet-09.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/08-churchill-soviet-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Churchill Lövész",
+    "⏱️ 1 hour",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Holló+utca+6+Budapest+shooting+range",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Holló utca 6, District VII"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-soviet-package-t565184/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Soviet Firearm Shooting Package"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "5.00",
+     "score": "5.0",
+     "meta": "4 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(4)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-soviet-package-t565184/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "☭ <span class=\"bpa-lang-label\">6 Soviet-bloc guns</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The line-up:</strong> VZ Scorpion 61 (20 shots), PPSh-41 submachine gun (15), AK-47 (7), AKSU (7), DP-28 light machine gun (2) and a Saiga-12 shotgun (4). 55 rounds in total."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€4.09 per shot</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The maths:</strong> €225 for 55 rounds is €4.09 a shot and €37.50 a gun, almost twice the next-highest price per shot (€2.16 at Capital). You pay for rare WWII and Cold War guns, not volume."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎯 <span class=\"bpa-lang-label\">Most AK rounds</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Kalashnikov time:</strong> 7 rounds on the AK-47 plus 7 on the short AKSU, the most Kalashnikov time in any package here."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚫 <span class=\"bpa-lang-label\">No alcohol</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rules:</strong> Alcohol and drugs not allowed. 18+, minimum 140 cm and 40 kg, not suitable for people over 75, with epilepsy or heart problems, or pregnant women."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for history buffs who specifically want a PPSh-41 and DP-28, because no other package in Budapest puts them in one session",
+    "skip_html": "if you just want to fire an AK-47: Capital and Shooting2 include one for about €75–90"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Holló utca 6, 1075 Budapest (District VII)."
+     },
+     {
+      "q": "What is included?",
+      "a": "Safety equipment, range master, 55 rounds over 6 guns."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Hotel pick-up and drop-off."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, Spanish, Hungarian."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "€225, by far the most expensive per shot. Only 2 rounds on the DP-28. Very few reviews."
+     }
+    ]
+   },
+   "price": {
+    "main": "€225",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1 hour",
+      "price": "€225"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-soviet-package-t565184/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-8-churchill-soviet-6-guns-55-shots",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #9: Budapest: Indoor Gun Range Shooting Experience -->\n",
+   "id": "card-9",
+   "cats": ["variety", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🏢 #9 Longest Indoor Lesson",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Indoor Gun Range Shooting Experience"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-shooting-ranges-budapest/09-ranger-indoor-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Indoor Gun Range Shooting Experience"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/09-ranger-indoor-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Indoor Gun Range Shooting Experience"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/09-ranger-indoor-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Indoor Gun Range Shooting Experience"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/09-ranger-indoor-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Indoor Gun Range Shooting Experience"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/09-ranger-indoor-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Indoor Gun Range Shooting Experience"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/09-ranger-indoor-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Indoor Gun Range Shooting Experience"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/09-ranger-indoor-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Indoor Gun Range Shooting Experience"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/09-ranger-indoor-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Indoor Gun Range Shooting Experience"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/09-ranger-indoor-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Indoor Gun Range Shooting Experience"],
+      ["data-src", "/assets/best-shooting-ranges-budapest/09-ranger-indoor-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-shooting-ranges-budapest/09-ranger-indoor-01.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/09-ranger-indoor-02.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/09-ranger-indoor-03.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/09-ranger-indoor-04.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/09-ranger-indoor-05.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/09-ranger-indoor-06.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/09-ranger-indoor-07.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/09-ranger-indoor-08.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/09-ranger-indoor-09.avif"
+     },
+     {
+      "src": "/assets/best-shooting-ranges-budapest/09-ranger-indoor-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "RANGER Shooting Range",
+    "⏱️ 2 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Maglódi+út+47+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Maglódi út 47, District X"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-indoor-gun-range-shooting-experience-t1211004/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Indoor Gun Range Shooting Experience"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.81",
+     "score": "4.8",
+     "meta": "27 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(27)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-indoor-gun-range-shooting-experience-t1211004/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⏱️ <span class=\"bpa-lang-label\">2-hour lesson</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Time on the range:</strong> A 2-hour guided lesson with a certified instructor, double the hour-long sessions at Churchill. Arrive 10 minutes before your slot."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🔫 <span class=\"bpa-lang-label\">Up to 10 guns</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Choose your package:</strong> Pick from pistols, machine guns and assault rifles: one gun or a full selection of up to 10. Eye and ear protection, protective vests and targets are included."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏢 <span class=\"bpa-lang-label\">4 indoor lanes</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The venue:</strong> Four high-capacity lanes at Maglódi út 47 in District X, east of the centre. Drinks are included after shooting."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🪪 <span class=\"bpa-lang-label\">18+, bring ID</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rules:</strong> Every shooter must be over 18 and bring an ID or passport."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for people who want Ranger's longer 2-hour lesson without the bus trip to the outdoor range",
+    "skip_html": "if you are staying central and want to walk: Capital, Shooting2 and Churchill are all in Districts V–VII"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Maglódi út 47, 1106 Budapest (District X)."
+     },
+     {
+      "q": "What is included?",
+      "a": "Weapons and equipment for your package, instructor/guide, drinks, 2-hour guided shooting lesson."
+     },
+     {
+      "q": "What should I bring?",
+      "a": "ID or passport."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "District X, outside the walkable centre. No transfer in this version. Shots per package not stated up front."
+     },
+     {
+      "q": "Why pick it?",
+      "a": "2-hour guided lesson for €85. Choose anything from 1 to 10 guns. Full kit incl. protective vest."
+     }
+    ]
+   },
+   "price": {
+    "main": "€85",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2 hours",
+      "price": "€85"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-indoor-gun-range-shooting-experience-t1211004/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=shooting_ranges_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-9-ranger-indoor-2-hour-lesson",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}

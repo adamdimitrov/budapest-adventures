@@ -423,6 +423,10 @@ def build(spec_path, photos):
     for t in chk.find_all(["style", "script", "section"]):
         t.decompose()
     leftovers = sorted(set(re.findall(r"(?i)\b(MazakEV|13 day trips|day-trips-2026|Visegrád Castle ticket)\b", chk.get_text(" "))))
+    if out.exists() and 'href="/css/listicle-cards.css' in out.read_text(encoding="utf-8"):
+        # This page is on the shared listicle design now: its cards come from data/listicles/<slug>.json
+        # (scripts/listicle.py build); rebuilding it here would undo that. Edit the card data instead.
+        raise SystemExit(f"{out.name} is built from data/listicles/; edit the card data instead")
     out.write_text(txt, encoding="utf-8")
     print(f"wrote {out.relative_to(ROOT)} ({len(txt)//1024} KB, {n_items} items)")
     if leftovers and not spec.get("allow_shell_words"):
