@@ -31,7 +31,14 @@
     "rating": 4.52, "reviews": 14152, "price": 76.54, "price_was": null, "price_unit": "per person",
     "gallery": ["<64-hex>.jpg", …],           // GYG activityImage ids, 9-10; builder fills "photos"
     "photo_slug": "aquaventure",
-    "pills": [{"emoji": "🎢", "label": "105 slides", "lead": "What's inside:", "body": "…", "note": "optional source note"}],  // max 4, every pill adds facts
+    "pills": [                                // 6-8 pills = two full rows, same order as the river cruise cards:
+      {"kind": "time", "emoji": "🕒", "label": "4 starts · 10:00–18:00", "lead": "Start times:", "body": "…"},
+      {"emoji": "🗣️", "label": "English guide", "lead": "Languages:", "body": "…"},
+      {"kind": "access", "emoji": "♿", "label": "Access & kids", "lead": "Access:", "body": "♿ Wheelchair: … 👶 Stroller: … 🎟️ Kids: …"},
+      {"emoji": "🎢", "label": "105 slides", "lead": "What's inside:", "body": "…", "note": "optional source note"},
+      {"kind": "vibe", "emoji": "🙂", "label": "Calm, small group", "lead": "What it feels like:", "body": "…"},
+      {"emoji": "👥", "label": "Max 12 people", "lead": "Group size:", "body": "…"}
+    ],                                        // each pill is a dropdown whose body adds facts not in its label; the builder stops on <6 or >8
     "pick": "for … (specific)", "skip": "if … (specific)",
     "pros": ["…"], "cons": ["…"],
     "review": ["html paragraph", "…"],        // original analysis, no invented experience
