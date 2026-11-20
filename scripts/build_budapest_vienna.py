@@ -356,7 +356,8 @@ def jsonld(url, og, publisher, author):
 
 def build():
     url = SITE + PATH
-    s = TEMPLATE.read_text()
+    import day_trips_shell  # frozen pre-listicle shell
+    s = day_trips_shell.read()
     lock = re.search(r'<div class="ltt-buy-card-trust">\s*(<svg.*?</svg>)', s, re.S).group(1)
     for p in PRODUCTS:
         for j in range(1, p["photos"] + 1):

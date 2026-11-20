@@ -316,7 +316,8 @@ def build(lang):
     L = importlib.import_module(f"itinerary_copy_{lang}")
     ui = L.UI
     url = SITE + L.PATH
-    s = TEMPLATE.read_text()
+    import day_trips_shell  # frozen pre-listicle shell
+    s = day_trips_shell.read()
     lock = re.search(r'<div class="ltt-buy-card-trust">\s*(<svg.*?</svg>)', s, re.S).group(1)
 
     prods = []
