@@ -172,6 +172,10 @@ def main():
     s = s[:m.start(2)] + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + s[m.end(2):]
 
     assert "—" not in s
+    if PAGE.exists() and 'href="/css/listicle-cards.css' in PAGE.read_text():
+        # The page is on the shared listicle design now: cards come from data/listicles/<slug>.json
+        # (scripts/listicle.py build). This older builder would undo that.
+        raise SystemExit(f"{PAGE.name} is built from data/listicles/; edit the card data instead")
     PAGE.write_text(s)
     print("ok")
 
