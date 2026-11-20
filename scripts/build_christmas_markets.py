@@ -799,6 +799,12 @@ def build(lang):
 
     if "—" in s.split("<body", 1)[1].split("<script", 1)[0] or "—" in jsonld(lang, path, copy):
         print("WARNING: em dash in", rel)
+    if 'href="/css/listicle-cards.css' in open(fn, encoding="utf-8").read():
+        # This page is on the shared listicle design now: its program cards come from
+        # data/listicles/budapest-christmas-markets.json and the market cards' questions from
+        # scripts/christmas_market_card_faq.py. Rebuilding it here would undo that.
+        print("skipped", rel, "(on the listicle design; edit data/listicles/ instead)")
+        return
     open(fn, "w", encoding="utf-8").write(s)
     print("built", lang, rel, len(s))
 

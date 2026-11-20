@@ -1,0 +1,916 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["tested", "meal", "day", "weekday", "weekend"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Overall: Bath + Meal",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Rudas Thermal Bath day pass with a 3-course meal"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/rudas-baths-2026/rudas-rooftop-pool-dusk-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath day pass with a 3-course meal"],
+      ["data-src", "/assets/rudas-baths-2026/rudas-rooftop-pool-toast-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath day pass with a 3-course meal"],
+      ["data-src", "/assets/rudas-baths-2026/rudas-bistro-terrace-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath day pass with a 3-course meal"],
+      ["data-src", "/assets/rudas-baths-2026/rudas-turkish-bath-dome-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath day pass with a 3-course meal"],
+      ["data-src", "/assets/rudas-baths-2026/rudas-turkish-bath-pool-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath day pass with a 3-course meal"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6d882d74213380c1f24_Rudas-thermal-bath%20(11).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath day pass with a 3-course meal"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e7021d502805c7a7c112_Rudas-thermal-bath%20(18).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath day pass with a 3-course meal"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e674b2871f3b832c1681_Rudas-thermal-bath%20(15).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath day pass with a 3-course meal"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e69c6efb73a26f9877f6_Rudas-thermal-bath%20(19).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/rudas-baths-2026/rudas-rooftop-pool-dusk-01.avif"
+     },
+     {
+      "src": "/assets/rudas-baths-2026/rudas-rooftop-pool-toast-03.avif"
+     },
+     {
+      "src": "/assets/rudas-baths-2026/rudas-bistro-terrace-05.avif"
+     },
+     {
+      "src": "/assets/rudas-baths-2026/rudas-turkish-bath-dome-02.avif"
+     },
+     {
+      "src": "/assets/rudas-baths-2026/rudas-turkish-bath-pool-04.avif"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6d882d74213380c1f24_Rudas-thermal-bath%20(11).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e7021d502805c7a7c112_Rudas-thermal-bath%20(18).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e674b2871f3b832c1681_Rudas-thermal-bath%20(15).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e69c6efb73a26f9877f6_Rudas-thermal-bath%20(19).webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Rudas, District I",
+    "⏱️ Full Day",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Rudas+Gy%C3%B3gyf%C3%BCrd%C5%91+D%C3%B6brentei+t%C3%A9r+9+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Tram 19, 41 · Bus 7"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-rudas-baths-card-meal&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Rudas Day Pass + 3-Course Meal"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.19",
+     "score": "4.2",
+     "meta": "1.4k+ reviews · GetYourGuide",
+     "heading": "Rating on GetYourGuide for this ticket",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.2",
+       "count": "(1.4k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-rudas-baths-rating-meal&mkt_cmp=true",
+       "rel": "nofollow sponsored noopener",
+       "target": "_blank",
+       "_nl": "\n"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "✓ Personally Tested",
+     "pop_html": "<strong>I bathed at Rudas myself:</strong> the Turkish bath, the wellness area, the saunas and the rooftop pool.<span class=\"bpa-lang-note\">What I checked: pools, changing rooms, crowds and value for money. <a href=\"#item-1-rudas-day-pass-meal\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍽️",
+     "label": "6 weekday options",
+     "pop_html": "<strong>Mon–Thu:</strong> wellness + coffee €74.99 · wellness + wine €76.99 · wellness + sparkling wine €84.99 · Turkish bath + wellness + coffee €84.99 · Turkish bath + wellness + wine or sparkling wine €94.99. <strong>Fri–Sun:</strong> one option, the All-Inclusive with fast-track entry, €129.90.<span class=\"bpa-lang-note\">Prices for Thursday 19 and Saturday 21 November 2026; they change by date.</span>"
+    },
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "Entry from 11:00",
+     "pop_html": "Tickets are valid from 11:00. You pick a table time at Rudas Bistro and bathe before or after the meal until 20:00."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🚻",
+     "label": "Turkish bath days",
+     "pop_html": "The wellness options do <strong>not</strong> include the Turkish bath. The Turkish bath is co-ed on Mon from 11:00, Thu and Fri from 11:00 and all day Sat and Sun; <strong>women only on Tuesday</strong>, <strong>men only on Wednesday</strong>.<span class=\"bpa-lang-note\">From rudasfurdo.hu; hours change on holidays.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🔞",
+     "label": "14+ only",
+     "pop_html": "Children under 14 are not admitted to Rudas."
+    }
+   ],
+   "best_for": {
+    "pick_html": "if you want the whole Rudas day in one booking: rooftop pool, saunas and a 3-course meal at Rudas Bistro with a Danube view, with free cancellation.",
+    "skip_html": "if you only want to bathe: the official all-zones ticket is 12,000 HUF on weekdays, without the meal."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where is it?",
+      "a": "Döbrentei tér 9, 1013 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Bath ticket, 3-course à la carte meal, coffee and lemonade, wine or sparkling wine by option."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Towel, bathrobe, swimwear, swim cap, flip-flops (sold at the cash desk)."
+     },
+     {
+      "q": "Is there an age limit?",
+      "a": "14+."
+     },
+     {
+      "q": "How long is the ticket valid?",
+      "a": "One day, entry from 11:00, bath open until 20:00."
+     }
+    ]
+   },
+   "price": {
+    "main": "€74.99",
+    "sub": "per adult · Mon–Thu, wellness + meal",
+    "note": "<b>Weekday Prices:</b> Wellness + meal from €74.99 · with Turkish bath from €84.99 · up to €94.99 with wine or sparkling wine (Thu 19 Nov 2026) <b>Weekend Price:</b> All-Inclusive with fast-track entry, Turkish bath and meal: €129.90 (Sat 21 Nov 2026)"
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=en-rudas-baths-button-meal&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-1-rudas-day-pass-meal",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-2",
+   "cats": ["tested", "day", "weekday", "weekend"],
+   "gallery": {
+    "rank": {
+     "text": "💰 #2 Best Value: Bath Only",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      ["alt", "Rudas Thermal Bath all-zones day ticket"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6d882d74213380c1f24_Rudas-thermal-bath%20(11).webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath all-zones day ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e7021d502805c7a7c112_Rudas-thermal-bath%20(18).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath all-zones day ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12fda4ee7c50a6cee3178_3_1%20Rudas%20Thermal%20Bath.webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath all-zones day ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e674b2871f3b832c1681_Rudas-thermal-bath%20(15).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath all-zones day ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e69c6efb73a26f9877f6_Rudas-thermal-bath%20(19).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath all-zones day ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6a5a89136c45fd1d9fc_Rudas-thermal-bath%20(20).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath all-zones day ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e65e09406b071f265969_Rudas-thermal-bath%20(14).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath all-zones day ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e74e82fd0ed0adc4f09c_Rudas-thermal-bath%20(2).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6d882d74213380c1f24_Rudas-thermal-bath%20(11).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e7021d502805c7a7c112_Rudas-thermal-bath%20(18).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12fda4ee7c50a6cee3178_3_1%20Rudas%20Thermal%20Bath.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e674b2871f3b832c1681_Rudas-thermal-bath%20(15).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e69c6efb73a26f9877f6_Rudas-thermal-bath%20(19).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6a5a89136c45fd1d9fc_Rudas-thermal-bath%20(20).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e65e09406b071f265969_Rudas-thermal-bath%20(14).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e74e82fd0ed0adc4f09c_Rudas-thermal-bath%20(2).webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Rudas, District I",
+    "⏱️ 3–4 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Rudas+Gy%C3%B3gyf%C3%BCrd%C5%91+D%C3%B6brentei+t%C3%A9r+9+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Tram 19, 41 · Bus 7"
+    }
+   ],
+   "title": {
+    "url": "https://tickets.rudasfurdo.hu/partner/rudas",
+    "rel": "nofollow noopener",
+    "target": "_blank",
+    "text": "Official All-Zones Day Ticket"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.30",
+     "score": "4.3",
+     "meta": "12k+ reviews · Google",
+     "heading": "Rating of Rudas Thermal Bath on Google Maps",
+     "sites": [
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.3",
+       "count": "(12.4k+)",
+       "icon": "/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3743_google-icon.png"
+      }
+     ]
+    },
+    "tested": {
+     "chip": "✓ Personally Tested",
+     "pop_html": "<strong>I bathed at Rudas myself:</strong> the Turkish bath, the wellness area, the saunas and the rooftop pool.<span class=\"bpa-lang-note\">What I checked: pools, changing rooms, crowds and value for money. <a href=\"#item-2-rudas-day-ticket\">Full review ↓</a></span>"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎟️",
+     "label": "Desk vs online",
+     "pop_html": "<strong>At the desk:</strong> all zones 12,000 HUF Mon–Thu, 15,000 HUF Fri–Sun, 16,000 HUF on holidays and in high season. <strong>Fast track:</strong> 15,000 / 18,000 / 19,000 HUF; online €45–57 with entry 12:00–15:00 or 16:00–19:00 (not Tue or Wed). <strong>Weekend early bird:</strong> fast-track entry 8:00–9:00 Sat and Sun, €42–45 online.<span class=\"bpa-lang-note\">Official online prices are in euros and move with the exchange rate and peak days.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🔐",
+     "label": "Locker or cabin",
+     "pop_html": "A locker is included. A private cabin is <strong>1,000 HUF</strong> extra, a safe 1,100 HUF; a lost wristband costs 3,000 HUF.<span class=\"bpa-lang-note\">From the 2026 price list on rudasfurdo.hu.</span>"
+    },
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "Daily · 6:00–20:00",
+     "pop_html": "<strong>Wellness and Turkish bath:</strong> 6:00–20:00, Mon until 22:00. <strong>Sauna world:</strong> from 8:00. The cash desk closes one hour before closing, and you must leave the pools 20 minutes before. 8 December 2026: open until 16:00.<span class=\"bpa-lang-note\">From rudasfurdo.hu; hours change on holidays.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "💳",
+     "label": "Budapest Card −20%",
+     "pop_html": "Budapest Card holders get 20% off daily tickets at Rudas. <a href=\"/budapest-card-is-it-worth-it\">Is the Budapest Card worth it?</a>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "if you want the full bath without a set meal: Turkish bath, wellness, saunas and the rooftop pool on one ticket, the cheapest full Rudas day.",
+    "skip_html": "on a Tuesday or Wednesday if you want the Turkish bath and it is not your day: it is women-only on Tuesday and men-only on Wednesday."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where is it?",
+      "a": "Döbrentei tér 9, 1013 Budapest."
+     },
+     {
+      "q": "When is it on?",
+      "a": "Daily 6:00–20:00, Mon until 22:00 · saunas from 8:00."
+     },
+     {
+      "q": "Is there an age limit?",
+      "a": "14+."
+     },
+     {
+      "q": "What should I bring?",
+      "a": "Towel 6,900 HUF · bathrobe 12,600 HUF · slippers 4,200 HUF."
+     },
+     {
+      "q": "Can I skip the queue?",
+      "a": "15,000 / 18,000 / 19,000 HUF · online €45–57, entry 12:00–15:00 or 16:00–19:00, not Tue or Wed."
+     }
+    ]
+   },
+   "price": {
+    "main": "12,000 HUF",
+    "sub": "at the desk, Mon–Thu · fast track online from €45",
+    "note": "<b>Desk Prices 2026:</b> All zones 12,000 HUF Mon–Thu / 15,000 HUF Fri–Sun / 16,000 HUF holidays and high season"
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tickets.rudasfurdo.hu/partner/rudas",
+     "rel": "nofollow noopener",
+     "target": "_blank",
+     "text": "Official Tickets →"
+    },
+    "via": "Official tickets at rudasfurdo.hu",
+    "trust": ["Turkish bath, wellness and rooftop", "Locker included"],
+    "sublink": {
+     "url": "#item-2-rudas-day-ticket",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-3",
+   "cats": ["night", "weekend"],
+   "gallery": {
+    "rank": {
+     "text": "🌙 #3 Best at Night",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      ["alt", "Rudas Thermal Bath night bathing"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12fda4ee7c50a6cee3178_3_1%20Rudas%20Thermal%20Bath.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath night bathing"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e7021d502805c7a7c112_Rudas-thermal-bath%20(18).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath night bathing"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6d882d74213380c1f24_Rudas-thermal-bath%20(11).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Thermal Bath night bathing"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e674b2871f3b832c1681_Rudas-thermal-bath%20(15).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12fda4ee7c50a6cee3178_3_1%20Rudas%20Thermal%20Bath.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e7021d502805c7a7c112_Rudas-thermal-bath%20(18).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6d882d74213380c1f24_Rudas-thermal-bath%20(11).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e674b2871f3b832c1681_Rudas-thermal-bath%20(15).webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Rudas, District I",
+    "⏱️ 22:00–3:00",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Rudas+Gy%C3%B3gyf%C3%BCrd%C5%91+D%C3%B6brentei+t%C3%A9r+9+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Night bus 907, 973"
+    }
+   ],
+   "title": {
+    "url": "https://tickets.rudasfurdo.hu/partner/rudas",
+    "rel": "nofollow noopener",
+    "target": "_blank",
+    "text": "Rudas Night Bathing (Fri &amp; Sat)"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.30",
+     "score": "4.3",
+     "meta": "12k+ reviews · Google",
+     "heading": "Rating of Rudas Thermal Bath on Google Maps",
+     "sites": [
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.3",
+       "count": "(12.4k+)",
+       "icon": "/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3743_google-icon.png"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "Fri &amp; Sat · 22:00–3:00",
+     "pop_html": "Every Friday and Saturday night. Co-ed in all sections.<span class=\"bpa-lang-note\">From rudasfurdo.hu; hours change on holidays.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🏊",
+     "label": "Turkish bath + rooftop",
+     "pop_html": "Includes the Turkish bath, the swimming pool, the wellness pools and the rooftop panorama pool, with a cocktail bar on the roof."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🚫",
+     "label": "No saunas at night",
+     "pop_html": "The sauna world and massages are closed during night bathing. Slippers are mandatory."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎟️",
+     "label": "€45–54 online",
+     "pop_html": "€45 online for Saturday 21 November 2026. The 2026 price list gives 15,000 HUF; on 1 and 2 January 2027 it is 18,000 HUF.<span class=\"bpa-lang-note\">Official online prices are in euros and move with the exchange rate and peak days.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the most memorable Rudas visit: the Ottoman pools and the rooftop pool after dark, with the lights of the bridges, co-ed on both nights.",
+    "skip_html": "if saunas matter to you (closed at night) or you have an early start the next morning."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "When is it on?",
+      "a": "Friday and Saturday, 22:00–3:00."
+     },
+     {
+      "q": "What is included?",
+      "a": "Turkish bath, swimming pool, wellness pools, rooftop panorama pool."
+     },
+     {
+      "q": "Is there an age limit?",
+      "a": "14+."
+     },
+     {
+      "q": "What is open at night?",
+      "a": "Sauna world and massages."
+     },
+     {
+      "q": "What should I bring?",
+      "a": "Swimsuit, towel and flip-flops (mandatory)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€45",
+    "sub": "per person online · Fri &amp; Sat 22:00–3:00",
+    "note": "<b>Price:</b> €45–54 online (€45 on Sat 21 Nov 2026) · 15,000 HUF on the 2026 price list · 18,000 HUF on 1–2 January 2027"
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tickets.rudasfurdo.hu/partner/rudas",
+     "rel": "nofollow noopener",
+     "target": "_blank",
+     "text": "Official Tickets →"
+    },
+    "via": "Official tickets at rudasfurdo.hu",
+    "trust": ["Turkish bath + rooftop pool", "Co-ed both nights"],
+    "sublink": {
+     "url": "#item-3-rudas-night-bathing",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-4",
+   "cats": ["budget", "day", "weekday"],
+   "gallery": {
+    "rank": {
+     "text": "🪙 #4 Cheapest Way In",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Rudas Turkish bath single-zone ticket"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e7021d502805c7a7c112_Rudas-thermal-bath%20(18).webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Rudas Turkish bath single-zone ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e674b2871f3b832c1681_Rudas-thermal-bath%20(15).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Turkish bath single-zone ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6d882d74213380c1f24_Rudas-thermal-bath%20(11).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Rudas Turkish bath single-zone ticket"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e79648d7f0b7f7ac4062_Rudas-thermal-bath%20(8).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e7021d502805c7a7c112_Rudas-thermal-bath%20(18).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e674b2871f3b832c1681_Rudas-thermal-bath%20(15).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6d882d74213380c1f24_Rudas-thermal-bath%20(11).webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e79648d7f0b7f7ac4062_Rudas-thermal-bath%20(8).webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Rudas, District I",
+    "⏱️ 2 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Rudas+Gy%C3%B3gyf%C3%BCrd%C5%91+D%C3%B6brentei+t%C3%A9r+9+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Tram 19, 41 · Bus 7"
+    }
+   ],
+   "title": {
+    "url": "https://tickets.rudasfurdo.hu/partner/rudas",
+    "rel": "nofollow noopener",
+    "target": "_blank",
+    "text": "Turkish Bath or Wellness-Only Ticket"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.30",
+     "score": "4.3",
+     "meta": "12k+ reviews · Google",
+     "heading": "Rating of Rudas Thermal Bath on Google Maps",
+     "sites": [
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.3",
+       "count": "(12.4k+)",
+       "icon": "/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3743_google-icon.png"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "Which days",
+     "pop_html": "<strong>Online, €24:</strong> Tuesday and Wednesday, Turkish bath <em>or</em> Wellness-Spa. <strong>At the desk, 8,000 HUF:</strong> Monday, Thursday and Friday until 10:45.<span class=\"bpa-lang-note\">Official online prices are in euros and move with the exchange rate and peak days.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🚻",
+     "label": "Men / women",
+     "pop_html": "Turkish bath on <strong>Tuesday: women only</strong>; <strong>Wednesday: men only</strong>; Mon, Thu and Fri mornings until 10:45: men only.<span class=\"bpa-lang-note\">From rudasfurdo.hu; hours change on holidays.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "➕",
+     "label": "Upgrade to all zones",
+     "pop_html": "A supplement ticket adds the other zone: 4,000 HUF Mon–Thu, 7,000 HUF on Friday."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a short, cheap Ottoman soak: women on a Tuesday, men on a Wednesday or a weekday morning, or the Wellness-Spa ticket with the rooftop pool for anyone.",
+    "skip_html": "if you want the Turkish bath and the rooftop pool together: the all-zones day ticket costs only 4,000 HUF more."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is there an age limit?",
+      "a": "14+."
+     },
+     {
+      "q": "What are the Turkish bath rules?",
+      "a": "Tue women only · Wed men only · Mon, Thu, Fri until 10:45 men only."
+     },
+     {
+      "q": "What costs extra?",
+      "a": "Other zone +4,000 HUF Mon–Thu, +7,000 HUF Fri."
+     },
+     {
+      "q": "How much is it at the desk?",
+      "a": "8,000 HUF, Mon, Thu and Fri until 10:45 (Turkish bath or wellness-spa)."
+     },
+     {
+      "q": "How much is it?",
+      "a": "€24, Tuesday and Wednesday."
+     }
+    ]
+   },
+   "price": {
+    "main": "8,000 HUF",
+    "sub": "at the desk, Mon/Thu/Fri until 10:45 · €24 online Tue/Wed",
+    "note": "<b>Online Price:</b> €24, Tuesday and Wednesday <b>Desk Price:</b> 8,000 HUF, Mon, Thu and Fri until 10:45 (Turkish bath or wellness-spa)"
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tickets.rudasfurdo.hu/partner/rudas",
+     "rel": "nofollow noopener",
+     "target": "_blank",
+     "text": "Official Tickets →"
+    },
+    "via": "Official tickets at rudasfurdo.hu",
+    "trust": ["One zone, full day", "Upgrade at the desk"],
+    "sublink": {
+     "url": "#item-4-rudas-single-zone",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n",
+   "id": "card-5",
+   "cats": ["couples", "night"],
+   "gallery": {
+    "rank": {
+     "text": "💍 #5 Best for Couples",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Rudas rooftop panorama pool private bathing"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12fda4ee7c50a6cee3178_3_1%20Rudas%20Thermal%20Bath.webp"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Rudas rooftop panorama pool private bathing"],
+      ["data-src", "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6d882d74213380c1f24_Rudas-thermal-bath%20(11).webp"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12fda4ee7c50a6cee3178_3_1%20Rudas%20Thermal%20Bath.webp"
+     },
+     {
+      "src": "/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6d882d74213380c1f24_Rudas-thermal-bath%20(11).webp"
+     }
+    ]
+   },
+   "kicker": [
+    "Rudas, District I",
+    "⏱️ 1 Hour",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Rudas+Gy%C3%B3gyf%C3%BCrd%C5%91+D%C3%B6brentei+t%C3%A9r+9+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Tram 19, 41 · Bus 7"
+    }
+   ],
+   "title": {
+    "url": "https://tickets.rudasfurdo.hu/partner/rudas",
+    "rel": "nofollow noopener",
+    "target": "_blank",
+    "text": "Private Panoramic Bathing for Two"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.30",
+     "score": "4.3",
+     "meta": "12k+ reviews · Google",
+     "heading": "Rating of Rudas Thermal Bath on Google Maps",
+     "sites": [
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.3",
+       "count": "(12.4k+)",
+       "icon": "/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3743_google-icon.png"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "Tue–Sat · 20:00–21:00",
+     "pop_html": "One hour on the rooftop, 20:00–21:00, Tuesday to Saturday. Arrive by 19:40.<span class=\"bpa-lang-note\">From rudasfurdo.hu; hours change on holidays.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍾",
+     "label": "What is included",
+     "pop_html": "Exclusive use of the panorama pool for 2 guests and a bottle of Hungarian sparkling wine. Bring slippers and towels."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "👥",
+     "label": "Up to 6 guests",
+     "pop_html": "Up to 4 extra guests can be added at the bath; arrange it in advance with rudasinfo@budapestspas.hu."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a proposal, an anniversary or a birthday: the rooftop pool and the city lights to yourselves for an hour.",
+    "skip_html": "if you also want the Turkish bath and the saunas: this is the rooftop pool only."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "When is it on?",
+      "a": "Tuesday to Saturday, 20:00–21:00 (arrive by 19:40)."
+     },
+     {
+      "q": "What is included?",
+      "a": "1 hour of private rooftop pool access, a bottle of Hungarian sparkling wine."
+     },
+     {
+      "q": "What should I bring?",
+      "a": "Slippers and towels."
+     },
+     {
+      "q": "What costs extra?",
+      "a": "Up to 4, arranged in advance with the bath."
+     },
+     {
+      "q": "How much is it?",
+      "a": "€117–147 per person, minimum 2 people."
+     }
+    ]
+   },
+   "price": {
+    "main": "€117",
+    "sub": "per person, 2 people minimum · 20:00–21:00",
+    "note": "<b>Price:</b> €117–147 per person, minimum 2 people"
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tickets.rudasfurdo.hu/partner/rudas",
+     "rel": "nofollow noopener",
+     "target": "_blank",
+     "text": "Official Tickets →"
+    },
+    "via": "Official tickets at rudasfurdo.hu",
+    "trust": ["Rooftop pool to yourselves", "Bottle of sparkling wine"],
+    "sublink": {
+     "url": "#item-5-rudas-private-rooftop",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}
