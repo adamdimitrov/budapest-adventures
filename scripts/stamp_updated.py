@@ -76,6 +76,9 @@ def stamp(s, d):
 
 
 def content(s):
+    # body classes set by scripts/pagespeed.py (ps-has-*) are styling hooks, not content
+    s = re.sub(r'\s*\bclass="(?:ps-has-[a-z0-9-]+\s*)+"', "", s)
+    s = re.sub(r'(\bclass="[^"]*?)\s*\bps-has-[a-z0-9-]+', r"\1", s)
     for p in STRIP:
         s = p.sub(" ", s)
     s = PILL.sub(" ", s)

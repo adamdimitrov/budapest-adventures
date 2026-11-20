@@ -15,6 +15,17 @@ import html, os, re, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from legenda_menu_photos import PHOTOS_TXT  # "{n} dish photos" in all 22 languages
 
+def _read(path):
+    """The page with its shared CSS links unpacked into inline blocks (scripts/pagespeed.py), so the
+    <style id> blocks this script rewrites are where it expects them."""
+    import os as _os
+    _sys_path = _os.path.dirname(_os.path.abspath(__file__))
+    if _sys_path not in sys.path:
+        sys.path.insert(0, _sys_path)
+    import pagespeed
+    return pagespeed.unpack(open(path, encoding="utf-8").read())
+
+
 A = "/assets/best-dinner-cruises-budapest/menu-photos/"
 # (brand prefix, data-tier) -> {course: [photo per dish position, None = no photo]}
 MAP = {
@@ -126,7 +137,7 @@ def do_carte(blk, plan, brand, path):
 
 
 def process(path):
-    s = open(path, encoding="utf-8").read()
+    s = _read(path)
     n = 0  # photos the matched cartes should carry
     for m in reversed(list(CARTE.finditer(s))):
         a = m.start(); b = s.index('<div class="foot">', a)
@@ -174,15 +185,17 @@ if __name__ == "__main__":
         if cnt != n or n < 19:
             print("unexpected photo count:", p, cnt, "planned", n); bad += 1
         if check:
-            cur = open(p, encoding="utf-8").read()
+            cur = _read(p)
             if cur.count(f'class="dc-dish-photo" src="{A}') != n:
                 print("missing photos:", p); bad += 1
             elif _no_css(new) != _no_css(cur) or 'id="dc-set-photos-css"' not in cur:
                 # e.g. a build-lang run dropped the Food-box photo buttons: rerun this script
                 print("out of date (run scripts/dinner_set_menu_photos.py):", p); bad += 1
         else:
-            cur = open(p, encoding="utf-8").read()
+            cur = _read(p)
             if new != cur:
                 open(p, "w", encoding="utf-8").write(new)
     print("pages:", len(pages()), "problems:", bad)
+    if not check:
+        subprocess.run([sys.executable, "scripts/pagespeed.py"], check=True)  # shared CSS back into files
     sys.exit(1 if bad else 0)
