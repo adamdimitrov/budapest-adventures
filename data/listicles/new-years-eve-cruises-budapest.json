@@ -1,0 +1,1526 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["dinner", "party", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Overall NYE Cruise",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-07.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-01.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-11.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-12.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-14.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-15.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-16.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-17.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-13.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-19.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Silverline New Year's Eve Celebration Cruise"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-07.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-09.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-01.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-11.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-12.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-03.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-14.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-15.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-16.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-17.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-13.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-19.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-02.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-05.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-08.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-06.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-silverline-04.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Silverline Cruises",
+    "⏱️ 1–5 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Dock+11+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Dock 11"
+    }
+   ],
+   "title": {
+    "url": "https://budapestrivercruise.eu/product/new-years-celebration-cruise/?code=bpadventures",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Silverline New Year's Eve Celebration Cruise"
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍾",
+     "label": "Unlimited Open Bar",
+     "pop_html": "<strong>Celebration Party:</strong> unlimited prosecco, wine and beer from 22:00 to 01:00. <strong>Booze cruises:</strong> unlimited wine, sparkling wine, draught beer and soft drinks.<span class=\"bpa-lang-note\">The Gala Dinner lists only a welcome cocktail and the midnight sparkling wine.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎧",
+     "label": "Live DJ",
+     "pop_html": "<strong>A DJ on the Celebration Party.</strong> The Gala Dinner has live piano instead."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍢",
+     "label": "Finger-Food Buffet",
+     "pop_html": "<strong>Party: tapas and finger food,</strong> no seated dinner. <strong>Gala:</strong> 5 seated courses you choose. <strong>Booze cruises:</strong> drinks only."
+    },
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "31 Dec · 18:30–01:00",
+     "pop_html": "Gala Dinner: 20:00 to 01:00. Celebration Party: boarding 21:30, sailing 22:00 to 01:00 with a midnight toast. Midnight Booze Cruise: 23:00, 90 minutes. Evening Booze Cruise: 18:30, 20:00 or 21:30, 60 minutes.<span class=\"bpa-lang-note\">From the booking calendars on budapestrivercruise.eu, checked 13 November 2026.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for choice: a 3-hour DJ party with an open bar, a 5-course gala, or the cheapest way to be on the water at midnight (the 90-minute Booze Cruise, €125).",
+    "skip_html": "if you want a seated dinner under €340: the party serves finger food and the booze cruises serve drinks only."
+   },
+   "extras_after_best_for": "<div class=\"nye-opts\"><a class=\"nye-opt\" href=\"https://budapestrivercruise.eu/product/budapest-newyearseve-cruise/?code=bpadventures\" onclick=\"event.stopPropagation()\" rel=\"noopener nofollow sponsored\" target=\"_blank\"><span class=\"nye-opt-name\">🥂 Gala Dinner &amp; Live Piano</span><span class=\"nye-opt-meta\">20:00–01:00 • 5-course dinner • midnight toast at Parliament</span><span class=\"nye-opt-price\">€340<small>Book →</small></span></a><a class=\"nye-opt\" href=\"https://budapestrivercruise.eu/product/new-years-celebration-cruise/?code=bpadventures\" onclick=\"event.stopPropagation()\" rel=\"noopener nofollow sponsored\" target=\"_blank\"><span class=\"nye-opt-name\">🎉 Celebration Party</span><span class=\"nye-opt-meta\">22:00–01:00 • DJ • tapas • unlimited prosecco, wine &amp; beer</span><span class=\"nye-opt-price\">€239<small>Book →</small></span></a><a class=\"nye-opt\" href=\"https://budapestrivercruise.eu/product/new-years-eve-party-cruise/?code=bpadventures\" onclick=\"event.stopPropagation()\" rel=\"noopener nofollow sponsored\" target=\"_blank\"><span class=\"nye-opt-name\">🕛 Midnight Booze Cruise</span><span class=\"nye-opt-meta\">23:00 • 90 min • unlimited wine, sparkling wine, beer &amp; soft drinks</span><span class=\"nye-opt-price\">€125<small>Book →</small></span></a><a class=\"nye-opt\" href=\"https://budapestrivercruise.eu/product/new-years-eve-party-cruise/?code=bpadventures\" onclick=\"event.stopPropagation()\" rel=\"noopener nofollow sponsored\" target=\"_blank\"><span class=\"nye-opt-name\">🍻 Evening Booze Cruise</span><span class=\"nye-opt-meta\">18:30, 20:00 or 21:30 • 60 min • unlimited drinks • back before midnight</span><span class=\"nye-opt-price\">€70<small>Book →</small></span></a></div>\n<div class=\"nye-food\"><div class=\"nye-food-head\"><span class=\"nye-food-lbl\">🍽️ Food</span><span aria-label=\"Food level 3 of 3\" class=\"nye-meter\" data-l=\"3\"><i></i><i></i><i></i></span><span class=\"nye-food-lvl\">Gala: seated 5 courses • Party: tapas • Booze: drinks only</span><button aria-haspopup=\"dialog\" class=\"nye-food-btn\" data-nye-menu=\"nye-silverline\" type=\"button\">Full menu ↗</button></div><div class=\"nye-food-strip\">Amuse-bouche<span class=\"sep\">›</span>Starter<span class=\"sep\">›</span>Soup<span class=\"sep\">›</span>Main<span class=\"sep\">›</span>Dessert<span class=\"mid\">🕛 Sparkling toast</span></div><div class=\"dc-dna\"><button class=\"dc-c\" data-sec=\"amuse-bouche\" type=\"button\" aria-label=\"Amuse: 1 choice\"><b>Amuse</b><span class=\"dc-dots\"><i class=\"\"></i></span><em>1</em></button><span class=\"dc-arrow\">›</span><button class=\"dc-c\" data-sec=\"starter\" type=\"button\" aria-label=\"Starter: 2 choices\"><b>Starter</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i></span><em>2</em></button><span class=\"dc-arrow\">›</span><button class=\"dc-c\" data-sec=\"soup\" type=\"button\" aria-label=\"Soup: 2 choices\"><b>Soup</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"v\"></i></span><em>2</em></button><span class=\"dc-arrow\">›</span><button class=\"dc-c\" data-sec=\"main-course\" type=\"button\" aria-label=\"Main: 6 choices\"><b>Main</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"\"></i><i class=\"v\"></i></span><em>6</em></button><span class=\"dc-arrow\">›</span><button class=\"dc-c\" data-sec=\"dessert\" type=\"button\" aria-label=\"Dessert: 3 choices\"><b>Dessert</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i><i class=\"v\"></i></span><em>3</em></button></div></div>",
+   "faq": {
+    "items": [
+     {
+      "q": "What is the cheapest way to be on the water at midnight?",
+      "a": "The Midnight Booze Cruise: 23:00, 90 minutes, €125, with unlimited wine, sparkling wine, beer and soft drinks."
+     },
+     {
+      "q": "Is there a seated dinner?",
+      "a": "Only on the Gala Dinner (€340): 5 courses you choose, live piano and a sparkling-wine toast in front of Parliament at midnight."
+     },
+     {
+      "q": "Does the 60-minute cruise see midnight?",
+      "a": "No. The Evening Booze Cruise sails at 18:30, 20:00 or 21:30 and is back before midnight."
+     },
+     {
+      "q": "When should I get to the pier?",
+      "a": "At least 30 minutes before boarding: embankments get crowded and partly closed on New Year's Eve."
+     },
+     {
+      "q": "How do I get home?",
+      "a": "Plan your way home after 01:00 in advance."
+     }
+    ]
+   },
+   "price": {
+    "main": "€70",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Evening Booze Cruise",
+      "small": "60 min",
+      "price": "€70"
+     },
+     {
+      "label": "Midnight Booze Cruise",
+      "small": "23:00, 90 min",
+      "price": "€125"
+     },
+     {
+      "label": "Celebration Party",
+      "small": "22:00–01:00",
+      "price": "€239"
+     },
+     {
+      "label": "Gala Dinner",
+      "small": "20:00–01:00",
+      "price": "€340"
+     }
+    ],
+    "note": "Prices checked 10 Nov 2026; they can change."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://budapestrivercruise.eu/product/new-years-eve-party-cruise/?code=bpadventures",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Silverline Cruises",
+    "trust": ["<b>Book direct</b> on Silverline's own site", "<b>Instant confirmation</b>"],
+    "sublink": {
+     "url": "#nye-silverline",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "",
+   "id": "card-2",
+   "cats": ["dinner"],
+   "gallery": {
+    "rank": {
+     "text": "🎻 #2 Best Gala Dinner &amp; Folk Show",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      ["alt", "New Year's Eve Gala Dinner Cruise With Folk Show & Unlimited Drinks"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "New Year's Eve Gala Dinner Cruise With Folk Show & Unlimited Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Gala Dinner Cruise With Folk Show & Unlimited Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Gala Dinner Cruise With Folk Show & Unlimited Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Gala Dinner Cruise With Folk Show & Unlimited Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Gala Dinner Cruise With Folk Show & Unlimited Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Gala Dinner Cruise With Folk Show & Unlimited Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Gala Dinner Cruise With Folk Show & Unlimited Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Gala Dinner Cruise With Folk Show & Unlimited Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Gala Dinner Cruise With Folk Show & Unlimited Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-01.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-08.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-03.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-02.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-09.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-06.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-04.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-05.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-07.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-hungaria-koncert-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Hungaria Koncert",
+    "⏱️ 6 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Akadémia+2+ponton+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Akadémia 2"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-new-year-s-eve-party-cruise-with-food-live-show-t818297/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=article-nye-cruises-hk&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "New Year's Eve Gala Dinner Cruise With Folk Show &amp; Unlimited Drinks"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.06",
+     "score": "4.1",
+     "meta": "50+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.1",
+       "count": "(50+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-new-year-s-eve-party-cruise-with-food-live-show-t818297/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=article-nye-cruises-hk&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍽️",
+     "label": "5-Course Gala",
+     "pop_html": "<strong>Table-served 5-course gala:</strong> Menu A (red meat), B (poultry) or C (vegetarian), then a midnight buffet with korhely soup and lentil stew.<span class=\"bpa-lang-note\">You email your menu choice to the operator after booking.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍾",
+     "label": "Unlimited Beer, Wine &amp; Prosecco",
+     "pop_html": "<strong>Unlimited beer, wine and prosecco</strong> plus welcome sparkling wine, rare for a seated gala."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "💃",
+     "label": "Folk Dance Show",
+     "pop_html": "<strong>Live music and a folk dance show by the Rajkó Ensemble</strong> on the Gróf Széchenyi, plus a raffle and a party."
+    },
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "31 Dec · 19:00 · 6 h",
+     "pop_html": "Departs at 19:00. A 6-hour programme.<span class=\"bpa-lang-note\">Checked on the booking calendar for 31 December 2026.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a gala dinner with a Hungarian folk show and unlimited drinks.",
+    "skip_html": "on a budget: €360 per person."
+   },
+   "extras_after_best_for": "<div class=\"nye-food\"><div class=\"nye-food-head\"><span class=\"nye-food-lbl\">🍽️ Food</span><span aria-label=\"Food level 3 of 3\" class=\"nye-meter\" data-l=\"3\"><i></i><i></i><i></i></span><span class=\"nye-food-lvl\">Seated 5-course gala + midnight buffet</span><button aria-haspopup=\"dialog\" class=\"nye-food-btn\" data-nye-menu=\"nye-hungaria-koncert\" type=\"button\">Full menu ↗</button></div><div class=\"nye-food-strip\">Duck &amp; apple pie<span class=\"sep\">›</span>Chicken cocktail<span class=\"sep\">›</span>Emperor's soup<span class=\"sep\">›</span>Roast veal<span class=\"sep\">›</span>Somlói galuska<span class=\"mid\">🕛 Midnight buffet</span></div><div class=\"dc-dna\"><button class=\"dc-c\" data-sec=\"cold-appetiser\" type=\"button\" aria-label=\"Appetiser: 2 choices\"><b>Appetiser</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"v\"></i></span><em>2</em></button><span class=\"dc-arrow\">›</span><button class=\"dc-c\" data-sec=\"starter\" type=\"button\" aria-label=\"Starter: 2 choices\"><b>Starter</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"v\"></i></span><em>2</em></button><span class=\"dc-arrow\">›</span><button class=\"dc-c\" data-sec=\"soup\" type=\"button\" aria-label=\"Soup: 2 choices\"><b>Soup</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"v\"></i></span><em>2</em></button><span class=\"dc-arrow\">›</span><button class=\"dc-c\" data-sec=\"main-course\" type=\"button\" aria-label=\"Main: 3 choices\"><b>Main</b><span class=\"dc-dots\"><i class=\"\"></i><i class=\"\"></i><i class=\"v\"></i></span><em>3</em></button><span class=\"dc-arrow\">›</span><button class=\"dc-c\" data-sec=\"dessert\" type=\"button\" aria-label=\"Dessert: 1 choice\"><b>Dessert</b><span class=\"dc-dots\"><i class=\"\"></i></span><em>1</em></button><span class=\"dc-arrow\">›</span><span class=\"dc-c dc-buf\"><b>Midnight</b><span class=\"dc-dots\"><i class=\"inf\">∞</i></span></span></div></div>",
+   "faq": {
+    "items": [
+     {
+      "q": "What time does it start?",
+      "a": "It is a 6-hour program on 31 December. Confirm the exact times before you plan the evening."
+     },
+     {
+      "q": "How do I choose my menu?",
+      "a": "Pick Menu A (red meat), B (poultry) or C (vegetarian) and email it to the operator after booking."
+     },
+     {
+      "q": "Are drinks included?",
+      "a": "Yes: welcome sparkling wine and unlimited beer, wine and prosecco."
+     },
+     {
+      "q": "Is there food at midnight?",
+      "a": "Yes, a midnight buffet with korhely soup with smoked turkey, frankfurters and lentil stew."
+     },
+     {
+      "q": "Where do we board?",
+      "a": "Akadémia 2 ponton on Id. Antall József rakpart."
+     }
+    ]
+   },
+   "price": {
+    "main": "€360",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Gala dinner, show and drinks",
+      "small": "6 hours",
+      "price": "€360"
+     }
+    ],
+    "note": "Prices checked 10 Nov 2026; they can change."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-new-year-s-eve-party-cruise-with-food-live-show-t818297/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=article-nye-cruises-hk&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Instant mobile ticket</b>", "<b>Instant confirmation</b>"],
+    "sublink": {
+     "url": "#nye-hungaria-koncert",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "",
+   "id": "card-3",
+   "cats": ["drinks", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🍾 #3 Best Value Unlimited Drinks",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      ["alt", "New Year's Eve Cruise With Unlimited Wine, Champagne & Beer"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/nye-2026/budapest-new-years-eve-cruise-portum-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "New Year's Eve Cruise With Unlimited Wine, Champagne & Beer"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-portum-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Cruise With Unlimited Wine, Champagne & Beer"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-portum-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Cruise With Unlimited Wine, Champagne & Beer"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-portum-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Cruise With Unlimited Wine, Champagne & Beer"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-portum-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Cruise With Unlimited Wine, Champagne & Beer"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-portum-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Cruise With Unlimited Wine, Champagne & Beer"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-portum-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-portum-01.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-portum-02.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-portum-05.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-portum-03.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-portum-07.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-portum-06.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-portum-04.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Portum Lines",
+    "⏱️ 2–4 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Dock+42+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Dock 42"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-3-hour-new-year-s-eve-boat-cruise-t132126/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=article-nye-cruises-portum&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "New Year's Eve Cruise With Unlimited Wine, Champagne &amp; Beer"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.05",
+     "score": "4.0",
+     "meta": "100+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.0",
+       "count": "(100+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-3-hour-new-year-s-eve-boat-cruise-t132126/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=article-nye-cruises-portum&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍽️",
+     "label": "Buffet Dinner",
+     "pop_html": "<strong>Cold and hot snack buffet</strong> with a vegan option, on the Food &amp; Drinks option only.<span class=\"bpa-lang-note\">Not a dinner. Only Drinks has no food.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍾",
+     "label": "Unlimited Drinks",
+     "pop_html": "<strong>Unlimited</strong> local beer, wine, mulled wine, champagne and soft drinks, plus a glass of champagne."
+    },
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "31 Dec · 22:00 · 4 h",
+     "pop_html": "Departs at 22:00. 4 hours.<span class=\"bpa-lang-note\">Checked on the booking calendar for 31 December 2026.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for unlimited wine, champagne, beer and soft drinks plus a buffet dinner at a mid-range price.",
+    "skip_html": "if you want a seated gala: it is an informal buffet, and the pier (Dock 42, Szent István park) is outside the centre."
+   },
+   "extras_after_best_for": "<div class=\"nye-opts\"><a class=\"nye-opt\" href=\"https://www.getyourguide.com/budapest-l29/budapest-3-hour-new-year-s-eve-boat-cruise-t132126/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-portum&amp;mkt_cmp=true\" onclick=\"event.stopPropagation()\" rel=\"noopener nofollow sponsored\" target=\"_blank\"><span class=\"nye-opt-name\">🍽️ Food &amp; Drinks</span><span class=\"nye-opt-meta\">22:00–02:00 • snack buffet • unlimited drinks</span><span class=\"nye-opt-price\">€230<small>Book →</small></span></a><a class=\"nye-opt\" href=\"https://www.getyourguide.com/budapest-l29/budapest-3-hour-new-year-s-eve-boat-cruise-t132126/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-nye-cruises-portum&amp;mkt_cmp=true\" onclick=\"event.stopPropagation()\" rel=\"noopener nofollow sponsored\" target=\"_blank\"><span class=\"nye-opt-name\">🥂 Only Drinks</span><span class=\"nye-opt-meta\">23:00–01:00 • unlimited drinks, no food</span><span class=\"nye-opt-price\">See price<small>Book →</small></span></a></div>\n<div class=\"nye-food\"><div class=\"nye-food-head\"><span class=\"nye-food-lbl\">🍽️ Food</span><span aria-label=\"Food level 1 of 3\" class=\"nye-meter\" data-l=\"1\"><i></i><i></i><i></i></span><span class=\"nye-food-lvl\">Snack buffet (Food &amp; Drinks option only)</span></div><div class=\"nye-food-strip\">Cold &amp; hot snacks<span class=\"sep\">›</span>Vegan option<span class=\"mid\">🕛 Glass of champagne</span></div></div>",
+   "faq": {
+    "items": [
+     {
+      "q": "What are the two options?",
+      "a": "Food &amp; Drinks (22:00, 4 hours, snack buffet) for €230, or Only Drinks (23:00, 2 hours)."
+     },
+     {
+      "q": "Is it an elegant gala?",
+      "a": "No. Portum itself describes it as a simple, informal party."
+     },
+     {
+      "q": "Where does it leave from?",
+      "a": "Dock 42 in Szent István park, north of the centre, so plan your trip there and back."
+     },
+     {
+      "q": "Can I cancel?",
+      "a": "Free cancellation up to 48 hours before departure in the operator's webshop."
+     },
+     {
+      "q": "Is it accessible?",
+      "a": "No, it is not suitable for wheelchair users. Bring warm clothing."
+     }
+    ]
+   },
+   "price": {
+    "main": "€230",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Food &amp; Drinks",
+      "small": "22:00, 4 hours",
+      "price": "€230"
+     }
+    ],
+    "note": "Prices checked 10 Nov 2026; they can change."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-3-hour-new-year-s-eve-boat-cruise-t132126/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=article-nye-cruises-portum&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Instant mobile ticket</b>", "<b>Instant confirmation</b>"],
+    "sublink": {
+     "url": "#nye-portum",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "",
+   "id": "card-4",
+   "cats": ["dinner", "party"],
+   "gallery": {
+    "rank": {
+     "text": "🍽️ #4 Best Buffet Dinner + Party",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "New Year's Eve Buffet Dinner Cruise With Retro DJ & All-Inclusive Drinks"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/nye-2026/budapest-new-years-eve-cruise-todo-millennium-03.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "New Year's Eve Buffet Dinner Cruise With Retro DJ & All-Inclusive Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-todo-millennium-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Buffet Dinner Cruise With Retro DJ & All-Inclusive Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-todo-millennium-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Buffet Dinner Cruise With Retro DJ & All-Inclusive Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-todo-millennium-01.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Buffet Dinner Cruise With Retro DJ & All-Inclusive Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-todo-millennium-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Buffet Dinner Cruise With Retro DJ & All-Inclusive Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-todo-millennium-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-todo-millennium-03.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-todo-millennium-04.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-todo-millennium-02.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-todo-millennium-01.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-todo-millennium-05.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-todo-millennium-06.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "ToDo Hungary",
+    "⏱️ 5 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Jászai+Mari+tér+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Jászai Mari tér"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-new-year-s-eve-dinner-cruise-with-panoramic-views-t1170338/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=article-nye-cruises-todo&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "New Year's Eve Buffet Dinner Cruise With Retro DJ &amp; All-Inclusive Drinks"
+   },
+   "reviews": {
+    "ratings": {
+     "meta": "✨ New listing · no reviews yet"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍽️",
+     "label": "Buffet Dinner",
+     "pop_html": "<strong>Buffet dinner:</strong> Hungarian classics, seasonal salads, roast turkey, duck confit, vegetarian options and desserts.<span class=\"bpa-lang-note\">Shared tables; expect queues at the start.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍾",
+     "label": "All-Inclusive Bar",
+     "pop_html": "<strong>All-inclusive bar:</strong> beer, wine, sparkling wine and soft drinks."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎧",
+     "label": "Retro DJ",
+     "pop_html": "<strong>An international retro party with a DJ</strong>, and lentil soup with sausages at midnight."
+    },
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "31 Dec · 21:00 · 5 h",
+     "pop_html": "Departs at 21:00. 5 hours.<span class=\"bpa-lang-note\">Checked on the booking calendar for 31 December 2026.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for dinner and a DJ party on one ticket, from a central pier.",
+    "skip_html": "if you want reviews first: it is a new listing."
+   },
+   "extras_after_best_for": "<div class=\"nye-food\"><div class=\"nye-food-head\"><span class=\"nye-food-lbl\">🍽️ Food</span><span aria-label=\"Food level 2 of 3\" class=\"nye-meter\" data-l=\"2\"><i></i><i></i><i></i></span><span class=\"nye-food-lvl\">Buffet dinner + midnight soup</span><button aria-haspopup=\"dialog\" class=\"nye-food-btn\" data-nye-menu=\"nye-todo-millennium\" type=\"button\">Full menu ↗</button></div><div class=\"nye-food-strip\">Hungarian classics<span class=\"sep\">›</span>Salads<span class=\"sep\">›</span>Roast turkey<span class=\"sep\">›</span>Duck confit<span class=\"sep\">›</span>Desserts<span class=\"mid\">🕛 Lentil soup &amp; sausages</span></div><div class=\"dc-dna\"><span class=\"dc-c dc-buf\"><b>Buffet</b><span class=\"dc-dots\"><i class=\"inf\">∞</i></span></span><span class=\"dc-arrow\">›</span><button class=\"dc-c\" data-sec=\"at-midnight\" type=\"button\" aria-label=\"Midnight: 1 choice\"><b>Midnight</b><span class=\"dc-dots\"><i class=\"\"></i></span><em>1</em></button></div></div>",
+   "faq": {
+    "items": [
+     {
+      "q": "When does boarding start?",
+      "a": "From 21:00 on 31 December, for a 5-hour program."
+     },
+     {
+      "q": "Where does it leave from?",
+      "a": "Port #1 at Jászai Mari tér (Millennium boats), 150 m from Margaret Bridge."
+     },
+     {
+      "q": "Is it table service?",
+      "a": "No, it is a buffet, so expect queues at the start."
+     },
+     {
+      "q": "What is served at midnight?",
+      "a": "A special midnight menu: lentil soup with sausages."
+     },
+     {
+      "q": "Does it have reviews?",
+      "a": "Not yet: it is a new listing."
+     }
+    ]
+   },
+   "price": {
+    "main": "€315",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Buffet, drinks and party",
+      "small": "5 hours",
+      "price": "€315"
+     }
+    ],
+    "note": "Prices checked 10 Nov 2026; they can change."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-new-year-s-eve-dinner-cruise-with-panoramic-views-t1170338/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=article-nye-cruises-todo&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Instant mobile ticket</b>", "<b>Instant confirmation</b>"],
+    "sublink": {
+     "url": "#nye-todo-millennium",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "",
+   "id": "card-5",
+   "cats": ["party", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🎉 #5 Best Party Boat",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "New Year's Eve Boat Party With Unlimited Drinks, DJ & Midnight Buffet"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "New Year's Eve Boat Party With Unlimited Drinks, DJ & Midnight Buffet"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Boat Party With Unlimited Drinks, DJ & Midnight Buffet"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Boat Party With Unlimited Drinks, DJ & Midnight Buffet"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Boat Party With Unlimited Drinks, DJ & Midnight Buffet"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Boat Party With Unlimited Drinks, DJ & Midnight Buffet"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Boat Party With Unlimited Drinks, DJ & Midnight Buffet"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Boat Party With Unlimited Drinks, DJ & Midnight Buffet"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Boat Party With Unlimited Drinks, DJ & Midnight Buffet"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "New Year's Eve Boat Party With Unlimited Drinks, DJ & Midnight Buffet"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-01.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-07.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-02.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-08.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-05.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-06.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-03.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-04.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-10.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-budapest-boat-party-09.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Budapest Boat Party",
+    "⏱️ 5 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Akadémia+2+ponton+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Akadémia 2"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-new-year-boat-party-cruises-with-unlimited-drinks-t1113543/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=article-nye-cruises-boatparty&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "New Year's Eve Boat Party With Unlimited Drinks, DJ &amp; Midnight Buffet"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "3.78",
+     "score": "3.8",
+     "meta": "13 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "3.8",
+       "count": "(13)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-new-year-boat-party-cruises-with-unlimited-drinks-t1113543/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=article-nye-cruises-boatparty&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍾",
+     "label": "Unlimited Drinks",
+     "pop_html": "<strong>Unlimited drinks</strong> for the whole 5-hour event.<span class=\"bpa-lang-note\">Strictly 18+.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎧",
+     "label": "Live DJ &amp; Photographer",
+     "pop_html": "<strong>A live DJ and a photographer.</strong> Easy to meet people if you travel solo."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍢",
+     "label": "Midnight Snack Buffet",
+     "pop_html": "<strong>A midnight snack buffet</strong>, not a dinner: eat before you board."
+    },
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "31 Dec · 22:00 · 5 h",
+     "pop_html": "Departs at 22:00. 5 hours.<span class=\"bpa-lang-note\">Checked on the booking calendar for 31 December 2026.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a proper party crowd, great for solo travelers.",
+    "skip_html": "if you want dinner: only a snack buffet, and reviews are mixed."
+   },
+   "extras_after_best_for": "<div class=\"nye-food\"><div class=\"nye-food-head\"><span class=\"nye-food-lbl\">🍽️ Food</span><span aria-label=\"Food level 1 of 3\" class=\"nye-meter\" data-l=\"1\"><i></i><i></i><i></i></span><span class=\"nye-food-lvl\">No dinner, midnight snack buffet</span></div><div class=\"nye-food-strip\">No dinner<span class=\"mid\">🕛 Snack buffet</span></div></div>",
+   "faq": {
+    "items": [
+     {
+      "q": "How long is it on the water?",
+      "a": "It is a 5-hour event with a 3-hour cruise."
+     },
+     {
+      "q": "Is there an age limit?",
+      "a": "Yes, 18+ only."
+     },
+     {
+      "q": "Is dinner included?",
+      "a": "No, only a midnight snack buffet."
+     },
+     {
+      "q": "Where does it leave from?",
+      "a": "The Akadémia 2 pontoon near the Chain Bridge."
+     },
+     {
+      "q": "How is it rated?",
+      "a": "Mixed: 3.8/5 from 13 reviews."
+     }
+    ]
+   },
+   "price": {
+    "main": "€200",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Party, drinks and snacks",
+      "small": "5 hours",
+      "price": "€200"
+     }
+    ],
+    "note": "Prices checked 10 Nov 2026; they can change."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-new-year-boat-party-cruises-with-unlimited-drinks-t1113543/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=article-nye-cruises-boatparty&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Instant mobile ticket</b>", "<b>Instant confirmation</b>"],
+    "sublink": {
+     "url": "#nye-boat-party",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "",
+   "id": "card-6",
+   "cats": ["party", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "💶 #6 Budget Cruise + Dockside Party",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Budget New Year's Eve Option: 2-Hour Cruise + Dockside Party"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/nye-2026/budapest-new-years-eve-cruise-dinner-cruise-budapest-02.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budget New Year's Eve Option: 2-Hour Cruise + Dockside Party"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-dinner-cruise-budapest-01.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budget New Year's Eve Option: 2-Hour Cruise + Dockside Party"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-dinner-cruise-budapest-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budget New Year's Eve Option: 2-Hour Cruise + Dockside Party"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-dinner-cruise-budapest-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budget New Year's Eve Option: 2-Hour Cruise + Dockside Party"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-dinner-cruise-budapest-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-dinner-cruise-budapest-02.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-dinner-cruise-budapest-01.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-dinner-cruise-budapest-03.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-dinner-cruise-budapest-04.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-dinner-cruise-budapest-05.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Dinner&amp;Cruise Budapest",
+    "⏱️ 5 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Dock+3a+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Dock 3/a"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-new-year-s-eve-party-cruise-with-unlimited-drinks-t1544608/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=article-nye-cruises-dinnercruise&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budget New Year's Eve Option: 2-Hour Cruise + Dockside Party"
+   },
+   "reviews": {
+    "ratings": {
+     "meta": "✨ New listing · no reviews yet"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍾",
+     "label": "Unlimited Beer &amp; Wine",
+     "pop_html": "<strong>Unlimited beer, wine, soft drinks and coffee</strong>, plus a welcome drink."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎧",
+     "label": "Live DJ",
+     "pop_html": "<strong>A DJ</strong> for the 3-hour dockside party after the 2-hour cruise."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🥂",
+     "label": "Midnight Champagne &amp; Lentils",
+     "pop_html": "<strong>A glass of champagne</strong> and the Hungarian tradition of lentils at midnight.<span class=\"bpa-lang-note\">Snacks only, no proper dinner.</span>"
+    },
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "31 Dec · 21:00 · 5 h",
+     "pop_html": "Departs at 21:00. A 2-hour cruise, then a 3-hour party at the dock.<span class=\"bpa-lang-note\">Checked on the booking calendar for 31 December 2026.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the lowest price with unlimited drinks and Hungarian midnight lentils.",
+    "skip_html": "if you want a long cruise: only 2 hours on the water, and snacks only."
+   },
+   "extras_after_best_for": "<div class=\"nye-food\"><div class=\"nye-food-head\"><span class=\"nye-food-lbl\">🍽️ Food</span><span aria-label=\"Food level 1 of 3\" class=\"nye-meter\" data-l=\"1\"><i></i><i></i><i></i></span><span class=\"nye-food-lvl\">Snacks + midnight lentils</span></div><div class=\"nye-food-strip\">Snacks<span class=\"mid\">🕛 Lentils + champagne</span></div></div>",
+   "faq": {
+    "items": [
+     {
+      "q": "How long is it on the water?",
+      "a": "Only 2 of the 5 hours. Check whether midnight is on the boat or at the dock."
+     },
+     {
+      "q": "Where does it leave from?",
+      "a": "Dock 3/a on Jane Haining rakpart."
+     },
+     {
+      "q": "Is dinner included?",
+      "a": "No: snacks plus the traditional lentil dish at midnight."
+     },
+     {
+      "q": "Is there an age limit?",
+      "a": "Yes, adults only."
+     },
+     {
+      "q": "Does it have reviews?",
+      "a": "Not yet: it is a new listing."
+     }
+    ]
+   },
+   "price": {
+    "main": "€164",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Cruise and dockside party",
+      "small": "5 hours",
+      "price": "€164"
+     }
+    ],
+    "note": "Prices checked 10 Nov 2026; they can change."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-new-year-s-eve-party-cruise-with-unlimited-drinks-t1544608/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=article-nye-cruises-dinnercruise&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Instant mobile ticket</b>", "<b>Instant confirmation</b>"],
+    "sublink": {
+     "url": "#nye-dinner-cruise-budapest",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "",
+   "id": "card-7",
+   "cats": ["dinner"],
+   "gallery": {
+    "rank": {
+     "text": "💎 #7 Premium All-Inclusive Package",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Premium NYE Gala Cruise With 5-Course Dinner & Unlimited Drinks"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/nye-2026/budapest-new-years-eve-cruise-fattori-03.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Premium NYE Gala Cruise With 5-Course Dinner & Unlimited Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-fattori-01.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Premium NYE Gala Cruise With 5-Course Dinner & Unlimited Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-fattori-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Premium NYE Gala Cruise With 5-Course Dinner & Unlimited Drinks"],
+      ["data-src", "/assets/nye-2026/budapest-new-years-eve-cruise-fattori-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-fattori-03.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-fattori-01.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-fattori-04.avif"
+     },
+     {
+      "src": "/assets/nye-2026/budapest-new-years-eve-cruise-fattori-02.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Fattori Travel",
+    "⏱️ 6 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Dock+42+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Dock 42"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-2027-gala-nye-danube-cruise-with-dinner-drinks-t1391322/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=article-nye-cruises-fattori&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Premium NYE Gala Cruise With 5-Course Dinner &amp; Unlimited Drinks"
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍽️",
+     "label": "5-Course Gala",
+     "pop_html": "<strong>A 5-course served gala dinner</strong> plus the traditional Hungarian midnight dinner."
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🍾",
+     "label": "Unlimited Drinks",
+     "pop_html": "<strong>Unlimited</strong> Hungarian wines, beer, prosecco and soft drinks.<span class=\"bpa-lang-note\">Premium drinks cost extra.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "emoji": "🎶",
+     "label": "Live Entertainment",
+     "pop_html": "<strong>A salon music band, a folk dance show</strong>, a DJ after midnight and a raffle on the Gróf Széchenyi."
+    },
+    {
+     "cls": "bpa-lang bpa-time",
+     "emoji": "🕒",
+     "label": "31 Dec · 19:00 · 6 h",
+     "pop_html": "Departs at 19:00. 6 hours.<span class=\"bpa-lang-note\">Checked on the booking calendar for 31 December 2026.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a fully arranged night: 5-course gala dinner, a midnight dinner and unlimited drinks.",
+    "skip_html": "on a budget: from €830, with only 2 hours of cruising."
+   },
+   "extras_after_best_for": "<div class=\"nye-food\"><div class=\"nye-food-head\"><span class=\"nye-food-lbl\">🍽️ Food</span><span aria-label=\"Food level 3 of 3\" class=\"nye-meter\" data-l=\"3\"><i></i><i></i><i></i></span><span class=\"nye-food-lvl\">Served 5-course gala + midnight dinner</span></div><div class=\"nye-food-strip\">5-course served gala dinner<span class=\"mid\">🕛 Traditional midnight dinner</span></div></div>",
+   "faq": {
+    "items": [
+     {
+      "q": "What does €830 include?",
+      "a": "Transfer to the dock, a 5-course gala dinner, the midnight dinner, unlimited drinks and the entertainment."
+     },
+     {
+      "q": "How much of it is cruising?",
+      "a": "2 hours of the 6-hour program (19:00 to 01:00)."
+     },
+     {
+      "q": "Is it the same boat as the Hungaria Koncert gala?",
+      "a": "Yes, the Gróf Széchenyi. Hungaria Koncert's own New Year's Eve gala on it costs €360."
+     },
+     {
+      "q": "Is there a dress code?",
+      "a": "Smart casual."
+     },
+     {
+      "q": "Where is the meeting point?",
+      "a": "Dock 42 in Szent István park."
+     }
+    ]
+   },
+   "price": {
+    "main": "€830",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "All-inclusive package",
+      "small": "6 hours",
+      "price": "€830"
+     }
+    ],
+    "note": "Prices checked 10 Nov 2026; they can change."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-2027-gala-nye-danube-cruise-with-dinner-drinks-t1391322/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=article-nye-cruises-fattori&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Instant mobile ticket</b>", "<b>Instant confirmation</b>"],
+    "sublink": {
+     "url": "#nye-fattori-gala",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}

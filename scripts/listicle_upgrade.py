@@ -100,7 +100,7 @@ def cut(src, open_re, tagname):
 # ------------------------------------------------------------------ old card -> card data
 def trust_line(t):
     t = re.sub(r"^\s*✓\s*", "", t).strip()
-    for key in ("Free cancellation", "Reserve now", "Pay nothing today", "Free date change", "Change your date",
+    for key in ("Instant mobile ticket", "Free cancellation", "Reserve now", "Pay nothing today", "Free date change", "Change your date",
                 "Best price", "Instant confirmation", "Skip the line", "Mobile ticket", "Pay at the property",
                 "Free cancellation"):
         if t.startswith(key) and "<b>" not in t:
@@ -139,33 +139,44 @@ def parse_count(t):
     return int(v)
 
 
+def all_nodes(n, cls):
+    out = []
+    for c in n.ch:
+        if not isinstance(c, Node) or c.tag in (None, "!--"):
+            continue
+        m = re.search(r'class="([^"]*)"', c.start)
+        if m and cls in m.group(1).split():
+            out.append(c)
+        else:
+            out += all_nodes(c, cls)
+    return out
+
+
 def ratings_fallback(blk):
     """Star summary from either the newer popover (with an extra note) or the old icon-badge row."""
     sites = []
-    for b in re.finditer(r'<(a|span) class="bpa-rev-badge[^"]*"([^>]*)>(.*?)</\1>', blk.inner(), re.S):
-        attrs, inner = b.group(2), b.group(3)
-        href = (re.search(r'href="([^"]*)"', attrs) or [None, None])[1]
+    for b in all_nodes(blk, "bpa-rev-badge"):
+        href = (re.search(r'href="([^"]*)"', b.start) or [None, None])[1]
         href = _html.unescape(href) if href else None
-        score = re.search(r'bpa-rev-score">([^<]*)<', inner)
-        count = re.search(r'bpa-rev-count">([^<]*)<', inner)
-        icon = re.search(r'<img[^>]*src="([^"]*)"', inner)
-        name = re.search(r'bpa-rev-site">([^<]*)<', inner)
-        alt = re.search(r'<img[^>]*alt="([^"]+)"', inner)
-        site = name.group(1) if name else (alt.group(1) if alt else None)
+        score, count, name = (find(b, k) for k in ("bpa-rev-score", "bpa-rev-count", "bpa-rev-site"))
+        img = find(b, tag="img")
+        icon = re.search(r'src="([^"]*)"', img.start).group(1) if img is not None else None
+        alt = (re.search(r'alt="([^"]+)"', img.start) or [None, None])[1] if img is not None else None
+        site = name.inner().strip() if name is not None else alt
         if not site and href:
             site = next((v for k, v in SITE_BY_HOST if k in href), None)
         if not site and icon:
-            site = next((v for k, v in SITE_BY_HOST if k in icon.group(1).lower()), None)
-        if not (score and site):
+            site = next((v for k, v in SITE_BY_HOST if k in icon.lower()), None)
+        if score is None or not site:
             continue
-        d = {"kind": "link" if href else "static", "site": site, "score": score.group(1).strip(),
-             "count": count.group(1).strip() if count else ""}
+        d = {"kind": "link" if href else "static", "site": site, "score": text(score),
+             "count": text(count) if count is not None else ""}
         if d["count"] and not d["count"].startswith("("):
             d["count"] = "(" + d["count"] + ")"
         if href:
             d.update({"url": href, "rel": "noopener nofollow sponsored", "target": "_blank"})
         if icon and site not in ("GetYourGuide", "Viator", "Tripadvisor"):
-            d["icon"] = _html.unescape(icon.group(1))
+            d["icon"] = _html.unescape(icon)
         sites.append(d)
     if not sites:
         return None
@@ -173,10 +184,28 @@ def ratings_fallback(blk):
     scale = 10 if any(float(s["score"]) > 5 for s in sites) else 5
     w = sum(float(s["score"]) * parse_count(s["count"]) for s in sites) / tot if tot else float(sites[0]["score"])
     stars = w / 2 if scale == 10 else w
-    return {"stars": f"{stars:.2f}", "score": f"{w:.1f}", "meta": f"{fmt_count(tot)} reviews · {len(sites)} site" + ("s" if len(sites) > 1 else ""),
-            "heading": (f"Average of {len(sites)} booking sites, weighted by number of reviews" if len(sites) > 1
-                        else "Rating on the booking site") + (" (scores out of 10)" if scale == 10 else ""),
-            "sites": sites}
+    out = {"stars": f"{stars:.2f}", "score": f"{w:.1f}",
+           "meta": f"{fmt_count(tot)} reviews · {len(sites)} site" + ("s" if len(sites) > 1 else ""),
+           "heading": (f"Average of {len(sites)} booking sites, weighted by number of reviews" if len(sites) > 1
+                       else f"Rating on {sites[0]['site']}") + (" (scores out of 10)" if scale == 10 else ""),
+           "sites": sites}
+    # keep the old summary line and heading when there was one
+    meta, head = find(blk, "bpa-rate-meta"), find(blk, "bpa-lang-pop")
+    if meta is not None:
+        out["meta"] = meta.inner()
+    st = find(blk, "bpa-stars")
+    if st is not None:
+        out["stars"] = re.search(r"--r:([\d.]+)", st.start).group(1)
+        sc = find(blk, "bpa-rate-score")
+        out["score"] = sc.inner() if sc is not None else out["score"]
+    if head is not None:
+        strong = find(head, tag="strong")
+        note = find(head, "bpa-lang-note")
+        if strong is not None:
+            out["heading"] = strong.inner()
+        if note is not None:
+            out["_note"] = note.inner()
+    return out
 
 
 def kicker_fallback(blk):
@@ -273,6 +302,10 @@ def old_card(node, icons):
                 card["_old_bestfor"] = inner
         else:
             extras.append(blk.outer())
+    if "best_for" not in card:
+        ps = find(info, "bpa-pickskip")
+        if ps is not None:
+            card["best_for"] = L.ex_bestfor(ps)
     if extras:
         card["_old_extras"] = extras
     # price + cta
@@ -318,6 +351,9 @@ def old_cards(src):
 
 
 # ------------------------------------------------------------------ spec merge
+# neutral star badge for review sites without their own icon (operator ratings on TourRadar)
+GENERIC_ICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' "
+                "fill='%230f766e'/%3E%3Cpath d='M8 3.2l1.4 2.9 3.2.4-2.3 2.2.6 3.1L8 10.3l-2.9 1.5.6-3.1-2.3-2.2 3.2-.4z' fill='%23fff'/%3E%3C/svg%3E")
 SIZES = "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
 
 
@@ -364,6 +400,22 @@ def merge(card, sc, placeholder):
     if "ratings" in sc:
         card["reviews"] = {"ratings": sc["ratings"]}
         card.pop("_old_reviews", None)
+    if sc.get("no_ratings"):
+        card.pop("reviews", None)
+        card.pop("_old_reviews", None)
+    if sc.get("unlink_ratings") and "reviews" in card:
+        for st in card["reviews"]["ratings"].get("sites", []):
+            if st["kind"] == "link":
+                st["kind"] = "static"
+                for k in ("url", "rel", "target"):
+                    st.pop(k, None)
+    if sc.get("fold_note") and "_note" in card.get("reviews", {}).get("ratings", {}):
+        r = card["reviews"]["ratings"]
+        n = r.pop("_note")
+        r["heading"] = r["heading"] + ": " + n[0].lower() + n[1:]
+    for st in card.get("reviews", {}).get("ratings", {}).get("sites", []):
+        if st["site"] not in ("GetYourGuide", "Viator", "Tripadvisor") and not st.get("icon"):
+            st["icon"] = GENERIC_ICON
     if "ratings_patch" in sc:
         card["reviews"]["ratings"].update(sc["ratings_patch"])
     if "add_sites" in sc:
@@ -403,6 +455,12 @@ def merge(card, sc, placeholder):
         card["cta"]["btn"]["text"] = sc["btn_text"]
     if "_old_bestfor" in card and "best_for" not in sc:
         raise SystemExit(f"{card['id']}: old Best For line needs best_for in the spec: {card['_old_bestfor'][:120]}")
+    if card.get("_old_extras") and not sc.get("drop_extras"):
+        card["extras_after_best_for"] = "\n".join(card["_old_extras"])
+    if "_note" in card.get("reviews", {}).get("ratings", {}):
+        note = card["reviews"]["ratings"].pop("_note")
+        if not sc.get("drop_rating_note"):
+            raise SystemExit(f"{card['id']}: rating popover note has no slot, fold it into ratings_patch.heading: {note}")
     for k in ("_old_extras", "_tested", "_old_bestfor"):
         card.pop(k, None)
     if "_old_reviews" in card:
@@ -413,7 +471,8 @@ def merge(card, sc, placeholder):
     if len(card["faq"]["items"]) != RT.FAQ_PER_CARD:
         raise SystemExit(f"{card['id']}: needs exactly {RT.FAQ_PER_CARD} questions")
     # house key order
-    order = ["before", "id", "cats", "gallery", "kicker", "title", "reviews", "pills", "slot", "best_for", "faq", "price", "cta"]
+    order = ["before", "id", "cats", "gallery", "kicker", "title", "reviews", "pills", "slot", "best_for",
+             "extras_after_best_for", "faq", "price", "cta"]
     return {k: card[k] for k in order if k in card}
 
 
@@ -500,7 +559,7 @@ def shell(src, spec, cards, icons):
                + src[i:])
     # 2. filters
     box, mini = filter_box(spec, total)
-    m = re.search(r'<div class="ltt-integrated-filter-bar"[^>]*>', src)
+    m = re.search(r'<div class="ltt-integrated-filter-bar[^"]*"[^>]*>', src)
     if m:
         end = balanced(src, m.start(), "div")
         src = src[:m.start()] + box + src[end:]
