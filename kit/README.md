@@ -32,6 +32,7 @@ Change the kit: edit this repo, bump `VERSION`, PR, merge, tag `vX.Y.Z`, then ru
 | `checks/check_lazy_images.py` | Photos: loaders, first slide, missing files, hotlinks (`--fix` upgrades old slider runtimes) |
 | `checks/check_archive.py` | Nothing (script, workflow, skill, settings) still calls a script in `scripts/archive/` |
 | `checks/check_listicle_layout.py` | Listicle pages measured in a browser at phone and desktop width: rank tags and booking buttons fit on one line (tag not shrunk below 10 px), no sideways overflow. Skipped without Node + Playwright |
+| `checks/check_menu_fit.py` | Every desktop mega menu opened on each language's master page at 992 to 1920 px: inside the screen, nothing cut off, columns on one row while there is room, no sideways overflow (nav.js `fitMenus` keeps menus inside the screen). Skipped without Node + Playwright |
 | `checks/check_pagespeed.py` | PageSpeed basics every page inherits from its template (sites with `pagespeed` in site.json): no webfont.js, no `body:has()` for elements listed in `pagespeed.static_has`, no inline copy of a CSS block shared by many pages. Fix: `python3 scripts/pagespeed.py` |
 | `checks/check_photo_counts.py` | Listicle cards under 9 slider photos without a recorded reason (report only; site.json `photo_topup.strict` makes it fail) |
 | `checks/check_gallery_clip.py` | No CSS rule unclips a card photo gallery (.cd-gal, thumbnails, slider) when a popover opens: a `*{overflow:visible}` escape hatch must add `:not(.cd-gal):not(.cd-gal *)` |
