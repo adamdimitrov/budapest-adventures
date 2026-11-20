@@ -33,6 +33,7 @@ Change the kit: edit this repo, bump `VERSION`, PR, merge, tag `vX.Y.Z`, then ru
 | `checks/check_archive.py` | Nothing (script, workflow, skill, settings) still calls a script in `scripts/archive/` |
 | `checks/check_listicle_layout.py` | Listicle pages measured in a browser at phone and desktop width: rank tags and booking buttons fit on one line (tag not shrunk below 10 px), no sideways overflow. Skipped without Node + Playwright |
 | `checks/check_menu_fit.py` | Every desktop mega menu opened on each language's master page at 992 to 1920 px: inside the screen, nothing cut off, columns on one row while there is room, no sideways overflow (nav.js `fitMenus` keeps menus inside the screen). Skipped without Node + Playwright |
+| `checks/check_pagespeed.py` | PageSpeed basics every page inherits from its template (sites with `pagespeed` in site.json): no webfont.js, no `body:has()` for elements listed in `pagespeed.static_has`, no inline copy of a CSS block shared by many pages. Fix: `python3 scripts/pagespeed.py` |
 | `checks/check_photo_counts.py` | Listicle cards under 9 slider photos without a recorded reason (report only; site.json `photo_topup.strict` makes it fail) |
 | `checks/check_gallery_clip.py` | No CSS rule unclips a card photo gallery (.cd-gal, thumbnails, slider) when a popover opens: a `*{overflow:visible}` escape hatch must add `:not(.cd-gal):not(.cd-gal *)` |
 | `checks/check_filters.py` | Filter pills: `data-group` on every non-"All" pill, only "All" active |
@@ -74,6 +75,7 @@ A site that still needs its own version of a script lists it in `site.json` as
 | `slider_photo_order.py` | Applies the card photo orders in the site's `scripts/slider_photo_order_data.py` to every language version |
 | `fix_affiliate_rel.py` | Every affiliate link carries `rel="nofollow sponsored noopener"`; settings under `affiliate` in site.json |
 | `listicle.py` | Listicle cards (`bpa-card`, river/dinner cruise design) as data: `extract <page>` writes `data/listicles/<slug>.json`, `build <page>` renders the cards back into the page (only the card region), `stats <page>` shows structured vs raw. Test: `python3 tests/test_listicle_roundtrip.py --site ../budapest-adventures` (extract -> build must be byte-identical). Language versions: `build-lang <english-page> <lang> [--check]` renders the language page's cards (the page its hreflang link names) from the ENGLISH card data plus `data/listicles/i18n/<slug>/<lang>.json` (text keyed by the English fragment, `urls` for localized links) and the kit table `runtime/listicle/i18n/<lang>.json` (template and JS strings, common phrases); `missing <english-page> <lang> [--todo=FILE] [--prune]` lists what is untranslated. Test: `python3 tests/test_listicle_i18n.py` |
+| `pagespeed.py` | Site-wide PageSpeed fixes (see its docstring): `fonts` swaps webfont.js for the same Google Fonts stylesheet without blocking render (only the faces a page uses download), `has` turns `body:has(.x)` for static elements into body classes (`ps-has-x`), `css` serves `<style id>` blocks shared by many pages from hashed, year-cached files in `/css/shared/` (neighbours joined into one file; blocks synced from the masters keep their own `<link id>`). `unpack [page...]` puts them back inline for scripts that edit a block in place; run the script again afterwards. Run it after any builder, sync or translation run; `--check` is the CI check |
 | `listicle_harvest.py` | Reuses translations a language page already has: `<english-page> <lang|all>` aligns the old translated page with the English version it was translated from (found in git history) and reads the port / listicle memories, then adds the pairs whose English is still used by the card data to `data/listicles/i18n/<slug>/<lang>.json` (never overwriting), with provenance and skipped pairs in `<lang>.harvest.json`. See "Listicle language versions" below |
 
 ## site.json
@@ -100,6 +102,11 @@ A site that still needs its own version of a script lists it in `site.json` as
   check_kit fails on any page that still carries one or loads an old `?v=`.
 - `local_checks`: the site's own checks that `check_all.py` also runs, until they
   move into the kit.
+
+`pagespeed` (optional, opts the site into `check_pagespeed.py`):
+`{"static_has": [".ltt-hero-wrap", "article.review-article", ...], "shared_css_min_pages": 20}`.
+`static_has` lists only elements that are in the page HTML and never added or removed by JS;
+dynamic states (`.ltt-mobile-drawer.is-open`) stay `:has()`.
 
 `listicle.translate` (optional): what `listicle.py translate` tells the model about the site:
 `{"topic": "Danube cruises in Budapest", "names": [...never translated...], "landmarks": [...]}`.

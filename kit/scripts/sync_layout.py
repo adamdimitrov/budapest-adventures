@@ -206,7 +206,12 @@ def build_footer(master_footer, path, lang):
 # ---------------------------------------------------------------------- sync
 def block_pattern(b):
     close = "</style>" if b["open"].startswith("<style") else "</script>"
-    return re.compile(re.escape(b["open"]) + r".*?" + re.escape(close), re.S)
+    pat = re.escape(b["open"]) + r".*?" + re.escape(close)
+    m = re.fullmatch(r'<style id="([^"]+)">', b["open"])
+    if m:
+        # scripts/pagespeed.py serves a block shared by many pages as <link id="X" ...> to a cached file
+        pat = r"(?:%s|<link id=\"%s\" rel=\"stylesheet\" href=\"[^\"]+\"/?>)" % (pat, re.escape(m.group(1)))
+    return re.compile(pat, re.S)
 
 
 def sync_page(s, master, path, lang):

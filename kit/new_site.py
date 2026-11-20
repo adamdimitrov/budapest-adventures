@@ -103,6 +103,9 @@ def main():
         "images": {"allowed_hosts": []},
         "local_checks": ["scripts/sync_layout.py --check", "scripts/fix_affiliate_rel.py --check"],
         "runtime": {"shared": True},
+        # elements the shared article CSS styles the page by (body classes, see kit/scripts/pagespeed.py)
+        "pagespeed": {"static_has": [".ltt-hero-wrap", "article.review-article", ".ltt-guide-featured",
+                                     ".hp-guides", ".ltt-about-header", ".form-header-title", ".calc-title"]},
     }
     write(root, "site.json", json.dumps(site, indent=2, ensure_ascii=False) + "\n")
     layout = {
@@ -189,6 +192,7 @@ def main():
     if r.returncode:
         sys.exit("kit install failed")
     subprocess.run([sys.executable, "scripts/sync_layout.py"], cwd=root, check=True)
+    subprocess.run([sys.executable, "scripts/pagespeed.py"], cwd=root, check=True)
     r = subprocess.run([sys.executable, "kit/checks/check_all.py"], cwd=root)
     print(f"\n{root}: new site written; checks {'PASSED' if r.returncode == 0 else 'FAILED'}")
     print("Next: fill the [Owner: ...] gaps, commit, push, connect the repo in Vercel, open a PR.")
