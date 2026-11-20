@@ -1,0 +1,3640 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": [
+    "walls",
+    "parking"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Castle District Hotel",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Hilton Budapest"
+      ],
+      [
+       "fetchpriority",
+       "high"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "eager"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-castle-district-hotels-budapest/01-hilton-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hilton Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/01-hilton-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hilton Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/01-hilton-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hilton Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/01-hilton-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hilton Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/01-hilton-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hilton Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/01-hilton-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hilton Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/01-hilton-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hilton Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/01-hilton-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hilton Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/01-hilton-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hilton Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/01-hilton-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/01-hilton-01.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/01-hilton-02.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/01-hilton-03.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/01-hilton-04.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/01-hilton-05.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/01-hilton-06.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/01-hilton-07.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/01-hilton-08.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/01-hilton-09.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/01-hilton-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "5-star hotel",
+    "🛏️ 8.9/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Hilton+Budapest+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District I"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-hilton&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhilton-budapest.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Hilton Budapest"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.57",
+     "score": "4.6",
+     "meta": "13k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.9",
+       "count": "(2.7k+)",
+       "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-hilton&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhilton-budapest.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.6",
+       "count": "(4.3k+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.6",
+       "count": "(6k+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_castle_district_hotels_budapest_hilton_budapest&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d276362-Reviews-Hilton_Budapest-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Times on booking page</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in and check-out times are shown on the booking page for the room you pick."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏰 <span class=\"bpa-lang-label\">Inside the castle walls</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On Castle Hill itself; the 16 and 116 buses and the funicular connect the hill with the river and Pest."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-yes\">✓</span> listed as wheelchair accessible</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌊 <span class=\"bpa-lang-label\">Danube rooms</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rooms:</strong> Bright rooms with large windows; the Danube Rooms face the river and Pest (from €196 on the same night)."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⛪ <span class=\"bpa-lang-label\">Dominican cloister</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The building:</strong> Built into a restored Dominican cloister next to Fisherman's Bastion and Matthias Church, a UNESCO World Heritage site."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Excellent</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast excellent. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€153 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🏛️ <span class=\"bpa-lang-label\">Historic and grand</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> The Codex Bar has views over the city; a 24-hour gym and a sauna."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the classic castle stay next to Fisherman's Bastion, with Danube-view rooms and a garage",
+    "skip_html": "if you want nightlife on your doorstep: Pest is a bus ride away"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1014 Budapest, Hess Andras ter 1-3 (District I)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it excellent; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Sauna."
+     },
+     {
+      "q": "Is there parking?",
+      "a": "Valet, Parking garage, Electric charging."
+     },
+     {
+      "q": "Anything to know before booking?",
+      "a": "Listed as wheelchair accessible; pets welcome (fees may apply)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€153",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "8.9/10 guest score",
+      "price": "€153"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-hilton&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhilton-budapest.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 8.9/10</b> from 2,685 reviews",
+     "<b>Location</b> rated 9.5/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-1-hilton-budapest",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: PEST-BUDA Design Hotel -->\n",
+   "id": "card-2",
+   "cats": [
+    "walls"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🥈 #2 Most Historic Hotel",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "PEST-BUDA Design Hotel"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-castle-district-hotels-budapest/02-pest-buda-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "PEST-BUDA Design Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/02-pest-buda-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "PEST-BUDA Design Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/02-pest-buda-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "PEST-BUDA Design Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/02-pest-buda-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "PEST-BUDA Design Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/02-pest-buda-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "PEST-BUDA Design Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/02-pest-buda-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "PEST-BUDA Design Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/02-pest-buda-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "PEST-BUDA Design Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/02-pest-buda-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "PEST-BUDA Design Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/02-pest-buda-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "PEST-BUDA Design Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/02-pest-buda-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/02-pest-buda-01.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/02-pest-buda-02.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/02-pest-buda-03.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/02-pest-buda-04.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/02-pest-buda-05.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/02-pest-buda-06.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/02-pest-buda-07.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/02-pest-buda-08.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/02-pest-buda-09.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/02-pest-buda-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=PEST-BUDA+Design+Hotel+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District I"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-pest-buda&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fpest-buda.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "PEST-BUDA Design Hotel"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.63",
+     "score": "4.6",
+     "meta": "1.1k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.0",
+       "count": "(495)",
+       "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-pest-buda&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fpest-buda.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.4",
+       "count": "(81)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.8",
+       "count": "(520+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_castle_district_hotels_budapest_pest_buda&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d10548799-Reviews-Pest_Buda_Design_Boutique_Hotel-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM to 12:00 AM, check-out until From 7:30 AM to 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏰 <span class=\"bpa-lang-label\">Inside the castle walls</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On Castle Hill itself; the 16 and 116 buses and the funicular connect the hill with the river and Pest."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🕰️ <span class=\"bpa-lang-label\">Opened in 1696</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The building:</strong> A historic inn on Fortuna utca, first opened in 1696 and renovated in 2016, with a restaurant serving homemade-style food."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⛪ <span class=\"bpa-lang-label\">Terrace facing Matthias Church</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Outside:</strong> A seasonal terrace overlooking Matthias Church, 800 ft away."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Wonderful</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast wonderful. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€101 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.8/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🕯️ <span class=\"bpa-lang-label\">Small and atmospheric</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A few rooms in a 17th-century building; location rated 9.7."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a night in a 1696 inn 800 ft from Matthias Church, with a terrace and breakfast rated wonderful",
+    "skip_html": "if stairs are a problem: rooms are reached by stairs only"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1014 Budapest, Fortuna utca 3. (District I)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it wonderful; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM to 12:00 AM; check-out until From 7:30 AM to 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Budavári Evangélikus Templom (700 ft), Trinity Square (800 ft), Matyas Church (800 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€101",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9/10 guest score",
+      "price": "€101"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-pest-buda&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fpest-buda.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9/10</b> from 495 reviews",
+     "<b>Location</b> rated 9.7/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-2-pest-buda-design-hotel",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #3: BALTAZÁR Boutique Hotel -->\n",
+   "id": "card-3",
+   "cats": [
+    "walls"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🥉 #3 Best-Rated on Castle Hill",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "BALTAZÁR Boutique Hotel"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-castle-district-hotels-budapest/03-baltazar-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "BALTAZÁR Boutique Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/03-baltazar-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "BALTAZÁR Boutique Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/03-baltazar-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "BALTAZÁR Boutique Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/03-baltazar-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "BALTAZÁR Boutique Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/03-baltazar-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "BALTAZÁR Boutique Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/03-baltazar-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "BALTAZÁR Boutique Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/03-baltazar-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "BALTAZÁR Boutique Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/03-baltazar-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "BALTAZÁR Boutique Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/03-baltazar-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "BALTAZÁR Boutique Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/03-baltazar-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/03-baltazar-01.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/03-baltazar-02.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/03-baltazar-03.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/03-baltazar-04.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/03-baltazar-05.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/03-baltazar-06.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/03-baltazar-07.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/03-baltazar-08.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/03-baltazar-09.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/03-baltazar-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9.3/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=BALTAZÁR+Boutique+Hotel+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District I"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-baltazar&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbaltaza-r-budapest.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "BALTAZÁR Boutique Hotel"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.58",
+     "score": "4.6",
+     "meta": "2.3k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.3",
+       "count": "(626)",
+       "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-baltazar&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbaltaza-r-budapest.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.3",
+       "count": "(810+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.8",
+       "count": "(860+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_castle_district_hotels_budapest_baltaza_r_budapest&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d4593900-Reviews-Baltazar_Budapest_Boutique_Hotel-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM to 11:00 PM, check-out until 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏰 <span class=\"bpa-lang-label\">Inside the castle walls</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On Castle Hill itself; the 16 and 116 buses and the funicular connect the hill with the river and Pest."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🛁 <span class=\"bpa-lang-label\">Sauna Suite</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rooms:</strong> Individually decorated rooms and suites, including a Sauna Suite and a Friends and Family Suite; bathrooms with shower or bathtub."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥩 <span class=\"bpa-lang-label\">Above a grill restaurant</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Food:</strong> The hotel sits above its own à la carte grill restaurant; breakfast is à la carte and included only if your rate says so."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€104 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 9.0/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🎨 <span class=\"bpa-lang-label\">Warm and individual</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> Each room decorated differently, on the quiet north end of the hill."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the highest-rated hotel on Castle Hill (9.3), with a Sauna Suite and its own grill restaurant",
+    "skip_html": "if you want a buffet breakfast: breakfast is one hot dish from the à la carte menu"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1014 Budapest, Országház utca 31. (District I)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it excellent; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM to 11:00 PM; check-out until 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Maria Magdolna templom (250 ft), Budavári Evangélikus Templom (550 ft), Középkori zsidó Imaház (700 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€104",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.3/10 guest score",
+      "price": "€104"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-baltazar&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbaltaza-r-budapest.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.3/10</b> from 626 reviews",
+     "<b>Location</b> rated 9.5/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-3-baltazar-boutique-hotel",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: Buda Castle Hotel Budapest -->\n",
+   "id": "card-4",
+   "cats": [
+    "walls",
+    "value"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "💶 #4 Best Value Inside the Walls",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Buda Castle Hotel Budapest"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Buda Castle Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Buda Castle Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Buda Castle Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Buda Castle Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Buda Castle Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Buda Castle Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Buda Castle Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Buda Castle Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Buda Castle Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-01.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-02.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-03.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-04.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-05.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-06.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-07.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-08.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-09.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Buda+Castle+Hotel+Budapest+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District I"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-buda-castle-hotel&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbuda-castle.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Buda Castle Hotel Budapest"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.57",
+     "score": "4.6",
+     "meta": "3k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.0",
+       "count": "(1k+)",
+       "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-buda-castle-hotel&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbuda-castle.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.6",
+       "count": "(780+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.6",
+       "count": "(1.2k+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_castle_district_hotels_budapest_buda_castle&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d1028725-Reviews-Buda_Castle_Hotel_Budapest-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 2:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 2:00 PM, check-out until 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏰 <span class=\"bpa-lang-label\">Inside the castle walls</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On Castle Hill itself; the 16 and 116 buses and the funicular connect the hill with the river and Pest."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🛏️ <span class=\"bpa-lang-label\">Duplex rooms</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rooms:</strong> Air-conditioned rooms from budget twins to duplex double and twin rooms, with minibar and tea and coffee facilities."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Excellent</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast excellent. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€87 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.9/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🏘️ <span class=\"bpa-lang-label\">Old-street charm</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> On Úri utca, one of the castle's oldest streets, 900 ft from Matthias Church."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the cheapest bed inside the castle walls, €87 with breakfast rated excellent",
+    "skip_html": "if you need parking: street parking only"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1014 Budapest, Úri utca 39 (District I)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it excellent; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 2:00 PM; check-out until 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Trinity Square (750 ft), Matyas Church (900 ft), Maria Magdolna templom (950 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€87",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9/10 guest score",
+      "price": "€87"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-buda-castle-hotel&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbuda-castle.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9/10</b> from 1,035 reviews",
+     "<b>Location</b> rated 9.6/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-4-buda-castle-hotel-budapest",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: Hotel Castle Garden -->\n",
+   "id": "card-5",
+   "cats": [
+    "below",
+    "parking",
+    "value"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🧖 #5 Best with Sauna and Parking",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Hotel Castle Garden"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-castle-district-hotels-budapest/05-castle-garden-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Castle Garden"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/05-castle-garden-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Castle Garden"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/05-castle-garden-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Castle Garden"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/05-castle-garden-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Castle Garden"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/05-castle-garden-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Castle Garden"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/05-castle-garden-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Castle Garden"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/05-castle-garden-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Castle Garden"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/05-castle-garden-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Castle Garden"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/05-castle-garden-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Castle Garden"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/05-castle-garden-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/05-castle-garden-01.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/05-castle-garden-02.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/05-castle-garden-03.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/05-castle-garden-04.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/05-castle-garden-05.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/05-castle-garden-06.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/05-castle-garden-07.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/05-castle-garden-08.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/05-castle-garden-09.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/05-castle-garden-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9.1/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Hotel+Castle+Garden+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District I"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-castle-garden&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcastle-garden.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Hotel Castle Garden"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.53",
+     "score": "4.5",
+     "meta": "2.5k+ reviews · 2 sites",
+     "heading": "Average of 2 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.1",
+       "count": "(1.6k+)",
+       "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-castle-garden&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcastle-garden.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.5",
+       "count": "(950+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 2:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 2:00 PM to 11:00 PM, check-out until From 5:30 AM to 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌳 <span class=\"bpa-lang-label\">Below the west walls</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On Lovas utca at the foot of the castle walls, a quiet green street."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧖 <span class=\"bpa-lang-label\">Sauna + hot tub</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> A small wellness centre with a sauna and a hot tub."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "☕ <span class=\"bpa-lang-label\">Free afternoon drinks</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Extras:</strong> Free coffee, tea and soft drinks in the lobby from 11 am to 5 pm; a bistro with a bar and a garden."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€79 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.9/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🌿 <span class=\"bpa-lang-label\">Quiet and green</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> Boutique-style rooms in a quiet street under the walls."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a sauna, a garage and a quiet street under the walls, at €79",
+    "skip_html": "if you want to step out onto the castle lanes: you walk up to the walls first"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1012 Budapest, Lovas u. 41. (District I)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it very good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Spa and wellness centre, hot tub."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 2:00 PM to 11:00 PM; check-out until From 5:30 AM to 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Budavári Evangélikus Templom (700 ft), Középkori zsidó Imaház (900 ft), Maria Magdolna templom (1,100 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€79",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.1/10 guest score",
+      "price": "€79"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-castle-garden&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcastle-garden.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.1/10</b> from 1,575 reviews",
+     "<b>Location</b> rated 9.5/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-5-hotel-castle-garden",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #6: Monastery Boutique Hotel Budapest -->\n",
+   "id": "card-6",
+   "cats": [
+    "below"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🌊 #6 Best Between Castle and River",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Monastery Boutique Hotel Budapest"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-castle-district-hotels-budapest/06-monastery-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Monastery Boutique Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/06-monastery-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Monastery Boutique Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/06-monastery-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Monastery Boutique Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/06-monastery-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Monastery Boutique Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/06-monastery-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Monastery Boutique Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/06-monastery-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Monastery Boutique Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/06-monastery-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Monastery Boutique Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/06-monastery-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Monastery Boutique Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/06-monastery-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Monastery Boutique Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/06-monastery-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/06-monastery-01.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/06-monastery-02.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/06-monastery-03.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/06-monastery-04.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/06-monastery-05.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/06-monastery-06.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/06-monastery-07.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/06-monastery-08.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/06-monastery-09.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/06-monastery-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9.1/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Monastery+Boutique+Hotel+Budapest+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District I"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-monastery&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmonastery-boutique-budapest.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Monastery Boutique Hotel Budapest"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.59",
+     "score": "4.6",
+     "meta": "3.3k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.1",
+       "count": "(2.4k+)",
+       "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-monastery&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmonastery-boutique-budapest.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.7",
+       "count": "(710+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.6",
+       "count": "(190+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_castle_district_hotels_budapest_monastery_boutique_budapest&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d15326707-Reviews-Monastery_Boutique_Hotel_Budapest-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM, check-out until From 10:00 AM to 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌊 <span class=\"bpa-lang-label\">Fő utca, Víziváros</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> Below Castle Hill on Fő utca, between the castle and the Danube; the nearest metro is about 1,970 ft away."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👨‍👩‍👧 <span class=\"bpa-lang-label\">Family rooms</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rooms:</strong> Standard and superior doubles, a queen room and a superior family room."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Excellent</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast excellent. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€101 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.9/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🍷 <span class=\"bpa-lang-label\">Neighbourhood feel</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> Shops, cafés and restaurants in the streets around the hotel."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a base between the castle and the river, 1,150 ft from Fisherman's Bastion, with 2,445 reviews at 9.1",
+    "skip_html": "if you want parking on site: street parking only"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1011 Budapest, 30 Fő utca (District I)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it excellent; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM; check-out until From 10:00 AM to 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Fisherman's Bastion (1,150 ft), Buda Castle Tunnel (1,400 ft), Matyas Church (1,400 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€101",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.1/10 guest score",
+      "price": "€101"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-monastery&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmonastery-boutique-budapest.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.1/10</b> from 2,445 reviews",
+     "<b>Location</b> rated 9.6/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-6-monastery-boutique-hotel-budapest",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #7: Váralja Home -->\n",
+   "id": "card-7",
+   "cats": [
+    "below",
+    "parking",
+    "value"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "💸 #7 Cheapest Near the Palace",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Váralja Home"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-castle-district-hotels-budapest/07-varalja-home-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Váralja Home"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/07-varalja-home-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Váralja Home"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/07-varalja-home-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Váralja Home"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/07-varalja-home-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Váralja Home"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/07-varalja-home-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Váralja Home"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/07-varalja-home-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Váralja Home"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/07-varalja-home-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Váralja Home"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/07-varalja-home-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Váralja Home"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/07-varalja-home-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Váralja Home"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/07-varalja-home-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/07-varalja-home-01.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/07-varalja-home-02.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/07-varalja-home-03.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/07-varalja-home-04.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/07-varalja-home-05.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/07-varalja-home-06.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/07-varalja-home-07.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/07-varalja-home-08.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/07-varalja-home-09.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/07-varalja-home-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9.1/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Váralja+Home+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District I"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-varalja-home&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvaralja-home.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Váralja Home"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.56",
+     "score": "4.6",
+     "meta": "2k+ reviews · 2 sites",
+     "heading": "Average of 2 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.1",
+       "count": "(1.9k+)",
+       "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-varalja-home&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvaralja-home.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.7",
+       "count": "(100+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 4:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 4:00 PM to 11:00 PM, check-out until From 11:00 AM to 11:30 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏰 <span class=\"bpa-lang-label\">Below the Royal Palace</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On Váralja utca under the palace side of the hill, about 1,450 ft from the Royal Palace and 1,400 ft from the Budapest History Museum."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚗 <span class=\"bpa-lang-label\">Parking on site</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Parking:</strong> Private parking on site, with a garage, EV charging and accessible spaces listed."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€72 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 9.1/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🏡 <span class=\"bpa-lang-label\">Simple and calm</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A small guesthouse-style hotel with deluxe queen rooms; value for money 9.1."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the cheapest night near the Royal Palace (€72) with parking on site",
+    "skip_html": "if you want a restaurant or breakfast in-house: no breakfast rating is listed"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1013 Budapest, 3 Váralja utca (District I)."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 4:00 PM to 11:00 PM; check-out until From 11:00 AM to 11:30 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Buda Castle Tunnel (1,350 ft), Budapest History Museum (1,400 ft), Buda Royal Palace (1,450 ft)."
+     },
+     {
+      "q": "Is there parking?",
+      "a": "Parking garage, Street, Electric charging, Accessible."
+     }
+    ]
+   },
+   "price": {
+    "main": "€72",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.1/10 guest score",
+      "price": "€72"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-varalja-home&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvaralja-home.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.1/10</b> from 1,947 reviews",
+     "<b>Location</b> rated 9.3/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-7-varalja-home",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #8: Carlton Hotel Buda Castle -->\n",
+   "id": "card-8",
+   "cats": [
+    "below",
+    "parking",
+    "value"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🌉 #8 Best by the Chain Bridge",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Carlton Hotel Buda Castle"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-castle-district-hotels-budapest/08-carlton-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Carlton Hotel Buda Castle"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/08-carlton-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Carlton Hotel Buda Castle"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/08-carlton-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Carlton Hotel Buda Castle"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/08-carlton-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Carlton Hotel Buda Castle"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/08-carlton-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Carlton Hotel Buda Castle"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/08-carlton-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Carlton Hotel Buda Castle"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/08-carlton-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Carlton Hotel Buda Castle"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/08-carlton-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Carlton Hotel Buda Castle"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/08-carlton-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Carlton Hotel Buda Castle"
+      ],
+      [
+       "data-src",
+       "/assets/best-castle-district-hotels-budapest/08-carlton-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/08-carlton-01.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/08-carlton-02.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/08-carlton-03.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/08-carlton-04.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/08-carlton-05.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/08-carlton-06.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/08-carlton-07.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/08-carlton-08.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/08-carlton-09.avif"
+     },
+     {
+      "src": "/assets/best-castle-district-hotels-budapest/08-carlton-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 8.9/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Carlton+Hotel+Buda+Castle+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District I"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-carlton&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcarltonhotelbudapest.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Carlton Hotel Buda Castle"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.50",
+     "score": "4.5",
+     "meta": "2.5k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.9",
+       "count": "(1.9k+)",
+       "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-carlton&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcarltonhotelbudapest.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.7",
+       "count": "(480+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.6",
+       "count": "(110+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_castle_district_hotels_budapest_carltonhotelbudapest&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d276352-Reviews-Carlton_Hotel_Buda_Castle-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM, check-out until 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌉 <span class=\"bpa-lang-label\">By the Chain Bridge</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On Apor Péter utca, 550 ft from the Castle Tunnel and 1,350 ft from the Chain Bridge."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎒 <span class=\"bpa-lang-label\">Traveller packages</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Extras:</strong> Traveller's Dream packages with backpacks, tickets, thermoses and postcards, and a programme kiosk at reception."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👨‍👩‍👧 <span class=\"bpa-lang-label\">Family rooms</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rooms:</strong> Standard, superior and family rooms; rooms with a balcony and view cost more (€101 on the same night)."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€77 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.8/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🧭 <span class=\"bpa-lang-label\">Quiet street, central</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A calm side street between the castle and the river."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a quiet base by the Chain Bridge and the funicular, €77 with a garage",
+    "skip_html": "if breakfast matters: it is rated good, the lowest here"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1011 Budapest, Apor Peter utca 3. (District I)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM; check-out until 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Buda Castle Tunnel (550 ft), Chain Bridge (1,350 ft), Fisherman's Bastion (1,500 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€77",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "8.9/10 guest score",
+      "price": "€77"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-carlton&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcarltonhotelbudapest.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 8.9/10</b> from 1,867 reviews",
+     "<b>Location</b> rated 9.6/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-8-carlton-hotel-buda-castle",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}

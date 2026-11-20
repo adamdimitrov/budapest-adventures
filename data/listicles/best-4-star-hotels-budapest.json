@@ -1,0 +1,3655 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAN1ElEQVR4nOWcCXRURRaG/3qdPSEJgQRCIJ0QVoMoJCxuiCDInDHKIAHFSYCB0RlAlFXnOKOoiMedkcVlBoGAGhEUBWZEREBgEEmCskckG4QsZOuQpDvp9Ks5t2JCv15fpxMg4TunIV1dr6refVW37r1V9RiuIol8E3LOV0OWJTBKoH9kJv5n4OC/5aNkTv9SgsQBmQNMApNMiOrhj8/YpKvWZtHO1mTYhY3dTcb6RM7YKAaMABDoXolMBy5/zyS220PC5kM9pua3VFtt1tYahd52fpOvUa5JBGfJAO6hftAa9VD/A/AdGEvxlHw2H+oxSX9dCyi2eFOAn14/g3MsBtANV5dL4FhdD3n5T9HTK64rAcWlve/JQr3nMc6e4UBHXFvKGPgrckntP9PjHzdecwENyVo3gktsFYABuL74hTHMPqKd+u01EdDI7LU+VRJ7G5w9fjWUfTPhAF8dwPnCvdHTDc0poFk3NvTc+j6yBp8CuBVtg6Makzz5cMz0s60uoMHZKfdJjH8GoAPaFpVg0sQ0bdIuVy5yafqNy0mZIjG+rQ0KhwgEl7fHZ697pFUEFJe97q8MfAMAT7RdvMDYxrjslL+06BCLJ6kztrEVDb6rDQfj09K001LcFtCQ3HWjOWc7AHijfWGUOUvIiE7e2WwBDW2YrdLaqM5RQ6WskeIyeiT9ai+D5MjOkTVIbcfCIQIlk7yFfEeXBVTNNG8BGIT2z0CjqeZ1l4bY4LwNd0myvO86tpBbGg4uj0qLnr7XaQ8ayfd4SCa+6gYSDsHApJXkdMOZgKrycueD8Ztx4xGLzj5PWCYqesmwsxsDZU9TTmuGLOorqlGV9gv0p/JQk3kBdRdLxUc2GGG6XCPyaDr4QfLxhFe3TuLj17c7fGO16BDfG5ogf7QiZd6G+qiD/WZcbkzwUDTeQ57FWkE4dfklKPvqB5TvzEDN8WxwEwUC7WPSVcOkA4xFFag+eg7lO34U6UwjwW9gNDqOjUPIg8OF8FqYkDofDUUn3rDqQSJ8waQsAOEtUhXn0O07jqI1O1F54KT43qJIDIF3xKLLzHEIGjEAYC2lMnmRp8YvujF829SDLkOazFpIOJUHTuLCq5tQczwHrYbMUbn/hPj49u2ObnMfRMffD22BglmXelPNBAAfKQTEGJLcLbquoAx5/0hBxbdHneb1DA2C302R8IkJh7e2CyR/b2h8G7wZk74WcnUtanOLYcgqQM2pPBiL7YeZ9ZkXcG72KgRv/R8iX0yGV3iIezfCWFKjgES/vO38+gijCbmkH23lr80tRvaCDyDXOg7x1mYVwlRtP3Dnf2sMQh4YjsC7YuHbO8KlNht+vYjKg6dQ9uUhVGXY9Qyg8feBd8+uDsuSvD0R/eZj8NaG2csie2oQSUtKogcZ6/kkMGZTOAQVRGM9a/YqpwrWHtT9I5f8UfSc5uDTq5v4hNw/FHnPb0DZ9gbFbQk9IEdDmxR9z1WzHQmHkOpk0DBb0WAHMWm0swZ2HBePyKVTm60MaSY6dsd8XFiWCrmm1uXrZUMd8l/fjGN3LLArHKcwJu6B7sVpVs5Hif9H8j2oys3TqV3xLFi1TTTUHby7d0bPFbPgPyhGVf6aEznImrMahpwit+qNWDQR4bMT1GaviNb6dpSqz4vuqHo5OHx2AsKmjYE71F4oQebDr6Bs2w9O85bvTMeZScvcFg612QXhEMHn8mrg0bSRQCXcWA/DuQK7v3uEdIBfrBaeYUGQ9XWou1gmegCvNynykcLPfup9ME8Pu12eZkOh9yyuJZiHBn43R4kZS/L1grFYh5qTuagvazKCFdTmFIly6Dq1aGSAxeWsb9xH4RzOkfXke8IqtiTwrgEIn5OAgPg+QhFauhfUWwpWfGU1XdOM0nfTs/C/JVqRTjd7ZuJSIWRzPMOCEf7EAwhJGA6PYKXbQRMIuTEFK7cJ+8iSzpNGIOq1GVAL42AsPnt9w94TFZR+fhDZ8z9Q3qCPl6iUpm9nyNUGZC9e0+Q6NEJT/k07XgTzajDLeF09TiU8L+wbc2gGi3ptJiQ/59Ffeog5i9cI5W5Orw/mInhsnNPrRTsaNt2oygu6ufzXaDnsCnRDfTYsUiUcQvL3QczKWQh9ZKQiXX82X7gkjRSt+dpKOHQNKXY1wiGoTdS2RqE3cv7lVPEA1MBcWaW4lLoPdYXlirTIJUkIGNJHbRG/1coQ+VKyMBrNKfpwp9BL9Cn68BvFbzTb0TWumhjUNrK9LI3eks37VZehFK8Dyv9zRPGd3ITQh+9WZuIcJZ/tR3HKbhjO5gvlGXjnAHR7arww8hohRdnjuSk489DSJifWeEkH3e6fxHf6+0pmhsjnHrVSrvpf8lHwzlbh95Ge8ukTgbCp96LzQ3cqBBn68Ehc2vidcFcaKd1yEKFTaNuSc1T1IGNxBaqOKs37sD+NFR61OTl/WyvGPc1a1BOEct5+GKceWILLh88o8gYM7oUACzuIFKvue6VypTyW9tLlQ6dxevwLwmCkOqgusp5zFv4buc+us7hD1tBWM6p/OgdTZUPsqUUEpCd9QPsEzSoNHqXct0CNLUmlMLY1ZDlnP/melcIMule5JkAPgRpvTvAYZR7qLTST2rPGL328F+X/TVOWQW01e5g021nqOLcEVFek1D2eIYHC3jGn5NN9jssoLIdu7zFFmm9v5SY0smUUw0v4YEqnVrfnZ4eevWhLqjL2Tm2lNivac7EULSageotGe3TqYNMQc0ZtdqGyHAsh11dUiY+jutRY1IYsZT22ynEWmWi6Tu30bI6t8asJ9LNKs8pjEU+uL1MKQzGM7dTl0Yx6bJWjNrYtqTERPcOCFd9pGFhauEH33OKwDJqFAkcoF0soGOYMmpbNoTIsLXVLgkYp20L6ynLoenV1HnoX27TVGIo+UcoAFPk0lfuPK9K6/nmc8NLt0cXG72oij5Z6yzsyFF1m3Gc3P/3edeY4RVrlgRNKf05i8O4R6rRu0uuSmvVB374R8IrobDVbWHbZPql/Q0B8b0U6WbJkB3VflKhIrzmdh6p05zviyM6pzbukSOv+zGSEz33QykoOGNoXfT95xmq4W7Y1YFAvK/1nE5nBg7b3c9mJrmYMwWMHoXjtLsWTpcYH3hnblEY9pN/mvws7SJ+ZL+LMHYb2tW4M57iw9BObOsdW9IAWAGJWzb6SKDFEzJ+ALtPG4PKPmSJ+7duvu4giWCJsK4teGDx2MNRgkmQwOj+RnauneVypaGzEcE6Melrhx9CN99/6vOjWrpD/1ucoeOdLl64hl8HVOBRN5acSlqC+tFLR02/e97pVJMBuwIwOhnDggLPc3t07I/RRpXlOsZfMycvUL+9wjovLvxBhD1fJe+Ejca3a9TX9mfPInLRMIRyi25wENcIhmewh2YixxTjbrabSiHkT4NMz3Gqp50ziy8LTpxVRe9BQOD3hJVxcvrV5i4hCuFuROeVVVP9M65u2oTZQW06Pf1H0enNIP6rthYzOgKhd9jHHkF0oKrclDIoOdhjeD34DouAVFgzZUIva/FJUfn/cStG6i090VxGk8wrvCMnHG3XFFUL3Xf7hjNBbltAydf+vnodnZ1WrKiYOqUd6VFJB0xQWn7OeNPC9aq6uOZmLX2cuF72n2TCGTn+4XUQJLH00c31Bk4BlgM1VfPtEoNe/nnK21GPeuK/TopJ/R39dmb6Y2OKrCr9YLfpvWyKeYHOgG4957wlEv/UYYt6dYzNOTKGS3mvmidlL+8p0EblsDiH3D0O/L55zQThC/2xosc0Lur3HxDIQ9Spn0Kpn2PSxwqg0N/UpXk0eeuO0TwKLeX8ugkdfiRiQg1qwejsufbxHVUSQzIuIpxMREKe0y1RQ6Knx7dm4eUFhJcbnrlsMzl5FMzBkFaDimwyhQIVXXqITT53cFNIXQSMHosNt/UXPsAXdeO6z68Xf0W/MRCcKfNnAVKVH5f6TwpI35BSjvkQnBOYRGgSvLh2FIqYQiaVhqxYOtjA9KvnNxu8KAQ0sTPH3MnCas5tXupsUvrsD0Ejo+pgY/teCUr2fb9TJsElNXrSVnzEkZ91CDmZ312e7hrN5adHJy82TrHwMf62WMiht8xuDE7xUT5tX4VBAe9k99Zwxcnw4bhw442yOrSOcNr3UdG3yATqphxuHlUeik23GjO268RXGygUAz0A7hwHpFUbdIge/22fYubW9TRopzf2XAVyvMB2X5Lj0yGnKpRQzHAaCDsdMP8uB8RTtQPujDowlOhKOqlWN9Kipe8DZtN/ectBekBnjSWrOr6pa9kmLTk7lXMxs7UFIMjhmHdFO26Qms0u7AYbkpEzg4LQ9VrkO1HaoA2dT6YGrvcDlHZnxuRvGgMub257iZjoZmJARlSwCYWpx+ZBumjZpl0n2GEg6HG0GniFrWLyrwkFzTzEf7floboVRdzcgzpVdzxY3tW1FhbHydkfnUh3h9gmQwXQ6kQ7gXX9nzDIZwxx3X27i9jn4jMik/bxUH8eBBRQuwLWnBJzPD9BGDnBXOGjpY5cDC1P8vWv5TJljEQNcO4zhJgwo5hzvctnwdnrM47oWLLflGZm91qdakiZyIAkcdMxB/eZk1zABbBeDvNGf8y3NfQWOI1r94O6gvDXdJO7xEANGg+NuZyu4zmBAOQffB7DdHNIWWpppudbarO/qkcg3gbb3S5zRJu3GNwQ2vRjQumkNrw6kNwVysdtdQk+t91V9TeD/ARozoWuLuPVZAAAAAElFTkSuQmCC"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": [
+    "wellness",
+    "central"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best 4-Star Hotel",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Three Corners Avenue Hotel"
+      ],
+      [
+       "fetchpriority",
+       "high"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "eager"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Three Corners Avenue Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Three Corners Avenue Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Three Corners Avenue Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Three Corners Avenue Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Three Corners Avenue Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Three Corners Avenue Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Three Corners Avenue Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Three Corners Avenue Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Three Corners Avenue Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-01.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-02.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-03.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-04.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-05.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-06.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-07.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-08.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-09.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/01-three-corners-avenue-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9.3/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Three+Corners+Avenue+Hotel+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VI"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-three-corners-avenue&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fthree-corners-avenue.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Three Corners Avenue Hotel"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.68",
+     "score": "4.7",
+     "meta": "4k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.3",
+       "count": "(3.2k+)",
+       "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-three-corners-avenue&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fthree-corners-avenue.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.8",
+       "count": "(450+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.8",
+       "count": "(310+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_4_star_hotels_budapest_three_corners_avenue&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d28116411-Reviews-Three_Corners_Avenue_Hotel-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 2:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 2:00 PM to 12:00 AM, check-out until From 7:00 AM to 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Opera</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 700 ft on foot to Opera station. Guests rate the location 9.7/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥂 <span class=\"bpa-lang-label\">Champagne breakfast buffet</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> A buffet with vegetarian, vegan and gluten-free options, warm dishes, local specialties and champagne; guests rate it excellent."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧖 <span class=\"bpa-lang-label\">Sauna</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> A sauna and a bar; rooms have walk-in showers."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€116 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 9.3/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🎭 <span class=\"bpa-lang-label\">Theatre district</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> On Paulay Ede utca, 850 ft from the Opera House and the cafés of Liszt Ferenc tér."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the best mix of score (9.3), value (9.3) and location, 700 ft from the Opera, at €116",
+    "skip_html": "if you need parking on site: none is listed"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1061 Budapest, Paulay Ede utca 50 (District VI); 700 ft walk to Opera metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it excellent; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Sauna."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 2:00 PM to 12:00 AM; check-out until From 7:00 AM to 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Opera House (850 ft), Andrassy Avenue (2,000 ft), House of Terror (2,000 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€116",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.3/10 guest score",
+      "price": "€116"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-three-corners-avenue&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fthree-corners-avenue.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.3/10</b> from 3,224 reviews",
+     "<b>Location</b> rated 9.7/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-1-three-corners-avenue-hotel",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: Mamaison Hotel Chain Bridge Budapest -->\n",
+   "id": "card-2",
+   "cats": [
+    "wellness",
+    "central"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🥈 #2 Best 4-Star with a Pool",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Mamaison Hotel Chain Bridge Budapest"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Mamaison Hotel Chain Bridge Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Mamaison Hotel Chain Bridge Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Mamaison Hotel Chain Bridge Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Mamaison Hotel Chain Bridge Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Mamaison Hotel Chain Bridge Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Mamaison Hotel Chain Bridge Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Mamaison Hotel Chain Bridge Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Mamaison Hotel Chain Bridge Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Mamaison Hotel Chain Bridge Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-01.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-02.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-03.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-04.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-05.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-06.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-07.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-08.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-09.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/02-mamaison-chain-bridge-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9.5/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Mamaison+Hotel+Chain+Bridge+Budapest+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District V"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-mamaison-chain-bridge&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmamaison-chain-bridge-budapest-budapest1.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Mamaison Hotel Chain Bridge Budapest"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.76",
+     "score": "4.8",
+     "meta": "1.1k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.5",
+       "count": "(878)",
+       "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-mamaison-chain-bridge&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmamaison-chain-bridge-budapest-budapest1.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.8",
+       "count": "(170+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.8",
+       "count": "(40)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_4_star_hotels_budapest_mamaison_chain_bridge_budapest_budapest1&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d33214023-Reviews-Mamaison_Hotel_Chain_Bridge_Budapest-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM to 12:00 AM, check-out until From 12:00 AM to 12:00 PM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌉 <span class=\"bpa-lang-label\">Near the Chain Bridge</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On Mérleg utca in District V, about 2,000 ft from the Chain Bridge and 1,000 ft from the Academy of Sciences."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧖 <span class=\"bpa-lang-label\">Indoor pool + spa</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> Spa facilities with an indoor swimming pool, sauna and steam room, plus a fitness centre and terrace."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🛋️ <span class=\"bpa-lang-label\">Suites with kitchenettes</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rooms:</strong> Rooms and named suites (Elizabeth, Liberty, Margaret), some with a kitchenette; family rooms available."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€153 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 9.2/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "✨ <span class=\"bpa-lang-label\">Quiet luxury</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> The highest score here (9.5), location 9.8."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for an indoor pool and spa in a 4-star near the Chain Bridge, rated 9.5",
+    "skip_html": "if you are on a budget: at €153 it is the second-priciest here"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1051 Budapest, Mérleg utca 6 (District V)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it excellent; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Spa and wellness centre, indoor pool, sauna."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM to 12:00 AM; check-out until From 12:00 AM to 12:00 PM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Magyar Tudományos Akadémia (1,000 ft), Anker-ház (1,900 ft), Andrassy Avenue (2,000 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€153",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.5/10 guest score",
+      "price": "€153"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-mamaison-chain-bridge&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmamaison-chain-bridge-budapest-budapest1.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.5/10</b> from 878 reviews",
+     "<b>Location</b> rated 9.8/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-2-mamaison-hotel-chain-bridge-budapest",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #3: Eurostars Ambassador -->\n",
+   "id": "card-3",
+   "cats": [
+    "wellness",
+    "parking",
+    "value"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "💶 #3 Best Value 4-Star",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Eurostars Ambassador"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Eurostars Ambassador"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Eurostars Ambassador"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Eurostars Ambassador"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Eurostars Ambassador"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Eurostars Ambassador"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Eurostars Ambassador"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Eurostars Ambassador"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Eurostars Ambassador"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Eurostars Ambassador"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-01.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-02.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-03.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-04.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-05.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-06.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-07.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-08.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-09.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/03-eurostars-ambassador-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9.1/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Eurostars+Ambassador+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VI"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-eurostars-ambassador&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Feurostars-ambassador.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Eurostars Ambassador"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.57",
+     "score": "4.6",
+     "meta": "5.4k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.1",
+       "count": "(4.5k+)",
+       "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-eurostars-ambassador&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Feurostars-ambassador.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.7",
+       "count": "(840+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.5",
+       "count": "(93)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_4_star_hotels_budapest_eurostars_ambassador&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d23941405-Reviews-Eurostars_Ambassador-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM, check-out until 12:00 PM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Oktogon</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 900 ft on foot to Oktogon station. Guests rate the location 9.3/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-yes\">✓</span> listed as wheelchair accessible</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧖 <span class=\"bpa-lang-label\">Sauna + gym</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> A sauna, a fitness centre and a garden."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Excellent</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast excellent. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€74 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 9.0/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🏛️ <span class=\"bpa-lang-label\">Andrássy side</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> On Eötvös utca, 700 ft from the House of Terror and 900 ft from the Liszt Museum."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a 9.1-rated 4-star with a sauna and garage for €74",
+    "skip_html": "if you want to be by the river: it is 0.7 miles from downtown, near Oktogon"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1067 Budapest, 12 Eötvös utca (District VI); 900 ft walk to Oktogon metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it excellent; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Sauna."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM; check-out until 12:00 PM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "House of Terror (700 ft), Liszt Ferenc Memorial Museum (900 ft), Opera House (2,250 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€74",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.1/10 guest score",
+      "price": "€74"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-eurostars-ambassador&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Feurostars-ambassador.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.1/10</b> from 4,527 reviews",
+     "<b>Location</b> rated 9.3/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-3-eurostars-ambassador",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: voco Budapest D8 by IHG -->\n",
+   "id": "card-4",
+   "cats": [
+    "central"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "📍 #4 Best Location",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "voco Budapest D8 by IHG"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-4-star-hotels-budapest/04-voco-d8-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "voco Budapest D8 by IHG"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/04-voco-d8-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "voco Budapest D8 by IHG"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/04-voco-d8-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "voco Budapest D8 by IHG"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/04-voco-d8-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "voco Budapest D8 by IHG"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/04-voco-d8-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "voco Budapest D8 by IHG"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/04-voco-d8-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "voco Budapest D8 by IHG"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/04-voco-d8-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "voco Budapest D8 by IHG"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/04-voco-d8-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "voco Budapest D8 by IHG"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/04-voco-d8-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "voco Budapest D8 by IHG"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/04-voco-d8-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-4-star-hotels-budapest/04-voco-d8-01.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/04-voco-d8-02.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/04-voco-d8-03.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/04-voco-d8-04.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/04-voco-d8-05.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/04-voco-d8-06.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/04-voco-d8-07.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/04-voco-d8-08.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/04-voco-d8-09.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/04-voco-d8-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=voco+Budapest+D8+by+IHG+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 H-1051 Budapest, 8, Dorottya Str."
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-voco-d8&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvoco-budapest-d8.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "voco Budapest D8 by IHG"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.56",
+     "score": "4.6",
+     "meta": "8.1k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.0",
+       "count": "(5.2k+)",
+       "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-voco-d8&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvoco-budapest-d8.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.6",
+       "count": "(1.8k+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.8",
+       "count": "(1.1k+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_4_star_hotels_budapest_voco_budapest_d8&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d15277005-Reviews-Voco_Budapest_D8_by_IHG-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Times on booking page</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in and check-out times are shown on the booking page for the room you pick."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📍 <span class=\"bpa-lang-label\">Dorottya utca, District V</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> An 8-minute walk from St. Stephen's Basilica, 0.3 miles from downtown."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍽️ <span class=\"bpa-lang-label\">Family-friendly restaurant</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Food:</strong> An international restaurant with vegetarian, vegan, gluten-free and dairy-free options; a bar and lounge."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Excellent</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast excellent. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€106 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 9.0/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🏙️ <span class=\"bpa-lang-label\">Downtown base</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> Location rated 9.9, the best here."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the best location score here (9.9), 0.3 miles from downtown, at €106",
+    "skip_html": "if you want a sauna or pool: none is listed"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "H-1051 Budapest, 8, Dorottya Str."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it excellent; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "Anything to know before booking?",
+      "a": "Airport shuttle available at extra cost."
+     },
+     {
+      "q": "Can I cancel?",
+      "a": "Depends on the rate you choose; the terms show before you pay."
+     }
+    ]
+   },
+   "price": {
+    "main": "€106",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9/10 guest score",
+      "price": "€106"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-voco-d8&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvoco-budapest-d8.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9/10</b> from 5,159 reviews",
+     "<b>Location</b> rated 9.9/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-4-voco-budapest-d8",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: EST Grand Hotel Savoy -->\n",
+   "id": "card-5",
+   "cats": [
+    "wellness"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🍳 #5 Best Breakfast",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "EST Grand Hotel Savoy"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "EST Grand Hotel Savoy"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "EST Grand Hotel Savoy"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "EST Grand Hotel Savoy"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "EST Grand Hotel Savoy"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "EST Grand Hotel Savoy"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "EST Grand Hotel Savoy"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "EST Grand Hotel Savoy"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "EST Grand Hotel Savoy"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "EST Grand Hotel Savoy"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-01.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-02.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-03.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-04.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-05.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-06.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-07.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-08.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-09.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/05-est-grand-savoy-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9.1/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=EST+Grand+Hotel+Savoy+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VIII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-est-grand-savoy&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fest-grand-savoy.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "EST Grand Hotel Savoy"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.57",
+     "score": "4.6",
+     "meta": "5.1k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.1",
+       "count": "(4.3k+)",
+       "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-est-grand-savoy&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fest-grand-savoy.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.7",
+       "count": "(620+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.7",
+       "count": "(150+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_4_star_hotels_budapest_est_grand_savoy&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d23959231-Reviews-EST_Grand_Hotel_Savoy-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM to 12:00 AM, check-out until From 12:00 AM to 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Rákóczi tér</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 800 ft on foot to Rákóczi tér station. Guests rate the location 9/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Exceptional</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast exceptional, the highest rating on this page. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧖 <span class=\"bpa-lang-label\">Sauna + sun terrace</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> A sauna, a fitness centre, a sun terrace and a coffee shop."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€119 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 9.0/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🏛️ <span class=\"bpa-lang-label\">Grand Boulevard</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> On József körút, 900 ft from Blaha Lujza tér."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the best breakfast on this page and a sauna, at €119",
+    "skip_html": "if you want the old town on your doorstep: it is 0.7 miles from downtown"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1085 Budapest, 16 József körút (District VIII); 800 ft walk to Rákóczi tér metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it exceptional; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Sauna."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM to 12:00 AM; check-out until From 12:00 AM to 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Blaha Lujza Square (900 ft), Hungarian National Museum (0.7 mi), Museum of Applied Arts (0.7 mi)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€119",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.1/10 guest score",
+      "price": "€119"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-est-grand-savoy&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fest-grand-savoy.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.1/10</b> from 4,297 reviews",
+     "<b>Location</b> rated 9/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-5-est-grand-hotel-savoy",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #6: Emerald Hotel by Continental Group -->\n",
+   "id": "card-6",
+   "cats": [
+    "wellness",
+    "central",
+    "parking"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🛍️ #6 Best Next to Váci Utca",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Emerald Hotel by Continental Group"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-4-star-hotels-budapest/06-emerald-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Hotel by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/06-emerald-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Hotel by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/06-emerald-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Hotel by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/06-emerald-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Hotel by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/06-emerald-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Hotel by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/06-emerald-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Hotel by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/06-emerald-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Hotel by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/06-emerald-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Hotel by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/06-emerald-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Hotel by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/06-emerald-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-4-star-hotels-budapest/06-emerald-01.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/06-emerald-02.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/06-emerald-03.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/06-emerald-04.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/06-emerald-05.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/06-emerald-06.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/06-emerald-07.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/06-emerald-08.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/06-emerald-09.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/06-emerald-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9.2/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Emerald+Hotel+by+Continental+Group+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District V"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-emerald&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Femerald.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Emerald Hotel by Continental Group"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.70",
+     "score": "4.7",
+     "meta": "7.4k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.2",
+       "count": "(4.6k+)",
+       "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-emerald&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Femerald.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.8",
+       "count": "(1.2k+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.9",
+       "count": "(1.6k+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_4_star_hotels_budapest_emerald&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d23595417-Reviews-Emerald_Hotel_Suites-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 2:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 2:00 PM to 12:00 AM, check-out until From 3:00 AM to 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Vörösmarty tér</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 1,200 ft on foot to Vörösmarty tér station. Guests rate the location 9.8/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💆 <span class=\"bpa-lang-label\">Sauna + massage</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> A sauna and fitness centre; the listing includes free massage services."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Excellent</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast excellent. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€158 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 9.1/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🏙️ <span class=\"bpa-lang-label\">Downtown District V</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> On Városház utca, an 8-minute walk from St. Stephen's Basilica."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a 9.2-rated hotel in District V with a sauna and garage",
+    "skip_html": "if price matters: at €158 it is the most expensive here"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1052 Budapest, 20 Városház utca (District V); 1,200 ft walk to Vörösmarty tér metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it excellent; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Sauna."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 2:00 PM to 12:00 AM; check-out until From 3:00 AM to 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Anker-ház (1,400 ft), Dohány Utcai Zsinagóga (1,800 ft), Károlyi Garden (2,150 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€158",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.2/10 guest score",
+      "price": "€158"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-emerald&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Femerald.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.2/10</b> from 4,584 reviews",
+     "<b>Location</b> rated 9.8/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-6-emerald-hotel",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #7: Barceló Budapest -->\n",
+   "id": "card-7",
+   "cats": [
+    "central",
+    "parking"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "♿ #7 Most Accessible",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Barceló Budapest"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-4-star-hotels-budapest/07-barcelo-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Barceló Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/07-barcelo-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Barceló Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/07-barcelo-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Barceló Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/07-barcelo-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Barceló Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/07-barcelo-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Barceló Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/07-barcelo-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Barceló Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/07-barcelo-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Barceló Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/07-barcelo-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Barceló Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/07-barcelo-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Barceló Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/07-barcelo-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-4-star-hotels-budapest/07-barcelo-01.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/07-barcelo-02.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/07-barcelo-03.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/07-barcelo-04.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/07-barcelo-05.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/07-barcelo-06.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/07-barcelo-07.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/07-barcelo-08.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/07-barcelo-09.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/07-barcelo-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9.1/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Barceló+Budapest+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VI"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-barcelo&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbarcelo-budapest.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Barceló Budapest"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.62",
+     "score": "4.6",
+     "meta": "6.9k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.1",
+       "count": "(3.6k+)",
+       "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-barcelo&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbarcelo-budapest.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.7",
+       "count": "(2k+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.7",
+       "count": "(1.3k+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_4_star_hotels_budapest_barcelo_budapest&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d17513400-Reviews-Barcelo_Budapest-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM to 12:00 AM, check-out until 12:00 PM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Bajcsy-Zsilinszky út</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 1,250 ft on foot to Bajcsy-Zsilinszky út station. Guests rate the location 9.7/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-yes\">✓</span> listed as wheelchair accessible</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👨‍👩‍👧 <span class=\"bpa-lang-label\">Family + connecting rooms</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rooms:</strong> Superior and deluxe rooms, junior suites, family rooms and interconnected rooms."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Very good</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast very good. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€119 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.9/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🍸 <span class=\"bpa-lang-label\">Party-street edge</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> On Király utca, 800 ft from the Anker-ház and 1,250 ft from Andrássy Avenue."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a wheelchair-accessible 4-star with a garage, 0.1 miles from downtown",
+    "skip_html": "if you want a sauna or pool: only a gym is listed"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1061 Budapest, 16 Király utca (District VI); 1,250 ft walk to Bajcsy-Zsilinszky út metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it very good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM to 12:00 AM; check-out until 12:00 PM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Anker-ház (800 ft), Andrassy Avenue (1,250 ft), Opera House (1,750 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€119",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.1/10 guest score",
+      "price": "€119"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-barcelo&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbarcelo-budapest.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.1/10</b> from 3,571 reviews",
+     "<b>Location</b> rated 9.7/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-7-barcelo-budapest",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #8: Ambra Hotel -->\n",
+   "id": "card-8",
+   "cats": [
+    "wellness",
+    "central",
+    "parking",
+    "value"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "☕ #8 Best Budget Pick by the Opera",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Ambra Hotel"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-4-star-hotels-budapest/08-ambra-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Ambra Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/08-ambra-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Ambra Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/08-ambra-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Ambra Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/08-ambra-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Ambra Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/08-ambra-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Ambra Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/08-ambra-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Ambra Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/08-ambra-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Ambra Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/08-ambra-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Ambra Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/08-ambra-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Ambra Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-4-star-hotels-budapest/08-ambra-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-4-star-hotels-budapest/08-ambra-01.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/08-ambra-02.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/08-ambra-03.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/08-ambra-04.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/08-ambra-05.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/08-ambra-06.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/08-ambra-07.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/08-ambra-08.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/08-ambra-09.avif"
+     },
+     {
+      "src": "/assets/best-4-star-hotels-budapest/08-ambra-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9.1/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Ambra+Hotel+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-ambra&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fambra.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Ambra Hotel"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.56",
+     "score": "4.6",
+     "meta": "6.5k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.1",
+       "count": "(3.5k+)",
+       "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-ambra&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fambra.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.7",
+       "count": "(990+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.5",
+       "count": "(2k+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_4_star_hotels_budapest_ambra&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d276356-Reviews-Ambra_Hotel-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM to 12:00 AM, check-out until From 1:00 AM to 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Opera</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 1,150 ft on foot to Opera station. Guests rate the location 9.5/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧖 <span class=\"bpa-lang-label\">Sauna + massage</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> A sauna and massage services; free coffee and tea at the bar all afternoon."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚗 <span class=\"bpa-lang-label\">Garage (size limits)</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Parking:</strong> A garage for cars up to 6.6 ft high and wide, 17 ft long and 2,000 kg."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€89 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 9.1/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🎭 <span class=\"bpa-lang-label\">Opera quarter</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> On Kis Diófa utca, 656 ft from the Opera House and Andrássy Avenue."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a 9.1-rated 4-star by the Opera for €89, with a sauna and free afternoon coffee",
+    "skip_html": "if you drive a large car: the garage has size limits"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1077 Budapest, Kis Diófa u. 13 (District VII); 1,150 ft walk to Opera metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it very good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Sauna."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM to 12:00 AM; check-out until From 1:00 AM to 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Opera House (1,150 ft), Anker-ház (2,150 ft), Andrassy Avenue (2,200 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€89",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.1/10 guest score",
+      "price": "€89"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-4-star-hotels-budapest-ambra&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fambra.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.1/10</b> from 3,526 reviews",
+     "<b>Location</b> rated 9.5/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-8-ambra-hotel",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}
