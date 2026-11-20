@@ -124,7 +124,7 @@ def kicker_html(it):
 
 
 def card_html(n, it, gyg_icon):
-    pills = "\n".join(pill_html(p) for p in it["pills"][:4])
+    pills = "\n".join(pill_html(p) for p in it["pills"][:8])
     was = ""
     if it.get("price_was") and float(it["price_was"]) > float(it["price"]):
         pct = round((1 - float(it["price"]) / float(it["price_was"])) * 100)
