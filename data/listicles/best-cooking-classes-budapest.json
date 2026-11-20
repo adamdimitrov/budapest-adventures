@@ -1,0 +1,2122 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["fullmenu", "market"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Overall",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Hungarian Cooking Class with Historic Market Walk"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Cooking Class with Historic Market Walk"],
+      ["data-src", "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Cooking Class with Historic Market Walk"],
+      ["data-src", "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Cooking Class with Historic Market Walk"],
+      ["data-src", "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Cooking Class with Historic Market Walk"],
+      ["data-src", "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Cooking Class with Historic Market Walk"],
+      ["data-src", "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Cooking Class with Historic Market Walk"],
+      ["data-src", "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Cooking Class with Historic Market Walk"],
+      ["data-src", "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Cooking Class with Historic Market Walk"],
+      ["data-src", "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Cooking Class with Historic Market Walk"],
+      ["data-src", "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-01.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-02.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-03.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-04.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-05.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-06.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-07.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-08.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-09.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/01-foodapest-market-cooking-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Apartment cooking studio",
+    "⏱️ 3–4 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Central+Market+Hall+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Central Market Hall"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-market-tour-cooking-class-with-locals-tastings-t497653/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Hungarian Cooking Class with Historic Market Walk"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.98",
+     "score": "5.0",
+     "meta": "195 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(195)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-market-tour-cooking-class-with-locals-tastings-t497653/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🛒 <span class=\"bpa-lang-label\">Central Market Hall</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Market part:</strong> A guided walk through Budapest's historic Central Market Hall, tasting local treats and buying fresh seasonal ingredients, then on to the nearby apartment-style kitchen. An Evening Cooking Class option skips the market."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍲 <span class=\"bpa-lang-label\">Main + dessert</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What you cook:</strong> A traditional Hungarian main course and a dessert from simple family recipes. Dishes change slightly with what is fresh and in season, and you eat them together around one table."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍷 <span class=\"bpa-lang-label\">Wine &amp; pálinka</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Drinks:</strong> A welcome shot of pálinka, wine pairing during the class and a Hungarian spirit tasting. Non-drinkers get a non-alcoholic substitute."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧀 <span class=\"bpa-lang-label\">Cold cuts &amp; pickles</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>While you cook:</strong> Welcome tastings of Hungarian cold cuts, cheeses and pickles, and you go home with a recipe booklet and a vintage postcard."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the most complete food experience for the money: market walk, a main and dessert, cold cuts, wine and pálinka for €90, about €22–30 an hour.",
+    "skip_html": "if you have coeliac disease: the kitchen cannot rule out cross-contamination."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Depends on the option you choose (market or evening class), shown when you check availability."
+     },
+     {
+      "q": "What is included?",
+      "a": "Central Market Hall tour, hands-on class with a local English-speaking chef, all ingredients, cold cuts, cheeses and pickles, main course and dessert, wine pairing and spirit tasting, recipe booklet, vintage postcard."
+     },
+     {
+      "q": "Can I eat vegetarian or gluten-free?",
+      "a": "Tell them about restrictions beforehand; coeliac disease cannot be accommodated."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Menu shifts with the season, no fixed dish list. Cannot cater for coeliac disease. Meeting point depends on the option you pick."
+     },
+     {
+      "q": "Why pick it?",
+      "a": "Market walk and cooking class in one booking. Main course and dessert, eaten family-style. Wine pairing and spirit tasting included."
+     }
+    ]
+   },
+   "price": {
+    "main": "€90",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "3–4 hours",
+      "price": "€90"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-market-tour-cooking-class-with-locals-tastings-t497653/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-1-market-walk-hungarian-cooking-class",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: Budapest: Traditional Chimney Cake (kürtőskalács) Workshop -->\n",
+   "id": "card-2",
+   "cats": ["chimney", "under50"],
+   "gallery": {
+    "rank": {
+     "text": "🥈 #2 Best Value",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Traditional Chimney Cake (kürtőskalács) Workshop"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Traditional Chimney Cake (kürtőskalács) Workshop"],
+      ["data-src", "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Traditional Chimney Cake (kürtőskalács) Workshop"],
+      ["data-src", "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Traditional Chimney Cake (kürtőskalács) Workshop"],
+      ["data-src", "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Traditional Chimney Cake (kürtőskalács) Workshop"],
+      ["data-src", "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Traditional Chimney Cake (kürtőskalács) Workshop"],
+      ["data-src", "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Traditional Chimney Cake (kürtőskalács) Workshop"],
+      ["data-src", "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Traditional Chimney Cake (kürtőskalács) Workshop"],
+      ["data-src", "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Traditional Chimney Cake (kürtőskalács) Workshop"],
+      ["data-src", "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Traditional Chimney Cake (kürtőskalács) Workshop"],
+      ["data-src", "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-01.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-02.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-03.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-04.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-05.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-06.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-07.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-08.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-09.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/02-chimney-cake-ipar-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Kürtőskalács studio",
+    "⏱️ 65 minutes",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Ipar+utca+11+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Ipar utca, District IX"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Traditional Chimney Cake (kürtőskalács) Workshop"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.87",
+     "score": "4.9",
+     "meta": "1.7k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(1.7k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥐 <span class=\"bpa-lang-label\">1 chimney cake</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>You make:</strong> One full chimney cake: you roll the dough into strips, wrap it around a wooden spindle, brush it with sugar and bake it in the rotating oven until it caramelises."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⏱️ <span class=\"bpa-lang-label\">45 + 20 min</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Timing:</strong> 45 minutes of hands-on workshop, then 20 minutes with your cake and coffee or tea. The dough needs about 75 minutes to rise, so it is ready for you on arrival."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍫 <span class=\"bpa-lang-label\">4 toppings</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Toppings:</strong> Cinnamon sugar, vanilla, cocoa or walnut. The studio uses wheat, orange, milk, nuts and coconut in a small shared space, so skip it if you have any of those allergies."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👨‍👩‍👧 <span class=\"bpa-lang-label\">Family-friendly</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Kids:</strong> Built for families, couples and small groups; 1 adult is required for every 4 children. Everyone gets a certificate of completion."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the cheapest hands-on taste of Hungary: €20 for an hour of rolling, baking and eating your own kürtőskalács.",
+    "skip_html": "if you want to learn the dough itself: it is pre-prepared, so book #9 for dough from scratch."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Ipar u. 11, 1095 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Hands-on workshop, all ingredients and tools, apron, 1 freshly baked chimney cake, toppings, coffee or tea, certificate of completion."
+     },
+     {
+      "q": "How do I get there?",
+      "a": "About 15 minutes from the city centre by public transport."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Dough is pre-prepared, not made from scratch. 1 cake per person (Kató Néni gives you 3). About 15 minutes from the centre by public transport."
+     },
+     {
+      "q": "Why pick it?",
+      "a": "Cheapest class on the list. Ingredients, tools, apron and coffee or tea included. Family-friendly, 1 adult per 4 children."
+     }
+    ]
+   },
+   "price": {
+    "main": "€20",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "65 minutes",
+      "price": "€20"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€24</s>"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-2-chimney-cake-workshop-65-min",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #3: Chefparade Cooking School: Hungarian menu -->\n",
+   "id": "card-3",
+   "cats": ["fullmenu", "goulash"],
+   "gallery": {
+    "rank": {
+     "text": "🥉 #3 Best Cooking School",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      ["alt", "Chefparade Cooking School: Hungarian menu"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-cooking-classes-budapest/03-chefparade-menu-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Chefparade Cooking School: Hungarian menu"],
+      ["data-src", "/assets/best-cooking-classes-budapest/03-chefparade-menu-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Chefparade Cooking School: Hungarian menu"],
+      ["data-src", "/assets/best-cooking-classes-budapest/03-chefparade-menu-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Chefparade Cooking School: Hungarian menu"],
+      ["data-src", "/assets/best-cooking-classes-budapest/03-chefparade-menu-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Chefparade Cooking School: Hungarian menu"],
+      ["data-src", "/assets/best-cooking-classes-budapest/03-chefparade-menu-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Chefparade Cooking School: Hungarian menu"],
+      ["data-src", "/assets/best-cooking-classes-budapest/03-chefparade-menu-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Chefparade Cooking School: Hungarian menu"],
+      ["data-src", "/assets/best-cooking-classes-budapest/03-chefparade-menu-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Chefparade Cooking School: Hungarian menu"],
+      ["data-src", "/assets/best-cooking-classes-budapest/03-chefparade-menu-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Chefparade Cooking School: Hungarian menu"],
+      ["data-src", "/assets/best-cooking-classes-budapest/03-chefparade-menu-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Chefparade Cooking School: Hungarian menu"],
+      ["data-src", "/assets/best-cooking-classes-budapest/03-chefparade-menu-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-cooking-classes-budapest/03-chefparade-menu-01.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/03-chefparade-menu-02.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/03-chefparade-menu-03.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/03-chefparade-menu-04.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/03-chefparade-menu-05.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/03-chefparade-menu-06.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/03-chefparade-menu-07.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/03-chefparade-menu-08.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/03-chefparade-menu-09.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/03-chefparade-menu-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Chefparade",
+    "⏱️ 3 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Chefparade+Páva+utca+13+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Chefparade, Páva utca"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/chefparade-cooking-school_-hungarian-menu-t158975/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Chefparade Cooking School: Hungarian menu"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.88",
+     "score": "4.9",
+     "meta": "26 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(26)",
+       "url": "https://www.getyourguide.com/budapest-l29/chefparade-cooking-school_-hungarian-menu-t158975/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍲 <span class=\"bpa-lang-label\">3 courses</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What you cook:</strong> A traditional 3-course Hungarian meal from scratch. You select your preferred dishes, and the options can include goulash soup and chicken paprikash."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌶️ <span class=\"bpa-lang-label\">Paprika lesson</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Technique:</strong> A local chef explains the flavours and techniques behind Hungarian cooking, including the famous paprika. Recipes come home in a colourful printed booklet."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥃 <span class=\"bpa-lang-label\">Pálinka &amp; wine</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Drinks:</strong> Soft drinks, coffee, tea and a pálinka tasting during the class, then lunch with wine."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👥 <span class=\"bpa-lang-label\">Max 10</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Group size:</strong> Limited to 10 people. The venue can vary (Páva utca 13 or Bécsi út 27), and the exact address is emailed after booking. No transfers."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a proper cooking-school class with goulash or paprikash on the menu: 3 courses, pálinka and lunch with wine in 3 hours for €105.",
+    "skip_html": "if you want a market visit as well: #7 adds one, from the same school, for €40 more."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Páva u. 13, 1094 Budapest, or Bécsi út 27 (confirmed by email after booking)."
+     },
+     {
+      "q": "What is included?",
+      "a": "Ingredients, utensils, aprons, recipes, soft drinks, coffee, tea, pálinka tasting, lunch with wine."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Pickup and drop-off."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Max 10."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "About €35 an hour, more than Chef Marti's 3-course class. Venue address can change, confirmed by email. No pickup or drop-off."
+     }
+    ]
+   },
+   "price": {
+    "main": "€105",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "3 hours",
+      "price": "€105"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/chefparade-cooking-school_-hungarian-menu-t158975/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-3-chefparade-3-course-hungarian-menu",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: Budapest Authentic 3-Course Hungarian Cooking Class &amp; Wine -->\n",
+   "id": "card-4",
+   "cats": ["fullmenu", "goulash"],
+   "gallery": {
+    "rank": {
+     "text": "#4 Best Home-Kitchen Feast",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest Authentic 3-Course Hungarian Cooking Class & Wine"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest Authentic 3-Course Hungarian Cooking Class & Wine"],
+      ["data-src", "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Authentic 3-Course Hungarian Cooking Class & Wine"],
+      ["data-src", "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Authentic 3-Course Hungarian Cooking Class & Wine"],
+      ["data-src", "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Authentic 3-Course Hungarian Cooking Class & Wine"],
+      ["data-src", "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Authentic 3-Course Hungarian Cooking Class & Wine"],
+      ["data-src", "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Authentic 3-Course Hungarian Cooking Class & Wine"],
+      ["data-src", "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Authentic 3-Course Hungarian Cooking Class & Wine"],
+      ["data-src", "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Authentic 3-Course Hungarian Cooking Class & Wine"],
+      ["data-src", "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Authentic 3-Course Hungarian Cooking Class & Wine"],
+      ["data-src", "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-01.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-02.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-03.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-04.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-05.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-06.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-07.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-08.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-09.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/04-chef-marti-3-course-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Flavours of Budapest",
+    "⏱️ 4 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Király+utca+77+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Király utca, District VII"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/premium-hungarian-home-cooking-class-with-chef-marti-t63909/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest Authentic 3-Course Hungarian Cooking Class &amp; Wine"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "5.00",
+     "score": "5.0",
+     "meta": "18 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(18)",
+       "url": "https://www.getyourguide.com/budapest-l29/premium-hungarian-home-cooking-class-with-chef-marti-t63909/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📋 <span class=\"bpa-lang-label\">3 set menus</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Pick a menu:</strong> A: cold sour cherry soup, chicken paprikash with dumplings, Gundel pancake. B: goulash soup, Hortobágyi meat pancake, apple strudel. C: potato soup with smoked sausage, stuffed cabbage, poppy-seed bread dumplings. The first guest to book chooses for the group."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👥 <span class=\"bpa-lang-label\">Max 8</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Group size:</strong> Limited to 8 people in the chef's cosy studio flat in central Budapest. Everyone cooks the same menu from start to finish."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍷 <span class=\"bpa-lang-label\">Wine included</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Drinks:</strong> A welcome drink, 200 ml of Hungarian wine, mineral water and homemade soft drinks, plus Hungarian bites to taste while you cook."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€27 an hour</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price maths:</strong> 4 hours and 3 courses for €109, the lowest price per hour of the 3-course classes. Tips and hotel pickup are not included."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the biggest menu in a small group: 3 courses for up to 8 people, with goulash, paprikash or stuffed cabbage as the main, at about €27 an hour.",
+    "skip_html": "if you are travelling with under-10s or need step-free access: it is not suitable for either."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Király u. 77, 1077 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "3-course menu (soup, main, dessert), Hungarian bites, all ingredients and equipment, chef's guidance, recipes in English, welcome drink, 200 ml wine, mineral water, homemade soft drinks."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Hotel pickup and drop-off, tips."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Max 8."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "First guest to book picks the menu. Not suitable for under-10s or limited mobility. Tips and pickup not included."
+     }
+    ]
+   },
+   "price": {
+    "main": "€109",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "4 hours",
+      "price": "€109"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/premium-hungarian-home-cooking-class-with-chef-marti-t63909/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-4-chef-marti-3-course-home-cooking-class",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: Budapest: Hungarian Chimney Cake Workshop in the City Centre -->\n",
+   "id": "card-5",
+   "cats": ["chimney", "under50"],
+   "gallery": {
+    "rank": {
+     "text": "#5 Best Chimney Cake in the Centre",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Hungarian Chimney Cake Workshop in the City Centre"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Chimney Cake Workshop in the City Centre"],
+      ["data-src", "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Chimney Cake Workshop in the City Centre"],
+      ["data-src", "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Chimney Cake Workshop in the City Centre"],
+      ["data-src", "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Chimney Cake Workshop in the City Centre"],
+      ["data-src", "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Chimney Cake Workshop in the City Centre"],
+      ["data-src", "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Chimney Cake Workshop in the City Centre"],
+      ["data-src", "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Chimney Cake Workshop in the City Centre"],
+      ["data-src", "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Chimney Cake Workshop in the City Centre"],
+      ["data-src", "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Chimney Cake Workshop in the City Centre"],
+      ["data-src", "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-01.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-02.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-03.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-04.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-05.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-06.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-07.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-08.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-09.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/05-kato-neni-chimney-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Kató Néni Finomságai",
+    "⏱️ 1 hour",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Kató+Néni+Finomságai+Október+6+utca+6+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Október 6. utca, near the Basilica"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-hungarian-chimney-cake-workshop-in-the-city-centre-t352286/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Hungarian Chimney Cake Workshop in the City Centre"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.76",
+     "score": "4.8",
+     "meta": "1.6k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(1.6k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-hungarian-chimney-cake-workshop-in-the-city-centre-t352286/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥐 <span class=\"bpa-lang-label\">3 chimney cakes</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>You make:</strong> 3 cakes each, about <strong>€11 a cake</strong>: you shape, bake and season them yourself, watching the sugar caramelise into a crispy golden crust, then coat them in sugar, coconut or cinnamon."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⛪ <span class=\"bpa-lang-label\">Near the Basilica</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Location:</strong> Kató Néni Finomságai Downtown at Október 6. utca 6, in District V near the Basilica. Luggage and large bags are not allowed."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "☕ <span class=\"bpa-lang-label\">Coffee &amp; water</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Afterwards:</strong> Sit down in the café to eat your cakes with coffee or water, or take them away in the bags provided."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📜 <span class=\"bpa-lang-label\">Secret recipe</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Take home:</strong> The house recipe and a certificate of completion with your name. Not suitable for children under 5 or people with mobility impairments."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the most chimney cake per euro in the centre: 3 cakes in 1 hour for €33, a short walk from the Basilica.",
+    "skip_html": "if you have children under 5 or need step-free access."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Kató Néni Finomságai Downtown, Október 6. u. 6, 1051 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "3 chimney cakes, coffee or water, trained host, all ingredients and utensils, certificate of completion, recipe, takeaway bags."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Hotel pickup and drop-off."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "€13 more than the Ipar utca workshop. Not for under-5s or limited mobility. No luggage or large bags."
+     },
+     {
+      "q": "Why pick it?",
+      "a": "3 cakes per person. Central, near the Basilica. Coffee or water and takeaway bags included."
+     }
+    ]
+   },
+   "price": {
+    "main": "€33",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1 hour",
+      "price": "€33"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€41</s>"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-hungarian-chimney-cake-workshop-in-the-city-centre-t352286/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-5-kat-n-ni-make-3-chimney-cakes",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #6: Budapest Home Cooking: Goulash and Crêpes with Locals -->\n",
+   "id": "card-6",
+   "cats": ["fullmenu", "goulash"],
+   "gallery": {
+    "rank": {
+     "text": "#6 Best for Goulash",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest Home Cooking: Goulash and Crêpes with Locals"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest Home Cooking: Goulash and Crêpes with Locals"],
+      ["data-src", "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Home Cooking: Goulash and Crêpes with Locals"],
+      ["data-src", "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Home Cooking: Goulash and Crêpes with Locals"],
+      ["data-src", "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Home Cooking: Goulash and Crêpes with Locals"],
+      ["data-src", "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Home Cooking: Goulash and Crêpes with Locals"],
+      ["data-src", "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Home Cooking: Goulash and Crêpes with Locals"],
+      ["data-src", "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Home Cooking: Goulash and Crêpes with Locals"],
+      ["data-src", "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Home Cooking: Goulash and Crêpes with Locals"],
+      ["data-src", "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Home Cooking: Goulash and Crêpes with Locals"],
+      ["data-src", "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-01.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-02.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-03.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-04.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-05.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-06.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-07.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-08.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-09.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/06-goulash-family-kitchen-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Family home kitchen",
+    "⏱️ 2.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Ördögárok+utca+14+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Hűvösvölgy, Buda hills"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-goulash-pancake-class-in-a-family-kitchen-t1214126/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest Home Cooking: Goulash and Crêpes with Locals"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "5.00",
+     "score": "5.0",
+     "meta": "6 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(6)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-goulash-pancake-class-in-a-family-kitchen-t1214126/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥘 <span class=\"bpa-lang-label\">Goulash + csipetke</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What you cook:</strong> Gulyásleves the proper way: why the order of ingredients matters, how to use different Hungarian paprikas, and how to pinch csipetke, the hand-made pasta bits that give the soup its texture."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥞 <span class=\"bpa-lang-label\">Palacsinta</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Dessert:</strong> Paper-thin Hungarian pancakes you flip yourself, filled with apricot jam or vanilla cottage cheese. Warm pogácsa, the savoury Hungarian scone, comes first."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👥 <span class=\"bpa-lang-label\">Max 8</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Group size:</strong> A small group of 6 to 8 guests at most, in a private family home. Hosted in English, German or Hungarian."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚋 <span class=\"bpa-lang-label\">Tram ride</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting there:</strong> From Széll Kálmán tér take tram 56, 56A or 61 to the Hűvösvölgy terminus, a 15–20 minute ride into the Buda hills, then walk to Ördögárok utca 14."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for learning real goulash with hand-pinched csipetke in a family home, plus palacsinta, in 2.5 hours for €96.",
+    "skip_html": "if you want to stay central: the home is a 15–20 minute tram ride into the Buda hills."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Ördögárok u. 14, 1029 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "2.5-hour hands-on workshop, goulash, Hungarian pancakes with fillings, Hungarian wine or non-alcoholic drinks, coffee, recipe booklet."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, German, Hungarian."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Max 8."
+     },
+     {
+      "q": "How do I get there?",
+      "a": "Tram 56, 56A or 61 from Széll Kálmán tér to Hűvösvölgy, then a short walk."
+     }
+    ]
+   },
+   "price": {
+    "main": "€96",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2.5 hours",
+      "price": "€96"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€120</s>"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-goulash-pancake-class-in-a-family-kitchen-t1214126/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-6-goulash-palacsinta-in-a-family-kitchen",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #7: Budapest: Cooking School – Hungarian Menu &amp; Local Market -->\n",
+   "id": "card-7",
+   "cats": ["fullmenu", "market"],
+   "gallery": {
+    "rank": {
+     "text": "#7 Best Market + 3 Courses",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Cooking School – Hungarian Menu & Local Market"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-cooking-classes-budapest/07-chefparade-market-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Cooking School – Hungarian Menu & Local Market"],
+      ["data-src", "/assets/best-cooking-classes-budapest/07-chefparade-market-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Cooking School – Hungarian Menu & Local Market"],
+      ["data-src", "/assets/best-cooking-classes-budapest/07-chefparade-market-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Cooking School – Hungarian Menu & Local Market"],
+      ["data-src", "/assets/best-cooking-classes-budapest/07-chefparade-market-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Cooking School – Hungarian Menu & Local Market"],
+      ["data-src", "/assets/best-cooking-classes-budapest/07-chefparade-market-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Cooking School – Hungarian Menu & Local Market"],
+      ["data-src", "/assets/best-cooking-classes-budapest/07-chefparade-market-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Cooking School – Hungarian Menu & Local Market"],
+      ["data-src", "/assets/best-cooking-classes-budapest/07-chefparade-market-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Cooking School – Hungarian Menu & Local Market"],
+      ["data-src", "/assets/best-cooking-classes-budapest/07-chefparade-market-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Cooking School – Hungarian Menu & Local Market"],
+      ["data-src", "/assets/best-cooking-classes-budapest/07-chefparade-market-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Cooking School – Hungarian Menu & Local Market"],
+      ["data-src", "/assets/best-cooking-classes-budapest/07-chefparade-market-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-cooking-classes-budapest/07-chefparade-market-01.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/07-chefparade-market-02.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/07-chefparade-market-03.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/07-chefparade-market-04.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/07-chefparade-market-05.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/07-chefparade-market-06.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/07-chefparade-market-07.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/07-chefparade-market-08.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/07-chefparade-market-09.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/07-chefparade-market-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Chefparade",
+    "⏱️ 4 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Vámház+körút+2+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Vámház körút market meeting point"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/hungarian-cooking-class-and-market-hall-tour-in-budapest-t136322/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Cooking School – Hungarian Menu &amp; Local Market"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "5.00",
+     "score": "5.0",
+     "meta": "7 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(7)",
+       "url": "https://www.getyourguide.com/budapest-l29/hungarian-cooking-class-and-market-hall-tour-in-budapest-t136322/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🛒 <span class=\"bpa-lang-label\">Market tour</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Market part:</strong> A guided visit to a local market hall with its history, an introduction to basic Hungarian ingredients and a small platter of appetisers such as kolbász and körözött. Transfer to the school is included."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍲 <span class=\"bpa-lang-label\">3-course lunch</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What you cook:</strong> A traditional 3-course Hungarian meal, cooked hands-on in a well-equipped cookery school and eaten as lunch. Classes run in the morning."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥃 <span class=\"bpa-lang-label\">Pálinka &amp; Unicum</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Drinks:</strong> A fruity pálinka on arrival, Unicum before lunch, a glass of wine with the meal, and unlimited soft drinks, coffee and tea."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👥 <span class=\"bpa-lang-label\">Max 10</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Group size:</strong> Limited to 10 people. Meet at Vámház körút 2 (at the Burger King). For dietary needs, contact the school and they will plan a suitable menu."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a morning that covers the market, 3 courses, pálinka and Unicum in one booking.",
+    "skip_html": "if budget matters: at €145 it is the most expensive class here, €40 more than the same school's class without the market."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Vámház krt. 2, 1052 Budapest (at the Burger King)."
+     },
+     {
+      "q": "What is included?",
+      "a": "Guided market tour, appetiser tasting, transfer to the school, 3-course lunch, unlimited soft drinks, coffee and tea, aprons, a glass of wine with lunch, recipes."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Max 10."
+     },
+     {
+      "q": "How long is it?",
+      "a": "Mornings, finishing with lunch."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Most expensive class on the list. Morning only. Only one glass of wine with lunch."
+     }
+    ]
+   },
+   "price": {
+    "main": "€145",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "4 hours",
+      "price": "€145"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/hungarian-cooking-class-and-market-hall-tour-in-budapest-t136322/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-7-chefparade-market-tour-3-course-lunch",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #8: Budapest Authentic Cosy Hungarian Cooking Class with Wine -->\n",
+   "id": "card-8",
+   "cats": ["goulash"],
+   "gallery": {
+    "rank": {
+     "text": "#8 Best Short Class",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest Authentic Cosy Hungarian Cooking Class with Wine"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-cooking-classes-budapest/08-chef-marti-one-dish-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest Authentic Cosy Hungarian Cooking Class with Wine"],
+      ["data-src", "/assets/best-cooking-classes-budapest/08-chef-marti-one-dish-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Authentic Cosy Hungarian Cooking Class with Wine"],
+      ["data-src", "/assets/best-cooking-classes-budapest/08-chef-marti-one-dish-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Authentic Cosy Hungarian Cooking Class with Wine"],
+      ["data-src", "/assets/best-cooking-classes-budapest/08-chef-marti-one-dish-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Authentic Cosy Hungarian Cooking Class with Wine"],
+      ["data-src", "/assets/best-cooking-classes-budapest/08-chef-marti-one-dish-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Authentic Cosy Hungarian Cooking Class with Wine"],
+      ["data-src", "/assets/best-cooking-classes-budapest/08-chef-marti-one-dish-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Authentic Cosy Hungarian Cooking Class with Wine"],
+      ["data-src", "/assets/best-cooking-classes-budapest/08-chef-marti-one-dish-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-cooking-classes-budapest/08-chef-marti-one-dish-01.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/08-chef-marti-one-dish-02.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/08-chef-marti-one-dish-03.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/08-chef-marti-one-dish-04.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/08-chef-marti-one-dish-05.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/08-chef-marti-one-dish-06.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/08-chef-marti-one-dish-07.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Flavours of Budapest",
+    "⏱️ 2.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Király+utca+77+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Király utca, District VII"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-hungarian-home-cooking-experience-with-chef-marti-t64203/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest Authentic Cosy Hungarian Cooking Class with Wine"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "5.00",
+     "score": "5.0",
+     "meta": "9 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(9)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-hungarian-home-cooking-experience-with-chef-marti-t64203/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥘 <span class=\"bpa-lang-label\">1 dish, 4 choices</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Pick one:</strong> Goulash soup, chicken paprikash with small dumplings, stuffed cabbage or a Hortobágyi-style savoury meat crêpe."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧀 <span class=\"bpa-lang-label\">Farmer's plate</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>While you cook:</strong> Hungarian bites on a farmer's plate, with white and/or red wine, 2 homemade soft drinks and still or sparkling water."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👥 <span class=\"bpa-lang-label\">Max 10</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Group size:</strong> Limited to 10 in the chef's studio flat. Vegetarian, gluten-free, lactose-free and nut-allergy options on request."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€36 an hour</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price maths:</strong> €20 less than Chef Marti's 3-course class, but 1.5 hours shorter and 2 courses fewer, so the 4-hour class is better value if you have the time."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a shorter session with one classic dish such as goulash or paprikash, from the same chef as #4.",
+    "skip_html": "if you can spare 4 hours: the 3-course class (#4) costs only €20 more."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Király u. 77, 1077 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "One Hungarian dish from 4 options, farmer's plate, wine, 2 homemade soft drinks, mineral water, recipes and kitchen tips."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Max 10."
+     },
+     {
+      "q": "Can I eat vegetarian or gluten-free?",
+      "a": "Vegetarian, gluten-free, lactose-free and nut-allergy options on request."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "One dish only, no dessert. Higher price per hour than the 3-course version. Group of up to 10, bigger than the 3-course class."
+     }
+    ]
+   },
+   "price": {
+    "main": "€89",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2.5 hours",
+      "price": "€89"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-hungarian-home-cooking-experience-with-chef-marti-t64203/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-8-chef-marti-one-dish-class-2-5-h",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #9: Budapest: Chimney Cake Baking Class – More Flavours &amp; Drinks -->\n",
+   "id": "card-9",
+   "cats": ["chimney"],
+   "gallery": {
+    "rank": {
+     "text": "#9 Best From-Scratch Chimney Cake",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Chimney Cake Baking Class – More Flavours & Drinks"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Chimney Cake Baking Class – More Flavours & Drinks"],
+      ["data-src", "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Chimney Cake Baking Class – More Flavours & Drinks"],
+      ["data-src", "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Chimney Cake Baking Class – More Flavours & Drinks"],
+      ["data-src", "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Chimney Cake Baking Class – More Flavours & Drinks"],
+      ["data-src", "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Chimney Cake Baking Class – More Flavours & Drinks"],
+      ["data-src", "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Chimney Cake Baking Class – More Flavours & Drinks"],
+      ["data-src", "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Chimney Cake Baking Class – More Flavours & Drinks"],
+      ["data-src", "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Chimney Cake Baking Class – More Flavours & Drinks"],
+      ["data-src", "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Chimney Cake Baking Class – More Flavours & Drinks"],
+      ["data-src", "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-01.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-02.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-03.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-04.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-05.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-06.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-07.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-08.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-09.avif"
+     },
+     {
+      "src": "/assets/best-cooking-classes-budapest/09-cooking-hungary-chimney-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Cooking Hungary",
+    "⏱️ 1.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Hajós+utca+14+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Hajós utca, District VI"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-chimney-cake-baking-class-more-flavours-drinks-t64154/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Chimney Cake Baking Class – More Flavours &amp; Drinks"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "5.00",
+     "score": "5.0",
+     "meta": "4 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(4)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-chimney-cake-baking-class-more-flavours-drinks-t64154/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥐 <span class=\"bpa-lang-label\">2 full-size cakes</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>You make:</strong> 2 full-size chimney cakes each, with traditional dough thickness rather than mini versions. About <strong>€30 a cake</strong>."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧑‍🍳 <span class=\"bpa-lang-label\">Dough from scratch</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Technique:</strong> The only chimney cake workshop here where you make the dough yourself, plus tips for recreating it at home without special machines."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍹 <span class=\"bpa-lang-label\">Drinks included</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Extras:</strong> Drinks during the workshop, a recipe in English and a certificate of participation. Flavours include cinnamon, walnut, cocoa or vanilla."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⚠️ <span class=\"bpa-lang-label\">Min 8 guests</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Catch:</strong> The class needs at least 8 participants to run; if it does not fill, you get a full refund. Not suitable for children under 8."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for bakers who want to make chimney cake at home: dough from scratch and 2 full-size cakes in a professional studio.",
+    "skip_html": "if you just want a fun hour: #2 is a third of the price."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Hajós u. 14, 1065 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "2 full-size chimney cakes, dough from scratch, choice of flavours, chef's guidance, drinks, recipe in English, certificate of participation."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Hotel pickup and drop-off, tips."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "3x the price of the Ipar utca workshop. Needs 8 participants to run. Not suitable for under-8s."
+     },
+     {
+      "q": "Why pick it?",
+      "a": "Dough made from scratch. 2 full-size cakes each. Drinks included."
+     }
+    ]
+   },
+   "price": {
+    "main": "€60",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1.5 hours",
+      "price": "€60"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-chimney-cake-baking-class-more-flavours-drinks-t64154/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=cooking_classes_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-9-chimney-cake-from-scratch-with-drinks",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}
