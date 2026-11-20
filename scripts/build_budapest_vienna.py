@@ -499,6 +499,10 @@ def build():
         assert not hits, (bad, hits[:3])
     for t in re.findall(r'<a [^>]*href="https://www\.tourradar[^>]*>', s):
         assert 'rel="nofollow sponsored noopener"' in t and "utm_source=partner-traveller-1464745" in t, t
+    if 'href="/css/listicle-cards.css' in OUT.read_text():
+        # The page is on the shared listicle design now: cards come from data/listicles/budapest-vienna-river-cruises.json
+        # (scripts/listicle.py build). Rebuilding from the old template would undo that.
+        raise SystemExit("budapest-vienna-river-cruises.html is built from data/listicles/budapest-vienna-river-cruises.json; edit that instead")
     OUT.write_text(s)
     print("wrote", OUT.relative_to(ROOT), len(s))
 
