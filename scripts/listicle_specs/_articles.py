@@ -37,6 +37,20 @@ QUESTIONS = [
 ]
 
 
+# hotel pages (spec "kind": "hotels"): questions a hotel guest asks, in this order
+HOTEL_QUESTIONS = [
+    (("Location", "Address"), "Where exactly is it?"),
+    (("Breakfast",), "Is breakfast included?"),
+    (("Pool & spa", "Spa", "Pool"), "Is there a pool or spa?"),
+    (("Check-in",), "What are the check-in and check-out times?"),
+    (("Walk to", "Nearby"), "What is within walking distance?"),
+    (("Airport", "Getting there"), "How do I get there from the airport?"),
+    (("Parking",), "Is there parking?"),
+    (("Good to know", "Rules", "Children", "Pets"), "Anything to know before booking?"),
+    (("Cancellation",), "Can I cancel?"),
+]
+
+
 def sentence(v):
     v = v.strip()
     if not v:
@@ -55,8 +69,18 @@ def money(v):
     return f"€{v:.0f}" if v >= 10 or v == int(v) else f"€{v:.2f}"
 
 
-def faq_for(it):
+def faq_for(it, questions=None):
     facts = dict((k, v) for k, v in it.get("facts", []))
+    if questions is not None:
+        out = []
+        for keys, q in questions:
+            for k in keys:
+                if k in facts:
+                    out.append((q, esc(sentence(facts[k]))))
+                    break
+            if len(out) == 5:
+                break
+        return out
     out = []
     # the trust box already says the cancellation terms, and "English." alone is a weak answer:
     # those two only fill in when nothing better is left
@@ -93,7 +117,7 @@ def build(slug):
     page = {
         "noun": d.get("noun", "experiences"),
         "filter_aria": "Filter " + d.get("noun", "experiences"),
-        "filters": [{"label": "Type", "chips": [(f["cat"], f["label"]) for f in d["filters"]]}],
+        "filters": [{"label": d.get("filter_group", "Type"), "chips": [(f["cat"], f["label"]) for f in d["filters"]]}],
     }
     cards = {}
     for n, it in enumerate(d["items"], 1):
@@ -101,7 +125,7 @@ def build(slug):
                  "small": esc(it.get("duration", "")), "price": money(it["price"])}]
         if it.get("price_was"):
             rows.append({"label": "Regular price", "price": f"<s>{money(it['price_was'])}</s>"})
-        faq = faq_for(it)
+        faq = faq_for(it, HOTEL_QUESTIONS if d.get("kind") == "hotels" else None)
         if len(faq) != 5:
             raise SystemExit(f"{slug} card-{n}: only {len(faq)} questions from its facts")
         cards[f"card-{n}"] = {

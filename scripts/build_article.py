@@ -41,6 +41,19 @@ TIQETS_PARTNER = "thecruisedetective.com-176436"
 TIQETS_ICON = "/assets/cdn/652d0405192ba076b04f74a3/6852917a8b23e16d4296b394_tiqets-logo.avif"
 
 
+# Booking.com hotels via Travelpayouts (same long-link format as best-hostels-budapest)
+TP_MARKER, TP_TRS, TP_BOOKING_P, TP_BOOKING_CAMPAIGN = "404154", "204442", "2076", "84"
+BOOKING_ICON = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+
+
+def booking_link(url, sub):
+    """Travelpayouts deep link to a Booking.com hotel page; sub = the click's sub-id (page + hotel)."""
+    from urllib.parse import quote
+    u = url.split("?")[0]
+    return (f"https://tp.media/r?marker={TP_MARKER}.{sub}&trs={TP_TRS}&p={TP_BOOKING_P}"
+            f"&u={quote(u, safe='')}&campaign_id={TP_BOOKING_CAMPAIGN}")
+
+
 def tiqets_link(url, cmp):
     u = url.split("?")[0]
     return f"{u}?partner={TIQETS_PARTNER}&tq_campaign={cmp}"
@@ -95,10 +108,11 @@ def pill_html(p):
 def rating_html(it, gyg_icon):
     if not it.get("rating") or not it.get("reviews"):
         return '<div class="bpa-summary-reviews bpa-rate"><span class="bpa-rate-meta">New listing, no reviews yet</span></div>'
+    stars = it["rating"] / 2 if it.get("platform") == "booking" else it["rating"]
     return (f'<div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum">'
-            f'<span class="bpa-stars" style="--r:{it["rating"]:.2f}" aria-hidden="true"></span><b class="bpa-rate-score">{it["rating"]:.1f}</b>'
+            f'<span class="bpa-stars" style="--r:{stars:.2f}" aria-hidden="true"></span><b class="bpa-rate-score">{it["rating"]:.1f}</b>'
             f'<span class="bpa-rate-meta">{compact(it["reviews"])} reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary>'
-            f'<div class="bpa-lang-pop"><strong>Rating on {it["_pname"]}</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="{esc_attr(it["link"])}" rel="nofollow sponsored noopener" target="_blank">'
+            f'<div class="bpa-lang-pop"><strong>Rating on {it["_pname"]}{" (out of 10)" if it.get("platform") == "booking" else ""}</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="{esc_attr(it["link"])}" rel="nofollow sponsored noopener" target="_blank">'
             f'<img alt="{it["_pname"]}" class="bpa-rev-icon" loading="lazy" src="{it["_picon"]}"/><span class="bpa-rev-site">{it["_pname"]}</span>'
             f'<span class="bpa-rev-score">{it["rating"]:.1f}</span><span class="bpa-rev-count">({compact(it["reviews"])})</span>'
             f'<span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div>')
@@ -123,7 +137,7 @@ def slider_html(it, first_card):
 
 
 def kicker_html(it):
-    return (f'<div class="bpa-kicker">{E(it["operator"])} • ⏱️ {E(it["duration"])} • <a class="bpa-kicker-map-link" '
+    return (f'<div class="bpa-kicker">{E(it["operator"])} • {it.get("kicker_icon", "⏱️")} {E(it["duration"])} • <a class="bpa-kicker-map-link" '
             f'href="https://www.google.com/maps/search/?api=1&amp;query={esc_attr(it["map_q"].replace(" ", "+"))}" onclick="event.stopPropagation()" '
             f'rel="noopener noreferrer" target="_blank">📍 {E(it["place"])}</a></div>')
 
@@ -136,7 +150,8 @@ def card_html(n, it, gyg_icon):
     if it.get("price_was") and float(it["price_was"]) > float(it["price"]):
         pct = round((1 - float(it["price"]) / float(it["price_was"])) * 100)
         was = f'<div class="bpa-was"><s>{money(it["price_was"])}</s> <span>−{pct}%</span></div>\n'
-    trust = "".join(f"<span>✓ {E(t)}</span>" for t in it.get("trust", []))
+    # trust lines are text; a line that already carries <b> markup (hotel cards) is kept as HTML
+    trust = "".join(f"<span>✓ {t if '<b>' in t else E(t)}</span>" for t in it.get("trust", []))
     return f'''<!-- #{n}: {E(it["title"])} -->
 <div class="bpa-card" data-cat="{it["cat"]}" id="card-{n}">
 <div class="bpa-main">
@@ -175,7 +190,8 @@ def details_html(n, it, gyg_icon):
     review = "".join(f"<p>{p}</p>" for p in it["review"])
     perks = "".join(f'<span class="ltt-buy-perk">{p}</span>' for p in [
         "🛡️ " + E(it.get("cancel", "Free cancellation up to 24 hours before")),
-        f"📍 Start: <strong>{E(it['place'])}</strong>", f"⏱️ Duration: <strong>{E(it['duration'])}</strong>"])
+        f"📍 {it.get('place_label', 'Start')}: <strong>{E(it['place'])}</strong>",
+        f"{it.get('kicker_icon', '⏱️')} {it.get('duration_label', 'Duration')}: <strong>{E(it['duration'])}</strong>"])
     return f'''<details class="bpa-details-card" data-cat="{it["cat"]}" id="{it["anchor"]}" open="">
 <summary class="bpa-details-summary">
 <div class="bpa-details-summary-content">
@@ -305,7 +321,10 @@ def build(spec_path, photos):
     today_h = dt.date.today().strftime("%b %-d, %Y")
     for n, it in enumerate(spec["items"], 1):
         it.setdefault("anchor", f"item-{n}-" + re.sub(r"[^a-z0-9]+", "-", it["short_title"].lower()).strip("-")[:40])
-        if it.get("platform") == "tiqets":
+        if it.get("platform") == "booking":
+            if "tp.media" not in it["link"]:
+                it["link"] = booking_link(it["link"], f"{slug}-{it['photo_slug']}")
+        elif it.get("platform") == "tiqets":
             if "partner=" not in it["link"]:
                 it["link"] = tiqets_link(it["link"], spec.get("cmp", slug))
         elif not it["link"].startswith("http") or "partner_id" not in it["link"]:
@@ -315,9 +334,9 @@ def build(spec_path, photos):
     s = BeautifulSoup(raw, "html.parser")
     gyg_icon = s.select_one('img.bpa-rev-icon[alt="GetYourGuide"]')["src"]
     for it in spec["items"]:
-        tq = it.get("platform") == "tiqets"
-        it["_pname"] = "Tiqets" if tq else "GetYourGuide"
-        it["_picon"] = TIQETS_ICON if tq else gyg_icon
+        pf = it.get("platform", "gyg")
+        it["_pname"] = {"tiqets": "Tiqets", "booking": "Booking.com"}.get(pf, "GetYourGuide")
+        it["_picon"] = {"tiqets": TIQETS_ICON, "booking": BOOKING_ICON}.get(pf, gyg_icon)
     url = f"{SITE}/{slug}"
 
     # head
