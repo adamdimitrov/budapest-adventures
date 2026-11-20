@@ -10,6 +10,17 @@ Covers both Legenda menus on each page: the detail-section carte and the
 """
 import html, re, subprocess, sys
 
+def _read(path):
+    """The page with its shared CSS links unpacked into inline blocks (scripts/pagespeed.py), so the
+    <style id> blocks this script rewrites are where it expects them."""
+    import os as _os
+    _sys_path = _os.path.dirname(_os.path.abspath(__file__))
+    if _sys_path not in sys.path:
+        sys.path.insert(0, _sys_path)
+    import pagespeed
+    return pagespeed.unpack(open(path, encoding="utf-8").read())
+
+
 A = "/assets/best-dinner-cruises-budapest/legenda-menu/legenda-dinner-menu-"
 # Legenda candlelit menu, in menu order. None = no official photo (salmon, both soups).
 PHOTOS = {
@@ -97,7 +108,7 @@ def do_carte(blk, path):
 
 
 def process(path):
-    s = open(path, encoding="utf-8").read()
+    s = _read(path)
     starts = [m.start() for m in re.finditer(r'<div class="dc-carte on[^"]*"', s)]
     done = 0
     for a in reversed(starts):
@@ -144,7 +155,7 @@ if __name__ == "__main__":
     bad = 0
     for p in pages():
         new = process(p)
-        cur = open(p, encoding="utf-8").read()
+        cur = _read(p)
         if check:
             n = cur.count(f'class="dc-dish-photo" src="{A}')
             if n != 2 * N:
@@ -156,4 +167,6 @@ if __name__ == "__main__":
             open(p, "w", encoding="utf-8").write(new)
         if not check:
             print(p, new.count('class="dc-dish-photo"'))
+    if not check:
+        subprocess.run([sys.executable, "scripts/pagespeed.py"], check=True)  # shared CSS back into files
     sys.exit(1 if bad else 0)

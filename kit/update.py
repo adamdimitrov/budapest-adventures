@@ -33,7 +33,7 @@ import tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO_URL = "https://github.com/adamdimitrov/site-kit"
-NOT_SHIPPED = {".git", ".github", "tests", "__pycache__"}
+NOT_SHIPPED = {".git", ".github", "tests", "__pycache__", ".pytest_cache"}
 
 sys.path.insert(0, os.path.join(HERE, "checks"))
 from kittree import tree_sha256  # noqa: E402

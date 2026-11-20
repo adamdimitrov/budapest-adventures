@@ -66,6 +66,33 @@
   document.addEventListener('click', function(e) {
     if (!e.target.closest('.ltt-nav-dropdown')) drops.forEach(function(o) { setOpen(o, false); });
   });
+  // Keep every mega menu inside the screen, however many columns the menu data gives it:
+  // a menu that would stick out on the right (or left, in RTL) is moved in, and one wider
+  // than the screen is capped so its columns wrap. Runs now, after fonts load, on resize
+  // and before a menu opens. checks/check_menu_fit.py measures the result.
+  function fitMenus() {
+    var vw = document.documentElement.clientWidth, pad = 16, room = vw - 2 * pad;
+    drops.forEach(function(d) {
+      var m = d.querySelector('.ltt-mega-menu');
+      if (!m) return;
+      m.style.left = ''; m.style.right = ''; m.style.width = ''; m.style.flexWrap = '';
+      if (vw < 992) return;
+      var r = m.getBoundingClientRect();
+      if (r.width > room - 0.5 || m.scrollWidth > m.clientWidth + 1) {   // wider than the screen: full width, columns wrap
+        m.style.width = room + 'px'; m.style.flexWrap = 'wrap';
+        r = m.getBoundingClientRect();
+      }
+      var p = d.getBoundingClientRect();
+      var left = Math.min(Math.max(r.left, pad), vw - pad - r.width);
+      if (Math.abs(left - r.left) > 0.5) { m.style.left = (left - p.left) + 'px'; m.style.right = 'auto'; }
+    });
+  }
+  fitMenus();
+  window.addEventListener('resize', fitMenus);
+  window.addEventListener('load', fitMenus);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitMenus);
+  drops.forEach(function(d) { d.addEventListener('mouseenter', fitMenus); d.addEventListener('focusin', fitMenus); });
+
   // menu thumbnails load only once a menu is first opened
   var thumbsLoaded = false;
   function loadThumbs() {

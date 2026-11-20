@@ -70,7 +70,7 @@ def carte(tier, on, brand, h3, price, secs, foot, link, nveg):
 
 
 def tiers(tabs):
-    return '<div class="dc-tier" role="tablist">%s</div>' % "".join(
+    return '<div class="dc-tier" role="group" aria-label="Menu options">%s</div>' % "".join(
         '<button class="%s" data-t="%s" type="button">%s</button>' % ("on" if i == 0 else "", t, label)
         for i, (t, label) in enumerate(tabs))
 
