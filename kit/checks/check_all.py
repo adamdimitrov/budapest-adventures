@@ -24,6 +24,7 @@ KIT_CHECKS = [
     "kit/checks/check_listicle_layout.py",
     "kit/checks/check_gallery_clip.py",
     "kit/checks/check_photo_counts.py",
+    "kit/checks/check_pagespeed.py",
 ]
 
 
