@@ -1,0 +1,3180 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": [
+    "wellness",
+    "parking",
+    "value"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Aparthotel Overall",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Adina Apartment Hotel Budapest"
+      ],
+      [
+       "fetchpriority",
+       "high"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "eager"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-aparthotels-budapest/01-adina-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Adina Apartment Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/01-adina-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Adina Apartment Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/01-adina-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Adina Apartment Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/01-adina-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Adina Apartment Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/01-adina-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Adina Apartment Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/01-adina-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Adina Apartment Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/01-adina-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Adina Apartment Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/01-adina-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Adina Apartment Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/01-adina-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Adina Apartment Hotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/01-adina-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-aparthotels-budapest/01-adina-01.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/01-adina-02.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/01-adina-03.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/01-adina-04.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/01-adina-05.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/01-adina-06.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/01-adina-07.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/01-adina-08.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/01-adina-09.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/01-adina-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star aparthotel",
+    "🛏️ 9.3/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Adina+Apartment+Hotel+Budapest+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District XIII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-adina&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fsydneyapartment.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Adina Apartment Hotel Budapest"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.62",
+     "score": "4.6",
+     "meta": "2.9k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.3",
+       "count": "(1.2k+)",
+       "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-adina&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fsydneyapartment.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.6",
+       "count": "(800+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.6",
+       "count": "(860+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_aparthotels_budapest_sydneyapartment&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d285443-Reviews-Adina_Budapest-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM, check-out until 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Lehel tér</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 1,050 ft on foot to Lehel tér station. Guests rate the location 9/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Kitchen in the unit</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Kitchen:</strong> Every studio and apartment has a large bedroom and a kitchen or kitchenette; the valet service can stock the fridge before you arrive."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧖 <span class=\"bpa-lang-label\">Indoor pool + hot tub</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> A large indoor pool, a hot tub and a compact gym overlooking a leafy courtyard; massage on request."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€92 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults in the cheapest unit with a kitchen or kitchenette, 1 night on 10–11 March 2027. Guests rate value for money 9.1/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🌿 <span class=\"bpa-lang-label\">Quiet and residential</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A short walk from the Danube in District XIII, with a guest laundry and an underground car park."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a real apartment with a kitchen plus an indoor pool, at €92 a night with a 9.3 guest score",
+    "skip_html": "if you want to walk everywhere: it is 1.5 miles from downtown, near Lehel tér"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1133 Budapest, Hegedűs Gyula ut 52/B-54. (District XIII); 1,050 ft walk to Lehel tér metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Indoor pool, hot tub."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM; check-out until 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Alexandra Pódium (0.8 mi), Domonkos Kolostor és templom Romjai (0.9 mi), Olimpia Park (0.9 mi)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€92",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.3/10 guest score",
+      "price": "€92"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-adina&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fsydneyapartment.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.3/10</b> from 1,186 reviews",
+     "<b>Location</b> rated 9/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-1-adina-apartment-hotel-budapest",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: Florin Apart Hotel -->\n",
+   "id": "card-2",
+   "cats": [
+    "central",
+    "value"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🥈 #2 Best Value in the Centre",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Florin Apart Hotel"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-aparthotels-budapest/02-florin-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Florin Apart Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/02-florin-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Florin Apart Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/02-florin-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Florin Apart Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/02-florin-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Florin Apart Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/02-florin-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Florin Apart Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/02-florin-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Florin Apart Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/02-florin-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Florin Apart Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/02-florin-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Florin Apart Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/02-florin-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Florin Apart Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/02-florin-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-aparthotels-budapest/02-florin-01.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/02-florin-02.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/02-florin-03.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/02-florin-04.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/02-florin-05.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/02-florin-06.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/02-florin-07.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/02-florin-08.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/02-florin-09.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/02-florin-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "3-star aparthotel",
+    "🛏️ 9.1/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Florin+Apart+Hotel+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-florin&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fflorinhotel.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Florin Apart Hotel"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.56",
+     "score": "4.6",
+     "meta": "7.3k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.1",
+       "count": "(6.7k+)",
+       "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-florin&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fflorinhotel.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.7",
+       "count": "(590+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.4",
+       "count": "(59)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_aparthotels_budapest_florinhotel&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d26167143-Reviews-Florin_Apart_Hotel-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 2:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 2:00 PM, check-out until 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Astoria</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 1,350 ft on foot to Astoria station. Guests rate the location 9.7/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Kitchen in the unit</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Kitchen:</strong> Each apartment has a kitchen or kitchenette with a dining area; studios, one-bedroom and two-bedroom apartments."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚗 <span class=\"bpa-lang-label\">Parking needs a permit</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Parking:</strong> Private on-site parking costs extra and needs an access permit: email a photo of your car's registration at least 72 hours before arrival."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€76 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults in the cheapest unit with a kitchen or kitchenette, 1 night on 10–11 March 2027. Guests rate value for money 9.1/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🏙️ <span class=\"bpa-lang-label\">Right in the centre</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> On Károly körút, 700 ft from the Dohány Street Synagogue and 1,350 ft from Astoria metro."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the cheapest kitchen apartment in the centre, €76 a night, 500 ft from downtown with 6,700 reviews at 9.1",
+    "skip_html": "if you want a pool or spa: there is none"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1075 Budapest, Károly körút 9. (District VII); 1,350 ft walk to Astoria metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it very good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 2:00 PM; check-out until 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Dohány Utcai Zsinagóga (700 ft), Anker-ház (850 ft), Andrassy Avenue (1,650 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€76",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.1/10 guest score",
+      "price": "€76"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-florin&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fflorinhotel.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.1/10</b> from 6,700 reviews",
+     "<b>Location</b> rated 9.7/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-2-florin-apart-hotel",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #3: Emerald Downtown Luxury Suites by Continental Group -->\n",
+   "id": "card-3",
+   "cats": [
+    "central",
+    "wellness",
+    "parking"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🥉 #3 Best Location",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Emerald Downtown Luxury Suites by Continental Group"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-aparthotels-budapest/03-emerald-downtown-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Downtown Luxury Suites by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/03-emerald-downtown-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Downtown Luxury Suites by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/03-emerald-downtown-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Downtown Luxury Suites by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/03-emerald-downtown-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Downtown Luxury Suites by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/03-emerald-downtown-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Downtown Luxury Suites by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/03-emerald-downtown-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Downtown Luxury Suites by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/03-emerald-downtown-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Downtown Luxury Suites by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/03-emerald-downtown-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Downtown Luxury Suites by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/03-emerald-downtown-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Emerald Downtown Luxury Suites by Continental Group"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/03-emerald-downtown-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-aparthotels-budapest/03-emerald-downtown-01.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/03-emerald-downtown-02.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/03-emerald-downtown-03.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/03-emerald-downtown-04.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/03-emerald-downtown-05.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/03-emerald-downtown-06.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/03-emerald-downtown-07.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/03-emerald-downtown-08.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/03-emerald-downtown-09.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/03-emerald-downtown-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star aparthotel",
+    "🛏️ 9.5/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Emerald+Downtown+Luxury+Suites+by+Continental+Group+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District V"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-emerald-downtown&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Femerald-downtown-apartments.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Emerald Downtown Luxury Suites by Continental Group"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.75",
+     "score": "4.8",
+     "meta": "2.7k+ reviews · 1 site",
+     "heading": "Rating on Booking.com (out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.5",
+       "count": "(2.7k+)",
+       "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-emerald-downtown&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Femerald-downtown-apartments.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 2:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 2:00 PM to 12:00 AM, check-out until From 6:00 AM to 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Vörösmarty tér</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 1,000 ft on foot to Vörösmarty tér station. Guests rate the location 9.9/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Kitchen in the unit</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Kitchen:</strong> Apartments and suites with a kitchen, from one-room apartments to two-bedroom suites and a family apartment."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧖 <span class=\"bpa-lang-label\">Sauna + gym</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> A sauna and a fitness centre for guests."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€213 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults in the cheapest unit with a kitchen or kitchenette, 1 night on 10–11 March 2027. Guests rate value for money 9.4/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "✨ <span class=\"bpa-lang-label\">Polished and central</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> Rated 9.5, with cleanliness and comfort both at 9.7."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the best-rated aparthotel here (9.5) on Petőfi Sándor utca, a few minutes from Váci utca and the Basilica",
+    "skip_html": "if price matters most: at €213 for a kitchen unit it is the most expensive here"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1052 Budapest, Petőfi Sándor utca 17. (District V); 1,000 ft walk to Vörösmarty tér metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it very good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Sauna."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 2:00 PM to 12:00 AM; check-out until From 6:00 AM to 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Anker-ház (1,400 ft), Dohány Utcai Zsinagóga (2,000 ft), Károlyi Garden (2,050 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€213",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.5/10 guest score",
+      "price": "€213"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-emerald-downtown&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Femerald-downtown-apartments.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.5/10</b> from 2,720 reviews",
+     "<b>Location</b> rated 9.9/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-3-emerald-downtown-luxury-suites",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: Escala Hotel &amp; Suites -->\n",
+   "id": "card-4",
+   "cats": [
+    "parking",
+    "value"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🛋️ #4 Most Space for the Money",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Escala Hotel & Suites"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-aparthotels-budapest/04-escala-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Escala Hotel & Suites"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/04-escala-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Escala Hotel & Suites"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/04-escala-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Escala Hotel & Suites"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/04-escala-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Escala Hotel & Suites"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/04-escala-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Escala Hotel & Suites"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/04-escala-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Escala Hotel & Suites"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/04-escala-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Escala Hotel & Suites"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/04-escala-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Escala Hotel & Suites"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/04-escala-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Escala Hotel & Suites"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/04-escala-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-aparthotels-budapest/04-escala-01.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/04-escala-02.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/04-escala-03.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/04-escala-04.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/04-escala-05.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/04-escala-06.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/04-escala-07.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/04-escala-08.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/04-escala-09.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/04-escala-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star aparthotel",
+    "🛏️ 9.1/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Escala+Hotel+&+Suites+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VIII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-escala&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffraser-residence-budapest.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Escala Hotel &amp; Suites"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.52",
+     "score": "4.5",
+     "meta": "4.3k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.1",
+       "count": "(2.1k+)",
+       "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-escala&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffraser-residence-budapest.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.3",
+       "count": "(790+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.6",
+       "count": "(1.4k+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_aparthotels_budapest_fraser_residence_budapest&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d1977620-Reviews-ESCALA_Hotel_Suites-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM to 12:00 AM, check-out until From 1:00 AM to 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Klinikák</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 1,050 ft on foot to Klinikák station. Guests rate the location 9/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Kitchen in the unit</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Kitchen:</strong> Every unit has a well-equipped kitchen with a dining area; suites have a living area and most units a balcony or terrace."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Wonderful</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast wonderful. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€86 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults in the cheapest unit with a kitchen or kitchenette, 1 night on 10–11 March 2027. Guests rate value for money 9.1/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🛍️ <span class=\"bpa-lang-label\">Next to Corvin Promenade</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> Off the Corvin Promenade in District VIII, close to bars, restaurants and the Corvin shopping centre."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a big suite with a full kitchen and usually a balcony, at €86 a night with a 9.1 score",
+    "skip_html": "if you want to walk to the river sights: it is 1.3 miles from downtown"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1082 Budapest, Nagytemplom u. 31. (District VIII); 1,050 ft walk to Klinikák metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it wonderful; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM to 12:00 AM; check-out until From 1:00 AM to 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Museum of Applied Arts (2,300 ft), Ludovika (3,100 ft), Hungarian National Museum (0.9 mi)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€86",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.1/10 guest score",
+      "price": "€86"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-escala&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffraser-residence-budapest.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.1/10</b> from 2,061 reviews",
+     "<b>Location</b> rated 9/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-4-escala-hotel-suites",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: Silver Crown Hotel &amp; Residence, Palace Quarter -->\n",
+   "id": "card-5",
+   "cats": [
+    "central",
+    "parking"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🚗 #5 Best for Drivers",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Silver Crown Hotel & Residence, Palace Quarter"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-aparthotels-budapest/05-silver-crown-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silver Crown Hotel & Residence, Palace Quarter"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/05-silver-crown-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silver Crown Hotel & Residence, Palace Quarter"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/05-silver-crown-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silver Crown Hotel & Residence, Palace Quarter"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/05-silver-crown-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silver Crown Hotel & Residence, Palace Quarter"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/05-silver-crown-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silver Crown Hotel & Residence, Palace Quarter"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/05-silver-crown-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silver Crown Hotel & Residence, Palace Quarter"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/05-silver-crown-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silver Crown Hotel & Residence, Palace Quarter"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/05-silver-crown-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silver Crown Hotel & Residence, Palace Quarter"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/05-silver-crown-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Silver Crown Hotel & Residence, Palace Quarter"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/05-silver-crown-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-aparthotels-budapest/05-silver-crown-01.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/05-silver-crown-02.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/05-silver-crown-03.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/05-silver-crown-04.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/05-silver-crown-05.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/05-silver-crown-06.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/05-silver-crown-07.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/05-silver-crown-08.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/05-silver-crown-09.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/05-silver-crown-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Aparthotel",
+    "🛏️ 9.2/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Silver+Crown+Hotel+&+Residence,+Palace+Quarter+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VIII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-silver-crown&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcherry-apartments.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Silver Crown Hotel &amp; Residence, Palace Quarter"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.61",
+     "score": "4.6",
+     "meta": "7.5k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.2",
+       "count": "(6.5k+)",
+       "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-silver-crown&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcherry-apartments.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.7",
+       "count": "(910+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.4",
+       "count": "(69)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_aparthotels_budapest_cherry_apartments&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d16674837-Reviews-Silver_Crown_Hotel_Residence-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM to 12:00 AM, check-out until From 12:00 AM to 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Astoria</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 1,300 ft on foot to Astoria station. Guests rate the location 9.5/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Kitchen in the unit</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Kitchen:</strong> Every unit has a kitchen; studios, apartments and two-bedroom apartments with a dining table and coffee machine."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚗 <span class=\"bpa-lang-label\">Free parking</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Parking:</strong> Free private parking is listed for guests."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Very good</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast very good. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€110 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults in the cheapest unit with a kitchen or kitchenette, 1 night on 10–11 March 2027. Guests rate value for money 9.0/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🏛️ <span class=\"bpa-lang-label\">Palace Quarter</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> On Szentkirályi utca in District VIII, 1,600 ft from the Dohány Street Synagogue, with a garden and bar."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a central kitchen apartment with free parking, €110 a night and 6,532 reviews at 9.2",
+    "skip_html": "if you want a pool or gym: there is none"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1088 Budapest, Szentkirályi utca 4 (District VIII); 1,300 ft walk to Astoria metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it very good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM to 12:00 AM; check-out until From 12:00 AM to 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Dohány Utcai Zsinagóga (1,600 ft), Blaha Lujza Square (2,150 ft), Hungarian National Museum (2,250 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€110",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.2/10 guest score",
+      "price": "€110"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-silver-crown&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcherry-apartments.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.2/10</b> from 6,532 reviews",
+     "<b>Location</b> rated 9.5/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-5-silver-crown-hotel-residence",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #6: Millennium Court, Budapest - Marriott Executive Apartments -->\n",
+   "id": "card-6",
+   "cats": [
+    "central",
+    "wellness",
+    "parking"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "👨‍👩‍👧 #6 Best for Groups",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Millennium Court, Budapest - Marriott Executive Apartments"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-aparthotels-budapest/06-millennium-court-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Millennium Court, Budapest - Marriott Executive Apartments"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/06-millennium-court-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Millennium Court, Budapest - Marriott Executive Apartments"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/06-millennium-court-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Millennium Court, Budapest - Marriott Executive Apartments"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/06-millennium-court-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Millennium Court, Budapest - Marriott Executive Apartments"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/06-millennium-court-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Millennium Court, Budapest - Marriott Executive Apartments"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/06-millennium-court-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Millennium Court, Budapest - Marriott Executive Apartments"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/06-millennium-court-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Millennium Court, Budapest - Marriott Executive Apartments"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/06-millennium-court-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Millennium Court, Budapest - Marriott Executive Apartments"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/06-millennium-court-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Millennium Court, Budapest - Marriott Executive Apartments"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/06-millennium-court-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-aparthotels-budapest/06-millennium-court-01.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/06-millennium-court-02.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/06-millennium-court-03.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/06-millennium-court-04.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/06-millennium-court-05.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/06-millennium-court-06.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/06-millennium-court-07.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/06-millennium-court-08.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/06-millennium-court-09.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/06-millennium-court-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star aparthotel",
+    "🛏️ 9/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Millennium+Court,+Budapest+-+Marriott+Executive+Apartments+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District V"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-millennium-court&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmillennium-court-budapest-executive-apartments.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Millennium Court, Budapest - Marriott Executive Apartments"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.38",
+     "score": "4.4",
+     "meta": "3.4k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.0",
+       "count": "(1.3k+)",
+       "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-millennium-court&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmillennium-court-budapest-executive-apartments.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.3",
+       "count": "(980+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.3",
+       "count": "(1.1k+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=best_aparthotels_budapest_millennium_court_budapest_executive_apartments&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d284513-Reviews-Millennium_Court_Budapest_Marriott_Executive_Apartments-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 4:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 4:00 PM, check-out until 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Vörösmarty tér</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 1,400 ft on foot to Vörösmarty tér station. Guests rate the location 9.8/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Kitchen in the unit</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Kitchen:</strong> Spacious serviced apartments with a kitchen, up to two bedrooms and two bathrooms."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧖 <span class=\"bpa-lang-label\">Plunge pool + sauna</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> An indoor plunge pool, a sauna and a fitness centre."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€153 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults in the cheapest unit with a kitchen or kitchenette, 1 night on 10–11 March 2027. Guests rate value for money 8.8/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🏢 <span class=\"bpa-lang-label\">Marriott service</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> In the Millennium Center in District V, a few minutes' walk from the main shopping streets."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a Marriott-run two-bedroom apartment in District V with a plunge pool, from €153",
+    "skip_html": "if you are two on a budget: Florin is half the price"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1052 Budapest, Piarista utca 4 (District V); 1,400 ft walk to Vörösmarty tér metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it very good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Sauna."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 4:00 PM; check-out until 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Károlyi Garden (2,250 ft), Anker-ház (2,400 ft), Dohány Utcai Zsinagóga (2,400 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€153",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9/10 guest score",
+      "price": "€153"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-millennium-court&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmillennium-court-budapest-executive-apartments.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9/10</b> from 1,346 reviews",
+     "<b>Location</b> rated 9.8/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-6-millennium-court-marriott-executive-apar",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #7: Marbles Residence -->\n",
+   "id": "card-7",
+   "cats": [
+    "value"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "💶 #7 Best-Rated Budget Option",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Marbles Residence"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/best-aparthotels-budapest/07-marbles-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Marbles Residence"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/07-marbles-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Marbles Residence"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/07-marbles-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Marbles Residence"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/07-marbles-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Marbles Residence"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/07-marbles-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Marbles Residence"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/07-marbles-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Marbles Residence"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/07-marbles-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Marbles Residence"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/07-marbles-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Marbles Residence"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/07-marbles-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Marbles Residence"
+      ],
+      [
+       "data-src",
+       "/assets/best-aparthotels-budapest/07-marbles-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-aparthotels-budapest/07-marbles-01.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/07-marbles-02.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/07-marbles-03.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/07-marbles-04.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/07-marbles-05.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/07-marbles-06.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/07-marbles-07.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/07-marbles-08.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/07-marbles-09.avif"
+     },
+     {
+      "src": "/assets/best-aparthotels-budapest/07-marbles-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "3-star aparthotel",
+    "🛏️ 9.3/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Marbles+Residence+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VIII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-marbles&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmarbles-residence-budapest1.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Marbles Residence"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.65",
+     "score": "4.6",
+     "meta": "1.5k+ reviews · 2 sites",
+     "heading": "Average of 2 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.3",
+       "count": "(1.4k+)",
+       "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-marbles&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmarbles-residence-budapest1.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.6",
+       "count": "(110+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM, check-out until 10:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Corvin-negyed</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 900 ft on foot to Corvin-negyed station. Guests rate the location 9.2/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Kitchen in the unit</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Kitchen:</strong> Studios and one-bedroom apartments with a kitchen or kitchenette; a family studio has two bathrooms."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏛️ <span class=\"bpa-lang-label\">Renovated old building</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The building:</strong> A historic building on József körút, recently renovated, with a terrace and guest laundry."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€87 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults in the cheapest unit with a kitchen or kitchenette, 1 night on 10–11 March 2027. Guests rate value for money 9.4/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🧺 <span class=\"bpa-lang-label\">Simple and spotless</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> Cleanliness and comfort both rated 9.5; value for money 9.4."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a spotless, recently renovated apartment for €87 with value rated 9.4",
+    "skip_html": "if you like a late start: check-out is by 10 am"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1085 Budapest, József körút 82 (District VIII); 900 ft walk to Corvin-negyed metro."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM; check-out until 10:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Museum of Applied Arts (750 ft), Hungarian National Museum (2,950 ft), Central Market (0.7 mi)."
+     },
+     {
+      "q": "Can I cancel?",
+      "a": "Depends on the rate you choose; the terms show before you pay."
+     }
+    ]
+   },
+   "price": {
+    "main": "€87",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.3/10 guest score",
+      "price": "€87"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-aparthotels-budapest-marbles&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmarbles-residence-budapest1.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9.3/10</b> from 1,399 reviews",
+     "<b>Location</b> rated 9.2/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-7-marbles-residence",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}

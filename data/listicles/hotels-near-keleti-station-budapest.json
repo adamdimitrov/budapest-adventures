@@ -1,0 +1,3633 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": [
+    "near",
+    "value",
+    "groups"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Hotel Near Keleti",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "IntercityHotel Budapest"
+      ],
+      [
+       "fetchpriority",
+       "high"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "eager"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "IntercityHotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "IntercityHotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "IntercityHotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "IntercityHotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "IntercityHotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "IntercityHotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "IntercityHotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "IntercityHotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "IntercityHotel Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-01.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-02.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-03.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-04.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-05.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-06.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-07.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-08.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-09.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/01-intercityhotel-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 8.9/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=IntercityHotel+Budapest+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VIII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-intercityhotel&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fintercityhotel-budapest.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "IntercityHotel Budapest"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.44",
+     "score": "4.4",
+     "meta": "7.5k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.9",
+       "count": "(5.5k+)",
+       "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-intercityhotel&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fintercityhotel-budapest.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.5",
+       "count": "(1.7k+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.0",
+       "count": "(320+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=hotels_near_keleti_station_budapest_intercityhotel_budapest&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d23099732-Reviews-IntercityHotel-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM to 12:00 AM, check-out until 12:00 PM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚆 <span class=\"bpa-lang-label\">0.1 mi from Keleti</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On Baross tér, opposite Keleti station, at a public transport junction (metro M2 and M4)."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-yes\">✓</span> listed as wheelchair accessible</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Buffet breakfast</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> A buffet breakfast every morning, rated very good; a restaurant and bar in the hotel."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👨‍👩‍👧 <span class=\"bpa-lang-label\">Family rooms</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rooms:</strong> Superior and Superior Plus doubles and twins, plus family rooms."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€69 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.7/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🚆 <span class=\"bpa-lang-label\">Made for train travel</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A modern 4-star at the station square; wheelchair accessible, pets welcome."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the best mix of distance, price and score: across the square from Keleti, €69, rated 8.9",
+    "skip_html": "if you want a quiet side street: Baross tér is a busy transport hub"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1087 Budapest, Baross tér 7-8 (District VIII)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it very good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM to 12:00 AM; check-out until 12:00 PM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Munkásmozgalmi Pantheon (2,850 ft), Jókai Mór (3,200 ft), Blaha Lujza Square (0.6 mi)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€69",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "8.9/10 guest score",
+      "price": "€69"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-intercityhotel&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fintercityhotel-budapest.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 8.9/10</b> from 5,530 reviews",
+     "<b>Location</b> rated 9.3/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-1-intercityhotel-budapest",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: Baross Hotel by Mellow Mood Hotels -->\n",
+   "id": "card-2",
+   "cats": [
+    "near",
+    "value",
+    "groups"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🥈 #2 Closest to the Platforms",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Baross Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/hotels-near-keleti-station-budapest/02-baross-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Baross Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/02-baross-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Baross Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/02-baross-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Baross Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/02-baross-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Baross Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/02-baross-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Baross Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/02-baross-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Baross Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/02-baross-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Baross Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/02-baross-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Baross Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/02-baross-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Baross Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/02-baross-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/02-baross-01.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/02-baross-02.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/02-baross-03.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/02-baross-04.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/02-baross-05.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/02-baross-06.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/02-baross-07.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/02-baross-08.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/02-baross-09.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/02-baross-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "3-star hotel",
+    "🛏️ 8/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Baross+Hotel+by+Mellow+Mood+Hotels+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-baross&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbarros.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Baross Hotel by Mellow Mood Hotels"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "3.93",
+     "score": "3.9",
+     "meta": "7.1k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.0",
+       "count": "(4.3k+)",
+       "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-baross&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbarros.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "3.9",
+       "count": "(1.7k+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "3.7",
+       "count": "(1.1k+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=hotels_near_keleti_station_budapest_barros&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d283051-Reviews-Baross_Hotel_by_Mellow_Mood_Hotels-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 2:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 2:00 PM, check-out until 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚆 <span class=\"bpa-lang-label\">164 ft from Keleti</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On Baross tér, 164 ft from Keleti, which is served by metro M2 and M4, trams and buses."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏢 <span class=\"bpa-lang-label\">Apartments for groups</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rooms:</strong> Doubles, triples and quadruples, plus two-bedroom apartments with a kitchen for families and groups."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Very good</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast very good. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€67 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.3/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🏛️ <span class=\"bpa-lang-label\">Period building</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> Rooms around an inner courtyard; staff on hand around the clock."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the shortest walk from the train (164 ft), at €67, with apartments for groups",
+    "skip_html": "if guest scores matter most: 8.0, among the lowest here"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1077 Budapest, Baross ter 15 (District VII)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it very good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 2:00 PM; check-out until 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Batthyany-mauzóleum (2,950 ft), Blaha Lujza Square (0.6 mi), Munkásmozgalmi Pantheon (0.6 mi)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€67",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "8/10 guest score",
+      "price": "€67"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-baross&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbarros.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 8/10</b> from 4,272 reviews",
+     "<b>Location</b> rated 8.8/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-2-baross-hotel-by-mellow-mood-hotels",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #3: Danubius Hotel Hungaria City Center -->\n",
+   "id": "card-3",
+   "cats": [
+    "near"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🏙️ #3 Biggest Hotel by Keleti",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Danubius Hotel Hungaria City Center"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/hotels-near-keleti-station-budapest/03-hungaria-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Danubius Hotel Hungaria City Center"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/03-hungaria-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Danubius Hotel Hungaria City Center"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/03-hungaria-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Danubius Hotel Hungaria City Center"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/03-hungaria-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Danubius Hotel Hungaria City Center"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/03-hungaria-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Danubius Hotel Hungaria City Center"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/03-hungaria-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Danubius Hotel Hungaria City Center"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/03-hungaria-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Danubius Hotel Hungaria City Center"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/03-hungaria-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Danubius Hotel Hungaria City Center"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/03-hungaria-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Danubius Hotel Hungaria City Center"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/03-hungaria-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/03-hungaria-01.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/03-hungaria-02.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/03-hungaria-03.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/03-hungaria-04.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/03-hungaria-05.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/03-hungaria-06.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/03-hungaria-07.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/03-hungaria-08.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/03-hungaria-09.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/03-hungaria-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 8.6/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Danubius+Hotel+Hungaria+City+Center+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-hungaria&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fgrandhotel.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Danubius Hotel Hungaria City Center"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.03",
+     "score": "4.0",
+     "meta": "19.6k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.6",
+       "count": "(10.3k+)",
+       "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-hungaria&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fgrandhotel.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "3.9",
+       "count": "(5.6k+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "3.5",
+       "count": "(3.7k+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=hotels_near_keleti_station_budapest_grandhotel&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d276881-Reviews-Danubius_Hotel_Hungaria_City_Center-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM, check-out until 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚆 <span class=\"bpa-lang-label\">984 ft from Keleti</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On Rákóczi út, 984 ft from Keleti; Blaha Lujza tér is 2,600 ft along the same avenue."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏙️ <span class=\"bpa-lang-label\">City-view rooms</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rooms:</strong> Most rooms and suites have city views; superior, superior plus, triple rooms and junior suites."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Very good</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast very good. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€111 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.6/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🏨 <span class=\"bpa-lang-label\">Large and busy</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> 10,269 reviews, the most here; restaurants and beauty services."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a large 4-star 984 ft from Keleti with city-view rooms and the longest track record (10,269 reviews)",
+    "skip_html": "if price matters: at €111 it is the priciest here"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1074 Budapest, Rákóczi út 90. (District VII)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it very good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM; check-out until 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Blaha Lujza Square (2,600 ft), Batthyany-mauzóleum (2,650 ft), Munkásmozgalmi Pantheon (3,150 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€111",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "8.6/10 guest score",
+      "price": "€111"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-hungaria&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fgrandhotel.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 8.6/10</b> from 10,269 reviews",
+     "<b>Location</b> rated 8.7/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-3-danubius-hotel-hungaria-city-center",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: Onyx Luxury Budapest -->\n",
+   "id": "card-4",
+   "cats": [
+    "wellness",
+    "groups"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "⭐ #4 Best-Rated Near Keleti",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Onyx Luxury Budapest"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/hotels-near-keleti-station-budapest/04-onyx-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Onyx Luxury Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/04-onyx-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Onyx Luxury Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/04-onyx-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Onyx Luxury Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/04-onyx-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Onyx Luxury Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/04-onyx-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Onyx Luxury Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/04-onyx-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Onyx Luxury Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/04-onyx-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Onyx Luxury Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/04-onyx-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Onyx Luxury Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/04-onyx-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Onyx Luxury Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/04-onyx-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/04-onyx-01.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/04-onyx-02.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/04-onyx-03.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/04-onyx-04.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/04-onyx-05.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/04-onyx-06.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/04-onyx-07.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/04-onyx-08.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/04-onyx-09.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/04-onyx-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Onyx+Luxury+Budapest+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-onyx&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fonyx-luxury-budapest-budapest.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Onyx Luxury Budapest"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.50",
+     "score": "4.5",
+     "meta": "3.3k+ reviews · 2 sites",
+     "heading": "Average of 2 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.0",
+       "count": "(3k+)",
+       "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-onyx&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fonyx-luxury-budapest-budapest.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.5",
+       "count": "(310+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM to 9:30 PM, check-out until From 7:00 AM to 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚆 <span class=\"bpa-lang-label\">0.4 mi from Keleti</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On Marek József utca in District VII, about 0.4 miles from Keleti and 0.9 miles from City Park."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🛁 <span class=\"bpa-lang-label\">Spa + hot tub</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> A spa with a hot tub (Jacuzzi), a garden and a terrace."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏢 <span class=\"bpa-lang-label\">Studios to two-floor suites</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rooms:</strong> Doubles, studios, apartments with kitchen, and two-floor suites including a family suite."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Wonderful</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast wonderful. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€96 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.9/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "✨ <span class=\"bpa-lang-label\">Quiet and stylish</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> Score 9.0, breakfast rated wonderful."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the best-rated stay near Keleti (9.0), with a spa and apartments, at €96",
+    "skip_html": "if you arrive late: check-in closes at 9:30 pm"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1078 Budapest, 12 Marek József utca (District VII)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it wonderful; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Spa and wellness centre, hot tub."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM to 9:30 PM; check-out until From 7:00 AM to 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Regnum Marianum (2,450 ft), Museum of Ethnography (0.6 mi), Ifjúsági sportpályák (0.7 mi)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€96",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9/10 guest score",
+      "price": "€96"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-onyx&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fonyx-luxury-budapest-budapest.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 9/10</b> from 2,984 reviews",
+     "<b>Location</b> rated 8.4/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-4-onyx-luxury-budapest",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: Star Hotel by Mellow Mood Hotels -->\n",
+   "id": "card-5",
+   "cats": [
+    "value"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "💶 #5 Cheapest Near Keleti",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Star Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/hotels-near-keleti-station-budapest/05-star-hotel-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Star Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/05-star-hotel-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Star Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/05-star-hotel-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Star Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/05-star-hotel-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Star Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/05-star-hotel-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Star Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/05-star-hotel-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Star Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/05-star-hotel-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Star Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/05-star-hotel-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Star Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/05-star-hotel-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Star Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/05-star-hotel-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/05-star-hotel-01.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/05-star-hotel-02.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/05-star-hotel-03.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/05-star-hotel-04.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/05-star-hotel-05.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/05-star-hotel-06.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/05-star-hotel-07.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/05-star-hotel-08.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/05-star-hotel-09.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/05-star-hotel-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "3-star hotel",
+    "🛏️ 8.2/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Star+Hotel+by+Mellow+Mood+Hotels+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-star-hotel&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fstar.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Star Hotel by Mellow Mood Hotels"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.03",
+     "score": "4.0",
+     "meta": "6.1k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.2",
+       "count": "(3.4k+)",
+       "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-star-hotel&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fstar.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.0",
+       "count": "(2.1k+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "3.8",
+       "count": "(640+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=hotels_near_keleti_station_budapest_star&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d286527-Reviews-Star_Hotel_by_Mellow_Mood_Hotels-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 2:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 2:00 PM, check-out until 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚆 <span class=\"bpa-lang-label\">1,312 ft from Keleti</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On István utca, 1,312 ft from Keleti and the same distance from City Park."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗺️ <span class=\"bpa-lang-label\">Free city map</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Extras:</strong> Every guest gets a free welcome map; adjoining rooms on request; a bar in the hotel."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Very good</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast very good. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€59 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.5/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🛏️ <span class=\"bpa-lang-label\">Simple and quiet</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> Rooms face the inner courtyard or a quiet side street."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the cheapest night near Keleti (€59), with rooms on a quiet side street",
+    "skip_html": "if you need parking: none is listed"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1078 Budapest, István utca 14 (District VII)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it very good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 2:00 PM; check-out until 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Regnum Marianum (2,650 ft), Ifjúsági sportpályák (0.7 mi), Museum of Ethnography (0.7 mi)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€59",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "8.2/10 guest score",
+      "price": "€59"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-star-hotel&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fstar.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 8.2/10</b> from 3,417 reviews",
+     "<b>Location</b> rated 8.4/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-5-star-hotel-by-mellow-mood-hotels",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #6: Hotel Bristol Budapest -->\n",
+   "id": "card-6",
+   "cats": [],
+   "gallery": {
+    "rank": {
+     "text": "🌙 #6 Quietest Near Keleti",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Hotel Bristol Budapest"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/hotels-near-keleti-station-budapest/06-bristol-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Bristol Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/06-bristol-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Bristol Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/06-bristol-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Bristol Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/06-bristol-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Bristol Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/06-bristol-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Bristol Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/06-bristol-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Bristol Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/06-bristol-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Bristol Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/06-bristol-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Bristol Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/06-bristol-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Hotel Bristol Budapest"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/06-bristol-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/06-bristol-01.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/06-bristol-02.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/06-bristol-03.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/06-bristol-04.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/06-bristol-05.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/06-bristol-06.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/06-bristol-07.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/06-bristol-08.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/06-bristol-09.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/06-bristol-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 8.6/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Hotel+Bristol+Budapest+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VIII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-bristol&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbristol.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Hotel Bristol Budapest"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.27",
+     "score": "4.3",
+     "meta": "3.9k+ reviews · 2 sites",
+     "heading": "Average of 2 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.6",
+       "count": "(2.8k+)",
+       "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-bristol&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbristol.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.2",
+       "count": "(1.1k+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=hotels_near_keleti_station_budapest_bristol&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d1412929-Reviews-Hotel_Bristol-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM, check-out until From 1:00 AM to 10:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚆 <span class=\"bpa-lang-label\">0.3 mi from Keleti</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On Kenyérmező utca, a quiet street near Arena Plaza; trams and buses 656 ft away, the metro about 2,950 ft."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "☕ <span class=\"bpa-lang-label\">Glass-roofed breakfast room</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> A buffet breakfast in a glass-covered room on the ground floor, rated very good; a bar for drinks and snacks."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€98 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.7/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🌙 <span class=\"bpa-lang-label\">Quiet street</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A calm side street off the station area, near the Arena Plaza shopping centre."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a quiet 4-star a short walk from Keleti, with a glass-roofed breakfast room, at €98",
+    "skip_html": "if you want the cheapest option: four hotels here cost less"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1081 Budapest, Kenyérmező utca 4 (District VIII)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it very good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM; check-out until From 1:00 AM to 10:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Blaha Lujza Square (2,700 ft), Batthyany-mauzóleum (3,100 ft), Munkásmozgalmi Pantheon (0.7 mi)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€98",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "8.6/10 guest score",
+      "price": "€98"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-bristol&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbristol.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 8.6/10</b> from 2,758 reviews",
+     "<b>Location</b> rated 8.6/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-6-hotel-bristol-budapest",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #7: Impulso Hotel by Mellow Mood Hotels -->\n",
+   "id": "card-7",
+   "cats": [
+    "value",
+    "groups"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "👨‍👩‍👧 #7 Best for Families Near Keleti",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Impulso Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/hotels-near-keleti-station-budapest/07-impulso-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Impulso Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/07-impulso-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Impulso Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/07-impulso-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Impulso Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/07-impulso-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Impulso Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/07-impulso-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Impulso Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/07-impulso-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Impulso Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/07-impulso-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Impulso Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/07-impulso-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Impulso Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/07-impulso-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Impulso Hotel by Mellow Mood Hotels"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/07-impulso-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/07-impulso-01.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/07-impulso-02.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/07-impulso-03.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/07-impulso-04.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/07-impulso-05.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/07-impulso-06.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/07-impulso-07.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/07-impulso-08.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/07-impulso-09.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/07-impulso-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 8.6/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Impulso+Hotel+by+Mellow+Mood+Hotels+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VIII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-impulso&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fatlashotelbudapest.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Impulso Hotel by Mellow Mood Hotels"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.32",
+     "score": "4.3",
+     "meta": "8.8k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.6",
+       "count": "(6.2k+)",
+       "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-impulso&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fatlashotelbudapest.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.4",
+       "count": "(2.2k+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.2",
+       "count": "(430+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=hotels_near_keleti_station_budapest_atlashotelbudapest&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d567326-Reviews-Impulso_Hotel_by_Mellow_Mood_Hotels-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM to 12:00 AM, check-out until From 12:00 AM to 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚆 <span class=\"bpa-lang-label\">0.6 mi from Keleti</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On Népszínház utca, 558 ft from II. János Pál pápa tér (metro M4, one stop to Keleti)."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👨‍👩‍👧 <span class=\"bpa-lang-label\">Connecting family rooms</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rooms:</strong> Doubles and twins, triples, quadruples and connecting family rooms."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Very good</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast very good. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€70 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.7/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Well connected</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> Blaha Lujza tér, with metro M2 and tram 6, is 1,640 ft away."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for quadruple and connecting family rooms one metro stop from Keleti, at €70",
+    "skip_html": "if you want to walk to the platforms: it is 0.6 miles"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1081 Budapest, Népszínház u. 39-41 (District VIII)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it very good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "No pool or spa listed."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM to 12:00 AM; check-out until From 12:00 AM to 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Batthyany-mauzóleum (2,100 ft), Munkásmozgalmi Pantheon (2,200 ft), Blaha Lujza Square (2,550 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€70",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "8.6/10 guest score",
+      "price": "€70"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-impulso&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fatlashotelbudapest.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 8.6/10</b> from 6,228 reviews",
+     "<b>Location</b> rated 8.2/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-7-impulso-hotel-by-mellow-mood-hotels",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #8: Lion&#x27;s Garden Hotel -->\n",
+   "id": "card-8",
+   "cats": [
+    "wellness"
+   ],
+   "gallery": {
+    "rank": {
+     "text": "🏊 #8 Best with a Pool",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      [
+       "alt",
+       "Lion's Garden Hotel"
+      ],
+      [
+       "height",
+       "534"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "/assets/hotels-near-keleti-station-budapest/08-lions-garden-01.avif"
+      ],
+      [
+       "width",
+       "800"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Lion's Garden Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/08-lions-garden-02.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Lion's Garden Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/08-lions-garden-03.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Lion's Garden Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/08-lions-garden-04.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Lion's Garden Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/08-lions-garden-05.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Lion's Garden Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/08-lions-garden-06.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Lion's Garden Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/08-lions-garden-07.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Lion's Garden Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/08-lions-garden-08.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Lion's Garden Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/08-lions-garden-09.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ],
+     [
+      [
+       "alt",
+       "Lion's Garden Hotel"
+      ],
+      [
+       "data-src",
+       "/assets/hotels-near-keleti-station-budapest/08-lions-garden-10.avif"
+      ],
+      [
+       "decoding",
+       "async"
+      ],
+      [
+       "loading",
+       "lazy"
+      ],
+      [
+       "sizes",
+       "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"
+      ],
+      [
+       "src",
+       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"
+      ]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/08-lions-garden-01.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/08-lions-garden-02.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/08-lions-garden-03.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/08-lions-garden-04.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/08-lions-garden-05.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/08-lions-garden-06.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/08-lions-garden-07.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/08-lions-garden-08.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/08-lions-garden-09.avif"
+     },
+     {
+      "src": "/assets/hotels-near-keleti-station-budapest/08-lions-garden-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 8.5/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Lion's+Garden+Hotel+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District XIV"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-lions-garden&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Flion-s-garden.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Lion's Garden Hotel"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.24",
+     "score": "4.2",
+     "meta": "6.3k+ reviews · 3 sites",
+     "heading": "Average of 3 sites, weighted by number of reviews (out of 5; Booking.com scores out of 10 are halved)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.5",
+       "count": "(3.6k+)",
+       "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-lions-garden&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Flion-s-garden.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      },
+      {
+       "kind": "static",
+       "site": "Google",
+       "score": "4.3",
+       "count": "(1.8k+)",
+       "icon": "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
+      },
+      {
+       "kind": "link",
+       "site": "Tripadvisor",
+       "score": "4.1",
+       "count": "(940+)",
+       "url": "https://tp.media/r?campaign_id=149&marker=404154&p=4456&sub_id=hotels_near_keleti_station_budapest_lion_s_garden&trs=204442&u=https%3A%2F%2Fwww.tripadvisor.com%2FHotel_Review-g274887-d1056937-Reviews-Lion_s_Garden_Hotel_Budapest-Budapest_Central_Hungary.html",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM, check-out until 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚆 <span class=\"bpa-lang-label\">0.5 mi from Keleti</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On Cházár András utca in the embassy quarter, 492 ft from City Park and facing the Dominican Church."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧖 <span class=\"bpa-lang-label\">Free pool + spa</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> A spa area with a swimming pool, hot tub and sauna, free for guests (opening hours vary); massage at extra cost."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Very good</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast very good. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€85 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.4/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🌳 <span class=\"bpa-lang-label\">By City Park</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> Walk to the Museum of Ethnography, the House of Hungarian Music and Heroes' Square."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a free pool and spa after the train, near City Park, at €85",
+    "skip_html": "if you want the centre: it is 1.7 miles from downtown"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1146 Budapest, Cházár András u. 4. (District XIV)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it very good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Spa and wellness centre, indoor pool, hot tub."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM; check-out until 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Regnum Marianum (2,600 ft), Magyar Állami Földtani Intézet (2,700 ft), Ifjúsági sportpályák (2,750 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€85",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "8.5/10 guest score",
+      "price": "€85"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.hotels-near-keleti-station-budapest-lions-garden&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Flion-s-garden.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": [
+     "<b>Guest score 8.5/10</b> from 3,590 reviews",
+     "<b>Location</b> rated 8.7/10 by guests"
+    ],
+    "sublink": {
+     "url": "#item-8-lion-s-garden-hotel",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}
