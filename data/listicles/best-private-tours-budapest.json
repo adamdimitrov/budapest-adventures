@@ -1,0 +1,2253 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["car", "castle"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Overall",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Private Sightseeing Tour by Car with Guide and Driver"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-private-tours-budapest/01-private-car-guide-driver-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Private Sightseeing Tour by Car with Guide and Driver"],
+      ["data-src", "/assets/best-private-tours-budapest/01-private-car-guide-driver-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Sightseeing Tour by Car with Guide and Driver"],
+      ["data-src", "/assets/best-private-tours-budapest/01-private-car-guide-driver-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Sightseeing Tour by Car with Guide and Driver"],
+      ["data-src", "/assets/best-private-tours-budapest/01-private-car-guide-driver-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Sightseeing Tour by Car with Guide and Driver"],
+      ["data-src", "/assets/best-private-tours-budapest/01-private-car-guide-driver-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Sightseeing Tour by Car with Guide and Driver"],
+      ["data-src", "/assets/best-private-tours-budapest/01-private-car-guide-driver-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Sightseeing Tour by Car with Guide and Driver"],
+      ["data-src", "/assets/best-private-tours-budapest/01-private-car-guide-driver-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Sightseeing Tour by Car with Guide and Driver"],
+      ["data-src", "/assets/best-private-tours-budapest/01-private-car-guide-driver-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Sightseeing Tour by Car with Guide and Driver"],
+      ["data-src", "/assets/best-private-tours-budapest/01-private-car-guide-driver-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-private-tours-budapest/01-private-car-guide-driver-01.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/01-private-car-guide-driver-02.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/01-private-car-guide-driver-03.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/01-private-car-guide-driver-04.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/01-private-car-guide-driver-05.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/01-private-car-guide-driver-06.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/01-private-car-guide-driver-07.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/01-private-car-guide-driver-08.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/01-private-car-guide-driver-09.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "BudapestPrivate",
+    "⏱️ 3–8 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Heroes+Square+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Pick-up anywhere in the city"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-private-sightseeing-tour-by-car-t212409/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Private Sightseeing Tour by Car with Guide and Driver"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.97",
+     "score": "5.0",
+     "meta": "39 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(39)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-private-sightseeing-tour-by-car-t212409/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">3 to 8 hours</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Timing:</strong> Book 3 hours for the highlights or up to 8. Suggested start 8.30–10 am."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗣️ <span class=\"bpa-lang-label\">English, German, Hungarian</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Guided in:</strong> English, German or Hungarian."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Step-free option</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-yes\">✓</span> listed as wheelchair accessible</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> <span class=\"cd-ask\">ⓘ</span> no age limit given</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👥 <span class=\"bpa-lang-label\">Guide + driver</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Who comes:</strong> A professional local guide and a separate professional driver, so the guide talks to you instead of watching the road."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚗 <span class=\"bpa-lang-label\">Door to door</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Transport:</strong> An air-conditioned car picks you up and drops you off wherever you choose in the city. Parking fees, taxes and a bottle of water are included."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗺️ <span class=\"bpa-lang-label\">Buda + Pest</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> Andrássy Avenue and the Opera, Heroes' Square (45 minutes on foot), the Basilica, Parliament (25 minutes), a drive over Margaret Bridge, an hour walking Castle Hill, Liberty Bridge, the Gellért Hill view and the Jewish Quarter."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€117.50 each</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> Per person for the 3-hour tour: about €39 an hour. Entrance fees and meals are extra."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🛋️ <span class=\"bpa-lang-label\">Comfortable, deep</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> Short walks at the big sights and the car in between; a guide who talks history, culture and food."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the most complete private day: a guide and a separate driver, door-to-door pick-up and both sides of the river, with walks only where they are worth it",
+    "skip_html": "if you want to explore on foot at your own pace: the private walk (#2) costs a third of the price"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is there hotel pickup?",
+      "a": "Door-to-door from any point you choose in Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Professional private guide, professional driver, air-conditioned car, parking fees, taxes, a bottle of mineral water."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Entrance fees, meals."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, German, Hungarian."
+     },
+     {
+      "q": "How long is it?",
+      "a": "3 to 8 hours; suggested start 8.30–10 am."
+     }
+    ]
+   },
+   "price": {
+    "main": "€118",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "3–8 hours",
+      "price": "€118"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-private-sightseeing-tour-by-car-t212409/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later", "Pickup included"],
+    "sublink": {
+     "url": "#item-1-private-guide-and-driver-by-car",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: Private Custom Tour of Budapest with a Local Guide -->\n",
+   "id": "card-2",
+   "cats": ["walk", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🥈 #2 Best Value Private Guide",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      ["alt", "Private Custom Tour of Budapest with a Local Guide"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-private-tours-budapest/02-custom-private-walk-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Private Custom Tour of Budapest with a Local Guide"],
+      ["data-src", "/assets/best-private-tours-budapest/02-custom-private-walk-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Private Custom Tour of Budapest with a Local Guide"],
+      ["data-src", "/assets/best-private-tours-budapest/02-custom-private-walk-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Private Custom Tour of Budapest with a Local Guide"],
+      ["data-src", "/assets/best-private-tours-budapest/02-custom-private-walk-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Private Custom Tour of Budapest with a Local Guide"],
+      ["data-src", "/assets/best-private-tours-budapest/02-custom-private-walk-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Private Custom Tour of Budapest with a Local Guide"],
+      ["data-src", "/assets/best-private-tours-budapest/02-custom-private-walk-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-private-tours-budapest/02-custom-private-walk-01.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/02-custom-private-walk-02.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/02-custom-private-walk-03.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/02-custom-private-walk-04.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/02-custom-private-walk-05.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/02-custom-private-walk-06.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Guydeez",
+    "⏱️ 2–8 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=St+Stephen's+Basilica+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Meets at your accommodation"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Private Custom Tour of Budapest with a Local Guide"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.69",
+     "score": "4.7",
+     "meta": "117 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.7",
+       "count": "(117)",
+       "url": "https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">2 to 8 hours</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Timing:</strong> Pick the length when you book; the guide meets you at your accommodation."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗣️ <span class=\"bpa-lang-label\">4 languages</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Guided in:</strong> Spanish, English, French or Italian."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Step-free option</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-yes\">✓</span> listed as wheelchair accessible</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> <span class=\"cd-yes\">✓</span> families welcome</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧭 <span class=\"bpa-lang-label\">Your route</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Format:</strong> A private walking tour built around what you want to see, from the main sights to neighbourhoods and places to eat. Museum visits can be added on request."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏨 <span class=\"bpa-lang-label\">Meets at your hotel</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Start:</strong> The guide meets you at your accommodation if it is in the city."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">On foot + transit</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> Walking and public transport. Transport tickets, cars, food and drinks are not included."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€40 each</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> Per person, private. Transport tickets, entries, food and tips are extra."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🧭 <span class=\"bpa-lang-label\">Your city, your pace</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A local who builds the walk around what you want, with tips for the rest of your stay."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a private guide at a group-tour price: €40 per person, your route, and the guide picks you up at your hotel",
+    "skip_html": "if anyone in your group cannot walk for 2 hours or more: book a car (#1) or a tuk-tuk (#5)"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is there hotel pickup?",
+      "a": "Meets you at your accommodation (if in the city)."
+     },
+     {
+      "q": "What is included?",
+      "a": "Private walking tour, customised route, public transport use on the walk, help booking tickets."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Food and drinks, tips, attraction tickets, car transport."
+     },
+     {
+      "q": "Which languages?",
+      "a": "Spanish, English, French, Italian."
+     },
+     {
+      "q": "How long is it?",
+      "a": "2 to 8 hours."
+     }
+    ]
+   },
+   "price": {
+    "main": "€40",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2–8 hours",
+      "price": "€40"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later", "Pickup included"],
+    "sublink": {
+     "url": "#item-2-custom-private-walk-with-a-local",
+     "text": "Read Review ↓"
+    }
+   },
+   "_photo_topup": {
+    "skip": "the product's own listing gallery has only 6 photos, all used"
+   }
+  },
+  {
+   "before": "\n<!-- #3: Private Budapest Tour with a Classic Russian Jeep or G-Wagon -->\n",
+   "id": "card-3",
+   "cats": ["car", "open", "castle", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🥉 #3 Best for Groups of 4–6",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      ["alt", "Private Budapest Tour with a Classic Russian Jeep or G-Wagon"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Private Budapest Tour with a Classic Russian Jeep or G-Wagon"],
+      ["data-src", "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Private Budapest Tour with a Classic Russian Jeep or G-Wagon"],
+      ["data-src", "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Private Budapest Tour with a Classic Russian Jeep or G-Wagon"],
+      ["data-src", "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Private Budapest Tour with a Classic Russian Jeep or G-Wagon"],
+      ["data-src", "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Private Budapest Tour with a Classic Russian Jeep or G-Wagon"],
+      ["data-src", "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Private Budapest Tour with a Classic Russian Jeep or G-Wagon"],
+      ["data-src", "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Private Budapest Tour with a Classic Russian Jeep or G-Wagon"],
+      ["data-src", "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Private Budapest Tour with a Classic Russian Jeep or G-Wagon"],
+      ["data-src", "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Private Budapest Tour with a Classic Russian Jeep or G-Wagon"],
+      ["data-src", "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-01.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-02.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-03.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-04.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-05.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-06.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-07.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-08.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-09.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/03-russian-jeep-g-wagon-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "BUDTOURS",
+    "⏱️ 1.5–3 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Citadella+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Flexible pick-up"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/iconic-budapest-tour-with-classic-russian-jeep-and-g-wagon-t499796/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Private Budapest Tour with a Classic Russian Jeep or G-Wagon"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.93",
+     "score": "4.9",
+     "meta": "212 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(212)",
+       "url": "https://www.getyourguide.com/budapest-l29/iconic-budapest-tour-with-classic-russian-jeep-and-g-wagon-t499796/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">1.5 to 3 hours</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Timing:</strong> Express or Classic options, 1.5 to 3 hours; runs rain or shine."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎧 <span class=\"bpa-lang-label\">Audio guide, 12 languages</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Guiding:</strong> An English-speaking driver plus an audio guide in 12 languages, including Chinese, Arabic, Dutch, Portuguese, Swedish and Norwegian."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Family-friendly</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> not suitable for wheelchair users</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> <span class=\"cd-yes\">✓</span> family-friendly; up to 6 per vehicle</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚙 <span class=\"bpa-lang-label\">UAZ Jeep or G-Wagon</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The ride:</strong> An open Russian UAZ Jeep (cabrio, with a panoramic rain cover) or a Mercedes G-Wagon, for your group only."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏰 <span class=\"bpa-lang-label\">Citadella + Bastion</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> Gellért Hill and the Citadella (25 min), Matthias Church and Fisherman's Bastion (30 min each), Parliament, the Opera, Andrássy Avenue and Heroes' Square (20 min), the Great Market Hall and Gellért Baths."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥐 <span class=\"bpa-lang-label\">Strudel on Classic</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Options:</strong> The Classic tour includes a traditional strudel treat; the Express tour has no drop-off. Matthias Church and museum entries are extra."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€35 each at 6</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Per person:</strong> €210 for the vehicle and up to 6 people: €35 each with 6, €52.50 with 4, €105 with 2."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🚙 <span class=\"bpa-lang-label\">Fun ride</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> An open Jeep or a G-Wagon for your group, with photo stops; the driver adds what the audio guide does not."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for groups of 4 to 6 and families: a private open Jeep or G-Wagon for €210 in total, which is €35 each when you fill it",
+    "skip_html": "if you want a live guide talking the whole way: commentary is an audio guide, the driver adds what they can"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is there hotel pickup?",
+      "a": "Flexible pick-up and drop-off (no drop-off on the Express tour)."
+     },
+     {
+      "q": "What is included?",
+      "a": "Private Jeep or G-Wagon tour, driver, audio guide in 12 languages, strudel on the Classic tour, rain cover and umbrellas."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Matthias Church and museum entries."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Wheelchair users."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Up to 6 people per vehicle."
+     }
+    ]
+   },
+   "price": {
+    "main": "€210",
+    "sub": "per group up to 6",
+    "rows": [
+     {
+      "label": "Per group up to 6",
+      "small": "1.5–3 hours",
+      "price": "€210"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/iconic-budapest-tour-with-classic-russian-jeep-and-g-wagon-t499796/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later", "Pickup included"],
+    "sublink": {
+     "url": "#item-3-russian-jeep-or-g-wagon-tour",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: Budapest: Private City Tour with Local Guide and Hotel Pick-up -->\n",
+   "id": "card-4",
+   "cats": ["car", "castle"],
+   "gallery": {
+    "rank": {
+     "text": "⭐ #4 Most-Booked Private City Tour",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Private City Tour with Local Guide and Hotel Pick-up"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Private City Tour with Local Guide and Hotel Pick-up"],
+      ["data-src", "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private City Tour with Local Guide and Hotel Pick-up"],
+      ["data-src", "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private City Tour with Local Guide and Hotel Pick-up"],
+      ["data-src", "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private City Tour with Local Guide and Hotel Pick-up"],
+      ["data-src", "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private City Tour with Local Guide and Hotel Pick-up"],
+      ["data-src", "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private City Tour with Local Guide and Hotel Pick-up"],
+      ["data-src", "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private City Tour with Local Guide and Hotel Pick-up"],
+      ["data-src", "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private City Tour with Local Guide and Hotel Pick-up"],
+      ["data-src", "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private City Tour with Local Guide and Hotel Pick-up"],
+      ["data-src", "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-01.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-02.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-03.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-04.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-05.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-06.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-07.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-08.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-09.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/04-private-city-tour-guidehungary-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Guidehungary",
+    "⏱️ 2–8 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Central+Market+Hall+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Your accommodation"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/private-sightseeing-tour-of-budapest-for-small-groups-t40870/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Private City Tour with Local Guide and Hotel Pick-up"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.69",
+     "score": "4.7",
+     "meta": "215 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.7",
+       "count": "(215)",
+       "url": "https://www.getyourguide.com/budapest-l29/private-sightseeing-tour-of-budapest-for-small-groups-t40870/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">2 to 8 h, 9 am or 2 pm</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Timing:</strong> Suggested starts at 9 am and 2 pm; choose 2 to 8 hours."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗣️ <span class=\"bpa-lang-label\">English, Italian, German</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Guided in:</strong> English, Italian or German."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Hotel pick-up</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not stated</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> <span class=\"cd-ask\">ⓘ</span> no age limit given</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏨 <span class=\"bpa-lang-label\">From your reception</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Start:</strong> The usual meeting point is your accommodation's reception, with suggested starts at 9 am and 2 pm."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗺️ <span class=\"bpa-lang-label\">Castle to Heroes' Square</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> Castle District with Matthias Church and Fisherman's Bastion, the Citadel on Gellért Hill, the Central Market Hall, National Museum, Jewish Quarter, Andrássy Avenue, Heroes' Square, City Park, the Basilica and Parliament."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥨 <span class=\"bpa-lang-label\">Mini food tour add-on</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Optional:</strong> Ask for a quick tasting in the Central Market Hall: chimney cake, lángos and strudel. The guide also focuses on photo spots if you want."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€169 each</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> Per person, including the vehicle, guide and water. Entrance fees extra."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "📸 <span class=\"bpa-lang-label\">Classic and photogenic</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> The full checklist of sights, with a focus on the classic photo spots if you want it."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a long private day with a local guide who covers both banks, the Central Market Hall and the Jewish Quarter, with an optional market tasting",
+    "skip_html": "if you are on a budget: at €169 per person it is the priciest per-head tour here; #1 covers similar ground for €117.50"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is there hotel pickup?",
+      "a": "Your accommodation's reception; suggested starts 9 am and 2 pm."
+     },
+     {
+      "q": "What is included?",
+      "a": "Private tour by air-conditioned vehicle, pick-up and drop-off in Budapest, local guide, bottle of water."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Entrance fees."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "No smoking."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, Italian, German."
+     }
+    ]
+   },
+   "price": {
+    "main": "€169",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2–8 hours",
+      "price": "€169"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/private-sightseeing-tour-of-budapest-for-small-groups-t40870/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later", "Pickup included"],
+    "sublink": {
+     "url": "#item-4-private-city-tour-with-hotel-pick-up",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: Budapest: Half-Day Exclusive Highlights Private Tour by Tuk-Tuk -->\n",
+   "id": "card-5",
+   "cats": ["open"],
+   "gallery": {
+    "rank": {
+     "text": "🛺 #5 Best Tuk-Tuk Tour",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Half-Day Exclusive Highlights Private Tour by Tuk-Tuk"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Exclusive Highlights Private Tour by Tuk-Tuk"],
+      ["data-src", "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Exclusive Highlights Private Tour by Tuk-Tuk"],
+      ["data-src", "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Exclusive Highlights Private Tour by Tuk-Tuk"],
+      ["data-src", "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Exclusive Highlights Private Tour by Tuk-Tuk"],
+      ["data-src", "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Exclusive Highlights Private Tour by Tuk-Tuk"],
+      ["data-src", "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Exclusive Highlights Private Tour by Tuk-Tuk"],
+      ["data-src", "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Exclusive Highlights Private Tour by Tuk-Tuk"],
+      ["data-src", "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Exclusive Highlights Private Tour by Tuk-Tuk"],
+      ["data-src", "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Half-Day Exclusive Highlights Private Tour by Tuk-Tuk"],
+      ["data-src", "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-01.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-02.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-03.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-04.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-05.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-06.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-07.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-08.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-09.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/05-tuk-tuk-half-day-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Budapest TukTuk",
+    "⏱️ 4 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Budapest+TukTuk",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Hotel pick-up"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-half-day-exclusive-highlights-private-tour-t100305/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Half-Day Exclusive Highlights Private Tour by Tuk-Tuk"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.91",
+     "score": "4.9",
+     "meta": "94 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(94)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-half-day-exclusive-highlights-private-tour-t100305/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">4 hours</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Timing:</strong> A half day from your hotel and back. Bad weather: a new date or a full refund."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🇬🇧 <span class=\"bpa-lang-label\">English guide</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Guided in:</strong> English. Not suitable for pregnant women."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Little walking</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not stated</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> <span class=\"cd-ask\">ⓘ</span> no age limit given; <span class=\"cd-no\">✕</span> pregnant women</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🛺 <span class=\"bpa-lang-label\">Three-wheeler</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The ride:</strong> A private tuk-tuk with a local guide-driver. Sit back and the driver takes the hills, so nobody walks far."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏨 <span class=\"bpa-lang-label\">Hotel pick-up</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Logistics:</strong> Hotel pick-up and drop-off are included."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧣 <span class=\"bpa-lang-label\">Blankets + rain cover</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Comfort:</strong> Rain protection and blankets are on board. Food, drinks and tips are not included."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€154 each</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> Per person: €38.50 an hour. Food, drinks and tips are extra."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🌬️ <span class=\"bpa-lang-label\">Open-air, relaxed</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> Wind in your hair and viewpoints over the city; you sit back while the driver does the hills."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a relaxed half day where nobody walks far: a private tuk-tuk with a guide-driver, hotel pick-up and the viewpoints",
+    "skip_html": "if you are 4 or more: the Jeep (#3) costs €35 each at 6 people, against €154 per head here"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is there hotel pickup?",
+      "a": "Hotel pick-up and drop-off."
+     },
+     {
+      "q": "What is included?",
+      "a": "Local guide, rain protection and blankets, flexible itinerary, hotel pick-up and drop-off."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Food and drinks, tips."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Pregnant women."
+     },
+     {
+      "q": "What should I bring?",
+      "a": "Comfortable, weather-appropriate clothing."
+     }
+    ]
+   },
+   "price": {
+    "main": "€154",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "4 hours",
+      "price": "€154"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-half-day-exclusive-highlights-private-tour-t100305/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later", "Pickup included"],
+    "sublink": {
+     "url": "#item-5-half-day-private-tuk-tuk-tour",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #6: Budapest: Buda Castle Private Walking Tour -->\n",
+   "id": "card-6",
+   "cats": ["walk", "castle", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🏰 #6 Best Castle District Guide",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Buda Castle Private Walking Tour"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-private-tours-budapest/06-buda-castle-private-walk-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Private Walking Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/06-buda-castle-private-walk-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Private Walking Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/06-buda-castle-private-walk-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Private Walking Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/06-buda-castle-private-walk-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Private Walking Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/06-buda-castle-private-walk-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Private Walking Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/06-buda-castle-private-walk-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Private Walking Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/06-buda-castle-private-walk-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Private Walking Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/06-buda-castle-private-walk-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Private Walking Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/06-buda-castle-private-walk-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Private Walking Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/06-buda-castle-private-walk-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-private-tours-budapest/06-buda-castle-private-walk-01.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/06-buda-castle-private-walk-02.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/06-buda-castle-private-walk-03.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/06-buda-castle-private-walk-04.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/06-buda-castle-private-walk-05.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/06-buda-castle-private-walk-06.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/06-buda-castle-private-walk-07.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/06-buda-castle-private-walk-08.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/06-buda-castle-private-walk-09.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/06-buda-castle-private-walk-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Budapest Private Walks",
+    "⏱️ 3 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Buda+Castle+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Castle Hill"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/buda-castle-walking-tour-with-private-tour-guide-t30093/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Buda Castle Private Walking Tour"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.95",
+     "score": "4.9",
+     "meta": "49 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(49)",
+       "url": "https://www.getyourguide.com/budapest-l29/buda-castle-walking-tour-with-private-tour-guide-t30093/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">3 hours</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Timing:</strong> A 3-hour walk; extend into Watertown on request."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🇬🇧 <span class=\"bpa-lang-label\">English guide</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Guided in:</strong> English-speaking private guide. Entrance fees, food and tips are extra."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Not step-free</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-no\">✕</span> not for wheelchair users or limited mobility</span><span class=\"bpa-lang-note\">👶 <b>Stroller:</b> <span class=\"cd-no\">✕</span> not for babies under 1</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> <span class=\"cd-ask\">ⓘ</span> no minimum age given beyond babies under 1</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏰 <span class=\"bpa-lang-label\">13th century to 1945</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The story:</strong> From the 13th century and the 15th-century golden age through the Ottoman and Habsburg eras to the 1944–45 siege, told on the walls, at Matthias Church and Fisherman's Bastion."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌊 <span class=\"bpa-lang-label\">Watertown extension</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Optional:</strong> Extend the walk on request into Watertown, the narrow streets between the Danube and Castle Hill."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚐 <span class=\"bpa-lang-label\">Pick-up offered</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Start:</strong> Pick-up is listed; the details show when you check availability. Public transport costs are extra."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€20 each at 6</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Per person:</strong> €120 for the group: €20 each with 6, €30 with 4, €60 with 2."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "📜 <span class=\"bpa-lang-label\">History-deep</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> Cobbles, castle walls and 700 years of stories, with the best view of Pest from the walls."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for history lovers in a group of 3 to 6: a private guide on Castle Hill for €20–40 each, the cheapest private guide here per head",
+    "skip_html": "if you want the whole city: it covers the Castle District only; book #1 or #2 for both banks"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is there hotel pickup?",
+      "a": "Listed; details shown when you check availability."
+     },
+     {
+      "q": "What is included?",
+      "a": "Buda Castle walking tour, English-speaking private guide."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Public transport, entrance fees, food and drink, tips."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "People with mobility impairments, wheelchair users, babies under 1, pregnant women."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Up to 6 people, private."
+     }
+    ]
+   },
+   "price": {
+    "main": "€120",
+    "sub": "per group up to 6",
+    "rows": [
+     {
+      "label": "Per group up to 6",
+      "small": "3 hours",
+      "price": "€120"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/buda-castle-walking-tour-with-private-tour-guide-t30093/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-6-buda-castle-private-walk",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #7: Budapest: Private Electric Porsche Taycan City Tour -->\n",
+   "id": "card-7",
+   "cats": ["car"],
+   "gallery": {
+    "rank": {
+     "text": "🏎️ #7 Best Luxury Ride",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Private Electric Porsche Taycan City Tour"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-private-tours-budapest/07-porsche-taycan-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Porsche Taycan City Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/07-porsche-taycan-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Porsche Taycan City Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/07-porsche-taycan-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Porsche Taycan City Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/07-porsche-taycan-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Porsche Taycan City Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/07-porsche-taycan-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Porsche Taycan City Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/07-porsche-taycan-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Porsche Taycan City Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/07-porsche-taycan-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Porsche Taycan City Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/07-porsche-taycan-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Porsche Taycan City Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/07-porsche-taycan-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Porsche Taycan City Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/07-porsche-taycan-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-private-tours-budapest/07-porsche-taycan-01.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/07-porsche-taycan-02.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/07-porsche-taycan-03.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/07-porsche-taycan-04.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/07-porsche-taycan-05.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/07-porsche-taycan-06.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/07-porsche-taycan-07.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/07-porsche-taycan-08.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/07-porsche-taycan-09.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/07-porsche-taycan-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Porsche Taycan Experience",
+    "⏱️ 2.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Citadella+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Custom pick-up"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-private-electric-porsche-taycan-city-tour-t1174111/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Private Electric Porsche Taycan City Tour"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.82",
+     "score": "4.8",
+     "meta": "9 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(9)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-private-electric-porsche-taycan-city-tour-t1174111/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">2.5 hours</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Timing:</strong> A 2.5-hour drive with stops; pick-up and drop-off where you want."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗣️ <span class=\"bpa-lang-label\">English driver</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Language:</strong> An English-speaking professional driver explains the sights."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">13+</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not stated</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> <span class=\"cd-no\">✕</span> under 13</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏎️ <span class=\"bpa-lang-label\">Porsche Taycan 4S</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The car:</strong> A 100% electric Porsche Taycan 4S with a professional English-speaking driver who explains the sights."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗺️ <span class=\"bpa-lang-label\">Citadella + Parliament</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> A scenic loop with panoramic views from the Citadella and Andrássy Avenue and a photo stop at Parliament; the route can be tailored."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📍 <span class=\"bpa-lang-label\">Custom pick-up</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Logistics:</strong> Pick-up and drop-off where you want them. Parking, tolls and all vehicle costs are included."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏷️ <span class=\"bpa-lang-label\">From €78.91</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> Reduced from €83 per person. The final price depends on date and group."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🏎️ <span class=\"bpa-lang-label\">Smooth and exclusive</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A quiet electric sports car, panoramic stops and a route you can tailor."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for couples who want the sights from a Porsche Taycan with a private driver, for €78.91 each",
+    "skip_html": "if you travel with kids under 13, or want a licensed guide: the commentary comes from the driver"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is there hotel pickup?",
+      "a": "Custom pick-up and drop-off points."
+     },
+     {
+      "q": "What is included?",
+      "a": "Private tour, professional driver, all vehicle costs, parking fees and road tolls."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Drinks, photos."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Children under 13."
+     },
+     {
+      "q": "How long is it?",
+      "a": "2.5 hours."
+     }
+    ]
+   },
+   "price": {
+    "main": "€79",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2.5 hours",
+      "price": "€79"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€83</s>"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-private-electric-porsche-taycan-city-tour-t1174111/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later", "Pickup included"],
+    "sublink": {
+     "url": "#item-7-porsche-taycan-private-tour",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #8: Budapest: Private Electric Rickshaw Tour with Guide -->\n",
+   "id": "card-8",
+   "cats": ["open", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🚲 #8 Easiest on the Legs",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Private Electric Rickshaw Tour with Guide"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-private-tours-budapest/08-electric-rickshaw-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Rickshaw Tour with Guide"],
+      ["data-src", "/assets/best-private-tours-budapest/08-electric-rickshaw-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Rickshaw Tour with Guide"],
+      ["data-src", "/assets/best-private-tours-budapest/08-electric-rickshaw-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Rickshaw Tour with Guide"],
+      ["data-src", "/assets/best-private-tours-budapest/08-electric-rickshaw-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Rickshaw Tour with Guide"],
+      ["data-src", "/assets/best-private-tours-budapest/08-electric-rickshaw-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Rickshaw Tour with Guide"],
+      ["data-src", "/assets/best-private-tours-budapest/08-electric-rickshaw-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Rickshaw Tour with Guide"],
+      ["data-src", "/assets/best-private-tours-budapest/08-electric-rickshaw-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Rickshaw Tour with Guide"],
+      ["data-src", "/assets/best-private-tours-budapest/08-electric-rickshaw-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Rickshaw Tour with Guide"],
+      ["data-src", "/assets/best-private-tours-budapest/08-electric-rickshaw-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Electric Rickshaw Tour with Guide"],
+      ["data-src", "/assets/best-private-tours-budapest/08-electric-rickshaw-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-private-tours-budapest/08-electric-rickshaw-01.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/08-electric-rickshaw-02.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/08-electric-rickshaw-03.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/08-electric-rickshaw-04.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/08-electric-rickshaw-05.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/08-electric-rickshaw-06.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/08-electric-rickshaw-07.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/08-electric-rickshaw-08.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/08-electric-rickshaw-09.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/08-electric-rickshaw-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Budapest Bike Taxi",
+    "⏱️ 2–3 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=St+Stephen's+Basilica+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Pick-up in central Budapest"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-private-electric-rickshaw-tour-with-guide-t1387366/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Private Electric Rickshaw Tour with Guide"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "5.00",
+     "score": "5.0",
+     "meta": "2 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(2)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-private-electric-rickshaw-tour-with-guide-t1387366/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">2 to 3 hours</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Timing:</strong> 2 to 3 hours with a café stop; a coffee or beer stop can be added."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗣️ <span class=\"bpa-lang-label\">4 languages</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Guided in:</strong> English, Spanish, Portuguese or Hungarian."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Up to 3 per rickshaw</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not stated</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> <span class=\"cd-ask\">ⓘ</span> no age limit given; <span class=\"cd-no\">✕</span> pregnant women</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🛺 <span class=\"bpa-lang-label\">Quiet e-rickshaw</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The ride:</strong> A quiet electric rickshaw with panoramic views and a private guide. Nobody walks far."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗺️ <span class=\"bpa-lang-label\">Basilica to City Park</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> St Stephen's Basilica, Liberty Square, Parliament, Chain Bridge and Batthyány Square, Liberty Bridge, the Central Market Hall, Andrássy Avenue, the Opera, Heroes' Square, Vajdahunyad Castle and City Park, with a café stop."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "☕ <span class=\"bpa-lang-label\">Coffee or beer stop</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Add-on:</strong> A coffee or beer stop can be added. Food and drinks are not included."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€42.87 each at 3</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Per person:</strong> €128.62 for up to 3 people: €42.87 each with 3, €64.31 with 2. Reduced from €161."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🌿 <span class=\"bpa-lang-label\">Slow and easy</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A quiet electric ride with a live guide and time for photos; nobody walks far."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a couple or a family of 3 who want a guide without the walking: €42.87 each, with a live guide, both sides of the river and a café stop",
+    "skip_html": "if you want a long track record: the listing is new with 2 reviews (both 5 stars)"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Is there hotel pickup?",
+      "a": "2 pick-up options in central Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Private 3-hour electric rickshaw tour, private guide, flexible route."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Food and drinks."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Pregnant women."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, Spanish, Portuguese, Hungarian."
+     }
+    ]
+   },
+   "price": {
+    "main": "€129",
+    "sub": "per group up to 3",
+    "rows": [
+     {
+      "label": "Per group up to 3",
+      "small": "2–3 hours",
+      "price": "€129"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€161</s>"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-private-electric-rickshaw-tour-with-guide-t1387366/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later", "Pickup included"],
+    "sublink": {
+     "url": "#item-8-private-electric-rickshaw-tour",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #9: Budapest: Jewish Heritage Private Walking Tour -->\n",
+   "id": "card-9",
+   "cats": ["walk"],
+   "gallery": {
+    "rank": {
+     "text": "🕍 #9 Best Themed Private Walk",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Jewish Heritage Private Walking Tour"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-private-tours-budapest/09-jewish-heritage-private-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Jewish Heritage Private Walking Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/09-jewish-heritage-private-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Jewish Heritage Private Walking Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/09-jewish-heritage-private-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Jewish Heritage Private Walking Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/09-jewish-heritage-private-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Jewish Heritage Private Walking Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/09-jewish-heritage-private-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Jewish Heritage Private Walking Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/09-jewish-heritage-private-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Jewish Heritage Private Walking Tour"],
+      ["data-src", "/assets/best-private-tours-budapest/09-jewish-heritage-private-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-private-tours-budapest/09-jewish-heritage-private-01.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/09-jewish-heritage-private-02.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/09-jewish-heritage-private-03.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/09-jewish-heritage-private-04.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/09-jewish-heritage-private-05.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/09-jewish-heritage-private-06.avif"
+     },
+     {
+      "src": "/assets/best-private-tours-budapest/09-jewish-heritage-private-07.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Guydeez",
+    "⏱️ 3 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Kossuth+Lajos+utca+7+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Kossuth Lajos utca 7–9, District V"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-jewish-quarter-food-history-private-tasting-t1247665/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Jewish Heritage Private Walking Tour"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "5.00",
+     "score": "5.0",
+     "meta": "1 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(1)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-jewish-quarter-food-history-private-tasting-t1247665/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">3 hours</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Timing:</strong> A 3-hour walk, starting and ending at Kossuth Lajos utca 7–9."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗣️ <span class=\"bpa-lang-label\">4 languages</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Guided in:</strong> English, French, Italian or Spanish."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Walking tour</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not stated</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> <span class=\"cd-yes\">✓</span> families welcome</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🕍 <span class=\"bpa-lang-label\">6 sites</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> Dohány Street Synagogue, the Jewish Museum, the Raoul Wallenberg Holocaust Memorial Park, Gozsdu Court, the Carl Lutz Memorial and the Kazinczy Street Synagogue."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎟️ <span class=\"bpa-lang-label\">Interiors optional</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Tickets:</strong> By default the tour stays outside the synagogues; interior visits need separate tickets, and the team can book them for you."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥯 <span class=\"bpa-lang-label\">Kosher treat (Grand)</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Grand Tour option:</strong> Adds the Carl Lutz Memorial and ends with a treat at the glatt kosher Fröhlich bakery or a discount at Carmel restaurant."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€74.25 each</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> Per person, private. Synagogue and museum tickets are extra."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🕯️ <span class=\"bpa-lang-label\">Thoughtful, personal</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A private, unhurried walk through history, resistance and today's community life."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a private, focused walk through the Jewish Quarter with a guide in English, French, Italian or Spanish, with synagogue interiors added if you want",
+    "skip_html": "if you want the synagogue interiors without planning: tickets are separate; or a group tour in our <a href=\"/best-jewish-quarter-tours-budapest\">Jewish Quarter comparison</a> costs less"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "In front of Eurostars Budapest Center, Kossuth Lajos utca 7–9, 1053 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Private and exclusive walking tour, custom itinerary, tour guide, optional help booking synagogue tickets."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Synagogue and museum tickets, meals or drinks, tips, transport beyond walking distance."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, French, Italian, Spanish."
+     },
+     {
+      "q": "How long is it?",
+      "a": "3 hours."
+     }
+    ]
+   },
+   "price": {
+    "main": "€74",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "3 hours",
+      "price": "€74"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€83</s>"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-jewish-quarter-food-history-private-tasting-t1247665/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=private_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-9-jewish-heritage-private-walk",
+     "text": "Read Review ↓"
+    }
+   },
+   "_photo_topup": {
+    "skip": "the product's own listing gallery has only 7 photos, all used"
+   }
+  }
+ ]
+}
