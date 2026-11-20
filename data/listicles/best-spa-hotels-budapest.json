@@ -1,0 +1,1816 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["thermal", "river", "value"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Thermal Spa Hotel",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Ensana Thermal Margaret Island"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-spa-hotels-budapest/01-ensana-thermal-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Ensana Thermal Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/01-ensana-thermal-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Thermal Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/01-ensana-thermal-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Thermal Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/01-ensana-thermal-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Thermal Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/01-ensana-thermal-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Thermal Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/01-ensana-thermal-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Thermal Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/01-ensana-thermal-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Thermal Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/01-ensana-thermal-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Thermal Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/01-ensana-thermal-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Thermal Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/01-ensana-thermal-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-spa-hotels-budapest/01-ensana-thermal-01.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/01-ensana-thermal-02.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/01-ensana-thermal-03.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/01-ensana-thermal-04.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/01-ensana-thermal-05.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/01-ensana-thermal-06.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/01-ensana-thermal-07.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/01-ensana-thermal-08.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/01-ensana-thermal-09.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/01-ensana-thermal-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Ensana+Thermal+Margaret+Island+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District XIII, Margaret Island"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-thermal&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitsziget.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Ensana Thermal Margaret Island"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.50",
+     "score": "9.0",
+     "meta": "7.9k+ reviews · 1 site",
+     "heading": "Rating on Booking.com (out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.0",
+       "count": "(7.9k+)",
+       "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-thermal&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitsziget.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM, check-out until 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌳 <span class=\"bpa-lang-label\">Margaret Island</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On the quiet, green northern half of Margaret Island, 2.5 miles from downtown; the Japanese Garden is 200 ft away."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "♨️ <span class=\"bpa-lang-label\">Thermal spa included</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Free for guests:</strong> A thermal pool, a recreational pool, a 56 ft swimming pool, a seasonal outdoor pool, several saunas and a steam room."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Excellent</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast excellent. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🩺 <span class=\"bpa-lang-label\">Medical centre</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Treatments:</strong> Personalised treatment programmes for joint, back and neck pain, stress and weight problems, from a few days to several weeks, at extra cost."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€111 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.7/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🌿 <span class=\"bpa-lang-label\">Quiet and green</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A modern spa hotel in the park, away from traffic."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for real thermal water in the building, free for guests, at €111 a night with a 56 ft pool and saunas",
+    "skip_html": "if you want to walk to the sights: it is 2.5 miles from downtown on Margaret Island"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1007 Budapest, Margitsziget (District XIII, Margaret Island)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it excellent; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Spa and wellness centre, 3 pools (indoor, outdoor, heated), hot tub."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM; check-out until 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Margaret Island Japanese Garden (200 ft), Víztorony (650 ft), Domonkos Kolostor és templom Romjai (1,650 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€111",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9/10 guest score",
+      "price": "€111"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-thermal&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitsziget.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": ["<b>Guest score 9/10</b> from 7,917 reviews", "<b>Location</b> rated 9.3/10 by guests"],
+    "sublink": {
+     "url": "#item-1-ensana-thermal-margaret-island",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: Kozmo Hotel Suites &amp; Spa, Small Luxury Hotels of the World -->\n",
+   "id": "card-2",
+   "cats": ["central"],
+   "gallery": {
+    "rank": {
+     "text": "🥈 #2 Best-Rated Spa Hotel",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      ["alt", "Kozmo Hotel Suites & Spa, Small Luxury Hotels of the World"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-spa-hotels-budapest/02-kozmo-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Kozmo Hotel Suites & Spa, Small Luxury Hotels of the World"],
+      ["data-src", "/assets/best-spa-hotels-budapest/02-kozmo-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Kozmo Hotel Suites & Spa, Small Luxury Hotels of the World"],
+      ["data-src", "/assets/best-spa-hotels-budapest/02-kozmo-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Kozmo Hotel Suites & Spa, Small Luxury Hotels of the World"],
+      ["data-src", "/assets/best-spa-hotels-budapest/02-kozmo-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Kozmo Hotel Suites & Spa, Small Luxury Hotels of the World"],
+      ["data-src", "/assets/best-spa-hotels-budapest/02-kozmo-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Kozmo Hotel Suites & Spa, Small Luxury Hotels of the World"],
+      ["data-src", "/assets/best-spa-hotels-budapest/02-kozmo-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Kozmo Hotel Suites & Spa, Small Luxury Hotels of the World"],
+      ["data-src", "/assets/best-spa-hotels-budapest/02-kozmo-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Kozmo Hotel Suites & Spa, Small Luxury Hotels of the World"],
+      ["data-src", "/assets/best-spa-hotels-budapest/02-kozmo-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Kozmo Hotel Suites & Spa, Small Luxury Hotels of the World"],
+      ["data-src", "/assets/best-spa-hotels-budapest/02-kozmo-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Kozmo Hotel Suites & Spa, Small Luxury Hotels of the World"],
+      ["data-src", "/assets/best-spa-hotels-budapest/02-kozmo-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-spa-hotels-budapest/02-kozmo-01.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/02-kozmo-02.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/02-kozmo-03.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/02-kozmo-04.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/02-kozmo-05.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/02-kozmo-06.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/02-kozmo-07.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/02-kozmo-08.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/02-kozmo-09.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/02-kozmo-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "5-star hotel",
+    "🛏️ 9.5/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Kozmo+Hotel+Suites+&+Spa,+Small+Luxury+Hotels+of+the+World+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VIII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-kozmo&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fkozmo-budapest.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Kozmo Hotel Suites &amp; Spa, Small Luxury Hotels of the World"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.75",
+     "score": "9.5",
+     "meta": "3.1k+ reviews · 1 site",
+     "heading": "Rating on Booking.com (out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.5",
+       "count": "(3.1k+)",
+       "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-kozmo&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fkozmo-budapest.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Times on booking page</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in and check-out times are shown on the booking page for the room you pick."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Rákóczi tér</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 1,650 ft on foot to Rákóczi tér station."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-yes\">✓</span> listed as wheelchair accessible</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧖 <span class=\"bpa-lang-label\">Pool, sauna, hot tub</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> An indoor swimming pool, sauna, hot tub and massage in the spa, plus a fitness centre."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Very good</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast very good. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏛️ <span class=\"bpa-lang-label\">Horváth Mihály tér</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Neighbourhood:</strong> District VIII (Palace Quarter), a 14-minute walk from the Hungarian National Museum."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€163 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🕯️ <span class=\"bpa-lang-label\">Intimate and modern</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A 5-star in an old building, rated 9.5; free Wi-Fi rated 9.7."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the best-rated spa stay in town (9.5) with an indoor pool, sauna and hot tub, a short walk from the centre",
+    "skip_html": "if you want thermal water: the pool is not thermal; see Ensana (#1)"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1082 Budapest, 17 Horváth Mihály tér (District VIII); 1,650 ft walk to Rákóczi tér metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it very good; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Spa and wellness centre, indoor pool, hot tub."
+     },
+     {
+      "q": "Is there parking?",
+      "a": "Valet, Parking garage, Accessible."
+     },
+     {
+      "q": "Anything to know before booking?",
+      "a": "Listed as wheelchair accessible; airport shuttle available at extra cost."
+     }
+    ]
+   },
+   "price": {
+    "main": "€163",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.5/10 guest score",
+      "price": "€163"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-kozmo&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fkozmo-budapest.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": ["<b>Guest score 9.5/10</b> from 3,137 reviews"],
+    "sublink": {
+     "url": "#item-2-kozmo-hotel-suites-spa",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #3: Queen&#x27;s Court Hotel &amp; Residence -->\n",
+   "id": "card-3",
+   "cats": ["central", "value"],
+   "gallery": {
+    "rank": {
+     "text": "🥉 #3 Best Spa Suites",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      ["alt", "Queen's Court Hotel & Residence"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-spa-hotels-budapest/03-queens-court-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Queen's Court Hotel & Residence"],
+      ["data-src", "/assets/best-spa-hotels-budapest/03-queens-court-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Queen's Court Hotel & Residence"],
+      ["data-src", "/assets/best-spa-hotels-budapest/03-queens-court-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Queen's Court Hotel & Residence"],
+      ["data-src", "/assets/best-spa-hotels-budapest/03-queens-court-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Queen's Court Hotel & Residence"],
+      ["data-src", "/assets/best-spa-hotels-budapest/03-queens-court-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Queen's Court Hotel & Residence"],
+      ["data-src", "/assets/best-spa-hotels-budapest/03-queens-court-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Queen's Court Hotel & Residence"],
+      ["data-src", "/assets/best-spa-hotels-budapest/03-queens-court-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Queen's Court Hotel & Residence"],
+      ["data-src", "/assets/best-spa-hotels-budapest/03-queens-court-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Queen's Court Hotel & Residence"],
+      ["data-src", "/assets/best-spa-hotels-budapest/03-queens-court-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Queen's Court Hotel & Residence"],
+      ["data-src", "/assets/best-spa-hotels-budapest/03-queens-court-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-spa-hotels-budapest/03-queens-court-01.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/03-queens-court-02.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/03-queens-court-03.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/03-queens-court-04.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/03-queens-court-05.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/03-queens-court-06.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/03-queens-court-07.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/03-queens-court-08.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/03-queens-court-09.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/03-queens-court-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "5-star hotel",
+    "🛏️ 9.2/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Queen's+Court+Hotel+&+Residence+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-queens-court&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fqueen-s-court-residence.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Queen's Court Hotel &amp; Residence"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.60",
+     "score": "9.2",
+     "meta": "5k+ reviews · 1 site",
+     "heading": "Rating on Booking.com (out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.2",
+       "count": "(5k+)",
+       "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-queens-court&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fqueen-s-court-residence.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM, check-out until From 6:00 AM to 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Oktogon</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 1,750 ft on foot to Oktogon station. Guests rate the location 9.1/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧖 <span class=\"bpa-lang-label\">Indoor pool + jacuzzi</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> A quiet spa area with an indoor pool (26 × 14 ft) and a jacuzzi, plus a fitness centre and a courtyard garden."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🛋️ <span class=\"bpa-lang-label\">Suites with kitchenettes</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rooms:</strong> Spacious, individually designed suites with balconies, air conditioning and kitchenettes; some with a living room and dining area."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Excellent</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast excellent. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€120 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 9.0/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🌿 <span class=\"bpa-lang-label\">Calm courtyard</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A quiet garden in the courtyard and the Chess Restaurant &amp; Bar."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a central spa stay in a suite with a kitchenette, at €120 with a 9.0 value-for-money score",
+    "skip_html": "if you want a big pool: it is 26 × 14 ft, made for a soak"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1074 Budapest, Dob utca 63. (District VII); 1,750 ft walk to Oktogon metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it excellent; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Spa and wellness centre, indoor pool, hot tub."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM; check-out until From 6:00 AM to 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Blaha Lujza Square (2,300 ft), House of Terror (2,650 ft), Liszt Ferenc Memorial Museum (2,700 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€120",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9.2/10 guest score",
+      "price": "€120"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-queens-court&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fqueen-s-court-residence.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": ["<b>Guest score 9.2/10</b> from 5,050 reviews", "<b>Location</b> rated 9.1/10 by guests"],
+    "sublink": {
+     "url": "#item-3-queen-s-court-hotel",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: Danubius Hotel Helia -->\n",
+   "id": "card-4",
+   "cats": ["river", "value"],
+   "gallery": {
+    "rank": {
+     "text": "🌊 #4 Best River View Pool",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Danubius Hotel Helia"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-spa-hotels-budapest/04-helia-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Danubius Hotel Helia"],
+      ["data-src", "/assets/best-spa-hotels-budapest/04-helia-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Danubius Hotel Helia"],
+      ["data-src", "/assets/best-spa-hotels-budapest/04-helia-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Danubius Hotel Helia"],
+      ["data-src", "/assets/best-spa-hotels-budapest/04-helia-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Danubius Hotel Helia"],
+      ["data-src", "/assets/best-spa-hotels-budapest/04-helia-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Danubius Hotel Helia"],
+      ["data-src", "/assets/best-spa-hotels-budapest/04-helia-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Danubius Hotel Helia"],
+      ["data-src", "/assets/best-spa-hotels-budapest/04-helia-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Danubius Hotel Helia"],
+      ["data-src", "/assets/best-spa-hotels-budapest/04-helia-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Danubius Hotel Helia"],
+      ["data-src", "/assets/best-spa-hotels-budapest/04-helia-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Danubius Hotel Helia"],
+      ["data-src", "/assets/best-spa-hotels-budapest/04-helia-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-spa-hotels-budapest/04-helia-01.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/04-helia-02.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/04-helia-03.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/04-helia-04.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/04-helia-05.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/04-helia-06.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/04-helia-07.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/04-helia-08.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/04-helia-09.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/04-helia-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "4-star hotel",
+    "🛏️ 9/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Danubius+Hotel+Helia+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District XIII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-helia&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhelia.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Danubius Hotel Helia"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.50",
+     "score": "9.0",
+     "meta": "13k+ reviews · 1 site",
+     "heading": "Rating on Booking.com (out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "9.0",
+       "count": "(13k+)",
+       "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-helia&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhelia.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Times on booking page</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in and check-out times are shown on the booking page for the room you pick."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌊 <span class=\"bpa-lang-label\">Riverside, District XIII</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On the Danube bank opposite Margaret Island; the listing gives about 15 minutes to the historic centre."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-yes\">✓</span> listed as wheelchair accessible</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧖 <span class=\"bpa-lang-label\">2 heated pools</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> Two indoor heated pools, spa and wellness centre, hot tub and a 2-storey fitness club with river views. The sauna is not coed; medical treatments cost extra."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏞️ <span class=\"bpa-lang-label\">Danube-view rooms</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rooms:</strong> Non-smoking rooms, most of them facing the Danube, Margaret Island and the Buda hills."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Wonderful</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast wonderful. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€100 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🏊 <span class=\"bpa-lang-label\">Fitness-minded</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A large pool and a 2-storey fitness club; car and bus parking outside."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the cheapest spa stay here (€100) with two heated pools and a river view, backed by almost 13,000 reviews",
+    "skip_html": "if you want to walk to the sights: plan on transport for the 1.9 miles to downtown"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1133 Budapest, Kárpát u. 62-64. (District XIII)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it wonderful; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Spa and wellness centre, 2 pools (indoor, heated), hot tub."
+     },
+     {
+      "q": "Is there parking?",
+      "a": "Street, Accessible."
+     },
+     {
+      "q": "Anything to know before booking?",
+      "a": "Listed as wheelchair accessible; airport shuttle available at extra cost."
+     }
+    ]
+   },
+   "price": {
+    "main": "€100",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "9/10 guest score",
+      "price": "€100"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-helia&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhelia.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": ["<b>Guest score 9/10</b> from 12,998 reviews"],
+    "sublink": {
+     "url": "#item-4-danubius-hotel-helia",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: Corinthia Budapest -->\n",
+   "id": "card-5",
+   "cats": ["central"],
+   "gallery": {
+    "rank": {
+     "text": "👑 #5 Best Grand Hotel Spa",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Corinthia Budapest"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-spa-hotels-budapest/05-corinthia-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Corinthia Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/05-corinthia-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Corinthia Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/05-corinthia-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Corinthia Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/05-corinthia-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Corinthia Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/05-corinthia-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Corinthia Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/05-corinthia-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Corinthia Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/05-corinthia-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Corinthia Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/05-corinthia-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Corinthia Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/05-corinthia-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Corinthia Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/05-corinthia-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-spa-hotels-budapest/05-corinthia-01.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/05-corinthia-02.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/05-corinthia-03.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/05-corinthia-04.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/05-corinthia-05.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/05-corinthia-06.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/05-corinthia-07.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/05-corinthia-08.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/05-corinthia-09.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/05-corinthia-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "5-star hotel",
+    "🛏️ 8.9/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Corinthia+Budapest+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-corinthia&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcorinthiaroyal.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Corinthia Budapest"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.45",
+     "score": "8.9",
+     "meta": "6.4k+ reviews · 1 site",
+     "heading": "Rating on Booking.com (out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.9",
+       "count": "(6.4k+)",
+       "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-corinthia&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcorinthiaroyal.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM, check-out until 12:00 PM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Oktogon</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 1,250 ft on foot to Oktogon station. Guests rate the location 9.2/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🎟️ <b>Kids:</b> under-16s use the pool and spa tub 9 am to 3 pm only, with an adult</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧖 <span class=\"bpa-lang-label\">Royal Spa + pool</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> The Royal Spa with an indoor pool, hot tub and massage."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏛️ <span class=\"bpa-lang-label\">1800s grand hotel</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The building:</strong> Walls standing since the late 1800s on the Grand Boulevard, restored as a 5-star with the Royal Spa."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Excellent</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast excellent. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€145 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.6/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🎩 <span class=\"bpa-lang-label\">Classic grandeur</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A historic 5-star on the Grand Boulevard, 1,250 ft from Oktogon."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a 5-star grand hotel with a spa and pool for €145, central on the Grand Boulevard",
+    "skip_html": "if you travel with young kids who want to swim after 3 pm: under-16s can only use the pool 9 am to 3 pm"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1073 Budapest, Erzsébet körút 43-49. (District VII); 1,250 ft walk to Oktogon metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it excellent; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Spa and wellness centre, indoor pool, hot tub."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM; check-out until 12:00 PM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "House of Terror (2,100 ft), Liszt Ferenc Memorial Museum (2,150 ft), Blaha Lujza Square (2,500 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€145",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "8.9/10 guest score",
+      "price": "€145"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-corinthia&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcorinthiaroyal.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": ["<b>Guest score 8.9/10</b> from 6,437 reviews", "<b>Location</b> rated 9.2/10 by guests"],
+    "sublink": {
+     "url": "#item-5-corinthia-budapest",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #6: Continental Hotel Budapest -->\n",
+   "id": "card-6",
+   "cats": ["central", "value"],
+   "gallery": {
+    "rank": {
+     "text": "☀️ #6 Best Rooftop Pool",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Continental Hotel Budapest"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-spa-hotels-budapest/06-continental-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Continental Hotel Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/06-continental-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Continental Hotel Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/06-continental-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Continental Hotel Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/06-continental-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Continental Hotel Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/06-continental-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Continental Hotel Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/06-continental-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Continental Hotel Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/06-continental-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Continental Hotel Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/06-continental-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Continental Hotel Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/06-continental-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Continental Hotel Budapest"],
+      ["data-src", "/assets/best-spa-hotels-budapest/06-continental-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-spa-hotels-budapest/06-continental-01.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/06-continental-02.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/06-continental-03.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/06-continental-04.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/06-continental-05.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/06-continental-06.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/06-continental-07.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/06-continental-08.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/06-continental-09.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/06-continental-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Hotel",
+    "🛏️ 8.7/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Continental+Hotel+Budapest+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District VII"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-continental&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcontinental-budapest.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Continental Hotel Budapest"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.35",
+     "score": "8.7",
+     "meta": "7.3k+ reviews · 1 site",
+     "heading": "Rating on Booking.com (out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.7",
+       "count": "(7.3k+)",
+       "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-continental&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcontinental-budapest.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM to 11:30 PM, check-out until From 8:00 AM to 12:00 PM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚇 <span class=\"bpa-lang-label\">Blaha Lujza tér</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> About 500 ft on foot to Blaha Lujza tér station. Guests rate the location 9.1/10."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-yes\">✓</span> listed as wheelchair accessible</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-yes\">✓</span> welcome, fees may apply</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧖 <span class=\"bpa-lang-label\">Rooftop + indoor pool</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Wellness:</strong> An indoor pool and a heated rooftop pool (outdoor, summer months only), sauna and infrared cabin, plus a fitness room."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏛️ <span class=\"bpa-lang-label\">Former Hungária Bath</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The building:</strong> Opened in 2010 on the site of the old Hungária Bath, a protected Art Nouveau building; rooms are Art Deco style."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Excellent</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast excellent. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€97 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.6/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🏙️ <span class=\"bpa-lang-label\">Jewish Quarter base</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> On Dohány utca, 500 ft from Blaha Lujza tér and 1,850 ft from the Dohány Street Synagogue."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a rooftop pool in summer and an indoor pool all year, in the Jewish Quarter, for €97",
+    "skip_html": "if you are coming in winter mainly for the rooftop: it is summer-only"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1074 Budapest, Dohány u. 42-44 (District VII); 500 ft walk to Blaha Lujza tér metro."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it excellent; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Spa and wellness centre, 2 pools (indoor, outdoor, rooftop, heated), sauna."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM to 11:30 PM; check-out until From 8:00 AM to 12:00 PM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Blaha Lujza Square (800 ft), Dohány Utcai Zsinagóga (1,850 ft), Károlyi Garden (3,050 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€97",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "8.7/10 guest score",
+      "price": "€97"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-continental&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcontinental-budapest.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": ["<b>Guest score 8.7/10</b> from 7,304 reviews", "<b>Location</b> rated 9.1/10 by guests"],
+    "sublink": {
+     "url": "#item-6-continental-hotel-budapest",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #7: Ensana Grand Margaret Island -->\n",
+   "id": "card-7",
+   "cats": ["thermal", "river", "value"],
+   "gallery": {
+    "rank": {
+     "text": "🏰 #7 Best Historic Thermal Hotel",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Ensana Grand Margaret Island"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-spa-hotels-budapest/07-ensana-grand-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Ensana Grand Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/07-ensana-grand-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Grand Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/07-ensana-grand-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Grand Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/07-ensana-grand-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Grand Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/07-ensana-grand-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Grand Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/07-ensana-grand-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Grand Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/07-ensana-grand-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Grand Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/07-ensana-grand-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Grand Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/07-ensana-grand-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Ensana Grand Margaret Island"],
+      ["data-src", "/assets/best-spa-hotels-budapest/07-ensana-grand-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-spa-hotels-budapest/07-ensana-grand-01.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/07-ensana-grand-02.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/07-ensana-grand-03.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/07-ensana-grand-04.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/07-ensana-grand-05.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/07-ensana-grand-06.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/07-ensana-grand-07.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/07-ensana-grand-08.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/07-ensana-grand-09.avif"
+     },
+     {
+      "src": "/assets/best-spa-hotels-budapest/07-ensana-grand-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Hotel",
+    "🛏️ 8.9/10 guest score",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Ensana+Grand+Margaret+Island+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 District XIII, Margaret Island"
+    }
+   ],
+   "title": {
+    "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-grand&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitszigetgrand.html&campaign_id=84",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Ensana Grand Margaret Island"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.45",
+     "score": "8.9",
+     "meta": "6.6k+ reviews · 1 site",
+     "heading": "Rating on Booking.com (out of 10)",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "Booking.com",
+       "score": "8.9",
+       "count": "(6.6k+)",
+       "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-grand&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitszigetgrand.html&campaign_id=84",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank",
+       "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang bpa-time",
+     "summary_html": "🕒 <span class=\"bpa-lang-label\">Check-in 3:00 PM</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Times:</strong> Check-in from 3:00 PM, check-out until 11:00 AM."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌳 <span class=\"bpa-lang-label\">Margaret Island</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting around:</strong> On the northern half of Margaret Island, 2.4 miles from downtown; the water tower is 50 ft away."
+    },
+    {
+     "cls": "bpa-lang cd-access",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Access &amp; pets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> <span class=\"bpa-lang-note\">♿ <b>Wheelchair:</b> <span class=\"cd-ask\">ⓘ</span> not listed; ask the hotel</span><span class=\"bpa-lang-note\">🐕 <b>Pets:</b> <span class=\"cd-ask\">ⓘ</span> not listed</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "♨️ <span class=\"bpa-lang-label\">Tunnel to thermal spa</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Spa access:</strong> A heated underground hall connects the hotel to the Ensana Thermal spa next door: thermal pool, recreational pool, 56 ft pool, seasonal outdoor pool, saunas and steam room, free for guests."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏰 <span class=\"bpa-lang-label\">Built in 1873</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The building:</strong> A 19th-century hotel on the quiet, green Margaret Island, with its own spa area for treatments."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍳 <span class=\"bpa-lang-label\">Breakfast: Excellent</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Breakfast:</strong> Guests rate the breakfast excellent. Check whether your rate includes it."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€104 a night</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Price:</strong> For 2 adults, 1 night on a March weeknight (10–11 March 2027). Guests rate value for money 8.7/10. Prices change by date and room."
+    },
+    {
+     "cls": "bpa-lang fbm-vibe",
+     "summary_html": "🕰️ <span class=\"bpa-lang-label\">Old-world and peaceful</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What it feels like:</strong> A historic building in the park, with the modern spa next door."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for the same thermal spa as #1 from a historic 1873 building, €7 cheaper per night",
+    "skip_html": "if you want the spa under the same roof: it is reached through a heated tunnel"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where exactly is it?",
+      "a": "1007 Budapest, Margitsziget (District XIII, Margaret Island)."
+     },
+     {
+      "q": "Is breakfast included?",
+      "a": "Guests rate it excellent; whether it is included depends on the rate you choose."
+     },
+     {
+      "q": "Is there a pool or spa?",
+      "a": "Spa and wellness centre, 3 pools (indoor, outdoor, heated), hot tub."
+     },
+     {
+      "q": "What are the check-in and check-out times?",
+      "a": "From 3:00 PM; check-out until 11:00 AM."
+     },
+     {
+      "q": "What is within walking distance?",
+      "a": "Víztorony (50 ft), Margaret Island Japanese Garden (800 ft), Domonkos Kolostor és templom Romjai (1,200 ft)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€104",
+    "sub": "per night, 2 guests",
+    "rows": [
+     {
+      "label": "Per night, 2 guests",
+      "small": "8.9/10 guest score",
+      "price": "€104"
+     }
+    ],
+    "note": "Cancellation terms depend on the rate you choose. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-grand&trs=204442&p=2076&u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitszigetgrand.html&campaign_id=84",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via Booking.com",
+    "trust": ["<b>Guest score 8.9/10</b> from 6,630 reviews", "<b>Location</b> rated 9.3/10 by guests"],
+    "sublink": {
+     "url": "#item-7-ensana-grand-margaret-island",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}
