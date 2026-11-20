@@ -80,9 +80,14 @@ def fetch_photos(spec, slug):
 
 
 # ------------------------------------------------------------------ fragments
+PILL_KIND = {"time": " bpa-time", "access": " cd-access", "vibe": " fbm-vibe"}
+PILLS_MIN, PILLS_MAX = 6, 8   # river cruise card: two full rows of pills
+
+
 def pill_html(p):
     note = f'<span class="bpa-lang-note">{p["note"]}</span>' if p.get("note") else ""
-    return (f'<details class="bpa-lang"><summary class="bpa-sp">{p["emoji"]} <span class="bpa-lang-label">{E(p["label"])}</span>'
+    kind = PILL_KIND.get(p.get("kind", ""), "")
+    return (f'<details class="bpa-lang{kind}"><summary class="bpa-sp">{p["emoji"]} <span class="bpa-lang-label">{E(p["label"])}</span>'
             f'<span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>{E(p["lead"])}</strong> '
             f'{p["body"]}{note}</div></details>')
 
@@ -124,7 +129,9 @@ def kicker_html(it):
 
 
 def card_html(n, it, gyg_icon):
-    pills = "\n".join(pill_html(p) for p in it["pills"][:8])
+    if not PILLS_MIN <= len(it["pills"]) <= PILLS_MAX:
+        sys.exit(f'card {n} ({it["title"][:40]}): {len(it["pills"])} pills, need {PILLS_MIN}-{PILLS_MAX} (river cruise card)')
+    pills = "\n".join(pill_html(p) for p in it["pills"])
     was = ""
     if it.get("price_was") and float(it["price_was"]) > float(it["price"]):
         pct = round((1 - float(it["price"]) / float(it["price_was"])) * 100)
