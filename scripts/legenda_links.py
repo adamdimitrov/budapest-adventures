@@ -1,6 +1,6 @@
-"""Legenda booking links: every Legenda CTA goes to the Legenda home page
-(https://legenda.hu/en?partner=38585), not the ticket-purchase checkout, on every
-language version, with partner=38585 only (no subid).
+"""Legenda booking links: every Legenda CTA goes to the Legenda home page (not the
+ticket-purchase checkout) in the page's language, with partner=38585 only (no subid).
+Languages Legenda has no localized site for fall back to the English home page.
 
     from legenda_links import localize, ticket_url
     html = localize(html, lang)   # rewrites any Legenda home/product/ticket link to the home page
@@ -28,12 +28,14 @@ LEGENDA_BOOKING = re.compile(
     r"https?://(?:www\.)?legenda\.hu(?:/[a-z]{2}(?:/(?:%s))?)?/?\?partner=\d+(?:&(?:amp;)?subid=[\w-]+)?" % _SLUGS)
 
 
-HOME_URL = "https://legenda.hu/en?partner=%s" % PARTNER
+HOME_LANGS = {"hu", "en", "fr", "de", "it", "es", "ru", "zh", "ja"}
 
 
-def ticket_url(lang):
-    # Kept for callers; every language gets the English home page (the old links).
-    return HOME_URL
+def home_url(lang):
+    return "https://legenda.hu/%s?partner=%s" % (lang if lang in HOME_LANGS else "en", PARTNER)
+
+
+ticket_url = home_url  # old name, kept for callers
 
 
 def localize(text, lang):
