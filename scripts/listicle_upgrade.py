@@ -98,7 +98,12 @@ def cut(src, open_re, tagname):
 
 
 # ------------------------------------------------------------------ old card -> card data
+TRUST_MAP = {"Instant QR": "<b>Instant QR ticket</b> on your phone",
+             "Free 24h Cancellation": "<b>Free cancellation</b> up to 24 h before, full refund"}
+
+
 def trust_line(t):
+    t = TRUST_MAP.get(t.strip(), t)
     t = re.sub(r"^\s*✓\s*", "", t).strip()
     for key in ("Instant mobile ticket", "Free cancellation", "Reserve now", "Pay nothing today", "Free date change", "Change your date",
                 "Best price", "Instant confirmation", "Skip the line", "Mobile ticket", "Pay at the property",
@@ -152,6 +157,12 @@ def all_nodes(n, cls):
     return out
 
 
+REF_ICONS = json.load(open(os.path.join(ROOT, "data", "listicles", "best-budapest-river-cruises.json"),
+                           encoding="utf-8"))["icons"]
+HOST_OF = {"GetYourGuide": "getyourguide", "Viator": "viator", "Tripadvisor": "tripadvisor", "Tiqets": "tiqets",
+           "Booking.com": "booking", "Hostelworld": "hostelworld"}
+
+
 def ratings_fallback(blk):
     """Star summary from either the newer popover (with an extra note) or the old icon-badge row."""
     sites = []
@@ -163,6 +174,8 @@ def ratings_fallback(blk):
         icon = re.search(r'src="([^"]*)"', img.start).group(1) if img is not None else None
         alt = (re.search(r'alt="([^"]+)"', img.start) or [None, None])[1] if img is not None else None
         site = name.inner().strip() if name is not None else alt
+        if not site and icon:
+            site = next((k for k, v in REF_ICONS.items() if v == _html.unescape(icon)), None)
         if not site and href:
             site = next((v for k, v in SITE_BY_HOST if k in href), None)
         if not site and icon:
@@ -171,8 +184,14 @@ def ratings_fallback(blk):
             continue
         d = {"kind": "link" if href else "static", "site": site, "score": text(score),
              "count": text(count) if count is not None else ""}
+        if "review" in d["count"]:
+            d["count"] = "(" + fmt_count(parse_count(d["count"])) + ("" if parse_count(d["count"]) >= 1000 else "+") + ")"
         if d["count"] and not d["count"].startswith("("):
             d["count"] = "(" + d["count"] + ")"
+        host = HOST_OF.get(site)
+        if href and host and host not in href and not (host in ("viator",) and "tp.media" in href):
+            href = None  # a badge must link to its own site's listing of the exact product
+            d["kind"] = "static"
         if href:
             d.update({"url": href, "rel": "noopener nofollow sponsored", "target": "_blank"})
         if icon and site not in ("GetYourGuide", "Viator", "Tripadvisor"):
@@ -325,7 +344,7 @@ def old_card(node, icons):
         cta["via"] = via.inner()
     tr = find(cell, "bpa-trust2") or find(cell, "bpa-trust-micro")
     if tr is not None:
-        cta["trust"] = [trust_line(sp.inner()) for sp in kids(tr, tag="span")]
+        cta["trust"] = [trust_line(sp.inner()) for sp in kids(tr, tag="span") if sp.inner().strip() not in ("•", "")]
     subs = kids(cell, "bpa-sublink", "a")
     if subs:
         cta["sublink"] = {"url": subs[0].a()["href"], "text": subs[0].inner()}
