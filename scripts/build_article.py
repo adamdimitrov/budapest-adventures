@@ -303,7 +303,8 @@ def build(spec_path, photos):
                 it["link"] = tiqets_link(it["link"], spec.get("cmp", slug))
         elif not it["link"].startswith("http") or "partner_id" not in it["link"]:
             it["link"] = gyg_link(it["link"], spec.get("cmp", slug))
-    raw = SHELL.read_text(encoding="utf-8")
+    import day_trips_shell  # frozen pre-listicle shell
+    raw = day_trips_shell.read()
     s = BeautifulSoup(raw, "html.parser")
     gyg_icon = s.select_one('img.bpa-rev-icon[alt="GetYourGuide"]')["src"]
     for it in spec["items"]:

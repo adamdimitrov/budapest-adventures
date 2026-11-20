@@ -1,0 +1,2299 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["full", "u100", "small"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 MazakEV",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Visegrád Castle above the Danube Bend in morning mist"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/day-trips-2026/danube-forest-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Visegrád Castle above the Danube Bend in morning mist"],
+      ["data-src", "/assets/day-trips-2026/danube-forest-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Visegrád Castle above the Danube Bend in morning mist"],
+      ["data-src", "/assets/day-trips-2026/danube-forest-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Visegrád Castle above the Danube Bend in morning mist"],
+      ["data-src", "/assets/day-trips-2026/danube-forest-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Visegrád Castle above the Danube Bend in morning mist"],
+      ["data-src", "/assets/day-trips-2026/danube-forest-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/day-trips-2026/danube-forest-01.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/danube-forest-04.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/danube-forest-05.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/danube-forest-02.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/danube-forest-03.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "MazakEV",
+    "⏱️ 8-9 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Batthyány+tér+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Batthyány tér"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/visegrad-l1566/from-budapest-danube-bend-day-trip-with-visegrad-and-szentendre-t1470042/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-danube-forest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Danube Bend Forest Tour: Visegrád and Szentendre"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.9",
+     "score": "4.9",
+     "meta": "37 reviews · 1 site",
+     "heading": "Rating on 1 booking site",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(37)",
+       "url": "https://www.getyourguide.com/visegrad-l1566/from-budapest-danube-bend-day-trip-with-visegrad-and-szentendre-t1470042/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-rating-danube-forest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">👥 Max 7 Guests</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Small group in a minibus.</strong> A Mercedes Vito people carrier with leather seats, 7 guests at most, so the day runs at the group's pace.<span class=\"bpa-lang-note\">Not for children under 8.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🥾 75-Min Forest Walk</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>4.6 km, gently downhill</strong> on marked trails through the Danube-Ipoly National Park, following old royal hunting paths. It ends at Visegrád Castle.<span class=\"bpa-lang-note\">Easy for average fitness. Trails can be muddy or slippery, so wear proper shoes.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🕘 09:00 to 17:00</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Leaves Batthyány tér at 09:00.</strong> The minibus leaves Szentendre for Budapest at 17:00.<span class=\"bpa-lang-note\">Want sunset on the river? Stay in Szentendre and return on your own by public boat or HÉV.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🍽️ Lunch Not Included</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Lunch stop at a forest restaurant where locals eat.</strong> You order from the menu and pay yourself; prices are lower than in Budapest.<span class=\"bpa-lang-note\">Visegrád Castle ticket also extra: €8 adults, €4 students.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a quiet, active Danube Bend day: a forest walk into Visegrád Castle, then Szentendre, with 7 guests at most.",
+    "skip_html": "if you want a guide talking at every stop or can't walk 75 minutes on trails."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "How big is the group?",
+      "a": "7 guests at most, in a Mercedes minibus, so the stops run at your pace."
+     },
+     {
+      "q": "How much walking is there?",
+      "a": "A 4.6 km, 75-minute downhill trail through the Danube-Ipoly National Park that ends at Visegrád Castle. Not for children under 8 or anyone unsteady on muddy paths."
+     },
+     {
+      "q": "What is not included?",
+      "a": "The castle ticket (€8 for adults) and lunch at the forest restaurant, where you pay for what you order."
+     },
+     {
+      "q": "Can I stay longer in Szentendre?",
+      "a": "Yes. The minibus leaves at 17:00; stay on and take the public boat or the HÉV back on your own."
+     },
+     {
+      "q": "Where do we meet?",
+      "a": "At the main entrance of St. Anne's Church, Batthyány tér, at 09:00. Look for the driver holding a Rubik's Cube."
+     }
+    ]
+   },
+   "price": {
+    "main": "€96",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€96",
+      "small": "8 to 9 hours"
+     },
+     {
+      "label": "Visegrád Castle",
+      "price": "€8",
+      "small": "paid on the day"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. Prices change by date; the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/visegrad-l1566/from-budapest-danube-bend-day-trip-with-visegrad-and-szentendre-t1470042/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-danube-forest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "trust": ["<b>Instant QR ticket</b> on your phone", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-1-danube-bend-forest-tour",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: Danube Bend Day Trip: Visegrád, Esztergom and Szentendre -->\n",
+   "id": "card-2",
+   "cats": ["full", "u100", "boat"],
+   "gallery": {
+    "rank": {
+     "text": "#2 Cityrama",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      ["alt", "Visegrád Citadel walls with the Danube Bend below"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/day-trips-2026/danube-bend-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Visegrád Citadel walls with the Danube Bend below"],
+      ["data-src", "/assets/day-trips-2026/danube-bend-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Visegrád Citadel walls with the Danube Bend below"],
+      ["data-src", "/assets/day-trips-2026/danube-bend-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Visegrád Citadel walls with the Danube Bend below"],
+      ["data-src", "/assets/day-trips-2026/danube-bend-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Visegrád Citadel walls with the Danube Bend below"],
+      ["data-src", "/assets/day-trips-2026/danube-bend-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/day-trips-2026/danube-bend-01.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/danube-bend-02.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/danube-bend-04.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/danube-bend-03.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/danube-bend-05.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Cityrama",
+    "⏱️ 9 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Báthory+utca+19+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Báthory utca"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/danube-bend-tour-an-excursion-into-hungary-s-history-t759/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-danube-bend&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Danube Bend Day Trip: Visegrád, Esztergom and Szentendre"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.3",
+     "score": "4.3",
+     "meta": "669 reviews · 1 site",
+     "heading": "Rating on 1 booking site",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.3",
+       "count": "(669)",
+       "url": "https://www.getyourguide.com/budapest-l29/danube-bend-tour-an-excursion-into-hungary-s-history-t759/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-rating-danube-bend&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🏰 All 3 Towns</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Visegrád, Esztergom and Szentendre</strong> in one day: the medieval royal residence, Hungary's largest church with a view over to Slovakia, then the artists' village.<span class=\"bpa-lang-note\">About 6 hours at the stops, about 3 on the road (approximate).</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">⛴️ Boat Back (Summer)</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>May to September, Thursday to Sunday:</strong> the return to Budapest is by boat, ticket included.<span class=\"bpa-lang-note\">Out of season, or when the river is too high or low, you return by coach.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🗣️ English &amp; Spanish</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Bilingual guide:</strong> commentary in English and Spanish on the same tour."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">💶 Lunch Extra</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Not included:</strong> lunch, the Visegrád Castle entrance ticket and tips.<span class=\"bpa-lang-note\">Want lunch sorted? The #9 lunch version includes a 3-course meal for €24 more.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for all three Danube Bend towns at the lowest price, with a boat back on summer weekends.",
+    "skip_html": "if you want lunch included or a small group."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Which towns does it cover?",
+      "a": "Visegrád, Esztergom and Szentendre in 9 hours, the lowest price for all three."
+     },
+     {
+      "q": "Is the boat back included?",
+      "a": "From May to September, Thursday to Sunday, yes. Otherwise, or when the river is too high or low, you return by coach."
+     },
+     {
+      "q": "Is lunch included?",
+      "a": "No, and neither is the Visegrád Castle ticket. The lunch version is #9."
+     },
+     {
+      "q": "Which language?",
+      "a": "Bilingual English and Spanish commentary, in a coach-size group."
+     },
+     {
+      "q": "Where do we meet?",
+      "a": "Báthory utca 19 in District V: Kossuth Lajos tér (M2) or Arany János utca (M3), then 5 minutes on foot."
+     }
+    ]
+   },
+   "price": {
+    "main": "€85",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€85",
+      "small": "9 hours"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. Prices change by date; the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/danube-bend-tour-an-excursion-into-hungary-s-history-t759/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-danube-bend&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "trust": ["<b>Instant QR ticket</b> on your phone", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-2-danube-bend-day-trip",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #3: Lake Balaton and Tihany Day Trip with Esztergom -->\n",
+   "id": "card-3",
+   "cats": ["full", "u100", "pickup", "small"],
+   "gallery": {
+    "rank": {
+     "text": "#3 Blueridge",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      ["alt", "Tihany Abbey above Lake Balaton"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/day-trips-2026/balaton-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Tihany Abbey above Lake Balaton"],
+      ["data-src", "/assets/day-trips-2026/balaton-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Tihany Abbey above Lake Balaton"],
+      ["data-src", "/assets/day-trips-2026/balaton-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Tihany Abbey above Lake Balaton"],
+      ["data-src", "/assets/day-trips-2026/balaton-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Tihany Abbey above Lake Balaton"],
+      ["data-src", "/assets/day-trips-2026/balaton-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/day-trips-2026/balaton-01.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/balaton-03.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/balaton-05.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/balaton-04.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/balaton-02.avif"
+     }
+    ]
+   },
+   "kicker": ["Blueridge", "⏱️ About 10 Hours", "Your hotel"],
+   "title": {
+    "url": "https://www.getyourguide.com/szekesfehervar-l157735/from-budapest-lake-balaton-tihany-day-trip-with-esztergom-t1305591/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-balaton&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Lake Balaton and Tihany Day Trip with Esztergom"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.6",
+     "score": "4.6",
+     "meta": "159 reviews · 1 site",
+     "heading": "Rating on 1 booking site",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.6",
+       "count": "(159)",
+       "url": "https://www.getyourguide.com/szekesfehervar-l157735/from-budapest-lake-balaton-tihany-day-trip-with-esztergom-t1305591/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-rating-balaton&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🚐 Hotel Pickup</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Pickup and drop-off at your hotel or apartment</strong> anywhere in Budapest. Exact time and driver contact arrive the day before."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">👥 Max 8 Guests</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Small group</strong> in an air-conditioned people carrier with an English-speaking driver-guide. Water and local snacks included."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">⏱ About 10 Hours</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Listed as 8 hours, about 10 door to door</strong> with traffic. Roughly half of it is driving (approximate).<span class=\"bpa-lang-note\">Optional stops (Székesfehérvár, a lookout tower) depend on time and the group.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🇸🇰 Slovakia Photo Stop</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Štúrovo, across the Mária Valéria Bridge,</strong> for the classic photo of Esztergom Basilica from the other bank.<span class=\"bpa-lang-note\">Bring a passport or ID card.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "if Lake Balaton and Tihany are on your list and you have one day: hotel pickup, max 8 guests.",
+    "skip_html": "if you want a lake day to swim and relax: about 5 of the 10 hours are in the car."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "How long is the day?",
+      "a": "About 10 hours door to door, roughly half of it on the road."
+     },
+     {
+      "q": "What do we see?",
+      "a": "Esztergom Basilica, a photo stop in Štúrovo (Slovakia), the Akarattya cliff viewpoint, Tihany Abbey and free time in Balatonfüred."
+     },
+     {
+      "q": "Is there hotel pickup?",
+      "a": "Yes, from your hotel or apartment in Budapest; the exact time and driver contact arrive the day before."
+     },
+     {
+      "q": "Do I need ID?",
+      "a": "Yes, a passport or ID card for the Slovakia stop."
+     },
+     {
+      "q": "Can I swim in the lake?",
+      "a": "Not really: it is a sightseeing day. For a beach day, take the train to Balatonfüred and stay put."
+     }
+    ]
+   },
+   "price": {
+    "main": "€83",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€83",
+      "small": "max 8 guests"
+     }
+    ],
+    "note": "Meals not included. Free cancellation up to 24 hours before. Prices change by date; the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/szekesfehervar-l157735/from-budapest-lake-balaton-tihany-day-trip-with-esztergom-t1305591/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-balaton&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "trust": ["<b>Instant QR ticket</b> on your phone", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-3-lake-balaton-tihany",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: Bratislava and Vienna Full-Day Guided Tour -->\n",
+   "id": "card-4",
+   "cats": ["two", "o160", "pickup", "small"],
+   "gallery": {
+    "rank": {
+     "text": "#4 Blueridge",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Vienna City Hall in autumn"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/day-trips-2026/vienna-bratislava-02.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Vienna City Hall in autumn"],
+      ["data-src", "/assets/day-trips-2026/vienna-bratislava-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Vienna City Hall in autumn"],
+      ["data-src", "/assets/day-trips-2026/vienna-bratislava-01.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Vienna City Hall in autumn"],
+      ["data-src", "/assets/day-trips-2026/vienna-bratislava-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Vienna City Hall in autumn"],
+      ["data-src", "/assets/day-trips-2026/vienna-bratislava-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/day-trips-2026/vienna-bratislava-02.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/vienna-bratislava-04.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/vienna-bratislava-01.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/vienna-bratislava-03.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/vienna-bratislava-05.avif"
+     }
+    ]
+   },
+   "kicker": ["Blueridge", "⏱️ 12.5-13 Hours", "Your hotel"],
+   "title": {
+    "url": "https://www.getyourguide.com/vienna-l7/from-budapest-bratislava-vienna-full-day-guided-tour-t1214396/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-bratislava-vienna&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Bratislava and Vienna Full-Day Guided Tour"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.8",
+     "score": "4.8",
+     "meta": "357 reviews · 1 site",
+     "heading": "Rating on 1 booking site",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(357)",
+       "url": "https://www.getyourguide.com/vienna-l7/from-budapest-bratislava-vienna-full-day-guided-tour-t1214396/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-rating-bratislava-vienna&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🏛️ Guided in Both Cities</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Bratislava:</strong> old town (St. Michael's Gate, Main Square, Primate's Palace, Blue Church) and the castle. <strong>Vienna:</strong> Hofburg area, St. Stephen's Cathedral, the Ring and the Opera, then free time."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🚐 Hotel Pickup</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Pickup from any accommodation in Budapest</strong> (hotel, Airbnb). Guide contact details arrive the day before."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🧳 End in Vienna Option</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>You can finish the tour in Vienna with your luggage</strong>, which turns your onward transfer into a sightseeing day."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">⏱ 12.5-13 Hours</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>A long day:</strong> about 6.5 hours in the two cities and roughly 6 on the road (approximate).<span class=\"bpa-lang-note\">Optional stop in Győr if you wish. Wheelchair accessible.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for two capitals with a guide in both and the option to end in Vienna with your luggage.",
+    "skip_html": "if you only care about Vienna: the train gives you more hours there for less."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "What do we see in Bratislava?",
+      "a": "A guided old-town walk (St. Michael's Gate, the Main Square, the Blue Church) and Bratislava Castle."
+     },
+     {
+      "q": "And in Vienna?",
+      "a": "A guided walk past the Hofburg, St. Stephen's Cathedral, the Opera and the Ringstrasse, then free time."
+     },
+     {
+      "q": "Can I end the tour in Vienna?",
+      "a": "Yes, with your luggage, which turns your transfer to Austria into a sightseeing day."
+     },
+     {
+      "q": "How long is it?",
+      "a": "12.5 to 13 hours, roughly 6 of them on the motorway."
+     },
+     {
+      "q": "What do I need?",
+      "a": "A passport or EU ID card for the border crossings. Meals are not included."
+     }
+    ]
+   },
+   "price": {
+    "main": "€189",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€189",
+      "small": "pickup anywhere in Budapest"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. Prices change by date; the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/vienna-l7/from-budapest-bratislava-vienna-full-day-guided-tour-t1214396/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-bratislava-vienna&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "trust": ["<b>Instant QR ticket</b> on your phone", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-4-bratislava-vienna",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: Half-Day Etyek Countryside Wine Tour with Meal -->\n",
+   "id": "card-5",
+   "cats": ["half", "u100", "pickup", "meal"],
+   "gallery": {
+    "rank": {
+     "text": "#5 City &amp; Wine",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Winemaker pouring white wine at an Etyek tasting"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/day-trips-2026/etyek-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Winemaker pouring white wine at an Etyek tasting"],
+      ["data-src", "/assets/day-trips-2026/etyek-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Winemaker pouring white wine at an Etyek tasting"],
+      ["data-src", "/assets/day-trips-2026/etyek-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Winemaker pouring white wine at an Etyek tasting"],
+      ["data-src", "/assets/day-trips-2026/etyek-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Winemaker pouring white wine at an Etyek tasting"],
+      ["data-src", "/assets/day-trips-2026/etyek-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Winemaker pouring white wine at an Etyek tasting"],
+      ["data-src", "/assets/day-trips-2026/etyek-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/day-trips-2026/etyek-01.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/etyek-02.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/etyek-06.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/etyek-05.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/etyek-04.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/etyek-03.avif"
+     }
+    ]
+   },
+   "kicker": ["City &amp; Wine", "⏱️ 4-5 Hours", "Central hotels"],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/from-budapest-half-day-countryside-wine-tour-with-meal-t72950/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-etyek-wine&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Half-Day Etyek Countryside Wine Tour with Meal"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.8",
+     "score": "4.8",
+     "meta": "834 reviews · 1 site",
+     "heading": "Rating on 1 booking site",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(834)",
+       "url": "https://www.getyourguide.com/budapest-l29/from-budapest-half-day-countryside-wine-tour-with-meal-t72950/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-rating-etyek-wine&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🍷 8 Wines</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>2 family-owned boutique wineries, 4 wines at each</strong>, tasted in the cellar with snacks and finger food, poured by the winemakers.<span class=\"bpa-lang-note\">Etyek is known for crisp whites and sparkling wine.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🍲 Home-Cooked Meal</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>A home-cooked meal at one of the farms</strong> to finish: starter, main and dessert. Water included.<span class=\"bpa-lang-note\">Vegetarian or gluten-free if you ask in advance. Coffee and soft drinks extra.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🚐 Central Pickup</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Pickup from selected hotels in central Budapest</strong> by air-conditioned minibus. Contact the operator before the day for the exact time and place."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">⏱ 30 Min Drive</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Etyek is about 30 minutes from Budapest</strong>, so most of the 4 to 5 hours is spent tasting, not driving.<span class=\"bpa-lang-note\">Runs with a minimum of 2 guests.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a relaxed half day of wine with almost no driving: 2 wineries, 8 wines and a meal.",
+    "skip_html": "if you want famous names like Bull's Blood or Tokaji: go to Eger."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "How far is Etyek?",
+      "a": "About 30 minutes each way, so most of the 4 to 5 hours is spent tasting."
+     },
+     {
+      "q": "What is included?",
+      "a": "2 family wineries with 4 wines each, snacks in the cellar and a home-cooked meal at one of the farms."
+     },
+     {
+      "q": "Can I eat vegetarian or gluten-free?",
+      "a": "Yes, on request."
+     },
+     {
+      "q": "What is extra?",
+      "a": "Coffee, soft drinks and tips."
+     },
+     {
+      "q": "Does it always run?",
+      "a": "It needs at least 2 guests; otherwise you are offered another date. Pickup is from selected central hotels."
+     }
+    ]
+   },
+   "price": {
+    "main": "€85",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€85",
+      "small": "4 to 5 hours, meal included"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. Prices change by date; the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/from-budapest-half-day-countryside-wine-tour-with-meal-t72950/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-etyek-wine&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "trust": ["<b>Instant QR ticket</b> on your phone", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-5-etyek-wine-tour",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #6: Gödöllő Royal Palace (Sissi) Guided Tour -->\n",
+   "id": "card-6",
+   "cats": ["half", "u100", "pickup"],
+   "gallery": {
+    "rank": {
+     "text": "#6 Eurama",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Gödöllő Royal Palace at sunset"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/day-trips-2026/godollo-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Gödöllő Royal Palace at sunset"],
+      ["data-src", "/assets/day-trips-2026/godollo-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Gödöllő Royal Palace at sunset"],
+      ["data-src", "/assets/day-trips-2026/godollo-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Gödöllő Royal Palace at sunset"],
+      ["data-src", "/assets/day-trips-2026/godollo-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Gödöllő Royal Palace at sunset"],
+      ["data-src", "/assets/day-trips-2026/godollo-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/day-trips-2026/godollo-01.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/godollo-02.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/godollo-03.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/godollo-04.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/godollo-05.avif"
+     }
+    ]
+   },
+   "kicker": ["Eurama", "⏱️ 3.5 Hours", "Eurama office"],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/royal-sissi-tour-from-budapest-t55693/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-godollo&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Gödöllő Royal Palace (Sissi) Guided Tour"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.3",
+     "score": "4.3",
+     "meta": "1,177 reviews · 1 site",
+     "heading": "Rating on 1 booking site",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.3",
+       "count": "(1,177)",
+       "url": "https://www.getyourguide.com/budapest-l29/royal-sissi-tour-from-budapest-t55693/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-rating-godollo&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">👑 Palace Tour Included</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Guided tour of the restored Royal Palace of Gödöllő</strong>, Empress Elisabeth's (Sissi's) summer residence, plus a walk in the park.<span class=\"bpa-lang-note\">Skip-the-line entry.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">⏱ 3.5 Hours</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Half a day:</strong> about 2 hours at the palace, the rest is the drive (approximate). Ends at the InterContinental hotel in the city centre."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🗣️ 5 Languages</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>English, German, Spanish, French and Italian.</strong> The tour may be run by a bilingual guide."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🚆 DIY Option</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>The H8 HÉV from Örs vezér tere</strong> reaches Gödöllő in about 45 minutes, and the palace is a short walk from the station.<span class=\"bpa-lang-note\">Book the tour for the guided palace visit without planning anything.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "if Sissi is why you came and you want the guided palace without planning trains.",
+    "skip_html": "if you're happy on the HÉV: the DIY trip costs a fraction of the price."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "What is Gödöllő?",
+      "a": "The palace where Empress Elisabeth (Sissi) spent her summers, billed as the second-largest Baroque chateau in the world."
+     },
+     {
+      "q": "Is the palace tour guided?",
+      "a": "Yes, with skip-the-line entry, plus a walk in the park."
+     },
+     {
+      "q": "How long does it take?",
+      "a": "3.5 hours, ending at the InterContinental hotel in the centre."
+     },
+     {
+      "q": "Can I do it myself?",
+      "a": "Yes: the H8 HÉV from Örs vezér tere takes about 45 minutes, and a palace ticket costs a fraction of the tour price."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, German, Spanish, French and Italian. It is not suitable for wheelchair users."
+     }
+    ]
+   },
+   "price": {
+    "main": "€60",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€60",
+      "small": "3.5 hours"
+     }
+    ],
+    "note": "Food and drinks not included. Free cancellation up to 24 hours before. Prices change by date; the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/royal-sissi-tour-from-budapest-t55693/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-godollo&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "trust": ["<b>Instant QR ticket</b> on your phone", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-6-godollo-sissi-palace",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #7: Eger Private Tour: Castle, Old Town and Wine Cellars -->\n",
+   "id": "card-7",
+   "cats": ["full", "o160", "pickup", "private"],
+   "gallery": {
+    "rank": {
+     "text": "#7 BudapestPrivate",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "View over Eger and its cathedral from the castle"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/day-trips-2026/eger-05.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "View over Eger and its cathedral from the castle"],
+      ["data-src", "/assets/day-trips-2026/eger-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "View over Eger and its cathedral from the castle"],
+      ["data-src", "/assets/day-trips-2026/eger-01.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "View over Eger and its cathedral from the castle"],
+      ["data-src", "/assets/day-trips-2026/eger-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "View over Eger and its cathedral from the castle"],
+      ["data-src", "/assets/day-trips-2026/eger-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/day-trips-2026/eger-05.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/eger-02.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/eger-01.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/eger-04.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/eger-03.avif"
+     }
+    ]
+   },
+   "kicker": ["BudapestPrivate", "⏱️ 8 Hours", "Your hotel"],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/eger-countryside-culture-and-wine-8-hour-tour-t62239/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-eger&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Eger Private Tour: Castle, Old Town and Wine Cellars"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "5.0",
+     "score": "5.0",
+     "meta": "17 reviews · 1 site",
+     "heading": "Rating on 1 booking site",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(17)",
+       "url": "https://www.getyourguide.com/budapest-l29/eger-countryside-culture-and-wine-8-hour-tour-t62239/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-rating-eger&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🚗 Private Car</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Private guide and car, door to door</strong> from your Budapest accommodation. About 1.5 hours each way.<span class=\"bpa-lang-note\">Motorway and parking fees, water and all taxes included.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🏰 Castle Ticket Included</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Guided visit to Eger Castle</strong> and its history exhibition, famous for holding off the Ottomans in 1552, with views over the old town.<span class=\"bpa-lang-note\">Other entrance fees are extra.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🍷 Valley of the Beautiful Women</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Historic wine cellars</strong> pouring Eger's reds, whites and rosés, including Bull's Blood (Egri Bikavér).<span class=\"bpa-lang-note\">The tasting and meals are paid on the spot.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🗣️ EN · DE · HU</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Guided in English, German or Hungarian.</strong> Old town walk: main square, Minorite church, the cathedral, the Lyceum and the 40-metre minaret."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for Eger's castle, old town and wine cellars in one comfortable private day.",
+    "skip_html": "on a budget: direct trains reach Eger in about 2 hours."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "What is included?",
+      "a": "A private guide and car door to door, the Eger Castle ticket, motorway and parking fees."
+     },
+     {
+      "q": "How long in Eger?",
+      "a": "About 5 hours: the castle, the minaret, the old town and the Valley of the Beautiful Women cellars."
+     },
+     {
+      "q": "Is the wine included?",
+      "a": "No, wine tasting and meals are paid on the spot."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, German or Hungarian."
+     },
+     {
+      "q": "Is there a cheaper way?",
+      "a": "Direct trains from Keleti reach Eger in about 2 hours, and the cellars are a short taxi ride from the centre."
+     }
+    ]
+   },
+   "price": {
+    "main": "€255",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Per person",
+      "price": "€255",
+      "small": "private, 8 hours"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. Prices change by date; the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/eger-countryside-culture-and-wine-8-hour-tour-t62239/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-eger&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "trust": ["<b>Instant QR ticket</b> on your phone", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-7-eger-private-tour",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #8: Hévíz Thermal Lake Day Trip -->\n",
+   "id": "card-8",
+   "cats": ["full", "u160", "small"],
+   "gallery": {
+    "rank": {
+     "text": "#8 Zala",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Lake Hévíz bathhouse on stilts from above"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/day-trips-2026/heviz-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Lake Hévíz bathhouse on stilts from above"],
+      ["data-src", "/assets/day-trips-2026/heviz-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Lake Hévíz bathhouse on stilts from above"],
+      ["data-src", "/assets/day-trips-2026/heviz-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Lake Hévíz bathhouse on stilts from above"],
+      ["data-src", "/assets/day-trips-2026/heviz-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Lake Hévíz bathhouse on stilts from above"],
+      ["data-src", "/assets/day-trips-2026/heviz-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/day-trips-2026/heviz-01.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/heviz-02.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/heviz-03.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/heviz-05.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/heviz-04.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Zala",
+    "⏱️ 8 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Népliget+bus+station+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Népliget"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/heviz-l105762/heviz-wellness-escape-thermal-lake-day-trip-from-budapest-t1066247/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-heviz&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Hévíz Thermal Lake Day Trip"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.8",
+     "score": "4.8",
+     "meta": "49 reviews · 1 site",
+     "heading": "Rating on 1 booking site",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(49)",
+       "url": "https://www.getyourguide.com/heviz-l105762/heviz-wellness-escape-thermal-lake-day-trip-from-budapest-t1066247/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-rating-heviz&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🎟️ Lake Ticket Included</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Entry to Lake Hévíz</strong>, the world's largest natural thermal lake, plus a local English-speaking guide who helps with tickets and tips all day.<span class=\"bpa-lang-note\">Food, drinks, spa treatments and massages extra.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">👥 Max 4 Guests</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Very small group:</strong> 4 guests at most.<span class=\"bpa-lang-note\">Not for children under 16 or pregnant women.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">♨️ Warm All Year</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>About 25 to 36°C year round</strong>, cooler in winter. The sauna is open all year; lockers and changing rooms at the lake.<span class=\"bpa-lang-note\">Bring a swimsuit, towel, flip-flops and a water bottle.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🚌 From Népliget</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Direct return transfer from Népliget bus station</strong> (M3 metro), not from your hotel.<span class=\"bpa-lang-note\">About 3 hours at the lake, about 5 on the road (approximate).</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "to swim in the world's largest natural thermal lake, even in winter, ticket sorted.",
+    "skip_html": "if you just want a thermal bath: Budapest's baths give more pool time for less."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Can I swim in Hévíz in winter?",
+      "a": "Yes. The lake stays around 25 to 36 °C through the year, cooler in winter."
+     },
+     {
+      "q": "What is included?",
+      "a": "The return transfer, the Lake Hévíz entry ticket and a local English-speaking guide."
+     },
+     {
+      "q": "How long at the lake?",
+      "a": "About 3 hours; roughly 5 of the 8 hours are travel."
+     },
+     {
+      "q": "Where do we meet?",
+      "a": "At Népliget long-distance bus station (M3), not your hotel."
+     },
+     {
+      "q": "Who can come?",
+      "a": "Ages 16+, in groups of up to 4. Bring a swimsuit, towel and flip-flops."
+     }
+    ]
+   },
+   "price": {
+    "main": "€155",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€155",
+      "small": "lake entry included"
+     }
+    ],
+    "note": "Food not included. Free cancellation up to 24 hours before. Prices change by date; the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/heviz-l105762/heviz-wellness-escape-thermal-lake-day-trip-from-budapest-t1066247/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-heviz&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "trust": ["<b>Instant QR ticket</b> on your phone", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-8-heviz-thermal-lake",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #9: Full-Day Danube Bend Tour with 3-Course Lunch -->\n",
+   "id": "card-9",
+   "cats": ["full", "u160", "pickup", "meal", "boat"],
+   "gallery": {
+    "rank": {
+     "text": "#9 Eurama",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Esztergom Basilica above the Danube at sunrise"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/day-trips-2026/danube-lunch-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Esztergom Basilica above the Danube at sunrise"],
+      ["data-src", "/assets/day-trips-2026/danube-lunch-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Esztergom Basilica above the Danube at sunrise"],
+      ["data-src", "/assets/day-trips-2026/danube-lunch-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Esztergom Basilica above the Danube at sunrise"],
+      ["data-src", "/assets/day-trips-2026/danube-lunch-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Esztergom Basilica above the Danube at sunrise"],
+      ["data-src", "/assets/day-trips-2026/danube-lunch-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/day-trips-2026/danube-lunch-01.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/danube-lunch-05.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/danube-lunch-04.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/danube-lunch-02.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/danube-lunch-03.avif"
+     }
+    ]
+   },
+   "kicker": ["Eurama", "⏱️ 9 Hours", "Eurama office"],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/from-budapest-full-day-danube-bend-tour-with-lunch-t55698/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-danube-lunch&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Full-Day Danube Bend Tour with 3-Course Lunch"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.2",
+     "score": "4.2",
+     "meta": "518 reviews · 1 site",
+     "heading": "Rating on 1 booking site",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.2",
+       "count": "(518)",
+       "url": "https://www.getyourguide.com/budapest-l29/from-budapest-full-day-danube-bend-tour-with-lunch-t55698/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-rating-danube-lunch&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🍽️ 3-Course Lunch</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>A 3-course Hungarian lunch in Visegrád</strong> is included.<span class=\"bpa-lang-note\">Extra drinks are paid on the spot.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">⛴️ Boat Back (Summer)</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Friday, Saturday and Sunday, 1 May to 27 September:</strong> the return to Budapest is by boat.<span class=\"bpa-lang-note\">Wednesday tours in spring and autumn, and all tours in low or high water, return by coach.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🗣️ 5 Languages</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>English, Spanish, French, German and Italian.</strong> The tour may be run by a bilingual guide."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🇸🇰 Slovakia Hop</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>A short visit to Slovakia over the Mária Valéria Bridge</strong> for the view back at Esztergom Basilica.<span class=\"bpa-lang-note\">Bring a passport or ID card.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a hassle-free Danube Bend day with lunch included and a guide in your language.",
+    "skip_html": "if you prefer to pick where you eat or want a smaller group."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "What is different from #2?",
+      "a": "A 3-course Hungarian lunch in Visegrád and a guide in five languages, for €24 more."
+     },
+     {
+      "q": "Is the boat back included?",
+      "a": "Friday to Sunday from 1 May to 27 September. Other departures return by coach."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, Spanish, French, German or Italian."
+     },
+     {
+      "q": "Do I need ID?",
+      "a": "Yes: the tour crosses the Mária Valéria Bridge into Slovakia."
+     },
+     {
+      "q": "Is there hotel pickup?",
+      "a": "Yes, as an option. Otherwise meet at the Eurama office 30 minutes before departure."
+     }
+    ]
+   },
+   "price": {
+    "main": "€109",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€109",
+      "small": "lunch included"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. Prices change by date; the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/from-budapest-full-day-danube-bend-tour-with-lunch-t55698/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-danube-lunch&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "trust": ["<b>Instant QR ticket</b> on your phone", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-9-danube-bend-with-lunch",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #10: Vienna and Bratislava One-Day Trip with Free Time -->\n",
+   "id": "card-10",
+   "cats": ["two", "o160", "pickup", "small"],
+   "gallery": {
+    "rank": {
+     "text": "#10 Blueridge",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Belvedere Palace reflected in its pond in Vienna"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/day-trips-2026/bratislava-vienna-free-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Belvedere Palace reflected in its pond in Vienna"],
+      ["data-src", "/assets/day-trips-2026/bratislava-vienna-free-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Belvedere Palace reflected in its pond in Vienna"],
+      ["data-src", "/assets/day-trips-2026/bratislava-vienna-free-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Belvedere Palace reflected in its pond in Vienna"],
+      ["data-src", "/assets/day-trips-2026/bratislava-vienna-free-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Belvedere Palace reflected in its pond in Vienna"],
+      ["data-src", "/assets/day-trips-2026/bratislava-vienna-free-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/day-trips-2026/bratislava-vienna-free-01.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/bratislava-vienna-free-04.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/bratislava-vienna-free-02.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/bratislava-vienna-free-03.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/bratislava-vienna-free-05.avif"
+     }
+    ]
+   },
+   "kicker": ["Blueridge", "⏱️ 12 Hours", "Your hotel"],
+   "title": {
+    "url": "https://www.getyourguide.com/vienna-l7/from-budapest-vienna-and-bratislava-day-trip-with-a-guide-t1230216/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-vienna-bratislava&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Vienna and Bratislava One-Day Trip with Free Time"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.7",
+     "score": "4.7",
+     "meta": "344 reviews · 1 site",
+     "heading": "Rating on 1 booking site",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.7",
+       "count": "(344)",
+       "url": "https://www.getyourguide.com/vienna-l7/from-budapest-vienna-and-bratislava-day-trip-with-a-guide-t1230216/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-rating-vienna-bratislava&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🕑 2.5h Free per City</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>About 2.5 hours on your own in Bratislava and 2.5 in Vienna</strong>, after the guided parts: old town walk and castle in Bratislava, Belvedere Gardens and an orientation drive in Vienna."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🚐 Hotel Pickup</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Pickup and drop-off anywhere in Budapest.</strong> The exact time is confirmed the day before. Early start, late return."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">💶 No Extra Fees</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>All visits during the guided parts are free</strong>, so there are no mandatory extra charges. Water and small snacks included.<span class=\"bpa-lang-note\">Meals are not included.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🪪 Bring ID</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Passport or EU ID card required</strong> for the border crossings.<span class=\"bpa-lang-note\">Wheelchair accessible.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for both capitals with the most time on your own: about 2.5 hours free in each.",
+    "skip_html": "if you want a guided walk through Vienna's centre: book #4 instead."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "How much free time is there?",
+      "a": "About 2.5 hours in Bratislava and 2.5 hours in Vienna."
+     },
+     {
+      "q": "What is guided in Vienna?",
+      "a": "A walk through the Belvedere Gardens (about 30 minutes) and a 30-minute orientation drive around the Ringstrasse."
+     },
+     {
+      "q": "Are there extra costs?",
+      "a": "No mandatory ones beyond food: all visits on the guided parts are free."
+     },
+     {
+      "q": "Is there hotel pickup?",
+      "a": "Yes, anywhere in Budapest; the exact time is confirmed the day before."
+     },
+     {
+      "q": "What do I need?",
+      "a": "A passport or EU ID card for the border crossings."
+     }
+    ]
+   },
+   "price": {
+    "main": "€177",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€177",
+      "small": "about 12 hours"
+     }
+    ],
+    "note": "Meals not included. Free cancellation up to 24 hours before. Prices change by date; the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/vienna-l7/from-budapest-vienna-and-bratislava-day-trip-with-a-guide-t1230216/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-vienna-bratislava&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "trust": ["<b>Instant QR ticket</b> on your phone", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-10-vienna-bratislava-free-time",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #11: Páty Wine Village Tour with Tastings -->\n",
+   "id": "card-11",
+   "cats": ["half", "u100", "small", "meal"],
+   "gallery": {
+    "rank": {
+     "text": "#11 Wine The Gap",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Old stone wine cellar in Páty with a green door"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/day-trips-2026/paty-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Old stone wine cellar in Páty with a green door"],
+      ["data-src", "/assets/day-trips-2026/paty-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Old stone wine cellar in Páty with a green door"],
+      ["data-src", "/assets/day-trips-2026/paty-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Old stone wine cellar in Páty with a green door"],
+      ["data-src", "/assets/day-trips-2026/paty-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Old stone wine cellar in Páty with a green door"],
+      ["data-src", "/assets/day-trips-2026/paty-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/day-trips-2026/paty-01.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/paty-05.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/paty-02.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/paty-03.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/paty-04.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Wine The Gap",
+    "⏱️ 3 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Erzsébet+tér+9+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Erzsébet tér"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/paty-l143933/from-budapest-paty-wine-village-tour-with-tastings-t345116/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-paty-wine&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Páty Wine Village Tour with Tastings"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.9",
+     "score": "4.9",
+     "meta": "171 reviews · 1 site",
+     "heading": "Rating on 1 booking site",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(171)",
+       "url": "https://www.getyourguide.com/paty-l143933/from-budapest-paty-wine-village-tour-with-tastings-t345116/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-rating-paty-wine&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🍷 4 Wines per Cellar</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>1 or 2 wineries, at least 4 wines at each</strong>, tasted with the winemakers. One of them makes organic wine.<span class=\"bpa-lang-note\">The cellars date back as far as 1880.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🧀 Tapas Plate</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Olives, ham, sausages and cheeses</strong> from local farmers, served at the last cellar."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">👥 Max 8 Guests</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Small group, 8 at most.</strong> Runs with a minimum of 2 guests.<span class=\"bpa-lang-note\">Adults only (18+).</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">⏱ 20 Min Drive</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Páty is about 20 minutes from Budapest.</strong> Meet at Erzsébet tér 9-10 (Deák Ferenc tér metro) and you are back 3 hours later."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a short, small-group wine outing that fits between lunch and dinner.",
+    "skip_html": "if you want a full meal: the Etyek tour includes one for less."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "How far is Páty?",
+      "a": "About 20 minutes from Budapest, so the trip takes 3 hours in all."
+     },
+     {
+      "q": "What do we taste?",
+      "a": "4 wines at each of 1 or 2 cellars, poured by the winemakers, one known for organic wine."
+     },
+     {
+      "q": "Is food included?",
+      "a": "A tapas plate of local ham, sausage, cheese and olives at the last cellar."
+     },
+     {
+      "q": "Who can come?",
+      "a": "Adults only (18+), at least 2 guests, at most 8."
+     },
+     {
+      "q": "Where do we meet?",
+      "a": "Al Habtoor Palace, Erzsébet tér 9-10 (Deák Ferenc tér)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€96",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€96",
+      "small": "3 hours"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. Prices change by date; the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/paty-l143933/from-budapest-paty-wine-village-tour-with-tastings-t345116/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-paty-wine&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "trust": ["<b>Instant QR ticket</b> on your phone", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-11-paty-wine-village",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #12: Countryside Ranch, Horse Show and Lunch -->\n",
+   "id": "card-12",
+   "cats": ["half", "u160", "small", "meal"],
+   "gallery": {
+    "rank": {
+     "text": "#12 Local guide",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Horseman riding standing on two horses at the ranch show"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/day-trips-2026/ranch-02.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Horseman riding standing on two horses at the ranch show"],
+      ["data-src", "/assets/day-trips-2026/ranch-01.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Horseman riding standing on two horses at the ranch show"],
+      ["data-src", "/assets/day-trips-2026/ranch-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Horseman riding standing on two horses at the ranch show"],
+      ["data-src", "/assets/day-trips-2026/ranch-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Horseman riding standing on two horses at the ranch show"],
+      ["data-src", "/assets/day-trips-2026/ranch-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/day-trips-2026/ranch-02.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/ranch-01.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/ranch-04.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/ranch-03.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/ranch-05.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Local guide",
+    "⏱️ 5 Hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Batthyány+tér+7+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "Batthyány tér"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/from-budapest-hungarian-ranch-day-trip-with-horse-show-t432214/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-ranch&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Countryside Ranch, Horse Show and Lunch"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.9",
+     "score": "4.9",
+     "meta": "20 reviews · 1 site",
+     "heading": "Rating on 1 booking site",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(20)",
+       "url": "https://www.getyourguide.com/budapest-l29/from-budapest-hungarian-ranch-day-trip-with-horse-show-t432214/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-rating-ranch&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🐎 Horse Show</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>The csikós horsemen's show:</strong> whip cracking, horses lying down on command, riding standing on two horses. Photos with the cowboys included."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🛞 Carriage Ride</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>A 15-minute carriage ride</strong> around the farm, plus a guided tour of the stables. You meet grey cattle and Racka sheep, breeds only found in Hungary."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🍲 Goulash Lunch</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Goulash and strudel with a shot of pálinka</strong> (fruit brandy), included.<span class=\"bpa-lang-note\">The menu contains meat. Tell the guide in advance for a vegetarian meal.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">👥 Max 7 Guests</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Small group, 7 at most</strong>, meeting at Batthyány tér 7. The ranch is about 60 km from Budapest.<span class=\"bpa-lang-note\">Wheelchair accessible.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "with kids or animal lovers: horse show, carriage ride and goulash all included.",
+    "skip_html": "if you'd rather see towns than countryside."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "What happens at the horse show?",
+      "a": "Csikós horsemen crack whips, make horses lie down on command and ride standing on two galloping horses."
+     },
+     {
+      "q": "What else is included?",
+      "a": "A farm tour with grey cattle and Racka sheep, a 15-minute carriage ride, and goulash and strudel with a shot of pálinka."
+     },
+     {
+      "q": "Can I eat vegetarian?",
+      "a": "Yes, if you tell the guide in advance; the default menu is meat."
+     },
+     {
+      "q": "Is it good with kids?",
+      "a": "Yes, and it is wheelchair accessible. Groups are 7 at most."
+     },
+     {
+      "q": "Where do we meet?",
+      "a": "Batthyány tér 7 on the Buda side (M2 or H5 HÉV)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€115",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€115",
+      "small": "5 hours, lunch included"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. Prices change by date; the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/from-budapest-hungarian-ranch-day-trip-with-horse-show-t432214/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-ranch&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "trust": ["<b>Instant QR ticket</b> on your phone", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-12-countryside-ranch-horse-show",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #13: Szentendre Half-Day Tour -->\n",
+   "id": "card-13",
+   "cats": ["half", "u100", "pickup", "boat"],
+   "gallery": {
+    "rank": {
+     "text": "#13 Eurama",
+     "medal": "bpa-slate"
+    },
+    "photos": [
+     [
+      ["alt", "Szentendre main street with hanging lanterns"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/day-trips-2026/szentendre-half-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Szentendre main street with hanging lanterns"],
+      ["data-src", "/assets/day-trips-2026/szentendre-half-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Szentendre main street with hanging lanterns"],
+      ["data-src", "/assets/day-trips-2026/szentendre-half-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Szentendre main street with hanging lanterns"],
+      ["data-src", "/assets/day-trips-2026/szentendre-half-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Szentendre main street with hanging lanterns"],
+      ["data-src", "/assets/day-trips-2026/szentendre-half-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/day-trips-2026/szentendre-half-01.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/szentendre-half-04.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/szentendre-half-02.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/szentendre-half-05.avif"
+     },
+     {
+      "src": "/assets/day-trips-2026/szentendre-half-03.avif"
+     }
+    ]
+   },
+   "kicker": ["Eurama", "⏱️ 4 Hours", "Eurama office"],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/szentendre-visegrad-tour-from-budapest-t55661/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-szentendre&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Szentendre Half-Day Tour"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.2",
+     "score": "4.2",
+     "meta": "392 reviews · 1 site",
+     "heading": "Rating on 1 booking site",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.2",
+       "count": "(392)",
+       "url": "https://www.getyourguide.com/budapest-l29/szentendre-visegrad-tour-from-budapest-t55661/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-rating-szentendre&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🎨 Guided Walk</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>A guided walk through Szentendre's Baroque centre</strong>, with free time for galleries, cafés, souvenir shops and the Marzipan Museum."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">⛴️ Boat Back (Summer)</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Friday, Saturday and Sunday tours, 1 May to 27 September:</strong> back to Budapest on the scheduled public boat.<span class=\"bpa-lang-note\">Tuesday tours, and all tours out of season, return by coach.</span>"
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🗣️ 5 Languages</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>Spanish, English, French, German and Italian.</strong> The tour may be run by a bilingual guide."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "<span class=\"bpa-lang-label\">🚆 DIY Option</span><span class=\"bpa-lang-chev\" aria-hidden=\"true\">▾</span>",
+     "pop_html": "<strong>The H5 HÉV from Batthyány tér</strong> reaches Szentendre in about 40 minutes for a few euros.<span class=\"bpa-lang-note\">The tour adds the guide and, on summer weekends, the boat ride back.</span>"
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a guided Szentendre half day with the boat back on a summer weekend.",
+    "skip_html": "if you're fine on public transport: the HÉV does the same trip for a few euros."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Do we come back by boat?",
+      "a": "On Friday, Saturday and Sunday tours from 1 May to 27 September. Tuesday tours and all tours out of season return by coach."
+     },
+     {
+      "q": "What does the guide show?",
+      "a": "Szentendre's Baroque centre and galleries, with free time for cafés and the Marzipan Museum."
+     },
+     {
+      "q": "Which languages?",
+      "a": "Spanish, English, French, German and Italian."
+     },
+     {
+      "q": "Can I go on my own?",
+      "a": "Yes: the H5 HÉV from Batthyány tér takes about 40 minutes for a few euros."
+     },
+     {
+      "q": "Is there hotel pickup?",
+      "a": "Yes, as an option. Otherwise meet at the Eurama office 30 minutes before departure."
+     }
+    ]
+   },
+   "price": {
+    "main": "€70",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "price": "€70",
+      "small": "4 hours"
+     }
+    ],
+    "note": "Food not included. Free cancellation up to 24 hours before. Prices change by date; the final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/szentendre-visegrad-tour-from-budapest-t55661/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=day-trips-szentendre&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "trust": ["<b>Instant QR ticket</b> on your phone", "<b>Free cancellation</b> up to 24 h before, full refund"],
+    "sublink": {
+     "url": "#item-13-szentendre-half-day",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}

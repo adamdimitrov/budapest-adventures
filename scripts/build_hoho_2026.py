@@ -598,6 +598,9 @@ def main():
     s1 = page.find("</script>", s0)
     page = page[:s0] + build_jsonld(cards) + page[s1:]
 
+    if 'href="/css/listicle-cards.css' in open(PAGE, encoding="utf-8").read():
+        # The page is on the shared listicle design now: cards come from data/listicles/<slug>.json
+        raise SystemExit("the hop-on hop-off page is built from data/listicles/; edit the card data instead")
     with open(PAGE, "w", encoding="utf-8") as f:
         f.write(page)
     print("wrote", PAGE, len(page))

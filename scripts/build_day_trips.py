@@ -1026,6 +1026,9 @@ def build():
 
     assert "—" not in s, "em dash"
     assert "cmp=walking-tours" not in s and "Mysterium" not in s
+    if OUT.exists() and 'href="/css/listicle-cards.css' in OUT.read_text():
+        # The page is on the shared listicle design now: cards come from data/listicles/best-day-trips-from-budapest.json
+        raise SystemExit("best-day-trips-from-budapest.html is built from data/listicles/; edit the card data instead")
     OUT.write_text(s)
     print("wrote", OUT.name, len(s))
 
