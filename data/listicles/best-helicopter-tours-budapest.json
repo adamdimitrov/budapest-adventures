@@ -1,0 +1,972 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["heli", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Overall",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Private Helicopter Flight over the City"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-helicopter-tours-budapest/01-aeroglobe-private-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Private Helicopter Flight over the City"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/01-aeroglobe-private-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Helicopter Flight over the City"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/01-aeroglobe-private-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Helicopter Flight over the City"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/01-aeroglobe-private-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Helicopter Flight over the City"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/01-aeroglobe-private-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Helicopter Flight over the City"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/01-aeroglobe-private-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Private Helicopter Flight over the City"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/01-aeroglobe-private-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-helicopter-tours-budapest/01-aeroglobe-private-01.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/01-aeroglobe-private-02.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/01-aeroglobe-private-03.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/01-aeroglobe-private-04.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/01-aeroglobe-private-05.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/01-aeroglobe-private-06.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/01-aeroglobe-private-07.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Aeroglobe",
+    "⏱️ 20-minute flight",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Budaörs+Airport+Kőérberki+út+36/A+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Budaörs Airport (LHBS)"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-private-helicopter-flight-over-the-city-t1240435/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=helicopter_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Private Helicopter Flight over the City"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.84",
+     "score": "4.8",
+     "meta": "6 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(6)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-private-helicopter-flight-over-the-city-t1240435/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=helicopter_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€183 a seat</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The maths:</strong> €550 for the whole helicopter with up to 3 passengers: <strong>€183.33 each</strong> when full, and <strong>€27.50 per minute</strong> in the air, the lowest helicopter rate on this page."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗺️ <span class=\"bpa-lang-label\">20-min city route</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What you fly over:</strong> Gellért Hill with the Citadel and Liberty Statue, the Danube with the Chain Bridge and Liberty Bridge, the Royal Palace on Castle Hill, the Parliament, Margaret Island, and János Hill with the Erzsébet Lookout Tower in the Buda Hills."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🛫 <span class=\"bpa-lang-label\">Budaörs Airport</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Where you take off:</strong> Check-in is at Budaörs Airport (LHBS), car park at Kőérberki út 36/A. A transfer is not among the inclusions, so plan a taxi or drive."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🕶️ <span class=\"bpa-lang-label\">What to bring</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Pack:</strong> Sunglasses, a camera and comfortable clothes. Drones are not allowed. Not suitable for people with vertigo."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for couples or a group of 3 who want the city's landmarks from the air at the lowest helicopter price per minute",
+    "skip_html": "if you are 4 people (max 3 seats) or want the transfer handled: see #2"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Budaörs Airport (LHBS), car park at Kőérberki út 36/A, 1112 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Private helicopter flight, professional pilot."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Drones."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, Hungarian."
+     },
+     {
+      "q": "What should I bring?",
+      "a": "Sunglasses, camera, comfortable clothes."
+     }
+    ]
+   },
+   "price": {
+    "main": "€550",
+    "sub": "per group up to 3",
+    "rows": [
+     {
+      "label": "Per group up to 3",
+      "small": "20-minute flight",
+      "price": "€550"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-private-helicopter-flight-over-the-city-t1240435/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=helicopter_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-1-private-20-minute-city-helicopter-flight",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: Budapest: 15-Minute Helicopter Flight Over Top Landmarks -->\n",
+   "id": "card-2",
+   "cats": ["heli", "transfer", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🥈 #2 Best for 4 + Transfer",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: 15-Minute Helicopter Flight Over Top Landmarks"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: 15-Minute Helicopter Flight Over Top Landmarks"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 15-Minute Helicopter Flight Over Top Landmarks"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 15-Minute Helicopter Flight Over Top Landmarks"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 15-Minute Helicopter Flight Over Top Landmarks"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 15-Minute Helicopter Flight Over Top Landmarks"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 15-Minute Helicopter Flight Over Top Landmarks"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: 15-Minute Helicopter Flight Over Top Landmarks"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-01.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-02.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-03.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-04.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-05.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-06.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-07.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/02-balaton-fly-15min-08.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Balaton Fly",
+    "⏱️ 1.5–2 hours (15-min flight)",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Batthyány+tér+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Batthyány tér + heliport transfer"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-15-minute-helicopter-flight-over-top-landmarks-t1227591/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=helicopter_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: 15-Minute Helicopter Flight Over Top Landmarks"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "5.00",
+     "score": "5.0",
+     "meta": "2 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(2)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-15-minute-helicopter-flight-over-top-landmarks-t1227591/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=helicopter_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚐 <span class=\"bpa-lang-label\">Transfer included</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Getting there:</strong> Return transfer to and from the heliport is included, with Batthyány tér as the location. The whole outing takes 1.5–2 hours for a 15-minute flight."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€197.50 a seat</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The maths:</strong> €790 for up to 4 passengers: €197.50 each when full, €263 each for 3. Per minute in the air it is €52.67 for the aircraft."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥂 <span class=\"bpa-lang-label\">Sparkling wine</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Small extras:</strong> Complimentary Hungarian sparkling wine for adults, noise-cancelling earplugs for children, and a safety briefing from the pilot."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗺️ <span class=\"bpa-lang-label\">8 landmarks</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What you fly over:</strong> Parliament, Buda Castle, Chain Bridge, St Stephen's Basilica, Elizabeth Bridge, Gellért Hill, Margaret Island, and Heroes' Square with City Park."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for families or groups of 4 who want the transfer and a glass of fizz sorted, because it is the only helicopter flight here with both",
+    "skip_html": "if you want more air time for the money: #1 gives 20 minutes for €550"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Batthyány tér, 1011 Budapest, with transfer to and from the heliport."
+     },
+     {
+      "q": "What is included?",
+      "a": "15-minute scenic flight, transfer to and from the heliport, Hungarian sparkling wine for adults, earplugs for children, safety briefing."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Private, up to 4 passengers."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Highest price per minute (€52.67). Only 15 minutes in the air. Very few reviews so far."
+     },
+     {
+      "q": "Why pick it?",
+      "a": "Takes 4 passengers. Return transfer to the heliport included. Sparkling wine for adults, earplugs for kids."
+     }
+    ]
+   },
+   "price": {
+    "main": "€790",
+    "sub": "per group up to 4",
+    "rows": [
+     {
+      "label": "Per group up to 4",
+      "small": "1.5–2 hours (15-min flight)",
+      "price": "€790"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-15-minute-helicopter-flight-over-top-landmarks-t1227591/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=helicopter_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later", "Heliport transfer"],
+    "sublink": {
+     "url": "#item-2-15-minute-landmarks-flight-with-transfer",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #3: Budapest: Helicopter Adventure or Sightseeing Flights -->\n",
+   "id": "card-3",
+   "cats": ["heli", "danube"],
+   "gallery": {
+    "rank": {
+     "text": "🥉 #3 Best for the Danube Bend",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Helicopter Adventure or Sightseeing Flights"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-helicopter-tours-budapest/03-heli-hungary-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Helicopter Adventure or Sightseeing Flights"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/03-heli-hungary-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Helicopter Adventure or Sightseeing Flights"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/03-heli-hungary-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Helicopter Adventure or Sightseeing Flights"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/03-heli-hungary-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-helicopter-tours-budapest/03-heli-hungary-01.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/03-heli-hungary-02.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/03-heli-hungary-03.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/03-heli-hungary-04.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Heli Hungary",
+    "⏱️ 1 hour",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Kőérberki+út+36/A+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Budaörs Airport area, Kőérberki út"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/szentendre-l1568/budapest-helicopter-adventure-or-sightseeing-flights-t633620/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=helicopter_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Helicopter Adventure or Sightseeing Flights"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "5.00",
+     "score": "5.0",
+     "meta": "13 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(13)",
+       "url": "https://www.getyourguide.com/szentendre-l1568/budapest-helicopter-adventure-or-sightseeing-flights-t633620/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=helicopter_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏞️ <span class=\"bpa-lang-label\">City or Danube Bend</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Choose your route:</strong> Fly over Budapest and its surroundings, or north to Visegrád and the Danube Bend, the river's dramatic curve between the hills."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€245 a seat</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The maths:</strong> €980 for a 1-hour slot with up to 4 passengers: €245 each when full. Turbine helicopters, which the operator calls the safest in their category."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎙️ <span class=\"bpa-lang-label\">Pilot commentary</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>On board:</strong> The pilot talks you through what you see, plus an audio guide and a multilingual brochure. Sunset flights are possible on request."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Wheelchair-accessible</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> Listed as wheelchair-accessible, the only flight on this page that says so."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for groups of up to 4 who want Visegrád and the Danube Bend from the air, because it is the only helicopter listing with that route",
+    "skip_html": "if you only want the city centre landmarks: #1 covers them for €550"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Kőérberki út 36/A, 1112 Budapest (Budaörs Airport area)."
+     },
+     {
+      "q": "What is included?",
+      "a": "Helicopter flight, commentary by pilot, sunset flight on request."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Up to 4 passengers."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Most expensive at €980. Flight minutes within the 1-hour slot are not broken down. No transfer listed."
+     },
+     {
+      "q": "Why pick it?",
+      "a": "Only helicopter listing with a Visegrád and Danube Bend route. Up to 4 passengers in a turbine helicopter. Pilot commentary plus audio guide."
+     }
+    ]
+   },
+   "price": {
+    "main": "€980",
+    "sub": "per group up to 4",
+    "rows": [
+     {
+      "label": "Per group up to 4",
+      "small": "1 hour",
+      "price": "€980"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/szentendre-l1568/budapest-helicopter-adventure-or-sightseeing-flights-t633620/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=helicopter_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-3-1-hour-heli-flight-city-or-danube-bend",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: Budapest: Gyrocopter Sightseeing Flight -->\n",
+   "id": "card-4",
+   "cats": ["open", "danube", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🌬️ #4 Best Open-Cockpit",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Gyrocopter Sightseeing Flight"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-helicopter-tours-budapest/04-gyrocopter-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Gyrocopter Sightseeing Flight"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/04-gyrocopter-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Gyrocopter Sightseeing Flight"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/04-gyrocopter-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Gyrocopter Sightseeing Flight"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/04-gyrocopter-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Gyrocopter Sightseeing Flight"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/04-gyrocopter-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Gyrocopter Sightseeing Flight"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/04-gyrocopter-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Gyrocopter Sightseeing Flight"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/04-gyrocopter-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Gyrocopter Sightseeing Flight"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/04-gyrocopter-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-helicopter-tours-budapest/04-gyrocopter-01.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/04-gyrocopter-02.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/04-gyrocopter-03.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/04-gyrocopter-04.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/04-gyrocopter-05.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/04-gyrocopter-06.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/04-gyrocopter-07.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/04-gyrocopter-08.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Hrubos Attila Ev.",
+    "⏱️ 30 minutes–1 hour+",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Farkashegyi+Repülőtér+Budakeszi",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Farkashegy Airfield, Budakeszi"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/visegrad-l1566/budapest-gyrocopter-sightseeing-flight-t1338800/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=helicopter_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Gyrocopter Sightseeing Flight"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "3.72",
+     "score": "3.7",
+     "meta": "4 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "3.7",
+       "count": "(4)",
+       "url": "https://www.getyourguide.com/visegrad-l1566/budapest-gyrocopter-sightseeing-flight-t1338800/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=helicopter_tours_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗺️ <span class=\"bpa-lang-label\">3 routes</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Choose your flight:</strong> <strong>Above Budapest</strong> (25–30 min): Parliament, Chain Bridge and the Danube in one loop. <strong>Hundred Lakes</strong> (35–45 min): the lake system of South Budapest. <strong>Danube Bend</strong> (60–75 min): the skyline, Margaret Island and the Danube Bend."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌬️ <span class=\"bpa-lang-label\">Open or closed cockpit</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The feel:</strong> Fly open-cockpit with no window between you and the view, or choose a closed cockpit. A full safety briefing and route introduction come first; no experience needed."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">From €149</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The maths:</strong> €149 per person is the from-price; the listing does not say which route it buys. If it is the 25–30 minute city loop, that is €5–6 per minute, a fraction of any helicopter rate here."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⚖️ <span class=\"bpa-lang-label\">Max 118 kg</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rules:</strong> Not suitable for people over 118 kg, with vertigo or afraid of heights. No loose clothing. Flights run year-round."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for solo travellers who want to feel the wind and see the city from above for a fraction of a helicopter seat",
+    "skip_html": "if you are a nervous flyer or want a fully enclosed cabin with a group: book a helicopter"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Farkashegyi Repülőtér (Farkashegy Airfield), 2092 Budakeszi."
+     },
+     {
+      "q": "What is included?",
+      "a": "Aerial sightseeing, licensed pilot, safety briefing, route introduction."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Loose clothing."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Mixed rating so far (3.7 from a handful of reviews). Airfield in Budakeszi, outside the city, no transfer listed. Not for people afraid of heights or with vertigo."
+     },
+     {
+      "q": "Why pick it?",
+      "a": "Lowest per-person from-price after the hang-glider. Open-cockpit option, no window in the way. Three routes including the Danube Bend."
+     }
+    ]
+   },
+   "price": {
+    "main": "€149",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "30 minutes–1 hour+",
+      "price": "€149"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/visegrad-l1566/budapest-gyrocopter-sightseeing-flight-t1338800/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=helicopter_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-4-gyrocopter-flight-3-routes",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: Budapest: Powered Hang-Glider Flight with Transfers -->\n",
+   "id": "card-5",
+   "cats": ["open", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "💸 #5 Cheapest Flight",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Powered Hang-Glider Flight with Transfers"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-helicopter-tours-budapest/05-hang-glider-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Powered Hang-Glider Flight with Transfers"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/05-hang-glider-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Powered Hang-Glider Flight with Transfers"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/05-hang-glider-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Powered Hang-Glider Flight with Transfers"],
+      ["data-src", "/assets/best-helicopter-tours-budapest/05-hang-glider-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-helicopter-tours-budapest/05-hang-glider-01.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/05-hang-glider-02.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/05-hang-glider-03.avif"
+     },
+     {
+      "src": "/assets/best-helicopter-tours-budapest/05-hang-glider-04.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "A JobbmegoldásKFT",
+    "⏱️ 10 or 30 minutes",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Hármashatárhegy+Airport+Cenk+utca+3+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Hármashatárhegy Airport, Cenk utca 3"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-powered-hang-glider-flight-with-transfers-t1061015/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=helicopter_tours_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Powered Hang-Glider Flight with Transfers"
+   },
+   "reviews": {
+    "ratings": {
+     "meta": "New listing, no reviews yet"
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💸 <span class=\"bpa-lang-label\">From €110</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The maths:</strong> €109.79 per person, the lowest price on the page. On the 10-minute flight that is about €11 per minute; a 30-minute flight is also available."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⛰️ <span class=\"bpa-lang-label\">Hármashatárhegy</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Where you take off:</strong> Hármashatárhegy airport in District II, on the Buda hills inside the city. Transport from the base of the mountain up to the mountainside airfield is included."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗺️ <span class=\"bpa-lang-label\">Parliament + Castle</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What you see:</strong> The Parliament, Chain Bridge and Buda Castle, plus the Buda Mountains around the airfield."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⚖️ <span class=\"bpa-lang-label\">Max 91 kg, 12+</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Rules:</strong> Not suitable for children under 12, pregnant women or people over 91 kg. No alcohol or drugs. Pilots speak English, Hungarian and French."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for solo travellers on a budget who want a short, open-air flight from inside the city limits",
+    "skip_html": "if you weigh over 91 kg or want to fly with someone: it is one passenger per flight"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Cenk utca 3, 1028 Budapest (base of Hármashatárhegy)."
+     },
+     {
+      "q": "What is included?",
+      "a": "10- or 30-minute motorised hang-glider flight, transport to the airfield on the mountainside."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Alcohol and drugs."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, French, Hungarian."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "New listing without reviews yet. One passenger per flight. 91 kg weight limit."
+     }
+    ]
+   },
+   "price": {
+    "main": "€110",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "10 or 30 minutes",
+      "price": "€110"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-powered-hang-glider-flight-with-transfers-t1061015/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=helicopter_tours_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-5-powered-hang-glider-10-or-30-min",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,2096 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["entry", "history"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Overall",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Historic Buda Castle Walking Tour"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-buda-castle-tours/01-historian-castle-walk-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Historic Buda Castle Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/01-historian-castle-walk-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Historic Buda Castle Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/01-historian-castle-walk-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Historic Buda Castle Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/01-historian-castle-walk-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Historic Buda Castle Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/01-historian-castle-walk-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Historic Buda Castle Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/01-historian-castle-walk-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Historic Buda Castle Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/01-historian-castle-walk-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Historic Buda Castle Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/01-historian-castle-walk-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Historic Buda Castle Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/01-historian-castle-walk-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Historic Buda Castle Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/01-historian-castle-walk-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-buda-castle-tours/01-historian-castle-walk-01.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/01-historian-castle-walk-02.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/01-historian-castle-walk-03.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/01-historian-castle-walk-04.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/01-historian-castle-walk-05.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/01-historian-castle-walk-06.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/01-historian-castle-walk-07.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/01-historian-castle-walk-08.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/01-historian-castle-walk-09.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/01-historian-castle-walk-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Historian-led walk",
+    "⏱️ 2.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Holy+Trinity+Statue+Szentháromság+tér+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Holy Trinity Statue"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-walking-tour-of-buda-castle-with-a-historian-t160547/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Historic Buda Castle Walking Tour"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.87",
+     "score": "4.9",
+     "meta": "1.1k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.9",
+       "count": "(1.1k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-walking-tour-of-buda-castle-with-a-historian-t160547/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⛪ <span class=\"bpa-lang-label\">Matthias Church entry</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Included:</strong> Your <strong>entrance ticket and 45 minutes of live commentary inside Matthias Church</strong>, with skip-the-ticket-queue entry. That ticket alone is the main thing the budget walks leave out."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎓 <span class=\"bpa-lang-label\">Historian guide</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Guide:</strong> Led by a history-buff guide covering 1,100 years, from the Middle Ages to World War II. English only."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📍 <span class=\"bpa-lang-label\">7 stops, 2.5 hours</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> Holy Trinity Statue, Matthias Church (45 min), Fisherman's Bastion photo stop, the Hadik statue, Buda Castle (30 min), the Castle Hill Funicular, Matthias Fountain and the Savoy Terrace, finishing at the Royal Palace."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "☔ <span class=\"bpa-lang-label\">Rain plan</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Weather:</strong> The walk is mostly outside, so bring an umbrella. In heavy rain the guide switches to more indoor locations."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for first-time visitors who want Matthias Church from the inside plus the whole Castle District in one go, because the €54 covers the church ticket and a historian's commentary.",
+    "skip_html": "if you only want the views and stories: the €16 Royal Cake walk at #2 covers the same streets for €38 less."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Holy Trinity Statue (Szentháromság-szobor), Szentháromság u., 1014 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Professional tour guide, walking tour, entrance ticket and live commentary in Matthias Church."
+     },
+     {
+      "q": "How long is it?",
+      "a": "2.5 hours."
+     },
+     {
+      "q": "Where does it end?",
+      "a": "Royal Palace (Budavári Palota)."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "€54 is the priciest walk here. English only. No St Stephen's Hall or Fisherman's Bastion tower entry."
+     }
+    ]
+   },
+   "price": {
+    "main": "€54",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2.5 hours",
+      "price": "€54"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-walking-tour-of-buda-castle-with-a-historian-t160547/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-1-historian-led-buda-castle-walk",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: Budapest: Buda Castle History Walking Tour with Royal Cake -->\n",
+   "id": "card-2",
+   "cats": ["budget", "history"],
+   "gallery": {
+    "rank": {
+     "text": "🥈 #2 Best Value",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Buda Castle History Walking Tour with Royal Cake"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle History Walking Tour with Royal Cake"],
+      ["data-src", "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle History Walking Tour with Royal Cake"],
+      ["data-src", "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle History Walking Tour with Royal Cake"],
+      ["data-src", "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle History Walking Tour with Royal Cake"],
+      ["data-src", "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle History Walking Tour with Royal Cake"],
+      ["data-src", "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle History Walking Tour with Royal Cake"],
+      ["data-src", "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle History Walking Tour with Royal Cake"],
+      ["data-src", "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle History Walking Tour with Royal Cake"],
+      ["data-src", "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle History Walking Tour with Royal Cake"],
+      ["data-src", "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-01.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-02.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-03.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-04.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-05.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-06.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-07.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-08.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-09.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/02-castle-walk-royal-cake-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Small-group walk, max 15",
+    "⏱️ 2 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Starbucks+Hess+András+tér+1-3+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Hess András tér 1-3"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/buda-castle-guided-walking-tour-with-royal-cake-tasting-t1262726/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Buda Castle History Walking Tour with Royal Cake"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.83",
+     "score": "4.8",
+     "meta": "388 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(388)",
+       "url": "https://www.getyourguide.com/budapest-l29/buda-castle-guided-walking-tour-with-royal-cake-tasting-t1262726/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍰 <span class=\"bpa-lang-label\">Dobos torta slice</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Included:</strong> A slice of <strong>Dobos torta</strong>, the six-layer sponge with chocolate buttercream and a caramel top, with the story of how it became a favourite of Empress Sisi."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚶 <span class=\"bpa-lang-label\">2 km route</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> Matthias Church and Fisherman's Bastion (15 min each), Castle Hill viewpoints, the Buda Castle Caves, the Castle Hill Funicular, Buda Castle and a lesser-known corner. About 2 km on foot."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👥 <span class=\"bpa-lang-label\">Max 15 people</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Group:</strong> Limited to 15 people, with an English-speaking guide. Not suitable for wheelchair users."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎟️ <span class=\"bpa-lang-label\">Entries extra</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Not included:</strong> Entrance tickets to Matthias Church, the Buda Castle History Museum and the National Gallery, extra food and drinks, and tips."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for most visitors on a budget, because €16 buys a 2-hour guided loop of the main Castle Hill landmarks plus a slice of Dobos torta.",
+    "skip_html": "if you want to go inside Matthias Church: entry is not included, so #1 or #4 save you a separate ticket queue."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Starbucks Castle, Hess András tér 1-3, 1014 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Guided walk of Buda Castle, Matthias Church and Fisherman's Bastion, English-speaking guide, slice of Dobos torta."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Entrance tickets (Matthias Church, Buda Castle History Museum, National Gallery), extra food and drinks, tips."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Wheelchair users."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Max 15."
+     }
+    ]
+   },
+   "price": {
+    "main": "€16",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2 hours",
+      "price": "€16"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€20</s>"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/buda-castle-guided-walking-tour-with-royal-cake-tasting-t1262726/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-2-buda-castle-walk-with-royal-cake",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #3: Budapest: Buda Castle Walk with Saint Stephen&#x27;s Hall -->\n",
+   "id": "card-3",
+   "cats": ["entry", "history"],
+   "gallery": {
+    "rank": {
+     "text": "🥉 #3 Best Palace Interior",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Buda Castle Walk with Saint Stephen's Hall"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Walk with Saint Stephen's Hall"],
+      ["data-src", "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Walk with Saint Stephen's Hall"],
+      ["data-src", "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Walk with Saint Stephen's Hall"],
+      ["data-src", "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Walk with Saint Stephen's Hall"],
+      ["data-src", "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Walk with Saint Stephen's Hall"],
+      ["data-src", "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Walk with Saint Stephen's Hall"],
+      ["data-src", "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Walk with Saint Stephen's Hall"],
+      ["data-src", "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle Walk with Saint Stephen's Hall"],
+      ["data-src", "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-01.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-02.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-03.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-04.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-05.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-06.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-07.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-08.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/03-st-stephens-hall-walk-09.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Buda Castle Walks",
+    "⏱️ 1.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Savoyai+Terasz+Szent+György+tér+2+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Savoy Terrace"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/buda-castle-highlights-including-st-stephen-s-hall-t522680/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Buda Castle Walk with Saint Stephen's Hall"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.57",
+     "score": "4.6",
+     "meta": "4.4k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.6",
+       "count": "(4.4k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/buda-castle-highlights-including-st-stephen-s-hall-t522680/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "👑 <span class=\"bpa-lang-label\">St Stephen's Hall entry</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Included:</strong> Your <strong>St Stephen's Hall ticket</strong> and a 30-minute guided visit to the only part of the Royal Palace interior fully restored after it was looted and destroyed in World War II."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎧 <span class=\"bpa-lang-label\">Headsets</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Included:</strong> Headsets so you can hear the guide in the courtyards and inside the hall."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏰 <span class=\"bpa-lang-label\">Palace courtyards</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> Savoy Terrace, Szent György tér, Hunyadi Courtyard and the Lion Courtyard, then St Stephen's Hall: 1 hour outside, 30 minutes inside. Matthias Church and Fisherman's Bastion are not on this route."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⏰ <span class=\"bpa-lang-label\">Arrive 15 min early</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Timing:</strong> Starts on time and latecomers cannot join. Construction in the palace district can make the meeting point hard to find; look for the turquoise Buda Castle Walks umbrella."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for anyone who wants to see inside the Royal Palace, because it is the only tour here that includes St Stephen's Hall.",
+    "skip_html": "if Matthias Church and Fisherman's Bastion are your priority: this route stays in the palace courtyards."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Savoy Terrace (Savoyai Terasz), Szent György tér 2, 1014 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Walking tour, St Stephen's Hall entry ticket, guide, headsets."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Children under 12, people with mobility impairments, wheelchair users."
+     },
+     {
+      "q": "How long is it?",
+      "a": "1.5 hours (1 hour outside, 30 minutes inside)."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Skips Matthias Church and Fisherman's Bastion. Construction noise and traffic in the palace area. Latecomers turned away."
+     }
+    ]
+   },
+   "price": {
+    "main": "€26",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1.5 hours",
+      "price": "€26"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/buda-castle-highlights-including-st-stephen-s-hall-t522680/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-3-castle-walk-with-st-stephen-s-hall",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: Budapest: Matthias Church and Fisherman&#x27;s Bastion tour -->\n",
+   "id": "card-4",
+   "cats": ["entry", "history"],
+   "gallery": {
+    "rank": {
+     "text": "⛪ #4 Best Matthias Church Visit",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Matthias Church and Fisherman's Bastion tour"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-buda-castle-tours/04-matthias-church-bastion-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Matthias Church and Fisherman's Bastion tour"],
+      ["data-src", "/assets/best-buda-castle-tours/04-matthias-church-bastion-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Matthias Church and Fisherman's Bastion tour"],
+      ["data-src", "/assets/best-buda-castle-tours/04-matthias-church-bastion-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Matthias Church and Fisherman's Bastion tour"],
+      ["data-src", "/assets/best-buda-castle-tours/04-matthias-church-bastion-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Matthias Church and Fisherman's Bastion tour"],
+      ["data-src", "/assets/best-buda-castle-tours/04-matthias-church-bastion-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Matthias Church and Fisherman's Bastion tour"],
+      ["data-src", "/assets/best-buda-castle-tours/04-matthias-church-bastion-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Matthias Church and Fisherman's Bastion tour"],
+      ["data-src", "/assets/best-buda-castle-tours/04-matthias-church-bastion-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Matthias Church and Fisherman's Bastion tour"],
+      ["data-src", "/assets/best-buda-castle-tours/04-matthias-church-bastion-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Matthias Church and Fisherman's Bastion tour"],
+      ["data-src", "/assets/best-buda-castle-tours/04-matthias-church-bastion-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Matthias Church and Fisherman's Bastion tour"],
+      ["data-src", "/assets/best-buda-castle-tours/04-matthias-church-bastion-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-buda-castle-tours/04-matthias-church-bastion-01.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/04-matthias-church-bastion-02.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/04-matthias-church-bastion-03.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/04-matthias-church-bastion-04.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/04-matthias-church-bastion-05.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/04-matthias-church-bastion-06.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/04-matthias-church-bastion-07.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/04-matthias-church-bastion-08.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/04-matthias-church-bastion-09.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/04-matthias-church-bastion-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Small-group walk",
+    "⏱️ 2 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Szentháromság+tér+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Szentháromság tér"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-matthias-church-and-fisherman-s-bastion-tour-t1288498/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Matthias Church and Fisherman's Bastion tour"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.67",
+     "score": "4.7",
+     "meta": "35 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.7",
+       "count": "(35)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-matthias-church-and-fisherman-s-bastion-tour-t1288498/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⛪ <span class=\"bpa-lang-label\">1 hour inside the church</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Included:</strong> A <strong>Matthias Church skip-the-line ticket</strong> and a guided visit inside, scheduled at 1 hour, the longest church visit on this page."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📸 <span class=\"bpa-lang-label\">Bastion and funicular</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> Holy Trinity Square, Matthias Church, Fisherman's Bastion (20 min), Buda Castle (20 min), Sándor Palace and a photo stop by the Castle Hill Funicular, finishing at the Royal Palace."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗣️ <span class=\"bpa-lang-label\">English or Spanish</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Languages:</strong> Small-group tours in English and Spanish, with up-to-date tips for museums, cafés and restaurants."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎒 <span class=\"bpa-lang-label\">What to bring</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Pack:</strong> Comfortable shoes, water, sunscreen and a hat. Meals, drinks and transport to the start are not included. Runs every day, rain or shine."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for travellers who mainly want Matthias Church inside with a guide, because €39 includes the ticket and a full hour in the church, €15 less than #1.",
+    "skip_html": "if you want the deeper historian walk with the Savoy Terrace and Matthias Fountain: #1 covers more of the hill."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Szentháromság tér, 1014 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Matthias Church skip-the-line ticket, guided tour inside Matthias Church, scenic walk, Fisherman's Bastion panorama, funicular photo stop, small group."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Transport to the start, meals and drinks."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, Spanish."
+     },
+     {
+      "q": "How long is it?",
+      "a": "2 hours."
+     }
+    ]
+   },
+   "price": {
+    "main": "€39",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2 hours",
+      "price": "€39"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-matthias-church-and-fisherman-s-bastion-tour-t1288498/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-4-matthias-church-and-fisherman-s-bastion",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: Budapest: Buda Castle District Vampires and Myths Night Tour -->\n",
+   "id": "card-5",
+   "cats": ["night", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🦇 #5 Best Night Tour",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Buda Castle District Vampires and Myths Night Tour"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-buda-castle-tours/05-vampires-night-tour-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Vampires and Myths Night Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/05-vampires-night-tour-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Vampires and Myths Night Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/05-vampires-night-tour-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Vampires and Myths Night Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/05-vampires-night-tour-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Vampires and Myths Night Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/05-vampires-night-tour-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Vampires and Myths Night Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/05-vampires-night-tour-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Vampires and Myths Night Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/05-vampires-night-tour-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Vampires and Myths Night Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/05-vampires-night-tour-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Vampires and Myths Night Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/05-vampires-night-tour-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Vampires and Myths Night Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/05-vampires-night-tour-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-buda-castle-tours/05-vampires-night-tour-01.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/05-vampires-night-tour-02.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/05-vampires-night-tour-03.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/05-vampires-night-tour-04.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/05-vampires-night-tour-05.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/05-vampires-night-tour-06.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/05-vampires-night-tour-07.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/05-vampires-night-tour-08.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/05-vampires-night-tour-09.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/05-vampires-night-tour-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Costumed storyteller",
+    "⏱️ 110 min–2 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Zero+Kilometre+Stone+Clark+Ádám+tér+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Zero Kilometre Stone"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-buda-castle-vampires-tales-and-myths-night-tour-t59444/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Buda Castle District Vampires and Myths Night Tour"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.64",
+     "score": "4.6",
+     "meta": "4.6k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.6",
+       "count": "(4.6k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-buda-castle-vampires-tales-and-myths-night-tour-t59444/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🧛 <span class=\"bpa-lang-label\">Dracula and Báthory</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Stories:</strong> Vampire chronicles, Vlad Dracula's imprisonment in Buda Castle, Elizabeth Báthory the bloody countess, medieval battles and Hungarian folk tales, told by an actor guide in period costume."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌙 <span class=\"bpa-lang-label\">After dark</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Format:</strong> A night walk of the Castle District, away from the Pest crowds, in English, German or Spanish."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⛰️ <span class=\"bpa-lang-label\">Meet at the bottom or top</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Meeting:</strong> Starts at the Zero Kilometre Stone on Clark Ádám tér with a 15-minute walk up. You can also join the group once it reaches the top."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📍 <span class=\"bpa-lang-label\">8 stops</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> Viewpoint, Fountain of the Fishing Children, Prince Eugene of Savoy statue, Matthias Fountain, the House of Houdini, Matthias Church (15 min) and Fisherman's Bastion. No entries, no labyrinth."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for couples and groups who want Castle Hill after dark with a story, because €18 buys two hours of Dracula, Báthory and the Castle District lit up.",
+    "skip_html": "if you want history straight: it leans on legends and lore, so take #1 or #2."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Zero Kilometre Stone, Clark Ádám tér, 1013 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Walking tour, storyteller guide in period costume, visit to the Castle District."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Entry to attractions, Labyrinth / underground."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Luggage or large bags, alcohol and drugs, party groups."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, German, Spanish."
+     }
+    ]
+   },
+   "price": {
+    "main": "€18",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "110 min–2 hours",
+      "price": "€18"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€20</s>"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-buda-castle-vampires-tales-and-myths-night-tour-t59444/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-5-vampires-and-myths-night-tour",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #6: Buda Castle Hill Tour: Fisherman&#x27;s Bastion &amp; Matthias Church -->\n",
+   "id": "card-6",
+   "cats": ["history"],
+   "gallery": {
+    "rank": {
+     "text": "🗣️ #6 Best for Other Languages",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Buda Castle Hill Tour: Fisherman's Bastion & Matthias Church"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-buda-castle-tours/06-castle-hill-zero-km-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Buda Castle Hill Tour: Fisherman's Bastion & Matthias Church"],
+      ["data-src", "/assets/best-buda-castle-tours/06-castle-hill-zero-km-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Buda Castle Hill Tour: Fisherman's Bastion & Matthias Church"],
+      ["data-src", "/assets/best-buda-castle-tours/06-castle-hill-zero-km-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Buda Castle Hill Tour: Fisherman's Bastion & Matthias Church"],
+      ["data-src", "/assets/best-buda-castle-tours/06-castle-hill-zero-km-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Buda Castle Hill Tour: Fisherman's Bastion & Matthias Church"],
+      ["data-src", "/assets/best-buda-castle-tours/06-castle-hill-zero-km-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Buda Castle Hill Tour: Fisherman's Bastion & Matthias Church"],
+      ["data-src", "/assets/best-buda-castle-tours/06-castle-hill-zero-km-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Buda Castle Hill Tour: Fisherman's Bastion & Matthias Church"],
+      ["data-src", "/assets/best-buda-castle-tours/06-castle-hill-zero-km-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Buda Castle Hill Tour: Fisherman's Bastion & Matthias Church"],
+      ["data-src", "/assets/best-buda-castle-tours/06-castle-hill-zero-km-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Buda Castle Hill Tour: Fisherman's Bastion & Matthias Church"],
+      ["data-src", "/assets/best-buda-castle-tours/06-castle-hill-zero-km-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Buda Castle Hill Tour: Fisherman's Bastion & Matthias Church"],
+      ["data-src", "/assets/best-buda-castle-tours/06-castle-hill-zero-km-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-buda-castle-tours/06-castle-hill-zero-km-01.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/06-castle-hill-zero-km-02.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/06-castle-hill-zero-km-03.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/06-castle-hill-zero-km-04.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/06-castle-hill-zero-km-05.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/06-castle-hill-zero-km-06.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/06-castle-hill-zero-km-07.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/06-castle-hill-zero-km-08.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/06-castle-hill-zero-km-09.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/06-castle-hill-zero-km-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Guided walk with upgrades",
+    "⏱️ 2.5–3.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Zero+Kilometre+Stone+Clark+Ádám+tér+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Zero Kilometre Stone"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/buda-castle-hill-tour-fisherman-s-bastion-matthias-church-t1320374/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Buda Castle Hill Tour: Fisherman's Bastion &amp; Matthias Church"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.74",
+     "score": "4.7",
+     "meta": "234 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.7",
+       "count": "(234)",
+       "url": "https://www.getyourguide.com/budapest-l29/buda-castle-hill-tour-fisherman-s-bastion-matthias-church-t1320374/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗣️ <span class=\"bpa-lang-label\">6 languages</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Languages:</strong> Guided in German, English, Spanish, French, Italian or Hungarian, the widest choice on this page."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⬆️ <span class=\"bpa-lang-label\">Starts at the bottom</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Meeting:</strong> Meets at the <strong>Zero Kilometre Stone by the Chain Bridge</strong> and walks you up into the Castle District, so you do not need to find your own way up."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "➕ <span class=\"bpa-lang-label\">Church or bunker upgrade</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Upgrades:</strong> Choose a guided interior visit to Matthias Church or add the Hospital in the Rock Nuclear Bunker Museum, a Cold War bunker hidden until 2002. Entry is included only if you book the upgrade."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥾 <span class=\"bpa-lang-label\">Hills and stairs</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Fitness:</strong> Uneven cobblestones, inclines, declines and stairs. Not suitable with back problems or mobility impairments; no strollers or large bags. Under-18s must be with an adult."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for German, French, Italian or Spanish speakers, and anyone who wants to be walked up the hill, because it starts at the Chain Bridge with 6 guide languages.",
+    "skip_html": "if you want church entry without upgrade maths: #4 includes it at the same €39."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Zero Kilometre Stone, Clark Ádám tér, 1013 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Guided walk of the Buda Castle District, visit to Buda Castle, Matthias Church and Fisherman's Bastion (outside), expert local guide."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Guide tip."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "People with back problems or mobility impairments, wheelchair users."
+     },
+     {
+      "q": "Which languages?",
+      "a": "German, English, Spanish, French, Italian, Hungarian."
+     }
+    ]
+   },
+   "price": {
+    "main": "€39",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2.5–3.5 hours",
+      "price": "€39"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/buda-castle-hill-tour-fisherman-s-bastion-matthias-church-t1320374/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-6-castle-hill-tour-from-zero-km-stone",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #7: Budapest: Buda Castle District Walking Tour -->\n",
+   "id": "card-7",
+   "cats": ["budget", "history", "easy"],
+   "gallery": {
+    "rank": {
+     "text": "💶 #7 Cheapest Guided Walk",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Buda Castle District Walking Tour"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-buda-castle-tours/07-castle-district-walk-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/07-castle-district-walk-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/07-castle-district-walk-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/07-castle-district-walk-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/07-castle-district-walk-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/07-castle-district-walk-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/07-castle-district-walk-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/07-castle-district-walk-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/07-castle-district-walk-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Buda Castle District Walking Tour"],
+      ["data-src", "/assets/best-buda-castle-tours/07-castle-district-walk-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-buda-castle-tours/07-castle-district-walk-01.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/07-castle-district-walk-02.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/07-castle-district-walk-03.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/07-castle-district-walk-04.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/07-castle-district-walk-05.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/07-castle-district-walk-06.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/07-castle-district-walk-07.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/07-castle-district-walk-08.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/07-castle-district-walk-09.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/07-castle-district-walk-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Small-group walk, max 10",
+    "⏱️ 2 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Szentháromság+tér+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Szentháromság tér"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Buda Castle District Walking Tour"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.58",
+     "score": "4.6",
+     "meta": "2.4k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.6",
+       "count": "(2.4k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💶 <span class=\"bpa-lang-label\">€6 per hour</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Value:</strong> €12 for 2 hours with a professional guide, the <strong>lowest price on this page</strong>."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Wheelchair accessible</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> The only guided walk here listed as wheelchair accessible. Small groups capped at 10."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📍 <span class=\"bpa-lang-label\">Both ends of the hill</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> Holy Trinity Statue, around Matthias Church, Fisherman's Bastion terraces, the President's Palace, the Royal Palace courtyards and terraces with views of four bridges, then the medieval walls facing the Buda Hills."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "ℹ️ <span class=\"bpa-lang-label\">Ticket advice</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Entries:</strong> No inside visits. The guide explains how to buy tickets. Matthias Church closes at 5 pm and often closes in the daytime for weddings; the Royal Palace museums are closed on Mondays."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for budget travellers and wheelchair users who want a proper guided overview, because €12 covers both ends of the hill in a group of up to 10.",
+    "skip_html": "if you want to go inside anything: no entries are included, and the church often closes for weddings."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Szentháromság tér, 1014 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Professional tour guide."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Entry tickets, pick-up and drop-off, tips."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, French, German, Italian."
+     },
+     {
+      "q": "How big is the group?",
+      "a": "Max 10, wheelchair accessible."
+     }
+    ]
+   },
+   "price": {
+    "main": "€12",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2 hours",
+      "price": "€12"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-7-12-buda-castle-district-walk",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #8: True Crime Walking Tour in the Buda Castle district -->\n",
+   "id": "card-8",
+   "cats": ["night", "budget"],
+   "gallery": {
+    "rank": {
+     "text": "🔪 #8 Best for True-Crime Fans",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "True Crime Walking Tour in the Buda Castle district"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-buda-castle-tours/08-true-crime-castle-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "True Crime Walking Tour in the Buda Castle district"],
+      ["data-src", "/assets/best-buda-castle-tours/08-true-crime-castle-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "True Crime Walking Tour in the Buda Castle district"],
+      ["data-src", "/assets/best-buda-castle-tours/08-true-crime-castle-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "True Crime Walking Tour in the Buda Castle district"],
+      ["data-src", "/assets/best-buda-castle-tours/08-true-crime-castle-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "True Crime Walking Tour in the Buda Castle district"],
+      ["data-src", "/assets/best-buda-castle-tours/08-true-crime-castle-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "True Crime Walking Tour in the Buda Castle district"],
+      ["data-src", "/assets/best-buda-castle-tours/08-true-crime-castle-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "True Crime Walking Tour in the Buda Castle district"],
+      ["data-src", "/assets/best-buda-castle-tours/08-true-crime-castle-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "True Crime Walking Tour in the Buda Castle district"],
+      ["data-src", "/assets/best-buda-castle-tours/08-true-crime-castle-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "True Crime Walking Tour in the Buda Castle district"],
+      ["data-src", "/assets/best-buda-castle-tours/08-true-crime-castle-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "True Crime Walking Tour in the Buda Castle district"],
+      ["data-src", "/assets/best-buda-castle-tours/08-true-crime-castle-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-buda-castle-tours/08-true-crime-castle-01.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/08-true-crime-castle-02.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/08-true-crime-castle-03.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/08-true-crime-castle-04.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/08-true-crime-castle-05.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/08-true-crime-castle-06.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/08-true-crime-castle-07.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/08-true-crime-castle-08.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/08-true-crime-castle-09.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/08-true-crime-castle-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Actor-guide in costume",
+    "⏱️ 2 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Savoyai+Terasz+Szent+György+tér+2+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Savoy Terrace"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/true-crime-walking-tour-in-the-buda-castle-district-t859377/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "True Crime Walking Tour in the Buda Castle district"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.96",
+     "score": "5.0",
+     "meta": "43 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "5.0",
+       "count": "(43)",
+       "url": "https://www.getyourguide.com/budapest-l29/true-crime-walking-tour-in-the-buda-castle-district-t859377/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🔪 <span class=\"bpa-lang-label\">Real murder cases</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Stories:</strong> <strong>100% true murder cases</strong> from the Castle District, told by a professional actor-guide in costume. No vampires, no legends."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🔞 <span class=\"bpa-lang-label\">16+</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Age:</strong> Not suitable for children under 16, who are only allowed with adult supervision. Not suitable for wheelchair users."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📍 <span class=\"bpa-lang-label\">Palace to Bastion</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Route:</strong> Savoy Terrace, Buda Castle, Sándor Palace, three hidden corners, Matthias Church and Fisherman's Bastion, ending at Clark Ádám tér by the Chain Bridge."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🌆 <span class=\"bpa-lang-label\">Evening walk</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Timing:</strong> An evening tour, English only. Bring clothing for the weather."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for adults who like true crime more than kings and queens, because it is the only tour here built on real cases, for €17.",
+    "skip_html": "if you are travelling with kids under 16 or want a classic history tour."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Savoy Terrace (Savoyai terasz), Szent György tér 2, 1014 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Professional actor-guide in costume."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Children under 16 (only with adult supervision), wheelchair users."
+     },
+     {
+      "q": "How long is it?",
+      "a": "2 hours."
+     },
+     {
+      "q": "Where does it end?",
+      "a": "Clark Ádám tér."
+     }
+    ]
+   },
+   "price": {
+    "main": "€17",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2 hours",
+      "price": "€17"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/true-crime-walking-tour-in-the-buda-castle-district-t859377/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-8-true-crime-castle-district-walk",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #9: Budapest: Official Buda Castle Electric Hop-on/Hop-off Bus -->\n",
+   "id": "card-9",
+   "cats": ["budget", "easy"],
+   "gallery": {
+    "rank": {
+     "text": "🚌 #9 Best No-Climb Option",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Official Buda Castle Electric Hop-on/Hop-off Bus"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-buda-castle-tours/09-castle-electric-bus-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Official Buda Castle Electric Hop-on/Hop-off Bus"],
+      ["data-src", "/assets/best-buda-castle-tours/09-castle-electric-bus-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Official Buda Castle Electric Hop-on/Hop-off Bus"],
+      ["data-src", "/assets/best-buda-castle-tours/09-castle-electric-bus-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Official Buda Castle Electric Hop-on/Hop-off Bus"],
+      ["data-src", "/assets/best-buda-castle-tours/09-castle-electric-bus-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Official Buda Castle Electric Hop-on/Hop-off Bus"],
+      ["data-src", "/assets/best-buda-castle-tours/09-castle-electric-bus-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Official Buda Castle Electric Hop-on/Hop-off Bus"],
+      ["data-src", "/assets/best-buda-castle-tours/09-castle-electric-bus-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-buda-castle-tours/09-castle-electric-bus-01.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/09-castle-electric-bus-02.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/09-castle-electric-bus-03.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/09-castle-electric-bus-04.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/09-castle-electric-bus-05.avif"
+     },
+     {
+      "src": "/assets/best-buda-castle-tours/09-castle-electric-bus-06.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Official Budapest Castle Bus",
+    "⏱️ 1 round, valid 1 day",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Budapest+Castle+Bus+Clark+Ádám+tér+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Clark Ádám tér"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-official-buda-castle-electric-hop-onhop-off-bus-t313942/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Official Buda Castle Electric Hop-on/Hop-off Bus"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.41",
+     "score": "4.4",
+     "meta": "529 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.4",
+       "count": "(529)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-official-buda-castle-electric-hop-onhop-off-bus-t313942/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚌 <span class=\"bpa-lang-label\">Open-air electric bus</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The ride:</strong> A comfy open-air electric bus from Clark Ádám tér by the Chain Bridge up to the protected upper level of Castle Hill. No walking uphill."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🔄 <span class=\"bpa-lang-label\">Hop off up to 3 times</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Ticket:</strong> Valid for <strong>one round of the loop</strong>: you can use it 3 times to hop off and back on, and it expires when you return to Clark Ádám tér."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📍 <span class=\"bpa-lang-label\">5 stops</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Stops:</strong> Covering Alexander Palace, the Royal Palace and National Gallery, the Labyrinth, Matthias Church, Fisherman's Bastion, Hospital in the Rock, Vienna Gate, the Mary Magdalene Tower and more, plus restaurants and bars."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚫 <span class=\"bpa-lang-label\">No guide</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Not included:</strong> No guided tour, no tips, and no extra rides beyond the one round."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for anyone who cannot or does not want to walk up Castle Hill, because €18 gets you to the top on an electric bus with 5 stops.",
+    "skip_html": "if you want stories and context: there is no guide, so any walk here explains more."
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Official Budapest Castle Bus, Clark Ádám tér, 1013 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Rides on the official Castle Bus hop-on hop-off service on the upper level of Castle Hill."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Guided tour, tips, additional rides."
+     },
+     {
+      "q": "How long is the ticket valid?",
+      "a": "One round, valid 1 day, hop off up to 3 times."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "No guide. One round only, expires back at the start. Lowest rating here (4.4)."
+     }
+    ]
+   },
+   "price": {
+    "main": "€18",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1 round, valid 1 day",
+      "price": "€18"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-official-buda-castle-electric-hop-onhop-off-bus-t313942/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=buda_castle_tours&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-9-official-buda-castle-electric-bus",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}

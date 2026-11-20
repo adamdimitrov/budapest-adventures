@@ -1,0 +1,2012 @@
+{
+ "format": 1,
+ "icons": {
+  "GetYourGuide": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg==",
+  "Viator": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg==",
+  "Tripadvisor": "data:image/png;base64,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"
+ },
+ "cards": [
+  {
+   "id": "card-1",
+   "cats": ["organ", "classical"],
+   "gallery": {
+    "rank": {
+     "text": "🏆 #1 Best Overall",
+     "medal": "bpa-gold"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Organ Concert in St Stephen's Basilica"],
+      ["fetchpriority", "high"],
+      ["height", "534"],
+      ["loading", "eager"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-concerts-budapest/01-basilica-organ-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Organ Concert in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/01-basilica-organ-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Organ Concert in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/01-basilica-organ-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Organ Concert in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/01-basilica-organ-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Organ Concert in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/01-basilica-organ-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Organ Concert in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/01-basilica-organ-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Organ Concert in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/01-basilica-organ-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Organ Concert in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/01-basilica-organ-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Organ Concert in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/01-basilica-organ-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Organ Concert in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/01-basilica-organ-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-concerts-budapest/01-basilica-organ-01.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/01-basilica-organ-02.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/01-basilica-organ-03.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/01-basilica-organ-04.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/01-basilica-organ-05.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/01-basilica-organ-06.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/01-basilica-organ-07.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/01-basilica-organ-08.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/01-basilica-organ-09.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/01-basilica-organ-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Teleki Miklós and soloists",
+    "⏱️ 70–130 min",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=St+Stephen's+Basilica+Szent+István+tér+1+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 St Stephen's Basilica"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/organ-concert-in-st-stephen-s-basilica-t3897/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Organ Concert in St Stephen's Basilica"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.57",
+     "score": "4.6",
+     "meta": "1.7k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.6",
+       "count": "(1.7k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/organ-concert-in-st-stephen-s-basilica-t3897/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎹 <span class=\"bpa-lang-label\">Organ + bass + flute</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Who plays:</strong> organist Teleki Miklós, bass singer Kolos Kováts (Liszt Ferenc Prize and Kossuth Prize holder) and flautist Eleonóra Krusic. It is a trio, not an orchestra."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎼 <span class=\"bpa-lang-label\">Toccata and Fugue</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Programme:</strong> Mozart's Fantasie in F minor, Stradella's Pietà Signore, Albinoni's Adagio, Liszt's St Francis Legend, Verdi's Prayer of Fiesco, Bach's Badinerie suite, and it closes with Bach's Toccata and Fugue in D minor."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💺 <span class=\"bpa-lang-label\">4 seat categories</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Where you sit:</strong> VIP is the 1st row, Category I rows 2–6, Category II rows 7–16, Category III rows 17–26. Each category is priced separately, so check which rows your ticket covers before you pay."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⛪ <span class=\"bpa-lang-label\">Basilica nave</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The venue:</strong> the concert is held inside St Stephen's Basilica on Szent István tér, a neo-classical church known for its acoustics."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a first evening in Budapest, because €26 gets you Bach's Toccata and Fugue on the Basilica organ with two soloists, at half the price of the other Basilica series",
+    "skip_html": "if you want a full orchestra or a choir: this is organ, one voice and a flute"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "St Stephen's Basilica, Szent István tér 1, 1051 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Concert ticket."
+     },
+     {
+      "q": "How is the seating?",
+      "a": "VIP (row 1), Cat. I (rows 2–6), Cat. II (rows 7–16), Cat. III (rows 17–26)."
+     },
+     {
+      "q": "What is on the programme?",
+      "a": "Teleki Miklós (organ), Kolos Kováts (bass), Eleonóra Krusic (flute)."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Trio format, no orchestra or choir. Rows run back to row 26, a long way from the players. Listed length varies (70–130 minutes), so check the time slot."
+     }
+    ]
+   },
+   "price": {
+    "main": "€26",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "70–130 min",
+      "price": "€26"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€29</s>"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/organ-concert-in-st-stephen-s-basilica-t3897/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-1-st-stephen-s-basilica-organ-concert",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #2: Budapest: Concert on the Oldest Working Organ in the City -->\n",
+   "id": "card-2",
+   "cats": ["organ", "classical"],
+   "gallery": {
+    "rank": {
+     "text": "🥈 #2 Best Value",
+     "medal": "bpa-silver"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Concert on the Oldest Working Organ in the City"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-concerts-budapest/02-st-michael-organ-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Concert on the Oldest Working Organ in the City"],
+      ["data-src", "/assets/best-concerts-budapest/02-st-michael-organ-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Concert on the Oldest Working Organ in the City"],
+      ["data-src", "/assets/best-concerts-budapest/02-st-michael-organ-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Concert on the Oldest Working Organ in the City"],
+      ["data-src", "/assets/best-concerts-budapest/02-st-michael-organ-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Concert on the Oldest Working Organ in the City"],
+      ["data-src", "/assets/best-concerts-budapest/02-st-michael-organ-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Concert on the Oldest Working Organ in the City"],
+      ["data-src", "/assets/best-concerts-budapest/02-st-michael-organ-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Concert on the Oldest Working Organ in the City"],
+      ["data-src", "/assets/best-concerts-budapest/02-st-michael-organ-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-concerts-budapest/02-st-michael-organ-01.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/02-st-michael-organ-02.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/02-st-michael-organ-03.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/02-st-michael-organ-04.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/02-st-michael-organ-05.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/02-st-michael-organ-06.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/02-st-michael-organ-07.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Majestic Sounds",
+    "⏱️ 65 min",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=St+Michael's+Church+Váci+utca+47+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 St Michael's Church, Váci utca"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-concert-on-the-oldest-working-organ-in-the-city-t492479/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Concert on the Oldest Working Organ in the City"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.81",
+     "score": "4.8",
+     "meta": "183 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.8",
+       "count": "(183)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-concert-on-the-oldest-working-organ-in-the-city-t492479/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎹 <span class=\"bpa-lang-label\">Oldest working organ</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The instrument:</strong> Budapest's oldest working organ, in the Baroque St Michael's Church on Váci utca. The organisers describe it as a small instrument, not a huge cathedral organ, and the programme suits it: Bach, Handel, Mozart, Franck."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎤 <span class=\"bpa-lang-label\">Organ + soprano</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Who plays:</strong> Miklós Teleki, the series' creative director, who gives about 120 recitals a year, with soprano Zita Szilágyi on vocal dates. Some dates are solo organ or chamber music instead."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📺 <span class=\"bpa-lang-label\">Screen on the organist</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Why it matters:</strong> a screen shows the organist playing, and there is a short introduction in English and Hungarian plus a printed leaflet."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🔥 <span class=\"bpa-lang-label\">Heated pews</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Seating:</strong> free seating. The old pews are heated, the chairs are more comfortable. No seat categories, so arrive early for the front."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for organ lovers on a budget, because €23 buys a 65-minute Bach-to-Franck programme on the city's oldest working organ, with a screen so you can watch the organist play",
+    "skip_html": "if you want the grand scale of the Basilica or monumental organ pieces; this organ is small by design"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "St Michael's Church, Váci u. 47/b, 1056 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Entry ticket, organ concert, programme leaflet and introduction in English."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Guide, transport."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Video and audio recording."
+     },
+     {
+      "q": "How is the seating?",
+      "a": "Free seating; heated pews or chairs."
+     }
+    ]
+   },
+   "price": {
+    "main": "€23",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "65 min",
+      "price": "€23"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-concert-on-the-oldest-working-organ-in-the-city-t492479/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later", "Skip the ticket queue"],
+    "sublink": {
+     "url": "#item-2-oldest-working-organ-st-michael-s",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #3: Budapest Concert: A. Vivaldi – Four Seasons and more -->\n",
+   "id": "card-3",
+   "cats": ["classical"],
+   "gallery": {
+    "rank": {
+     "text": "🥉 #3 Best Orchestra Concert",
+     "medal": "bpa-bronze"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest Concert: A. Vivaldi – Four Seasons and more"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-concerts-budapest/03-st-anna-vivaldi-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest Concert: A. Vivaldi – Four Seasons and more"],
+      ["data-src", "/assets/best-concerts-budapest/03-st-anna-vivaldi-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Concert: A. Vivaldi – Four Seasons and more"],
+      ["data-src", "/assets/best-concerts-budapest/03-st-anna-vivaldi-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Concert: A. Vivaldi – Four Seasons and more"],
+      ["data-src", "/assets/best-concerts-budapest/03-st-anna-vivaldi-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Concert: A. Vivaldi – Four Seasons and more"],
+      ["data-src", "/assets/best-concerts-budapest/03-st-anna-vivaldi-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Concert: A. Vivaldi – Four Seasons and more"],
+      ["data-src", "/assets/best-concerts-budapest/03-st-anna-vivaldi-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Concert: A. Vivaldi – Four Seasons and more"],
+      ["data-src", "/assets/best-concerts-budapest/03-st-anna-vivaldi-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Concert: A. Vivaldi – Four Seasons and more"],
+      ["data-src", "/assets/best-concerts-budapest/03-st-anna-vivaldi-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Concert: A. Vivaldi – Four Seasons and more"],
+      ["data-src", "/assets/best-concerts-budapest/03-st-anna-vivaldi-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest Concert: A. Vivaldi – Four Seasons and more"],
+      ["data-src", "/assets/best-concerts-budapest/03-st-anna-vivaldi-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-concerts-budapest/03-st-anna-vivaldi-01.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/03-st-anna-vivaldi-02.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/03-st-anna-vivaldi-03.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/03-st-anna-vivaldi-04.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/03-st-anna-vivaldi-05.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/03-st-anna-vivaldi-06.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/03-st-anna-vivaldi-07.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/03-st-anna-vivaldi-08.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/03-st-anna-vivaldi-09.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/03-st-anna-vivaldi-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Budapest Classic Orchestra",
+    "⏱️ 1 hour",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Szervita+tér+6+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 St Anna Church, Szervita tér"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-vivaldi-mozart-bach-and-more-at-st-anna-church-t1106825/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest Concert: A. Vivaldi – Four Seasons and more"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.65",
+     "score": "4.6",
+     "meta": "839 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.6",
+       "count": "(839)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-vivaldi-mozart-bach-and-more-at-st-anna-church-t1106825/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎻 <span class=\"bpa-lang-label\">Orchestra + 2 soloists</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Who plays:</strong> the Budapest Classic Orchestra with a violin soloist and a soprano. The only church concert under €30 here with an orchestra rather than an organ."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎼 <span class=\"bpa-lang-label\">Four Seasons</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Programme:</strong> Vivaldi's Spring and Summer, Pachelbel's Canon, Mozart's Lacrimosa, Bach's Air on the G String, Schubert's Ave Maria, Mozart's Salzburg Symphony, Beethoven's 5th (Allegro) and Handel's Ombra mai fu."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🚪 <span class=\"bpa-lang-label\">Doors 15 min early</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Timing:</strong> doors open 15 minutes before the start. Late arrivals are let in between pieces, so a delay does not cost you the whole concert."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📍 <span class=\"bpa-lang-label\">Off Váci utca</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Location:</strong> Szervita tér 6, a few steps from Váci utca in the centre of Pest, easy to pair with dinner in District V."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for first-timers who want the famous tunes, because €28 gets you an orchestra, a violin soloist and a soprano playing Vivaldi, Bach, Mozart and Beethoven in one hour",
+    "skip_html": "if you came to hear a church organ; there is none in this programme"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Szervita tér 6, 1052 Budapest (off Váci utca)."
+     },
+     {
+      "q": "What is included?",
+      "a": "Entrance ticket, printed concert programme, violin soloist, soprano."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Transport."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "1 hour, among the shortest concerts here. No organ. Seat categories not spelled out by row."
+     },
+     {
+      "q": "Why pick it?",
+      "a": "Orchestra with violin soloist and soprano. Greatest-hits programme, ideal for non-specialists. From €28 for 1 hour."
+     }
+    ]
+   },
+   "price": {
+    "main": "€28",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1 hour",
+      "price": "€28"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-vivaldi-mozart-bach-and-more-at-st-anna-church-t1106825/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-3-vivaldi-four-seasons-st-anna-church",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #4: Budapest: Hungarian Folk Dance &amp; Concert with Dinner Option -->\n",
+   "id": "card-4",
+   "cats": ["folk", "dinner"],
+   "gallery": {
+    "rank": {
+     "text": "💃 #4 Best Folk Show",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Hungarian Folk Dance & Concert with Dinner Option"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-concerts-budapest/04-rajko-folk-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Folk Dance & Concert with Dinner Option"],
+      ["data-src", "/assets/best-concerts-budapest/04-rajko-folk-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Folk Dance & Concert with Dinner Option"],
+      ["data-src", "/assets/best-concerts-budapest/04-rajko-folk-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Folk Dance & Concert with Dinner Option"],
+      ["data-src", "/assets/best-concerts-budapest/04-rajko-folk-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Folk Dance & Concert with Dinner Option"],
+      ["data-src", "/assets/best-concerts-budapest/04-rajko-folk-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Folk Dance & Concert with Dinner Option"],
+      ["data-src", "/assets/best-concerts-budapest/04-rajko-folk-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Folk Dance & Concert with Dinner Option"],
+      ["data-src", "/assets/best-concerts-budapest/04-rajko-folk-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Folk Dance & Concert with Dinner Option"],
+      ["data-src", "/assets/best-concerts-budapest/04-rajko-folk-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Folk Dance & Concert with Dinner Option"],
+      ["data-src", "/assets/best-concerts-budapest/04-rajko-folk-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Hungarian Folk Dance & Concert with Dinner Option"],
+      ["data-src", "/assets/best-concerts-budapest/04-rajko-folk-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-concerts-budapest/04-rajko-folk-01.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/04-rajko-folk-02.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/04-rajko-folk-03.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/04-rajko-folk-04.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/04-rajko-folk-05.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/04-rajko-folk-06.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/04-rajko-folk-07.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/04-rajko-folk-08.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/04-rajko-folk-09.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/04-rajko-folk-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Rajkó Folk Ensemble",
+    "⏱️ 80 min",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Király+utca+20+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Hungarian Gastro Cellar, Király utca"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/hungarian-folklore-dance-show-concert-with-dinner-option-t1587/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Hungarian Folk Dance &amp; Concert with Dinner Option"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.33",
+     "score": "4.3",
+     "meta": "1.2k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.3",
+       "count": "(1.2k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/hungarian-folklore-dance-show-concert-with-dinner-option-t1587/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💃 <span class=\"bpa-lang-label\">Rajkó Folk Ensemble</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Who performs:</strong> a professional ensemble founded in 1950, staging Hungarian folk dance and music in costume. Two 30-minute halves with a 20-minute break."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍽️ <span class=\"bpa-lang-label\">Show, soup or dinner</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Options:</strong> the cheapest option is the show with a drink. The listing's options add soup or a 3-course dinner: chicken paprikash with Somlói sponge cake, or a vegetarian menu (request it when booking)."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🕢 <span class=\"bpa-lang-label\">18:30 arrival</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Timeline:</strong> arrival and welcome drink 18:30–19:00, first half 19:00–19:30, break 19:30–19:50, second half 19:50–20:20."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Not step-free</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> the cellar venue on Király utca is not wheelchair-accessible and not suitable for people with mobility impairments."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for a cheap, lively first night, because from €15 you see a professional folk ensemble founded in 1950 dance and play for an hour, and can add dinner",
+    "skip_html": "if you want quiet concert listening or need step-free access"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Hungarian Gastro Cellar, Király u. 20, 1061 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Show ticket; drink, soup or dinner depending on option."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "People with mobility impairments."
+     },
+     {
+      "q": "What is on the programme?",
+      "a": "2 × 30 minutes with a 20-minute break."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Cellar venue not wheelchair-accessible. Dinner costs extra over the from-price. Show is 60 minutes of the 80."
+     }
+    ]
+   },
+   "price": {
+    "main": "€15",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "80 min",
+      "price": "€15"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€19</s>"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/hungarian-folklore-dance-show-concert-with-dinner-option-t1587/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-4-rajk-folk-dance-show",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #5: Budapest: Opera House Guided Tour with Concert -->\n",
+   "id": "card-5",
+   "cats": ["opera"],
+   "gallery": {
+    "rank": {
+     "text": "🎭 #5 Best Opera House Visit",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Opera House Guided Tour with Concert"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-concerts-budapest/05-opera-house-tour-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Opera House Guided Tour with Concert"],
+      ["data-src", "/assets/best-concerts-budapest/05-opera-house-tour-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Opera House Guided Tour with Concert"],
+      ["data-src", "/assets/best-concerts-budapest/05-opera-house-tour-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Opera House Guided Tour with Concert"],
+      ["data-src", "/assets/best-concerts-budapest/05-opera-house-tour-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-concerts-budapest/05-opera-house-tour-01.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/05-opera-house-tour-02.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/05-opera-house-tour-03.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/05-opera-house-tour-04.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "bookinbudapest.com",
+    "⏱️ 1 hour",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Hungarian+State+Opera+Andrássy+út+22+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Hungarian State Opera, Andrássy út"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-opera-house-guided-tour-t646418/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Opera House Guided Tour with Concert"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.54",
+     "score": "4.5",
+     "meta": "2.3k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.5",
+       "count": "(2.3k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-opera-house-guided-tour-t646418/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏛️ <span class=\"bpa-lang-label\">60-min interior tour</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>What you see:</strong> the auditorium frescoes and the grand staircase of the Opera House, built in 1884 to Miklós Ybl's plans and fully restored in 2022. Tours can be cancelled for rehearsals; you are then offered another date."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎶 <span class=\"bpa-lang-label\">Brief live concert</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The music:</strong> a short live performance on the landing of the grand staircase at the end of the tour. It is a finale, not a full concert."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🗣️ <span class=\"bpa-lang-label\">5 languages</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Tour languages:</strong> English, German, French, Italian and Spanish, with a live guide. Pick the language when you book."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎟️ <span class=\"bpa-lang-label\">Skip the ticket queue</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Entry:</strong> meet in the Opera House on Andrássy út 22. The ticket skips the ticket-office line; it is not suitable for wheelchair users."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for architecture and opera fans with a free hour, because €33 gets you inside the restored 1884 Opera House plus a short live performance on the staircase",
+    "skip_html": "if you want a real concert: the music is a brief finale, and the opera itself needs a separate show ticket"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Hungarian State Opera, Andrássy út 22, 1061 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Interior visit, live guide, 60-minute tour, brief concert."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Food and drinks."
+     },
+     {
+      "q": "Who is it not for?",
+      "a": "Wheelchair users."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English, German, French, Italian, Spanish."
+     }
+    ]
+   },
+   "price": {
+    "main": "€33",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "1 hour",
+      "price": "€33"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-opera-house-guided-tour-t646418/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later", "Skip the ticket queue"],
+    "sublink": {
+     "url": "#item-5-opera-house-tour-with-mini-concert",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #6: Budapest: Classical Music Concerts in St Stephen&#x27;s Basilica -->\n",
+   "id": "card-6",
+   "cats": ["classical", "organ"],
+   "gallery": {
+    "rank": {
+     "text": "⛪ #6 Best Basilica Programme Choice",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Classical Music Concerts in St Stephen's Basilica"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-concerts-budapest/06-basilica-requiem-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Classical Music Concerts in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/06-basilica-requiem-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Classical Music Concerts in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/06-basilica-requiem-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Classical Music Concerts in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/06-basilica-requiem-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Classical Music Concerts in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/06-basilica-requiem-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Classical Music Concerts in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/06-basilica-requiem-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Classical Music Concerts in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/06-basilica-requiem-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Classical Music Concerts in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/06-basilica-requiem-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Classical Music Concerts in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/06-basilica-requiem-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Classical Music Concerts in St Stephen's Basilica"],
+      ["data-src", "/assets/best-concerts-budapest/06-basilica-requiem-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-concerts-budapest/06-basilica-requiem-01.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/06-basilica-requiem-02.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/06-basilica-requiem-03.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/06-basilica-requiem-04.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/06-basilica-requiem-05.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/06-basilica-requiem-06.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/06-basilica-requiem-07.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/06-basilica-requiem-08.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/06-basilica-requiem-09.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/06-basilica-requiem-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Basilica classical series",
+    "⏱️ 60–70 min",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=St+Stephen's+Basilica+Szent+István+tér+1+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 St Stephen's Basilica"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-classical-music-concerts-in-st-stephen-s-basilica-t288900/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Classical Music Concerts in St Stephen's Basilica"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.62",
+     "score": "4.6",
+     "meta": "1.7k+ reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.6",
+       "count": "(1.7k+)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-classical-music-concerts-in-st-stephen-s-basilica-t288900/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎼 <span class=\"bpa-lang-label\">3 programmes</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Choose by date:</strong> Mozart's Requiem in D minor in full, an organ concert (Bach Toccata, Widor Toccata, Handel, Gounod and Schubert Ave Maria), or an Ave Maria / Air / Alleluja programme with Vivaldi's Winter."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💺 <span class=\"bpa-lang-label\">4 seating classes</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Seating:</strong> four seating classes priced separately, so you can trade view for budget. The from-price is €60."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "♿ <span class=\"bpa-lang-label\">Wheelchair-accessible</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Access:</strong> the Basilica concerts are listed as wheelchair-accessible, unlike the Opera tour and the Rajkó cellar show."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "📅 <span class=\"bpa-lang-label\">30 Dec moves venue</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Watch the date:</strong> the 30 December concert takes place in Matthias Church on Castle Hill, not in the Basilica. 25 and 31 December have their own programme."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for anyone who specifically wants Mozart's Requiem in the Basilica, because this is the only series here that performs the full Requiem",
+    "skip_html": "if you only want organ music in the Basilica: #1 does that for €26"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "St Stephen's Basilica, Szent István tér 1, 1051 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Concert ticket."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Hotel pick-up and drop-off, food and drinks."
+     },
+     {
+      "q": "What is on the programme?",
+      "a": "Mozart Requiem, organ concert, Ave Maria / Air / Alleluja (by date)."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "From €60, more than double #1. Programme depends on the date you pick. 30 December is in Matthias Church instead."
+     }
+    ]
+   },
+   "price": {
+    "main": "€60",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "60–70 min",
+      "price": "€60"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-classical-music-concerts-in-st-stephen-s-basilica-t288900/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-6-basilica-concerts-requiem-or-organ",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #7: Budapest: Classical Music Concerts in Matthias Church -->\n",
+   "id": "card-7",
+   "cats": ["classical"],
+   "gallery": {
+    "rank": {
+     "text": "🏰 #7 Best on Castle Hill",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Classical Music Concerts in Matthias Church"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-concerts-budapest/07-matthias-church-concert-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Classical Music Concerts in Matthias Church"],
+      ["data-src", "/assets/best-concerts-budapest/07-matthias-church-concert-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Classical Music Concerts in Matthias Church"],
+      ["data-src", "/assets/best-concerts-budapest/07-matthias-church-concert-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Classical Music Concerts in Matthias Church"],
+      ["data-src", "/assets/best-concerts-budapest/07-matthias-church-concert-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Classical Music Concerts in Matthias Church"],
+      ["data-src", "/assets/best-concerts-budapest/07-matthias-church-concert-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Classical Music Concerts in Matthias Church"],
+      ["data-src", "/assets/best-concerts-budapest/07-matthias-church-concert-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-concerts-budapest/07-matthias-church-concert-01.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/07-matthias-church-concert-02.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/07-matthias-church-concert-03.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/07-matthias-church-concert-04.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/07-matthias-church-concert-05.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/07-matthias-church-concert-06.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Duna String Orchestra",
+    "⏱️ 70 min",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Matthias+Church+Szentháromság+tér+2+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Matthias Church, Castle Hill"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-classical-music-concerts-in-matthias-church-t293350/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Classical Music Concerts in Matthias Church"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.62",
+     "score": "4.6",
+     "meta": "943 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.6",
+       "count": "(943)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-classical-music-concerts-in-matthias-church-t293350/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎻 <span class=\"bpa-lang-label\">Duna String Orchestra</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Who plays:</strong> the Duna String Orchestra with violin soloist Gabora Gyula. Strings only, no organ."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🎼 <span class=\"bpa-lang-label\">Best of Classical</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Programme:</strong> Pachelbel's Canon, Vivaldi's Winter, Bach's Violin Concerto in E major, Handel's Water Music, Albinoni's Adagio, Saint-Saëns' The Swan, Mozart's Eine kleine Nachtmusik and more."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💺 <span class=\"bpa-lang-label\">3 seat categories</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Seating:</strong> three categories priced separately, so you can trade view for budget."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🏰 <span class=\"bpa-lang-label\">Castle Hill</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Location:</strong> Matthias Church, Szentháromság tér 2, on Castle Hill and easily reachable from the city centre. Come up before the concert and walk the Castle District."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for an evening on Castle Hill, because it pairs a 70-minute string programme with a concert inside Matthias Church",
+    "skip_html": "if price matters: St Anna (#3) plays a similar greatest-hits programme for €28"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Matthias Church, Szentháromság tér 2, 1014 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "Concert ticket."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Hotel pick-up and drop-off, food and drinks."
+     },
+     {
+      "q": "What is on the programme?",
+      "a": "Duna String Orchestra, Gabora Gyula (violin)."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "From €60, the joint priciest concert here. Strings only, no organ. Seat categories are not mapped to rows."
+     }
+    ]
+   },
+   "price": {
+    "main": "€60",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "70 min",
+      "price": "€60"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-classical-music-concerts-in-matthias-church-t293350/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-7-matthias-church-string-concert",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #8: Budapest: Authentic Hungarian Dinner &amp; Folk Show -->\n",
+   "id": "card-8",
+   "cats": ["folk", "dinner"],
+   "gallery": {
+    "rank": {
+     "text": "🍽️ #8 Best Folk Dinner Show",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Authentic Hungarian Dinner & Folk Show"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Authentic Hungarian Dinner & Folk Show"],
+      ["data-src", "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Authentic Hungarian Dinner & Folk Show"],
+      ["data-src", "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Authentic Hungarian Dinner & Folk Show"],
+      ["data-src", "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Authentic Hungarian Dinner & Folk Show"],
+      ["data-src", "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Authentic Hungarian Dinner & Folk Show"],
+      ["data-src", "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Authentic Hungarian Dinner & Folk Show"],
+      ["data-src", "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Authentic Hungarian Dinner & Folk Show"],
+      ["data-src", "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Authentic Hungarian Dinner & Folk Show"],
+      ["data-src", "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Authentic Hungarian Dinner & Folk Show"],
+      ["data-src", "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-01.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-02.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-03.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-04.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-05.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-06.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-07.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-08.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-09.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/08-puli-juhasz-folk-dinner-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Puli &amp; Juhász",
+    "⏱️ 2 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Puli+&+Juhász+Dob+utca+19+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Puli &amp; Juhász, Dob utca"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-folk-dinner-show-with-live-music-unlimited-wine-t1006332/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Authentic Hungarian Dinner &amp; Folk Show"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.69",
+     "score": "4.7",
+     "meta": "395 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.7",
+       "count": "(395)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-folk-dinner-show-with-live-music-unlimited-wine-t1006332/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍲 <span class=\"bpa-lang-label\">3-course dinner</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The menu:</strong> traditional: goulash in a cauldron, chicken paprikash with egg dumplings, Somló sponge trifle. Vegan: green pea soup, vegan stuffed cabbage, chocolate cake with raspberry mousse. You choose on site."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥂 <span class=\"bpa-lang-label\">Welcome drink</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Drinks:</strong> a glass of sparkling wine or orange juice to start. Every other drink is ordered and paid for separately."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "💃 <span class=\"bpa-lang-label\">2 × 15-min shows</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>The show:</strong> two 15-minute folklore sets in costume with live folk music all evening, then you can learn a few dance steps."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🪑 <span class=\"bpa-lang-label\">Shared tables</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Seating:</strong> tables seat 4 or 6. On busy nights you may share with another booking; tell them in advance if separate bookings want to sit together."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for couples and families who want dinner to be the main event, because €55 covers a full 3-course Hungarian meal with live folk music around you all evening",
+    "skip_html": "if you want a long dance show: the folklore sets total 30 minutes"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Puli &amp; Juhász restaurant, Dob u. 19, 1074 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "3-course dinner (traditional or vegan), welcome sparkling wine or orange juice, two 15-minute folklore performances, live folk music."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Additional drinks."
+     },
+     {
+      "q": "How is the seating?",
+      "a": "4 or 6 seats; may be shared on busy evenings."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Only 2 × 15 minutes of dancing. Drinks after the welcome glass cost extra. You may share a table on busy nights."
+     }
+    ]
+   },
+   "price": {
+    "main": "€55",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2 hours",
+      "price": "€55"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-folk-dinner-show-with-live-music-unlimited-wine-t1006332/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-8-puli-juh-sz-folk-dinner-show",
+     "text": "Read Review ↓"
+    }
+   }
+  },
+  {
+   "before": "\n<!-- #9: Budapest: Medieval Dinner Show with Unlimited Drinks -->\n",
+   "id": "card-9",
+   "cats": ["dinner"],
+   "gallery": {
+    "rank": {
+     "text": "🍺 #9 Best Unlimited-Drinks Dinner Show",
+     "medal": "bpa-accent"
+    },
+    "photos": [
+     [
+      ["alt", "Budapest: Medieval Dinner Show with Unlimited Drinks"],
+      ["height", "534"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "/assets/best-concerts-budapest/09-apostolok-medieval-01.avif"],
+      ["width", "800"]
+     ],
+     [
+      ["alt", "Budapest: Medieval Dinner Show with Unlimited Drinks"],
+      ["data-src", "/assets/best-concerts-budapest/09-apostolok-medieval-02.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Medieval Dinner Show with Unlimited Drinks"],
+      ["data-src", "/assets/best-concerts-budapest/09-apostolok-medieval-03.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Medieval Dinner Show with Unlimited Drinks"],
+      ["data-src", "/assets/best-concerts-budapest/09-apostolok-medieval-04.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Medieval Dinner Show with Unlimited Drinks"],
+      ["data-src", "/assets/best-concerts-budapest/09-apostolok-medieval-05.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Medieval Dinner Show with Unlimited Drinks"],
+      ["data-src", "/assets/best-concerts-budapest/09-apostolok-medieval-06.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Medieval Dinner Show with Unlimited Drinks"],
+      ["data-src", "/assets/best-concerts-budapest/09-apostolok-medieval-07.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Medieval Dinner Show with Unlimited Drinks"],
+      ["data-src", "/assets/best-concerts-budapest/09-apostolok-medieval-08.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Medieval Dinner Show with Unlimited Drinks"],
+      ["data-src", "/assets/best-concerts-budapest/09-apostolok-medieval-09.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ],
+     [
+      ["alt", "Budapest: Medieval Dinner Show with Unlimited Drinks"],
+      ["data-src", "/assets/best-concerts-budapest/09-apostolok-medieval-10.avif"],
+      ["decoding", "async"],
+      ["loading", "lazy"],
+      ["sizes", "(max-width: 767px) 420px, (max-width: 991px) 55vw, (max-width: 1439px) 49vw, 50vw"],
+      ["src", "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E"]
+     ]
+    ],
+    "thumbs": [
+     {
+      "src": "/assets/best-concerts-budapest/09-apostolok-medieval-01.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/09-apostolok-medieval-02.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/09-apostolok-medieval-03.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/09-apostolok-medieval-04.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/09-apostolok-medieval-05.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/09-apostolok-medieval-06.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/09-apostolok-medieval-07.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/09-apostolok-medieval-08.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/09-apostolok-medieval-09.avif"
+     },
+     {
+      "src": "/assets/best-concerts-budapest/09-apostolok-medieval-10.avif"
+     }
+    ]
+   },
+   "kicker": [
+    "Apostolok",
+    "⏱️ 2.5 hours",
+    {
+     "url": "https://www.google.com/maps/search/?api=1&query=Apostolok+Kígyó+utca+4+Budapest",
+     "rel": "noopener noreferrer",
+     "target": "_blank",
+     "onclick": "event.stopPropagation()",
+     "map": "📍 Apostolok, Kígyó utca"
+    }
+   ],
+   "title": {
+    "url": "https://www.getyourguide.com/budapest-l29/budapest-royal-feast-with-drinks-live-shows-since-1903-t1492791/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+    "rel": "nofollow sponsored noopener",
+    "target": "_blank",
+    "text": "Budapest: Medieval Dinner Show with Unlimited Drinks"
+   },
+   "reviews": {
+    "ratings": {
+     "stars": "4.68",
+     "score": "4.7",
+     "meta": "116 reviews · 1 site",
+     "heading": "Rating on GetYourGuide",
+     "sites": [
+      {
+       "kind": "link",
+       "site": "GetYourGuide",
+       "score": "4.7",
+       "count": "(116)",
+       "url": "https://www.getyourguide.com/budapest-l29/budapest-royal-feast-with-drinks-live-shows-since-1903-t1492791/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+       "rel": "noopener nofollow sponsored",
+       "target": "_blank"
+      }
+     ]
+    }
+   },
+   "pills": [
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🍺 <span class=\"bpa-lang-label\">Unlimited beer &amp; wine</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Drinks:</strong> unlimited beer, wine, soft drinks, juices and water for the whole 2.5 hours. Spirits, cocktails and premium drinks are not included."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "⚔️ <span class=\"bpa-lang-label\">Medieval show</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Entertainment:</strong> sword fighting, a royal jester, juggling, belly dancers, a snake dancer and live medieval music, with a performance roughly every 20 minutes."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🕔 <span class=\"bpa-lang-label\">17:00 or 20:00</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Two sittings:</strong> Early Medieval Dinner at 17:00 with 3 courses, Grand Medieval Dinner at 20:00 with 5 courses (appetisers, soup, Hungarian pancake, main, dessert)."
+    },
+    {
+     "cls": "bpa-lang",
+     "summary_html": "🥗 <span class=\"bpa-lang-label\">Diet options</span><span aria-hidden=\"true\" class=\"bpa-lang-chev\">▾</span>",
+     "pop_html": "<strong>Menus:</strong> pork, poultry, vegetarian, vegan and gluten-free. Tell them about allergies in advance. Children 0–3 attend free."
+    }
+   ],
+   "best_for": {
+    "pick_html": "for groups and families who want a big, noisy night out, because €45 covers dinner, unlimited beer and wine and a show every 20 minutes",
+    "skip_html": "if you want Hungarian folk culture or classical music; this is medieval dinner theatre"
+   },
+   "faq": {
+    "items": [
+     {
+      "q": "Where does it start?",
+      "a": "Apostolok, Kígyó u. 4-6, 1052 Budapest."
+     },
+     {
+      "q": "What is included?",
+      "a": "3- or 5-course dinner, unlimited beer, wine, soft drinks, juices and water, live shows and music, taxes and service."
+     },
+     {
+      "q": "What is not included?",
+      "a": "Spirits, cocktails, premium drinks, hotel pick-up, transport."
+     },
+     {
+      "q": "Which languages?",
+      "a": "English-speaking host."
+     },
+     {
+      "q": "What are the downsides?",
+      "a": "Not a folk or classical show. Spirits and cocktails cost extra. The 5-course 20:00 sitting is a different option from the from-price."
+     }
+    ]
+   },
+   "price": {
+    "main": "€45",
+    "sub": "per person",
+    "rows": [
+     {
+      "label": "Adult",
+      "small": "2.5 hours",
+      "price": "€45"
+     },
+     {
+      "label": "Regular price",
+      "price": "<s>€64</s>"
+     }
+    ],
+    "note": "Free cancellation up to 24 hours before. The final price shows before you pay."
+   },
+   "cta": {
+    "btn": {
+     "url": "https://www.getyourguide.com/budapest-l29/budapest-royal-feast-with-drinks-live-shows-since-1903-t1492791/?partner_id=YS414AJ&utm_medium=online_publisher&cmp=concerts_budapest&mkt_cmp=true",
+     "rel": "nofollow sponsored noopener",
+     "target": "_blank",
+     "text": "Check Availability →"
+    },
+    "via": "Booked securely via GetYourGuide",
+    "trust": ["<b>Free cancellation</b> up to 24 hours before", "<b>Reserve now</b>, pay later"],
+    "sublink": {
+     "url": "#item-9-apostolok-medieval-dinner-show",
+     "text": "Read Review ↓"
+    }
+   }
+  }
+ ]
+}
