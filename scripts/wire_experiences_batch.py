@@ -31,7 +31,7 @@ PAGES = {
     "best-concerts-budapest": ("Experiences", "Best Concerts &amp; Shows", "Organ concerts, opera &amp; folk shows"),
     "best-wine-tasting-budapest": ("Experiences", "Best Wine Tastings", "City tastings, wineries &amp; pálinka"),
     "best-cooking-classes-budapest": ("Experiences", "Best Cooking Classes", "Goulash classes &amp; chimney cake workshops"),
-    "best-bike-tours-budapest": ("Experiences", "Best Bike &amp; Segway Tours", "Bikes, e-bikes, Segways &amp; e-scooters"),
+    "best-bike-tours-budapest": ("Experiences", "Best Bike &amp; E-Bike Tours", "Classic bikes, e-bikes &amp; Castle Hill climbs"),
     "best-helicopter-tours-budapest": ("Experiences", "Best Helicopter Tours", "Sightseeing flights priced per minute"),
     "best-shooting-ranges-budapest": ("Nightlife", "Best Shooting Ranges", "Gun packages compared per round"),
 }
@@ -42,7 +42,7 @@ RELATED = {
         'Want one area in depth instead of a city overview? Compare the <a href="/best-buda-castle-tours">Buda Castle tours</a>, '
         'the <a href="/best-jewish-quarter-tours-budapest">Jewish Quarter tours with Dohány Synagogue entry</a> and the '
         '<a href="/best-communist-tours-budapest">communist history tours and Memento Park</a>. Rather ride than walk? See the '
-        '<a href="/best-bike-tours-budapest">bike, e-bike and Segway tours</a>.'),
+        '<a href="/best-bike-tours-budapest">bike and e-bike tours</a> or the <a href="/best-segway-tours-budapest">Segway tours</a>.'),
     "best-food-tours-budapest": ("Cook it or taste the wine instead",
         'If you would rather make the food yourself, compare the <a href="/best-cooking-classes-budapest">Hungarian cooking classes '
         'and chimney cake workshops</a>. For Tokaji, Egri Bikavér and pálinka without the walking, see the '
