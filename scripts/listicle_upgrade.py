@@ -347,8 +347,9 @@ def old_card(node, icons):
     if tr is not None:
         cta["trust"] = [trust_line(sp.inner()) for sp in kids(tr, tag="span") if sp.inner().strip() not in ("•", "")]
     subs = kids(cell, "bpa-sublink", "a")
+    hrefs = [_html.unescape(re.search(r'href="([^"]*)"', x.start).group(1)) for x in subs]
     if subs:
-        cta["sublink"] = {"url": subs[0].a()["href"], "text": subs[0].inner()}
+        cta["sublink"] = {"url": hrefs[0], "text": subs[0].inner()}
     if len(subs) > 1:
         card["_guide_links"] = [x.outer() for x in subs[1:]]
     card["cta"] = cta
@@ -471,6 +472,10 @@ def merge(card, sc, placeholder):
         card["cta"]["trust"] = sc["trust"]
     if "via" in sc:
         card["cta"]["via"] = sc["via"]
+    if "sublink" in sc:
+        card["cta"]["sublink"] = sc["sublink"]
+    if "cta_btn" in sc:
+        card["cta"]["btn"] = sc["cta_btn"]
     if "btn_text" in sc:
         card["cta"]["btn"]["text"] = sc["btn_text"]
     if "_old_bestfor" in card and "best_for" not in sc:
@@ -617,6 +622,9 @@ def shell(src, spec, cards, icons):
     # "Based on 1,400+ GetYourGuide reviews (4.2 out of 5), visitors praise ..." -> "Visitors praise ..."
     src = re.sub(r'<p>Based on (?:(?!</p>).)*?(?:\)|reviews(?:</strong>)?(?: on [A-Za-z ]+(?: and [A-Za-z]+)?)?),\s*([a-z])',
                  lambda m: "<p>" + m.group(1).upper(), src)
+    # GetYourGuide partner links need mkt_cmp=true (without it they land on GYG search)
+    src = re.sub(r'(https://www\.getyourguide\.com/[^"\s]*?partner_id=YS414AJ[^"\s]*?)(?=")',
+                 lambda mm: mm.group(1) if "mkt_cmp=true" in mm.group(1) else mm.group(1) + "&amp;mkt_cmp=true", src)
     # 5. JS: inline lang JS -> shared files at the end of the body
     src = re.sub(r'<script id="bpa-lang-js">.*?</script>', "", src, count=1, flags=re.S)
     if "/js/listicle-cards.js" not in src:
