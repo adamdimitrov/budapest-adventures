@@ -6,7 +6,7 @@ and by check_kit.py.
 import hashlib
 import os
 
-SKIP_DIRS = {"__pycache__", ".git"}
+SKIP_DIRS = {"__pycache__", ".git", ".pytest_cache"}
 
 
 def kit_files(kit_dir):

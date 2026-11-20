@@ -5,8 +5,10 @@ name: Layout check
 # python3 kit/update.py. check_kit.py fails when this file differs.
 #
 # Runs every QC check for the site: the kit's integrity, the site's own
-# checks listed in site.json (local_checks), photos (check_lazy_images) and
-# filter pills (check_filters). Same file on every site.
+# checks listed in site.json (local_checks), photos (check_lazy_images),
+# filter pills (check_filters), and in a real browser the listicle layout
+# (check_listicle_layout) and the desktop menus (check_menu_fit). Same file on
+# every site.
 on:
   pull_request:
   push:
@@ -20,4 +22,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Browser for the layout and menu checks
+        run: |
+          npm install -g playwright@1.63.0
+          npx -y playwright@1.63.0 install --with-deps chromium
+          echo "NODE_PATH=$(npm root -g)" >> "$GITHUB_ENV"
       - run: python3 kit/checks/check_all.py
