@@ -19,7 +19,10 @@ from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAGES = ["where-to-stay-in-budapest", "best-hotels-budapest", "best-luxury-hotels-budapest", "best-boutique-hotels-budapest",
-         "best-spa-hotels-budapest", "best-cheap-hotels-budapest", "best-airport-hotels-budapest"]
+         "best-spa-hotels-budapest", "best-cheap-hotels-budapest", "best-airport-hotels-budapest",
+         "best-aparthotels-budapest", "best-castle-district-hotels-budapest", "best-4-star-hotels-budapest",
+         "best-danube-view-hotels-budapest", "best-family-hotels-budapest", "hotels-near-keleti-station-budapest",
+         "best-romantic-hotels-budapest"]
 GOOGLE_ICON = "/assets/cdn/67d02edca7795b0f57073b59/67ebc6e4688dbf65f4077122_google-logo.avif"
 
 
