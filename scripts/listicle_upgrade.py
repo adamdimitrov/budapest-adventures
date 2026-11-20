@@ -198,7 +198,8 @@ def ratings_fallback(blk):
             d["icon"] = _html.unescape(icon)
         sites.append(d)
     if not sites:
-        return None
+        meta = find(blk, "bpa-rate-meta")
+        return {"meta": meta.inner().strip()} if meta is not None else None
     tot = sum(parse_count(s["count"]) for s in sites)
     scale = 10 if any(float(s["score"]) > 5 for s in sites) else 5
     w = sum(float(s["score"]) * parse_count(s["count"]) for s in sites) / tot if tot else float(sites[0]["score"])
@@ -506,7 +507,7 @@ def filter_box(spec, total):
             f'aria-pressed="false">{lab} <span class="cd-n"></span></button>' for c, lab in grp["chips"])
         rows.append(f'<div class="{cls}"><span class="cd-flab">{grp["label"]}</span><div class="cd-fchips">{chips}</div></div>')
     more = ('<button type="button" class="cd-fmore" aria-expanded="false" hidden>More filters '
-            '<span class="cd-fmore-n"></span> ▾</button>') if len(spec["filters"]) > 1 else ""
+            '<span class="cd-fmore-n"></span> ▾</button>')  # listicle-fmore.js needs it even with one row
     foot = (f'<div class="cd-ffoot"><span class="cd-fcount" aria-live="polite">Showing <b>{total}</b> of {total} {noun}</span>'
             f'<div class="cd-fapplied"></div><button type="button" class="cd-fclear" hidden '
             f'onclick="lttFilterCruises(\'all\')">Clear all</button></div>')
@@ -577,9 +578,9 @@ def shell(src, spec, cards, icons):
         src = (src[:i] + RT.tag(group("listicle-base.css")) + RT.tag(group("listicle-cards.css")) + CSS_EXTRA
                + src[i:])
     # 2. filters
-    box, mini = filter_box(spec, total)
+    box, mini = filter_box(spec, total) if spec.get("filters") else (None, None)
     m = re.search(r'<div class="ltt-integrated-filter-bar[^"]*"[^>]*>', src)
-    if m:
+    if m and box:
         end = balanced(src, m.start(), "div")
         src = src[:m.start()] + box + src[end:]
         # mini bar goes right before the deck

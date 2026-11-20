@@ -249,6 +249,9 @@ def main():
     page = page.replace("</head>", '<style id="bpa-szechenyi-css">@media (max-width:839px){.ltt-integrated-pills{flex-wrap:wrap!important;row-gap:8px!important}}</style>\n</head>', 1)
     page = bath_copy_rules.apply(page)
     assert "—" not in re.sub(r"<script.*?</script>|<style.*?</style>", "", page, flags=re.S), "em dash in copy"
+    if os.path.exists(OUT) and 'href="/css/listicle-cards.css' in open(OUT, encoding="utf-8").read():
+        # The page is on the shared listicle design now: cards come from data/listicles/<slug>.json
+        raise SystemExit(f"{os.path.basename(OUT)} is built from data/listicles/; edit the card data instead")
     with open(OUT, "w", encoding="utf-8") as f:
         f.write(page)
     print("wrote", OUT, len(page))
