@@ -167,7 +167,39 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 .dec-dates{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;padding:0;list-style:none}
 .dec-dates li{background:#f1f5f9;border-radius:999px;padding:3px 10px;font-size:13.5px !important;color:#334155;margin:0 !important}
 .dec-free li{margin-bottom:10px}
-</style><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+</style><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -1201,39 +1233,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p><strong>Pick it</strong> if you want a guaranteed slot with an audio guide in your language. <strong>Skip it</strong> if you hold an EU/EEA passport and can book a few days ahead on the official site: see my <a href="/budapest-parliament-tickets">Parliament ticket guide</a>.</p>
 <h3>Next Stop</h3>
 <p>🚶 St Stephen's Basilica is about a 15-minute walk south-east through Szabadság tér.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 1" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Parliament Tour With Audio Guide (1/1)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/630b4ef13591b53be87b5f75_07-Budapest-Parliament.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 1</span> <span>Parliament Tour With Audio Guide</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €43</span>
-<span class="ltt-buy-price-sub">per adult • 45-minute tour</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Parliament Tour With Audio Guide</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Area: <strong>Kossuth tér</strong></span>
-<span class="ltt-buy-perk">Tour: <strong>45 min</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-parliament-tour-with-audio-guide-opt-boat-tour-t731430/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-parliament&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Parliament Tour With Audio Guide">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-parliament-tour-with-audio-guide-opt-boat-tour-t731430/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-parliament&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/630b4ef13591b53be87b5f75_07-Budapest-Parliament.webp" alt="Parliament Tour With Audio Guide (1/1)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">Day 1 · Morning</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-parliament-tour-with-audio-guide-opt-boat-tour-t731430/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-parliament&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Parliament Tour With Audio Guide</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.50" aria-hidden="true"></span><b class="bpa-rate-score">4.5</b><span class="bpa-rate-meta">6.6k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on 1 booking site</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-parliament-tour-with-audio-guide-opt-boat-tour-t731430/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-rating-parliament&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.5</span><span class="bpa-rev-count">(6.6k+)</span><span class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Area: <strong>Kossuth tér</strong></li><li>Tour: <strong>45 min</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €43<small>per adult • 45-minute tour</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-parliament-tour-with-audio-guide-opt-boat-tour-t731430/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-parliament&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1292,39 +1301,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p><strong>Pick it</strong> for the view. <strong>Skip</strong> the dome if stairs are an issue and just see the church.</p>
 <h3>Next Stop</h3>
 <p>🍽️ Lunch around the Basilica, then a slow afternoon along the river to the Chain Bridge before the evening cruise.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 2" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="St Stephen&#x27;s Basilica and the Dome (1/1)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/63c134f8dc1eff677ffc6cb7_6_St%20Stpehens%20Basilica.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 1</span> <span>St Stephen&#x27;s Basilica and the Dome</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €12</span>
-<span class="ltt-buy-price-sub">per adult • church entry, dome option</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">St Stephen's Basilica and the Dome</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Area: <strong>District V</strong></span>
-<span class="ltt-buy-perk">Time: <strong>about 1 hour</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-st-stephen-s-basilica-entry-with-options-t655129/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-basilica&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="St Stephen&#x27;s Basilica and the Dome">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-st-stephen-s-basilica-entry-with-options-t655129/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-basilica&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/63c134f8dc1eff677ffc6cb7_6_St%20Stpehens%20Basilica.webp" alt="St Stephen&#x27;s Basilica and the Dome (1/1)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">Day 1 · Late Morning</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-st-stephen-s-basilica-entry-with-options-t655129/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-basilica&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">St Stephen's Basilica and the Dome</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.60" aria-hidden="true"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">15.8k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on 1 booking site</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-st-stephen-s-basilica-entry-with-options-t655129/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-rating-basilica&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(15.8k+)</span><span class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Area: <strong>District V</strong></li><li>Time: <strong>about 1 hour</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €12<small>per adult • church entry, dome option</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-st-stephen-s-basilica-entry-with-options-t655129/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-basilica&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1383,38 +1369,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p><strong>Pick it</strong> for the classic night view. <strong>Skip it</strong> if you would rather eat on the river: the <a href="/best-dinner-cruises-budapest">best dinner cruise</a> fits day 3's evening better. Want drinks flowing? Compare the <a href="/unlimited-prosecco-cruises-budapest">unlimited prosecco cruises</a>.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ Dock 7, Vigadó tér (Pest side), about 10 minutes on foot from the Basilica.<br/>🚇 Vörösmarty tér (M1) or tram 2.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 3" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink (1/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/68f3738fe72bf6e25526e991_best-budapest-river-cruises-legenda-sightseeing-cruise-00025.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 10</span> <span>Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink</span></div></div><div class="ltt-strip-slide"><img alt="Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink (2/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/68f3728df887e78f3ca120db_best-budapest-river-cruises-legenda-sightseeing-cruise-00006.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 10</span> <span>Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink</span></div></div><div class="ltt-strip-slide"><img alt="Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink (3/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/68f3738e03a6297dac92826a_best-budapest-river-cruises-legenda-sightseeing-cruise-00012.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 10</span> <span>Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink</span></div></div><div class="ltt-strip-slide"><img alt="Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink (4/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/68f3738fb705f76f17608252_best-budapest-river-cruises-legenda-sightseeing-cruise-00017.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 10</span> <span>Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink</span></div></div><div class="ltt-strip-slide"><img alt="Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink (5/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/68f3738f900b7b793aca6056_best-budapest-river-cruises-legenda-sightseeing-cruise-00024.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 10</span> <span>Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink</span></div></div><div class="ltt-strip-slide"><img alt="Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink (6/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/68f3738ff7f68a9d80c0c037_best-budapest-river-cruises-legenda-sightseeing-cruise-00016.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 10</span> <span>Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink</span></div></div><div class="ltt-strip-slide"><img alt="Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink (7/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/68f3738f025fb2e82c581a73_best-budapest-river-cruises-legenda-sightseeing-cruise-00013.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 10</span> <span>Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink</span></div></div><div class="ltt-strip-slide"><img alt="Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink (8/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/68f3738f8abeb45efd6208e7_best-budapest-river-cruises-legenda-sightseeing-cruise-00022.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">8 / 10</span> <span>Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink</span></div></div><div class="ltt-strip-slide"><img alt="Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink (9/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/68f3738f03a6297dac928295_best-budapest-river-cruises-legenda-sightseeing-cruise-00014.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">9 / 10</span> <span>Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink</span></div></div><div class="ltt-strip-slide"><img alt="Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink (10/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/68f3738fbe24ee2467baeb41_best-budapest-river-cruises-legenda-sightseeing-cruise-00020.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">10 / 10</span> <span>Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €20</span>
-<span class="ltt-buy-price-sub">per adult • day or night sailings</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Danube Night Cruise With Audio Guide &amp; Welcome Drink</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Booked directly with the operator</span>
-<span class="ltt-buy-perk">Pier: <strong>Dock 7</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>about 1 hour</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://legenda.hu/en?partner=38585" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Danube Night Cruise With Audio Guide &amp; Welcome Drink">
+<a class="bpa-book-img" href="https://legenda.hu/en?partner=38585" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/68f3738fe72bf6e25526e991_best-budapest-river-cruises-legenda-sightseeing-cruise-00025.avif" alt="Danube Night Cruise With Audio Guide &amp;amp; Welcome Drink (1/10)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">Day 1 · Evening (Must-Do)</div>
+<a class="bpa-book-title" href="https://legenda.hu/en?partner=38585" rel="nofollow sponsored noopener" target="_blank">Danube Night Cruise With Audio Guide &amp; Welcome Drink</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.44" aria-hidden="true"></span><b class="bpa-rate-score">4.4</b><span class="bpa-rate-meta">15.1k+ reviews · 2 sites</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ratings on 2 booking sites, each for this exact product</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-1-hour-evening-sightseeing-cruise-with-drink-t105820/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=budapest-travel-guide-en-pop&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.5</span><span class="bpa-rev-count">(10.9k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a><a class="bpa-rev-badge is-link" href="https://tp.media/r?campaign_id=47&amp;marker=404154&amp;p=1922&amp;sub_id=budapest_travel_guide_en_pop&amp;trs=204442&amp;u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FLegenda-Danube-Legend-Cruise-Budapest%2Fd499-35015P1" rel="noopener nofollow sponsored" target="_blank"><img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">4.3</span><span class="bpa-rev-count">(4.2k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Booked directly with the operator</li><li>Pier: <strong>Dock 7</strong></li><li>Duration: <strong>about 1 hour</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €20<small>per adult • day or night sailings</small></div><a class="bpa-book-btn" href="https://legenda.hu/en?partner=38585" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1472,39 +1436,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <div class="w-richtext"><p>Start day 2 hungry. The <strong>Central Market Hall</strong> is Budapest's best food stop, and the easiest way to understand it is with someone who eats there: Foodapest's tour starts in the hall and ends in two local restaurants, with <strong>12+ tastings</strong> and a wine tasting along the way.</p>
 <h3>Who Should Book It</h3>
 <p><strong>Pick it</strong> if food is part of why you came. <strong>Skip it</strong> if you prefer to graze on your own. Comparing options? See the <a href="/best-food-tours-budapest">9 best food tours in Budapest</a>.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 4" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Market to Tavern Food Tour With Wine Tasting (1/5)" loading="lazy" src="/assets/food-tours-budapest/foodapest-market-tavern-2.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>Market to Tavern Food Tour With Wine Tasting</span></div></div><div class="ltt-strip-slide"><img alt="Market to Tavern Food Tour With Wine Tasting (2/5)" loading="lazy" src="/assets/food-tours-budapest/foodapest-market-tavern-3.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>Market to Tavern Food Tour With Wine Tasting</span></div></div><div class="ltt-strip-slide"><img alt="Market to Tavern Food Tour With Wine Tasting (3/5)" loading="lazy" src="/assets/food-tours-budapest/foodapest-market-tavern-4.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>Market to Tavern Food Tour With Wine Tasting</span></div></div><div class="ltt-strip-slide"><img alt="Market to Tavern Food Tour With Wine Tasting (4/5)" loading="lazy" src="/assets/food-tours-budapest/foodapest-market-tavern-5.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>Market to Tavern Food Tour With Wine Tasting</span></div></div><div class="ltt-strip-slide"><img alt="Market to Tavern Food Tour With Wine Tasting (5/5)" loading="lazy" src="/assets/food-tours-budapest/foodapest-market-tavern-1.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>Market to Tavern Food Tour With Wine Tasting</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €62</span>
-<span class="ltt-buy-price-sub">per person • 3 hours</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Market to Tavern Food Tour With Wine Tasting</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Central Market Hall</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>3 hours</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-food-tour-market-to-tavern-14-tasters-wines-t808482/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-food-tour&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Market to Tavern Food Tour With Wine Tasting">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-food-tour-market-to-tavern-14-tasters-wines-t808482/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-food-tour&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/food-tours-budapest/foodapest-market-tavern-2.webp" alt="Market to Tavern Food Tour With Wine Tasting (1/5)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">Day 2 · Morning</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-food-tour-market-to-tavern-14-tasters-wines-t808482/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-food-tour&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Market to Tavern Food Tour With Wine Tasting</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.90" aria-hidden="true"></span><b class="bpa-rate-score">4.9</b><span class="bpa-rate-meta">679 reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on 1 booking site</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-food-tour-market-to-tavern-14-tasters-wines-t808482/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-rating-food-tour&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.9</span><span class="bpa-rev-count">(679)</span><span class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Central Market Hall</strong></li><li>Duration: <strong>3 hours</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €62<small>per person • 3 hours</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-food-tour-market-to-tavern-14-tasters-wines-t808482/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-food-tour&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1562,39 +1503,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p>The 14:00 start is the reason it fits here: you finish around 16:00 on the hill, and in the colder months that is <strong>sunset</strong>. Stay on the Bastion and watch the Parliament light up across the river.</p>
 <h3>Who Should Book It</h3>
 <p><strong>Pick it</strong> for your first afternoon in Buda. <strong>Skip it</strong> if you prefer to explore alone, and use the <a href="/best-walking-tours-budapest">walking tours comparison</a> for free tip-based options.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 5" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Buda Castle District Walking Tour (1/6)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa665536d44a917a4be1_Buda%20Castle%20Walking%20Tour%20(10).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>Buda Castle District Walking Tour</span></div></div><div class="ltt-strip-slide"><img alt="Buda Castle District Walking Tour (2/6)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab1ba5e26b34774d7e87_Buda%20Castle%20Walking%20Tour%20(15).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>Buda Castle District Walking Tour</span></div></div><div class="ltt-strip-slide"><img alt="Buda Castle District Walking Tour (3/6)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aaf8060885d81f1a5826_Buda%20Castle%20Walking%20Tour%20(4).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>Buda Castle District Walking Tour</span></div></div><div class="ltt-strip-slide"><img alt="Buda Castle District Walking Tour (4/6)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aae8db5d54ad86f5d18f_Buda%20Castle%20Walking%20Tour%20(7).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>Buda Castle District Walking Tour</span></div></div><div class="ltt-strip-slide"><img alt="Buda Castle District Walking Tour (5/6)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aab76a90d3270b8a5f22_Buda%20Castle%20Walking%20Tour%20(13).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>Buda Castle District Walking Tour</span></div></div><div class="ltt-strip-slide"><img alt="Buda Castle District Walking Tour (6/6)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab0d3fe3f203a88ae5ae_Buda%20Castle%20Walking%20Tour%20(1).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>Buda Castle District Walking Tour</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €12</span>
-<span class="ltt-buy-price-sub">per person • daily 14:00 and 14:30</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Buda Castle District Walking Tour</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Trinity Square</strong></span>
-<span class="ltt-buy-perk">Time: <strong>14:00</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-castle-walk&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Buda Castle District Walking Tour">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-castle-walk&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa665536d44a917a4be1_Buda%20Castle%20Walking%20Tour%20(10).webp" alt="Buda Castle District Walking Tour (1/6)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">Day 2 · Afternoon</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-castle-walk&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Buda Castle District Walking Tour</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.60" aria-hidden="true"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">2.4k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on 1 booking site</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-rating-castle-walk&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(2.4k+)</span><span class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Trinity Square</strong></li><li>Time: <strong>14:00</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €12<small>per person • daily 14:00 and 14:30</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-castle-walk&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1652,39 +1570,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <div class="w-richtext"><p>Day 2 ends in the <strong>Jewish Quarter</strong>, Budapest's ruin bar district. You can walk to Szimpla Kert yourself (entry is free), but if you want a crowd and no planning, this crawl takes you through <strong>4 to 5 bars and a club</strong> with a shot at each, from about <strong>€2</strong>.</p>
 <h3>Who Should Book It</h3>
 <p><strong>Pick it</strong> for a big night out. <strong>Skip it</strong> for a calm drink. All the options, from €2 to a €25 crawl with 5 drinks, are in the <a href="/best-pub-crawls-budapest">pub crawl comparison</a>.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 6" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Ruin Bar Pub Crawl With Free Shots &amp;amp; VIP Entry (1/6)" loading="lazy" src="/assets/pub-crawls-2026/ruinbarcrawl-01.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>Ruin Bar Pub Crawl With Free Shots &amp;amp; VIP Entry</span></div></div><div class="ltt-strip-slide"><img alt="Ruin Bar Pub Crawl With Free Shots &amp;amp; VIP Entry (2/6)" loading="lazy" src="/assets/pub-crawls-2026/ruinbarcrawl-02.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>Ruin Bar Pub Crawl With Free Shots &amp;amp; VIP Entry</span></div></div><div class="ltt-strip-slide"><img alt="Ruin Bar Pub Crawl With Free Shots &amp;amp; VIP Entry (3/6)" loading="lazy" src="/assets/pub-crawls-2026/ruinbarcrawl-03.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>Ruin Bar Pub Crawl With Free Shots &amp;amp; VIP Entry</span></div></div><div class="ltt-strip-slide"><img alt="Ruin Bar Pub Crawl With Free Shots &amp;amp; VIP Entry (4/6)" loading="lazy" src="/assets/pub-crawls-2026/ruinbarcrawl-04.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>Ruin Bar Pub Crawl With Free Shots &amp;amp; VIP Entry</span></div></div><div class="ltt-strip-slide"><img alt="Ruin Bar Pub Crawl With Free Shots &amp;amp; VIP Entry (5/6)" loading="lazy" src="/assets/pub-crawls-2026/ruinbarcrawl-05.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>Ruin Bar Pub Crawl With Free Shots &amp;amp; VIP Entry</span></div></div><div class="ltt-strip-slide"><img alt="Ruin Bar Pub Crawl With Free Shots &amp;amp; VIP Entry (6/6)" loading="lazy" src="/assets/pub-crawls-2026/ruinbarcrawl-06.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>Ruin Bar Pub Crawl With Free Shots &amp;amp; VIP Entry</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €2</span>
-<span class="ltt-buy-price-sub">per person • starts 21:10, 21:40 or 22:20</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Ruin Bar Pub Crawl With Free Shots &amp; VIP Entry</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Erzsébet körút 36</strong></span>
-<span class="ltt-buy-perk">From: <strong>21:10</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-pub-crawl-ruin-bar-tour-free-shots-vip-entry-t1068003/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-pub-crawl&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Ruin Bar Pub Crawl With Free Shots &amp; VIP Entry">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-pub-crawl-ruin-bar-tour-free-shots-vip-entry-t1068003/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-pub-crawl&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/pub-crawls-2026/ruinbarcrawl-01.webp" alt="Ruin Bar Pub Crawl With Free Shots &amp;amp; VIP Entry (1/6)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">Day 2 · Night</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-pub-crawl-ruin-bar-tour-free-shots-vip-entry-t1068003/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-pub-crawl&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Ruin Bar Pub Crawl With Free Shots &amp; VIP Entry</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.90" aria-hidden="true"></span><b class="bpa-rate-score">4.9</b><span class="bpa-rate-meta">3.8k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on 1 booking site</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-pub-crawl-ruin-bar-tour-free-shots-vip-entry-t1068003/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-rating-pub-crawl&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.9</span><span class="bpa-rev-count">(3.8k+)</span><span class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Erzsébet körút 36</strong></li><li>From: <strong>21:10</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €2<small>per person • starts 21:10, 21:40 or 22:20</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-pub-crawl-ruin-bar-tour-free-shots-vip-entry-t1068003/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-pub-crawl&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1742,39 +1637,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p>I've been to Széchenyi myself. Stay as long as you like, then walk out into <strong>City Park</strong>: Vajdahunyad Castle is next door and free, and Heroes' Square is at the end of the park.</p>
 <h3>Who Should Book It</h3>
 <p><strong>Pick it</strong> for your first Budapest bath. <strong>Skip it</strong> if you want something smaller and older: <a href="/rudas-baths-budapest">Rudas</a> has a rooftop pool and night bathing on Fridays and Saturdays. All six are compared in the <a href="/thermal-baths-budapest">thermal baths guide</a>.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 7" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath Morning Pass (1/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12f890d9668187cda50a6_1_Sz%C3%A9chenyi%20Thermal%20Bath.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 8</span> <span>Széchenyi Thermal Bath Morning Pass</span></div></div><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath Morning Pass (2/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7a8d6a973a0c983a7095a_11Szechenyi-bath-ourdoor-pool.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 8</span> <span>Széchenyi Thermal Bath Morning Pass</span></div></div><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath Morning Pass (3/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7a8c8c9fdf77e1c5197bf_10-Szechenyi-bath-outdoor-lap-pool.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 8</span> <span>Széchenyi Thermal Bath Morning Pass</span></div></div><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath Morning Pass (4/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64b6a6b19f9458bcf5a7b66c_03-Szechenyi-bath-online-ticket-validation.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 8</span> <span>Széchenyi Thermal Bath Morning Pass</span></div></div><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath Morning Pass (5/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7a540343999e752fcbdd0_05-Szechenyi-bath-locker-room.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 8</span> <span>Széchenyi Thermal Bath Morning Pass</span></div></div><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath Morning Pass (6/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64b6b7ed2c5ca7263d3ae36e_08-Szechenyi-bath-cabins.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 8</span> <span>Széchenyi Thermal Bath Morning Pass</span></div></div><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath Morning Pass (7/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7b108d4bc082efa13bf83_12-Szechenyi-bath-indoor-pool-1.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 8</span> <span>Széchenyi Thermal Bath Morning Pass</span></div></div><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath Morning Pass (8/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7b1876a1ea8dedc6fb379_14-Szechenyi-bath-indoor-pool-3.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">8 / 8</span> <span>Széchenyi Thermal Bath Morning Pass</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €39</span>
-<span class="ltt-buy-price-sub">per adult • entry 7:00 to 9:00, Mon to Thu</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Széchenyi Thermal Bath Morning Pass</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Area: <strong>City Park</strong></span>
-<span class="ltt-buy-perk">Entry: <strong>7:00-9:00</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-szechenyi&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Széchenyi Thermal Bath Morning Pass">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-szechenyi&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12f890d9668187cda50a6_1_Sz%C3%A9chenyi%20Thermal%20Bath.webp" alt="Széchenyi Thermal Bath Morning Pass (1/8)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">Day 3 · Morning</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-szechenyi&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Széchenyi Thermal Bath Morning Pass</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.25" aria-hidden="true"></span><b class="bpa-rate-score">4.3</b><span class="bpa-rate-meta">32.7k+ reviews · 3 sites</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ratings on 3 booking sites, each for this exact product</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-rating-szechenyi&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.3</span><span class="bpa-rev-count">(29.2k+)</span><span class="bpa-rev-go">→</span></a><a class="bpa-rev-badge is-link" href="https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-szechenyi-spa-full-day-entry-p974376/?partner=thecruisedetective.com-176436&amp;tq_campaign=budapest-travel-guide-en-pop" rel="noopener nofollow sponsored" target="_blank"><img alt="Tiqets" class="bpa-rev-icon" loading="lazy" src="/assets/cdn/652d0405192ba076b04f74a3/6852917a8b23e16d4296b394_tiqets-logo.avif"/><span class="bpa-rev-site">Tiqets</span><span class="bpa-rev-score">4.4</span><span class="bpa-rev-count">(1.2k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a><a class="bpa-rev-badge is-link" href="https://tp.media/r?campaign_id=47&amp;marker=404154&amp;p=1922&amp;sub_id=budapest_travel_guide_en_pop&amp;trs=204442&amp;u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FPrivate-Entrance-to-Szechenyi-Spa-in-Budapest-with-Optional-Massage%2Fd499-5808SZECHENYI" rel="noopener nofollow sponsored" target="_blank"><img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">3.8</span><span class="bpa-rev-count">(2.3k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Area: <strong>City Park</strong></li><li>Entry: <strong>7:00-9:00</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €39<small>per adult • entry 7:00 to 9:00, Mon to Thu</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-szechenyi&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1831,39 +1703,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <div class="w-richtext"><p>With a fourth day, leave the city. Upstream the Danube turns sharply between wooded hills at <strong>Visegrád</strong>, and the view from the castle over the bend is the best river view in Hungary. This trip pairs it with <strong>Szentendre</strong>, a small baroque town of galleries and cobbled lanes.</p>
 <h3>Who Should Book It</h3>
 <p><strong>Pick it</strong> if you have a full spare day. <strong>Skip it</strong> on a 3-day trip. Lake Balaton, Eger and Vienna are compared in the <a href="/best-day-trips-from-budapest">13 best day trips from Budapest</a>.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 8" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Danube Bend Day Trip: Visegrád and Szentendre (1/5)" loading="lazy" src="/assets/day-trips-2026/danube-forest-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>Danube Bend Day Trip: Visegrád and Szentendre</span></div></div><div class="ltt-strip-slide"><img alt="Danube Bend Day Trip: Visegrád and Szentendre (2/5)" loading="lazy" src="/assets/day-trips-2026/danube-forest-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>Danube Bend Day Trip: Visegrád and Szentendre</span></div></div><div class="ltt-strip-slide"><img alt="Danube Bend Day Trip: Visegrád and Szentendre (3/5)" loading="lazy" src="/assets/day-trips-2026/danube-forest-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>Danube Bend Day Trip: Visegrád and Szentendre</span></div></div><div class="ltt-strip-slide"><img alt="Danube Bend Day Trip: Visegrád and Szentendre (4/5)" loading="lazy" src="/assets/day-trips-2026/danube-forest-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>Danube Bend Day Trip: Visegrád and Szentendre</span></div></div><div class="ltt-strip-slide"><img alt="Danube Bend Day Trip: Visegrád and Szentendre (5/5)" loading="lazy" src="/assets/day-trips-2026/danube-forest-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>Danube Bend Day Trip: Visegrád and Szentendre</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €96</span>
-<span class="ltt-buy-price-sub">per person • 8-9 hours</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Danube Bend Day Trip: Visegrád and Szentendre</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Batthyány tér</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>8-9 hours</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/visegrad-l1566/from-budapest-danube-bend-day-trip-with-visegrad-and-szentendre-t1470042/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-day-trip&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Danube Bend Day Trip: Visegrád and Szentendre">
+<a class="bpa-book-img" href="https://www.getyourguide.com/visegrad-l1566/from-budapest-danube-bend-day-trip-with-visegrad-and-szentendre-t1470042/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-day-trip&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/day-trips-2026/danube-forest-01.avif" alt="Danube Bend Day Trip: Visegrád and Szentendre (1/5)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">Day 4 · Full Day</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/visegrad-l1566/from-budapest-danube-bend-day-trip-with-visegrad-and-szentendre-t1470042/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-day-trip&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Danube Bend Day Trip: Visegrád and Szentendre</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.90" aria-hidden="true"></span><b class="bpa-rate-score">4.9</b><span class="bpa-rate-meta">37 reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on 1 booking site</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/visegrad-l1566/from-budapest-danube-bend-day-trip-with-visegrad-and-szentendre-t1470042/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-rating-day-trip&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.9</span><span class="bpa-rev-count">(37)</span><span class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Batthyány tér</strong></li><li>Duration: <strong>8-9 hours</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €96<small>per person • 8-9 hours</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/visegrad-l1566/from-budapest-danube-bend-day-trip-with-visegrad-and-szentendre-t1470042/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=itinerary-day-trip&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">

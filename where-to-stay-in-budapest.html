@@ -61,7 +61,39 @@ window.addEventListener('load', function() {
 <link id="ltt-language-switcher-styles" rel="stylesheet" href="/css/shared/ltt-language-switcher-styles.ebbf128d15.css"/><link id="CANONICAL_NAVBAR_UNIFIED_FONTS" rel="stylesheet" href="/css/shared/CANONICAL_NAVBAR_UNIFIED_FONTS.e6a1a25ced.css"/>
 <style>.ltt-mobile-drawer:not(.is-open){visibility:hidden !important;pointer-events:none !important;display:none !important;}.ltt-mobile-drawer.is-open{visibility:visible !important;pointer-events:auto !important;display:block !important;}</style><link id="ps-008fa3a483" data-ps-blocks="ltt-master-a11y-contrast ltt-wcag-contrast-fix bpa-light-bar" rel="stylesheet" href="/css/shared/bundle.008fa3a483.css"/>
 <link id="bpa-new-footer" rel="stylesheet" href="/css/shared/bpa-new-footer.4f85d90f75.css"/><link id="bpa-article-typography" rel="stylesheet" href="/css/shared/bpa-article-typography.c64a2a0b29.css"/>
-<link id="bpa-no-red-hover" rel="stylesheet" href="/css/shared/bpa-no-red-hover.802199d918.css"/><link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+<link id="bpa-no-red-hover" rel="stylesheet" href="/css/shared/bpa-no-red-hover.802199d918.css"/><link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -1118,21 +1150,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>District V is the classic first-visit base, and Prestige puts you at its river end: a renovated historic building <strong>656 ft from the Danube and 984 ft from the Chain Bridge</strong>, with a spa, sauna and gym. Guests score it <strong>9.2</strong> (staff and comfort 9.6).</p><p>For the same night it cost <strong>€158</strong>. Parliament is about 0.6 mi away and the Basilica a short walk.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €158</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Prestige Hotel Budapest</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District V</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.2/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-prestige&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fprestige-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Prestige Hotel Budapest">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-prestige&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fprestige-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/where-to-stay-in-budapest/01-prestige-01.avif" alt="Prestige Hotel Budapest" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">District V: Classic Pick</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-prestige&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fprestige-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Prestige Hotel Budapest</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.60" aria-hidden="true"></span><b class="bpa-rate-score">9.2</b><span class="bpa-rate-meta">2.4k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-prestige&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fprestige-budapest.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.2</span><span class="bpa-rev-count">(2.4k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District V</strong></li><li>🛏️ Guest score: <strong>9.2/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €158<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-prestige&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fprestige-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Prestige Hotel Budapest</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1051 Budapest, Vigyázó Ferenc utca 5. (District V)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it very good; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Spa and wellness centre, sauna</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until 12:00 PM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Magyar Tudományos Akadémia (450 ft), Chain Bridge (1,650 ft), Szabadság Square (1,750 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1170,21 +1196,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Danubius Hotel District V gets you the same downtown as Prestige for <strong>€93</strong>: it is on Sas utca, 950 ft from Liberty Square and about 1,300 ft from Arany János utca metro, with a location score of <strong>9.8</strong>.</p><p>It scores <strong>8.8 from 8,086 reviews</strong>, has soundproof rooms and private parking, and no spa or gym.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €93</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Danubius Hotel District V</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District V</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.8/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-danubius-district-v&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fh2-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Danubius Hotel District V">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-danubius-district-v&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fh2-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/where-to-stay-in-budapest/02-danubius-district-v-01.avif" alt="Danubius Hotel District V" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">District V: Value Pick</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-danubius-district-v&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fh2-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Danubius Hotel District V</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.40" aria-hidden="true"></span><b class="bpa-rate-score">8.8</b><span class="bpa-rate-meta">8.1k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-danubius-district-v&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fh2-budapest.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.8</span><span class="bpa-rev-count">(8.1k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District V</strong></li><li>🛏️ Guest score: <strong>8.8/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €93<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-danubius-district-v&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fh2-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Danubius Hotel District V</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1051 Budapest, Sas Str. 24 (District V); 1,300 ft walk to Arany János utca metro</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it very good; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM to 12:00 AM; check-out until From 1:00 AM to 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Szabadság Square (950 ft), Magyar Tudományos Akadémia (1,400 ft), Andrassy Avenue (2,100 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage, Electric charging, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">pets welcome (fees may apply)</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1222,21 +1242,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>District VI is the Opera and Andrássy Avenue side of the centre, and Mera is its value pick: <strong>9.3 from 3,271 reviews</strong>, staff 9.7, for <strong>€87</strong> for the same night.</p><p>It is on Bajcsy-Zsilinszky út, 1,700 ft from the Opera House and 1,800 ft from Liberty Square, so both District V and VI are walkable.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €87</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Mera Hotel</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District VI</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.3/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-mera&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmera.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Mera Hotel">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-mera&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmera.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/where-to-stay-in-budapest/03-mera-01.avif" alt="Mera Hotel" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">District VI: Best Value</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-mera&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmera.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Mera Hotel</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.65" aria-hidden="true"></span><b class="bpa-rate-score">9.3</b><span class="bpa-rate-meta">3.3k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-mera&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmera.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.3</span><span class="bpa-rev-count">(3.3k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District VI</strong></li><li>🛏️ Guest score: <strong>9.3/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €87<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-mera&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmera.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Mera Hotel</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1065 Budapest, 31 Bajcsy-Zsilinszky út (District VI)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 2:00 PM; check-out until 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Opera House (1,700 ft), Andrassy Avenue (1,750 ft), Szabadság Square (1,800 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Street</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1274,21 +1288,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Mamaison Residence Izabella turns District VI into a family base: <strong>suites with a separate bedroom, living room and full kitchen</strong>, just off Andrássy Avenue near the House of Terror. Guests score it <strong>9.4</strong>, value 9.3.</p><p>It has a sauna, gym and garden, children under 12 get a breakfast discount, and it cost <strong>€103</strong> for the same night.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €103</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Mamaison Residence Izabella</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District VI</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.4/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-izabella&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fizabella.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Mamaison Residence Izabella">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-izabella&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fizabella.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/where-to-stay-in-budapest/04-izabella-01.avif" alt="Mamaison Residence Izabella Budapest" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">District VI: Best Suites</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-izabella&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fizabella.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Mamaison Residence Izabella</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.70" aria-hidden="true"></span><b class="bpa-rate-score">9.4</b><span class="bpa-rate-meta">1.2k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-izabella&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fizabella.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.4</span><span class="bpa-rev-count">(1.2k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District VI</strong></li><li>🛏️ Guest score: <strong>9.4/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €103<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-izabella&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fizabella.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Mamaison Residence Izabella</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1064 Budapest, Izabella utca 61 (District VI)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it good; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Sauna</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM to 12:00 AM; check-out until 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Liszt Ferenc Memorial Museum (500 ft), House of Terror (700 ft), Opera House (3,000 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">pets welcome (fees may apply); airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1326,21 +1334,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>District VII is the Jewish Quarter, home of the ruin bars and the Dohány Street Synagogue. Roombach puts you <strong>1,200 ft from the synagogue</strong> for <strong>€89</strong>, with <strong>9.0 from 6,779 reviews</strong>.</p><p>Rooms are soundproof, which matters here. There is no spa or gym.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €89</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Roombach Hotel Budapest Center</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District VII</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-roombach&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Froombach-budapest-center.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Roombach Hotel Budapest Center">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-roombach&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Froombach-budapest-center.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/where-to-stay-in-budapest/05-roombach-01.avif" alt="Roombach Hotel Budapest Center" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">District VII: Value Pick</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-roombach&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Froombach-budapest-center.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Roombach Hotel Budapest Center</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.50" aria-hidden="true"></span><b class="bpa-rate-score">9.0</b><span class="bpa-rate-meta">6.8k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-roombach&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Froombach-budapest-center.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.0</span><span class="bpa-rev-count">(6.8k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District VII</strong></li><li>🛏️ Guest score: <strong>9/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €89<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-roombach&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Froombach-budapest-center.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Roombach Hotel Budapest Center</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1075 Budapest, Rumbach Sebestyén utca 14. (District VII); 1,400 ft walk to Bajcsy-Zsilinszky út metro</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until From 2:00 AM to 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Anker-ház (950 ft), Dohány Utcai Zsinagóga (1,200 ft), Andrassy Avenue (1,650 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1378,21 +1380,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Queen's Court is the calmer District VII option: on Dob utca with a <strong>quiet courtyard garden</strong>, an <strong>indoor pool and jacuzzi</strong>, and suites with balconies and kitchenettes. Guests score it <strong>9.2</strong>.</p><p>It cost <strong>€120</strong> for the same night; Oktogon is about 1,750 ft away.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €120</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Queen's Court Hotel</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District VII</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.2/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-queens-court&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fqueen-s-court-residence.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Queen&#x27;s Court Hotel">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-queens-court&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fqueen-s-court-residence.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/where-to-stay-in-budapest/06-queens-court-01.avif" alt="Queen's Court Hotel &amp; Residence" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">District VII: Spa Pick</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-queens-court&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fqueen-s-court-residence.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Queen's Court Hotel</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.60" aria-hidden="true"></span><b class="bpa-rate-score">9.2</b><span class="bpa-rate-meta">5k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-queens-court&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fqueen-s-court-residence.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.2</span><span class="bpa-rev-count">(5k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District VII</strong></li><li>🛏️ Guest score: <strong>9.2/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €120<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-queens-court&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fqueen-s-court-residence.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Queen's Court Hotel</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1074 Budapest, Dob utca 63. (District VII); 1,750 ft walk to Oktogon metro</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Spa and wellness centre, indoor pool, hot tub</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until From 6:00 AM to 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Blaha Lujza Square (2,300 ft), House of Terror (2,650 ft), Liszt Ferenc Memorial Museum (2,700 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">pets welcome (fees may apply)</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1430,21 +1426,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>District I is the castle hill: cobbled lanes, Matthias Church and Fisherman's Bastion. The Hilton sits <strong>right next to the Bastion</strong> on Hess András tér, with Danube and city views from the rooms.</p><p>It is a 5-star with a sauna and gym, scores <strong>8.9 from 2,685 reviews</strong>, and cost <strong>€153</strong> for the same night. Central Pest is about 15 minutes away.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €153</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Hilton Budapest</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District I</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.9/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-hilton-castle&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhilton-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Hilton Budapest">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-hilton-castle&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhilton-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/where-to-stay-in-budapest/07-hilton-castle-01.avif" alt="Hilton Budapest" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">Castle District: Iconic Pick</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-hilton-castle&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhilton-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Hilton Budapest</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.45" aria-hidden="true"></span><b class="bpa-rate-score">8.9</b><span class="bpa-rate-meta">2.7k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-hilton-castle&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhilton-budapest.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.9</span><span class="bpa-rev-count">(2.7k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District I</strong></li><li>🛏️ Guest score: <strong>8.9/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €153<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-hilton-castle&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhilton-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Hilton Budapest</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1014 Budapest, Hess Andras ter 1-3 (District I)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Sauna</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Valet, Parking garage, Electric charging</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">Listed as wheelchair accessible; pets welcome (fees may apply)</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1482,21 +1472,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Castle Garden is the value way to stay by the castle: a boutique-style 4-star on <strong>Lovas utca</strong> in District I, with a <strong>spa and hot tub</strong>, free daytime coffee and soft drinks, and private parking. Guests score it <strong>9.1</strong>.</p><p>It cost <strong>€79</strong> for the same night, half the Hilton's price; Matthias Church is about 2,250 ft away.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €79</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Castle Garden Hotel</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District I</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.1/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-castle-garden&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcastle-garden.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Castle Garden Hotel">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-castle-garden&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcastle-garden.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/where-to-stay-in-budapest/08-castle-garden-01.avif" alt="Hotel Castle Garden" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">Castle District: Value Pick</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-castle-garden&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcastle-garden.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Castle Garden Hotel</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.55" aria-hidden="true"></span><b class="bpa-rate-score">9.1</b><span class="bpa-rate-meta">1.6k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-castle-garden&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcastle-garden.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.1</span><span class="bpa-rev-count">(1.6k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District I</strong></li><li>🛏️ Guest score: <strong>9.1/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €79<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-castle-garden&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcastle-garden.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Castle Garden Hotel</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1012 Budapest, Lovas u. 41. (District I)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it very good; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Spa and wellness centre, hot tub</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 2:00 PM to 11:00 PM; check-out until From 5:30 AM to 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Budavári Evangélikus Templom (700 ft), Középkori zsidó Imaház (900 ft), Maria Magdolna templom (1,100 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage, Electric charging, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1534,21 +1518,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>District VIII (the Palace Quarter and Corvin) is where the value is, and Bo18 shows why: <strong>9.2 from 5,855 reviews</strong>, a <strong>free sauna and hot tub</strong>, and a buffet breakfast with champagne, for <strong>€79</strong>.</p><p>It is 984 ft from the Corvin promenade and about 1,350 ft from Corvin-negyed metro. Check-out is by 10 am.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €79</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Bo18 Hotel Superior</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District VIII</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.2/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-bo18&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbo18-superior.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Bo18 Hotel Superior">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-bo18&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbo18-superior.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/where-to-stay-in-budapest/09-bo18-01.avif" alt="Bo18 Hotel Superior" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">District VIII: Best Value</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-bo18&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbo18-superior.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Bo18 Hotel Superior</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.60" aria-hidden="true"></span><b class="bpa-rate-score">9.2</b><span class="bpa-rate-meta">5.9k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-bo18&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbo18-superior.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.2</span><span class="bpa-rev-count">(5.9k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District VIII</strong></li><li>🛏️ Guest score: <strong>9.2/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €79<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-bo18&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbo18-superior.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Bo18 Hotel Superior</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1082 Budapest, Vajdahunyad u. 18 (District VIII); 1,350 ft walk to Corvin-negyed metro</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it wonderful; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Hot tub</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until 10:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Museum of Applied Arts (1,900 ft), Hungarian National Museum (0.7 mi), Blaha Lujza Square (0.7 mi)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">pets welcome (fees may apply); airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1586,21 +1564,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Central Hotel 21 is the budget pick for District VIII: <strong>€64</strong> on Mária utca, 2,500 ft from the National Museum, with <strong>8.8 from 2,871 reviews</strong> and staff rated 9.4.</p><p>Check-in closes at 10 pm and check-out is 10:30 am.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €64</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Central Hotel 21</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District VIII</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.8/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-central-21&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcentral-21.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Central Hotel 21">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-central-21&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcentral-21.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/where-to-stay-in-budapest/10-central-21-01.avif" alt="Central Hotel 21" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">District VIII: Budget Pick</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-central-21&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcentral-21.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Central Hotel 21</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.40" aria-hidden="true"></span><b class="bpa-rate-score">8.8</b><span class="bpa-rate-meta">2.9k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-central-21&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcentral-21.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.8</span><span class="bpa-rev-count">(2.9k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District VIII</strong></li><li>🛏️ Guest score: <strong>8.8/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €64<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-central-21&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcentral-21.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Central Hotel 21</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1085 Budapest, Maria utca 10. (District VIII); 1,050 ft walk to Rákóczi tér metro</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 2:00 PM to 10:00 PM; check-out until 10:30 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Museum of Applied Arts (2,050 ft), Blaha Lujza Square (2,350 ft), Hungarian National Museum (2,500 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Kitchen facilities</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1638,21 +1610,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>District XIII (Újlipótváros) is residential Pest by the river. Four Points sits on Garam utca, about <strong>1 mile from Parliament</strong> and close to Margaret Island, and scores <strong>9.1</strong> with 9.5 for cleanliness.</p><p>Guests rate the breakfast wonderful, and it cost <strong>€123</strong> for the same night.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €123</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Four Points Budapest Danube</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District XIII</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.1/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-four-points-danube&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffour-points-by-sheraton-budapest-danube.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Four Points Budapest Danube">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-four-points-danube&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffour-points-by-sheraton-budapest-danube.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/where-to-stay-in-budapest/11-four-points-danube-01.avif" alt="Four Points by Sheraton Budapest Danube" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">District XIII: Riverside Pick</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-four-points-danube&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffour-points-by-sheraton-budapest-danube.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Four Points Budapest Danube</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.55" aria-hidden="true"></span><b class="bpa-rate-score">9.1</b><span class="bpa-rate-meta">735 reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-four-points-danube&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffour-points-by-sheraton-budapest-danube.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.1</span><span class="bpa-rev-count">(735)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District XIII</strong></li><li>🛏️ Guest score: <strong>9.1/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €123<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-four-points-danube&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffour-points-by-sheraton-budapest-danube.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Four Points Budapest Danube</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1133 Budapest, Garam utca 4/a (District XIII)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it wonderful; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until 12:00 PM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Domonkos Kolostor és templom Romjai (0.6 mi), Olimpia Park (0.9 mi), Parliament (1 mi)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage, Street, Electric charging, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">Listed as wheelchair accessible; airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1690,21 +1656,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Margaret Island is Budapest's park in the Danube, and Ensana Thermal is its spa hotel: <strong>thermal pools, a 56 ft lap pool and saunas, free for guests</strong>, for <strong>€111</strong>.</p><p>It scores <strong>9.0 from 7,917 reviews</strong>. For more spa hotels see the <a href="/best-spa-hotels-budapest">spa and thermal hotels</a> comparison.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €111</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Ensana Thermal Margaret Island</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District XIII, Margaret Island</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-ensana-thermal&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitsziget.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Ensana Thermal Margaret Island">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-ensana-thermal&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitsziget.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/where-to-stay-in-budapest/12-ensana-thermal-01.avif" alt="Ensana Thermal Margaret Island" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">Margaret Island: Spa Pick</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-ensana-thermal&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitsziget.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Ensana Thermal Margaret Island</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.50" aria-hidden="true"></span><b class="bpa-rate-score">9.0</b><span class="bpa-rate-meta">7.9k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-ensana-thermal&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitsziget.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.0</span><span class="bpa-rev-count">(7.9k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District XIII, Margaret Island</strong></li><li>🛏️ Guest score: <strong>9/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €111<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.where-to-stay-in-budapest-ensana-thermal&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitsziget.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Ensana Thermal Margaret Island</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1007 Budapest, Margitsziget (District XIII, Margaret Island)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Spa and wellness centre, 3 pools (indoor, outdoor, heated), hot tub</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Margaret Island Japanese Garden (200 ft), Víztorony (650 ft), Domonkos Kolostor és templom Romjai (1,650 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Electric charging, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>

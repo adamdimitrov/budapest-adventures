@@ -374,7 +374,39 @@ window.addEventListener('load', function() {
 </style>
 <link id="bpa-light-bar" rel="stylesheet" href="/css/shared/bpa-light-bar.ff5b3940e3.css"/>
 <link id="bpa-new-footer" rel="stylesheet" href="/css/shared/bpa-new-footer.4f85d90f75.css"/><link id="bpa-article-typography" rel="stylesheet" href="/css/shared/bpa-article-typography.c64a2a0b29.css"/>
-<link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body class="ps-has-ltt-hero-wrap">
+<link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body class="ps-has-ltt-hero-wrap">
 <header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/fr">
@@ -1085,37 +1117,14 @@ window.addEventListener('load', function() {
 <p><em>Remarque : pour des raisons de sécurité fluviale, les bougies sur les tables sont d'élégantes bougies LED sans flamme.</em></p>
 </div>
 <!-- Homemade Buy Card -->
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Billets officiels et disponibilités en direct</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">110 €</span>
-<span class="ltt-buy-price-sub">par adulte (4 plats)</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Dîner-croisière aux chandelles Legenda en 4 plats</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">📱 Billet <strong>QR mobile instantané</strong></span>
-<span class="ltt-buy-perk">📍 <strong>Quai 7</strong>, Vigadó tér</span>
-<span class="ltt-buy-perk">⏱️ <strong>2,5 heures</strong> (150 min)</span>
-<span class="ltt-buy-perk">🍷 <strong>Boisson de bienvenue</strong> incluse</span>
-<span class="ltt-buy-perk">🛡️ <strong>Annulation gratuite</strong> jusqu'à 24 h</span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://legenda.hu/fr?partner=38585" rel="nofollow sponsored noopener" target="_blank">
-<span>Voir les disponibilités officielles</span>
-<span class="ltt-buy-arrow">→</span>
-</a>
-<span class="ltt-buy-trust-note">Lien partenaire officiel direct Legenda</span>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Dîner-croisière aux chandelles Legenda en 4 plats">
+<a class="bpa-book-img" href="https://legenda.hu/fr?partner=38585" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/66320d98dbdcfd73b6f1e4b9_best-dinner-cruises-budapest-legenda-city-cruises.webp" alt="Carte imprimée du menu du dîner-croisière Legenda" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">Billets officiels et disponibilités en direct</div>
+<a class="bpa-book-title" href="https://legenda.hu/fr?partner=38585" rel="nofollow sponsored noopener" target="_blank">Dîner-croisière aux chandelles Legenda en 4 plats</a>
+<ul class="bpa-book-points"><li>📱 Billet <strong>QR mobile instantané</strong></li><li>📍 <strong>Quai 7</strong>, Vigadó tér</li><li>⏱️ <strong>2,5 heures</strong> (150 min)</li><li>🍷 <strong>Boisson de bienvenue</strong> incluse</li><li>🛡️ <strong>Annulation gratuite</strong> jusqu'à 24 h</li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">110 €<small>par adulte (4 plats)</small></div><a class="bpa-book-btn" href="https://legenda.hu/fr?partner=38585" rel="nofollow sponsored noopener" target="_blank">Voir les disponibilités officielles →</a></div>
+</div></aside>
 <!-- Video Preview Section -->
 <div class="ltt-media-section">
 <div class="ltt-media-head">

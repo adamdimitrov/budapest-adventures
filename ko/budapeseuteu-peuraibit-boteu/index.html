@@ -61,7 +61,39 @@ window.addEventListener('load', function() {
 <link id="ltt-language-switcher-styles" rel="stylesheet" href="/css/shared/ltt-language-switcher-styles.ebbf128d15.css"/><link id="CANONICAL_NAVBAR_UNIFIED_FONTS" rel="stylesheet" href="/css/shared/CANONICAL_NAVBAR_UNIFIED_FONTS.e6a1a25ced.css"/>
 <style>.ltt-mobile-drawer:not(.is-open){visibility:hidden !important;pointer-events:none !important;display:none !important;}.ltt-mobile-drawer.is-open{visibility:visible !important;pointer-events:auto !important;display:block !important;}</style><link id="ps-008fa3a483" data-ps-blocks="ltt-master-a11y-contrast ltt-wcag-contrast-fix bpa-light-bar" rel="stylesheet" href="/css/shared/bundle.008fa3a483.css"/>
 <link id="bpa-new-footer" rel="stylesheet" href="/css/shared/bpa-new-footer.4f85d90f75.css"/><link id="bpa-article-typography" rel="stylesheet" href="/css/shared/bpa-article-typography.c64a2a0b29.css"/>
-<link id="ps-320b0b367a" data-ps-blocks="cd-editorial-base cd-bookmark-compact" rel="stylesheet" href="/css/shared/bundle.320b0b367a.css"/><link href="/css/listicle-base.css?v=9274f4ab72" rel="stylesheet"/><link href="/css/listicle-cards.css?v=b857249e22" rel="stylesheet"/><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+<link id="ps-320b0b367a" data-ps-blocks="cd-editorial-base cd-bookmark-compact" rel="stylesheet" href="/css/shared/bundle.320b0b367a.css"/><link href="/css/listicle-base.css?v=9274f4ab72" rel="stylesheet"/><link href="/css/listicle-cards.css?v=b857249e22" rel="stylesheet"/><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/ko">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -838,35 +870,16 @@ window.addEventListener('load', function() {
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>❓ 두 사람이 부다페스트의 프라이빗 보트를 통째로 예약할 수 있나요?</strong><br/>💡 네. 요금은 인당이 아니라 보트 한 대 기준이라, 커플도 20명 그룹과 같은 <strong>225€</strong>을 냅니다. 두 명만 예약하는 이용객도 많습니다.</blockquote><p>Portum Lines의 1시간 프라이빗 크루즈는 <strong>부다페스트에서 가장 가성비 좋은 프라이빗 보트</strong>입니다. 선장과 승무원이 함께하는 모터보트 <strong>Budapest Klára</strong> 한 대를 평일 <strong>225€</strong>에 빌릴 수 있습니다(확인한 토요일 요금은 275€).</p><p>보트는 <strong>머르기트 다리와 에르제베트 다리 사이</strong> 도심을 천천히 지나며 국회의사당, 부다 성, 세체니 다리를 봅니다. 음향 시스템과 바가 있지만 가이드는 없고 음료도 포함되지 않습니다.</p><p>GetYourGuide 이용객들은 <strong>리뷰 52개 기준 5점 만점에 4.9점</strong>을 주었습니다. 친절하고 융통성 있는 승무원, 강을 독차지한 듯한 기분을 언급합니다. 가장 흔한 불만은 1시간이 짧게 느껴진다는 점입니다.</p><h3>찾아가는 방법</h3><ul role="list"><li><strong>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Dock+42+Szent+Istv%C3%A1n+park+Budapest" rel="nofollow" target="_blank">집결 장소: Dock 42 선착장, Szent István 공원, 1138 부다페스트</a></strong></li><li>❌ 선착장은 <strong>머르기트 다리 북쪽</strong>에 있어 중심부 선착장에 비해 조금 외진 곳입니다.</li><li>🗺️ <strong>2, 4, 6번 트램을 타고 Jászai Mari tér</strong>에서 내린 뒤, 강변을 따라 북쪽으로 약 500미터 걸어가 <strong>Dock 42</strong> 표지판이 보이면 됩니다.</li></ul></div>
 <div class="ltt-cross-sell-wrap"><blockquote><strong>👥 더 큰 단체, 선상 디너 또는 맞춤 코스가 필요하신가요?</strong> 이 상품들은 10~35명, 1시간 기준입니다. <a href="/ko/budapeseuteu-keulujeu-danche-yeyak">단체 예약 페이지에서 견적을 요청</a>하시면 운영사들의 제안을 대신 모아 드리겠습니다.</blockquote></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 가능 여부</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">225€부터</span>
-<span class="ltt-buy-price-sub">보트당 · 최대 20명</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Portum Lines 1시간 프라이빗 보트</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">출발 24시간 전까지 무료 취소</span><span class="ltt-buy-perk">지금 예약, 나중에 결제</span><span class="ltt-buy-perk">출발: <strong>Dock 42</strong></span><span class="ltt-buy-perk">소요 시간: <strong>1시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-1-hour-private-boat-cruise-t115605/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-portum-1h&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>날짜 확인 &amp; 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<span>최저가 보장 • 무료 취소</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Portum Lines 1시간 프라이빗 보트">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-1-hour-private-boat-cruise-t115605/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-portum-1h&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/private-boats/portum-private-boat-1.webp" alt="다뉴브강 위의 Portum Lines 프라이빗 보트 Budapest Klára" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#1 가성비 최고</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-1-hour-private-boat-cruise-t115605/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-portum-1h&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Portum Lines 1시간 프라이빗 보트</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews"><div class="div-block-53"><span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">4.9</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(52)</span></span><span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">3.3</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(9)</span></span></div></div></div>
+<ul class="bpa-book-points"><li>출발 24시간 전까지 무료 취소</li><li>지금 예약, 나중에 결제</li><li>출발: <strong>Dock 42</strong></li><li>소요 시간: <strong>1시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">225€부터<small>보트당 · 최대 20명</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-1-hour-private-boat-cruise-t115605/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-portum-1h&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">날짜 확인 &amp; 예약 →</a></div>
+<div class="bpa-book-note">최저가 보장 • 무료 취소</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -945,35 +958,16 @@ window.addEventListener('load', function() {
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>❓ Dunarama 워터 리무진에는 가이드가 있나요?</strong><br/>💡 아니요. 상품 설명에 따르면 이 크루즈는 <strong>가이드 투어가 아니며</strong> 운전사만 탑승합니다. 해설을 원하시면 직접 오디오 가이드를 챙기시거나 가이드 크루즈를 선택하세요.</blockquote><p>Dunarama의 워터 리무진은 <strong>부다페스트에서 가장 세련된 프라이빗 보트</strong>입니다. 베네치아 스타일의 윤기 나는 목조 보트로 <strong>최대 10명</strong>이 탈 수 있으며, 1인당 헝가리 스파클링 와인 한 잔이 제공됩니다.</p><p>50분짜리 크루즈는 주로 <strong>머르기트 다리와 페퇴피 다리 사이</strong>를 운항합니다. 속도는 직접 정할 수 있습니다. 국회의사당과 성을 천천히 지나거나, 스릴 있게 빠르게 달릴 수 있습니다.</p><p>리뷰 평가는 엇갈립니다. Viator 이용객은 <strong>리뷰 17개 기준 5점 만점에 4.6점</strong>, GetYourGuide 이용객은 <strong>리뷰 12개 기준 4.2점</strong>을 주었습니다. 팬들은 보트와 일몰을 좋아하고, 불만족한 이용객들은 이 가격이면 가이드가 있을 것으로 기대했습니다. 같은 운영사는 Viator에서 Szentendre행 3시간 버전도 판매합니다(5점 만점에 3.9점, 리뷰 11개).</p><h3>찾아가는 방법</h3><ul role="list"><li><strong>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Jane+Haining+rakpart+8a+Budapest" rel="nofollow" target="_blank">집결 장소: Jane Haining rkp. 8a, 1051 부다페스트</a></strong></li><li>✔️ 중심부 위치, <strong>세체니 다리와 에르제베트 다리 사이 페스트 강변</strong>, Vigadó tér 근처입니다.</li><li>🗺️ <strong>2번 트램을 타고 Vigadó tér</strong>에서 내려 강변까지 걸어가세요.</li></ul></div>
 <div class="ltt-cross-sell-wrap"><blockquote><strong>👥 더 큰 단체, 선상 디너 또는 맞춤 코스가 필요하신가요?</strong> 이 상품들은 10~35명, 1시간 기준입니다. <a href="/ko/budapeseuteu-keulujeu-danche-yeyak">단체 예약 페이지에서 견적을 요청</a>하시면 운영사들의 제안을 대신 모아 드리겠습니다.</blockquote></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 가능 여부</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">580€부터</span>
-<span class="ltt-buy-price-sub">보트당 · 최대 10명</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Dunarama 럭셔리 워터 리무진</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">출발 24시간 전까지 무료 취소</span><span class="ltt-buy-perk">지금 예약, 나중에 결제</span><span class="ltt-buy-perk">출발: <strong>Jane Haining rkp. 8a</strong></span><span class="ltt-buy-perk">소요 시간: <strong>50분</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/luxury-danube-water-limousine-cruise-t123737/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-dunarama-water-limo&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>날짜 확인 &amp; 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<span>최저가 보장 • 무료 취소</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Dunarama 럭셔리 워터 리무진">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/luxury-danube-water-limousine-cruise-t123737/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-dunarama-water-limo&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/private-boats/dunarama-water-limo-1.webp" alt="세체니 다리 아래를 지나는 Dunarama의 베네치아 스타일 목조 워터 리무진" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#2 베스트 럭셔리 보트</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/luxury-danube-water-limousine-cruise-t123737/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-dunarama-water-limo&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Dunarama 럭셔리 워터 리무진</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews"><div class="div-block-53"><span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">4.2</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg></span><span class="bpa-rev-count">(12)</span></span><span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">4.6</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(17)</span></span></div></div></div>
+<ul class="bpa-book-points"><li>출발 24시간 전까지 무료 취소</li><li>지금 예약, 나중에 결제</li><li>출발: <strong>Jane Haining rkp. 8a</strong></li><li>소요 시간: <strong>50분</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">580€부터<small>보트당 · 최대 10명</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/luxury-danube-water-limousine-cruise-t123737/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-dunarama-water-limo&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">날짜 확인 &amp; 예약 →</a></div>
+<div class="bpa-book-note">최저가 보장 • 무료 취소</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1054,35 +1048,16 @@ window.addEventListener('load', function() {
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>❓ 부다페스트 파티 보트의 음료는 정말 무제한인가요?</strong><br/>💡 네. 한 시간 동안 <strong>맥주, 하우스 와인, 하우스 스파클링 와인</strong>이 무제한이며, 1인당 <strong>샷 한 잔</strong>이 추가됩니다. 위스키나 칵테일 같은 나머지 음료는 바에서 따로 구매합니다.</blockquote><p>Portum의 파티 보트는 <strong>다뉴브강에서 가장 손쉬운 프라이빗 총각·처녀 파티</strong>입니다. <strong>평일 450€</strong> 한 가지 요금에 최대 20명이 보트를 쓰고, 한 시간 동안 맥주, 와인, 스파클링 와인을 무제한으로 즐길 수 있습니다.</p><p>이 보트는 바, 음향 시스템, 네온 파티 조명, 난방을 갖춘 개조된 네덜란드 선박이며, Portum 프라이빗 보트와 같은 Dock 42에서 출발합니다. 대부분의 단체는 이후 루인 바(ruin bar)에서 이어서 놉니다. <a href="/best-pub-crawls-budapest">부다페스트 최고의 펍 크롤</a>에는 8명 이상이면 픽업을 포함한 프라이빗 총각 크롤도 있습니다.</p><p>지금까지 리뷰는 16명뿐입니다. <strong>GetYourGuide에서 5점 만점에 5.0점(10명)</strong>, <strong>Viator에서 3.5점(6명)</strong>입니다. 구체적인 불만은 차가운 캔이 떨어진 뒤 미지근한 맥주가 나왔다는 점 하나입니다.</p><h3>찾아가는 방법</h3><ul role="list"><li><strong>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Dock+42+Szent+Istv%C3%A1n+park+Budapest" rel="nofollow" target="_blank">집결 장소: Dock 42 선착장, Szent István 공원, 1138 부다페스트</a></strong></li><li>❌ 선착장은 <strong>머르기트 다리 북쪽</strong>에 있어 중심부 선착장에 비해 조금 외진 곳입니다.</li><li>🗺️ <strong>2, 4, 6번 트램을 타고 Jászai Mari tér</strong>에서 내린 뒤, 강변을 따라 북쪽으로 약 500미터 걸어가 <strong>Dock 42</strong> 표지판이 보이면 됩니다.</li></ul></div>
 <div class="ltt-cross-sell-wrap"><blockquote><strong>👥 더 큰 단체, 선상 디너 또는 맞춤 코스가 필요하신가요?</strong> 이 상품들은 10~35명, 1시간 기준입니다. <a href="/ko/budapeseuteu-keulujeu-danche-yeyak">단체 예약 페이지에서 견적을 요청</a>하시면 운영사들의 제안을 대신 모아 드리겠습니다.</blockquote></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 가능 여부</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">450€부터</span>
-<span class="ltt-buy-price-sub">보트당 · 최대 20명</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Portum Lines 총각·처녀 파티 보트</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">출발 24시간 전까지 무료 취소</span><span class="ltt-buy-perk">지금 예약, 나중에 결제</span><span class="ltt-buy-perk">출발: <strong>Dock 42</strong></span><span class="ltt-buy-perk">소요 시간: <strong>1시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-1-hour-party-boat-with-free-drinks-t342906/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-stag-party&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>날짜 확인 &amp; 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<span>최저가 보장 • 무료 취소</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Portum Lines 총각·처녀 파티 보트">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-1-hour-party-boat-with-free-drinks-t342906/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-stag-party&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/private-boats/portum-party-boat-1.webp" alt="네온 조명이 켜진 Portum Lines 파티 보트 내부" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#3 총각·처녀 파티 최고</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-1-hour-party-boat-with-free-drinks-t342906/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-stag-party&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Portum Lines 총각·처녀 파티 보트</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews"><div class="div-block-53"><span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">5.0</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(10)</span></span><span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">3.5</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(6)</span></span></div></div></div>
+<ul class="bpa-book-points"><li>출발 24시간 전까지 무료 취소</li><li>지금 예약, 나중에 결제</li><li>출발: <strong>Dock 42</strong></li><li>소요 시간: <strong>1시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">450€부터<small>보트당 · 최대 20명</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-1-hour-party-boat-with-free-drinks-t342906/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-stag-party&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">날짜 확인 &amp; 예약 →</a></div>
+<div class="bpa-book-note">최저가 보장 • 무료 취소</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1162,35 +1137,16 @@ window.addEventListener('load', function() {
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>❓ 부다페스트에서 늦은 밤에도 프라이빗 보트를 빌릴 수 있나요?</strong><br/>💡 네. Magical Budapest 대여는 <strong>08:00부터 23:00 사이 어느 시간에나</strong> 출발할 수 있습니다. 다만 도시 조명은 겨울에는 22:00, 여름에는 23:00에 꺼진다는 점을 기억하세요.</blockquote><p>Magical Budapest의 대여 상품은 <strong>GetYourGuide에서 가장 유연한 프라이빗 보트</strong>입니다. 최대 35명이 탈 수 있는 클래식 크루저는 <strong>495€</strong>부터, 최대 12명이 탈 수 있는 부티크 보트는 <strong>675€</strong>부터이며, 08:00부터 23:00 사이 원하는 시간에 출발할 수 있습니다.</p><p>부티크 보트에서는 <strong>디너, 와인 시음, 음료 무제한 또는 칵테일</strong>을 추가할 수 있으며, 어느 보트에서든 영어, 프랑스어, 독일어, 이탈리아어, 스페인어를 하는 프라이빗 가이드를 추가할 수 있습니다. 운영사는 프러포즈와 파티도 준비해 줍니다.</p><p>단점은 이 상품이 <strong>새로 올라왔고 아직 리뷰가 없다</strong>는 점입니다. 운영사의 가이드 보트 투어는 평점이 좋지만(5점 만점에 4.7점, 리뷰 101개), 대여 상품 자체는 검증되지 않았습니다. 클래식 보트 사진에 나오는 배는 Budapest Klára이며, Portum이 직접 더 저렴하게 빌려주는 보트입니다(카드 #1).</p><h3>찾아가는 방법</h3><ul role="list"><li>📍 <strong>출발 장소는 두 곳</strong>이며, 선택한 보트에 따라 달라집니다. 정확한 주소는 예약할 때 옵션을 고르면 표시됩니다.</li><li>💬 특정 선착장에서 타고 싶다면 GetYourGuide를 통해 운영사에 메시지를 보내세요.</li></ul></div>
 <div class="ltt-cross-sell-wrap"><blockquote><strong>👥 더 큰 단체, 선상 디너 또는 맞춤 코스가 필요하신가요?</strong> 이 상품들은 10~35명, 1시간 기준입니다. <a href="/ko/budapeseuteu-keulujeu-danche-yeyak">단체 예약 페이지에서 견적을 요청</a>하시면 운영사들의 제안을 대신 모아 드리겠습니다.</blockquote></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 가능 여부</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">495€부터</span>
-<span class="ltt-buy-price-sub">보트당 · 최대 35명</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Magical Budapest 프라이빗 보트 대여</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">출발 24시간 전까지 무료 취소</span><span class="ltt-buy-perk">지금 예약, 나중에 결제</span><span class="ltt-buy-perk">소요 시간: <strong>1시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/rent-your-own-private-boat-in-budapest-t1030505/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-magical-rent-boat&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>날짜 확인 &amp; 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<span>최저가 보장 • 무료 취소</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Magical Budapest 프라이빗 보트 대여">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/rent-your-own-private-boat-in-budapest-t1030505/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-magical-rent-boat&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/private-boats/magical-private-boat-1.webp" alt="헝가리 국회의사당 앞의 Magical Budapest 부티크 프라이빗 보트" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#4 가장 유연한 선택 (신규)</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/rent-your-own-private-boat-in-budapest-t1030505/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-magical-rent-boat&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Magical Budapest 프라이빗 보트 대여</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews"><div class="div-block-53"><span class="bpa-rev-count" style="font-size:13px;color:#64748b">✨ 신규 상품 · 아직 리뷰 없음</span></div></div></div>
+<ul class="bpa-book-points"><li>출발 24시간 전까지 무료 취소</li><li>지금 예약, 나중에 결제</li><li>소요 시간: <strong>1시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">495€부터<small>보트당 · 최대 35명</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/rent-your-own-private-boat-in-budapest-t1030505/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=private-cruises-magical-rent-boat&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">날짜 확인 &amp; 예약 →</a></div>
+<div class="bpa-book-note">최저가 보장 • 무료 취소</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">

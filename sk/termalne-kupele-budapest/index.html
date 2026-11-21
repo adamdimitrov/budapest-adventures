@@ -62,7 +62,39 @@ window.addEventListener('load', function() {
 <style>.ltt-mobile-drawer:not(.is-open){visibility:hidden !important;pointer-events:none !important;display:none !important;}.ltt-mobile-drawer.is-open{visibility:visible !important;pointer-events:auto !important;display:block !important;}</style><link id="ps-008fa3a483" data-ps-blocks="ltt-master-a11y-contrast ltt-wcag-contrast-fix bpa-light-bar" rel="stylesheet" href="/css/shared/bundle.008fa3a483.css"/>
 <link id="bpa-new-footer" rel="stylesheet" href="/css/shared/bpa-new-footer.4f85d90f75.css"/><link id="bpa-article-typography" rel="stylesheet" href="/css/shared/bpa-article-typography.c64a2a0b29.css"/>
 <link id="ps-c1811bb21b" data-ps-blocks="bpa-hubnav-css bpa-hub-child-css" rel="stylesheet" href="/css/shared/bundle.c1811bb21b.css"/>
-<link href="/css/listicle-base.css?v=9274f4ab72" rel="stylesheet"/><link href="/css/listicle-cards.css?v=b857249e22" rel="stylesheet"/><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+<link href="/css/listicle-base.css?v=9274f4ab72" rel="stylesheet"/><link href="/css/listicle-cards.css?v=b857249e22" rel="stylesheet"/><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/sk">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -903,39 +935,19 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Oplatí sa Széchenyi?</strong><br/>💡 Áno, pri prvej návšteve. Sú to najväčšie a najfotogenickejšie kúpele v Budapešti. Davom sa vyhnete, ak prídete skoro cez pracovný deň.</blockquote><p>Széchenyi sú kúpele, ktoré si predstaví väčšina návštevníkov: tri parujúce vonkajšie bazény pred žltým neobarokovým palácom v Mestskom parku. Sú to však aj najrušnejšie kúpele. Moja najlepšia rada z vlastnej návštevy: príďte cez pracovný deň medzi 7:00 a 10:00.</p><p>Návštevníci zbožňujú vonkajšie bazény v zime a architektúru. Najčastejšie sa sťažujú na davy neskôr počas dňa a na cenu vstupeniek z rezervačných stránok.</p><h3>Ako sa tam dostať</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Sz%C3%A9chenyi+Gy%C3%B3gyf%C3%BCrd%C5%91+%C3%81llatkerti+k%C3%B6r%C3%BAt+9-11+Budapest" rel="nofollow noopener" target="_blank">Állatkerti körút 9-11, 1146 Budapest (Mestský park)</a></li><li>🚇 Choďte <strong>metrom M1</strong> na zastávku <strong>Széchenyi fürdő</strong>; ku vchodu je to asi 2 minúty pešo.</li><li>🎟️ Celodenné vstupenky sa predávajú a kontrolujú na <strong>strane plavárne</strong> (Állatkerti körút).</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Vstupenky a aktuálna dostupnosť</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">Od €39</span>
-<span class="ltt-buy-price-sub">na dospelého · Po – Št, vstup do 9:00</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Termálne kúpele Széchenyi</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Rezervácia cez GetYourGuide</span>
-<span class="ltt-buy-perk">Rezervujte teraz, zaplaťte neskôr</span>
-<span class="ltt-buy-perk">Adresa: <strong>Állatkerti körút 9-11, 1146 Budapest (Mestský park)</strong></span>
-<span class="ltt-buy-perk">Odporúčaný čas: <strong>Poldeň</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-szechenyi&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Overiť termíny a kúpiť vstupenky</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Bezplatné zrušenie do 24 hodín vopred</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Termálne kúpele Széchenyi">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-szechenyi&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12f890d9668187cda50a6_1_Sz%C3%A9chenyi%20Thermal%20Bath.webp" alt="Széchenyi Thermal Bath" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#1 Najlepšie celkovo</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-szechenyi&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Termálne kúpele Széchenyi</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.25"></span><b class="bpa-rate-score">4.3</b><span class="bpa-rate-meta">32k+ recenzií · 3 stránky</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>Priemer z 3 stránok, vážený počtom recenzií</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=november-rating-szechenyi&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.3</span><span class="bpa-rev-count">(29.2k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a><a class="bpa-rev-badge is-link" href="https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-szechenyi-spa-full-day-entry-p974376/?partner=thecruisedetective.com-176436&amp;tq_campaign=thermal-baths-budapest-en-pop" rel="noopener nofollow sponsored" target="_blank">
+<img alt="Tiqets" class="bpa-rev-icon" loading="lazy" src="/assets/cdn/652d0405192ba076b04f74a3/6852917a8b23e16d4296b394_tiqets-logo.avif"/><span class="bpa-rev-site">Tiqets</span><span class="bpa-rev-score">4.4</span><span class="bpa-rev-count">(1.2k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a><a class="bpa-rev-badge is-link" href="https://tp.media/r?campaign_id=47&amp;marker=404154&amp;p=1922&amp;sub_id=thermal_baths_budapest_en_pop&amp;trs=204442&amp;u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FPrivate-Entrance-to-Szechenyi-Spa-in-Budapest-with-Optional-Massage%2Fd499-5808SZECHENYI" rel="noopener nofollow sponsored" target="_blank">
+<img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">3.8</span><span class="bpa-rev-count">(2.3k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span><span class="bpa-lang-note">Počet na Viator zahŕňa recenzie z Tripadvisor. Každá stránka hodnotí vlastnú vstupenku do týchto kúpeľov.</span></div></details></div></div>
+<ul class="bpa-book-points"><li>Rezervácia cez GetYourGuide</li><li>Rezervujte teraz, zaplaťte neskôr</li><li>Adresa: <strong>Állatkerti körút 9-11, 1146 Budapest (Mestský park)</strong></li><li>Odporúčaný čas: <strong>Poldeň</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">Od €39<small>na dospelého · Po – Št, vstup do 9:00</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-szechenyi&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Overiť termíny a kúpiť vstupenky →</a></div>
+<div class="bpa-book-note">Bezplatné zrušenie do 24 hodín vopred</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1019,39 +1031,17 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Je Rudas lepší ako Széchenyi?</strong><br/>💡 Atmosférou často áno: osmanský turecký kúpeľ a strešný bazén sú jedinečné. Na rodinný výlet nie: Rudas nepúšťa deti do 14 rokov.</blockquote><p>Jedinečným robí Rudas strešný panoramatický bazén s výhľadom cez Dunaj na Gellértov vrch. Kúpať sa v ňom počas pochmúrnych zimných mesiacov je nádherné. Ďalším vrcholom je osmanský turecký kúpeľ s osemuholníkovým bazénom pod kamennou kupolou, ktorý má dni len pre mužov a len pre ženy.</p><p>Návštevníci chvália turecký kúpeľ, výhľady a jedlo v Rudas Bistro. Opakované sťažnosti sa týkajú davov a mätúceho usporiadania.</p><h3>Ako sa tam dostať</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Rudas+Gy%C3%B3gyf%C3%BCrd%C5%91+D%C3%B6brentei+t%C3%A9r+9+Budapest" rel="nofollow noopener" target="_blank">Döbrentei tér 9, 1013 Budapest (budínsky koniec Alžbetinho mosta)</a></li><li>🚋 <strong>Električkou</strong> 19, 41, 56 alebo 56A, alebo <strong>autobusom</strong> 7, 8E, 108E, 110 alebo 112 na budínsky koniec Alžbetinho mosta.</li><li>🌙 Po nočnom kúpaní: nočné autobusy 907 a 973.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Vstupenky a aktuálna dostupnosť</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">Od €74.99</span>
-<span class="ltt-buy-price-sub">na dospelého · kúpele + 3-chodové menu</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Termálne kúpele Rudas</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Rezervácia cez GetYourGuide</span>
-<span class="ltt-buy-perk">Zahŕňa 3-chodové menu</span>
-<span class="ltt-buy-perk">Adresa: <strong>Döbrentei tér 9, 1013 Budapest (budínsky koniec Alžbetinho mosta)</strong></span>
-<span class="ltt-buy-perk">Odporúčaný čas: <strong>3–4 hodiny</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-rudas&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Overiť termíny a kúpiť vstupenky</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Bezplatné zrušenie do 24 hodín vopred</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Termálne kúpele Rudas">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-rudas&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12fda4ee7c50a6cee3178_3_1%20Rudas%20Thermal%20Bath.webp" alt="Rudas Thermal Bath" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#2 Najlepšie turecké kúpele a strecha</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-rudas&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Termálne kúpele Rudas</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.19"></span><b class="bpa-rate-score">4.2</b><span class="bpa-rate-meta">1.4k+ recenzií · GetYourGuide</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>Hodnotenie na GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-rating-rudas&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.2</span><span class="bpa-rev-count">(1.4k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Rezervácia cez GetYourGuide</li><li>Zahŕňa 3-chodové menu</li><li>Adresa: <strong>Döbrentei tér 9, 1013 Budapest (budínsky koniec Alžbetinho mosta)</strong></li><li>Odporúčaný čas: <strong>3–4 hodiny</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">Od €74.99<small>na dospelého · kúpele + 3-chodové menu</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-rudas&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Overiť termíny a kúpiť vstupenky →</a></div>
+<div class="bpa-book-note">Bezplatné zrušenie do 24 hodín vopred</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1140,39 +1130,19 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Je Lukács dobrou alternatívou k Széchenyi?</strong><br/>💡 Áno, ak chcete termálnu vodu bez davov. Je menší a jednoduchší, skôr miestne kúpele než turistická atrakcia.</blockquote><p>Lukács sú kúpele v Bude s dlhým nádvorím, vnútornými liečivými bazénmi a vonkajšími plaveckými bazénmi. Sú menšie a jednoduchšie ako Széchenyi a Rudas.</p><p>Recenzenti chvália priateľský personál. Najčastejšou sťažnosťou je mätúce usporiadanie.</p><h3>Ako sa tam dostať</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Luk%C3%A1cs+Gy%C3%B3gyf%C3%BCrd%C5%91+Frankel+Le%C3%B3+%C3%BAt+25-29+Budapest" rel="nofollow noopener" target="_blank">Frankel Leó út 25-29, 1023 Budapest</a></li><li>🚋 <strong>Električka</strong> 4, 6, 17 alebo 19, <strong>autobus</strong> 9 alebo 109, alebo prímestský vlak <strong>HÉV</strong> na zastávku Margit híd, budai hídfő.</li><li>⚠️ Na tej istej ulici sú kúpele Veli Bej; nezameňte si ich.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Vstupenky a aktuálna dostupnosť</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">Od €33</span>
-<span class="ltt-buy-price-sub">na dospelého · celý deň</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Termálne kúpele Lukács</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Rezervácia cez GetYourGuide</span>
-<span class="ltt-buy-perk">Rezervujte teraz, zaplaťte neskôr</span>
-<span class="ltt-buy-perk">Adresa: <strong>Frankel Leó út 25-29, 1023 Budapest</strong></span>
-<span class="ltt-buy-perk">Odporúčaný čas: <strong>2–3 hodiny</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-lukacs-thermal-bath-full-day-spa-ticket-t439700/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-lukacs&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Overiť termíny a kúpiť vstupenky</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Bezplatné zrušenie do predchádzajúceho dňa</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Termálne kúpele Lukács">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-lukacs-thermal-bath-full-day-spa-ticket-t439700/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-lukacs&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12ff6ce1b4b5efd14b0fb_5_Luk%C3%A1cs%20Thermal%20Bath.webp" alt="Lukács Thermal Bath" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#3 Najlepšie miestne kúpele</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-lukacs-thermal-bath-full-day-spa-ticket-t439700/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-lukacs&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Termálne kúpele Lukács</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:3.96"></span><b class="bpa-rate-score">4.0</b><span class="bpa-rate-meta">430+ recenzií · 3 stránky</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>Priemer z 3 stránok, vážený počtom recenzií</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-lukacs-thermal-bath-full-day-spa-ticket-t439700/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=thermal-baths-budapest-en-pop&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.0</span><span class="bpa-rev-count">(360+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a><a class="bpa-rev-badge is-link" href="https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-budapest-lukacs-thermal-bath-p1053009/?partner=thecruisedetective.com-176436&amp;tq_campaign=thermal-baths-budapest-en-pop" rel="noopener nofollow sponsored" target="_blank">
+<img alt="Tiqets" class="bpa-rev-icon" loading="lazy" src="/assets/cdn/652d0405192ba076b04f74a3/6852917a8b23e16d4296b394_tiqets-logo.avif"/><span class="bpa-rev-site">Tiqets</span><span class="bpa-rev-score">4.1</span><span class="bpa-rev-count">(20+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a><span class="bpa-rev-badge is-static">
+<img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">3.7</span><span class="bpa-rev-count">(40+)</span></span></span><span class="bpa-lang-note">Počet na Viator zahŕňa recenzie z Tripadvisor. Každá stránka hodnotí vlastnú vstupenku do týchto kúpeľov.</span></div></details></div></div>
+<ul class="bpa-book-points"><li>Rezervácia cez GetYourGuide</li><li>Rezervujte teraz, zaplaťte neskôr</li><li>Adresa: <strong>Frankel Leó út 25-29, 1023 Budapest</strong></li><li>Odporúčaný čas: <strong>2–3 hodiny</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">Od €33<small>na dospelého · celý deň</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-lukacs-thermal-bath-full-day-spa-ticket-t439700/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-lukacs&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Overiť termíny a kúpiť vstupenky →</a></div>
+<div class="bpa-book-note">Bezplatné zrušenie do predchádzajúceho dňa</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1256,39 +1226,18 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Oplatí sa Palatinus v zime?</strong><br/>💡 Len na krátku návštevu. Je to predovšetkým letné kúpalisko: v zime zatvára o 16:00 a fínska sauna je momentálne mimo prevádzky.</blockquote><p>Palatinus pôsobí skôr ako pláž než klasické termálne kúpele. Leží na Margitinom ostrove, kde môžete stráviť celý deň v parku, a v lete ho milujú miestni aj turisti.</p><p>Rodiny oceňujú detské bazény a cenu. Častými sťažnosťami sú krátka zimná otváracia doba a letné rady.</p><h3>Ako sa tam dostať</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Palatinus+Strandf%C3%BCrd%C5%91+So%C3%B3+Rezs%C5%91+s%C3%A9t%C3%A1ny+1+Budapest" rel="nofollow noopener" target="_blank">Soó Rezső sétány 1, 1007 Budapest (Margitin ostrov)</a></li><li>🚌 <strong>Autobus 26</strong> z Nyugati pályaudvar alebo Árpád híd zastavuje priamo pred vchodom.</li><li>🚐 V letnej sezóne premáva aj vlastný minibus kúpaliska.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Vstupenky a aktuálna dostupnosť</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">Od €27</span>
-<span class="ltt-buy-price-sub">na dospelého · celý deň</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Kúpalisko Palatinus</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Rezervácia cez GetYourGuide</span>
-<span class="ltt-buy-perk">Rezervujte teraz, zaplaťte neskôr</span>
-<span class="ltt-buy-perk">Adresa: <strong>Soó Rezső sétány 1, 1007 Budapest (Margitin ostrov)</strong></span>
-<span class="ltt-buy-perk">Odporúčaný čas: <strong>Pol dňa</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-palatinus-spa-pools-full-day-admission-t439827/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-palatinus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Overiť termíny a kúpiť vstupenky</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Bezplatné zrušenie do 24 hodín vopred</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Kúpalisko Palatinus">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-palatinus-spa-pools-full-day-admission-t439827/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-palatinus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64ba8e6b766876604f3f8c23_Palatinus-thermal-bath%20(17).webp" alt="Kúpalisko Palatinus na Margaret Island" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">‍‍ #4 Najlepšie pre rodiny</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-palatinus-spa-pools-full-day-admission-t439827/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-palatinus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Kúpalisko Palatinus</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.28"></span><b class="bpa-rate-score">4.3</b><span class="bpa-rate-meta">490+ recenzií · 2 stránky</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>Priemer z 2 stránok, vážený počtom recenzií</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-palatinus-spa-pools-full-day-admission-t439827/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-rating-palatinus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.3</span><span class="bpa-rev-count">(470+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a><a class="bpa-rev-badge is-link" href="https://tp.media/r?campaign_id=47&amp;marker=404154&amp;p=1922&amp;sub_id=thermal_baths_budapest_en_pop&amp;trs=204442&amp;u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FBudapest-Palatinus-Bath-Full-Day-Admission%2Fd499-5808P202" rel="nofollow sponsored noopener" target="_blank">
+<img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">3.5</span><span class="bpa-rev-count">(20+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span><span class="bpa-lang-note">Počet na Viator zahŕňa recenzie z Tripadvisor. Každá stránka hodnotí vlastnú vstupenku do týchto kúpeľov.</span></div></details></div></div>
+<ul class="bpa-book-points"><li>Rezervácia cez GetYourGuide</li><li>Rezervujte teraz, zaplaťte neskôr</li><li>Adresa: <strong>Soó Rezső sétány 1, 1007 Budapest (Margitin ostrov)</strong></li><li>Odporúčaný čas: <strong>Pol dňa</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">Od €27<small>na dospelého · celý deň</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-palatinus-spa-pools-full-day-admission-t439827/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-palatinus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Overiť termíny a kúpiť vstupenky →</a></div>
+<div class="bpa-book-note">Bezplatné zrušenie do 24 hodín vopred</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1374,39 +1323,17 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Oplatí sa Dandár navštíviť ako turista?</strong><br/>💡 Áno, ak chcete lacné miestne kúpele a nezáleží vám na architektúre. Je to opak Széchenyi.</blockquote><p>Dandár sú málo známe kúpele bez zvláštneho čaru pre turistov a poloha mimo centra im nepomáha. Interiér je jednoduchý, no ak chcete autentické kúpele, kde trávia čas Maďari, ste na správnom mieste.</p><p>Sú len kúsok od továrne Zwack Unicum, takže ich môžete spojiť s jej návštevou.</p><h3>Ako sa tam dostať</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Dand%C3%A1r+Gy%C3%B3gyf%C3%BCrd%C5%91+Dand%C3%A1r+utca+3+Budapest" rel="nofollow noopener" target="_blank">Dandár u. 3, 1095 Budapest</a></li><li>🚋 <strong>Električka</strong> 2 alebo 24, alebo <strong>autobus</strong> 23 alebo 54.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Vstupenky a aktuálna dostupnosť</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">Od €22</span>
-<span class="ltt-buy-price-sub">za dospelého · celý deň</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Termálne kúpele Dandár</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Rezervácia cez GetYourGuide</span>
-<span class="ltt-buy-perk">Rezervujte teraz, zaplaťte neskôr</span>
-<span class="ltt-buy-perk">Adresa: <strong>Dandár u. 3, 1095 Budapest</strong></span>
-<span class="ltt-buy-perk">Odporúčaný čas: <strong>2 hodiny</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-dandar-thermal-bath-full-day-admission-t439882/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-dandar&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Overiť termíny a kúpiť vstupenky</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Bezplatné zrušenie do 24 hodín vopred</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Termálne kúpele Dandár">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-dandar-thermal-bath-full-day-admission-t439882/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-dandar&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/63c6c9514fe8a2b24014ee27_7_Dand%C3%A1r%20Thermal%20Bath.webp" alt="Dandár Thermal Bath" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#5 Najlepšie lacné kúpele</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-dandar-thermal-bath-full-day-admission-t439882/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-dandar&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Termálne kúpele Dandár</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.01"></span><b class="bpa-rate-score">4.0</b><span class="bpa-rate-meta">20+ recenzií · GetYourGuide</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>Hodnotenie na GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-dandar-thermal-bath-full-day-admission-t439882/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-rating-dandar&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.0</span><span class="bpa-rev-count">(20+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Rezervácia cez GetYourGuide</li><li>Rezervujte teraz, zaplaťte neskôr</li><li>Adresa: <strong>Dandár u. 3, 1095 Budapest</strong></li><li>Odporúčaný čas: <strong>2 hodiny</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">Od €22<small>za dospelého · celý deň</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-dandar-thermal-bath-full-day-admission-t439882/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-thermal-baths-review-dandar&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Overiť termíny a kúpiť vstupenky →</a></div>
+<div class="bpa-book-note">Bezplatné zrušenie do 24 hodín vopred</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1485,39 +1412,17 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Čím sa Veli Bej líši od Rudas?</strong><br/>💡 Oba sú osmanské kúpele, ale Veli Bej je menší, tichší a lacnejší a nedá sa rezervovať online.</blockquote><p>Veli Bej sú turecké kúpele z osmanskej éry, obnovené vo vnútri modernej budovy v Budíne a prevádzkované rádom Milosrdných bratov (Irgalmasrend). Nie sú hlavnou turistickou atrakciou, a práve preto si ich ľudia vyberajú.</p><p>Návštevníci zhodne spomínajú pokoj a turecké bazény. Vstupenky na rezervačných stránkach nie sú, preto táto karta odkazuje na oficiálny cenník.</p><h3>Ako sa tam dostať</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Irgalmasok+Veli+Bej+F%C3%BCrd%C5%91je+%C3%81rp%C3%A1d+fejedelem+%C3%BAtja+7+Budapest" rel="nofollow noopener" target="_blank">Árpád fejedelem útja 7, 1023 Budapest (Budai Irgalmasrendi Kórház)</a></li><li>🚋 <strong>Električkou</strong> 4 alebo 6, alebo <strong>H5 HÉV</strong> na zastávku Margit híd, budai hídfő; <strong>električkou</strong> 17, 19 alebo 41 na Komjádi Béla utca; <strong>autobusom</strong> 9 alebo 109 na Császár-Komjádi uszoda.</li><li>⚠️ Lukács je hneď za rohom; nezameňte si ich.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Oficiálne ceny a otváracia doba</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">Od 5,700 HUF</span>
-<span class="ltt-buy-price-sub">za dospelého · St–Pi ráno</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Kúpele Veli Bej</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Predaj len v pokladni kúpeľov</span>
-<span class="ltt-buy-perk">Ranný alebo popoludňajší vstup</span>
-<span class="ltt-buy-perk">Adresa: <strong>Árpád fejedelem útja 7, 1023 Budapest (Budai Irgalmasrendi Kórház)</strong></span>
-<span class="ltt-buy-perk">Odporúčaný čas: <strong>2–3 hodiny</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.irgalmasrend.hu/hu/velibej/araink" rel="nofollow noopener" target="_blank">
-<span>Pozrieť oficiálne ceny</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Bez online rezervácie: platba v pokladni</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Kúpele Veli Bej">
+<a class="bpa-book-img" href="https://www.irgalmasrend.hu/hu/velibej/araink" rel="nofollow noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/63c1302ece1b4bdfbf14b859_6_Veli%20Bej%20Thermal%20Bath.webp" alt="Veli Bej Bath" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#6 Najlepšie tiché osmanské kúpele</div>
+<a class="bpa-book-title" href="https://www.irgalmasrend.hu/hu/velibej/araink" rel="nofollow noopener" target="_blank">Kúpele Veli Bej</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.50"></span><b class="bpa-rate-score">4.5</b><span class="bpa-rate-meta">3.4k+ recenzií · Google</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>Hodnotenie na Google Maps</strong><span class="bpa-rate-list"><span class="bpa-rev-badge is-static">
+<img alt="Google" class="bpa-rev-icon" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3743_google-icon.png"/><span class="bpa-rev-site">Google</span><span class="bpa-rev-score">4.5</span><span class="bpa-rev-count">(3.4k+)</span></span></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Predaj len v pokladni kúpeľov</li><li>Ranný alebo popoludňajší vstup</li><li>Adresa: <strong>Árpád fejedelem útja 7, 1023 Budapest (Budai Irgalmasrendi Kórház)</strong></li><li>Odporúčaný čas: <strong>2–3 hodiny</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">Od 5,700 HUF<small>za dospelého · St–Pi ráno</small></div><a class="bpa-book-btn" href="https://www.irgalmasrend.hu/hu/velibej/araink" rel="nofollow noopener" target="_blank">Pozrieť oficiálne ceny →</a></div>
+<div class="bpa-book-note">Bez online rezervácie: platba v pokladni</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">

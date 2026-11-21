@@ -61,7 +61,39 @@ window.addEventListener('load', function() {
 <link id="ltt-language-switcher-styles" rel="stylesheet" href="/css/shared/ltt-language-switcher-styles.ebbf128d15.css"/><link id="CANONICAL_NAVBAR_UNIFIED_FONTS" rel="stylesheet" href="/css/shared/CANONICAL_NAVBAR_UNIFIED_FONTS.e6a1a25ced.css"/>
 <style>.ltt-mobile-drawer:not(.is-open){visibility:hidden !important;pointer-events:none !important;display:none !important;}.ltt-mobile-drawer.is-open{visibility:visible !important;pointer-events:auto !important;display:block !important;}</style><link id="ps-008fa3a483" data-ps-blocks="ltt-master-a11y-contrast ltt-wcag-contrast-fix bpa-light-bar" rel="stylesheet" href="/css/shared/bundle.008fa3a483.css"/>
 <link id="bpa-new-footer" rel="stylesheet" href="/css/shared/bpa-new-footer.4f85d90f75.css"/><link id="bpa-article-typography" rel="stylesheet" href="/css/shared/bpa-article-typography.c64a2a0b29.css"/>
-<link id="bpa-no-red-hover" rel="stylesheet" href="/css/shared/bpa-no-red-hover.802199d918.css"/><link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+<link id="bpa-no-red-hover" rel="stylesheet" href="/css/shared/bpa-no-red-hover.802199d918.css"/><link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -936,21 +968,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Victoria is the river-view hotel with no catch: <strong>every room is a RiverView room</strong>, looking across the Danube at the <strong>Parliament</strong>. It sits directly on the Buda embankment at the foot of Castle Hill, and for the same night a room cost <strong>€136</strong>.</p><p>Guests score it <strong>9.3</strong> and rate the location 9.8 and the breakfast wonderful. The Chain Bridge is about 1,550 ft away, Batthyány tér metro (M2) about 1,640 ft, and Matthias Church is an uphill walk.</p><p>There is a sauna and massage on request; breakfast is served in the main building.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €136</span><span class="ltt-buy-price-sub">per night, river-view room</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Boutique Hotel Victoria Budapest</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District I</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.3/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-victoria&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvictoria.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Boutique Hotel Victoria Budapest">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-victoria&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvictoria.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-danube-view-hotels-budapest/01-victoria-01.avif" alt="Boutique Hotel Victoria Budapest" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#1 Best Danube View Hotel</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-victoria&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvictoria.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Boutique Hotel Victoria Budapest</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.65" aria-hidden="true"></span><b class="bpa-rate-score">9.3</b><span class="bpa-rate-meta">1.4k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-victoria&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvictoria.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.3</span><span class="bpa-rev-count">(1.4k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District I</strong></li><li>🛏️ Guest score: <strong>9.3/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €136<small>per night, river-view room</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-victoria&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvictoria.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Boutique Hotel Victoria Budapest</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1011 Budapest, Bem rakpart 11. (District I)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it wonderful; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Sauna</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Buda Castle Tunnel (1,350 ft), Chain Bridge (1,550 ft), Fisherman's Bastion (1,700 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -988,21 +1014,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>The Marriott is the big Pest-side option where you do not have to pick the right room: <strong>all 364 rooms have Danube views</strong>, looking across at the castle. For the same night a river-view room cost <strong>€329</strong>.</p><p>It is on the embankment in District V, a short walk from Vigadó tér and Váci utca. The <strong>Liz &amp; Chain Rooftop Bar</strong> on the 9th floor has a terrace over the city, and breakfast is rated wonderful.</p><p>Guests score it 8.9, with value for money at 8.4. There is a garage, and pets are welcome.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €329</span><span class="ltt-buy-price-sub">per night, river-view room</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Budapest Marriott Hotel</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District V</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.9/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-marriott&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbudapest-marriott.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Budapest Marriott Hotel">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-marriott&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbudapest-marriott.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-danube-view-hotels-budapest/02-marriott-01.avif" alt="Budapest Marriott Hotel" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#2 Best 5-Star River View</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-marriott&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbudapest-marriott.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Budapest Marriott Hotel</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.45" aria-hidden="true"></span><b class="bpa-rate-score">8.9</b><span class="bpa-rate-meta">2.5k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-marriott&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbudapest-marriott.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.9</span><span class="bpa-rev-count">(2.5k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District V</strong></li><li>🛏️ Guest score: <strong>8.9/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €329<small>per night, river-view room</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-marriott&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbudapest-marriott.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Budapest Marriott Hotel</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1052 Budapest, Apaczai Csere Janos u. 4 (District V); 1,200 ft walk to Vigadó tér metro</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it wonderful; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Sauna</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until 12:00 PM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Anker-ház (2,550 ft), Magyar Tudományos Akadémia (3,100 ft), Károlyi Garden (3,200 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage, Electric charging, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">pets welcome (fees may apply)</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1040,21 +1060,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>InterContinental is the river-view hotel with a pool: an <strong>indoor heated pool, spa and sauna</strong>, on the Pest embankment <strong>right next to the Chain Bridge</strong>. Rooms with <strong>River View</strong> cost <strong>€207</strong> for the same night; the cheapest city-side Classic Room was €166.</p><p>From the river side you look at the castle and the bridge. Trams stop outside, and Váci utca, the Central Market Hall and the Gellért Baths are all close.</p><p>Families can book a Premium Family Room with two queen beds and river view (€231 for 2 adults).</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €207</span><span class="ltt-buy-price-sub">per night, river-view room</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">InterContinental Budapest</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District V</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.9/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-intercontinental&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fic-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="InterContinental Budapest">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-intercontinental&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fic-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-danube-view-hotels-budapest/03-intercontinental-01.avif" alt="InterContinental Budapest by IHG" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#3 Best River View with a Pool</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-intercontinental&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fic-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">InterContinental Budapest</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.45" aria-hidden="true"></span><b class="bpa-rate-score">8.9</b><span class="bpa-rate-meta">4.7k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-intercontinental&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fic-budapest.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.9</span><span class="bpa-rev-count">(4.7k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District V</strong></li><li>🛏️ Guest score: <strong>8.9/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €207<small>per night, river-view room</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-intercontinental&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fic-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">InterContinental Budapest</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1052 Budapest, Apaczai Csere Janos utca 12-14. (District V)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it very good; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Spa and wellness centre, indoor pool, sauna</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Valet, Parking garage, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">pets welcome (fees may apply); airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1092,21 +1106,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Leon is the best-rated hotel on this page: <strong>9.4 from 681 reviews</strong>, on Lánchíd utca on the Buda riverside, about <strong>1,400 ft from the Chain Bridge</strong> and 700 ft from the Castle Garden Bazaar.</p><p>Pick the room carefully: the <strong>Danube View Room</strong> cost <strong>€185</strong> for the same night, a Riverside View Room €150, and the Hillside View Room (€127) faces the hill.</p><p>There is a lounge, a terrace, a restaurant and a garage. Breakfast is rated very good.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €185</span><span class="ltt-buy-price-sub">per night, river-view room</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Leon Hotel &amp; Lounge Budapest</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District I</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.4/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-leon&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fleon.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Leon Hotel &amp; Lounge Budapest">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-leon&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fleon.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-danube-view-hotels-budapest/04-leon-01.avif" alt="Leon Hotel &amp; Lounge Budapest" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">⭐ #4 Best-Rated by the Chain Bridge</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-leon&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fleon.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Leon Hotel &amp; Lounge Budapest</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.70" aria-hidden="true"></span><b class="bpa-rate-score">9.4</b><span class="bpa-rate-meta">681 reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-leon&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fleon.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.4</span><span class="bpa-rev-count">(681)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District I</strong></li><li>🛏️ Guest score: <strong>9.4/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €185<small>per night, river-view room</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-leon&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fleon.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Leon Hotel &amp; Lounge Budapest</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1013 Budapest, Lánchíd utca 19 (District I)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it very good; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 2:00 PM to 12:00 AM; check-out until From 8:00 AM to 12:00 PM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Castle Garden Bazaar (700 ft), Buda Castle Tunnel (750 ft), Ybl Budai Kreatív Ház (1,150 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage, Electric charging, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1144,21 +1152,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Park Plaza is the budget way to wake up facing the <strong>Parliament</strong>: a <strong>Superior Double Room with River View</strong> cost <strong>€96</strong> for the same night, on the Buda embankment (Bem rakpart). Castle-view rooms were €88 and river-view suites €134.</p><p>It is a modern design hotel with an art bistro-bar, a fitness area and a sauna, a few minutes from Batthyány tér metro. It is listed as wheelchair accessible and has a garage.</p><p>Guests score it <strong>8.2</strong>, the lowest here, with breakfast rated excellent.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €96</span><span class="ltt-buy-price-sub">per night, river-view room</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Park Plaza Budapest</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District I</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.2/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-park-plaza&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fartotel.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Park Plaza Budapest">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-park-plaza&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fartotel.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-danube-view-hotels-budapest/05-park-plaza-01.avif" alt="Park Plaza Budapest" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#5 Cheapest River-View Room</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-park-plaza&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fartotel.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Park Plaza Budapest</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.10" aria-hidden="true"></span><b class="bpa-rate-score">8.2</b><span class="bpa-rate-meta">3.9k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-park-plaza&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fartotel.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.2</span><span class="bpa-rev-count">(3.9k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District I</strong></li><li>🛏️ Guest score: <strong>8.2/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €96<small>per night, river-view room</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-park-plaza&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fartotel.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Park Plaza Budapest</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1011 Budapest, Bem rakpart 16-19 (District I)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until 12:00 PM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Buda Castle Tunnel (1,750 ft), Fisherman's Bastion (1,750 ft), Matyas Church (2,000 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">Listed as wheelchair accessible; airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1196,21 +1198,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Novotel Danube is on Bem rakpart on the Buda bank, opposite the Parliament near the Margaret Bridge, and <strong>most rooms overlook the river</strong>. If you want the view guaranteed, book an <strong>Executive Room with view to the Margaret Bridge (€130)</strong> or <strong>to the Parliament (€150)</strong> rather than the €110 standard rate.</p><p>The bar and restaurant also face the river and the Parliament, and the kitchen serves 24 hours a day. There is a fitness centre and a sauna.</p><p>Guests score it 8.6. It is listed as wheelchair accessible, and pets are welcome.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €130</span><span class="ltt-buy-price-sub">per night, river-view room</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Novotel Budapest Danube</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District II</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.6/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-novotel-danube&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fnovotel-budapest-danube.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Novotel Budapest Danube">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-novotel-danube&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fnovotel-budapest-danube.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-danube-view-hotels-budapest/06-novotel-danube-01.avif" alt="Novotel Budapest Danube" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#6 Best for Bridge and Parliament Views</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-novotel-danube&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fnovotel-budapest-danube.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Novotel Budapest Danube</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.30" aria-hidden="true"></span><b class="bpa-rate-score">8.6</b><span class="bpa-rate-meta">2.3k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-novotel-danube&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fnovotel-budapest-danube.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.6</span><span class="bpa-rev-count">(2.3k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District II</strong></li><li>🛏️ Guest score: <strong>8.6/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €130<small>per night, river-view room</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-novotel-danube&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fnovotel-budapest-danube.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Novotel Budapest Danube</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1027 Budapest, Bem rakpart 33-34. (District II)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it very good; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Sauna</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM to 12:00 AM; check-out until From 12:00 AM to 12:00 PM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Budavári Evangélikus Templom (3,200 ft), Középkori zsidó Imaház (0.6 mi), Fisherman's Bastion (0.7 mi)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Street, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">Listed as wheelchair accessible; pets welcome (fees may apply); airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1248,21 +1244,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Four Points is the rare hotel where <strong>the cheapest room is the river-view one</strong>: a Superior room with <strong>river view and balcony</strong> cost <strong>€123</strong> for the same night, less than the standard rooms.</p><p>It is on Garam utca in District XIII, by the Danube about a mile north of the Parliament and 1.7 miles from downtown, so plan on trams or the metro for sightseeing.</p><p>Guests score it <strong>9.1</strong> and rate breakfast wonderful. It is listed as wheelchair accessible and has a garage.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €123</span><span class="ltt-buy-price-sub">per night, river-view room</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Four Points by Sheraton Budapest Danube</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District XIII</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.1/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-four-points-danube&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffour-points-by-sheraton-budapest-danube.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Four Points by Sheraton Budapest Danube">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-four-points-danube&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffour-points-by-sheraton-budapest-danube.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-danube-view-hotels-budapest/07-four-points-danube-01.avif" alt="Four Points by Sheraton Budapest Danube" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#7 Best River-View Balcony</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-four-points-danube&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffour-points-by-sheraton-budapest-danube.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Four Points by Sheraton Budapest Danube</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.55" aria-hidden="true"></span><b class="bpa-rate-score">9.1</b><span class="bpa-rate-meta">735 reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-four-points-danube&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffour-points-by-sheraton-budapest-danube.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.1</span><span class="bpa-rev-count">(735)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District XIII</strong></li><li>🛏️ Guest score: <strong>9.1/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €123<small>per night, river-view room</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-danube-view-hotels-budapest-four-points-danube&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffour-points-by-sheraton-budapest-danube.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Four Points by Sheraton Budapest Danube</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1133 Budapest, Garam utca 4/a (District XIII)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it wonderful; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until 12:00 PM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Domonkos Kolostor és templom Romjai (0.6 mi), Olimpia Park (0.9 mi), Parliament (1 mi)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage, Street, Electric charging, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">Listed as wheelchair accessible; airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>

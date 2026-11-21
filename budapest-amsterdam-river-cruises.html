@@ -78,7 +78,39 @@ window.addEventListener('load', function() {
 .bt-note{font-size:13.5px !important;color:#64748b !important}
 .bpa-rate-list .bpa-rev-badge{gap:6px}
 .bt-qp a:hover,.bt-qp a:focus,.bt-logistics a:hover,.bt-logistics a:focus,.bpa-wt-faq a:hover,.bpa-details-body .w-richtext a:hover{color:#855a00 !important}
-</style><link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+</style><link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -974,38 +1006,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>This is the cheapest way to sail the whole Danube, Main and Rhine without paying extra at the end. Emerald's <strong>Early Season Splendours of Europe</strong> leaves Budapest in late February and reaches Amsterdam 15 days later on the <strong>Emerald Sky</strong>, stopping in Bratislava, Vienna, Dürnstein and Melk, Passau, Regensburg, Nuremberg, Bamberg, Würzburg, Miltenberg, Rüdesheim and Cologne.</p><p>The fare includes <strong>all tipping and gratuities</strong>, airport transfers and port taxes, plus wine, beer and soft drinks with lunch and dinner. That is why it beats the slightly cheaper-looking #2: once you add tips there, Emerald is the better deal. Prefer to finish in Budapest? The <a href="https://www.tourradar.com/t/342308?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-emerald-splendours-reverse" rel="nofollow sponsored noopener" target="_blank">same cruise in reverse</a> starts at <strong>$3,163</strong> on 20 Feb 2027.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 1" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Early Season Splendours of Europe: 15 Days, Budapest to Amsterdam (1/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-splendours-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Early Season Splendours of Europe: 15 Days, Budapest to Amsterdam (2/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-splendours-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Early Season Splendours of Europe: 15 Days, Budapest to Amsterdam (3/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-splendours-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Early Season Splendours of Europe: 15 Days, Budapest to Amsterdam (4/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-splendours-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Early Season Splendours of Europe: 15 Days, Budapest to Amsterdam (5/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-splendours-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Early Season Splendours of Europe: 15 Days, Budapest to Amsterdam (6/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-splendours-06.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Early Season Splendours of Europe: 15 Days, Budapest to Amsterdam (7/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-splendours-07.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 7</span> <span>Photo: Emerald Cruises</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Live Dates &amp; Prices</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From $3,976</span>
-<span class="ltt-buy-price-sub">per person, 2 sharing</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Early Season Splendours of Europe: 15 Days, Budapest to Amsterdam</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk"><strong>15 days</strong>, Budapest → Amsterdam</span>
-<span class="ltt-buy-perk">About <strong>$265 per day</strong></span>
-<span class="ltt-buy-perk">Twin cabin, <strong>2 sharing</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.tourradar.com/t/342309?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-emerald-splendours" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Prices</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Booked securely via TourRadar</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Early Season Splendours of Europe: 15 Days, Budapest to Amsterdam">
+<a class="bpa-book-img" href="https://www.tourradar.com/t/342309?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-emerald-splendours" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-splendours-01.avif" alt="Early Season Splendours of Europe: 15 Days, Budapest to Amsterdam (1/10)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#1 Best Value Overall</div>
+<a class="bpa-book-title" href="https://www.tourradar.com/t/342309?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-emerald-splendours" rel="nofollow sponsored noopener" target="_blank">Early Season Splendours of Europe: 15 Days, Budapest to Amsterdam</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.10" aria-hidden="true"></span><b class="bpa-rate-score">4.1</b><span class="bpa-rate-meta">40 reviews · operator</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Emerald Cruises operator rating</strong><span class="bpa-rate-list"><span class="bpa-rev-badge"><span class="bpa-rev-site">TourRadar</span><span class="bpa-rev-score">4.1</span><span class="bpa-rev-count">(40)</span></span></span><span class="bpa-lang-note">Reviews cover all of the operator's cruises, not only this route.</span></div></details></div></div>
+<ul class="bpa-book-points"><li><strong>15 days</strong>, Budapest → Amsterdam</li><li>About <strong>$265 per day</strong></li><li>Twin cabin, <strong>2 sharing</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From $3,976<small>per person, 2 sharing</small></div><a class="bpa-book-btn" href="https://www.tourradar.com/t/342309?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-emerald-splendours" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Prices →</a></div>
+<div class="bpa-book-note">Booked securely via TourRadar</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1063,38 +1073,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Austrian family company Lüftner (sold as Lueftner Cruises) is the value pick if you can only travel in summer. Its <strong>Across Europe</strong> cruise sails from Amsterdam via Utrecht, Cologne, Rüdesheim, Würzburg, Bamberg, Nuremberg, Regensburg, Passau, Dürnstein, Vienna and Bratislava to Budapest on the <strong>AMADEUS Mira</strong>.</p><p>The operator rates <strong>4.5 from 220 reviews</strong>, the best score in this comparison, and the <strong>19 Aug 2027</strong> departure is <strong>$3,941</strong>. Wine and beer come with lunch and dinner, Wi-Fi and bikes are free, and there are e-bike tours along the Danube and to Klosterneuburg Abbey. Tips are extra, so add them before comparing it with #1.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 2" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Across Europe on the AMADEUS Mira: 15 Days, Amsterdam to Budapest (1/4)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-lueftner-amadeus-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 4</span> <span>Photo: Lueftner Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Across Europe on the AMADEUS Mira: 15 Days, Amsterdam to Budapest (2/4)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-lueftner-amadeus-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 4</span> <span>Photo: Lueftner Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Across Europe on the AMADEUS Mira: 15 Days, Amsterdam to Budapest (3/4)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-lueftner-amadeus-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 4</span> <span>Photo: Lueftner Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Across Europe on the AMADEUS Mira: 15 Days, Amsterdam to Budapest (4/4)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-lueftner-amadeus-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 4</span> <span>Photo: Lueftner Cruises</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Live Dates &amp; Prices</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From $3,941</span>
-<span class="ltt-buy-price-sub">per person, 2 sharing</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Across Europe on the AMADEUS Mira: 15 Days, Amsterdam to Budapest</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk"><strong>15 days</strong>, Amsterdam → Budapest</span>
-<span class="ltt-buy-perk">About <strong>$263 per day</strong></span>
-<span class="ltt-buy-perk">Twin cabin, <strong>2 sharing</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.tourradar.com/t/339822?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-lueftner-amadeus" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Prices</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Booked securely via TourRadar</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Across Europe on the AMADEUS Mira: 15 Days, Amsterdam to Budapest">
+<a class="bpa-book-img" href="https://www.tourradar.com/t/339822?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-lueftner-amadeus" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-lueftner-amadeus-01.avif" alt="Across Europe on the AMADEUS Mira: 15 Days, Amsterdam to Budapest (1/4)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#2 Best Value for Summer</div>
+<a class="bpa-book-title" href="https://www.tourradar.com/t/339822?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-lueftner-amadeus" rel="nofollow sponsored noopener" target="_blank">Across Europe on the AMADEUS Mira: 15 Days, Amsterdam to Budapest</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.50" aria-hidden="true"></span><b class="bpa-rate-score">4.5</b><span class="bpa-rate-meta">220 reviews · operator</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lueftner Cruises operator rating</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.tourradar.com/t/339822?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=budapest-amsterdam-river-cru-en-pop" rel="noopener nofollow sponsored" target="_blank"><span class="bpa-rev-site">TourRadar</span><span class="bpa-rev-score">4.5</span><span class="bpa-rev-count">(220)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span><span class="bpa-lang-note">Reviews cover all of the operator's cruises, not only this route.</span></div></details></div></div>
+<ul class="bpa-book-points"><li><strong>15 days</strong>, Amsterdam → Budapest</li><li>About <strong>$263 per day</strong></li><li>Twin cabin, <strong>2 sharing</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From $3,941<small>per person, 2 sharing</small></div><a class="bpa-book-btn" href="https://www.tourradar.com/t/339822?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-lueftner-amadeus" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Prices →</a></div>
+<div class="bpa-book-note">Booked securely via TourRadar</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1152,38 +1140,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Scenic sells itself as the all-inclusive line, and on this route it delivers: <strong>premium drinks all day</strong>, all tips on board and ashore, return airport transfers and free Wi-Fi are in the fare, and you get e-bikes to explore on your own. The ships take up to 163 guests and the upper Balcony Suites come with a butler.</p><p>The catch is the price calendar. <strong>$5,244</strong> is the <strong>22 February 2027</strong> sailing; in March it is <strong>$9,321 to $9,933</strong>. If you can take that February date, it is the best-value luxury cruise on the route. If not, compare it with #4, which costs less than Scenic in spring and includes spirits too.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 3" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Jewels of Europe: 15 Days, Budapest to Amsterdam, Everything Included (1/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-scenic-jewels-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 7</span> <span>Photo: Scenic</span></div></div><div class="ltt-strip-slide"><img alt="Jewels of Europe: 15 Days, Budapest to Amsterdam, Everything Included (2/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-scenic-jewels-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 7</span> <span>Photo: Scenic</span></div></div><div class="ltt-strip-slide"><img alt="Jewels of Europe: 15 Days, Budapest to Amsterdam, Everything Included (3/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-scenic-jewels-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 7</span> <span>Photo: Scenic</span></div></div><div class="ltt-strip-slide"><img alt="Jewels of Europe: 15 Days, Budapest to Amsterdam, Everything Included (4/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-scenic-jewels-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 7</span> <span>Photo: Scenic</span></div></div><div class="ltt-strip-slide"><img alt="Jewels of Europe: 15 Days, Budapest to Amsterdam, Everything Included (5/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-scenic-jewels-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 7</span> <span>Photo: Scenic</span></div></div><div class="ltt-strip-slide"><img alt="Jewels of Europe: 15 Days, Budapest to Amsterdam, Everything Included (6/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-scenic-jewels-06.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 7</span> <span>Photo: Scenic</span></div></div><div class="ltt-strip-slide"><img alt="Jewels of Europe: 15 Days, Budapest to Amsterdam, Everything Included (7/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-scenic-jewels-07.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 7</span> <span>Photo: Scenic</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Live Dates &amp; Prices</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From $5,244</span>
-<span class="ltt-buy-price-sub">per person, 2 sharing</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Jewels of Europe: 15 Days, Budapest to Amsterdam, Everything Included</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk"><strong>15 days</strong>, Budapest → Amsterdam</span>
-<span class="ltt-buy-perk">About <strong>$350 per day</strong></span>
-<span class="ltt-buy-perk">Twin cabin, <strong>2 sharing</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.tourradar.com/t/344472?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-scenic-jewels" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Prices</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Booked securely via TourRadar</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Jewels of Europe: 15 Days, Budapest to Amsterdam, Everything Included">
+<a class="bpa-book-img" href="https://www.tourradar.com/t/344472?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-scenic-jewels" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-scenic-jewels-01.avif" alt="Jewels of Europe: 15 Days, Budapest to Amsterdam, Everything Included (1/7)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#3 Best All-Inclusive</div>
+<a class="bpa-book-title" href="https://www.tourradar.com/t/344472?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-scenic-jewels" rel="nofollow sponsored noopener" target="_blank">Jewels of Europe: 15 Days, Budapest to Amsterdam, Everything Included</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.40" aria-hidden="true"></span><b class="bpa-rate-score">4.4</b><span class="bpa-rate-meta">47 reviews · operator</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Scenic operator rating</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.tourradar.com/t/344472?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=budapest-amsterdam-river-cru-en-pop" rel="noopener nofollow sponsored" target="_blank"><span class="bpa-rev-site">TourRadar</span><span class="bpa-rev-score">4.4</span><span class="bpa-rev-count">(47)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span><span class="bpa-lang-note">Reviews cover all of the operator's cruises, not only this route.</span></div></details></div></div>
+<ul class="bpa-book-points"><li><strong>15 days</strong>, Budapest → Amsterdam</li><li>About <strong>$350 per day</strong></li><li>Twin cabin, <strong>2 sharing</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From $5,244<small>per person, 2 sharing</small></div><a class="bpa-book-btn" href="https://www.tourradar.com/t/344472?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-scenic-jewels" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Prices →</a></div>
+<div class="bpa-book-note">Booked securely via TourRadar</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1241,38 +1207,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Uniworld's <strong>European Jewels</strong> is the boutique option: the <strong>S.S. Marlene</strong> has lavishly decorated riverview staterooms and suites, and the fare is the most inclusive on the route, with <strong>unlimited drinks including spirits</strong>, gratuities and Wi-Fi.</p><p>The itinerary is a little different too: alongside Vienna, the Wachau, Passau, Regensburg, Nuremberg, Bamberg and Cologne, it adds <strong>Rothenburg</strong> from Würzburg and <strong>Heidelberg</strong> from Frankfurt. It rates <strong>4.6 from 97 reviews</strong>. 2027 departures run <strong>$8,365 to $9,008</strong>; the 13 June sailing is the cheapest.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 4" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="European Jewels on the S.S. Marlene: 15 Days, Budapest to Amsterdam (1/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-uniworld-european-jewels-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 7</span> <span>Photo: Uniworld</span></div></div><div class="ltt-strip-slide"><img alt="European Jewels on the S.S. Marlene: 15 Days, Budapest to Amsterdam (2/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-uniworld-european-jewels-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 7</span> <span>Photo: Uniworld</span></div></div><div class="ltt-strip-slide"><img alt="European Jewels on the S.S. Marlene: 15 Days, Budapest to Amsterdam (3/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-uniworld-european-jewels-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 7</span> <span>Photo: Uniworld</span></div></div><div class="ltt-strip-slide"><img alt="European Jewels on the S.S. Marlene: 15 Days, Budapest to Amsterdam (4/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-uniworld-european-jewels-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 7</span> <span>Photo: Uniworld</span></div></div><div class="ltt-strip-slide"><img alt="European Jewels on the S.S. Marlene: 15 Days, Budapest to Amsterdam (5/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-uniworld-european-jewels-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 7</span> <span>Photo: Uniworld</span></div></div><div class="ltt-strip-slide"><img alt="European Jewels on the S.S. Marlene: 15 Days, Budapest to Amsterdam (6/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-uniworld-european-jewels-06.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 7</span> <span>Photo: Uniworld</span></div></div><div class="ltt-strip-slide"><img alt="European Jewels on the S.S. Marlene: 15 Days, Budapest to Amsterdam (7/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-uniworld-european-jewels-07.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 7</span> <span>Photo: Uniworld</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Live Dates &amp; Prices</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From $8,711</span>
-<span class="ltt-buy-price-sub">per person, 2 sharing</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">European Jewels on the S.S. Marlene: 15 Days, Budapest to Amsterdam</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk"><strong>15 days</strong>, Budapest → Amsterdam</span>
-<span class="ltt-buy-perk">About <strong>$581 per day</strong></span>
-<span class="ltt-buy-perk">Twin cabin, <strong>2 sharing</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.tourradar.com/t/326678?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-uniworld-european-jewels" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Prices</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Booked securely via TourRadar</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="European Jewels on the S.S. Marlene: 15 Days, Budapest to Amsterdam">
+<a class="bpa-book-img" href="https://www.tourradar.com/t/326678?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-uniworld-european-jewels" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-uniworld-european-jewels-01.avif" alt="European Jewels on the S.S. Marlene: 15 Days, Budapest to Amsterdam (1/7)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#4 Best Boutique Ship</div>
+<a class="bpa-book-title" href="https://www.tourradar.com/t/326678?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-uniworld-european-jewels" rel="nofollow sponsored noopener" target="_blank">European Jewels on the S.S. Marlene: 15 Days, Budapest to Amsterdam</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.60" aria-hidden="true"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">97 reviews · operator</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Uniworld operator rating</strong><span class="bpa-rate-list"><span class="bpa-rev-badge"><span class="bpa-rev-site">TourRadar</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(97)</span></span></span><span class="bpa-lang-note">Reviews cover all of the operator's cruises, not only this route.</span></div></details></div></div>
+<ul class="bpa-book-points"><li><strong>15 days</strong>, Budapest → Amsterdam</li><li>About <strong>$581 per day</strong></li><li>Twin cabin, <strong>2 sharing</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From $8,711<small>per person, 2 sharing</small></div><a class="bpa-book-btn" href="https://www.tourradar.com/t/326678?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-uniworld-european-jewels" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Prices →</a></div>
+<div class="bpa-book-note">Booked securely via TourRadar</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1330,38 +1274,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Avalon's selling point is the cabin. Its <strong>Panorama Suites</strong> turn the whole outer wall into a window that opens onto an open-air balcony, and the beds face the river. Four ships run this route: Avalon Expression, Illumination, Impression and Passion.</p><p>On board you get wine, beer or soft drinks with lunch and dinner, an included <strong>happy hour every evening</strong> and free Wi-Fi, and Avalon offers a choice of included excursions in every port. 2027 departures run <strong>$7,424 to $7,721</strong>, with about $504 per person in upfront charges added at booking. It is the most grown-up pick that still takes children from 8.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 5" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Magnificent Rivers of Europe: 15 Days in a Panorama Suite (1/5)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-avalon-magnificent-rivers-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>Photo: Avalon Waterways</span></div></div><div class="ltt-strip-slide"><img alt="Magnificent Rivers of Europe: 15 Days in a Panorama Suite (2/5)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-avalon-magnificent-rivers-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>Photo: Avalon Waterways</span></div></div><div class="ltt-strip-slide"><img alt="Magnificent Rivers of Europe: 15 Days in a Panorama Suite (3/5)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-avalon-magnificent-rivers-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>Photo: Avalon Waterways</span></div></div><div class="ltt-strip-slide"><img alt="Magnificent Rivers of Europe: 15 Days in a Panorama Suite (4/5)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-avalon-magnificent-rivers-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>Photo: Avalon Waterways</span></div></div><div class="ltt-strip-slide"><img alt="Magnificent Rivers of Europe: 15 Days in a Panorama Suite (5/5)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-avalon-magnificent-rivers-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>Photo: Avalon Waterways</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Live Dates &amp; Prices</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From $7,424</span>
-<span class="ltt-buy-price-sub">per person, 2 sharing</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Magnificent Rivers of Europe: 15 Days in a Panorama Suite</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk"><strong>15 days</strong>, Budapest → Amsterdam</span>
-<span class="ltt-buy-perk">About <strong>$495 per day</strong></span>
-<span class="ltt-buy-perk">Twin cabin, <strong>2 sharing</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.tourradar.com/t/363261?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-avalon-magnificent-rivers" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Prices</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Booked securely via TourRadar</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Magnificent Rivers of Europe: 15 Days in a Panorama Suite">
+<a class="bpa-book-img" href="https://www.tourradar.com/t/363261?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-avalon-magnificent-rivers" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-avalon-magnificent-rivers-01.avif" alt="Magnificent Rivers of Europe: 15 Days in a Panorama Suite (1/5)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#5 Best Cabin Views</div>
+<a class="bpa-book-title" href="https://www.tourradar.com/t/363261?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-avalon-magnificent-rivers" rel="nofollow sponsored noopener" target="_blank">Magnificent Rivers of Europe: 15 Days in a Panorama Suite</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.60" aria-hidden="true"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">operator rating</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Avalon Waterways operator rating</strong><span class="bpa-rate-list"><span class="bpa-rev-badge"><span class="bpa-rev-site">TourRadar</span><span class="bpa-rev-score">4.6</span></span></span><span class="bpa-lang-note">Reviews cover all of the operator's cruises, not only this route.</span></div></details></div></div>
+<ul class="bpa-book-points"><li><strong>15 days</strong>, Budapest → Amsterdam</li><li>About <strong>$495 per day</strong></li><li>Twin cabin, <strong>2 sharing</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From $7,424<small>per person, 2 sharing</small></div><a class="bpa-book-btn" href="https://www.tourradar.com/t/363261?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-avalon-magnificent-rivers" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Prices →</a></div>
+<div class="bpa-book-note">Booked securely via TourRadar</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1419,38 +1341,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>If the point of the trip is mulled wine and market stalls, this is the one. Emerald runs its Budapest to Amsterdam route in <strong>late November and early December</strong> on the <strong>Emerald Sun, Luna and Astra</strong>, so you reach Vienna, Nuremberg and Cologne while the markets are open.</p><p>The inclusions match #1: all tips, airport transfers and wine, beer and soft drinks with lunch and dinner. This year's sailings are <strong>$6,786 to $8,207</strong>; the <strong>22 November 2027</strong> departure is <strong>$5,745</strong>, and the lowest advertised fare is <strong>$4,342</strong>. Arriving a few days early? Budapest's own <a href="/budapest-christmas-markets">Christmas markets</a> open in mid-November, and our <a href="/things-to-do-budapest-november">November guide</a> covers the rest of the city.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 6" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Christmas Markets of Europe: 15 Days, Budapest to Amsterdam (1/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-christmas-markets-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Markets of Europe: 15 Days, Budapest to Amsterdam (2/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-christmas-markets-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Markets of Europe: 15 Days, Budapest to Amsterdam (3/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-christmas-markets-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Markets of Europe: 15 Days, Budapest to Amsterdam (4/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-christmas-markets-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Markets of Europe: 15 Days, Budapest to Amsterdam (5/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-christmas-markets-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Markets of Europe: 15 Days, Budapest to Amsterdam (6/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-christmas-markets-06.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Markets of Europe: 15 Days, Budapest to Amsterdam (7/7)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-christmas-markets-07.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 7</span> <span>Photo: Emerald Cruises</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Live Dates &amp; Prices</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From $4,342</span>
-<span class="ltt-buy-price-sub">per person, 2 sharing</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Christmas Markets of Europe: 15 Days, Budapest to Amsterdam</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk"><strong>15 days</strong>, Budapest → Amsterdam</span>
-<span class="ltt-buy-perk">About <strong>$289 per day</strong></span>
-<span class="ltt-buy-perk">Twin cabin, <strong>2 sharing</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.tourradar.com/t/279591?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-emerald-christmas-markets" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Prices</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Booked securely via TourRadar</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Christmas Markets of Europe: 15 Days, Budapest to Amsterdam">
+<a class="bpa-book-img" href="https://www.tourradar.com/t/279591?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-emerald-christmas-markets" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-emerald-christmas-markets-01.avif" alt="Christmas Markets of Europe: 15 Days, Budapest to Amsterdam (1/7)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#6 Best Christmas Markets</div>
+<a class="bpa-book-title" href="https://www.tourradar.com/t/279591?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-emerald-christmas-markets" rel="nofollow sponsored noopener" target="_blank">Christmas Markets of Europe: 15 Days, Budapest to Amsterdam</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.10" aria-hidden="true"></span><b class="bpa-rate-score">4.1</b><span class="bpa-rate-meta">40 reviews · operator</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Emerald Cruises operator rating</strong><span class="bpa-rate-list"><span class="bpa-rev-badge"><span class="bpa-rev-site">TourRadar</span><span class="bpa-rev-score">4.1</span><span class="bpa-rev-count">(40)</span></span></span><span class="bpa-lang-note">Reviews cover all of the operator's cruises, not only this route.</span></div></details></div></div>
+<ul class="bpa-book-points"><li><strong>15 days</strong>, Budapest → Amsterdam</li><li>About <strong>$289 per day</strong></li><li>Twin cabin, <strong>2 sharing</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From $4,342<small>per person, 2 sharing</small></div><a class="bpa-book-btn" href="https://www.tourradar.com/t/279591?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-emerald-christmas-markets" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Prices →</a></div>
+<div class="bpa-book-note">Booked securely via TourRadar</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1508,38 +1408,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Viking's <strong>Grand European Tour</strong> is the cruise most people have heard of: 15 days from Budapest via Vienna, Melk, Passau, Regensburg, Nuremberg, Bamberg, Würzburg, Wertheim, Koblenz and Cologne to Amsterdam on a Viking Longship.</p><p>From <strong>$6,633</strong> you get 14 breakfasts, 13 lunches and 14 dinners with beer, wine and soft drinks, free Wi-Fi and port taxes. Transfers are only included if you book Viking's flights, and the operator rating (<strong>3.9</strong>) is the lowest here. Booking online isn't open in every country, so check your dates before planning around it.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 7" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Grand European Tour: 15 Days, Budapest to Amsterdam on a Viking Longship (1/5)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-viking-grand-european-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>Photo: Viking</span></div></div><div class="ltt-strip-slide"><img alt="Grand European Tour: 15 Days, Budapest to Amsterdam on a Viking Longship (2/5)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-viking-grand-european-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>Photo: Viking</span></div></div><div class="ltt-strip-slide"><img alt="Grand European Tour: 15 Days, Budapest to Amsterdam on a Viking Longship (3/5)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-viking-grand-european-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>Photo: Viking</span></div></div><div class="ltt-strip-slide"><img alt="Grand European Tour: 15 Days, Budapest to Amsterdam on a Viking Longship (4/5)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-viking-grand-european-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>Photo: Viking</span></div></div><div class="ltt-strip-slide"><img alt="Grand European Tour: 15 Days, Budapest to Amsterdam on a Viking Longship (5/5)" loading="lazy" src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-viking-grand-european-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>Photo: Viking</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Live Dates &amp; Prices</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From $6,633</span>
-<span class="ltt-buy-price-sub">per person, 2 sharing</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Grand European Tour: 15 Days, Budapest to Amsterdam on a Viking Longship</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk"><strong>15 days</strong>, Budapest → Amsterdam</span>
-<span class="ltt-buy-perk">About <strong>$442 per day</strong></span>
-<span class="ltt-buy-perk">Twin cabin, <strong>2 sharing</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.tourradar.com/t/168856?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-viking-grand-european" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Prices</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Booked securely via TourRadar</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Grand European Tour: 15 Days, Budapest to Amsterdam on a Viking Longship">
+<a class="bpa-book-img" href="https://www.tourradar.com/t/168856?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-viking-grand-european" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/budapest-amsterdam-river-cruises/budapest-amsterdam-river-cruise-viking-grand-european-01.avif" alt="Grand European Tour: 15 Days, Budapest to Amsterdam on a Viking Longship (1/5)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#7 The Famous One</div>
+<a class="bpa-book-title" href="https://www.tourradar.com/t/168856?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-viking-grand-european" rel="nofollow sponsored noopener" target="_blank">Grand European Tour: 15 Days, Budapest to Amsterdam on a Viking Longship</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:3.90" aria-hidden="true"></span><b class="bpa-rate-score">3.9</b><span class="bpa-rate-meta">operator rating</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Viking operator rating</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.tourradar.com/t/168856?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=budapest-amsterdam-river-cru-en-pop" rel="noopener nofollow sponsored" target="_blank"><span class="bpa-rev-site">TourRadar</span><span class="bpa-rev-score">3.9</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span><span class="bpa-lang-note">Reviews cover all of the operator's cruises, not only this route.</span></div></details></div></div>
+<ul class="bpa-book-points"><li><strong>15 days</strong>, Budapest → Amsterdam</li><li>About <strong>$442 per day</strong></li><li>Twin cabin, <strong>2 sharing</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From $6,633<small>per person, 2 sharing</small></div><a class="bpa-book-btn" href="https://www.tourradar.com/t/168856?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-ams-viking-grand-european" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Prices →</a></div>
+<div class="bpa-book-note">Booked securely via TourRadar</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">

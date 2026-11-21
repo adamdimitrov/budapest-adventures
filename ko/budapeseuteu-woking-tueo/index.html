@@ -61,7 +61,39 @@ window.addEventListener('load', function() {
 <link id="ltt-language-switcher-styles" rel="stylesheet" href="/css/shared/ltt-language-switcher-styles.ebbf128d15.css"/><link id="CANONICAL_NAVBAR_UNIFIED_FONTS" rel="stylesheet" href="/css/shared/CANONICAL_NAVBAR_UNIFIED_FONTS.e6a1a25ced.css"/>
 <style>.ltt-mobile-drawer:not(.is-open){visibility:hidden !important;pointer-events:none !important;display:none !important;}.ltt-mobile-drawer.is-open{visibility:visible !important;pointer-events:auto !important;display:block !important;}</style><link id="ps-008fa3a483" data-ps-blocks="ltt-master-a11y-contrast ltt-wcag-contrast-fix bpa-light-bar" rel="stylesheet" href="/css/shared/bundle.008fa3a483.css"/>
 <link id="bpa-new-footer" rel="stylesheet" href="/css/shared/bpa-new-footer.4f85d90f75.css"/><link id="bpa-article-typography" rel="stylesheet" href="/css/shared/bpa-article-typography.c64a2a0b29.css"/>
-<link href="/css/listicle-base.css?v=9274f4ab72" rel="stylesheet"/><link href="/css/listicle-cards.css?v=b857249e22" rel="stylesheet"/><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+<link href="/css/listicle-base.css?v=9274f4ab72" rel="stylesheet"/><link href="/css/listicle-cards.css?v=b857249e22" rel="stylesheet"/><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/ko">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -1030,39 +1062,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p class="how-i-calculate-reviews">후기 수 계산: GetYourGuide, Tripadvisor, Guruwalk, Viator의 해당 액티비티 후기 수를 모두 합산했습니다.</p><blockquote><strong>💡 참고:</strong> 이 후기는 Joe 가이드가 이끈 오후 8시 영어 투어에서의 제 경험을 바탕으로 합니다.</blockquote><p>헝가리와 동유럽의 <strong>불사의 존재에 얽힌 민담과 섬뜩한 이야기</strong>를 중심으로 한, 부다페스트에서 <strong>유일무이한 워킹 투어</strong>로 밤의 신비 속에 빠져 보세요.</p><p>흔한 역사 워킹 투어가 아닙니다. <strong>뱀파이어, 유령, 언데드에 얽힌 동유럽 신화</strong>를 깊숙이 파고드는 오싹한 이야기를 각오하세요.</p><h3>투어 하이라이트</h3><p>이 투어가 부다페스트의 흔한 워킹 투어가 아니라고 단언할 수 있습니다. <strong>몰입형 스토리텔링 체험</strong>입니다. 가이드 Joe는 <strong>20년 경력의 즉흥 연기 배우</strong>로, 동유럽 신화에 깊이와 유머, 극적인 반전을 더합니다.</p><p>홀리는 듯한 화술에 <strong>밤의 성 지구가 지닌 몽환적인 아름다움</strong>이 더해져 이야기가 한층 풍성해지고, 투어는 잊지 못할 경험이 됩니다.<br/></p><h3>출발 지점과 접근성</h3><p>여정은 부다 언덕 아래에 있는 <strong>Clark Ádám tér</strong>에서 시작됩니다. 여기서 언덕 계단을 <strong>5~10분 올라야</strong> 합니다. 거동이 불편하신 분은 추가 요금 10€를 내고 푸니쿨라로 정상까지 올라갈 수 있습니다.</p><h3>그룹 규모</h3><p>그룹 규모는 <strong>20~25명</strong>으로 딱 좋았습니다. 걷거나 가이드 주변에서 잘 들리는 자리를 찾는 실용적인 부분이 복잡해지지 않으면서도 <strong>다른 참가자들과 쉽게 어울릴 수 있었습니다</strong>.</p><h3>아쉬운 점</h3><p>Joe는 몰입감 있는 이야기꾼이지만, 투어 후반부는 처음의 생기가 조금 줄어든다고 느꼈습니다. 전체 열 편 중 5~6편을 듣고 나니 이야기 방식이 조금 <strong>반복적</strong>으로 느껴지기 시작했습니다.</p><p>늦은 저녁이라는 시간대까지 겹쳐 후반으로 갈수록 <strong>그룹의 에너지가 떨어졌습니다</strong>. 그래도 Joe의 열정 덕분에 대부분의 시간 동안 분위기는 뜨거웠습니다.</p><h3>가볼 만할까요?</h3><p>역사적 사실보다 부다페스트와 동유럽의 <strong>어둡고 신비로운 민담</strong>에 더 관심이 있다면 꼭 해볼 만한 투어입니다. 밤의 장막 아래에서 성 지구를 탐험하는 짜릿한 방법입니다.</p><h3>찾아가는 방법</h3><ul role="list"><li>🗺️ <strong>만나는 장소: </strong>푸니쿨라 입구 근처 0km 표지석 옆, 부다페스트 <a href="https://goo.gl/maps/QXW2LsCz6ynWK2Tk6" target="_blank">Clark Ádám tér</a>에서 모입니다.</li><li>🚌 <strong>대중교통:</strong> Erzsébet tér에서 105/16/178/216/R16번 버스를 타세요.</li><li>🚶 <strong>도보:</strong> 최근 새 단장을 마친 세체니 다리를 건너는 경치 좋은 산책로를 이용하세요.</li></ul><div class="ltt-filmstrip-wrap"><button aria-label="이전 사진" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="다음 사진" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="필름스트립 갤러리 1" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="후기 수 계산: GetYourGuide, Tripadvisor, Guruwalk, Viator의 해당 액티비티 후기 수를…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a7845f940d47fb880b33_Vampire%20Walking%20Tour%20(9).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>후기 수 계산: GetYourGuide, Tripadvisor, Guruwalk, Viator의 해당 액티비티 후기 수를…</span></div></div><div class="ltt-strip-slide"><img alt="이 투어가 부다페스트의 흔한 워킹 투어가 아니라고 단언할 수 있습니다. 몰입형…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a48ba5f2e8bea5e2ae46_Vampire%20Walking%20Tour%20(2).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>이 투어가 부다페스트의 흔한 워킹 투어가 아니라고 단언할 수 있습니다. 몰입형…</span></div></div><div class="ltt-strip-slide"><img alt="여정은 부다 언덕 아래에 있는 Clark Ádám tér 에서 시작됩니다." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a48b4133b5962d6ab825_Vampire%20Walking%20Tour%20(4).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>여정은 부다 언덕 아래에 있는 Clark Ádám tér 에서 시작됩니다.</span></div></div><div class="ltt-strip-slide"><img alt="그룹 규모는 20~25명 으로 딱 좋았습니다." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a489ecf32dc7dd179a76_Vampire%20Walking%20Tour%20(1).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>그룹 규모는 20~25명 으로 딱 좋았습니다.</span></div></div><div class="ltt-strip-slide"><img alt="Joe는 몰입감 있는 이야기꾼이지만, 투어 후반부는 처음의 생기가…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a48b4133b5962d6ab7d2_Vampire%20Walking%20Tour%20(6).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>Joe는 몰입감 있는 이야기꾼이지만, 투어 후반부는 처음의 생기가…</span></div></div><div class="ltt-strip-slide"><img alt="역사적 사실보다 부다페스트와 동유럽의 어둡고 신비로운…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a48be5685905ad1bc079_Vampire%20Walking%20Tour%20(3).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>역사적 사실보다 부다페스트와 동유럽의 어둡고 신비로운…</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€18부터</span>
-<span class="ltt-buy-price-sub">2시간 • 무료 취소</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">부다 성 지구 나이트 뱀파이어 워킹 투어</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">스마트폰 QR 바우처 즉시 발송</span>
-<span class="ltt-buy-perk">24시간 전까지 전액 환불</span>
-<span class="ltt-buy-perk">출발: <strong>부다 성</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>2시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-the-legendary-vampires-at-the-castle-s-court-t59444/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-vampire&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>날짜 확인 &amp;amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>최저가 보장 • 즉시 확정</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="부다 성 지구 나이트 뱀파이어 워킹 투어">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-the-legendary-vampires-at-the-castle-s-court-t59444/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-vampire&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a48b4133b5962d6ab7d2_Vampire%20Walking%20Tour%20(6).webp" alt="부다 성 지구 나이트 뱀파이어 워킹 투어" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#1 Mysterium Tours</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-the-legendary-vampires-at-the-castle-s-court-t59444/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-vampire&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">부다 성 지구 나이트 뱀파이어 워킹 투어</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.59"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">리뷰 6.8k+ · 3개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>리뷰 수로 가중 평균한 3개 예약 사이트 평점</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-the-legendary-vampires-at-the-castle-s-court-t59444/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-vampire&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(4.6k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a><span class="bpa-rev-badge is-static"><img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">4.5</span><span class="bpa-rev-count">(1.5k+)</span></span><span class="bpa-rev-badge is-static"><img alt="Tripadvisor" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,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"/><span class="bpa-rev-site">Tripadvisor</span><span class="bpa-rev-score">4.7</span><span class="bpa-rev-count">(700+)</span></span></span></div></details></div></div>
+<ul class="bpa-book-points"><li>스마트폰 QR 바우처 즉시 발송</li><li>24시간 전까지 전액 환불</li><li>출발: <strong>부다 성</strong></li><li>소요 시간: <strong>2시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€18부터<small>2시간 • 무료 취소</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-the-legendary-vampires-at-the-castle-s-court-t59444/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-vampire&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">날짜 확인 &amp;amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">최저가 보장 • 즉시 확정</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1121,39 +1130,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>💡 참고:</strong> 이 후기는 1.5시간 영어 동굴 투어에서의 제 개인 경험을 바탕으로 합니다.</blockquote><p>도시의 성 지구 아래에 펼쳐진 <strong>방대한 동굴 시스템</strong>에서 부다페스트의 숨은 깊이를 만나 보세요.</p><p>Budavári barlang이라 불리는 이 구간은 오랫동안 출입이 금지되었다가 <strong>2019년에 일반에 다시 개방</strong>되었습니다.</p><p>투어는 <strong>약 3km에 이르는 동굴 구간</strong>에 초점을 맞추며, 이 신비로운 지하 터널의 <strong>지질과 인간의 역사를 탐험</strong>하는 시간 여행으로 안내합니다.</p><h3>투어 하이라이트</h3><p>이 투어의 차별점은 <strong>역사적 정확성에 대한 헌신</strong>입니다.</p><p>동굴이 수백만 년에 걸쳐 어떻게 형성되었는지 배우고, <strong>매머드가 이빨 하나를 남기고 간 자리</strong>까지 직접 볼 수 있습니다!</p><p>지질 이야기를 넘어, 투어는 중세의 저장고와 세금 회피에서부터 감옥, 전쟁 피난처, 범죄자의 은신처, 심지어 90년대의 비밀 파티 장소에 이르기까지 동굴을 사람이 사용해 온 <strong>800년의 역사</strong>를 파고듭니다.</p><p>동굴 내부 평균 기온은 <strong>10~12°C</strong>이므로 <strong>따뜻한 옷과 더러워져도 괜찮은 편한 신발</strong>을 권합니다.</p><p>여름 복장으로 오신 분들께는 몸을 따뜻하게 할 수 있도록 <strong>무료 판초</strong>를 제공합니다.<br/></p><h3>출발 지점과 접근성</h3><p>만나는 장소는 삼위일체 상 바로 옆 <strong>Szentháromság tér</strong>입니다. 동굴 입구까지는 가볍게 걸어서 5분이면 도착합니다.</p><p>아쉽게도 동굴은 거동이 불편한 분께는 접근이 어렵습니다.</p><h3>그룹 규모</h3><p><strong>20~25명</strong> 규모의 그룹은 미로 같은 동굴을 수월하게 이동하면서도 생생하고 참여적인 스토리텔링을 가능하게 하는 딱 좋은 크기였습니다.</p><h3>아쉬운 점</h3><p>솔직히 말해, 이 독특한 여정에는 <strong>아쉬운 점이 있다 해도 거의 없었습니다.</strong></p><p>운영 업체는 모든 참가자가 편안하도록 세심하게 신경 쓰고, 전문 가이드들이 투어를 재미있고 유익하게 이끌어 줍니다.</p><p>역사에 약간의 지질학이 더해진 이야기가 흥미롭다면, 바로 이 투어입니다.</p><h3>가볼 만할까요?</h3><p>물론입니다!</p><p>흔한 워킹 투어보다 <strong> </strong><strong>더 독특하고 색다른 것</strong>을 찾는 분께 훌륭한 선택입니다. 배움과 호기심을 함께 남기는 경험입니다.</p><h3>찾아가는 방법</h3><p>🗺️ <strong>만나는 장소:</strong> 마차시 성당 맞은편 동상 바로 앞, <a href="https://goo.gl/maps/Pq2JUkaCqewB5Bx79" target="_blank">Szentháromság tér</a>에서 모입니다.<br/>🚌 <strong>대중교통:</strong> Erzsébet tér에서 16번 버스를 타고 성 지구로 가세요.<br/>🚶♂️ <strong>도보:</strong> 최근 새 단장을 마친 세체니 다리를 건너 부다 언덕을 올라 Szentháromság tér까지 걸어가는 경치 좋은 산책로입니다.</p><div class="ltt-filmstrip-wrap"><button aria-label="이전 사진" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="다음 사진" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="필름스트립 갤러리 2" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="현장 체험 사진 1" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a89e012119ea6136de78_Cave-walking-tour%20(10).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 7</span> <span>현장 체험 사진 1</span></div></div><div class="ltt-strip-slide"><img alt="이 투어의 차별점은 역사적 정확성에 대한 헌신 입니다." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a8c5e5a13d680b19f3ee_Cave-walking-tour%20(5).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 7</span> <span>이 투어의 차별점은 역사적 정확성 에 대한 헌신입니다.</span></div></div><div class="ltt-strip-slide"><img alt="동굴 안은 춥습니다. 해결책은? 판초입니다." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a945012119ea61379ac4_Cave-walking-tour%20(7).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 7</span> <span>동굴 안은 춥습니다. 해결책은? 판초입니다.</span></div></div><div class="ltt-strip-slide"><img alt="만나는 장소는 삼위일체 상 바로 옆 Szentháromság tér 입니다." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a8e02324ecc4fb69ef07_All%20in%20One%20Walking%20Tour%20(13).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 7</span> <span>만나는 장소는 삼위일체 상 바로 옆 Szentháromság tér 입니다.</span></div></div><div class="ltt-strip-slide"><img alt="20~25명 규모의 그룹은 딱 좋은 크기였고, 수월한…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a90a23415b24210a6b43_Cave-walking-tour%20(9).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 7</span> <span>20~25명 규모의 그룹은 딱 좋은 크기였고, 수월한…</span></div></div><div class="ltt-strip-slide"><img alt="솔직히 말해, 이 독특한 여정에는 아쉬운 점이 있다 해도 거의 없었습니다." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a91e10ac16f2e2443a9e_Cave-walking-tour%20(12).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 7</span> <span>솔직히 말해, 이 독특한 여정에는 아쉬운 점이 있다 해도 거의 없었습니다.</span></div></div><div class="ltt-strip-slide"><img alt="물론입니다!" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a93534cd09847ca17935_Cave-walking-tour%20(3).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 7</span> <span>물론입니다!</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€17부터</span>
-<span class="ltt-buy-price-sub">1.5시간 • 무료 취소</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">부다 성 동굴 미로 워킹 투어</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">스마트폰 QR 바우처 즉시 발송</span>
-<span class="ltt-buy-perk">24시간 전까지 전액 환불</span>
-<span class="ltt-buy-perk">출발: <strong>Dárda utca</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>1.5시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-buda-castle-caves-walking-tour-t391260/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-cave&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>날짜 확인 &amp;amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>최저가 보장 • 즉시 확정</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="부다 성 동굴 미로 워킹 투어">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-buda-castle-caves-walking-tour-t391260/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-cave&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/best-walking-tours-budapest/buda-castle-cave-labyrinth-walking-tour-01.avif" alt="부다 성 동굴 미로 워킹 투어" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#2 Danube-Ipoly Directorate</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-buda-castle-caves-walking-tour-t391260/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-cave&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">부다 성 동굴 미로 워킹 투어</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.60"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">리뷰 8k+ · 1개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuide 평점</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-buda-castle-caves-walking-tour-t391260/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-cave&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(8k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>스마트폰 QR 바우처 즉시 발송</li><li>24시간 전까지 전액 환불</li><li>출발: <strong>Dárda utca</strong></li><li>소요 시간: <strong>1.5시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€17부터<small>1.5시간 • 무료 취소</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-buda-castle-caves-walking-tour-t391260/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-cave&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">날짜 확인 &amp;amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">최저가 보장 • 즉시 확정</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1212,39 +1198,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>💡 참고: </strong>이 후기는 2.5시간 영어 워킹 투어에서의 제 개인 경험을 바탕으로 합니다.</blockquote><p>깨달음을 주는 이 투어에서 부다페스트의 풍부한 유대인 유산에 푹 빠져 보세요.</p><p>이 투어는 <strong>2차 세계대전</strong>의 참혹했던 시기를 깊이 있게 다룰 뿐 아니라, 중세로 거슬러 올라가는 <strong>헝가리 유대인 생활의 포괄적인 역사</strong>도 소개합니다.</p><p>이 나라를 안다고 자부하는 헝가리 사람인 저도 흥미로운 역사적 사실을 많이 배웠습니다.</p><h3>투어 하이라이트</h3><p>겉핥기식 정보 이상을 원하는 역사 애호가에게 이 투어는 보물창고입니다.</p><p>가이드는 <strong>학술적 수준의 엄밀한 해설</strong>을 제공하기 때문에 <strong>높은 영어 실력</strong>이 필요합니다 (물론 스페인어 투어를 선택한다면 다릅니다).</p><p>주요 명소로는 나치와 화살십자당의 탄압에 맞서 싸운 영웅들을 기리는 <strong>시나고그와 가슴 아픈 추모비</strong>가 있습니다.<br/></p><h3>출발 지점과 접근성</h3><p>투어는 <strong>Madách Imre tér</strong>에서 시작해 도하니 거리 시나고그에서 끝납니다. 전 구간이 야외이고 휠체어 이용이 가능하며, <strong>유대인 지구</strong>(7구)에서 진행됩니다. 이곳에는 <a href="/ko/budapeseuteu-hoseutel-chucheon">부다페스트 최고의 호스텔</a> 여러 곳이 있습니다.</p><h3>그룹 규모</h3><p>투어는 <strong>중간 규모 그룹(20~30명)</strong>을 수용하도록 잘 구성되어, 누구나 가이드의 설명을 또렷하게 듣고 명소를 볼 수 있었습니다.</p><h3>아쉬운 점</h3><p>전반적으로 훌륭한 투어였지만, <strong>가이드가</strong> <strong>좀 더 정식으로 자기소개를 했으면</strong> 좋았을 것 같고(바로 본론으로 들어갔습니다), 깊이 있는 설명 사이에 <strong>내용을 소화할 수 있는 휴지기를 두었으면</strong> 했습니다(말이 때로는 속독하는 것 같았습니다).</p><h3>가볼 만할까요?</h3><p>부다페스트 유대인 역사를 섬세하고 상세하게 탐구하는 것을 좋아하는 <strong>역사 애호가</strong>께 강력히 추천합니다.</p><h3>찾아가는 방법</h3><p>🗺️ <strong>만나는 장소: </strong><a href="https://goo.gl/maps/xQoCWMZXzY7v44Kx5" target="_blank">Budapest, Madách Imre út 2, 1075 Hungary. </a>Sissi 동상 옆의 노란 우산을 찾으세요.<br/>🚌 <strong>대중교통:</strong> 시내 어디서든 지하철 아무 노선이나 47/49번 트램을 타고 Deák Ferenc tér에서 내려 Sissi 동상까지 걸어가면 됩니다.<br/>🚶♂️ <strong>도보:</strong> 부다페스트 중심가는 걸어 다니기 매우 좋습니다. 대부분의 중심지에서 15~20분 산책하면 만나는 장소까지 편하게 도착합니다.</p><div class="ltt-filmstrip-wrap"><button aria-label="이전 사진" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="다음 사진" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="필름스트립 갤러리 3" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="현장 체험 사진 1" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a962741588aefc3ca6e7_WW2%20Jewish%20Quarter%20Walking%20Tour%20(6).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>현장 체험 사진 1</span></div></div><div class="ltt-strip-slide"><img alt="겉핥기식 정보 이상을 원하는 역사 애호가에게 이 투어는…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a974c8931dba57b758e6_WW2%20Jewish%20Quarter%20Walking%20Tour%20(9).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>겉핥기식 정보 이상을 원하는 역사 애호가에게 이 투어는…</span></div></div><div class="ltt-strip-slide"><img alt="투어는 Madách Imre tér에서 시작해 도하니 거리 시나고그에서 끝납니다." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9a6dd44c9b55d0396c8_WW2%20Jewish%20Quarter%20Walking%20Tour%20(4).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>투어는 Madách Imre tér에서 시작해 도하니 거리 시나고그에서 끝납니다.</span></div></div><div class="ltt-strip-slide"><img alt="투어는 중간 규모 그룹(20~30명)을 수용하도록 잘 구성되어…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a97e0c385a4c54577c42_WW2%20Jewish%20Quarter%20Walking%20Tour%20(3).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>투어는 중간 규모 그룹(20~30명)을 수용하도록 잘 구성되어…</span></div></div><div class="ltt-strip-slide"><img alt="전반적으로 훌륭한 투어였지만, 가이드가 좀 더 정식으로 자기소개를…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9b5b54fef43d38c55f8_WW2%20Jewish%20Quarter%20Walking%20Tour%20(7).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>전반적으로 훌륭한 투어였지만, 가이드가 좀 더 정식으로 자기소개를…</span></div></div><div class="ltt-strip-slide"><img alt="부다페스트 유대인 역사를 섬세하고 상세하게 탐구하는 것을…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9c70c385a4c5457d028_WW2%20Jewish%20Quarter%20Walking%20Tour%20(2).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>부다페스트 유대인 역사를 섬세하고 상세하게 탐구하는 것을…</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">무료 (팁제)</span>
-<span class="ltt-buy-price-sub">2.5시간 • 무료 취소</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">최고의 유대인 지구 워킹 투어</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">스마트폰 QR 바우처 즉시 발송</span>
-<span class="ltt-buy-perk">24시간 전까지 전액 환불</span>
-<span class="ltt-buy-perk">출발: <strong>Madách tér</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>2.5시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.guruwalk.com/walks/32765-nazism-and-world-war-ii-jewish-quarter-free-walking-tour?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">
-<span>날짜 확인 &amp;amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>최저가 보장 • 즉시 확정</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="최고의 유대인 지구 워킹 투어">
+<a class="bpa-book-img" href="https://www.guruwalk.com/walks/32765-nazism-and-world-war-ii-jewish-quarter-free-walking-tour?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a962741588aefc3ca6e7_WW2%20Jewish%20Quarter%20Walking%20Tour%20(6).webp" alt="최고의 유대인 지구 워킹 투어" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#3 Budapesttours</div>
+<a class="bpa-book-title" href="https://www.guruwalk.com/walks/32765-nazism-and-world-war-ii-jewish-quarter-free-walking-tour?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">최고의 유대인 지구 워킹 투어</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.90"></span><b class="bpa-rate-score">4.9</b><span class="bpa-rate-meta">리뷰 3k+ · 1개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GuruWalk 평점</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.guruwalk.com/walks/32765-nazism-and-world-war-ii-jewish-quarter-free-walking-tour?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank"><img alt="GuruWalk" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,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"/><span class="bpa-rev-site">GuruWalk</span><span class="bpa-rev-score">4.9</span><span class="bpa-rev-count">(3k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>스마트폰 QR 바우처 즉시 발송</li><li>24시간 전까지 전액 환불</li><li>출발: <strong>Madách tér</strong></li><li>소요 시간: <strong>2.5시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">무료 (팁제)<small>2.5시간 • 무료 취소</small></div><a class="bpa-book-btn" href="https://www.guruwalk.com/walks/32765-nazism-and-world-war-ii-jewish-quarter-free-walking-tour?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">날짜 확인 &amp;amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">최저가 보장 • 즉시 확정</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1303,39 +1266,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>💡 참고: </strong>이 후기는 2.25시간 영어 워킹 투어에서의 제 개인 경험을 바탕으로 합니다.</blockquote><p>페스트의 중심 지구에서 진행되는 이 워킹 투어는 <strong>부다페스트 역사의 전체상</strong>을 파악하기에 완벽한 방법입니다.</p><p><strong>소련 시대</strong>의 어려웠던 시기, 우리가 "체제 전환"이라 부르는 <strong>베를린 장벽 붕괴 이후의 시기</strong>, 나아가 <strong>현대사</strong>와 논쟁거리까지 우리 과거를 이해할 수 있습니다.</p><h3>투어 하이라이트</h3><p>부다페스트의 풍부한 역사를 폭넓게 소개받고 싶은 <strong>첫 방문객</strong>에게 이상적인 선택입니다. <strong>헝가리인 가이드</strong> 덕분에 역사적 정확성뿐 아니라 현지인의 시각까지 얻을 수 있습니다.</p><h3>출발 지점과 접근성</h3><p><strong>만남 장소는 Kossuth Square </strong>에 있는 <a href="/ko/budapeseuteu-gukhoeuisadang-tikes">헝가리 국회의사당</a> 옆입니다. 정확히는 <strong>M2 지하철 및/또는 트램 정류장 근처</strong>입니다. 이 투어는 휠체어로 이동할 수 있고 거동이 불편한 분도 환영합니다. 투어는 Vigadó Square에서 끝납니다.</p><h3>그룹 규모</h3><p>저희는 <strong>약 30명</strong> 규모였습니다. 큰 그룹이었지만 투어의 즐거움이나 배움의 가치가 줄지는 않았습니다. 함께한 참가자들과 즐거운 대화도 나누었습니다.</p><h3>아쉬운 점</h3><p>유일한 사소한 흠은 <strong>가이드가 영어 원어민이 아니라는 점</strong>이었습니다. 하지만 진짜 헝가리 현지인의 시각이 그 점을 충분히 보완하고도 남았습니다.</p><h3>가볼 만할까요?</h3><p>이미 답을 아시겠죠. 네! 특히 <strong>풍부한 역사 개요를 원하는 첫 방문객</strong>이라면 이 투어가 충분히 가치 있을 겁니다.</p><h3>찾아가는 방법</h3><p>🗺️ <strong>만나는 장소:</strong> 트램 정류장 바로 옆, <a href="https://goo.gl/maps/P5b4yRWVh4vfrww67" target="_blank">Kossuth Lajos tér</a>에서 모입니다. 주황색 우산을 찾으세요.<br/>🚌 <strong>대중교통:</strong> 지하철 또는 트램 2호선을 타고 만나는 장소까지 잠깐 걸어가세요.<br/>🚶♂️ <strong>도보:</strong> 부다페스트 중심가는 걸어 다니기 매우 좋습니다. 대부분의 중심지에서 15~20분 산책하면 만나는 장소까지 편하게 도착합니다.</p><div class="ltt-filmstrip-wrap"><button aria-label="이전 사진" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="다음 사진" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="필름스트립 갤러리 4" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="현장 체험 사진 1" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9e69165aa480e2191dd_Pest%20Walking%20Tour%20(9).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>현장 체험 사진 1</span></div></div><div class="ltt-strip-slide"><img alt="부다페스트의 풍부한 역사를 폭넓게 소개받고 싶은 첫 방문객에게…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9fcab96feb3ee4822df_Pest%20Walking%20Tour%20(4).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>부다페스트의 풍부한 역사를 폭넓게 소개받고 싶은 첫 방문객에게…</span></div></div><div class="ltt-strip-slide"><img alt="만나는 장소는 Kossuth tér, 헝가리 국회의사당 옆입니다." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa08f8ee33524047cdf3_Pest%20Walking%20Tour%20(10).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>만나는 장소는 Kossuth tér, 헝가리 국회의사당 옆입니다.</span></div></div><div class="ltt-strip-slide"><img alt="저희는 약 30명 규모였습니다." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa18b2ff17a3658353d0_Pest%20Walking%20Tour%20(5).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>저희는 약 30명 규모였습니다.</span></div></div><div class="ltt-strip-slide"><img alt="유일한 사소한 흠은 가이드가 영어 원어민이 아니라는 점 이었습니다." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa2b7eeef24bb914cd46_Pest%20Walking%20Tour%20(8).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>유일한 사소한 흠은 가이드가 영어 원어민이 아니라는 점 이었습니다.</span></div></div><div class="ltt-strip-slide"><img alt="이미 답을 아시겠죠. 네!" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa420cfff4a85997ea49_Pest%20Walking%20Tour%20(2).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>이미 답을 아시겠죠. 네!</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">무료 (팁제)</span>
-<span class="ltt-buy-price-sub">2.25시간 • 무료 취소</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">최고의 부다페스트 이너시티 워킹 투어</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">스마트폰 QR 바우처 즉시 발송</span>
-<span class="ltt-buy-perk">24시간 전까지 전액 환불</span>
-<span class="ltt-buy-perk">출발: <strong>Kossuth Lajos tér</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>2.25시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.guruwalk.com/walks/16551-free-tour-insightful-budapest-hungary-unfolded?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">
-<span>날짜 확인 &amp;amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>최저가 보장 • 즉시 확정</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="최고의 부다페스트 이너시티 워킹 투어">
+<a class="bpa-book-img" href="https://www.guruwalk.com/walks/16551-free-tour-insightful-budapest-hungary-unfolded?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9e69165aa480e2191dd_Pest%20Walking%20Tour%20(9).webp" alt="최고의 부다페스트 이너시티 워킹 투어" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#4 GoZeppelin Tours</div>
+<a class="bpa-book-title" href="https://www.guruwalk.com/walks/16551-free-tour-insightful-budapest-hungary-unfolded?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">최고의 부다페스트 이너시티 워킹 투어</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.90"></span><b class="bpa-rate-score">4.9</b><span class="bpa-rate-meta">리뷰 10k+ · 1개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GuruWalk 평점</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.guruwalk.com/walks/16551-free-tour-insightful-budapest-hungary-unfolded?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank"><img alt="GuruWalk" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,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"/><span class="bpa-rev-site">GuruWalk</span><span class="bpa-rev-score">4.9</span><span class="bpa-rev-count">(10k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>스마트폰 QR 바우처 즉시 발송</li><li>24시간 전까지 전액 환불</li><li>출발: <strong>Kossuth Lajos tér</strong></li><li>소요 시간: <strong>2.25시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">무료 (팁제)<small>2.25시간 • 무료 취소</small></div><a class="bpa-book-btn" href="https://www.guruwalk.com/walks/16551-free-tour-insightful-budapest-hungary-unfolded?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">날짜 확인 &amp;amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">최저가 보장 • 즉시 확정</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1394,39 +1334,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>💡 참고:</strong> 이 후기는 2시간 영어 워킹 투어에서의 제 개인 경험을 바탕으로 합니다.</blockquote><p>군더더기 없지만 충분히 흥미로운 이 워킹 투어로 부다페스트 성 지구의 건축적, 역사적 보석을 만나 보세요. 이 투어는 지구의 명소를 <strong>사실에 충실하고 담백하게 개괄</strong>하여, 헝가리의 파란만장한 과거를 탄탄하게 소개받고 싶은 분께 안성맞춤입니다.</p><h3>투어 하이라이트</h3><p>성 지구의 매력적인 자갈길을 따라 걷는 알찬 산책으로, <strong>왕궁("부다 성"), 마차시 성당, 어부의 요새</strong> 같은 주요 명소를 다룹니다.</p><p>다른 투어에서 볼 수 있는 <strong>초자연적이거나 환상적인 요소 없이</strong> 사실에 충실한 이야기를 들려주는 점이 돋보입니다.<br/></p><h3>출발 지점과 접근성</h3><p>투어는 상징적인 삼위일체 상 바로 앞, <strong>Szentháromság tér</strong>에서 시작합니다. 게다가 전 구간 휠체어 이용이 가능해 누구에게나 편리합니다.</p><h3>그룹 규모</h3><p><strong>약 25명</strong> 규모라 이동이 쉬웠고, 투어 내내 북적이는 느낌이 없었습니다.</p><h3>아쉬운 점</h3><p>투어는 약속한 대로 포괄적이고 사실에 충실한 개요를 전달합니다. 다만 저처럼 무더운 시기에 방문한다면 더위 같은 <strong>날씨에 대비하세요</strong>. 😅</p><h3>가볼 만할까요?</h3><p>물론입니다. 부다페스트 성 지구를 <strong>담백하고 사실 위주로 탐험</strong>하고 싶다면 이 투어가 딱 맞습니다.</p><h3>찾아가는 방법</h3><p>🗺️ <strong>만나는 장소:</strong> 마차시 성당 맞은편 동상 바로 앞, <a href="https://goo.gl/maps/Pq2JUkaCqewB5Bx79" target="_blank">Szentháromság tér</a>에서 모입니다.<br/>🚌 <strong>대중교통:</strong> Erzsébet tér에서 16번 버스를 타고 성 지구로 가세요.<br/>🚶♂️ <strong>도보:</strong> 최근 새 단장을 마친 세체니 다리를 건너 부다 언덕을 올라 Szentháromság tér까지 걸어가는 경치 좋은 산책로입니다.</p><div class="ltt-filmstrip-wrap"><button aria-label="이전 사진" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="다음 사진" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="필름스트립 갤러리 5" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="현장 체험 사진 1" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa665536d44a917a4be1_Buda%20Castle%20Walking%20Tour%20(10).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>현장 체험 사진 1</span></div></div><div class="ltt-strip-slide"><img alt="성 지구의 매력적인 자갈길을 따라 걷는 알찬 산책으로…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aab76a90d3270b8a5f22_Buda%20Castle%20Walking%20Tour%20(13).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>성 지구의 매력적인 자갈길을 따라 걷는 알찬 산책으로…</span></div></div><div class="ltt-strip-slide"><img alt="투어는 상징적인 삼위일체 상 바로 앞, Szentháromság tér 에서 시작합니다." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aae8db5d54ad86f5d18f_Buda%20Castle%20Walking%20Tour%20(7).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>투어는 상징적인 삼위일체 상 바로 앞, Szentháromság tér 에서 시작합니다.</span></div></div><div class="ltt-strip-slide"><img alt="약 25명 규모라 이동이 쉬웠고, 투어 내내 북적이는…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aaf8060885d81f1a5826_Buda%20Castle%20Walking%20Tour%20(4).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>약 25명 규모라 이동이 쉬웠고, 투어 내내 북적이는…</span></div></div><div class="ltt-strip-slide"><img alt="투어는 약속한 대로 포괄적이고 사실에 충실한 개요를 전달합니다." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab0d3fe3f203a88ae5ae_Buda%20Castle%20Walking%20Tour%20(1).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>투어는 약속한 대로 포괄적이고 사실에 충실한 개요를 전달합니다.</span></div></div><div class="ltt-strip-slide"><img alt="물론입니다." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab1ba5e26b34774d7e87_Buda%20Castle%20Walking%20Tour%20(15).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>물론입니다.</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€12부터</span>
-<span class="ltt-buy-price-sub">2시간 • 무료 취소</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">최고의 부다 성 지구 워킹 투어</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">스마트폰 QR 바우처 즉시 발송</span>
-<span class="ltt-buy-perk">24시간 전까지 전액 환불</span>
-<span class="ltt-buy-perk">출발: <strong>Szentháromság tér</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>2시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-buda-castle&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>날짜 확인 &amp;amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>최저가 보장 • 즉시 확정</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="최고의 부다 성 지구 워킹 투어">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-buda-castle&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/best-walking-tours-budapest/best-buda-castle-district-walking-tour-01.avif" alt="최고의 부다 성 지구 워킹 투어" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#5 Tourist Angel Smc</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-buda-castle&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">최고의 부다 성 지구 워킹 투어</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.60"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">리뷰 2.4k+ · 1개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuide 평점</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-buda-castle&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(2.4k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>스마트폰 QR 바우처 즉시 발송</li><li>24시간 전까지 전액 환불</li><li>출발: <strong>Szentháromság tér</strong></li><li>소요 시간: <strong>2시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€12부터<small>2시간 • 무료 취소</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-buda-castle&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">날짜 확인 &amp;amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">최저가 보장 • 즉시 확정</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1485,39 +1402,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>💡 참고: </strong>이 후기는 3시간 영어 투어에서의 제 개인 경험을 바탕으로 합니다.</blockquote><p><strong>페스트와 부다 양쪽</strong>을 아우르는 대표 도시 부다페스트를 <strong>3시간</strong>에 폭넓게 둘러보세요.</p><p><strong>에어컨이 나오는 버스 이동과 여유로운 도보</strong>를 섞어, 영웅 광장에서 성 지구까지 <a href="/best-things-to-do-budapest">주요 명소</a>를 보며 그 역사를 배울 수 있습니다.</p><p>시원하게 펼쳐진 조망을 주지만, 각 지역을 깊이 파고들지 않고 스치는 <strong>겉핥기식 개요</strong>라는 점은 감안하세요.</p><h3>투어 하이라이트</h3><p>이 투어는 <strong>부다페스트를 한눈에 내려다보는 시야</strong>를 주었습니다. <strong>영웅 광장</strong>에서 짧지만 유익하게 정차한 뒤, 오페라 하우스, 시립공원(Városliget), 켈레티 기차역 같은 현지 명소를 차로 지나갔습니다.</p><p>이 투어의 독특한 점은 성곽 언덕을 <strong>다뉴브 반대편</strong>에서 올라가는 방식으로, 일반적인 투어와 달라 반가운 변화입니다.<br/></p><h3>출발 지점과 접근성</h3><p>여정은 부다 언덕 아래에 있는 <strong>Clark Ádám tér</strong>에서 시작됩니다. 여기서 언덕 계단을 <strong>5~10분 올라야</strong> 합니다. 주의: 거동이 불편한 분께는 적합하지 않은 투어입니다.</p><h3>그룹 규모</h3><p><strong>투어는</strong> 중간 규모 그룹을 수용하도록 잘 구성되어 누구나 가이드의 설명을 또렷하게 듣고 명소를 볼 수 있었습니다.</p><h3>아쉬운 점</h3><p>투어는 <strong>폭넓었지만 더 보고 싶다는 아쉬움이 남았습니다</strong>. 특히 페스트 쪽을 더 둘러보고 싶었습니다.</p><p>영웅 광장의 짧은 정차와 <strong>차창 관광</strong>만으로는 명소의 풍부함을 다 담기 어렵습니다.</p><p>그래도 에어컨이 나오는 버스는 찌는 듯한 더위에서 반가운 휴식이었습니다. 성 지구 구간은 훌륭했습니다.</p><h3>가볼 만할까요?</h3><p><strong>시간이 빠듯해도</strong> 부다페스트를 빠르게 훑어보고 싶다면 이 투어가 맞습니다. 더 자세히 둘러보고 싶다면 <strong>하루를 통째로 비워 두는 것</strong>을 고려하세요.</p><h3>찾아가는 방법</h3><p>🗺️ <strong>만나는 장소: </strong>Cityrama &amp; Gray Line Travel Agency 사무실, <a href="https://goo.gl/maps/6pewzgA4LQVj6EKA6" target="_blank">Báthory utca 19, 1054 Budapest, Hungary</a>에서 모입니다.<br/>🚌 <strong>대중교통:</strong> 지하철 2호선 또는 3호선을 타고 만나는 장소까지 잠깐 걸어가세요.<br/>🚶♂️ <strong>도보:</strong> 부다페스트 중심가는 걸어 다니기 매우 좋습니다. 대부분의 중심지에서 15~20분 산책하면 만나는 장소까지 편하게 도착합니다.</p><div class="ltt-filmstrip-wrap"><button aria-label="이전 사진" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="다음 사진" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="필름스트립 갤러리 6" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="현장 체험 사진 1" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab3947c2731b07da4884_All%20in%20One%20Walking%20Tour%20(16).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 7</span> <span>현장 체험 사진 1</span></div></div><div class="ltt-strip-slide"><img alt="에어컨이 나오는 버스 이동과 여유로운 도보를 섞어, 주요 명소를…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab5efd1746ad2656f8a0_All%20in%20One%20Walking%20Tour%20(8).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 7</span> <span>에어컨이 나오는 버스 이동과 여유로운 도보를 섞어, 주요 명소를…</span></div></div><div class="ltt-strip-slide"><img alt="이 투어는 부다페스트를 한눈에 내려다보는 시야 를 주었습니다." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab4e4c6fedcabe27aa05_All%20in%20One%20Walking%20Tour%20(12).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 7</span> <span>이 투어는 부다페스트를 한눈에 내려다보는 시야 를 주었습니다.</span></div></div><div class="ltt-strip-slide"><img alt="여정은 부다 언덕 아래에 있는 Clark Ádám tér 에서 시작됩니다." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab6e97747bcde67d8abf_All%20in%20One%20Walking%20Tour%20(14).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 7</span> <span>여정은 부다 언덕 아래에 있는 Clark Ádám tér 에서 시작됩니다.</span></div></div><div class="ltt-strip-slide"><img alt="투어는 중간 규모 그룹을 수용하도록 잘 구성되어 누구나…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab7e9cecaecc5731db1e_All%20in%20One%20Walking%20Tour%20(18).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 7</span> <span>투어는 중간 규모 그룹을 수용하도록 잘 구성되어 누구나…</span></div></div><div class="ltt-strip-slide"><img alt="투어는 폭넓었지만 더 보고 싶다는 아쉬움이 남았습니다 . 특히…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab9212c70e72edf275b2_All%20in%20One%20Walking%20Tour%20(2).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 7</span> <span>투어는 폭넓었지만 더 보고 싶다는 아쉬움이 남았습니다 . 특히…</span></div></div><div class="ltt-strip-slide"><img alt="시간이 빠듯해도 부다페스트를 빠르게 훑어보고 싶다면 이 투어가…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aba283a9f4b867088949_All%20in%20One%20Walking%20Tour%20(19).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 7</span> <span>시간이 빠듯해도 부다페스트를 빠르게 훑어보고 싶다면 이 투어가…</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€35부터</span>
-<span class="ltt-buy-price-sub">3시간 • 무료 취소</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">부다페스트 그랜드 시티 투어</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">스마트폰 QR 바우처 즉시 발송</span>
-<span class="ltt-buy-perk">24시간 전까지 전액 환불</span>
-<span class="ltt-buy-perk">출발: <strong>Báthory utca</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>3시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-grand-city&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>날짜 확인 &amp;amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>최저가 보장 • 즉시 확정</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="부다페스트 그랜드 시티 투어">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-grand-city&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/best-walking-tours-budapest/grand-city-tour-of-budapest-01.avif" alt="부다페스트 그랜드 시티 투어" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#6 Cityrama Budapest</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-grand-city&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">부다페스트 그랜드 시티 투어</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.40"></span><b class="bpa-rate-score">4.4</b><span class="bpa-rate-meta">리뷰 1.1k+ · 1개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuide 평점</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-grand-city&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.4</span><span class="bpa-rev-count">(1.1k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>스마트폰 QR 바우처 즉시 발송</li><li>24시간 전까지 전액 환불</li><li>출발: <strong>Báthory utca</strong></li><li>소요 시간: <strong>3시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€35부터<small>3시간 • 무료 취소</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-grand-city&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">날짜 확인 &amp;amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">최저가 보장 • 즉시 확정</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1583,39 +1477,16 @@ window.addEventListener('load', function() {
 <p>글루텐 프리나 비건 식단이라면 <strong>건너뛰세요</strong>. 운영 업체가 아직 대응하지 못합니다. 채식주의자는 메뉴 구성이 줄어들지만 가능합니다.</p>
 <h3>만나는 장소</h3>
 <p>🗺️ <strong>만나는 장소: </strong>Kazinczy utca 29-31, 1075 Budapest (7구), Kazinczy Street 시나고그 옆이며 투어도 이곳에서 끝납니다.<br/>🚇 <strong>대중교통:</strong> Astoria(M2) 또는 Deák Ferenc tér(M1, M2, M3)에서 내려 걸어서 5분.</p><div class="ltt-filmstrip-wrap"><button aria-label="이전 사진" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="다음 사진" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="필름스트립 갤러리 7" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="부다페스트 푸드 워킹 투어에서 맛본 랑고시와 Dreher 맥주" loading="lazy" src="/assets/walking-tours-2026/food-tour-01.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>부다페스트 푸드 워킹 투어에서 맛본 랑고시와 Dreher 맥주</span></div></div><div class="ltt-strip-slide"><img alt="7구 길거리 음식 바 앞의 푸드 투어 그룹" loading="lazy" src="/assets/walking-tours-2026/food-tour-02.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>7구 길거리 음식 바 앞의 푸드 투어 그룹</span></div></div><div class="ltt-strip-slide"><img alt="유대인 지구 루인 바 안뜰의 푸드 투어 그룹" loading="lazy" src="/assets/walking-tours-2026/food-tour-05.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>유대인 지구 루인 바 안뜰의 푸드 투어 그룹</span></div></div><div class="ltt-strip-slide"><img alt="푸드 투어에서 헝가리 맥주로 건배하는 두 게스트" loading="lazy" src="/assets/walking-tours-2026/food-tour-04.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>푸드 투어에서 헝가리 맥주로 건배하는 두 게스트</span></div></div><div class="ltt-strip-slide"><img alt="7구에서 헝가리 요리를 설명하는 현지 미식 가이드" loading="lazy" src="/assets/walking-tours-2026/food-tour-03.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>7구에서 헝가리 요리를 설명하는 현지 미식 가이드</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€62부터</span>
-<span class="ltt-buy-price-sub">2.5시간 • 무료 취소</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">부다페스트 푸드 워킹 투어: 먹고, 마시고, 탐험하세요</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">스마트폰 QR 바우처 즉시 발송</span>
-<span class="ltt-buy-perk">24시간 전까지 전액 환불</span>
-<span class="ltt-buy-perk">출발: <strong>Kazinczy utca</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>2.5시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-food-walking-tour-eat-sip-explore-like-a-local-t519670/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-food&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>날짜 확인 &amp;amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>최저가 보장 • 즉시 확정</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="부다페스트 푸드 워킹 투어: 먹고, 마시고, 탐험하세요">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-food-walking-tour-eat-sip-explore-like-a-local-t519670/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-food&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/walking-tours-2026/food-tour-01.webp" alt="부다페스트 푸드 워킹 투어에서 맛본 랑고시와 Dreher 맥주" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#7 Carpe Diem Tours</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-food-walking-tour-eat-sip-explore-like-a-local-t519670/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-food&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">부다페스트 푸드 워킹 투어: 먹고, 마시고, 탐험하세요</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.80"></span><b class="bpa-rate-score">4.8</b><span class="bpa-rate-meta">리뷰 1.7k+ · 1개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuide 평점</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-food-walking-tour-eat-sip-explore-like-a-local-t519670/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-food&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.8</span><span class="bpa-rev-count">(1.7k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>스마트폰 QR 바우처 즉시 발송</li><li>24시간 전까지 전액 환불</li><li>출발: <strong>Kazinczy utca</strong></li><li>소요 시간: <strong>2.5시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€62부터<small>2.5시간 • 무료 취소</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-food-walking-tour-eat-sip-explore-like-a-local-t519670/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-food&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">날짜 확인 &amp;amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">최저가 보장 • 즉시 확정</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1681,39 +1552,16 @@ window.addEventListener('load', function() {
 <h3>이런 분께 추천</h3>
 <p>20세기가 부다페스트에 온 이유라면, 혹은 안내문만 읽는 대신 맥락과 함께 House of Terror를 보고 싶다면 <strong>꼭 예약하세요</strong>. 무료 <a href="#item-3-ww2-jewish-quarter-tour">유대인 지구 워킹 투어</a>와 함께하면 잘 어울립니다.</p>
 <p>어린 자녀와 함께라면 <strong>건너뛰세요</strong>. House of Terror는 심문실과 강제 이송을 다룹니다. 자유 관람 옵션이라면 박물관 오디오 가이드를 고려해 보세요.</p><div class="ltt-filmstrip-wrap"><button aria-label="이전 사진" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="다음 사진" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="필름스트립 갤러리 8" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="부다페스트 Andrássy 대로의 House of Terror 박물관" loading="lazy" src="/assets/walking-tours-2026/communist-tour-01.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>부다페스트 Andrássy 대로의 House of Terror 박물관</span></div></div><div class="ltt-strip-slide"><img alt="헝가리 국회의사당 앞의 가이드와 소그룹" loading="lazy" src="/assets/walking-tours-2026/communist-tour-05.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>헝가리 국회의사당 앞의 가이드와 소그룹</span></div></div><div class="ltt-strip-slide"><img alt="House of Terror의 희생자 초상 벽" loading="lazy" src="/assets/walking-tours-2026/communist-tour-02.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>House of Terror의 희생자 초상 벽</span></div></div><div class="ltt-strip-slide"><img alt="House of Terror 박물관 아트리움의 탱크" loading="lazy" src="/assets/walking-tours-2026/communist-tour-03.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>House of Terror 박물관 아트리움의 탱크</span></div></div><div class="ltt-strip-slide"><img alt="공산주의 역사 워킹 투어가 시작되는 헝가리 국회의사당" loading="lazy" src="/assets/walking-tours-2026/communist-tour-04.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>공산주의 역사 워킹 투어가 시작되는 헝가리 국회의사당</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€50부터</span>
-<span class="ltt-buy-price-sub">2시간 • 무료 취소</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">House of Terror 옵션이 있는 공산주의 역사 투어</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">스마트폰 QR 바우처 즉시 발급</span>
-<span class="ltt-buy-perk">24시간 전까지 전액 환불</span>
-<span class="ltt-buy-perk">그룹: <strong>최대 10명</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>2시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-house-of-terror-guided-tour-t389878/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-communism&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>날짜 확인 &amp;amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>최저가 보장 • 즉시 확정</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="House of Terror 옵션이 있는 공산주의 역사 투어">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-house-of-terror-guided-tour-t389878/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-communism&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/walking-tours-2026/communist-tour-01.webp" alt="부다페스트 Andrássy 대로의 House of Terror 박물관" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#8 Tourist Angel</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-house-of-terror-guided-tour-t389878/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-communism&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">House of Terror 옵션이 있는 공산주의 역사 투어</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.80"></span><b class="bpa-rate-score">4.8</b><span class="bpa-rate-meta">리뷰 220 · 1개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuide 평점</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-house-of-terror-guided-tour-t389878/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-communism&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.8</span><span class="bpa-rev-count">(220+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>스마트폰 QR 바우처 즉시 발급</li><li>24시간 전까지 전액 환불</li><li>그룹: <strong>최대 10명</strong></li><li>소요 시간: <strong>2시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€50부터<small>2시간 • 무료 취소</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-house-of-terror-guided-tour-t389878/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-communism&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">날짜 확인 &amp;amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">최저가 보장 • 즉시 확정</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1775,39 +1623,16 @@ window.addEventListener('load', function() {
 <h3>이런 분께 추천</h3>
 <p>아이가 있는 가족, 쉬어 가야 하는 연령대 높은 여행자, 노란 우산을 따라 낯선 30명과 걷는 게 싫은 분께 <strong>꼭 예약하세요</strong>. 요청한 대로 가이드가 루트를 조정해 줬다는 후기가 있습니다.</p>
 <p>예산이 빠듯하다면 <strong>건너뛰세요</strong>. 무료 <a href="#item-4-pest-walking-tour">이너시티 워킹 투어</a>가 팁만으로 페스트의 하이라이트를 다룹니다. 그리고 8시간을 한 번에 예약하지는 마세요. 하루 종일 코스를 선택한 한 참가자는 약 12km를 걸었습니다.</p><div class="ltt-filmstrip-wrap"><button aria-label="이전 사진" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="다음 사진" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="필름스트립 갤러리 9" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="부다페스트 영웅 광장의 프라이빗 워킹 투어 참가자들" loading="lazy" src="/assets/walking-tours-2026/private-tour-02.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>부다페스트 영웅 광장의 프라이빗 워킹 투어 참가자들</span></div></div><div class="ltt-strip-slide"><img alt="세체니 다리와 다뉴브 강 옆의 프라이빗 투어 그룹" loading="lazy" src="/assets/walking-tours-2026/private-tour-01.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>세체니 다리와 다뉴브 강 옆의 프라이빗 투어 그룹</span></div></div><div class="ltt-strip-slide"><img alt="부다페스트의 성당 안에 있는 프라이빗 투어 그룹" loading="lazy" src="/assets/walking-tours-2026/private-tour-05.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>부다페스트의 성당 안에 있는 프라이빗 투어 그룹</span></div></div><div class="ltt-strip-slide"><img alt="부다페스트 카페에 들른 프라이빗 투어 참가자들" loading="lazy" src="/assets/walking-tours-2026/private-tour-04.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>부다페스트 카페에 들른 프라이빗 투어 참가자들</span></div></div><div class="ltt-strip-slide"><img alt="부다페스트 프라이빗 워킹 투어 중 쉬고 있는 가이드와 참가자" loading="lazy" src="/assets/walking-tours-2026/private-tour-03.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>부다페스트 프라이빗 워킹 투어 중 쉬고 있는 가이드와 참가자</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€40부터</span>
-<span class="ltt-buy-price-sub">2~8시간 • 무료 취소</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">현지 가이드와 함께하는 프라이빗 맞춤 워킹 투어</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">스마트폰 QR 바우처 즉시 발급</span>
-<span class="ltt-buy-perk">24시간 전까지 전액 환불</span>
-<span class="ltt-buy-perk">픽업: <strong>호텔</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>2~8시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-private&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>날짜 확인 &amp;amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>최저가 보장 • 즉시 확정</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="현지 가이드와 함께하는 프라이빗 맞춤 워킹 투어">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-private&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/walking-tours-2026/private-tour-05.webp" alt="부다페스트 영웅 광장의 프라이빗 워킹 투어 참가자들" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#9 Guydeez</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-private&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">현지 가이드와 함께하는 프라이빗 맞춤 워킹 투어</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.70"></span><b class="bpa-rate-score">4.7</b><span class="bpa-rate-meta">리뷰 110 · 1개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuide 평점</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-private&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.7</span><span class="bpa-rev-count">(110+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>스마트폰 QR 바우처 즉시 발급</li><li>24시간 전까지 전액 환불</li><li>픽업: <strong>호텔</strong></li><li>소요 시간: <strong>2~8시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€40부터<small>2~8시간 • 무료 취소</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-private&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">날짜 확인 &amp;amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">최저가 보장 • 즉시 확정</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1871,39 +1696,16 @@ window.addEventListener('load', function() {
 <p>이미 무료 <a href="#item-4-pest-walking-tour">이너시티 워킹 투어</a>와 <a href="#item-5-buda-castle-walking-tour">부다 성 투어</a>를 계획 중이라면 <strong>건너뛰세요</strong>. 두 투어를 합치면 같은 구간을 더 깊이 다룹니다.</p>
 <h3>만나는 장소</h3>
 <p>🗺️ <strong>만나는 장소: </strong>Szent István tér 4, 1051 Budapest, 성 이슈트반 대성당 앞.<br/>🚇 <strong>대중교통:</strong> Bajcsy-Zsilinszky út(M1) 또는 Deák Ferenc tér(M1, M2, M3)에서 걸어서 3분.</p><div class="ltt-filmstrip-wrap"><button aria-label="이전 사진" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="다음 사진" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="필름스트립 갤러리 10" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="성 이슈트반 대성당 앞의 오리엔테이션 워킹 투어 그룹" loading="lazy" src="/assets/walking-tours-2026/orientation-tour-02.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 3</span> <span>성 이슈트반 대성당 앞의 오리엔테이션 워킹 투어 그룹</span></div></div><div class="ltt-strip-slide"><img alt="다뉴브 강과 국회의사당이 보이는 부다 전망대의 참가자들" loading="lazy" src="/assets/walking-tours-2026/orientation-tour-01.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 3</span> <span>다뉴브 강과 국회의사당이 보이는 부다 전망대의 참가자들</span></div></div><div class="ltt-strip-slide"><img alt="오리엔테이션 투어의 만남 장소, 성 이슈트반 대성당" loading="lazy" src="/assets/walking-tours-2026/orientation-tour-03.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 3</span> <span>오리엔테이션 투어의 만남 장소, 성 이슈트반 대성당</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€35부터</span>
-<span class="ltt-buy-price-sub">3시간 • 무료 취소</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">부다와 페스트 3시간 오리엔테이션 워킹 투어</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">스마트폰 QR 바우처 즉시 발송</span>
-<span class="ltt-buy-perk">24시간 전까지 전액 환불</span>
-<span class="ltt-buy-perk">출발: <strong>Szent István tér</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>3시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/free-walking-tour-of-budapest-t13960/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-orientation&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>날짜 확인 &amp;amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>최저가 보장 • 즉시 확정</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="부다와 페스트 3시간 오리엔테이션 워킹 투어">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/free-walking-tour-of-budapest-t13960/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-orientation&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/walking-tours-2026/orientation-tour-02.webp" alt="성 이슈트반 대성당 앞의 오리엔테이션 워킹 투어 그룹" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#10 Tourist Angel</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/free-walking-tour-of-budapest-t13960/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-orientation&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">부다와 페스트 3시간 오리엔테이션 워킹 투어</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.80"></span><b class="bpa-rate-score">4.8</b><span class="bpa-rate-meta">리뷰 2.4k+ · 1개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuide 평점</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/free-walking-tour-of-budapest-t13960/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-orientation&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.8</span><span class="bpa-rev-count">(2.4k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>스마트폰 QR 바우처 즉시 발송</li><li>24시간 전까지 전액 환불</li><li>출발: <strong>Szent István tér</strong></li><li>소요 시간: <strong>3시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€35부터<small>3시간 • 무료 취소</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/free-walking-tour-of-budapest-t13960/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-orientation&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">날짜 확인 &amp;amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">최저가 보장 • 즉시 확정</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">

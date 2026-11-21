@@ -72,7 +72,39 @@ window.addEventListener('load', function() {
 .bpa-hoho-tbl tr:last-child td{border-bottom:0}
 .bpa-hoho-method{font-size:14px;color:#475569}
 </style>
-<link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+<link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -973,39 +1005,18 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Is City Sightseeing better than Big Bus in Budapest?</strong><br/>💡 For most visitors, yes, by a small margin: the same adult prices, but the boat ride is included, cancellation is free up to 2 days before and the child price runs to age 18.</blockquote><p>City Sightseeing runs open-top double-deckers on a <strong>20-stop red route</strong> that covers both sides of the river: St Stephen's Basilica, the Opera on Andrássy Avenue, Heroes' Square, the Dohány Street Synagogue, Gellért Square, the Castle Garden by the funicular, Batthyány Square and the Parliament. A full loop takes about 110 minutes.</p><p>The ticket is the best-value package in town: the bus, a <strong>Danube boat ride</strong> and a <strong>1-hour guided walking tour</strong> through the streets the bus can't reach. At €39 for 24 hours the boat alone covers a good part of the price, because a 1-hour sightseeing cruise costs about €11 to €20 on its own (compare them in our <a href="/best-budapest-river-cruises">Budapest river cruise guide</a>).</p><p>Two stops (both at Astoria) are temporarily closed, so use Dohány Street or the Opera instead.</p><h3>How to Get There</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Szent+Istv%C3%A1n+t%C3%A9r+1+Budapest" rel="nofollow noopener" target="_blank">Stop 1: St Stephen's Basilica, Szent István tér, 1051 Budapest</a></li><li>🚇 <strong>Metro</strong> M1, M2 or M3 to Deák Ferenc tér, then a 3-minute walk</li><li>🎟️ Show the mobile ticket at any stop; you don't have to start at stop 1</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €39</span>
-<span class="ltt-buy-price-sub">per adult · 24 hours</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">City Sightseeing Hop-On Hop-Off</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Booked via Tiqets</span>
-<span class="ltt-buy-perk">Free cancellation up to 2 days before</span>
-<span class="ltt-buy-perk">Start: <strong>St Stephen's Basilica</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>24, 48 or 72 Hours</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-hoho-citysightseeing-budapest-p1052674/?partner=thecruisedetective.com-176436" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Children 0 to 5 ride free</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="City Sightseeing Hop-On Hop-Off">
+<a class="bpa-book-img" href="https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-hoho-citysightseeing-budapest-p1052674/?partner=thecruisedetective.com-176436" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-hop-on-hop-off-bus-budapest/citysight-05.webp" alt="Red City Sightseeing double-decker on a Budapest street" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#1 Best Value Hop-On Hop-Off</div>
+<a class="bpa-book-title" href="https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-hoho-citysightseeing-budapest-p1052674/?partner=thecruisedetective.com-176436" rel="nofollow sponsored noopener" target="_blank">City Sightseeing Hop-On Hop-Off</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.12" aria-hidden="true"></span><b class="bpa-rate-score">4.1</b><span class="bpa-rate-meta">5.9k+ reviews · 2 sites</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Average of 2 sites, weighted by number of reviews</strong><span class="bpa-rate-list"><span class="bpa-rev-badge is-static">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.1</span><span class="bpa-rev-count">(5.8k+)</span></span><a class="bpa-rev-badge is-link" href="https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-hoho-citysightseeing-budapest-p1052674/?partner=thecruisedetective.com-176436&amp;tq_campaign=best-hop-on-hop-off-bus-buda-en-pop" rel="noopener nofollow sponsored" target="_blank">
+<img alt="Tiqets" class="bpa-rev-icon" loading="lazy" src="/assets/cdn/652d0405192ba076b04f74a3/6852917a8b23e16d4296b394_tiqets-logo.avif"/><span class="bpa-rev-site">Tiqets</span><span class="bpa-rev-score">4.0</span><span class="bpa-rev-count">(60+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span><span class="bpa-lang-note">Each site rates its own ticket for this bus.</span></div></details></div></div>
+<ul class="bpa-book-points"><li>Booked via Tiqets</li><li>Free cancellation up to 2 days before</li><li>Start: <strong>St Stephen's Basilica</strong></li><li>Duration: <strong>24, 48 or 72 Hours</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €39<small>per adult · 24 hours</small></div><a class="bpa-book-btn" href="https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-hoho-citysightseeing-budapest-p1052674/?partner=thecruisedetective.com-176436" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Children 0 to 5 ride free</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1081,39 +1092,18 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Is the Big Bus worth it in Budapest?</strong><br/>💡 Yes for a 2 or 3 day ticket, when the cruise, the walk and the extra days bring the cost down to about €16 to €22 a day. For a single afternoon, public transport is better value.</blockquote><p>Big Bus has the biggest network of the classic operators: a <strong>21-stop red route</strong> from the Parliament and Margaret Bridge through the Opera and Heroes' Square to Keleti station, Astoria, the Gellért Baths and Buda Castle. Buses run from 10:00 to 17:00, every 10 to 25 minutes.</p><p>This ticket bundles a <strong>Danube river cruise</strong> and a <strong>guided walking tour</strong> of Pest, so you get the city from the top deck, the water and on foot. The 2-day Essential ticket at €44 is the sweet spot: only €5 more than one day.</p><p>Want to keep your options open? The <a href="https://www.getyourguide.com/budapest-l29/budapest-big-bus-hop-onhop-off-tour-danube-river-cruise-t42526/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-flexible-big-bus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">flexible Big Bus ticket</a> can be cancelled up to 24 hours before, at the same price. It gives you 30% off a cruise at the pier instead of a free one.</p><h3>How to Get There</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=J%C3%B3zsef+Attila+utca+24+Budapest" rel="nofollow noopener" target="_blank">Start: József Attila utca 24, 1051 Budapest (near Deák Ferenc tér)</a></li><li>🚇 <strong>Metro</strong> M1, M2 or M3 to Deák Ferenc tér, 2-minute walk</li><li>🚢 The cruise leaves from Dock 6 (Vigadó tér), Jane Haining rakpart</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €39</span>
-<span class="ltt-buy-price-sub">per adult · 1 day</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Big Bus Hop-On Hop-Off</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Booked via Tiqets</span>
-<span class="ltt-buy-perk">River cruise included</span>
-<span class="ltt-buy-perk">Start: <strong>József Attila utca 24</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>1, 2 or 3 Days</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-hop-on-hop-off-bus-budapest-p974389/?partner=thecruisedetective.com-176436" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Mobile ticket, instant confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Big Bus Hop-On Hop-Off">
+<a class="bpa-book-img" href="https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-hop-on-hop-off-bus-budapest-p974389/?partner=thecruisedetective.com-176436" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-hop-on-hop-off-bus-budapest/bigbus-01.webp" alt="Big Bus Budapest double-decker outside the Hungarian State Opera" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#2 Most Stops</div>
+<a class="bpa-book-title" href="https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-hop-on-hop-off-bus-budapest-p974389/?partner=thecruisedetective.com-176436" rel="nofollow sponsored noopener" target="_blank">Big Bus Hop-On Hop-Off</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.14" aria-hidden="true"></span><b class="bpa-rate-score">4.1</b><span class="bpa-rate-meta">5k+ reviews · 2 sites</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Average of 2 sites, weighted by number of reviews</strong><span class="bpa-rate-list"><span class="bpa-rev-badge is-static">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.1</span><span class="bpa-rev-count">(4.9k+)</span></span><a class="bpa-rev-badge is-link" href="https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-hop-on-hop-off-bus-budapest-p974389/?partner=thecruisedetective.com-176436&amp;tq_campaign=best-hop-on-hop-off-bus-buda-en-pop" rel="noopener nofollow sponsored" target="_blank">
+<img alt="Tiqets" class="bpa-rev-icon" loading="lazy" src="/assets/cdn/652d0405192ba076b04f74a3/6852917a8b23e16d4296b394_tiqets-logo.avif"/><span class="bpa-rev-site">Tiqets</span><span class="bpa-rev-score">4.2</span><span class="bpa-rev-count">(120+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span><span class="bpa-lang-note">Each site rates its own ticket for this bus.</span></div></details></div></div>
+<ul class="bpa-book-points"><li>Booked via Tiqets</li><li>River cruise included</li><li>Start: <strong>József Attila utca 24</strong></li><li>Duration: <strong>1, 2 or 3 Days</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €39<small>per adult · 1 day</small></div><a class="bpa-book-btn" href="https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-hop-on-hop-off-bus-budapest-p974389/?partner=thecruisedetective.com-176436" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Mobile ticket, instant confirmation</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1188,39 +1178,17 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Should you book the 50 or the 90 minute RiverRide?</strong><br/>💡 The 90-minute tour, for €5 more: only the longer route sails to the Parliament, the best view on the river.</blockquote><p>RiverRide is the one bus in Budapest that floats. The tour starts with a drive through Pest past <strong>Andrássy Avenue, the Opera and Heroes' Square</strong>, then the bus rolls down a ramp and <strong>splashes into the Danube</strong>.</p><p>Pick the <strong>90-minute tour (€32)</strong>: on the 50-minute version the water section is shorter and doesn't reach the Parliament. It suits families especially well. One grandmother booked it for her 5-year-old grandson, who followed the commentary the whole way.</p><h3>How to Get There</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Sz%C3%A9chenyi+Istv%C3%A1n+t%C3%A9r+7+Budapest" rel="nofollow noopener" target="_blank">Széchenyi István tér 7, 1051 Budapest (Pest end of the Chain Bridge)</a></li><li>🚋 <strong>Tram</strong> 2 to Széchenyi István tér, or <strong>bus</strong> 16 or 105</li><li>🍽️ No food or drinks allowed on board</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €27</span>
-<span class="ltt-buy-price-sub">per adult · 50 minutes</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">RiverRide Amphibious Bus</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Booked via GetYourGuide</span>
-<span class="ltt-buy-perk">Free cancellation up to 24 hours before</span>
-<span class="ltt-buy-perk">Start: <strong>Széchenyi István tér</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>50 or 90 Minutes</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-by-land-and-water-2-hour-floating-bus-tour-t21513/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-riverride&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Reserve now, pay later</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="RiverRide Amphibious Bus">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-by-land-and-water-2-hour-floating-bus-tour-t21513/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-riverride&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-hop-on-hop-off-bus-budapest/riverride-04.webp" alt="RiverRide amphibious bus on the Danube in front of the Hungarian Parliament" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#3 Most Fun for Families</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-by-land-and-water-2-hour-floating-bus-tour-t21513/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-riverride&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">RiverRide Amphibious Bus</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.31" aria-hidden="true"></span><b class="bpa-rate-score">4.3</b><span class="bpa-rate-meta">4k+ reviews · GetYourGuide</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-by-land-and-water-2-hour-floating-bus-tour-t21513/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-buda-en-pop&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.3</span><span class="bpa-rev-count">(4k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Booked via GetYourGuide</li><li>Free cancellation up to 24 hours before</li><li>Start: <strong>Széchenyi István tér</strong></li><li>Duration: <strong>50 or 90 Minutes</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €27<small>per adult · 50 minutes</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-by-land-and-water-2-hour-floating-bus-tour-t21513/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-riverride&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Reserve now, pay later</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1295,39 +1263,17 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Is the Buda Castle bus worth €18?</strong><br/>💡 Yes if walking up Castle Hill is hard for you or it is very hot. If you are fine with stairs, walk or take bus 16 and keep the €18.</blockquote><p>Castle Hill is the one part of Budapest the big hop-on buses only touch: they stop at the bottom by the funicular. The official electric castle bus starts at <strong>Clark Ádám tér</strong> next to the Chain Bridge and takes you up and around the <strong>Castle District</strong>, with 5 stops near Fisherman's Bastion, Matthias Church, the Royal Palace and the Hospital in the Rock.</p><p>It is a practical ticket more than a tour: hop off, walk, and catch the next bus. Guests in summer called it a lifesaver in the heat.</p><h3>How to Get There</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Clark+%C3%81d%C3%A1m+t%C3%A9r+Budapest" rel="nofollow noopener" target="_blank">Clark Ádám tér, 1013 Budapest (Buda end of the Chain Bridge)</a></li><li>🚌 <strong>Bus</strong> 16 or 105 from Deák Ferenc tér over the Chain Bridge</li><li>🎟️ A greeter scans your ticket at the start</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €18</span>
-<span class="ltt-buy-price-sub">per adult · one round</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Buda Castle Electric Bus</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Booked via GetYourGuide</span>
-<span class="ltt-buy-perk">Free cancellation up to 24 hours before</span>
-<span class="ltt-buy-perk">Start: <strong>Clark Ádám tér</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>1 Round, 1 Day</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-official-buda-castle-electric-hop-on-hop-off-bus-t313942/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-castle-bus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Reserve now, pay later</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Buda Castle Electric Bus">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-official-buda-castle-electric-hop-on-hop-off-bus-t313942/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-castle-bus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-hop-on-hop-off-bus-budapest/castle-01.webp" alt="Buda Castle electric bus outside the Royal Palace" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#4 Best for Castle Hill</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-official-buda-castle-electric-hop-on-hop-off-bus-t313942/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-castle-bus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Buda Castle Electric Bus</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.41" aria-hidden="true"></span><b class="bpa-rate-score">4.4</b><span class="bpa-rate-meta">520+ reviews · GetYourGuide</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-official-buda-castle-electric-hop-on-hop-off-bus-t313942/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-buda-en-pop&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.4</span><span class="bpa-rev-count">(520+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Booked via GetYourGuide</li><li>Free cancellation up to 24 hours before</li><li>Start: <strong>Clark Ádám tér</strong></li><li>Duration: <strong>1 Round, 1 Day</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €18<small>per adult · one round</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-official-buda-castle-electric-hop-on-hop-off-bus-t313942/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-castle-bus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Reserve now, pay later</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1401,39 +1347,17 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Hop-on bus or live guided bus tour?</strong><br/>💡 The guided tour if you have one morning and want context. A 24-hour hop-on ticket costs only €4 more but gives you all day and a boat ride, with recorded commentary instead of a person.</blockquote><p>This is the classic coach city tour, run by Cityrama: <strong>3 hours with a live guide</strong>, starting near the Parliament. You drive along the Danube to Buda, walk around the <strong>Castle District</strong>, cross Elizabeth Bridge past the Central Market Hall and the Dohány Street Synagogue, then stop at <strong>Heroes' Square</strong> before driving down Andrássy Avenue past the Opera and the Basilica.</p><p>It is the best choice on this list if you want questions answered by a person, not a recording.</p><h3>How to Get There</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=B%C3%A1thory+utca+19+Budapest" rel="nofollow noopener" target="_blank">Báthory utca 19, 1054 Budapest (Cityrama office)</a></li><li>🚇 <strong>Metro</strong> M2 to Kossuth Lajos tér, or M3 to Arany János utca, 5-minute walk</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €35</span>
-<span class="ltt-buy-price-sub">per adult · 3 hours</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">3-Hour Live Guided Bus Tour</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Booked via GetYourGuide</span>
-<span class="ltt-buy-perk">Free cancellation up to 24 hours before</span>
-<span class="ltt-buy-perk">Start: <strong>Báthory utca 19</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>3 Hours</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-cityrama&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Reserve now, pay later</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="3-Hour Live Guided Bus Tour">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-cityrama&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-hop-on-hop-off-bus-budapest/cityrama-01.webp" alt="Guests photographing the Parliament from Castle Hill on the Cityrama tour" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#5 Best With a Live Guide</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-cityrama&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">3-Hour Live Guided Bus Tour</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.40" aria-hidden="true"></span><b class="bpa-rate-score">4.4</b><span class="bpa-rate-meta">1.1k+ reviews · GetYourGuide</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><span class="bpa-rev-badge is-static">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.4</span><span class="bpa-rev-count">(1.1k+)</span></span></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Booked via GetYourGuide</li><li>Free cancellation up to 24 hours before</li><li>Start: <strong>Báthory utca 19</strong></li><li>Duration: <strong>3 Hours</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €35<small>per adult · 3 hours</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-cityrama&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Reserve now, pay later</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1507,39 +1431,17 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>BeerBus or E-BeerBus?</strong><br/>💡 BeerBus for couples, solo travellers and small groups: €27 per person with 5 departures a day. E-BeerBus for groups of 4 or more who want their own music, or a private bus.</blockquote><p>The BeerBus is a red party bus with beer taps on board. In <strong>one hour</strong> it rolls past Andrássy Avenue, the Opera, Heroes' Square, the Chain Bridge, Gellért Hill and the Parliament while you drink <strong>unlimited Hungarian beer</strong> and the host runs games.</p><p>It starts on Bajcsy-Zsilinszky út near the Basilica and drops you at Nyugati Square, a few minutes' walk away, in time for dinner or the ruin bars.</p><h3>How to Get There</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Bajcsy-Zsilinszky+%C3%BAt+16+Budapest" rel="nofollow noopener" target="_blank">Bajcsy-Zsilinszky út 16, 1051 Budapest</a></li><li>🚇 <strong>Metro</strong> M1, M2 or M3 to Deák Ferenc tér, 4-minute walk</li><li>🏁 Ends at Nyugati tér</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €27</span>
-<span class="ltt-buy-price-sub">per person · 1 hour</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">BeerBus with Unlimited Beer</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Booked via GetYourGuide</span>
-<span class="ltt-buy-perk">Free cancellation up to 24 hours before</span>
-<span class="ltt-buy-perk">Start: <strong>Bajcsy-Zsilinszky út 16</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>1 Hour</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-beerbus-sightseeing-tour-with-unlimited-beer-t1004693/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-beerbus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Solo travellers welcome</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="BeerBus with Unlimited Beer">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-beerbus-sightseeing-tour-with-unlimited-beer-t1004693/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-beerbus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-hop-on-hop-off-bus-budapest/beerbus-08.webp" alt="Front of the BeerBus party bus in Budapest" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#6 Best Party Bus</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-beerbus-sightseeing-tour-with-unlimited-beer-t1004693/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-beerbus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">BeerBus with Unlimited Beer</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.75" aria-hidden="true"></span><b class="bpa-rate-score">4.8</b><span class="bpa-rate-meta">160+ reviews · GetYourGuide</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-beerbus-sightseeing-tour-with-unlimited-beer-t1004693/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-buda-en-pop&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.8</span><span class="bpa-rev-count">(160+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Booked via GetYourGuide</li><li>Free cancellation up to 24 hours before</li><li>Start: <strong>Bajcsy-Zsilinszky út 16</strong></li><li>Duration: <strong>1 Hour</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €27<small>per person · 1 hour</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-beerbus-sightseeing-tour-with-unlimited-beer-t1004693/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-beerbus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Solo travellers welcome</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1613,39 +1515,17 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Is the E-BeerBus good for a stag party?</strong><br/>💡 Yes, it is built for it: reviewers include a stag group of 15. Split the private 60-minute bus (€360) between 12 friends and it is €30 each, with your own music.</blockquote><p>The E-BeerBus comes from Budapest's original BeerBike team: same idea, but <strong>electric, with a roof and no pedalling</strong>. It starts at <strong>Heroes' Square</strong> next to the Műcsarnok, rolls down Andrássy Avenue past the Opera and the Basilica and back through City Park, with <strong>unlimited Hungarian draught beer</strong> and your own music.</p><p>Two buses (14 and 16 seats) can drive together, so groups of up to about 30 stay together.</p><h3>How to Get There</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=M%C5%B1csarnok+Budapest" rel="nofollow noopener" target="_blank">Heroes' Square, next to the Műcsarnok on Olof Palme sétány, 1146 Budapest</a></li><li>🚇 <strong>Metro</strong> M1 to Hősök tere</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €27</span>
-<span class="ltt-buy-price-sub">per person · min. 4 people</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">E-BeerBus Party Tour</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Booked via GetYourGuide</span>
-<span class="ltt-buy-perk">Free cancellation up to 24 hours before</span>
-<span class="ltt-buy-perk">Start: <strong>Heroes' Square</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>1 to 2 Hours</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-ebeerbus-sightseeing-tour-t370406/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-e-beerbus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Your own playlist</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="E-BeerBus Party Tour">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-ebeerbus-sightseeing-tour-t370406/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-e-beerbus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-hop-on-hop-off-bus-budapest/ebeerbus-01.webp" alt="Party inside the E-BeerBus with disco lights" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#7 Best for Stag &amp; Hen Groups</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-ebeerbus-sightseeing-tour-t370406/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-e-beerbus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">E-BeerBus Party Tour</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.69" aria-hidden="true"></span><b class="bpa-rate-score">4.7</b><span class="bpa-rate-meta">210+ reviews · GetYourGuide</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-ebeerbus-sightseeing-tour-t370406/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-buda-en-pop&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.7</span><span class="bpa-rev-count">(210+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Booked via GetYourGuide</li><li>Free cancellation up to 24 hours before</li><li>Start: <strong>Heroes' Square</strong></li><li>Duration: <strong>1 to 2 Hours</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €27<small>per person · min. 4 people</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-ebeerbus-sightseeing-tour-t370406/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=best-hop-on-hop-off-bus-budapest-review-e-beerbus&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Your own playlist</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">

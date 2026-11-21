@@ -1,0 +1,67 @@
+<!--
+  BPA booking card ("bpa-book") — reusable single-product booking box.
+  First used on /budapest-parliament-tickets (Nov 2026). The user loves this card: reuse it
+  whenever an article pushes one bookable product (ticket, tour, cruise).
+
+  HOW TO USE
+  1. Paste the <style> block into the page's inline <style> in <head> (once per page).
+  2. Paste one <aside class="bpa-book"> per placement inside #content .w-richtext
+     (e.g. right before the first H2, and again after the "how to book" section).
+  3. Fill in: product URL (affiliate, GYG needs partner_id + mkt_cmp=true, unique cmp= per box),
+     photo (.avif, ordered to sell the promise), kicker, title, rating from the exact product,
+     3 benefit bullets, price, "checked on" date.
+  4. If the page has a gold-link rule like
+       #content .w-richtext a:not(...)
+     add :not(.bpa-book-btn):not(.bpa-book-img):not(.bpa-book-title) to it.
+
+  WHY THE BUTTON USES !important
+  /css/shared/bpa-prose-editorial.*.css sets `background: transparent !important` on every
+  link inside .w-richtext. Without !important on the button the gradient disappears and the
+  button renders as an empty white pill (white text on white).
+-->
+<style>
+/* booking box */
+.bpa-book{display:grid;grid-template-columns:minmax(0,42%) 1fr;gap:0;margin:8px 0 32px;background:#fff;border:1px solid #ecdcb6;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25)}
+.bpa-book-img{display:block;min-height:100%;background:#f1f5f9}
+.bpa-book-img img{width:100% !important;height:100% !important;object-fit:cover;display:block;margin:0 !important;border-radius:0 !important}
+.bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px}
+.bpa-book-kicker{font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#855a00}
+#content .bpa-book-title{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;line-height:1.25;color:#0f172a !important;text-decoration:none !important}
+#content .bpa-book-title:hover{color:#855a00 !important}
+.bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book-rating b{color:#0f172a}
+.bpa-book-stars{color:#dfa732;letter-spacing:1px}
+#content ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+#content ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important}
+#content ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+#content a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap}
+#content a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45)}
+.bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book-body{padding:16px 16px 18px}
+.bpa-book-foot{flex-direction:column;align-items:stretch}
+#content a.bpa-book-btn{text-align:center}
+}
+</style>
+
+<!-- markup (example: Parliament page, top placement) -->
+<aside class="bpa-book" aria-label="Book Parliament tickets">
+<a class="bpa-book-img" href="{AFFILIATE_URL}" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-things-to-do-budapest/3-parliament-guided-tour-02.avif" alt="{PHOTO_ALT}" width="1200" height="800" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">Easiest way in · Book ahead</div>
+<a class="bpa-book-title" href="{AFFILIATE_URL}" rel="nofollow sponsored noopener" target="_blank">Parliament Entry Ticket and Audio Guide</a>
+<div class="bpa-book-rating"><span class="bpa-book-stars" aria-hidden="true">★★★★★</span> <b>4.5</b> · 6.6k reviews on GetYourGuide</div>
+<ul class="bpa-book-points">
+<li>The 45-minute tour inside, with an audio guide in 26 languages</li>
+<li><b>Free cancellation</b> up to 24 hours before, full refund</li>
+<li><b>Reserve now, pay later</b>: nothing to pay today</li>
+</ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€43<small>ticket + audio guide</small></div><a class="bpa-book-btn" href="{AFFILIATE_URL}" rel="nofollow sponsored noopener" target="_blank">Check availability →</a></div>
+<div class="bpa-book-note">Booked securely via GetYourGuide. Checked on the booking page on {DATE}; the final price shows before you pay.</div>
+</div>
+</aside>

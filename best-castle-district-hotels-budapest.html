@@ -61,7 +61,39 @@ window.addEventListener('load', function() {
 <link id="ltt-language-switcher-styles" rel="stylesheet" href="/css/shared/ltt-language-switcher-styles.ebbf128d15.css"/><link id="CANONICAL_NAVBAR_UNIFIED_FONTS" rel="stylesheet" href="/css/shared/CANONICAL_NAVBAR_UNIFIED_FONTS.e6a1a25ced.css"/>
 <style>.ltt-mobile-drawer:not(.is-open){visibility:hidden !important;pointer-events:none !important;display:none !important;}.ltt-mobile-drawer.is-open{visibility:visible !important;pointer-events:auto !important;display:block !important;}</style><link id="ps-008fa3a483" data-ps-blocks="ltt-master-a11y-contrast ltt-wcag-contrast-fix bpa-light-bar" rel="stylesheet" href="/css/shared/bundle.008fa3a483.css"/>
 <link id="bpa-new-footer" rel="stylesheet" href="/css/shared/bpa-new-footer.4f85d90f75.css"/><link id="bpa-article-typography" rel="stylesheet" href="/css/shared/bpa-article-typography.c64a2a0b29.css"/>
-<link id="bpa-no-red-hover" rel="stylesheet" href="/css/shared/bpa-no-red-hover.802199d918.css"/><link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+<link id="bpa-no-red-hover" rel="stylesheet" href="/css/shared/bpa-no-red-hover.802199d918.css"/><link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -972,21 +1004,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Hilton Budapest has the address everyone wants: <strong>Hess András tér, next to Fisherman's Bastion and Matthias Church</strong>, built into a restored Dominican cloister whose ruins you can see inside. For the same night a courtyard room cost <strong>€153</strong>; the <strong>Danube Rooms</strong> facing the river and Parliament were €196.</p><p>It is the only hotel on the hill with a <strong>garage and valet parking</strong>, and it is listed as wheelchair accessible. The Codex Bar looks out over the city, and there is a 24-hour gym and a sauna.</p><p>Guests score it 8.9, with breakfast rated excellent and location 9.5.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €153</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Hilton Budapest</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District I</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.9/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-hilton&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhilton-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Hilton Budapest">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-hilton&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhilton-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-castle-district-hotels-budapest/01-hilton-01.avif" alt="Hilton Budapest" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#1 Best Castle District Hotel</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-hilton&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhilton-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Hilton Budapest</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.45" aria-hidden="true"></span><b class="bpa-rate-score">8.9</b><span class="bpa-rate-meta">2.7k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-hilton&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhilton-budapest.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.9</span><span class="bpa-rev-count">(2.7k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District I</strong></li><li>🛏️ Guest score: <strong>8.9/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €153<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-hilton&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhilton-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Hilton Budapest</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1014 Budapest, Hess Andras ter 1-3 (District I)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Sauna</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Valet, Parking garage, Electric charging</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">Listed as wheelchair accessible; pets welcome (fees may apply)</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1024,21 +1050,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Pest-Buda is the most historic bed on the hill: an inn on <strong>Fortuna utca that first opened in 1696</strong>, renovated in 2016, with a restaurant serving homemade-style food and a <strong>seasonal terrace overlooking Matthias Church</strong>, 800 ft away.</p><p>For the same night it cost <strong>€101</strong>. Guests score it 9.0, with location at 9.7 and breakfast rated wonderful. Trinity Square is 800 ft away and Fisherman's Bastion 1,000 ft.</p><p>Rooms are reached by stairs only, and there is street parking only.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €101</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">PEST-BUDA Design Hotel</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District I</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-pest-buda&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fpest-buda.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="PEST-BUDA Design Hotel">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-pest-buda&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fpest-buda.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-castle-district-hotels-budapest/02-pest-buda-01.avif" alt="PEST-BUDA Design Hotel" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#2 Most Historic Hotel</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-pest-buda&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fpest-buda.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">PEST-BUDA Design Hotel</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.50" aria-hidden="true"></span><b class="bpa-rate-score">9.0</b><span class="bpa-rate-meta">495 reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-pest-buda&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fpest-buda.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.0</span><span class="bpa-rev-count">(495)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District I</strong></li><li>🛏️ Guest score: <strong>9/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €101<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-pest-buda&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fpest-buda.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">PEST-BUDA Design Hotel</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1014 Budapest, Fortuna utca 3. (District I)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it wonderful; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM to 12:00 AM; check-out until From 7:30 AM to 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Budavári Evangélikus Templom (700 ft), Trinity Square (800 ft), Matyas Church (800 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Street</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">pets welcome (fees may apply); airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1076,21 +1096,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Baltazár is the best-rated hotel on the hill: <strong>9.3 from 626 reviews</strong>. It sits on Országház utca at the quiet northern end of the Castle District, above its own <strong>à la carte grill restaurant</strong>, with rooms and suites each decorated differently, including a <strong>Sauna Suite</strong>.</p><p>For the same night it cost <strong>€104</strong>. Matthias Church is about 1,550 ft away and the Mary Magdalene Tower 250 ft.</p><p>Breakfast is one hot dish from the menu with juice and coffee, included only if your rate includes it.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €104</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">BALTAZÁR Boutique Hotel</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District I</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.3/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-baltazar&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbaltaza-r-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="BALTAZÁR Boutique Hotel">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-baltazar&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbaltaza-r-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-castle-district-hotels-budapest/03-baltazar-01.avif" alt="BALTAZÁR Boutique Hotel" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#3 Best-Rated on Castle Hill</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-baltazar&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbaltaza-r-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">BALTAZÁR Boutique Hotel</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.65" aria-hidden="true"></span><b class="bpa-rate-score">9.3</b><span class="bpa-rate-meta">626 reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-baltazar&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbaltaza-r-budapest.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.3</span><span class="bpa-rev-count">(626)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District I</strong></li><li>🛏️ Guest score: <strong>9.3/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €104<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-baltazar&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbaltaza-r-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">BALTAZÁR Boutique Hotel</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1014 Budapest, Országház utca 31. (District I)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM to 11:00 PM; check-out until 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Maria Magdolna templom (250 ft), Budavári Evangélikus Templom (550 ft), Középkori zsidó Imaház (700 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Street</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">pets welcome (fees may apply); airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1128,21 +1142,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Buda Castle Hotel is the value pick inside the walls: <strong>€87</strong> for the same night on <strong>Úri utca</strong>, 900 ft from Matthias Church and 1,100 ft from Fisherman's Bastion. Guests score it <strong>9.0</strong> and rate the location 9.6.</p><p>Rooms range from budget twins to <strong>duplex rooms</strong>, all air-conditioned, with a minibar and tea and coffee. There is a bar and a 24-hour front desk.</p><p>Breakfast is rated excellent; parking is on the street.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €87</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Buda Castle Hotel Budapest</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District I</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-buda-castle-hotel&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbuda-castle.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Buda Castle Hotel Budapest">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-buda-castle-hotel&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbuda-castle.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-castle-district-hotels-budapest/04-buda-castle-hotel-01.avif" alt="Buda Castle Hotel Budapest" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#4 Best Value Inside the Walls</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-buda-castle-hotel&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbuda-castle.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Buda Castle Hotel Budapest</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.50" aria-hidden="true"></span><b class="bpa-rate-score">9.0</b><span class="bpa-rate-meta">1k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-buda-castle-hotel&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbuda-castle.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.0</span><span class="bpa-rev-count">(1k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District I</strong></li><li>🛏️ Guest score: <strong>9/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €87<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-buda-castle-hotel&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbuda-castle.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Buda Castle Hotel Budapest</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1014 Budapest, Úri utca 39 (District I)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 2:00 PM; check-out until 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Trinity Square (750 ft), Matyas Church (900 ft), Maria Magdolna templom (950 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Street</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1180,21 +1188,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Castle Garden sits on <strong>Lovas utca at the foot of the western castle walls</strong>, a quiet, green street. For <strong>€79</strong> on the same night you get a 4-star with a <strong>sauna and hot tub</strong>, a bistro with a garden, and a <strong>parking garage</strong> with EV charging.</p><p>From 11 am to 5 pm coffee, tea and soft drinks are free in the lobby. Guests score it <strong>9.1</strong>.</p><p>You walk up to the walls to reach the castle lanes, so it suits drivers and anyone who wants calm after a day of sightseeing.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €79</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Hotel Castle Garden</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District I</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.1/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-castle-garden&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcastle-garden.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Hotel Castle Garden">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-castle-garden&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcastle-garden.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-castle-district-hotels-budapest/05-castle-garden-01.avif" alt="Hotel Castle Garden" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#5 Best with Sauna and Parking</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-castle-garden&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcastle-garden.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Hotel Castle Garden</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.55" aria-hidden="true"></span><b class="bpa-rate-score">9.1</b><span class="bpa-rate-meta">1.6k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-castle-garden&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcastle-garden.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.1</span><span class="bpa-rev-count">(1.6k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District I</strong></li><li>🛏️ Guest score: <strong>9.1/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €79<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-castle-garden&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcastle-garden.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Hotel Castle Garden</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1012 Budapest, Lovas u. 41. (District I)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it very good; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Spa and wellness centre, hot tub</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 2:00 PM to 11:00 PM; check-out until From 5:30 AM to 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Budavári Evangélikus Templom (700 ft), Középkori zsidó Imaház (900 ft), Maria Magdolna templom (1,100 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage, Electric charging, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1232,21 +1234,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Monastery Boutique is on <strong>Fő utca in Víziváros</strong>, the old district between Castle Hill and the Danube: about <strong>1,150 ft from Fisherman's Bastion</strong> and 2,150 ft from the Chain Bridge, with shops, cafés and restaurants around it.</p><p>For the same night it cost <strong>€101</strong>. Guests score it <strong>9.1</strong> from 2,445 reviews and rate the breakfast excellent. There is a superior family room.</p><p>The castle is an uphill walk; the river and the trams are at the bottom of the street.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €101</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Monastery Boutique Hotel Budapest</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District I</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.1/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-monastery&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmonastery-boutique-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Monastery Boutique Hotel Budapest">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-monastery&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmonastery-boutique-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-castle-district-hotels-budapest/06-monastery-01.avif" alt="Monastery Boutique Hotel Budapest" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#6 Best Between Castle and River</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-monastery&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmonastery-boutique-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Monastery Boutique Hotel Budapest</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.55" aria-hidden="true"></span><b class="bpa-rate-score">9.1</b><span class="bpa-rate-meta">2.4k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-monastery&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmonastery-boutique-budapest.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.1</span><span class="bpa-rev-count">(2.4k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District I</strong></li><li>🛏️ Guest score: <strong>9.1/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €101<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-monastery&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmonastery-boutique-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Monastery Boutique Hotel Budapest</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1011 Budapest, 30 Fő utca (District I)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until From 10:00 AM to 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Fisherman's Bastion (1,150 ft), Buda Castle Tunnel (1,400 ft), Matyas Church (1,400 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Street</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">pets welcome (fees may apply); airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1284,21 +1280,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Váralja Home is the budget pick: <strong>€72</strong> for the same night on Váralja utca, under the palace side of Castle Hill, about <strong>1,450 ft from the Royal Palace</strong> and the Budapest History Museum. Guests score it <strong>9.1</strong>, with value for money at 9.1.</p><p>It has <strong>parking on site</strong> with a garage, rare this close to the castle.</p><p>Keep it simple: check-in starts at 4 pm and check-out is by 11:30 am.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €72</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Váralja Home</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District I</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.1/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-varalja-home&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvaralja-home.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Váralja Home">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-varalja-home&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvaralja-home.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-castle-district-hotels-budapest/07-varalja-home-01.avif" alt="Váralja Home" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#7 Cheapest Near the Palace</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-varalja-home&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvaralja-home.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Váralja Home</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.55" aria-hidden="true"></span><b class="bpa-rate-score">9.1</b><span class="bpa-rate-meta">1.9k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-varalja-home&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvaralja-home.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.1</span><span class="bpa-rev-count">(1.9k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District I</strong></li><li>🛏️ Guest score: <strong>9.1/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €72<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-varalja-home&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fvaralja-home.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Váralja Home</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1013 Budapest, 3 Váralja utca (District I)</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 4:00 PM to 11:00 PM; check-out until From 11:00 AM to 11:30 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Buda Castle Tunnel (1,350 ft), Budapest History Museum (1,400 ft), Buda Royal Palace (1,450 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage, Street, Electric charging, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1336,21 +1326,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Carlton is on <strong>Apor Péter utca</strong>, a quiet side street 550 ft from the Castle Tunnel and <strong>1,350 ft from the Chain Bridge</strong>, so both the funicular up to the castle and the walk over to Pest are close. For the same night a standard room cost <strong>€77</strong>; rooms with a balcony and view were €101.</p><p>It has a <strong>parking garage</strong>, family rooms, and a reception that sells programme tickets and traveller packages.</p><p>Guests score it 8.9; breakfast is rated good.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €77</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Carlton Hotel Buda Castle</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District I</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.9/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-carlton&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcarltonhotelbudapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Carlton Hotel Buda Castle">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-carlton&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcarltonhotelbudapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-castle-district-hotels-budapest/08-carlton-01.avif" alt="Carlton Hotel Buda Castle" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#8 Best by the Chain Bridge</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-carlton&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcarltonhotelbudapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Carlton Hotel Buda Castle</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.45" aria-hidden="true"></span><b class="bpa-rate-score">8.9</b><span class="bpa-rate-meta">1.9k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-carlton&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcarltonhotelbudapest.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.9</span><span class="bpa-rev-count">(1.9k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District I</strong></li><li>🛏️ Guest score: <strong>8.9/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €77<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-castle-district-hotels-budapest-carlton&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcarltonhotelbudapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Carlton Hotel Buda Castle</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1011 Budapest, Apor Peter utca 3. (District I)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it good; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Buda Castle Tunnel (550 ft), Chain Bridge (1,350 ft), Fisherman's Bastion (1,500 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage, Electric charging, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">pets welcome (fees may apply); airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>

@@ -61,7 +61,39 @@ window.addEventListener('load', function() {
 <link id="ltt-language-switcher-styles" rel="stylesheet" href="/css/shared/ltt-language-switcher-styles.ebbf128d15.css"/><link id="CANONICAL_NAVBAR_UNIFIED_FONTS" rel="stylesheet" href="/css/shared/CANONICAL_NAVBAR_UNIFIED_FONTS.e6a1a25ced.css"/>
 <style>.ltt-mobile-drawer:not(.is-open){visibility:hidden !important;pointer-events:none !important;display:none !important;}.ltt-mobile-drawer.is-open{visibility:visible !important;pointer-events:auto !important;display:block !important;}</style><link id="ps-008fa3a483" data-ps-blocks="ltt-master-a11y-contrast ltt-wcag-contrast-fix bpa-light-bar" rel="stylesheet" href="/css/shared/bundle.008fa3a483.css"/>
 <link id="bpa-new-footer" rel="stylesheet" href="/css/shared/bpa-new-footer.4f85d90f75.css"/><link id="bpa-article-typography" rel="stylesheet" href="/css/shared/bpa-article-typography.c64a2a0b29.css"/>
-<link href="/css/listicle-base.css?v=9274f4ab72" rel="stylesheet"/><link href="/css/listicle-cards.css?v=b857249e22" rel="stylesheet"/><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+<link href="/css/listicle-base.css?v=9274f4ab72" rel="stylesheet"/><link href="/css/listicle-cards.css?v=b857249e22" rel="stylesheet"/><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/he">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -1030,39 +1062,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p class="how-i-calculate-reviews">חישוב הביקורות: אני משתמש במספר הביקורות הכולל של הפעילות מתוך GetYourGuide, Tripadvisor, Guruwalk ו-Viator.</p><blockquote><strong>💡 הערה:</strong> סקירה זו מבוססת על החוויה שלי בסיור באנגלית בשעה 8:00 בערב, בהדרכת ג'ו.</blockquote><p>היכנסו לעולם המסתורין של הלילה עם <strong>סיור ההליכה היחיד במינו</strong> בבודפשט, המתמקד ב<strong>פולקלור של אל-מתים וסיפורים מצמררים</strong> מהונגריה וממזרח אירופה.</p><p>זה לא עוד סיור הליכה היסטורי שגרתי; התכוננו לסיפורים מעוררי צמרמורת שצוללים עמוק לתוך <strong>מיתוסים ממזרח אירופה על ערפדים, רוחות רפאים ואל-מתים</strong>.</p><h3>נקודות השיא של הסיור</h3><p>אני יכול להעיד שהסיור הזה הוא לא סתם עוד סיור הליכה בבודפשט. זו <strong>חוויית סיפור סוחפת</strong>. המדריך שלנו, ג'ו, שמביא איתו <strong>20 שנות ניסיון במשחק אלתור</strong>, מעניק עומק, הומור וטוויסט דרמטי למיתוסים של מזרח אירופה.</p><p>כישורי הסיפור המהפנטים שלו משתלבים עם האווירה המיסטית ו<strong>היופי של רובע הטירה בלילה</strong>, תפאורה שמעשירה את הסיפורים והופכת את הסיור לבלתי נשכח באמת.<br/></p><h3>נקודת התחלה ונגישות</h3><p>המסע מתחיל ב<strong>כיכר אדם קלארק</strong>, הממוקמת למרגלות גבעת בודה. מכאן תתחילו ב<strong>טיפוס של 5-10 דקות</strong> במדרגות הגבעה. עבור מטיילים עם קשיי ניידות, קיימת אפשרות לעלות לפסגה בפוניקולר בתוספת תשלום של 10€.</p><h3>גודל הקבוצה</h3><p>גודל הקבוצה היה מאוזן בצורה מושלמת, ומנה בין <strong>20 ל-25 משתתפים</strong>. הדבר איפשר <strong>להתחבר בקלות למשתתפים אחרים בסיור </strong>מבלי לסבך את ההיבטים המעשיים של הסיור, כמו הליכה ומציאת נקודת האזנה טובה סביב המדריך שלנו.</p><h3>נקודות לביקורת</h3><p>אף שג'ו הוא מספר סיפורים סוחף, הרגשתי שהחצי השני של הסיור איבד מעט מהניצוץ ההתחלתי שלו. לאחר ששמענו 5-6 מתוך סך עשרת הסיפורים, אופן ההגשה התחיל להרגיש מעט <strong>חזרתי</strong>.</p><p>יחד עם השעה המאוחרת של הערב, <strong>האנרגיה של הקבוצה דעכה</strong> לקראת הסוף. עם זאת, הדינמיות של ג'ו שומרת על אווירה מחשמלת לאורך רוב הסיור.</p><h3>האם כדאי להצטרף?</h3><p>אם עובדות היסטוריות פחות מעניינות אתכם ואתם נמשכים יותר ל<strong>פולקלור האפל והמסתורי</strong> של בודפשט ומזרח אירופה, זהו סיור שאסור לפספס. זו דרך מרתקת לגלות את רובע הטירה בחסות החשיכה.</p><h3>דרכי הגעה</h3><ul role="list"><li>🗺️ <strong>נקודת מפגש: </strong>נפגשים ב<a href="https://goo.gl/maps/QXW2LsCz6ynWK2Tk6" target="_blank">כיכר אדם קלארק</a> בבודפשט, ליד אבן הקילומטר אפס הסמוכה לכניסה לפוניקולר.</li><li>🚌 <strong>תחבורה ציבורית:</strong> עלו על קווי האוטובוס 105/16/178/216/R16 מכיכר אליזבת.</li><li>🚶 <strong>ברגל:</strong> צאו להליכה ציורית על פני גשר השלשלאות Széchenyi ששופץ לאחרונה.</li></ul><div class="ltt-filmstrip-wrap"><button aria-label="תמונה קודמת" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="תמונה הבאה" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="גלריית רצועת תמונות 1" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="חישוב הביקורות: אני משתמש בסך כל הביקורות של הפעילות מתוך GetYourGuide,…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a7845f940d47fb880b33_Vampire%20Walking%20Tour%20(9).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>חישוב הביקורות: אני משתמש במספר הביקורות הכולל של הפעילות מתוך GetYourGuide,…</span></div></div><div class="ltt-strip-slide"><img alt="אני יכול להעיד שהסיור הזה הוא לא עוד סיור הליכה רגיל בבודפשט. זוהי חוויה סוחפת…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a48ba5f2e8bea5e2ae46_Vampire%20Walking%20Tour%20(2).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>אני יכול להעיד שהסיור הזה הוא לא סתם עוד סיור הליכה בבודפשט. זו חווייה…</span></div></div><div class="ltt-strip-slide"><img alt="המסע מתחיל בכיכר אדם קלארק, הממוקמת למרגלות גבעת בודה." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a48b4133b5962d6ab825_Vampire%20Walking%20Tour%20(4).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>המסע מתחיל בכיכר אדם קלארק, הממוקמת למרגלות גבעת בודה.</span></div></div><div class="ltt-strip-slide"><img alt="גודל הקבוצה שמר על איזון מושלם, ומנה בין 20 ל-25 משתתפים." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a489ecf32dc7dd179a76_Vampire%20Walking%20Tour%20(1).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>גודל הקבוצה היה מאוזן בצורה מושלמת, ומנה בין 20 ל-25 משתתפים.</span></div></div><div class="ltt-strip-slide"><img alt="למרות שג'ו הוא דובר מרתק, הרגשתי שהחצי השני של הסיור מאבד קצת מה…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a48b4133b5962d6ab7d2_Vampire%20Walking%20Tour%20(6).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>אף שג'ו הוא מספר סיפורים סוחף, הרגשתי שהחצי השני של הסיור איבד מעט מהניצוץ…</span></div></div><div class="ltt-strip-slide"><img alt="אם אתם פחות מתעניינים בעובדות היסטוריות ויותר נמשכים לצד האפל וה…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a48be5685905ad1bc079_Vampire%20Walking%20Tour%20(3).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>אם עובדות היסטוריות פחות מעניינות אתכם ואתם נמשכים יותר לפולקלור האפל והמסתורי…</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>כרטיסים רשמיים וזמינות בזמן אמת</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">החל מ-€18</span>
-<span class="ltt-buy-price-sub">2 שעות • ביטול חינם</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">סיור הליכה לילי בעקבות ערפדים ברובע טירת בודה</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">שובר QR מיידי לסמארטפון</span>
-<span class="ltt-buy-perk">החזר כספי מלא עד 24 שעות מראש</span>
-<span class="ltt-buy-perk">נקודת יציאה: <strong>טירת בודה</strong></span>
-<span class="ltt-buy-perk">משך הסיור: <strong>2 שעות</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-the-legendary-vampires-at-the-castle-s-court-t59444/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-vampire&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>בדקו תאריכים והזמינו כרטיסים</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>המחיר הטוב ביותר מובטח • אישור מיידי</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="סיור הליכה לילי בעקבות ערפדים ברובע טירת בודה">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-the-legendary-vampires-at-the-castle-s-court-t59444/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-vampire&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a48b4133b5962d6ab7d2_Vampire%20Walking%20Tour%20(6).webp" alt="סיור הליכה לילי בעקבות ערפדים ברובע טירת בודה" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#1 Mysterium Tours</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-the-legendary-vampires-at-the-castle-s-court-t59444/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-vampire&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">סיור הליכה לילי בעקבות ערפדים ברובע טירת בודה</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.59"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">6.8k+ ביקורות · 3 אתרים</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>ממוצע של 3 אתרי הזמנה, משוקלל לפי מספר הביקורות</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-the-legendary-vampires-at-the-castle-s-court-t59444/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-vampire&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(4.6k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a><span class="bpa-rev-badge is-static"><img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">4.5</span><span class="bpa-rev-count">(1.5k+)</span></span><span class="bpa-rev-badge is-static"><img alt="Tripadvisor" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,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"/><span class="bpa-rev-site">Tripadvisor</span><span class="bpa-rev-score">4.7</span><span class="bpa-rev-count">(700+)</span></span></span></div></details></div></div>
+<ul class="bpa-book-points"><li>שובר QR מיידי לסמארטפון</li><li>החזר כספי מלא עד 24 שעות מראש</li><li>נקודת יציאה: <strong>טירת בודה</strong></li><li>משך הסיור: <strong>2 שעות</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">החל מ-€18<small>2 שעות • ביטול חינם</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-the-legendary-vampires-at-the-castle-s-court-t59444/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-vampire&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">בדקו תאריכים והזמינו כרטיסים →</a></div>
+<div class="bpa-book-note">המחיר הטוב ביותר מובטח • אישור מיידי</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1121,39 +1130,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>💡 הערה:</strong> סקירה זו מבוססת על החוויה האישית שלי מסיור מערות בן 1.5 שעות באנגלית.</blockquote><p>גלו את המעמקים הנסתרים של בודפשט בתוך <strong>מערכת המערות הנרחבת</strong> השוכנת מתחת לרובע הטירה של העיר.</p><p>חלק זה, המוכר בשם Budavári barlang, <strong>נפתח מחדש לקהל בשנת 2019</strong> לאחר שהיה סגור למבקרים במשך שנים.</p><p>הסיור מתמקד במקטע מערות מרתק באורך <strong>3 ק"מ</strong> ולוקח אתכם למסע בזמן, <strong>החוקר את ההיסטוריה הגיאולוגית והאנושית</strong> של המנהרות התת-קרקעיות המסתוריות הללו.</p><h3>נקודות השיא של הסיור</h3><p>מה שמייחד את הסיור הזה הוא <strong>ההקפדה על דיוק היסטורי</strong>.</p><p>תלמדו כיצד נוצרו המערות הללו במשך מיליוני שנים, ואפילו תוכלו לראות <strong>היכן ממותה השאירה אחת משיניה</strong>!</p><p>מעבר לגיאולוגיה, הסיור צולל אל תוך <strong>היסטוריה בת 800 שנה</strong> של שימוש אנושי במערות: ממחסנים בימי הביניים והעלמות מס, דרך שימושן כבתי כלא, מקלטים בזמן מלחמה ומקומות מסתור לפושעים, ועד למסיבות מחתרתיות בשנות ה-90.</p><p>הטמפרטורה בתוך המערה עומדת בממוצע על <strong>10-12°C</strong>, ולכן מומלץ להגיע עם <strong>לבוש חם ונעליים נוחות</strong> שלא אכפת לכם שיתלכלכו.</p><p>עם זאת, למי שמגיע בלבוש קיצי מחלקים <strong>שכמיות פונצ'ו בחינם</strong> כדי שתוכלו להתחמם.<br/></p><h3>נקודת התחלה ונגישות</h3><p>נקודת המפגש היא ב<strong>כיכר השילוש הקדוש (Trinity Square)</strong>, ממש ליד פסל השילוש הקדוש. הליכה קצרה של 5 דקות תוביל אתכם אל הכניסה למערה.</p><p>למרבה הצער, המערה אינה נגישה לאנשים עם מוגבלות בניידות.</p><h3>גודל הקבוצה</h3><p>עם קבוצה של <strong>20-25 משתתפים</strong>, הסיור יצר איזון מושלם, שאפשר התמצאות חלקה במערות דמויות המבוך וגם סיפורים מרתקים ואינטראקטיביים.</p><h3>נקודות לביקורת</h3><p>בכנות גמורה, <strong>כמעט ולא היו חסרונות למסע הייחודי הזה, אם בכלל.</strong></p><p>חברת הסיורים עושה מאמץ רב כדי להבטיח את נוחותם של כולם, והמדריכים המנוסים הופכים את החוויה למרתקת ומלמדת.</p><p>אם היסטוריה בשילוב נגיעה של גיאולוגיה מסקרנת אתכם, זה הסיור בשבילכם.</p><h3>האם כדאי להצטרף?</h3><p>בהחלט, כן!</p><p>הסיור הזה הוא<strong> </strong>בחירה מצוינת למי שמחפש משהו יותר <strong>נישתי ולא שגרתי</strong> מאשר סיור רגלי סטנדרטי. זו חוויה שמשאירה אתכם גם עם ידע חדש וגם עם תחושת סקרנות.</p><h3>דרכי הגעה</h3><p>🗺️ <strong>נקודת מפגש:</strong> נפגשים ב-<a href="https://goo.gl/maps/Pq2JUkaCqewB5Bx79" target="_blank">Szentháromság tér</a>, ממש מול הפסל שמול כנסיית מתיאש.<br/>🚌 <strong>תחבורה ציבורית:</strong> עלו על אוטובוס 16 מכיכר ארז'בט (Elizabeth Square) כדי להגיע לרובע הטירה.<br/>🚶♂️ <strong>ברגל:</strong> צאו להליכה ציורית על גשר השלשלאות Széchenyi ששופץ לאחרונה, עלו לגבעת בודה והגיעו אל כיכר השילוש הקדוש (Szentháromság tér).</p><div class="ltt-filmstrip-wrap"><button aria-label="תמונה קודמת" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="תמונה הבאה" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="גלריית תמונות 2" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="תמונת בדיקת שטח 1" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a89e012119ea6136de78_Cave-walking-tour%20(10).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 7</span> <span>תמונת בדיקת שטח 1</span></div></div><div class="ltt-strip-slide"><img alt="מה שמייחד את הסיור הזה הוא ההקפדה על דיוק היסטורי." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a8c5e5a13d680b19f3ee_Cave-walking-tour%20(5).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 7</span> <span>מה שמייחד את הסיור הזה הוא ההקפדה על דיוק היסטורי.</span></div></div><div class="ltt-strip-slide"><img alt="במערות קר. הפתרון? שכמיות." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a945012119ea61379ac4_Cave-walking-tour%20(7).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 7</span> <span>קר במערות. הפתרון? שכמיות פונצ'ו.</span></div></div><div class="ltt-strip-slide"><img alt="נקודת המפגש היא בכיכר השילוש הקדוש, ממש ליד פסל השילוש הקדוש." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a8e02324ecc4fb69ef07_All%20in%20One%20Walking%20Tour%20(13).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 7</span> <span>נקודת המפגש היא בכיכר השילוש הקדוש (Trinity Square), ממש ליד פסל השילוש הקדוש.</span></div></div><div class="ltt-strip-slide"><img alt="עם קבוצה בגודל של 20-25 משתתפים, הסיור שמר על איזון מושלם ואיפשר…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a90a23415b24210a6b43_Cave-walking-tour%20(9).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 7</span> <span>עם קבוצה של 20-25 משתתפים, הסיור יצר איזון מושלם שאפשר…</span></div></div><div class="ltt-strip-slide"><img alt="למען האמת, היו מעט מאוד חסרונות במסע הייחודי הזה, אם בכלל." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a91e10ac16f2e2443a9e_Cave-walking-tour%20(12).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 7</span> <span>בכנות גמורה, כמעט ולא היו חסרונות למסע הייחודי הזה, אם בכלל.</span></div></div><div class="ltt-strip-slide"><img alt="בהחלט, כן!" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a93534cd09847ca17935_Cave-walking-tour%20(3).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 7</span> <span>בהחלט, כן!</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>כרטיסים רשמיים וזמינות בזמן אמת</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">החל מ-€17</span>
-<span class="ltt-buy-price-sub">1.5 שעות • ביטול חינם</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">סיור הליכה במבוך המערות של טירת בודה</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">שובר QR מיידי לסמארטפון</span>
-<span class="ltt-buy-perk">החזר מלא עד 24 שעות מראש</span>
-<span class="ltt-buy-perk">נקודת יציאה: <strong>Dárda utca</strong></span>
-<span class="ltt-buy-perk">משך הסיור: <strong>1.5 שעות</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-buda-castle-caves-walking-tour-t391260/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-cave&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>בדקו תאריכים והזמינו כרטיסים</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>המחיר הטוב ביותר מובטח • אישור מיידי</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="סיור הליכה במבוך המערות של טירת בודה">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-buda-castle-caves-walking-tour-t391260/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-cave&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/best-walking-tours-budapest/buda-castle-cave-labyrinth-walking-tour-01.avif" alt="סיור הליכה במבוך המערות של טירת בודה" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#2 Danube-Ipoly Directorate</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-buda-castle-caves-walking-tour-t391260/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-cave&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">סיור הליכה במבוך המערות של טירת בודה</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.60"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">8k+ ביקורות · אתר אחד</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>דירוג ב-GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-buda-castle-caves-walking-tour-t391260/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-cave&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(8k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>שובר QR מיידי לסמארטפון</li><li>החזר מלא עד 24 שעות מראש</li><li>נקודת יציאה: <strong>Dárda utca</strong></li><li>משך הסיור: <strong>1.5 שעות</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">החל מ-€17<small>1.5 שעות • ביטול חינם</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-buda-castle-caves-walking-tour-t391260/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-cave&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">בדקו תאריכים והזמינו כרטיסים →</a></div>
+<div class="bpa-book-note">המחיר הטוב ביותר מובטח • אישור מיידי</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1212,39 +1198,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>💡 הערה: </strong>סקירה זו מבוססת על החוויה האישית שלי בסיור רגלי באנגלית שארך 2.5 שעות.</blockquote><p>העמיקו במורשת היהודית העשירה של בודפשט בסיור מרתק ומאיר עיניים זה.</p><p>הסיור אינו מתמקד רק בצלילה עמוקה אל השנים הקשות של <strong>מלחמת העולם השנייה</strong>, אלא גם מציג <strong>היסטוריה מקיפה של החיים היהודיים בהונגריה</strong> עוד מימי הביניים.</p><p>כהונגרי שכביכול מכיר את המדינה הזו היטב, עדיין למדתי שפע של עובדות היסטוריות מסקרנות.</p><h3>נקודות השיא של הסיור</h3><p>עבור חובבי היסטוריה שמחפשים מעבר למידע שטחי בלבד, הסיור הזה הוא מכרה זהב.</p><p>המדריך מעניק <strong>הסברים מעמיקים ברמה אקדמית</strong>, הדורשים <strong>רמה גבוהה של אנגלית</strong> (אלא אם תצטרפו לסיור בספרדית, כמובן).</p><p>בין האתרים המרכזיים נכללים <strong>בתי כנסת ואנדרטאות מרגשות</strong> המוקדשות לגיבורים שהתנגדו לדיכוי של הנאצים ושל מפלגת צלב החץ.<br/></p><h3>נקודת התחלה ונגישות</h3><p>הסיור יוצא מ-<strong>Imre Madách Square</strong> ומסתיים בDohány Street Synagogue. כל הסיור מתקיים בחוץ והוא נגיש לכיסאות גלגלים, ו<strong> הוא מתנהל ברובע היהודי</strong> (הרובע השביעי), שבו נמצאים כמה מ<a href="/he/hostelim-budapest">ההוסטלים הטובים בבודפשט</a>.</p><h3>גודל הקבוצה</h3><p>הסיור נבנה היטב כדי להתאים ל<strong>קבוצה בגודל בינוני (20-30 משתתפים)</strong>, כך שכולם יוכלו לשמוע את המדריך בבירור ולראות את האתרים.</p><h3>נקודות לביקורת</h3><p>אף שהסיור היה מצוין בסך הכל, <strong>המדריך</strong> <strong>היה יכול להציג את עצמו</strong> בצורה רשמית יותר (מאחר שהוא ניגש ישר לחומר) ו<strong>לאפשר הפסקות קצרות לעיכול המידע</strong> בין ההסברים המעמיקים שלו (שכן לעיתים הדיבור שלו הרגיש כמו קריאה מהירה מדי).</p><h3>האם כדאי להצטרף?</h3><p>אני ממליץ בחום ל<strong>חובבי היסטוריה</strong> שמעריכים סיור מעמיק, מפורט ובעל ניואנסים על ההיסטוריה היהודית בבודפשט.</p><h3>דרכי הגעה</h3><p>🗺️ <strong>נקודת מפגש: </strong><a href="https://goo.gl/maps/xQoCWMZXzY7v44Kx5" target="_blank">Budapest, Madách Imre út 2, 1075 Hungary. </a>חפשו את המטרייה הצהובה ליד פסל סיסי (Sissi).<br/>🚌 <strong>תחבורה ציבורית:</strong> נגיש בקלות מכל מקום בעיר באמצעות כל קווי המטרו או קווי הטראם 47/49 לכיכר דאק פרנץ (Deák Ferenc tér), ומשם הליכה קצרה לפסל סיסי.<br/>🚶♂️ <strong>ברגל: </strong>מרכז בודפשט נוח מאוד להליכה. תוכלו להגיע בקלות לנקודת המפגש בהליכה נינוחה של 15-20 דקות מרוב המיקומים המרכזיים.</p><div class="ltt-filmstrip-wrap"><button aria-label="תמונה קודמת" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="תמונה הבאה" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="גלריית תמונות 3" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="תמונת בדיקת שטח 1" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a962741588aefc3ca6e7_WW2%20Jewish%20Quarter%20Walking%20Tour%20(6).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>תמונה מהשטח 1</span></div></div><div class="ltt-strip-slide"><img alt="לחובבי היסטוריה שמחפשים יותר מסתם מידע שטחי, הסיור הזה הוא…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a974c8931dba57b758e6_WW2%20Jewish%20Quarter%20Walking%20Tour%20(9).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>עבור חובבי היסטוריה שמחפשים מעבר למידע שטחי בלבד, הסיור הזה הוא…</span></div></div><div class="ltt-strip-slide"><img alt="הסיור יוצא מכיכר אימרה מדאץ' ומסתיים בבית הכנסת ברחוב דוהאן." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9a6dd44c9b55d0396c8_WW2%20Jewish%20Quarter%20Walking%20Tour%20(4).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>הסיור יוצא מכיכר מדאץ' אימרה (Imre Madách Square) ומסתיים בבית הכנסת ברחוב דוהאני (Dohány Street Synagogue).</span></div></div><div class="ltt-strip-slide"><img alt="הסיור היה בנוי היטב עבור קבוצה בגודל בינוני (20-30 איש), והבטיח…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a97e0c385a4c54577c42_WW2%20Jewish%20Quarter%20Walking%20Tour%20(3).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>הסיור נבנה היטב כדי להתאים לקבוצה בגודל בינוני (20-30 משתתפים), כך שכולם…</span></div></div><div class="ltt-strip-slide"><img alt="למרות שהסיור היה מצוין בסך הכל, המדריך יכול היה להציג את עצמו קצת יותר…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9b5b54fef43d38c55f8_WW2%20Jewish%20Quarter%20Walking%20Tour%20(7).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>אף שהסיור היה מצוין בסך הכל, המדריך היה יכול להציג את עצמו בצורה רשמית…</span></div></div><div class="ltt-strip-slide"><img alt="אני ממליץ בחום לחובבי היסטוריה שמעריכים סיור מעמיק ומפורט…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9c70c385a4c5457d028_WW2%20Jewish%20Quarter%20Walking%20Tour%20(2).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>אני ממליץ בחום לחובבי היסטוריה שמעריכים סיור מעמיק, מפורט ובעל ניואנסים…</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>כרטיסים רשמיים וזמינות בזמן אמת</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">חינם (מבוסס טיפ)</span>
-<span class="ltt-buy-price-sub">2.5 שעות • ביטול בחינם</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">סיור ההליכה הטוב ביותר ברובע היהודי</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">שובר QR מיידי לסמארטפון</span>
-<span class="ltt-buy-perk">החזר מלא עד 24 שעות מראש</span>
-<span class="ltt-buy-perk">יציאה: <strong>Madách tér</strong></span>
-<span class="ltt-buy-perk">משך: <strong>2.5 שעות</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.guruwalk.com/walks/32765-nazism-and-world-war-ii-jewish-quarter-free-walking-tour?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">
-<span>בדקו תאריכים והזמינו כרטיסים</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>המחיר הטוב ביותר מובטח • אישור מיידי</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="סיור ההליכה הטוב ביותר ברובע היהודי">
+<a class="bpa-book-img" href="https://www.guruwalk.com/walks/32765-nazism-and-world-war-ii-jewish-quarter-free-walking-tour?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a962741588aefc3ca6e7_WW2%20Jewish%20Quarter%20Walking%20Tour%20(6).webp" alt="סיור ההליכה הטוב ביותר ברובע היהודי" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#3 Budapesttours</div>
+<a class="bpa-book-title" href="https://www.guruwalk.com/walks/32765-nazism-and-world-war-ii-jewish-quarter-free-walking-tour?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">סיור ההליכה הטוב ביותר ברובע היהודי</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.90"></span><b class="bpa-rate-score">4.9</b><span class="bpa-rate-meta">3k+ ביקורות · אתר אחד</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>דירוג ב-GuruWalk</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.guruwalk.com/walks/32765-nazism-and-world-war-ii-jewish-quarter-free-walking-tour?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank"><img alt="GuruWalk" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,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"/><span class="bpa-rev-site">GuruWalk</span><span class="bpa-rev-score">4.9</span><span class="bpa-rev-count">(3k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>שובר QR מיידי לסמארטפון</li><li>החזר מלא עד 24 שעות מראש</li><li>יציאה: <strong>Madách tér</strong></li><li>משך: <strong>2.5 שעות</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">חינם (מבוסס טיפ)<small>2.5 שעות • ביטול בחינם</small></div><a class="bpa-book-btn" href="https://www.guruwalk.com/walks/32765-nazism-and-world-war-ii-jewish-quarter-free-walking-tour?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">בדקו תאריכים והזמינו כרטיסים →</a></div>
+<div class="bpa-book-note">המחיר הטוב ביותר מובטח • אישור מיידי</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1303,39 +1266,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>💡 הערה: </strong>סקירה זו מבוססת על החוויה האישית שלי בסיור רגלי באנגלית שארך 2.25 שעות.</blockquote><p>סיור רגלי זה הוא דרך מושלמת לקבל <strong>סקירה כללית של ההיסטוריה של בודפשט</strong>, והוא מתקיים ברובע הפנימי של פשט.</p><p>תוכלו לקבל הצצה מעמיקה אל העבר שלנו, כולל הזמנים הסוערים של <strong>התקופה הסובייטית</strong>, <strong>התקופה שלאחר נפילת חומת ברלין</strong> שאנו מכנים "חילופי המשטר" (The System Change), ואפילו <strong>היסטוריה עכשווית</strong> וסוגיות שנויות במחלוקת.</p><h3>נקודות השיא של הסיור</h3><p>ל<strong>מבקרים בפעם הראשונה</strong> המחפשים היכרות מקיפה עם ההיסטוריה העשירה של בודפשט, הסיור הזה הוא בחירה אידיאלית. הסיור מציע לא רק דיוק היסטורי אלא גם תובנות מקומיות, הודות ל<strong>מדריכה ההונגרייה שלנו</strong>.</p><h3>נקודת התחלה ונגישות</h3><p><strong>נקודת המפגש היא בכיכר Kossuth </strong>ליד <a href="/he/כרטיסים-לפרלמנט-בודפשט">הפרלמנט ההונגרי</a>. ליתר דיוק, היא <strong>קרובה לתחנת מטרו M2 ו/או לתחנת חשמלית</strong>. הסיור ידידותי לכיסא גלגלים ומקבל בברכה אנשים עם מוגבלויות ניידות. הסיור מסתיים בכיכר Vigadó.</p><h3>גודל הקבוצה</h3><p>היינו בערך <strong>30 משתתפים</strong>. למרות שזו הייתה קבוצה גדולה יותר, הדבר לא פגע בהנאה או בערך הלימודי של הסיור. אפילו פיתחתי כמה שיחות נעימות עם מטיילים אחרים בקבוצה.</p><h3>נקודות לביקורת</h3><p>הבעיה הקטנה היחידה הייתה ש<strong>מדריכת הסיור לא הייתה דוברת אנגלית כשפת אם</strong>. עם זאת, נקודת המבט ההונגרית המקומית והאותנטית שלה פיצתה על כך מעל ומעבר.</p><h3>האם כדאי להצטרף?</h3><p>אתם כבר יודעים את התשובה: כן! במיוחד אם אתם <strong>מבקרים בפעם הראשונה שרוצים סקירה היסטורית עשירה</strong> של בודפשט, תמצאו שהסיור הזה כדאי מאוד.</p><h3>דרכי הגעה</h3><p>🗺️ <strong>נקודת מפגש:</strong> נפגשים ב<a href="https://goo.gl/maps/P5b4yRWVh4vfrww67" target="_blank">כיכר קושוט לאיוש</a>, ממש ליד תחנת החשמלית. חפשו מטרייה כתומה.<br/>🚌 <strong>תחבורה ציבורית:</strong> קחו מטרו או חשמלית קו 2 והמשיכו בהליכה קצרה אל נקודת המפגש.<br/>🚶♂️ <strong>ברגל:</strong> אזורי המרכז של בודפשט נוחים מאוד להליכה. תוכלו להגיע בנוחות לנקודת המפגש שלנו בהליכה של 15-20 דקות מרוב המקומות המרכזיים.</p><div class="ltt-filmstrip-wrap"><button aria-label="תמונה קודמת" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="תמונה הבאה" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="גלריית תמונות 4" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="תמונת בדיקת שטח 1" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9e69165aa480e2191dd_Pest%20Walking%20Tour%20(9).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>תמונה מהשטח 1</span></div></div><div class="ltt-strip-slide"><img alt="למבקרים בפעם הראשונה שמחפשים היכרות מקיפה עם ההיסטוריה העשירה של בודפשט,…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9fcab96feb3ee4822df_Pest%20Walking%20Tour%20(4).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>למבקרים בפעם הראשונה המחפשים היכרות מקיפה עם ההיסטוריה העשירה של בודפשט,…</span></div></div><div class="ltt-strip-slide"><img alt="מיקום המפגש הוא בכיכר קושוט ליד הפרלמנט ההונגרי." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa08f8ee33524047cdf3_Pest%20Walking%20Tour%20(10).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>נקודת המפגש היא בכיכר קושוט ליד הפרלמנט ההונגרי.</span></div></div><div class="ltt-strip-slide"><img alt="היינו בקבוצה של כ-30 משתתפים." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa18b2ff17a3658353d0_Pest%20Walking%20Tour%20(5).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>היינו בערך 30 משתתפים.</span></div></div><div class="ltt-strip-slide"><img alt="הבעיה הקטנה היחידה הייתה שמדריך הסיור לא היה דובר אנגלית שפת אם." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa2b7eeef24bb914cd46_Pest%20Walking%20Tour%20(8).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>הבעיה הקטנה היחידה הייתה שמדריכת הסיור לא הייתה דוברת אנגלית כשפת אם.</span></div></div><div class="ltt-strip-slide"><img alt="אתם כבר יודעים את התשובה: כן!" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa420cfff4a85997ea49_Pest%20Walking%20Tour%20(2).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>אתם כבר יודעים את התשובה: כן!</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>כרטיסים רשמיים וזמינות בזמן אמת</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">חינם (מבוסס על טיפים)</span>
-<span class="ltt-buy-price-sub">2.25 שעות • ביטול חינם</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">סיור ההליכה הטוב ביותר במרכז העיר בודפשט</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">שובר QR מיידי לסמארטפון</span>
-<span class="ltt-buy-perk">החזר מלא עד 24 שעות לפני</span>
-<span class="ltt-buy-perk">יציאה: <strong>Kossuth Lajos tér</strong></span>
-<span class="ltt-buy-perk">משך: <strong>2.25 שעות</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.guruwalk.com/walks/16551-free-tour-insightful-budapest-hungary-unfolded?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">
-<span>בדקו תאריכים והזמינו כרטיסים</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>המחיר הטוב ביותר מובטח • אישור מיידי</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="סיור ההליכה הטוב ביותר במרכז העיר בודפשט">
+<a class="bpa-book-img" href="https://www.guruwalk.com/walks/16551-free-tour-insightful-budapest-hungary-unfolded?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9e69165aa480e2191dd_Pest%20Walking%20Tour%20(9).webp" alt="סיור ההליכה הטוב ביותר במרכז העיר בודפשט" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#4 GoZeppelin Tours</div>
+<a class="bpa-book-title" href="https://www.guruwalk.com/walks/16551-free-tour-insightful-budapest-hungary-unfolded?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">סיור ההליכה הטוב ביותר במרכז העיר בודפשט</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.90"></span><b class="bpa-rate-score">4.9</b><span class="bpa-rate-meta">10k+ ביקורות · אתר אחד</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>דירוג ב-GuruWalk</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.guruwalk.com/walks/16551-free-tour-insightful-budapest-hungary-unfolded?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank"><img alt="GuruWalk" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,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"/><span class="bpa-rev-site">GuruWalk</span><span class="bpa-rev-score">4.9</span><span class="bpa-rev-count">(10k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>שובר QR מיידי לסמארטפון</li><li>החזר מלא עד 24 שעות לפני</li><li>יציאה: <strong>Kossuth Lajos tér</strong></li><li>משך: <strong>2.25 שעות</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">חינם (מבוסס על טיפים)<small>2.25 שעות • ביטול חינם</small></div><a class="bpa-book-btn" href="https://www.guruwalk.com/walks/16551-free-tour-insightful-budapest-hungary-unfolded?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">בדקו תאריכים והזמינו כרטיסים →</a></div>
+<div class="bpa-book-note">המחיר הטוב ביותר מובטח • אישור מיידי</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1394,39 +1334,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>💡 הערה:</strong> סקירה זו מבוססת על החוויה האישית שלי בסיור רגלי בן 2 שעות באנגלית.</blockquote><p>גלו את פניני האדריכלות וההיסטוריה של רובע הטירה בבודפשט בסיור רגלי ישיר ומרתק זה. הסיור מציע <strong>סקירה עובדתית ועניינית</strong> של אתרי החובה ברובע, ומתאים במיוחד למי שמחפש היכרות יסודית עם העבר המפואר של הונגריה.</p><h3>נקודות השיא של הסיור</h3><p>הסיור מציע הליכה מעשירה בין רחובות האבן המקסימים של רובע הטירה, ועובר באתרים מרכזיים כמו <strong>הארמון המלכותי ("טירת בודה"), כנסיית מתיאש ומצודת הדייגים</strong>.</p><p>מה שמתבלט במיוחד הוא המחויבות של הסיור לסיפור עובדתי, <strong>ללא אלמנטים על-טבעיים או בדיוניים</strong> שאולי תמצאו בסיורים אחרים.<br/></p><h3>נקודת התחלה ונגישות</h3><p>הסיור יוצא מ<strong>כיכר השילוש הקדוש</strong>, ממש מול פסל השילוש האיקוני. בנוסף, כל המסלול נגיש לכיסאות גלגלים, מה שהופך אותו לנוח עבור כולם</p><h3>גודל הקבוצה</h3><p>עם קבוצה של <strong>בערך 25 אנשים</strong>, היה קל לנוע והסיור לא הרגיש צפוף בשום שלב.</p><h3>נקודות לביקורת</h3><p>הסיור מספק בדיוק את מה שהוא מבטיח: סקירה מקיפה ועובדתית. עם זאת, <strong>התכוננו לתנאי מזג האוויר</strong>, כמו חום כבד, אם יצא לכם לבקר בגל חום כמוני. 😅</p><h3>האם כדאי להצטרף?</h3><p>בהחלט. אם אתם מחפשים <strong>סיור ישיר ומבוסס עובדות</strong> ברובע הטירה של בודפשט, הסיור הזה מתאים בדיוק.</p><h3>דרכי הגעה</h3><p>🗺️ <strong>נקודת מפגש:</strong> נפגשים ב-<a href="https://goo.gl/maps/Pq2JUkaCqewB5Bx79" target="_blank">Szentháromság tér</a>, ממש מול הפסל שמול כנסיית מתיאש.<br/>🚌 <strong>תחבורה ציבורית:</strong> עלו על אוטובוס 16 מכיכר ארז'בט (Elizabeth Square) כדי להגיע לרובע הטירה.<br/>🚶♂️ <strong>ברגל:</strong> צאו להליכה ציורית על גשר השלשלאות Széchenyi ששופץ לאחרונה, עלו לגבעת בודה והגיעו אל כיכר השילוש הקדוש (Szentháromság tér).</p><div class="ltt-filmstrip-wrap"><button aria-label="תמונה קודמת" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="תמונה הבאה" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="גלריית תמונות 5" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="תמונת בדיקת שטח 1" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa665536d44a917a4be1_Buda%20Castle%20Walking%20Tour%20(10).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>תמונה מהשטח 1</span></div></div><div class="ltt-strip-slide"><img alt="הסיור מציע הליכה מעשירה ברחובות המרוצפים והמקסימים של רובע הטירה…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aab76a90d3270b8a5f22_Buda%20Castle%20Walking%20Tour%20(13).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>הסיור מציע הליכה מעשירה בין רחובות האבן המקסימים של רובע הטירה…</span></div></div><div class="ltt-strip-slide"><img alt="הסיור מתחיל בכיכר השילוש הקדוש, ממש מול פסל השילוש הקדוש האייקוני." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aae8db5d54ad86f5d18f_Buda%20Castle%20Walking%20Tour%20(7).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>הסיור יוצא מכיכר השילוש הקדוש, ממש מול פסל השילוש האיקוני.</span></div></div><div class="ltt-strip-slide"><img alt="עם קבוצה של כ-25 איש, היה קל להתנייד והסיור מעולם לא הרגיש…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aaf8060885d81f1a5826_Buda%20Castle%20Walking%20Tour%20(4).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>עם קבוצה של בערך 25 אנשים, היה קל לנוע והסיור לא הרגיש…</span></div></div><div class="ltt-strip-slide"><img alt="הסיור מספק בדיוק את מה שהוא מבטיח: סקירה מקיפה ומבוססת עובדות." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab0d3fe3f203a88ae5ae_Buda%20Castle%20Walking%20Tour%20(1).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>הסיור מספק בדיוק את מה שהוא מבטיח: סקירה מקיפה ועובדתית.</span></div></div><div class="ltt-strip-slide"><img alt="בהחלט." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab1ba5e26b34774d7e87_Buda%20Castle%20Walking%20Tour%20(15).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>בהחלט.</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>כרטיסים רשמיים וזמינות בזמן אמת</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">החל מ-€12</span>
-<span class="ltt-buy-price-sub">2 שעות • ביטול חינם</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">סיור ההליכה הטוב ביותר ברובע טירת בודה</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">שובר QR מיידי לטלפון</span>
-<span class="ltt-buy-perk">החזר כספי מלא עד 24 שעות מראש</span>
-<span class="ltt-buy-perk">יציאה: <strong>Szentháromság tér</strong></span>
-<span class="ltt-buy-perk">משך: <strong>2 שעות</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-buda-castle&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>בדקו תאריכים והזמינו כרטיסים</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>המחיר הטוב ביותר מובטח • אישור מיידי</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="סיור ההליכה הטוב ביותר ברובע טירת בודה">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-buda-castle&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/best-walking-tours-budapest/best-buda-castle-district-walking-tour-01.avif" alt="סיור ההליכה הטוב ביותר ברובע טירת בודה" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#5 Tourist Angel Smc</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-buda-castle&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">סיור ההליכה הטוב ביותר ברובע טירת בודה</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.60"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">2.4k+ ביקורות · אתר אחד</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>דירוג ב-GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-buda-castle&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(2.4k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>שובר QR מיידי לטלפון</li><li>החזר כספי מלא עד 24 שעות מראש</li><li>יציאה: <strong>Szentháromság tér</strong></li><li>משך: <strong>2 שעות</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">החל מ-€12<small>2 שעות • ביטול חינם</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-buda-castle&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">בדקו תאריכים והזמינו כרטיסים →</a></div>
+<div class="bpa-book-note">המחיר הטוב ביותר מובטח • אישור מיידי</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1485,39 +1402,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>💡 שימו לב: </strong>סקירה זו מבוססת על החוויה האישית שלי בסיור רגלי בן 3 שעות באנגלית.</blockquote><p>צאו ל<strong>סיור בן 3 שעות</strong> מקיף בבודפשט, המקיף <strong>את צד פשט ואת צד בודה</strong> בעיר האייקונית.</p><p>בשילוב של <strong>נסיעות באוטובוס ממוזג והליכה נינוחה</strong> תראו את <a href="/he/ma-laasot-bebudapest">האתרים המרכזיים</a>, מHeroes' Square ועד רובע הטירה, ותשמעו את ההיסטוריה שלהם.</p><p>למרות שהוא מספק מבט רחב, היכונו ל<strong>סקירה שטחית יחסית</strong> שנוגעת בכל אזור בנפרד, אך אינה מעמיקה בו.</p><h3>נקודות השיא של הסיור</h3><p>הסיור העניק לי <strong>מבט ממעוף הציפור על בודפשט</strong>. הוא נפתח בעצירה קצרה אך עשירה במידע ב<strong>כיכר הגיבורים</strong> והמשיך בנסיעה על פני אתרים מקומיים כמו בית האופרה, Városliget (הפארק העירוני) ותחנת הרכבת קלטי (Keleti).</p><p>מה שמייחד את הסיור הזה הוא הגישה הייחודית לעלייה לגבעת הטירה, כשהטיפוס נעשה <strong>מהצד הנגדי לדנובה</strong>, שינוי מרענן לעומת סיורים טיפוסיים.<br/></p><h3>נקודת התחלה ונגישות</h3><p>המסלול מתחיל ב<strong>כיכר קלארק אדם (Clark Ádám)</strong>, השוכנת למרגלות גבעת בודה. מכאן תצאו ל<strong>טיפוס של 5-10 דקות</strong> במעלה מדרגות הגבעה. הערת אזהרה: הסיור אינו מתאים לאנשים עם מוגבלות בניידות.</p><h3>גודל הקבוצה</h3><p><strong>הסיור היה בנוי</strong> היטב כך שיתאים לקבוצה בגודל בינוני, מה שהבטיח שכולם יוכלו לשמוע את המדריך בבירור ולראות את האתרים.</p><h3>נקודות לביקורת</h3><p>אף שהסיור היה <strong>מקיף, הוא השאיר בי טעם של עוד</strong>, במיוחד בכל הנוגע לביקור בצד של פשט.</p><p>העצירה הקצרה בכיכר הגיבורים ו<strong>המבט החולף תוך כדי נסיעה</strong> אינם עושים צדק לעושר של האתרים.</p><p>עם זאת, האוטובוס הממוזג היה מפלט מבורך מהחום המעיק. הסיור ברובע הטירה, לעומת זאת, היה מרהיב.</p><h3>האם כדאי להצטרף?</h3><p>אם אתם <strong>מוגבלים בזמן</strong> אך עדיין רוצים סקירה מהירה של בודפשט, הסיור הזה מתאים בדיוק. למי שמחפש היכרות מעמיקה יותר, כדאי <strong>להקדיש לכך יום שלם</strong>.</p><h3>דרכי הגעה</h3><p>🗺️ <strong>נקודת מפגש: </strong>נפגשים במשרד סוכנות הנסיעות Cityrama &amp; Gray Line, בכתובת <a href="https://goo.gl/maps/6pewzgA4LQVj6EKA6" target="_blank">Báthory utca 19, 1054 Budapest, Hungary</a>.<br/>🚌 <strong>תחבורה ציבורית:</strong> עלו על קווי המטרו 2 או 3 ולכו מרחק קצר ברגל לנקודת המפגש.<br/>🚶♂️ <strong>ברגל:</strong> האזורים המרכזיים של בודפשט נוחים מאוד להליכה. תוכלו להגיע בנוחות לנקודת המפגש שלנו בהליכה נינוחה של 15-20 דקות מרוב המקומות המרכזיים.</p><div class="ltt-filmstrip-wrap"><button aria-label="תמונה קודמת" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="תמונה הבאה" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="גלריית תמונות 6" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="תמונת בדיקת שטח 1" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab3947c2731b07da4884_All%20in%20One%20Walking%20Tour%20(16).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 7</span> <span>תמונת בדיקת שטח 1</span></div></div><div class="ltt-strip-slide"><img alt="בעזרת שילוב של נסיעות באוטובוס ממוזג והליכה נינוחה, תהיה לכם הזדמנות…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab5efd1746ad2656f8a0_All%20in%20One%20Walking%20Tour%20(8).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 7</span> <span>בעזרת שילוב של נסיעות באוטובוס ממוזג והליכה נינוחה, תהיה לכם ההזדמנות…</span></div></div><div class="ltt-strip-slide"><img alt="הסיור נתן לי מבט ממעוף הציפור על בודפשט." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab4e4c6fedcabe27aa05_All%20in%20One%20Walking%20Tour%20(12).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 7</span> <span>הסיור העניק לי מבט ממעוף הציפור על בודפשט.</span></div></div><div class="ltt-strip-slide"><img alt="המסע מתחיל בכיכר אדם קלארק, הממוקמת למרגלות גבעת בודה." loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab6e97747bcde67d8abf_All%20in%20One%20Walking%20Tour%20(14).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 7</span> <span>המסלול מתחיל בכיכר קלארק אדם (Clark Ádám), השוכנת למרגלות גבעת בודה.</span></div></div><div class="ltt-strip-slide"><img alt="הסיור היה בנוי היטב עבור קבוצה בגודל בינוני, והבטיח שכולם יוכלו…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab7e9cecaecc5731db1e_All%20in%20One%20Walking%20Tour%20(18).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 7</span> <span>הסיור היה בנוי היטב כך שיתאים לקבוצה בגודל בינוני, מה שהבטיח שכולם יוכלו…</span></div></div><div class="ltt-strip-slide"><img alt="למרות שהסיור היה מקיף, הוא השאיר לי טעם של עוד, במיוחד בכל הנוגע ל…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab9212c70e72edf275b2_All%20in%20One%20Walking%20Tour%20(2).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 7</span> <span>אף שהסיור היה מקיף, הוא השאיר בי טעם של עוד, במיוחד בכל הנוגע…</span></div></div><div class="ltt-strip-slide"><img alt="אם הזמן שלכם מוגבל אבל אתם עדיין רוצים סקירה מהירה של בודפשט, הסיור הזה מתאים…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aba283a9f4b867088949_All%20in%20One%20Walking%20Tour%20(19).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 7</span> <span>אם אתם מוגבלים בזמן אך עדיין רוצים סקירה מהירה של בודפשט, הסיור הזה מתאים…</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>כרטיסים רשמיים וזמינות בזמן אמת</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">החל מ-€35</span>
-<span class="ltt-buy-price-sub">3 שעות • ביטול חינם</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">הסיור הגדול בעיר בודפשט</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">שובר QR מיידי לסמארטפון</span>
-<span class="ltt-buy-perk">החזר כספי מלא עד 24 שעות מראש</span>
-<span class="ltt-buy-perk">נקודת יציאה: <strong>Báthory utca</strong></span>
-<span class="ltt-buy-perk">משך הסיור: <strong>3 שעות</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-grand-city&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>בדקו תאריכים והזמינו כרטיסים</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>המחיר הטוב ביותר מובטח • אישור מיידי</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="הסיור הגדול בעיר בודפשט">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-grand-city&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/best-walking-tours-budapest/grand-city-tour-of-budapest-01.avif" alt="הסיור הגדול בעיר בודפשט" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#6 Cityrama Budapest</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-grand-city&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">הסיור הגדול בעיר בודפשט</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.40"></span><b class="bpa-rate-score">4.4</b><span class="bpa-rate-meta">1.1k+ ביקורות · אתר אחד</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>דירוג ב-GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-grand-city&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.4</span><span class="bpa-rev-count">(1.1k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>שובר QR מיידי לסמארטפון</li><li>החזר כספי מלא עד 24 שעות מראש</li><li>נקודת יציאה: <strong>Báthory utca</strong></li><li>משך הסיור: <strong>3 שעות</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">החל מ-€35<small>3 שעות • ביטול חינם</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-grand-city&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">בדקו תאריכים והזמינו כרטיסים →</a></div>
+<div class="bpa-book-note">המחיר הטוב ביותר מובטח • אישור מיידי</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1583,39 +1477,16 @@ window.addEventListener('load', function() {
 <p><strong>דלגו</strong> אם אתם אוכלים ללא גלוטן או טבעוני: המפעיל עדיין לא יכול להתאים לזה. צמחונים בסדר, עם תפריט קטן יותר.</p>
 <h3>נקודת מפגש</h3>
 <p>🗺️ <strong>נקודת מפגש: </strong>Kazinczy utca 29-31, 1075 Budapest (הרובע השביעי), ליד Kazinczy Street Synagogue, שבו הסיור גם מסתיים.<br/>🚇 <strong>תחבורה ציבורית:</strong> Astoria (M2) או Deák Ferenc tér (M1, M2, M3), ואז 5 דקות הליכה.</p><div class="ltt-filmstrip-wrap"><button aria-label="תמונה קודמת" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="תמונה הבאה" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="גלריית פילמסטריפ 7" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="לנגוש ובירת Dreher בסיור האוכל ברגל בבודפשט" loading="lazy" src="/assets/walking-tours-2026/food-tour-01.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>לנגוש ובירת Dreher בסיור האוכל ברגל בבודפשט</span></div></div><div class="ltt-strip-slide"><img alt="קבוצת סיור האוכל מחוץ לדוכן אוכל רחוב ברובע השביעי" loading="lazy" src="/assets/walking-tours-2026/food-tour-02.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>קבוצת סיור האוכל מחוץ לדוכן אוכל רחוב ברובע השביעי</span></div></div><div class="ltt-strip-slide"><img alt="קבוצת סיור האוכל בחצר של ruin bar ברובע היהודי" loading="lazy" src="/assets/walking-tours-2026/food-tour-05.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>קבוצת סיור האוכל בחצר של ruin bar ברובע היהודי</span></div></div><div class="ltt-strip-slide"><img alt="שני אורחים מרימים כוסית בבירה הונגרית בסיור האוכל" loading="lazy" src="/assets/walking-tours-2026/food-tour-04.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>שני אורחים מרימים כוסית בבירה הונגרית בסיור האוכל</span></div></div><div class="ltt-strip-slide"><img alt="מדריך מקומי חובב אוכל מסביר על מנות הונגריות ברובע השביעי" loading="lazy" src="/assets/walking-tours-2026/food-tour-03.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>מדריך מקומי חובב אוכל מסביר על מנות הונגריות ברובע השביעי</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>כרטיסים רשמיים וזמינות בזמן אמת</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">החל מ-€62</span>
-<span class="ltt-buy-price-sub">2.5 שעות • ביטול חינם</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">סיור אוכל ברגל בבודפשט: אוכלים, שותים ומגלים</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">שובר QR מיידי לסמארטפון</span>
-<span class="ltt-buy-perk">החזר מלא עד 24 שעות לפני</span>
-<span class="ltt-buy-perk">יציאה: <strong>Kazinczy utca</strong></span>
-<span class="ltt-buy-perk">משך: <strong>2.5 שעות</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-food-walking-tour-eat-sip-explore-like-a-local-t519670/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-food&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>בדקו תאריכים והזמינו כרטיסים</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>המחיר הטוב ביותר מובטח • אישור מיידי</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="סיור אוכל ברגל בבודפשט: אוכלים, שותים ומגלים">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-food-walking-tour-eat-sip-explore-like-a-local-t519670/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-food&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/walking-tours-2026/food-tour-01.webp" alt="לנגוש ובירת Dreher בסיור האוכל ברגל בבודפשט" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#7 Carpe Diem Tours</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-food-walking-tour-eat-sip-explore-like-a-local-t519670/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-food&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">סיור אוכל ברגל בבודפשט: אוכלים, שותים ומגלים</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.80"></span><b class="bpa-rate-score">4.8</b><span class="bpa-rate-meta">1.7k+ ביקורות · אתר אחד</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>דירוג ב-GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-food-walking-tour-eat-sip-explore-like-a-local-t519670/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-food&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.8</span><span class="bpa-rev-count">(1.7k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>שובר QR מיידי לסמארטפון</li><li>החזר מלא עד 24 שעות לפני</li><li>יציאה: <strong>Kazinczy utca</strong></li><li>משך: <strong>2.5 שעות</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">החל מ-€62<small>2.5 שעות • ביטול חינם</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-food-walking-tour-eat-sip-explore-like-a-local-t519670/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-food&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">בדקו תאריכים והזמינו כרטיסים →</a></div>
+<div class="bpa-book-note">המחיר הטוב ביותר מובטח • אישור מיידי</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1681,39 +1552,16 @@ window.addEventListener('load', function() {
 <h3>למי זה מתאים</h3>
 <p><strong>כדאי להזמין</strong> אם המאה ה-20 היא הסיבה שבאתם לבודפשט, או שאתם רוצים את House of Terror עם הקשר במקום לקרוא דפי קיר. משתלב מצוין עם <a href="#item-3-ww2-jewish-quarter-tour">ההליכה החינמית ברובע היהודי</a>.</p>
 <p><strong>דלגו</strong> אם יש איתכם ילדים קטנים: House of Terror מתעד חדרי חקירה וגירושים. באפשרות העצמאית כדאי לשקול את האודיו גייד של המוזיאון.</p><div class="ltt-filmstrip-wrap"><button aria-label="תמונה קודמת" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="תמונה הבאה" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="גלריית פילמסטריפ 8" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="מוזיאון House of Terror בשדרות Andrássy, בודפשט" loading="lazy" src="/assets/walking-tours-2026/communist-tour-01.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>מוזיאון House of Terror בשדרות Andrássy, בודפשט</span></div></div><div class="ltt-strip-slide"><img alt="מדריך עם קבוצה קטנה מחוץ לפרלמנט ההונגרי" loading="lazy" src="/assets/walking-tours-2026/communist-tour-05.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>מדריך עם קבוצה קטנה מחוץ לפרלמנט ההונגרי</span></div></div><div class="ltt-strip-slide"><img alt="קיר דיוקנאות הקורבנות ב-House of Terror" loading="lazy" src="/assets/walking-tours-2026/communist-tour-02.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>קיר דיוקנאות הקורבנות ב-House of Terror</span></div></div><div class="ltt-strip-slide"><img alt="טנק באטריום של מוזיאון House of Terror" loading="lazy" src="/assets/walking-tours-2026/communist-tour-03.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>טנק באטריום של מוזיאון House of Terror</span></div></div><div class="ltt-strip-slide"><img alt="הפרלמנט ההונגרי, שבו מתחילה ההליכה על ההיסטוריה הקומוניסטית" loading="lazy" src="/assets/walking-tours-2026/communist-tour-04.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>הפרלמנט ההונגרי, שבו מתחילה ההליכה על ההיסטוריה הקומוניסטית</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>כרטיסים רשמיים וזמינות בזמן אמת</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">החל מ-€50</span>
-<span class="ltt-buy-price-sub">שעתיים • ביטול חינם</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">סיור היסטוריה קומוניסטית עם אפשרות House of Terror</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">שובר QR מיידי לסמארטפון</span>
-<span class="ltt-buy-perk">החזר מלא עד 24 שעות לפני</span>
-<span class="ltt-buy-perk">קבוצה: <strong>עד 10 אנשים</strong></span>
-<span class="ltt-buy-perk">משך: <strong>2 שעות</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-house-of-terror-guided-tour-t389878/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-communism&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>בדקו תאריכים והזמינו כרטיסים</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>המחיר הטוב ביותר מובטח • אישור מיידי</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="סיור היסטוריה קומוניסטית עם אפשרות House of Terror">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-house-of-terror-guided-tour-t389878/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-communism&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/walking-tours-2026/communist-tour-01.webp" alt="מוזיאון House of Terror בשדרות Andrássy, בודפשט" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#8 Tourist Angel</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-house-of-terror-guided-tour-t389878/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-communism&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">סיור היסטוריה קומוניסטית עם אפשרות House of Terror</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.80"></span><b class="bpa-rate-score">4.8</b><span class="bpa-rate-meta">220 ביקורות · אתר אחד</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>דירוג ב-GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-house-of-terror-guided-tour-t389878/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-communism&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.8</span><span class="bpa-rev-count">(220+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>שובר QR מיידי לסמארטפון</li><li>החזר מלא עד 24 שעות לפני</li><li>קבוצה: <strong>עד 10 אנשים</strong></li><li>משך: <strong>2 שעות</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">החל מ-€50<small>שעתיים • ביטול חינם</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-house-of-terror-guided-tour-t389878/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-communism&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">בדקו תאריכים והזמינו כרטיסים →</a></div>
+<div class="bpa-book-note">המחיר הטוב ביותר מובטח • אישור מיידי</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1775,39 +1623,16 @@ window.addEventListener('load', function() {
 <h3>למי זה מתאים</h3>
 <p><strong>כדאי להזמין</strong> למשפחות עם ילדים, למטיילים מבוגרים שצריכים הפסקות, או לכל מי ששונא ללכת אחרי מטרייה צהובה עם 30 זרים. אורחים מספרים שהמדריכים התאימו את המסלול למה שביקשו.</p>
 <p><strong>דלגו</strong> אם התקציב מוגבל: <a href="#item-4-pest-walking-tour">ההליכה החינמית בעיר הפנימית</a> מכסה את אתרי הדגל של פשט תמורת טיפ. ואל תזמינו 8 שעות ברצף: אורח אחד עשה כ-12 ק״מ בגרסה של יום שלם.</p><div class="ltt-filmstrip-wrap"><button aria-label="תמונה קודמת" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="תמונה הבאה" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="גלריית פילמסטריפ 9" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="אורחי סיור הליכה פרטי ב-Heroes' Square, בודפשט" loading="lazy" src="/assets/walking-tours-2026/private-tour-02.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>אורחי סיור הליכה פרטי ב-Heroes' Square, בודפשט</span></div></div><div class="ltt-strip-slide"><img alt="קבוצת סיור פרטי ליד Chain Bridge והדנובה" loading="lazy" src="/assets/walking-tours-2026/private-tour-01.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>קבוצת סיור פרטי ליד Chain Bridge והדנובה</span></div></div><div class="ltt-strip-slide"><img alt="קבוצת סיור פרטי בתוך כנסייה בבודפשט" loading="lazy" src="/assets/walking-tours-2026/private-tour-05.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>קבוצת סיור פרטי בתוך כנסייה בבודפשט</span></div></div><div class="ltt-strip-slide"><img alt="אורחי סיור פרטי עוצרים בבית קפה בבודפשט" loading="lazy" src="/assets/walking-tours-2026/private-tour-04.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>אורחי סיור פרטי עוצרים בבית קפה בבודפשט</span></div></div><div class="ltt-strip-slide"><img alt="מדריך ואורח נחים בסיור הליכה פרטי בבודפשט" loading="lazy" src="/assets/walking-tours-2026/private-tour-03.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>מדריך ואורח נחים בסיור הליכה פרטי בבודפשט</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>כרטיסים רשמיים וזמינות בזמן אמת</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">החל מ-€40</span>
-<span class="ltt-buy-price-sub">2 עד 8 שעות • ביטול חינם</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">סיור הליכה פרטי בהתאמה אישית עם מדריך מקומי</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">שובר QR מיידי לסמארטפון</span>
-<span class="ltt-buy-perk">החזר מלא עד 24 שעות לפני</span>
-<span class="ltt-buy-perk">איסוף: <strong>מהמלון שלכם</strong></span>
-<span class="ltt-buy-perk">משך: <strong>2 עד 8 שעות</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-private&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>בדקו תאריכים והזמינו כרטיסים</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>המחיר הטוב ביותר מובטח • אישור מיידי</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="סיור הליכה פרטי בהתאמה אישית עם מדריך מקומי">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-private&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/walking-tours-2026/private-tour-05.webp" alt="אורחי סיור הליכה פרטי ב-Heroes' Square, בודפשט" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#9 Guydeez</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-private&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">סיור הליכה פרטי בהתאמה אישית עם מדריך מקומי</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.70"></span><b class="bpa-rate-score">4.7</b><span class="bpa-rate-meta">110 ביקורות · אתר אחד</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>דירוג ב-GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-private&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.7</span><span class="bpa-rev-count">(110+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>שובר QR מיידי לסמארטפון</li><li>החזר מלא עד 24 שעות לפני</li><li>איסוף: <strong>מהמלון שלכם</strong></li><li>משך: <strong>2 עד 8 שעות</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">החל מ-€40<small>2 עד 8 שעות • ביטול חינם</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-private&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">בדקו תאריכים והזמינו כרטיסים →</a></div>
+<div class="bpa-book-note">המחיר הטוב ביותר מובטח • אישור מיידי</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1871,39 +1696,16 @@ window.addEventListener('load', function() {
 <p><strong>דלגו</strong> אם אתם כבר מתכננים את <a href="#item-4-pest-walking-tour">ההליכה החינמית בעיר הפנימית</a> ואת <a href="#item-5-buda-castle-walking-tour">סיור Buda Castle</a>: יחד הם מכסים את אותו שטח לעומק רב יותר.</p>
 <h3>נקודת מפגש</h3>
 <p>🗺️ <strong>נקודת מפגש: </strong>Szent István tér 4, 1051 Budapest, מול St. Stephen's Basilica.<br/>🚇 <strong>תחבורה ציבורית:</strong> Bajcsy-Zsilinszky út (M1) או Deák Ferenc tér (M1, M2, M3), 3 דקות הליכה.</p><div class="ltt-filmstrip-wrap"><button aria-label="תמונה קודמת" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="תמונה הבאה" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="גלריית פילמסטריפ 10" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="קבוצת סיור ההיכרות ב-St. Stephen's Basilica" loading="lazy" src="/assets/walking-tours-2026/orientation-tour-02.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 3</span> <span>קבוצת סיור ההיכרות ב-St. Stephen's Basilica</span></div></div><div class="ltt-strip-slide"><img alt="אורחים בנקודת תצפית בבודה על הדנובה והפרלמנט" loading="lazy" src="/assets/walking-tours-2026/orientation-tour-01.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 3</span> <span>אורחים בנקודת תצפית בבודה על הדנובה והפרלמנט</span></div></div><div class="ltt-strip-slide"><img alt="St. Stephen's Basilica, נקודת המפגש של סיור ההיכרות" loading="lazy" src="/assets/walking-tours-2026/orientation-tour-03.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 3</span> <span>St. Stephen's Basilica, נקודת המפגש של סיור ההיכרות</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>כרטיסים רשמיים וזמינות בזמן אמת</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">החל מ-€35</span>
-<span class="ltt-buy-price-sub">3 שעות • ביטול חינם</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">סיור הליכה להיכרות של 3 שעות בבודה ובפשט</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">שובר QR מיידי לסמארטפון</span>
-<span class="ltt-buy-perk">החזר מלא עד 24 שעות לפני</span>
-<span class="ltt-buy-perk">יציאה: <strong>Szent István tér</strong></span>
-<span class="ltt-buy-perk">משך: <strong>3 שעות</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/free-walking-tour-of-budapest-t13960/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-orientation&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>בדקו תאריכים והזמינו כרטיסים</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>המחיר הטוב ביותר מובטח • אישור מיידי</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="סיור הליכה להיכרות של 3 שעות בבודה ובפשט">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/free-walking-tour-of-budapest-t13960/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-orientation&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/walking-tours-2026/orientation-tour-02.webp" alt="קבוצת סיור ההיכרות ב-St. Stephen's Basilica" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#10 Tourist Angel</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/free-walking-tour-of-budapest-t13960/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-orientation&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">סיור הליכה להיכרות של 3 שעות בבודה ובפשט</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.80"></span><b class="bpa-rate-score">4.8</b><span class="bpa-rate-meta">2.4k+ ביקורות · אתר אחד</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>דירוג ב-GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/free-walking-tour-of-budapest-t13960/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-orientation&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.8</span><span class="bpa-rev-count">(2.4k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>שובר QR מיידי לסמארטפון</li><li>החזר מלא עד 24 שעות לפני</li><li>יציאה: <strong>Szent István tér</strong></li><li>משך: <strong>3 שעות</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">החל מ-€35<small>3 שעות • ביטול חינם</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/free-walking-tour-of-budapest-t13960/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-orientation&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">בדקו תאריכים והזמינו כרטיסים →</a></div>
+<div class="bpa-book-note">המחיר הטוב ביותר מובטח • אישור מיידי</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
