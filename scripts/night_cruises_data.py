@@ -8,8 +8,8 @@ not added on top (that would count the same reviews twice).
 
 GYG = ("https://www.getyourguide.com/budapest-l29/{slug}/?partner_id=YS414AJ"
        "&utm_medium=online_publisher&cmp=en-night-cruises-{placement}-{key}&mkt_cmp=true")
-LEGENDA_DL = "https://legenda.hu/en/ticket-purchase?partner=38585"
-LEGENDA_DINNER = "https://legenda.hu/en/ticket-purchase?partner=38585"
+LEGENDA_DL = "https://legenda.hu/en?partner=38585"
+LEGENDA_DINNER = "https://legenda.hu/en?partner=38585"
 SL = "https://budapestrivercruise.eu/product/{slug}/?code=bpadventures"
 MAPS = "https://www.google.com/maps/search/?api=1&query={q}"
 

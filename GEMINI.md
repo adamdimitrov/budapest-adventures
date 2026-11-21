@@ -27,7 +27,7 @@
   - In 2025, **Budapest Adventures (`contact@budapestadventures.com` / Adam Dimitrov) generated €130,000+ in direct ticket revenue for Legenda City Cruises**.
   - Legenda leadership explicitly confirmed Adam / Budapest Adventures as by far their top performing, standout online partner.
   - Adam is not an outside solicitor or cold agency; he is a verified **Top-Tier VIP Account / Key Distribution Partner**.
-  - **Authoritative Partner Link**: `https://legenda.hu/en/ticket-purchase?partner=38585` (`partner=38585`) is the primary authoritative Legenda partner link across all Budapest Adventures properties (while `38885` was historically used for paid ads testing).
+  - **Authoritative Partner Link**: `https://legenda.hu/en?partner=38585` (`partner=38585`) is the primary authoritative Legenda partner link across all Budapest Adventures properties (while `38885` was historically used for paid ads testing).
 - **Outreach & Negotiation Directives**:
   - **No Cold Pitching / No Guessing**: Never pitch generic marketing retainers or guess their operational bottlenecks from behind a screen.
   - **The Discovery Angle**: Leverage the €130,000 revenue track record to secure an in-person, 15-minute coffee meeting at Legenda's Vigadó tér office.
