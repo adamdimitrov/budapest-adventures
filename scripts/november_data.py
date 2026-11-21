@@ -37,8 +37,8 @@ No em dashes in this file (house rule).
 GYG = ("https://www.getyourguide.com/budapest-l29/{slug}/?partner_id=YS414AJ&amp;utm_medium=online_publisher"
        "&amp;cmp=november-{cmp}&amp;mkt_cmp=true")
 SILVER = "https://budapestrivercruise.eu/product/{slug}/?code=bpadventures"
-LEGENDA_DL = "https://legenda.hu/en/ticket-purchase?partner=38585"
-LEGENDA_DINNER = "https://legenda.hu/en/ticket-purchase?partner=38585"
+LEGENDA_DL = "https://legenda.hu/en?partner=38585"
+LEGENDA_DINNER = "https://legenda.hu/en?partner=38585"
 
 # (site, score, count, link-or-None). Links only when the card books through GYG.
 PRODUCTS = [

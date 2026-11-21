@@ -362,7 +362,7 @@ def compile_hungarian_card_page():
                         <div style="font-size: 13px; font-weight: 700; color: #0f172a;">Legenda Esti Kivilágított Hajózás</div>
                         <div style="font-size: 11px; color: #64748b;">#1 prémium panorámahajó, üdvözlőitallal</div>
                       </div>
-                      <a href="https://legenda.hu/en/ticket-purchase?partner=38585" target="_blank" rel="nofollow sponsored noopener" style="font-size: 12px; font-weight: 700; background: #0f172a; color: #fff; padding: 6px 12px; border-radius: 4px; text-decoration: none;">24 € Foglalás →</a>
+                      <a href="https://legenda.hu/en?partner=38585" target="_blank" rel="nofollow sponsored noopener" style="font-size: 12px; font-weight: 700; background: #0f172a; color: #fff; padding: 6px 12px; border-radius: 4px; text-decoration: none;">24 € Foglalás →</a>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; padding: 10px 14px; border-radius: 6px; border: 1px solid #e2e8f0;">
                       <div>
