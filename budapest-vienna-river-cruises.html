@@ -78,7 +78,39 @@ window.addEventListener('load', function() {
 .bt-note{font-size:13.5px !important;color:#64748b !important}
 .bpa-rate-list .bpa-rev-badge{gap:6px}
 .bt-qp a:hover,.bt-qp a:focus,.bt-logistics a:hover,.bt-logistics a:focus,.bpa-wt-faq a:hover,.bpa-details-body .w-richtext a:hover{color:#855a00 !important}
-</style><link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+</style><link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -939,38 +971,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Crucemundo runs the <strong>MS Arena</strong> on a short loop from Vienna to Budapest and Bratislava and back to Vienna, timed for the Christmas markets. The best price on any departure this season is <strong>$859 on 8 December 2026</strong>, and even the dearest date (<strong>$1,621 on 30 November</strong>) is cheaper than every other cruise in this comparison.</p><p>Full board comes with <strong>draft beer, house wine, soft drinks, water, coffee and tea by the glass</strong>, plus a welcome and farewell cocktail and a Captain's Dinner. City tours of Vienna and Budapest and a guided walk through Bratislava are in the excursion package, which is free when at least 10 guests speak the same language. Budget about <strong>€7 per person per day</strong> for tips. The same ship and route is also sold as a Europamundo package from $969, so booking it as Crucemundo is the cheaper way in. Arriving in Budapest a day early? The city's own <a href="/budapest-christmas-markets">Christmas markets</a> run all through December, and our <a href="/things-to-do-budapest-december">December guide</a> covers the rest.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 1" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Christmas Markets on the Danube: 5 Days on the MS Arena, Vienna to Budapest and Back (1/9)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-crucemundo-ms-arena-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 9</span> <span>Photo: Crucemundo</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Markets on the Danube: 5 Days on the MS Arena, Vienna to Budapest and Back (2/9)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-crucemundo-ms-arena-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 9</span> <span>Photo: Crucemundo</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Markets on the Danube: 5 Days on the MS Arena, Vienna to Budapest and Back (3/9)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-crucemundo-ms-arena-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 9</span> <span>Photo: Crucemundo</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Markets on the Danube: 5 Days on the MS Arena, Vienna to Budapest and Back (4/9)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-crucemundo-ms-arena-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 9</span> <span>Photo: Crucemundo</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Markets on the Danube: 5 Days on the MS Arena, Vienna to Budapest and Back (5/9)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-crucemundo-ms-arena-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 9</span> <span>Photo: Crucemundo</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Markets on the Danube: 5 Days on the MS Arena, Vienna to Budapest and Back (6/9)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-crucemundo-ms-arena-06.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 9</span> <span>Photo: Crucemundo</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Markets on the Danube: 5 Days on the MS Arena, Vienna to Budapest and Back (7/9)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-crucemundo-ms-arena-07.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 9</span> <span>Photo: Crucemundo</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Markets on the Danube: 5 Days on the MS Arena, Vienna to Budapest and Back (8/9)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-crucemundo-ms-arena-08.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">8 / 9</span> <span>Photo: Crucemundo</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Markets on the Danube: 5 Days on the MS Arena, Vienna to Budapest and Back (9/9)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-crucemundo-ms-arena-09.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">9 / 9</span> <span>Photo: Crucemundo</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Live Dates &amp; Prices</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From $859</span>
-<span class="ltt-buy-price-sub">per person, 2 sharing</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Christmas Markets on the Danube: 5 Days on the MS Arena, Vienna to Budapest and Back</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk"><strong>5 days</strong>, Vienna → Budapest → Vienna</span>
-<span class="ltt-buy-perk">About <strong>$172 per day</strong></span>
-<span class="ltt-buy-perk">Twin cabin, <strong>2 sharing</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.tourradar.com/t/171326?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-crucemundo-ms-arena" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Prices</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Booked securely via TourRadar</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Christmas Markets on the Danube: 5 Days on the MS Arena, Vienna to Budapest and Back">
+<a class="bpa-book-img" href="https://www.tourradar.com/t/171326?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-crucemundo-ms-arena" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-crucemundo-ms-arena-01.avif" alt="Christmas Markets on the Danube: 5 Days on the MS Arena, Vienna to Budapest and Back (1/9)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#1 Best Value</div>
+<a class="bpa-book-title" href="https://www.tourradar.com/t/171326?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-crucemundo-ms-arena" rel="nofollow sponsored noopener" target="_blank">Christmas Markets on the Danube: 5 Days on the MS Arena, Vienna to Budapest and Back</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.50" aria-hidden="true"></span><b class="bpa-rate-score">4.5</b><span class="bpa-rate-meta">476 reviews · operator</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Crucemundo operator rating</strong><span class="bpa-rate-list"><span class="bpa-rev-badge"><span class="bpa-rev-site">TourRadar</span><span class="bpa-rev-score">4.5</span><span class="bpa-rev-count">(476)</span></span></span><span class="bpa-lang-note">Reviews cover all of the operator's cruises, not only this route.</span></div></details></div></div>
+<ul class="bpa-book-points"><li><strong>5 days</strong>, Vienna → Budapest → Vienna</li><li>About <strong>$172 per day</strong></li><li>Twin cabin, <strong>2 sharing</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From $859<small>per person, 2 sharing</small></div><a class="bpa-book-btn" href="https://www.tourradar.com/t/171326?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-crucemundo-ms-arena" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Prices →</a></div>
+<div class="bpa-book-note">Booked securely via TourRadar</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1028,38 +1038,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Emerald's <strong>Christmas Time on the Danube</strong> is one of only three cruises that sail one way between Budapest and Vienna. Day 1 is an airport transfer to the ship in Budapest, day 2 a guided coach tour of the city and a dinner with a folklore show, day 3 a walking tour of Bratislava with Slovakian entertainment on board, and day 4 a guided tour of Vienna before the transfer to Vienna Airport.</p><p>The fare covers <strong>all tips, airport transfers and port taxes</strong>, plus wine, beer and soft drinks with lunch and dinner. Direction changes the price more than anything: Budapest to Vienna is <strong>$2,985 on 24 November 2026</strong>, while the <a href="https://www.tourradar.com/t/300046?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-emerald-reverse" rel="nofollow sponsored noopener" target="_blank">same cruise from Vienna to Budapest</a> is <strong>$2,223 on 28 November 2026</strong> and <strong>$1,731 on 20 November 2027</strong>.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 2" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Christmas Time on the Danube: 5 Days, Budapest to Vienna (or Vienna to Budapest) (1/7)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-emerald-christmas-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Time on the Danube: 5 Days, Budapest to Vienna (or Vienna to Budapest) (2/7)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-emerald-christmas-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Time on the Danube: 5 Days, Budapest to Vienna (or Vienna to Budapest) (3/7)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-emerald-christmas-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Time on the Danube: 5 Days, Budapest to Vienna (or Vienna to Budapest) (4/7)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-emerald-christmas-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Time on the Danube: 5 Days, Budapest to Vienna (or Vienna to Budapest) (5/7)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-emerald-christmas-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Time on the Danube: 5 Days, Budapest to Vienna (or Vienna to Budapest) (6/7)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-emerald-christmas-06.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 7</span> <span>Photo: Emerald Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Time on the Danube: 5 Days, Budapest to Vienna (or Vienna to Budapest) (7/7)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-emerald-christmas-07.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 7</span> <span>Photo: Emerald Cruises</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Live Dates &amp; Prices</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From $1,731</span>
-<span class="ltt-buy-price-sub">per person, 2 sharing</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Christmas Time on the Danube: 5 Days, Budapest to Vienna (or Vienna to Budapest)</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk"><strong>5 days</strong>, Budapest → Vienna</span>
-<span class="ltt-buy-perk">About <strong>$346 per day</strong></span>
-<span class="ltt-buy-perk">Twin cabin, <strong>2 sharing</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.tourradar.com/t/200814?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-emerald-christmas" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Prices</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Booked securely via TourRadar</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Christmas Time on the Danube: 5 Days, Budapest to Vienna (or Vienna to Budapest)">
+<a class="bpa-book-img" href="https://www.tourradar.com/t/200814?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-emerald-christmas" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-emerald-christmas-01.avif" alt="Christmas Time on the Danube: 5 Days, Budapest to Vienna (or Vienna to Budapest) (1/7)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#2 Best One-Way, Tips Included</div>
+<a class="bpa-book-title" href="https://www.tourradar.com/t/200814?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-emerald-christmas" rel="nofollow sponsored noopener" target="_blank">Christmas Time on the Danube: 5 Days, Budapest to Vienna (or Vienna to Budapest)</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.10" aria-hidden="true"></span><b class="bpa-rate-score">4.1</b><span class="bpa-rate-meta">40 reviews · operator</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Emerald Cruises operator rating</strong><span class="bpa-rate-list"><span class="bpa-rev-badge"><span class="bpa-rev-site">TourRadar</span><span class="bpa-rev-score">4.1</span><span class="bpa-rev-count">(40)</span></span></span><span class="bpa-lang-note">Reviews cover all of the operator's cruises, not only this route.</span></div></details></div></div>
+<ul class="bpa-book-points"><li><strong>5 days</strong>, Budapest → Vienna</li><li>About <strong>$346 per day</strong></li><li>Twin cabin, <strong>2 sharing</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From $1,731<small>per person, 2 sharing</small></div><a class="bpa-book-btn" href="https://www.tourradar.com/t/200814?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-emerald-christmas" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Prices →</a></div>
+<div class="bpa-book-note">Booked securely via TourRadar</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1118,38 +1106,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Avalon gives the Budapest to Vienna run an extra day and uses it well. After a guided sightseeing tour of Budapest (Heroes' Square and the classic sights) and a guided walk through Bratislava's Old Town with a visit to St. Martin's Cathedral, the ship stops at <strong>Melk</strong> for a guided tour of the Benedictine abbey, then sails the Wachau Valley with an Austrian cookie tasting before a Christmas market walk in Vienna.</p><p>On board you get wine, beer or soft drinks with lunch and dinner and an included <strong>happy hour every evening</strong>, plus free Wi-Fi. The <strong>2027 departures cost $3,365</strong>, against $4,114 this year, so it pays to book a year ahead. Expect about <strong>$180 per person in upfront charges</strong> at booking.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 3" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Christmastime from Budapest to Vienna: 6 Days with Melk Abbey (1/5)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-avalon-christmastime-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>Photo: Avalon Waterways</span></div></div><div class="ltt-strip-slide"><img alt="Christmastime from Budapest to Vienna: 6 Days with Melk Abbey (2/5)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-avalon-christmastime-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>Photo: Avalon Waterways</span></div></div><div class="ltt-strip-slide"><img alt="Christmastime from Budapest to Vienna: 6 Days with Melk Abbey (3/5)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-avalon-christmastime-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>Photo: Avalon Waterways</span></div></div><div class="ltt-strip-slide"><img alt="Christmastime from Budapest to Vienna: 6 Days with Melk Abbey (4/5)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-avalon-christmastime-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>Photo: Avalon Waterways</span></div></div><div class="ltt-strip-slide"><img alt="Christmastime from Budapest to Vienna: 6 Days with Melk Abbey (5/5)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-avalon-christmastime-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>Photo: Avalon Waterways</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Live Dates &amp; Prices</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From $3,365</span>
-<span class="ltt-buy-price-sub">per person, 2 sharing</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Christmastime from Budapest to Vienna: 6 Days with Melk Abbey</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk"><strong>6 days</strong>, Budapest → Vienna</span>
-<span class="ltt-buy-perk">About <strong>$561 per day</strong></span>
-<span class="ltt-buy-perk">Twin cabin, <strong>2 sharing</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.tourradar.com/t/338255?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-avalon-christmastime" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Prices</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Booked securely via TourRadar</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Christmastime from Budapest to Vienna: 6 Days with Melk Abbey">
+<a class="bpa-book-img" href="https://www.tourradar.com/t/338255?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-avalon-christmastime" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-avalon-christmastime-01.avif" alt="Christmastime from Budapest to Vienna: 6 Days with Melk Abbey (1/5)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#3 Best Christmas Cruise</div>
+<a class="bpa-book-title" href="https://www.tourradar.com/t/338255?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-avalon-christmastime" rel="nofollow sponsored noopener" target="_blank">Christmastime from Budapest to Vienna: 6 Days with Melk Abbey</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.60" aria-hidden="true"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">236 reviews · operator</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Avalon Waterways operator rating</strong><span class="bpa-rate-list"><span class="bpa-rev-badge"><span class="bpa-rev-site">TourRadar</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(236)</span></span></span><span class="bpa-lang-note">Reviews cover all of the operator's cruises, not only this route.</span></div></details></div></div>
+<ul class="bpa-book-points"><li><strong>6 days</strong>, Budapest → Vienna</li><li>About <strong>$561 per day</strong></li><li>Twin cabin, <strong>2 sharing</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From $3,365<small>per person, 2 sharing</small></div><a class="bpa-book-btn" href="https://www.tourradar.com/t/338255?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-avalon-christmastime" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Prices →</a></div>
+<div class="bpa-book-note">Booked securely via TourRadar</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1208,38 +1174,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Austrian family company Lüftner (sold as Lueftner Cruises) has the best-value summer cruise that starts in Budapest. You board in Budapest with a welcome cocktail and an <strong>evening cruise past the illuminated city</strong>, spend the next day on a city tour and the Danube Bend (<strong>Szentendre, Visegrád and Esztergom</strong>), then sail to Bratislava and Vienna for a Ringstrasse tour.</p><p>From Vienna the ship carries on to Dürnstein, Melk Abbey and the Wachau Valley, Linz and Passau. The <strong>15 August 2027</strong> sailing is <strong>$1,767</strong> and 3 July is $1,865. Wines flow at dinner, coffee and tea are free around the clock and the AMADEUS ships carry bicycles for exploring on your own. Some dates run the other way, from Passau to Budapest. Want the Danube Bend without the cruise? See the <a href="/best-day-trips-from-budapest">best day trips from Budapest</a>.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 4" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Classical Danube Cruise: 8 Days from Budapest via Vienna to Passau (1/4)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-lueftner-classical-danube-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 4</span> <span>Photo: Lueftner Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Classical Danube Cruise: 8 Days from Budapest via Vienna to Passau (2/4)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-lueftner-classical-danube-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 4</span> <span>Photo: Lueftner Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Classical Danube Cruise: 8 Days from Budapest via Vienna to Passau (3/4)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-lueftner-classical-danube-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 4</span> <span>Photo: Lueftner Cruises</span></div></div><div class="ltt-strip-slide"><img alt="Classical Danube Cruise: 8 Days from Budapest via Vienna to Passau (4/4)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-lueftner-classical-danube-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 4</span> <span>Photo: Lueftner Cruises</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Live Dates &amp; Prices</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From $1,767</span>
-<span class="ltt-buy-price-sub">per person, 2 sharing</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Classical Danube Cruise: 8 Days from Budapest via Vienna to Passau</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk"><strong>8 days</strong>, Budapest → Vienna → Passau</span>
-<span class="ltt-buy-perk">About <strong>$221 per day</strong></span>
-<span class="ltt-buy-perk">Twin cabin, <strong>2 sharing</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.tourradar.com/t/339832?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-lueftner-classical-danube" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Prices</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Booked securely via TourRadar</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Classical Danube Cruise: 8 Days from Budapest via Vienna to Passau">
+<a class="bpa-book-img" href="https://www.tourradar.com/t/339832?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-lueftner-classical-danube" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-lueftner-classical-danube-01.avif" alt="Classical Danube Cruise: 8 Days from Budapest via Vienna to Passau (1/4)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#4 Best Summer Cruise</div>
+<a class="bpa-book-title" href="https://www.tourradar.com/t/339832?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-lueftner-classical-danube" rel="nofollow sponsored noopener" target="_blank">Classical Danube Cruise: 8 Days from Budapest via Vienna to Passau</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.50" aria-hidden="true"></span><b class="bpa-rate-score">4.5</b><span class="bpa-rate-meta">220 reviews · operator</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Lueftner Cruises operator rating</strong><span class="bpa-rate-list"><span class="bpa-rev-badge"><span class="bpa-rev-site">TourRadar</span><span class="bpa-rev-score">4.5</span><span class="bpa-rev-count">(220)</span></span></span><span class="bpa-lang-note">Reviews cover all of the operator's cruises, not only this route.</span></div></details></div></div>
+<ul class="bpa-book-points"><li><strong>8 days</strong>, Budapest → Vienna → Passau</li><li>About <strong>$221 per day</strong></li><li>Twin cabin, <strong>2 sharing</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From $1,767<small>per person, 2 sharing</small></div><a class="bpa-book-btn" href="https://www.tourradar.com/t/339832?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-lueftner-classical-danube" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Prices →</a></div>
+<div class="bpa-book-note">Booked securely via TourRadar</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1298,38 +1242,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>French line CroisiEurope runs a classic one-week loop from Vienna: <strong>Melk and Dürnstein</strong> in the Wachau Valley, a morning cruise to Bratislava, then on to <strong>Budapest</strong> for a full day before sailing back via free time in Esztergom to Vienna.</p><p>Its strongest point is the bar: <strong>onboard drinks are included</strong>, from the captain's welcome cocktail to the last night, so the <strong>$2,258</strong> fare on <strong>22 June 2027</strong> is close to what you will actually spend. This exact cruise rates <strong>4.4 from 20 reviews</strong>. Because it starts and ends in Vienna, you only need one airport.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 5" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="The Beautiful Blue Danube: 8 Days from Vienna to Budapest and Back (1/5)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-croisieurope-blue-danube-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>Photo: CroisiEurope</span></div></div><div class="ltt-strip-slide"><img alt="The Beautiful Blue Danube: 8 Days from Vienna to Budapest and Back (2/5)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-croisieurope-blue-danube-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>Photo: CroisiEurope</span></div></div><div class="ltt-strip-slide"><img alt="The Beautiful Blue Danube: 8 Days from Vienna to Budapest and Back (3/5)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-croisieurope-blue-danube-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>Photo: CroisiEurope</span></div></div><div class="ltt-strip-slide"><img alt="The Beautiful Blue Danube: 8 Days from Vienna to Budapest and Back (4/5)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-croisieurope-blue-danube-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>Photo: CroisiEurope</span></div></div><div class="ltt-strip-slide"><img alt="The Beautiful Blue Danube: 8 Days from Vienna to Budapest and Back (5/5)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-croisieurope-blue-danube-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>Photo: CroisiEurope</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Live Dates &amp; Prices</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From $2,258</span>
-<span class="ltt-buy-price-sub">per person, 2 sharing</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">The Beautiful Blue Danube: 8 Days from Vienna to Budapest and Back</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk"><strong>8 days</strong>, Vienna → Budapest → Vienna</span>
-<span class="ltt-buy-perk">About <strong>$282 per day</strong></span>
-<span class="ltt-buy-perk">Twin cabin, <strong>2 sharing</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.tourradar.com/t/250256?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-croisieurope-blue-danube" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Prices</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Booked securely via TourRadar</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="The Beautiful Blue Danube: 8 Days from Vienna to Budapest and Back">
+<a class="bpa-book-img" href="https://www.tourradar.com/t/250256?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-croisieurope-blue-danube" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-croisieurope-blue-danube-06.avif" alt="The Beautiful Blue Danube: 8 Days from Vienna to Budapest and Back" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#5 Best for Drinks Included</div>
+<a class="bpa-book-title" href="https://www.tourradar.com/t/250256?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-croisieurope-blue-danube" rel="nofollow sponsored noopener" target="_blank">The Beautiful Blue Danube: 8 Days from Vienna to Budapest and Back</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.30" aria-hidden="true"></span><b class="bpa-rate-score">4.3</b><span class="bpa-rate-meta">492 reviews · operator</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>CroisiEurope operator rating</strong><span class="bpa-rate-list"><span class="bpa-rev-badge"><span class="bpa-rev-site">TourRadar</span><span class="bpa-rev-score">4.3</span><span class="bpa-rev-count">(492)</span></span></span><span class="bpa-lang-note">Reviews cover all of the operator's cruises, not only this route.</span></div></details></div></div>
+<ul class="bpa-book-points"><li><strong>8 days</strong>, Vienna → Budapest → Vienna</li><li>About <strong>$282 per day</strong></li><li>Twin cabin, <strong>2 sharing</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From $2,258<small>per person, 2 sharing</small></div><a class="bpa-book-btn" href="https://www.tourradar.com/t/250256?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-croisieurope-blue-danube" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Prices →</a></div>
+<div class="bpa-book-note">Booked securely via TourRadar</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1387,38 +1309,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>German operator Terranova Touristik combines the river with the Danube cycle path. The <strong>MV Bella</strong> sails from Passau past the Schlögen Loop to Vienna, where you ride a <strong>guided e-bike tour over Danube Island, the Lobau and the Prater (34 km)</strong> and another up to the Leopoldsberg with a guided visit to Klosterneuburg Abbey.</p><p>In Hungary you see Esztergom's Castle Hill and basilica and spend a day in Budapest with access to the Parliament, before heading back via Bratislava, Hainburg, Krems and Melk. Groups are <strong>8 to 20</strong>, adults only, and drinks are included on board. Fares are <strong>$3,663</strong> in late May and mid-September 2027 and $3,810 in summer.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 6" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Danube River Bike Tour: 8 Days by E-Bike and Boat via Vienna and Budapest (1/10)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-terranova-bike-boat-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 10</span> <span>Photo: Terranova Touristik</span></div></div><div class="ltt-strip-slide"><img alt="Danube River Bike Tour: 8 Days by E-Bike and Boat via Vienna and Budapest (2/10)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-terranova-bike-boat-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 10</span> <span>Photo: Terranova Touristik</span></div></div><div class="ltt-strip-slide"><img alt="Danube River Bike Tour: 8 Days by E-Bike and Boat via Vienna and Budapest (3/10)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-terranova-bike-boat-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 10</span> <span>Photo: Terranova Touristik</span></div></div><div class="ltt-strip-slide"><img alt="Danube River Bike Tour: 8 Days by E-Bike and Boat via Vienna and Budapest (4/10)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-terranova-bike-boat-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 10</span> <span>Photo: Terranova Touristik</span></div></div><div class="ltt-strip-slide"><img alt="Danube River Bike Tour: 8 Days by E-Bike and Boat via Vienna and Budapest (5/10)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-terranova-bike-boat-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 10</span> <span>Photo: Terranova Touristik</span></div></div><div class="ltt-strip-slide"><img alt="Danube River Bike Tour: 8 Days by E-Bike and Boat via Vienna and Budapest (6/10)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-terranova-bike-boat-06.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 10</span> <span>Photo: Terranova Touristik</span></div></div><div class="ltt-strip-slide"><img alt="Danube River Bike Tour: 8 Days by E-Bike and Boat via Vienna and Budapest (7/10)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-terranova-bike-boat-07.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 10</span> <span>Photo: Terranova Touristik</span></div></div><div class="ltt-strip-slide"><img alt="Danube River Bike Tour: 8 Days by E-Bike and Boat via Vienna and Budapest (8/10)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-terranova-bike-boat-08.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">8 / 10</span> <span>Photo: Terranova Touristik</span></div></div><div class="ltt-strip-slide"><img alt="Danube River Bike Tour: 8 Days by E-Bike and Boat via Vienna and Budapest (9/10)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-terranova-bike-boat-09.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">9 / 10</span> <span>Photo: Terranova Touristik</span></div></div><div class="ltt-strip-slide"><img alt="Danube River Bike Tour: 8 Days by E-Bike and Boat via Vienna and Budapest (10/10)" loading="lazy" src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-terranova-bike-boat-10.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">10 / 10</span> <span>Photo: Terranova Touristik</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Live Dates &amp; Prices</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From $3,663</span>
-<span class="ltt-buy-price-sub">per person, 2 sharing</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Danube River Bike Tour: 8 Days by E-Bike and Boat via Vienna and Budapest</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk"><strong>8 days</strong>, Passau → Vienna → Budapest → Passau</span>
-<span class="ltt-buy-perk">About <strong>$458 per day</strong></span>
-<span class="ltt-buy-perk">Twin cabin, <strong>2 sharing</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.tourradar.com/t/289614?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-terranova-bike-boat" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Prices</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Booked securely via TourRadar</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Danube River Bike Tour: 8 Days by E-Bike and Boat via Vienna and Budapest">
+<a class="bpa-book-img" href="https://www.tourradar.com/t/289614?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-terranova-bike-boat" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/budapest-vienna-river-cruises/budapest-vienna-river-cruise-terranova-bike-boat-01.avif" alt="Danube River Bike Tour: 8 Days by E-Bike and Boat via Vienna and Budapest (1/10)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#6 Best Bike &amp; Boat</div>
+<a class="bpa-book-title" href="https://www.tourradar.com/t/289614?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-terranova-bike-boat" rel="nofollow sponsored noopener" target="_blank">Danube River Bike Tour: 8 Days by E-Bike and Boat via Vienna and Budapest</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.60" aria-hidden="true"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">144 reviews · operator</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Terranova Touristik operator rating</strong><span class="bpa-rate-list"><span class="bpa-rev-badge"><span class="bpa-rev-site">TourRadar</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(144)</span></span></span><span class="bpa-lang-note">Reviews cover all of the operator's cruises, not only this route.</span></div></details></div></div>
+<ul class="bpa-book-points"><li><strong>8 days</strong>, Passau → Vienna → Budapest → Passau</li><li>About <strong>$458 per day</strong></li><li>Twin cabin, <strong>2 sharing</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From $3,663<small>per person, 2 sharing</small></div><a class="bpa-book-btn" href="https://www.tourradar.com/t/289614?utm_source=partner-traveller-1464745&amp;utm_medium=ambassador&amp;utm_campaign=bpa-bud-vie-terranova-bike-boat" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Prices →</a></div>
+<div class="bpa-book-note">Booked securely via TourRadar</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">

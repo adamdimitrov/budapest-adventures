@@ -65,7 +65,39 @@ window.addEventListener('load', function() {
 <link id="ltt-language-switcher-styles" rel="stylesheet" href="/css/shared/ltt-language-switcher-styles.ebbf128d15.css"/><link id="ps-381b18e6ba" data-ps-blocks="CANONICAL_NAVBAR_UNIFIED_FONTS ltt-accessibility-contrast-overrides" rel="stylesheet" href="/css/shared/bundle.381b18e6ba.css"/><style>.ltt-mobile-drawer:not(.is-open){visibility:hidden !important;pointer-events:none !important;display:none !important;}.ltt-mobile-drawer.is-open{visibility:visible !important;pointer-events:auto !important;display:block !important;}</style><link id="ps-7c057ae242" data-ps-blocks="ltt-master-a11y-contrast ltt-wcag-contrast-fix dc-menu-css dc-food-css nye-promo-css" rel="stylesheet" href="/css/shared/bundle.7c057ae242.css"/><link href="/css/listicle-base.css?v=1e54b1e5d2" rel="stylesheet"/>
 <link id="bpa-light-bar" rel="stylesheet" href="/css/shared/bpa-light-bar.ff5b3940e3.css"/>
 <link id="bpa-new-footer" rel="stylesheet" href="/css/shared/bpa-new-footer.4f85d90f75.css"/><link id="bpa-article-typography" rel="stylesheet" href="/css/shared/bpa-article-typography.c64a2a0b29.css"/>
-<link href="/css/listicle-cards.css?v=b857249e22" rel="stylesheet"/><link id="ps-3e8becb458" data-ps-blocks="cd-trust-css dc-rate-plain-css dc-menu-photos-css dc-set-photos-css" rel="stylesheet" href="/css/shared/bundle.3e8becb458.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+<link href="/css/listicle-cards.css?v=b857249e22" rel="stylesheet"/><link id="ps-3e8becb458" data-ps-blocks="cd-trust-css dc-rate-plain-css dc-menu-photos-css dc-set-photos-css" rel="stylesheet" href="/css/shared/bundle.3e8becb458.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/ko">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -1003,39 +1035,19 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>💡 <strong>현장 메모:</strong> Legenda는 부다페스트에서 독보적인 파인다이닝 크루즈 운영사입니다. 관광객용 연회가 아니라 <strong>레스토랑 수준의 촛불 디너</strong>를 제대로 선보입니다.</blockquote><p><strong>부다페스트 로맨틱 디너 크루즈</strong>를 찾는다면 Legenda가 정답입니다.</p><p>친절하고 전문적인 직원, <strong>우아하고 고급스러운 분위기</strong>, 맛있는 음식까지 로맨틱한 시간을 즐길 수 있습니다.</p><p>부다페스트에서 <strong>오붓한 데이트, 기념일, 특별한 날</strong>을 보내기에 완벽한 곳입니다. 조명이 밝혀진 헝가리 국회의사당의 야경을 가장 가까이서 볼 수 있는 <strong>2.5시간의 매력적인 경험</strong>을 원한다면 이 크루즈가 최고의 기준입니다.</p>
-<p>특히 주말 저녁은 며칠 전에 미리 예약하세요.</p><p><em>참고: 선박 안전 규정상 테이블 촛불은 고급 무화염 LED 촛불입니다.</em></p></div><div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€110</span>
-<span class="ltt-buy-price-sub">성인 1인 · 어린이(3–12세) €84</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Legenda 촛불 디너 크루즈</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Legenda를 통해 예약</span>
-<span class="ltt-buy-perk">72시간 전까지 무료 취소</span>
-<span class="ltt-buy-perk">출발: <strong>7번 선착장 (Vigadó tér)</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>2.5시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://legenda.hu/en?partner=38585" rel="nofollow sponsored noopener" target="_blank">
-<span>날짜 확인 &amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>72시간 전까지 무료 취소</span>
-</div>
-</div>
-</div>
-</div><div class="ltt-media-section"><div class="ltt-sec-mini-head"><span>🎬 영상 미리보기: Legenda 촛불 디너 크루즈</span><span class="ltt-mini-pill">15초 현장 릴</span></div><div class="w-richtext"><blockquote>🎥 <strong>영상:</strong> <a href="https://www.tiktok.com/@zenaydiaa/video/7256688921449352466?q=river%20cruise%20budapest&amp;t=1708618929080" rel="noopener noreferrer nofollow" target="_blank"><strong>Legenda 촛불 디너 크루즈의 15초 현장 영상 릴</strong></a>을 보고 저녁 분위기를 느껴보세요. 선내 스냅 사진은 <a href="https://www.instagram.com/legendacruises/" rel="noopener noreferrer nofollow" target="_blank">📷 Instagram</a>에서도 더 볼 수 있습니다.</blockquote></div></div>
+<p>특히 주말 저녁은 며칠 전에 미리 예약하세요.</p><p><em>참고: 선박 안전 규정상 테이블 촛불은 고급 무화염 LED 촛불입니다.</em></p></div><aside class="bpa-book" aria-label="Legenda 촛불 디너 크루즈">
+<a class="bpa-book-img" href="https://legenda.hu/en?partner=38585" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/663224a0b9517f8a892517a9_best-dinner-cruises-budapest-legenda-city-cruises-11.webp" alt="라이브 라운지 음악과 함께하는 4코스 로맨틱 캔들라이트 디너 크루즈" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">종합 1위 &amp; 가장 로맨틱</div>
+<a class="bpa-book-title" href="https://legenda.hu/en?partner=38585" rel="nofollow sponsored noopener" target="_blank">Legenda 촛불 디너 크루즈</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.69"></span><b class="bpa-rate-score">4.7</b><span class="bpa-rate-meta">후기 5.4k+ · 3개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>예약 사이트 3곳의 평균, 리뷰 수로 가중</strong><span class="bpa-rate-list"><span class="bpa-rev-badge">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.7</span><span class="bpa-rev-count">(2.4k+)</span></span><span class="bpa-rev-badge">
+<img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">4.7</span><span class="bpa-rev-count">(2k+)</span></span><span class="bpa-rev-badge">
+<img alt="Tripadvisor" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,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"/><span class="bpa-rev-site">Tripadvisor</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(1k+)</span></span></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Legenda를 통해 예약</li><li>72시간 전까지 무료 취소</li><li>출발: <strong>7번 선착장 (Vigadó tér)</strong></li><li>소요 시간: <strong>2.5시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€110<small>성인 1인 · 어린이(3–12세) €84</small></div><a class="bpa-book-btn" href="https://legenda.hu/en?partner=38585" rel="nofollow sponsored noopener" target="_blank">날짜 확인 &amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">72시간 전까지 무료 취소</div>
+</div></aside><div class="ltt-media-section"><div class="ltt-sec-mini-head"><span>🎬 영상 미리보기: Legenda 촛불 디너 크루즈</span><span class="ltt-mini-pill">15초 현장 릴</span></div><div class="w-richtext"><blockquote>🎥 <strong>영상:</strong> <a href="https://www.tiktok.com/@zenaydiaa/video/7256688921449352466?q=river%20cruise%20budapest&amp;t=1708618929080" rel="noopener noreferrer nofollow" target="_blank"><strong>Legenda 촛불 디너 크루즈의 15초 현장 영상 릴</strong></a>을 보고 저녁 분위기를 느껴보세요. 선내 스냅 사진은 <a href="https://www.instagram.com/legendacruises/" rel="noopener noreferrer nofollow" target="_blank">📷 Instagram</a>에서도 더 볼 수 있습니다.</blockquote></div></div>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1145,39 +1157,17 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="dc-update"><strong>2026년 업데이트:</strong> 저희가 체험했을 때 이 크루즈는 12코스 무제한 뷔페였습니다. 현재 Hungária Koncert는 대신 <strong>테이블 서빙 4코스 디너</strong>를 제공합니다. 메뉴 A, B, C 중 선택하세요(아래 메뉴 참고). 배, Rajkó 연주자, 민속 무용수는 동일합니다.</div><div class="w-richtext"><p>정통 헝가리 민속 공연이 있는 <strong>축제 분위기의 헝가리 디너 크루즈</strong>를 찾으시나요?</p><p>Hungaria Koncert 디너 크루즈는 <strong>푸짐한 헝가리 디너</strong>(현재 4코스로 제공)에 <strong>Rajkó Folk Orchestra의 라이브 집시 음악</strong>과 전통 민속 무용수의 공연을 더했습니다.</p><p>이 크루즈는 <strong>많이 드시는 분, 취향이 다양한 가족</strong>, 그리고 불빛이 켜진 부다페스트 강변을 보며 전통 헝가리 굴라시, 치킨 파프리카시, 슈트루델을 넉넉하게 즐기고 싶은 여행자에게 알맞습니다.</p>
-<p>상품 페이지에는 19:00 출발 최소 15분 전까지 도착하라고 안내되어 있습니다. <strong>30~45분 일찍 도착하세요</strong>: 일찍 탑승할수록 창가 자리를 얻을 가능성이 높아집니다.</p></div><div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€67부터</span>
-<span class="ltt-buy-price-sub">성인 1인 (기존 €79)</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Hungária Koncert 디너 &amp; 민속 쇼</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">GetYourGuide에서 예약</span>
-<span class="ltt-buy-perk">24시간 전까지 무료 취소</span>
-<span class="ltt-buy-perk">출발: <strong>Akadémia 2 (Gróf Széchenyi)</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>1.5시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/15-hour-danube-cruise-dinner-with-live-music-t1593/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-hungaria-koncert-dinner&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>날짜 확인 &amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>24시간 전까지 무료 취소</span>
-</div>
-</div>
-</div>
-</div><div class="ltt-media-section"><div class="ltt-sec-mini-head"><span>🎬 영상 요약: Hungaria Koncert 뷔페 크루즈</span><span class="ltt-mini-pill">직접 촬영 영상</span></div><div class="w-richtext"><blockquote>🎥 <strong>영상:</strong> 뷔페 구성과 라이브 공연을 느껴보려면 <a href="https://www.youtube.com/shorts/4XTPVjJrSwI" target="_blank"><strong>Hungaria Koncert 디너 크루즈 영상 요약</strong></a>을 시청해 보세요.</blockquote></div></div>
+<p>상품 페이지에는 19:00 출발 최소 15분 전까지 도착하라고 안내되어 있습니다. <strong>30~45분 일찍 도착하세요</strong>: 일찍 탑승할수록 창가 자리를 얻을 가능성이 높아집니다.</p></div><aside class="bpa-book" aria-label="Hungária Koncert 디너 &amp; 민속 쇼">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/15-hour-danube-cruise-dinner-with-live-music-t1593/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-hungaria-koncert-dinner&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/63b858c97991129dcb5fa59a_Budapest-river-cruises-hungaria-koncert-3.webp" alt="Gróf Széchenyi 호에서 Rajkó 민속 음악과 함께하는 Hungária Koncert 디너 크루즈" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">2위 최고의 민속 공연</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/15-hour-danube-cruise-dinner-with-live-music-t1593/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-hungaria-koncert-dinner&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Hungária Koncert 디너 &amp; 민속 쇼</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.38"></span><b class="bpa-rate-score">4.4</b><span class="bpa-rate-meta">리뷰 2.2k+ · 1개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuide 평점</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/15-hour-danube-cruise-dinner-with-live-music-t1593/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-rating-hungaria-koncert-dinner&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.4</span><span class="bpa-rev-count">(2.2k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>GetYourGuide에서 예약</li><li>24시간 전까지 무료 취소</li><li>출발: <strong>Akadémia 2 (Gróf Széchenyi)</strong></li><li>소요 시간: <strong>1.5시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€67부터<small>성인 1인 (기존 €79)</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/15-hour-danube-cruise-dinner-with-live-music-t1593/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-hungaria-koncert-dinner&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">날짜 확인 &amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">24시간 전까지 무료 취소</div>
+</div></aside><div class="ltt-media-section"><div class="ltt-sec-mini-head"><span>🎬 영상 요약: Hungaria Koncert 뷔페 크루즈</span><span class="ltt-mini-pill">직접 촬영 영상</span></div><div class="w-richtext"><blockquote>🎥 <strong>영상:</strong> 뷔페 구성과 라이브 공연을 느껴보려면 <a href="https://www.youtube.com/shorts/4XTPVjJrSwI" target="_blank"><strong>Hungaria Koncert 디너 크루즈 영상 요약</strong></a>을 시청해 보세요.</blockquote></div></div>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1282,39 +1272,19 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="dc-update"><strong>하나의 배, 세 가지 저녁.</strong> 11번 선착장의 같은 배, 같은 주방, 같은 메뉴를 쓰며 공연만 다릅니다. 그래서 이제 여기서 쇼를 선택합니다:</div><div class="dc-opts" style="margin:0 0 16px"><a class="dc-opt" href="https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures" onclick="event.stopPropagation()" rel="nofollow sponsored noopener" target="_blank"><span class="dc-opt-name">🕯️ 디너 &amp; 조명: 공연 없음</span><span class="dc-opt-meta">일몰 시간대 출발 • 배경 음악 • 상층 데크</span><span class="dc-opt-price">€77<small>예약 →</small></span></a><a class="dc-opt" href="https://budapestrivercruise.eu/product/budapest-danube-dinner-cruise/?code=bpadventures" onclick="event.stopPropagation()" rel="nofollow sponsored noopener" target="_blank"><span class="dc-opt-name">💃 민속 &amp; 오페레타 공연</span><span class="dc-opt-meta">오페레타 가수, 민속 무용수, 차르다시 레슨</span><span class="dc-opt-price">€91<small>예약 →</small></span></a><div aria-disabled="true" class="dc-opt dc-opt-off"><span class="dc-opt-name">🎹 라이브 피아노 쇼</span><span class="dc-opt-meta">2026년 11월, 12월 예약 가능 날짜 없음</span><span class="dc-opt-price">€91<small>현재 예약 불가</small></span></div></div><div class="w-richtext"><p>물가가 오르는 시대에 Silverline의 똑똑한 팀은 <strong>세련되면서도 부담 없는 가격의 디너 크루즈</strong>를 만들었습니다.</p><p><strong>라이브 공연을 없애</strong> 이를 실현했기 때문에, 무대 공연 대신 은은한 배경 음악만으로 충분한 분들에게 매우 매력적인 상품입니다.</p><p>배는 <strong>오후 7시</strong>에 정확히 출발했습니다. 저와 함께 체험한 분들은 <strong>위층 데크에 앉았는데</strong>, 공간이 작아 더 아늑하고 <strong>가족적인 분위기</strong>였으며 좋게 느꼈습니다. <strong>붐비는 느낌은 전혀 없었습니다</strong>.</p><p><strong>창문을 밀어 열 수 있어</strong> 사진을 찍거나 여름에 맑은 공기를 즐길 수 있습니다. 정리하면 우아한 환경, 훌륭한 서비스, 맛있는 고급 요리가 어우러진 <strong>품격 있는 저녁</strong>을 보냈습니다. <strong>추천합니다!</strong></p>
-<p>여름에는 <strong>일몰</strong>을 보려면 이 크루즈를 고르세요. 출발 시간이 일몰에 맞춰져 있어 낮의 도시를 보다가 불빛이 켜지는 모습을 볼 수 있습니다. 어두워진 뒤 사진을 찍으려면 선실 조명이 유리에 비치므로 선수나 선미의 <strong>야외 데크로 나가세요</strong>.</p><p><strong>민속 &amp; 오페레타</strong>와 <strong>피아노 배틀</strong> 저녁에는 <strong>아래층 로어 데크에 앉으며</strong>, 무대는 선수에 있습니다. 민속 쇼에는 오페레타 아리아, 의상을 입은 무용수, 짧은 차르다시 레슨이 있고, 피아노 배틀은 진행자와 가수와 함께 두 피아니스트가 겨루며 <strong>신청곡도 받습니다</strong>. 11월 14일에 확인했을 때 라이브 피아노 쇼는 2026년 11월과 12월에 예약 가능한 날짜가 없었습니다.</p></div><div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€77부터</span>
-<span class="ltt-buy-price-sub">성인 1인</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Silverline 4코스 디너 크루즈</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Silverline에서 예약</span>
-<span class="ltt-buy-perk">24시간 전까지 무료 취소</span>
-<span class="ltt-buy-perk">출발: <strong>11번 선착장 (엘리자베트 다리)</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>2시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank">
-<span>날짜 확인 &amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>24시간 전까지 무료 취소 또는 날짜 변경</span>
-</div>
-</div>
-</div>
-</div><div class="ltt-media-section"><div class="ltt-sec-mini-head"><span>🎬 영상 티저: Silverline 디너 크루즈</span><span class="ltt-mini-pill">직접 촬영 영상</span></div><div class="w-richtext"><blockquote>🎥 <strong>영상:</strong> 선상에서 무엇을 기대할 수 있는지 더 잘 알 수 있도록 <a href="https://www.youtube.com/watch?v=feyNKCMgy3Q&amp;ab_channel=BudapestRiverCruises-Silverline" target="_blank"><strong>Silverline Cruises 디너 크루즈 티저 영상</strong></a>을 시청해 보세요.</blockquote></div></div>
+<p>여름에는 <strong>일몰</strong>을 보려면 이 크루즈를 고르세요. 출발 시간이 일몰에 맞춰져 있어 낮의 도시를 보다가 불빛이 켜지는 모습을 볼 수 있습니다. 어두워진 뒤 사진을 찍으려면 선실 조명이 유리에 비치므로 선수나 선미의 <strong>야외 데크로 나가세요</strong>.</p><p><strong>민속 &amp; 오페레타</strong>와 <strong>피아노 배틀</strong> 저녁에는 <strong>아래층 로어 데크에 앉으며</strong>, 무대는 선수에 있습니다. 민속 쇼에는 오페레타 아리아, 의상을 입은 무용수, 짧은 차르다시 레슨이 있고, 피아노 배틀은 진행자와 가수와 함께 두 피아니스트가 겨루며 <strong>신청곡도 받습니다</strong>. 11월 14일에 확인했을 때 라이브 피아노 쇼는 2026년 11월과 12월에 예약 가능한 날짜가 없었습니다.</p></div><aside class="bpa-book" aria-label="Silverline 4코스 디너 크루즈">
+<a class="bpa-book-img" href="https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/68e41e56d6fe9d92b22c15ed_best-budapest-dinner-cruises-silverline-113.avif" alt="Silverline 4코스 디너 크루즈" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">3위 공연 선택이 좋은 크루즈</div>
+<a class="bpa-book-title" href="https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank">Silverline 4코스 디너 크루즈</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.54"></span><b class="bpa-rate-score">4.5</b><span class="bpa-rate-meta">리뷰 2.5k+ · 3개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>예약 사이트 3곳의 평균, 리뷰 수로 가중</strong><span class="bpa-rate-list"><span class="bpa-rev-badge">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.4</span><span class="bpa-rev-count">(1.4k+)</span></span><span class="bpa-rev-badge">
+<img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">4.7</span><span class="bpa-rev-count">(570+)</span></span><span class="bpa-rev-badge">
+<img alt="Tripadvisor" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,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"/><span class="bpa-rev-site">Tripadvisor</span><span class="bpa-rev-score">4.7</span><span class="bpa-rev-count">(480+)</span></span></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Silverline에서 예약</li><li>24시간 전까지 무료 취소</li><li>출발: <strong>11번 선착장 (엘리자베트 다리)</strong></li><li>소요 시간: <strong>2시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€77부터<small>성인 1인</small></div><a class="bpa-book-btn" href="https://budapestrivercruise.eu/product/dinner-lights/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank">날짜 확인 &amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">24시간 전까지 무료 취소 또는 날짜 변경</div>
+</div></aside><div class="ltt-media-section"><div class="ltt-sec-mini-head"><span>🎬 영상 티저: Silverline 디너 크루즈</span><span class="ltt-mini-pill">직접 촬영 영상</span></div><div class="w-richtext"><blockquote>🎥 <strong>영상:</strong> 선상에서 무엇을 기대할 수 있는지 더 잘 알 수 있도록 <a href="https://www.youtube.com/watch?v=feyNKCMgy3Q&amp;ab_channel=BudapestRiverCruises-Silverline" target="_blank"><strong>Silverline Cruises 디너 크루즈 티저 영상</strong></a>을 시청해 보세요.</blockquote></div></div>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1453,39 +1423,17 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>디너는 서빙인가요, 뷔페인가요?</strong><br/>💡 서빙입니다. 4코스 메뉴 4가지(로스트 덕, 송아지 스튜, 가금류 또는 채식) 중 하나를 고르면 테이블로 가져다줍니다.</blockquote><blockquote>❓ <strong>음료가 포함되나요?</strong><br/>💡 웰컴 프로세코 한 잔만 포함됩니다. 맥주, 와인, 칵테일, 청량음료는 테이블에 있는 음료 메뉴에서 주문하고 선상에서 결제합니다.</blockquote><p><strong>6번 선착장</strong>에서 출발하는 2시간 디너 크루즈로, <strong>테이블 서비스 4코스 디너</strong>, 웰컴 프로세코, <strong>Ökrös Band</strong>의 라이브 헝가리 음악과 민속 무용 공연을 함께 즐길 수 있습니다.</p><p><strong>GetYourGuide 리뷰 2,200개 이상</strong>(5점 만점에 4.6점)을 보면, 손님들은 맛있는 음식, 연주자와 무용수, 가격 대비 만족도(4.5)를 꾸준히 언급합니다. 이 목록에서 가장 저렴한 4코스 서빙 디너입니다.</p><p>리뷰어들은 추운 저녁에도 따뜻하고 아늑한 실내 좌석과, 사진을 찍으러 바깥 데크로 쉽게 나갈 수 있다는 점도 언급합니다.</p><blockquote><strong>손님들의 후기:</strong><br/>“4코스 디너는 맛있고 품질도 높았습니다.” <em>(Benjamin, 영국, GetYourGuide, 2026년 11월)</em><br/>“추운 11월 밤인데도 실내는 따뜻하고 아늑했어요!” <em>(Viktorija, 영국, GetYourGuide, 2026년 11월)</em><br/>“연주자들이 정말 환상적이었어요.” <em>(Chantal, 캐나다 (번역됨), GetYourGuide, 2026년 11월)</em></blockquote><h3>찾아가는 방법</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Seesight+Dock+6+Budapest" rel="nofollow" target="_blank">만남 장소: Seesight 6번 선착장, 1052 Budapest</a></li><li>✔️ 엘리자베스 다리와 세체니 다리 사이 페슈트 강변, Vigadó tér 근처 (Seesight 6번 선착장의 Google 지도 위치).</li><li>🗺️ <strong>2번 트램</strong>을 타고 <strong>Vigadó tér</strong>에서 내리세요. 선착장은 강변을 따라 조금만 걸으면 됩니다. 바우처의 지도를 따라가세요.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€66부터</span>
-<span class="ltt-buy-price-sub">성인 1인당</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">라이브 민속 음악과 함께하는 4코스 디너 크루즈</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">GetYourGuide를 통해 예약</span>
-<span class="ltt-buy-perk">24시간 전까지 무료 취소</span>
-<span class="ltt-buy-perk">출발: <strong>6번 선착장 (Seesight)</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>2시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-seesight-folk-dinner&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>날짜 확인 &amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>24시간 전까지 무료 취소</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="라이브 민속 음악과 함께하는 4코스 디너 크루즈">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-seesight-folk-dinner&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/dinner-cruises-2026/budapest-sightseeing-folk-dinner-01.avif" alt="부다페스트 다뉴브강에서 헝가리 민속 음악 라이브와 함께하는 4코스 디너 크루즈" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">4위 가성비 최고의 4코스 디너</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-seesight-folk-dinner&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">라이브 민속 음악과 함께하는 4코스 디너 크루즈</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.64"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">리뷰 2.2k+ · 1개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuide 평점</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-rating-seesight-folk-dinner&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(2.2k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>GetYourGuide를 통해 예약</li><li>24시간 전까지 무료 취소</li><li>출발: <strong>6번 선착장 (Seesight)</strong></li><li>소요 시간: <strong>2시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€66부터<small>성인 1인당</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-evening-cruise-and-dinner-with-champagne-t408084/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-seesight-folk-dinner&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">날짜 확인 &amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">24시간 전까지 무료 취소</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1569,39 +1517,19 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>음료가 정말 무제한인가요?</strong><br/>💡 네. 칵테일, 증류주, 프로세코, 와인, 맥주, 청량음료, 물이 무제한으로 포함되며 테이블로 서빙됩니다. 패키지 외 추가 주문은 별도 요금이 듭니다.</blockquote><blockquote>❓ <strong>뷔페인가요, 코스 요리인가요?</strong><br/>💡 여러 스테이션이 있는 시즌 뷔페입니다. 음료는 테이블로 서빙됩니다.</blockquote><p>River Diva는 <strong>Duna-Weser Kft.</strong>가 운영하는 현대식 디너 보트입니다. 총괄 셰프 Viktor Moldován의 <strong>시즌 뷔페</strong>, <strong>테이블 서비스 무제한 음료</strong>, 그랜드 살롱의 <strong>라이브 음악</strong>이 어우러지는 저녁입니다.</p><p><strong>GetYourGuide 리뷰 2,700건 이상</strong> (5점 만점에 4.8점)을 보면 친절한 직원, 뷔페의 품질과 다양함, 라이브 연주자가 꾸준히 언급됩니다. 가성비 점수는 4.7입니다.</p><p>아쉬운 점은 가격(€99)과 좌석입니다. 테이블이 예약 인원에 따라 배정되어 창가 좌석은 보장되지 않습니다.</p><blockquote><strong>이용객 후기:</strong><br/>“음식이 정말 맛있었고 선택할 수 있는 메뉴도 다양했어요.” <em>(Albinas, 노르웨이, GetYourGuide, 2026년 11월)</em><br/>“음식이 조금 더 따뜻했으면 좋았겠지만, 전체적으로 아주 잘 운영된 행사였어요.” <em>(Tony, 영국, GetYourGuide, 2026년 11월)</em><br/>“훌륭한 품질의 잘 준비된 뷔페 디너였습니다.” <em>(Massimo, 이탈리아 (번역됨), GetYourGuide, 2026년 10월)</em></blockquote><h3>찾아가는 방법</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Akadémia+3+ponton+Széchenyi+rakpart+2+Budapest" rel="nofollow" target="_blank">만남의 장소: Akadémia 3 ponton, Széchenyi rakpart 2, 1054 Budapest</a></li><li>✔️ 세체니 다리(Chain Bridge) 바로 북쪽 페스트 강변에 있습니다.</li><li>🗺️ <strong>2번 트램</strong>을 타고 <strong>Széchenyi István tér</strong>에서 내려 강변을 따라 북쪽으로 약 3분 걸으세요. 바우처의 지도를 따라가시면 됩니다.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€99부터</span>
-<span class="ltt-buy-price-sub">성인 1인</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">River Diva 뷔페 디너 크루즈</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">GetYourGuide를 통해 예약</span>
-<span class="ltt-buy-perk">24시간 전까지 무료 취소</span>
-<span class="ltt-buy-perk">출발지: <strong>Akadémia 3</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>2.5시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-premium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-river-diva-buffet&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>날짜 확인 &amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>24시간 전까지 무료 취소</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="River Diva 뷔페 디너 크루즈">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-premium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-river-diva-buffet&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/dinner-cruises-2026/river-diva-buffet-dinner-01.avif" alt="부다페스트 다뉴브강의 무제한 음료 포함 River Diva 뷔페 디너 크루즈" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">5위 최고의 뷔페 &amp; 무제한 음료</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-premium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-river-diva-buffet&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">River Diva 뷔페 디너 크루즈</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.76"></span><b class="bpa-rate-score">4.8</b><span class="bpa-rate-meta">리뷰 2.8k+ · 3개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>예약 사이트 3곳의 평균, 리뷰 수로 가중</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-premium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-rating-river-diva-buffet&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.8</span><span class="bpa-rev-count">(2.7k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a><a class="bpa-rev-badge is-link" href="https://tp.media/r?campaign_id=47&amp;marker=404154&amp;p=1922&amp;sub_id=best_dinner_cruises_budapest_en_pop&amp;trs=204442&amp;u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FBudapest-Festive-Dinner-Cruise-River-Diva-Exclusive%2Fd499-337865P6" rel="noopener nofollow sponsored" target="_blank">
+<img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">4.7</span><span class="bpa-rev-count">(60+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a><a class="bpa-rev-badge is-link" href="https://tp.media/r?campaign_id=149&amp;marker=404154&amp;p=4456&amp;sub_id=best_dinner_cruises_budapest_en_pop&amp;trs=204442&amp;u=https%3A%2F%2Fwww.tripadvisor.com%2FAttractionProductReview-g274887-d32709423-Budapest_Premium_Dinner_Cruise_Live_Music_Unlimited_Drinks-Budapest_Central_Hungar.html" rel="noopener nofollow sponsored" target="_blank">
+<img alt="Tripadvisor" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,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"/><span class="bpa-rev-site">Tripadvisor</span><span class="bpa-rev-score">4.7</span><span class="bpa-rev-count">(30+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>GetYourGuide를 통해 예약</li><li>24시간 전까지 무료 취소</li><li>출발지: <strong>Akadémia 3</strong></li><li>소요 시간: <strong>2.5시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€99부터<small>성인 1인</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-premium-dinner-cruise-live-music-unlimited-drinks-t494832/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-river-diva-buffet&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">날짜 확인 &amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">24시간 전까지 무료 취소</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1682,39 +1610,17 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>정식 디너인가요?</strong><br/>💡 아니요. 가벼운 저녁 식사로, 예약하신 옵션에 따라 굴라시 수프, 랑고시 또는 둘 다 제공됩니다.</blockquote><blockquote>❓ <strong>민속 무용 공연이 있나요?</strong><br/>💡 상품에는 Rajkó Folk Ensemble의 라이브 공연이 포함됩니다. 무용수 없이 연주자만 있었다는 리뷰가 여러 건 있으니 무용 공연을 보려는 목적으로는 예약하지 마세요.</blockquote><p>밤의 다뉴브와 헝가리의 맛을 즐기고 싶지만 네 코스의 긴 저녁은 부담스러우신가요? Hungária Koncert의 굴라시와 랑고시 크루즈가 예산 절약형 선택입니다. 육지에서 먹고 싶다면 시장과 유대인 지구 시식 투어를 €53부터 소개하는 <a href="/best-food-tours-budapest">부다페스트 푸드 투어</a> 비교를 참고하세요.</p><p>Akadémia 2에서 역사적인 <strong>Gróf Széchenyi</strong>에 승선하면 환영 음료로 프로세코 또는 주스를 받고, <strong>Rajkó Folk Ensemble</strong>의 연주를 들으며 굴라시 수프 한 그릇 및/또는 갓 만든 랑고시를 서빙받습니다. 90분 코스는 국회의사당, 부다 왕궁, 여러 다리를 지납니다.</p><p><strong>GetYourGuide 리뷰 2,600건 이상</strong> (5점 만점에 4.4점)을 보면 음식, 친절한 웨이터, 밴드는 호평을 받았고 가성비 점수는 4.1입니다. 일부는 있을 줄 알았던 민속 무용수가 없어서 아쉬워했습니다. 디너라기보다 가벼운 저녁 식사여서 순위가 가장 낮습니다.</p><blockquote><strong>이용객 후기:</strong><br/>“맛있는 굴라시 수프와 스펀지 케이크를 먹었어요.” <em>(Sarah, 영국, GetYourGuide, 2026년 9월)</em><br/>“가격 대비 훌륭해요!” <em>(Amanda, 캐나다, GetYourGuide, 2026년 9월)</em><br/>“민속 춤을 기대했는데 연주자만 있었어요.” <em>(Véronique, 프랑스 (번역됨), GetYourGuide, 2026년 7월)</em></blockquote><h3>찾아가는 방법</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Akadémia+2+ponton+Antall+József+rakpart+Budapest" rel="nofollow" target="_blank">만남 장소: Akadémia 2 ponton, Id. Antall József rakpart, 1051 Budapest</a></li><li>✔️ 세체니 다리(Chain Bridge)에서 국회의사당 방향으로 두 번째 선착장이며, 페스트 쪽에 있습니다.</li><li>🗺️ <strong>2번 트램</strong>을 타고 <strong>Széchenyi István tér</strong>에서 내리세요. 선착장은 강변을 따라 북쪽으로 조금 걸으면 있습니다.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>공식 티켓 &amp; 실시간 예약 현황</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€40부터</span>
-<span class="ltt-buy-price-sub">1인</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">굴라시 &amp; 랑고시 크루즈</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">GetYourGuide에서 예약</span>
-<span class="ltt-buy-perk">24시간 전까지 무료 취소</span>
-<span class="ltt-buy-perk">출발: <strong>Akadémia 2 (Gróf Széchenyi)</strong></span>
-<span class="ltt-buy-perk">소요 시간: <strong>1.5시간</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-danube-cruise-with-hungarian-dinner-and-live-music-t401526/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-goulash-langos&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>날짜 확인 &amp; 티켓 예약</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>24시간 전까지 무료 취소</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="굴라시 &amp; 랑고시 크루즈">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-danube-cruise-with-hungarian-dinner-and-live-music-t401526/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-goulash-langos&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/hungaria-koncert-goulash-langos-hero.avif" alt="Hungária Koncert 다뉴브강 크루즈에서 제공되는 굴라시 수프와 랑고스" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">6위 최고의 가성비 선택</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-danube-cruise-with-hungarian-dinner-and-live-music-t401526/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-goulash-langos&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">굴라시 &amp; 랑고시 크루즈</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.35"></span><b class="bpa-rate-score">4.4</b><span class="bpa-rate-meta">리뷰 2.6k+ · 1개 사이트</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuide 평점</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-danube-cruise-with-hungarian-dinner-and-live-music-t401526/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-rating-goulash-langos&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.4</span><span class="bpa-rev-count">(2.6k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>GetYourGuide에서 예약</li><li>24시간 전까지 무료 취소</li><li>출발: <strong>Akadémia 2 (Gróf Széchenyi)</strong></li><li>소요 시간: <strong>1.5시간</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€40부터<small>1인</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-danube-cruise-with-hungarian-dinner-and-live-music-t401526/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-dinner-cruises-review-goulash-langos&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">날짜 확인 &amp; 티켓 예약 →</a></div>
+<div class="bpa-book-note">24시간 전까지 무료 취소</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">

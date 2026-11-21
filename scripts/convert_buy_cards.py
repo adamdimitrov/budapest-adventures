@@ -55,6 +55,7 @@ CSS = """<style id="bpa-book-css">
 }
 </style>"""
 
+IMG = r'<img\b(?:[^>"]|"[^"]*")*>'
 EMOJI = re.compile(r"[\U0001F000-\U0001FAFF☀-➿️]+")
 
 
@@ -89,7 +90,7 @@ def deck_photos(s):
         sl = seg.find('class="bpa-slider"')
         img = None
         if sl >= 0:
-            m = re.search(r"<img\b[^>]*>", seg[sl:])
+            m = re.search(IMG, seg[sl:])
             if m:
                 tag = m.group(0)
                 src = first_group(r'data-src="(/assets[^"]+)"', tag) or first_group(r'\bsrc="(/assets[^"]+)"', tag)
@@ -160,10 +161,24 @@ def convert(s):
             k = details.index(c)
             if k < len(photos) and len(photos) == len(details):
                 photo = photos[k]
-        if not photo and ctx:
-            mm = re.search(r'<img\b[^>]*\bsrc="(/assets/(?!budapest-adventures-logo)[^"]+)"[^>]*>', ctx)
+        if c < 0 and len(photos) == 1:
+            # single-product page: one deck card, no breakdown list
+            cs = s.find('<div class="bpa-card"')
+            ctx = s[cs:find_div_end(s, cs)] if cs >= 0 and cs < st else ""
+            photo = photos[0]
+        if not photo and c >= 0:
+            ce = s.find("</details>", st)
+            whole = s[c:ce] if ce > 0 else ctx
+            mm = re.search(r'<img\b[^>]*\b(?:data-src|src)="(/assets/(?!budapest-adventures-logo|nav-thumbs)[^"]+)"[^>]*>', whole)
             if mm:
                 photo = (mm.group(1), first_group(r'alt="([^"]*)"', mm.group(0)))
+        if not photo:
+            # last resort: first content photo on the page (skip logo, author avatar, nav thumbs)
+            for tag in re.findall(IMG, s):
+                src = first_group(r'data-src="(/assets[^"]+)"', tag) or first_group(r'\bsrc="(/assets[^"]+)"', tag)
+                if src and not re.search(r"logo|adam-dimitrov|nav-thumbs|avatar|icon", src):
+                    photo = (src, first_group(r'alt="([^"]*)"', tag))
+                    break
         card = build_card(box, ctx, photo)
         if not card:
             skipped += 1

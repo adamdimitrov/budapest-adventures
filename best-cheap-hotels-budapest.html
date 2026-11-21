@@ -61,7 +61,39 @@ window.addEventListener('load', function() {
 <link id="ltt-language-switcher-styles" rel="stylesheet" href="/css/shared/ltt-language-switcher-styles.ebbf128d15.css"/><link id="CANONICAL_NAVBAR_UNIFIED_FONTS" rel="stylesheet" href="/css/shared/CANONICAL_NAVBAR_UNIFIED_FONTS.e6a1a25ced.css"/>
 <style>.ltt-mobile-drawer:not(.is-open){visibility:hidden !important;pointer-events:none !important;display:none !important;}.ltt-mobile-drawer.is-open{visibility:visible !important;pointer-events:auto !important;display:block !important;}</style><link id="ps-008fa3a483" data-ps-blocks="ltt-master-a11y-contrast ltt-wcag-contrast-fix bpa-light-bar" rel="stylesheet" href="/css/shared/bundle.008fa3a483.css"/>
 <link id="bpa-new-footer" rel="stylesheet" href="/css/shared/bpa-new-footer.4f85d90f75.css"/><link id="bpa-article-typography" rel="stylesheet" href="/css/shared/bpa-article-typography.c64a2a0b29.css"/>
-<link id="bpa-no-red-hover" rel="stylesheet" href="/css/shared/bpa-no-red-hover.802199d918.css"/><link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+<link id="bpa-no-red-hover" rel="stylesheet" href="/css/shared/bpa-no-red-hover.802199d918.css"/><link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -971,21 +1003,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Medos is the budget hotel that costs you the least time: it is on <strong>Jókai tér off Andrássy Avenue</strong>, 328 ft from Oktogon metro, with the Opera House 1,500 ft away. Guests score the location <strong>9.5</strong>, the best here.</p><p>For the same night it cost <strong>€60</strong> for two (€30 each). It was renovated in 2013 and some rooms have balconies; overall it scores <strong>8.6 from 8,429 reviews</strong>.</p><p>Pick it for a short city break where you are out all day.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €60</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Medos Hotel</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District VI</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.6/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-medos&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmedosz.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Medos Hotel">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-medos&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmedosz.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-cheap-hotels-budapest/01-medos-01.avif" alt="Medos Hotel" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#1 Best Overall</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-medos&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmedosz.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Medos Hotel</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.30" aria-hidden="true"></span><b class="bpa-rate-score">8.6</b><span class="bpa-rate-meta">8.4k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-medos&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmedosz.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.6</span><span class="bpa-rev-count">(8.4k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District VI</strong></li><li>🛏️ Guest score: <strong>8.6/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €60<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-medos&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmedosz.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Medos Hotel</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1061 Budapest, Jókai tér 9. (District VI)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it very good; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 2:00 PM to 12:00 AM; check-out until From 6:00 AM to 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Opera House (1,500 ft), House of Terror (1,500 ft), Liszt Ferenc Memorial Museum (1,800 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1023,21 +1049,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Central Hotel 21 has the strongest service scores of the central budget hotels: <strong>staff 9.4, cleanliness 9.1, value 9.0</strong>, and <strong>8.8 overall</strong> from 2,871 reviews. For the same night it cost <strong>€64</strong>.</p><p>It is on Mária utca in District VIII, about 1,050 ft from Rákóczi tér metro and 2,500 ft from the National Museum, with the Central Market Hall and the synagogue in walking distance.</p><p>Check-in runs 2 pm to 10 pm and check-out is 10:30 am, so plan late arrivals.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €64</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Central Hotel 21</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District VIII</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.8/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-central-21&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcentral-21.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Central Hotel 21">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-central-21&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcentral-21.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-cheap-hotels-budapest/02-central-21-01.avif" alt="Central Hotel 21" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#2 Highest Standards</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-central-21&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcentral-21.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Central Hotel 21</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.40" aria-hidden="true"></span><b class="bpa-rate-score">8.8</b><span class="bpa-rate-meta">2.9k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-central-21&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcentral-21.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.8</span><span class="bpa-rev-count">(2.9k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District VIII</strong></li><li>🛏️ Guest score: <strong>8.8/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €64<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-central-21&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcentral-21.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Central Hotel 21</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1085 Budapest, Maria utca 10. (District VIII); 1,050 ft walk to Rákóczi tér metro</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 2:00 PM to 10:00 PM; check-out until 10:30 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Museum of Applied Arts (2,050 ft), Blaha Lujza Square (2,350 ft), Hungarian National Museum (2,500 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Kitchen facilities</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1075,21 +1095,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>CZECH INN Hotel Ferenc is the best-scored hotel on this page, <strong>8.9 from 5,114 reviews</strong>, with 9.2 for cleanliness and a breakfast guests rate wonderful, for <strong>€46</strong> (€23 each).</p><p>The catch is distance: it is on the Hungária körút ring road in District X, outside the centre, next to the Puskás Ferenc Stadium M2 stop.</p><p>Rooms are modern and soundproof, and it lists facilities for disabled guests.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €46</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">CZECH INN Hotel Ferenc</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District X</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.9/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-czech-inn-ferenc&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fachat-premium-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="CZECH INN Hotel Ferenc">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-czech-inn-ferenc&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fachat-premium-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-cheap-hotels-budapest/03-czech-inn-ferenc-01.avif" alt="CZECH INN Hotel Ferenc" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#3 Best Value</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-czech-inn-ferenc&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fachat-premium-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">CZECH INN Hotel Ferenc</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.45" aria-hidden="true"></span><b class="bpa-rate-score">8.9</b><span class="bpa-rate-meta">5.1k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-czech-inn-ferenc&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fachat-premium-budapest.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.9</span><span class="bpa-rev-count">(5.1k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District X</strong></li><li>🛏️ Guest score: <strong>8.9/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €46<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-czech-inn-ferenc&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fachat-premium-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">CZECH INN Hotel Ferenc</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1101 Budapest, Hungária krt. 5 (District X)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it wonderful; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Nepliget Park (1 mi), Deák Ferenc-mauzóleum (1.1 mi), Kossuth Lajos-mauzóleum (1.1 mi)</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">Listed as wheelchair accessible; pets welcome (fees may apply)</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1127,21 +1141,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Panorama Central is the cheapest central option: <strong>€45 for two</strong> (€22.50 each) on Károly körút, <strong>350 ft from the Dohány Street Synagogue</strong> and 450 ft from Astoria metro, in a 19th-century building with renovated interiors.</p><p>The trade-off is in the scores: <strong>8.2</strong> overall, with 8.4 for cleanliness and 8.0 for facilities, the lowest here. Location scores 9.4.</p><p>Book it when you will only sleep there and want to save every euro.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €45</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Budapest Panorama Central</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District V</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.2/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-panorama-central&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbudapest-panorama-central.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Budapest Panorama Central">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-panorama-central&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbudapest-panorama-central.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-cheap-hotels-budapest/04-panorama-central-01.avif" alt="Budapest Panorama Central" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#4 Cheapest in the Centre</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-panorama-central&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbudapest-panorama-central.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Budapest Panorama Central</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.10" aria-hidden="true"></span><b class="bpa-rate-score">8.2</b><span class="bpa-rate-meta">3k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-panorama-central&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbudapest-panorama-central.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.2</span><span class="bpa-rev-count">(3k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District V</strong></li><li>🛏️ Guest score: <strong>8.2/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €45<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-panorama-central&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbudapest-panorama-central.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Budapest Panorama Central</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1052 Budapest, Károly körút 10. (District V); 450 ft walk to Astoria metro</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 2:00 PM; check-out until 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Dohány Utcai Zsinagóga (350 ft), Károlyi Garden (1,200 ft), Anker-ház (1,700 ft)</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1179,21 +1187,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Fashion City sits on <strong>Nyugati tér</strong> by Nyugati railway station, 2,950 ft from Parliament, and costs <strong>€48 for two</strong>. It scores <strong>8.5 from 2,317 reviews</strong>, with 8.9 for cleanliness.</p><p>Rooms are soundproof and non-smoking, with a 24-hour desk and a breakfast guests rate very good.</p><p>It suits travellers arriving by train or heading north to the Danube Bend on a <a href="/best-day-trips-from-budapest">day trip</a>.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €48</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Fashion City Hotel Superior</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District V</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.5/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-fashion-city&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffashion-city.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Fashion City Hotel Superior">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-fashion-city&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffashion-city.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-cheap-hotels-budapest/05-fashion-city-01.avif" alt="Fashion City Hotel Superior" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#5 Best by Nyugati Station</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-fashion-city&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffashion-city.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Fashion City Hotel Superior</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.25" aria-hidden="true"></span><b class="bpa-rate-score">8.5</b><span class="bpa-rate-meta">2.3k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-fashion-city&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffashion-city.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.5</span><span class="bpa-rev-count">(2.3k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District V</strong></li><li>🛏️ Guest score: <strong>8.5/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €48<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-fashion-city&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Ffashion-city.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Fashion City Hotel Superior</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1055 Budapest, Nyugati tér 7. (District V)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it very good; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Alexandra Pódium (250 ft), Olimpia Park (2,550 ft), Parliament (2,950 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage, Street, Electric charging, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">pets welcome (fees may apply)</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1231,21 +1233,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Ibis Budapest City is the safe chain choice: <strong>300 ft from Blaha Lujza tér</strong> and its metro in District VII, <strong>€58</strong> for two, and a breakfast guests rate excellent.</p><p>It scores <strong>8.5</strong> overall and 8.3 for facilities. Check-out runs until 12 pm, later than most here, and it lists facilities for disabled guests.</p><p>Pick it for a no-surprises stay between the Jewish Quarter and the Grand Boulevard.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €58</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Ibis Budapest City</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District VII</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.5/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-ibis-city&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Femke.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Ibis Budapest City">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-ibis-city&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Femke.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-cheap-hotels-budapest/06-ibis-city-01.avif" alt="Ibis Budapest City" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#6 Best Budget Chain</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-ibis-city&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Femke.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Ibis Budapest City</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.25" aria-hidden="true"></span><b class="bpa-rate-score">8.5</b><span class="bpa-rate-meta">1.8k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-ibis-city&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Femke.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.5</span><span class="bpa-rev-count">(1.8k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District VII</strong></li><li>🛏️ Guest score: <strong>8.5/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €58<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-ibis-city&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Femke.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Ibis Budapest City</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1072 Budapest, Akácfa u. 1-3. (District VII); 400 ft walk to Blaha Lujza tér metro</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until 12:00 PM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Blaha Lujza Square (300 ft), Dohány Utcai Zsinagóga (2,750 ft), Opera House (0.8 mi)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">pets welcome (fees may apply)</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1283,21 +1279,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Benczur is the budget base for the City Park side of Budapest: it is in the <strong>embassy quarter</strong>, 950 ft from Hősök tere metro, 1,950 ft from Heroes' Square and 2,450 ft from City Park and the Széchenyi Baths area.</p><p>It has a garden and the Zsolnay Restaurant, scores <strong>8.7 from 3,958 reviews</strong>, and cost <strong>€54</strong> for the same night.</p><p>It is 1.4 miles from downtown, so plan on the M1 metro for the river.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €54</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Benczur Hotel</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District VI</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.7/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-benczur&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbenczur.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Benczur Hotel">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-benczur&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbenczur.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-cheap-hotels-budapest/07-benczur-01.avif" alt="Benczur Hotel" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#7 Best Near City Park</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-benczur&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbenczur.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Benczur Hotel</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.35" aria-hidden="true"></span><b class="bpa-rate-score">8.7</b><span class="bpa-rate-meta">4k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-benczur&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbenczur.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.7</span><span class="bpa-rev-count">(4k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District VI</strong></li><li>🛏️ Guest score: <strong>8.7/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €54<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-benczur&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fbenczur.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Benczur Hotel</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1068 Budapest, Benczur u. 35 (District VI); 950 ft walk to Hősök tere metro</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it very good; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 2:00 PM; check-out until 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Museum of Ethnography (1,650 ft), Heroes' Square (1,950 ft), Regnum Marianum (2,300 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">Listed as wheelchair accessible; airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1335,21 +1325,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>B&amp;B Hotel Budapest City is the only hotel on this page with a <strong>fitness centre</strong>. It is on Angyal utca in District IX, 1.3 miles from downtown, and cost <strong>€54</strong> for the same night.</p><p>It scores <strong>8.4 from 7,754 reviews</strong>, has a terrace and soundproof rooms, and lists facilities for disabled guests.</p><p>Guests rate the breakfast good rather than excellent.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €54</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">B&amp;B Hotel Budapest City</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District IX</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.4/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-bb-hotel-city&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fb-amp-b-budapest-city-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="B&amp;B Hotel Budapest City">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-bb-hotel-city&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fb-amp-b-budapest-city-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-cheap-hotels-budapest/08-bb-hotel-city-01.avif" alt="B&amp;B Hotel Budapest City" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#8 Budget with a Gym</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-bb-hotel-city&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fb-amp-b-budapest-city-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">B&amp;B Hotel Budapest City</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.20" aria-hidden="true"></span><b class="bpa-rate-score">8.4</b><span class="bpa-rate-meta">7.8k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-bb-hotel-city&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fb-amp-b-budapest-city-budapest.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.4</span><span class="bpa-rev-count">(7.8k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District IX</strong></li><li>🛏️ Guest score: <strong>8.4/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €54<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-cheap-hotels-budapest-bb-hotel-city&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fb-amp-b-budapest-city-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">B&amp;B Hotel Budapest City</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1094 Budapest, Angyal utca 1-3. (District IX)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it good; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">No pool or spa listed</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">Listed as wheelchair accessible</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>

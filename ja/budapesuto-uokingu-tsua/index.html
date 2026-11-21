@@ -61,7 +61,39 @@ window.addEventListener('load', function() {
 <link id="ltt-language-switcher-styles" rel="stylesheet" href="/css/shared/ltt-language-switcher-styles.ebbf128d15.css"/><link id="CANONICAL_NAVBAR_UNIFIED_FONTS" rel="stylesheet" href="/css/shared/CANONICAL_NAVBAR_UNIFIED_FONTS.e6a1a25ced.css"/>
 <style>.ltt-mobile-drawer:not(.is-open){visibility:hidden !important;pointer-events:none !important;display:none !important;}.ltt-mobile-drawer.is-open{visibility:visible !important;pointer-events:auto !important;display:block !important;}</style><link id="ps-008fa3a483" data-ps-blocks="ltt-master-a11y-contrast ltt-wcag-contrast-fix bpa-light-bar" rel="stylesheet" href="/css/shared/bundle.008fa3a483.css"/>
 <link id="bpa-new-footer" rel="stylesheet" href="/css/shared/bpa-new-footer.4f85d90f75.css"/><link id="bpa-article-typography" rel="stylesheet" href="/css/shared/bpa-article-typography.c64a2a0b29.css"/>
-<link href="/css/listicle-base.css?v=9274f4ab72" rel="stylesheet"/><link href="/css/listicle-cards.css?v=b857249e22" rel="stylesheet"/><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+<link href="/css/listicle-base.css?v=9274f4ab72" rel="stylesheet"/><link href="/css/listicle-cards.css?v=b857249e22" rel="stylesheet"/><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/ja">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -1030,39 +1062,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p class="how-i-calculate-reviews">レビュー数の算出方法：GetYourGuide、Tripadvisor、Guruwalk、Viator の各サイトにあるこのアクティビティのレビュー総数を使用しています。</p><blockquote><strong>💡 メモ：</strong>このレビューは、ガイドの Joe が案内した20:00発の英語ツアーでの体験に基づいています。</blockquote><p>夜の謎に浸ってみませんか。ハンガリーと東欧の<strong>アンデッド伝承と不気味な物語</strong>を軸にした、ブダペストならではの<strong>唯一無二のウォーキングツアー</strong>です。</p><p>ありきたりな歴史散策ではありません。<strong>東欧に伝わる吸血鬼、幽霊、アンデッドの神話</strong>を深く掘り下げる、背筋の凍る物語をご用意しています。</p><h3>ツアーのハイライト</h3><p>これは単なるブダペストのウォーキングツアーではない、と断言できます。<strong>没入型のストーリーテリング体験</strong>です。ガイドの Joe は<strong>20年のインプロ俳優経験</strong>を活かし、東欧の神話に奥行きとユーモア、そしてドラマチックなひねりを加えます。</p><p>引き込まれる語り口に加え、<strong>夜の王宮地区の幻想的な美しさ</strong>が物語をいっそう引き立て、忘れられない時間にしてくれます。<br/></p><h3>集合場所とアクセス</h3><p>出発地点は、ブダの丘のふもとにある<strong>Clark Ádám tér</strong>です。ここから丘の階段を<strong>5～10分</strong>かけて上ります。足腰に不安がある方は、追加€10でケーブルカーを使って上まで行くこともできます。</p><h3>グループの人数</h3><p>人数は<strong>20～25名</strong>ほどで、ちょうどよいバランスでした。歩く、ガイドの周りで聞きやすい場所を探すといった実際の動きに支障をきたさず、<strong>ほかの参加者とも気軽に打ち解けられます</strong>。</p><h3>気になった点</h3><p>Joe の語りは魅力的ですが、後半は最初の勢いが少し落ちたように感じました。全10話のうち5～6話を聞いた頃から、話の運びがやや<strong>単調</strong>に思えてきます。</p><p>夜遅い時間帯も重なり、終盤は<strong>グループの熱気も落ち着いてきました</strong>。それでも Joe のエネルギーで、ツアーの大半は場が盛り上がっています。</p><h3>参加すべき？</h3><p>史実よりも、ブダペストと東欧の<strong>暗くてミステリアスな伝承</strong>に興味があるなら、ぜひ試してほしいツアーです。夜の帳の下で王宮地区を巡る、スリル満点の方法です。</p><h3>行き方</h3><ul role="list"><li>🗺️ <strong>集合場所：</strong>ブダペストの<a href="https://goo.gl/maps/QXW2LsCz6ynWK2Tk6" target="_blank">Clark Ádám tér</a>、ケーブルカー乗り場の入口近くにあるゼロキロメートル石のそばです。</li><li>🚌 <strong>公共交通機関：</strong>Erzsébet tér（エリザベート広場）から105/16/178/216/R16番のバスに乗ります。</li><li>🚶 <strong>徒歩：</strong>最近改修されたセーチェーニ鎖橋を渡る、景色のよい散歩コースです。</li></ul><div class="ltt-filmstrip-wrap"><button aria-label="前の写真" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="次の写真" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="フィルムストリップギャラリー1" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="レビュー数の算出方法：GetYourGuide、Tripadvisor、Guruwalk、Viator の各サイトにあるこのアクティビティのレビュー総数を…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a7845f940d47fb880b33_Vampire%20Walking%20Tour%20(9).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>レビュー数の算出方法：GetYourGuide、Tripadvisor、Guruwalk、Viator の各サイトにあるこのアクティビティのレビュー総数を…</span></div></div><div class="ltt-strip-slide"><img alt="これは単なるブダペストのウォーキングツアーではない、と断言できます。没入型の…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a48ba5f2e8bea5e2ae46_Vampire%20Walking%20Tour%20(2).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>これは単なるブダペストのウォーキングツアーではない、と断言できます。没入型の…</span></div></div><div class="ltt-strip-slide"><img alt="出発地点は、ブダの丘のふもとにある Clark Ádám tér です。" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a48b4133b5962d6ab825_Vampire%20Walking%20Tour%20(4).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>出発地点は、ブダの丘のふもとにある Clark Ádám tér です。</span></div></div><div class="ltt-strip-slide"><img alt="人数は20～25名ほどで、ちょうどよいバランスでした。" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a489ecf32dc7dd179a76_Vampire%20Walking%20Tour%20(1).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>人数は20～25名ほどで、ちょうどよいバランスでした。</span></div></div><div class="ltt-strip-slide"><img alt="Joe の語りは魅力的ですが、後半は最初の勢いが少し…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a48b4133b5962d6ab7d2_Vampire%20Walking%20Tour%20(6).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>Joe の語りは魅力的ですが、後半は最初の勢いが少し…</span></div></div><div class="ltt-strip-slide"><img alt="史実よりも、ブダペストと東欧の暗くてミステリアスな伝承に…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a48be5685905ad1bc079_Vampire%20Walking%20Tour%20(3).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>史実よりも、ブダペストと東欧の暗くてミステリアスな伝承に…</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>公式チケット＆リアルタイム空き状況</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€18～</span>
-<span class="ltt-buy-price-sub">2時間 • 無料キャンセル</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">ブダ王宮地区 ナイト・ヴァンパイア・ウォーキングツアー</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">スマホ用QRバウチャーを即時発行</span>
-<span class="ltt-buy-perk">24時間前まで全額返金</span>
-<span class="ltt-buy-perk">出発地：<strong>ブダ王宮</strong></span>
-<span class="ltt-buy-perk">所要時間：<strong>2時間</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-the-legendary-vampires-at-the-castle-s-court-t59444/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-vampire&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>日程を確認してチケットを予約</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>最安値保証 • 即時確定</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="ブダ王宮地区 ナイト・ヴァンパイア・ウォーキングツアー">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-the-legendary-vampires-at-the-castle-s-court-t59444/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-vampire&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f4a48b4133b5962d6ab7d2_Vampire%20Walking%20Tour%20(6).webp" alt="ブダ王宮地区 ナイト・ヴァンパイア・ウォーキングツアー" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">第1位 Mysterium Tours</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-the-legendary-vampires-at-the-castle-s-court-t59444/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-vampire&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">ブダ王宮地区 ナイト・ヴァンパイア・ウォーキングツアー</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.59"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">6.8k+件のレビュー · 3サイト</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>3つの予約サイトの平均、レビュー件数で加重</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-the-legendary-vampires-at-the-castle-s-court-t59444/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-vampire&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(4.6k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a><span class="bpa-rev-badge is-static"><img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">4.5</span><span class="bpa-rev-count">(1.5k+)</span></span><span class="bpa-rev-badge is-static"><img alt="Tripadvisor" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,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"/><span class="bpa-rev-site">Tripadvisor</span><span class="bpa-rev-score">4.7</span><span class="bpa-rev-count">(700+)</span></span></span></div></details></div></div>
+<ul class="bpa-book-points"><li>スマホ用QRバウチャーを即時発行</li><li>24時間前まで全額返金</li><li>出発地：<strong>ブダ王宮</strong></li><li>所要時間：<strong>2時間</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€18～<small>2時間 • 無料キャンセル</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-the-legendary-vampires-at-the-castle-s-court-t59444/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-vampire&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">日程を確認してチケットを予約 →</a></div>
+<div class="bpa-book-note">最安値保証 • 即時確定</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1121,39 +1130,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>💡 メモ：</strong>このレビューは、1.5時間の英語洞窟ツアーでの私自身の体験に基づいています。</blockquote><p>ブダペストの隠れた深部へ。王宮地区の下に広がる<strong>広大な洞窟システム</strong>を探検します。</p><p>Budavári barlang と呼ばれるこのエリアは、長年立入禁止だったのち<strong>2019年に一般公開</strong>されました。</p><p>ツアーでは<strong>全長3kmにわたる洞窟</strong>を巡り、これらの謎めいた地下トンネルの<strong>地質と人の歴史</strong>をたどる時間旅行へご案内します。</p><h3>ツアーのハイライト</h3><p>このツアーの特色は、<strong>歴史的正確さへのこだわり</strong>です。</p><p>洞窟が数百万年かけて形成された過程を学べるほか、<strong>マンモスが歯を残していった場所</strong>まで見られます！</p><p>地質の話にとどまらず、中世の貯蔵庫や脱税の隠し場所から、牢獄、戦時中の避難所、犯罪者の隠れ家、さらには90年代の非合法パーティー会場まで、人が洞窟を使ってきた<strong>800年の歴史</strong>にも踏み込みます。</p><p>洞窟内の気温は平均<strong>10～12°C</strong>。<strong>暖かい服装と、汚れてもよい歩きやすい靴</strong>がおすすめです。</p><p>夏の軽装で来た方には、体を温めるための<strong>無料ポンチョ</strong>が用意されています。<br/></p><h3>集合場所とアクセス</h3><p>集合場所は、三位一体像のすぐそば、<strong>Szentháromság tér</strong>です。洞窟の入口までは歩いて5分ほど。</p><p>残念ながら、洞窟は身体の不自由な方はご利用いただけません。</p><h3>グループの人数</h3><p><strong>20～25名</strong>というグループの規模はほどよく、迷路のような洞窟もスムーズに進めるうえ、引き込まれるインタラクティブな語りも楽しめました。</p><h3>気になった点</h3><p>正直なところ、<strong>このユニークな体験に欠点らしい欠点はほとんどありませんでした。</strong></p><p>ツアー会社は参加者の快適さに細心の注意を払っており、経験豊富なガイドが楽しく学べる内容にしてくれます。</p><p>歴史に少し地質学のスパイスを加えた話に惹かれるなら、このツアーがぴったりです。</p><h3>参加すべき？</h3><p>もちろん、行くべきです！</p><p>これは、ありきたりなウォーキングツアーより<strong> </strong><strong>ニッチで一風変わった </strong>体験を探している方に、最適の選択肢です。学びがあり、好奇心も満たされる体験です。</p><h3>行き方</h3><p>🗺️ <strong>集合場所：</strong><a href="https://goo.gl/maps/Pq2JUkaCqewB5Bx79" target="_blank">Szentháromság tér</a>、マーチャーシュ教会の向かいにある像の真正面です。<br/>🚌 <strong>公共交通機関：</strong>Erzsébet tér（エリザベート広場）から16番バスに乗ると王宮地区に着きます。<br/>🚶♂️ <strong>徒歩：</strong>最近改修されたセーチェーニ鎖橋を渡り、ブダの丘を上って Szentháromság tér（三位一体広場）を目指す、景色のよい散歩コースです。</p><div class="ltt-filmstrip-wrap"><button aria-label="前の写真" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="次の写真" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="フィルムストリップギャラリー2" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="現地検証の写真1" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a89e012119ea6136de78_Cave-walking-tour%20(10).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 7</span> <span>現地検証の写真1</span></div></div><div class="ltt-strip-slide"><img alt="このツアーの特色は、歴史的正確さへのこだわりです。" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a8c5e5a13d680b19f3ee_Cave-walking-tour%20(5).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 7</span> <span>このツアーの特色は、歴史的正確さへのこだわりです。</span></div></div><div class="ltt-strip-slide"><img alt="洞窟の中は寒いです。その解決策は？ ポンチョ。" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a945012119ea61379ac4_Cave-walking-tour%20(7).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 7</span> <span>洞窟の中は寒いです。その解決策は？ ポンチョ。</span></div></div><div class="ltt-strip-slide"><img alt="集合場所は、三位一体像のすぐそば、Szentháromság tér です。" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a8e02324ecc4fb69ef07_All%20in%20One%20Walking%20Tour%20(13).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 7</span> <span>集合場所は、三位一体像のすぐそば、Szentháromság tér です。</span></div></div><div class="ltt-strip-slide"><img alt="20～25名というグループの規模はほどよく、…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a90a23415b24210a6b43_Cave-walking-tour%20(9).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 7</span> <span>20～25名というグループの規模はほどよく、…</span></div></div><div class="ltt-strip-slide"><img alt="正直なところ、このユニークな体験に欠点らしい欠点はほとんどありませんでした。" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a91e10ac16f2e2443a9e_Cave-walking-tour%20(12).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 7</span> <span>正直なところ、このユニークな体験に欠点らしい欠点はほとんどありませんでした。</span></div></div><div class="ltt-strip-slide"><img alt="もちろん、行くべきです！" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a93534cd09847ca17935_Cave-walking-tour%20(3).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 7</span> <span>もちろん、行くべきです！</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>公式チケット＆リアルタイム空き状況</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€17～</span>
-<span class="ltt-buy-price-sub">1.5時間 • 無料キャンセル</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">ブダ王宮 洞窟迷路ウォーキングツアー</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">スマホ用QRバウチャーを即時発行</span>
-<span class="ltt-buy-perk">24時間前まで全額返金</span>
-<span class="ltt-buy-perk">出発地：<strong>Dárda utca</strong></span>
-<span class="ltt-buy-perk">所要時間：<strong>1.5時間</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-buda-castle-caves-walking-tour-t391260/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-cave&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>日程を確認してチケットを予約</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>最安値保証 • 即時確定</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="ブダ王宮 洞窟迷路ウォーキングツアー">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-buda-castle-caves-walking-tour-t391260/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-cave&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/best-walking-tours-budapest/buda-castle-cave-labyrinth-walking-tour-01.avif" alt="ブダ王宮 洞窟迷路ウォーキングツアー" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">第2位 Danube-Ipoly Directorate</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-buda-castle-caves-walking-tour-t391260/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-cave&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">ブダ王宮 洞窟迷路ウォーキングツアー</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.60"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">8k+件のレビュー · 1サイト</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuideでの評価</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-buda-castle-caves-walking-tour-t391260/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-cave&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(8k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>スマホ用QRバウチャーを即時発行</li><li>24時間前まで全額返金</li><li>出発地：<strong>Dárda utca</strong></li><li>所要時間：<strong>1.5時間</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€17～<small>1.5時間 • 無料キャンセル</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-buda-castle-caves-walking-tour-t391260/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-cave&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">日程を確認してチケットを予約 →</a></div>
+<div class="bpa-book-note">最安値保証 • 即時確定</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1212,39 +1198,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>💡 メモ：</strong>このレビューは、2.5時間の英語ウォーキングツアーでの私自身の体験に基づいています。</blockquote><p>学びの多いこのツアーで、ブダペストの豊かなユダヤ人の遺産に浸ってください。</p><p>痛ましい<strong>第二次世界大戦</strong>の時代に深く切り込むだけでなく、中世にさかのぼる<strong>ハンガリーのユダヤ人の暮らしの通史</strong>も紹介します。</p><p>この国を知っているつもりのハンガリー人の私でさえ、興味深い史実をたくさん学びました。</p><h3>ツアーのハイライト</h3><p>表面的な情報では物足りない歴史通にとって、このツアーは宝の山です。</p><p>ガイドの解説は<strong>学術レベルの本格派</strong>で、<strong>高い英語力</strong>が求められます（もちろんスペイン語ツアーなら別です）。</p><p>主な見どころは、<strong>シナゴーグと胸を打つ記念碑</strong>で、ナチスや矢十字党の弾圧に立ち向かった英雄たちに捧げられています。<br/></p><h3>集合場所とアクセス</h3><p>ツアーは<strong>Madách Imre tér</strong>で始まり、ドハーニ通りのシナゴーグで終わります。全行程が屋外で車椅子でも参加でき、<strong>ユダヤ人街（7区）が舞台</strong>です。このエリアには<a href="/ja/budapesuto-hosuteru-osusume">ブダペストのおすすめホステル</a>もいくつかあります。</p><h3>グループの人数</h3><p>ツアーは<strong>中規模のグループ（20～30名）</strong>に合わせてうまく組まれており、全員がガイドの声を聞き取り、名所を見渡せました。</p><h3>気になった点</h3><p>全体としては素晴らしいツアーでしたが、<strong>ガイド</strong>は最初にもう少し<strong>きちんと自己紹介してほしかった</strong>です（いきなり本題に入ったので）。また、中身の濃い説明の合間に<strong>理解する間を取ってほしい</strong>とも感じました（話し方がときどき速読のようだったため）。</p><h3>参加すべき？</h3><p>ブダペストのユダヤ人の歴史を、ニュアンスを大切にした詳しい形で探りたい<strong>歴史好きの方</strong>に、強くおすすめします。</p><h3>行き方</h3><p>🗺️ <strong>集合場所：</strong><a href="https://goo.gl/maps/xQoCWMZXzY7v44Kx5" target="_blank">Budapest, Madách Imre út 2, 1075 Hungary. </a>シシィ像の隣にある黄色い傘が目印です。<br/>🚌 <strong>公共交通機関：</strong>市内のどこからでも、地下鉄のどの路線か47/49番トラムで Deák Ferenc tér まで行き、そこからシシィ像まで歩けば簡単です。<br/>🚶♂️ <strong>徒歩：</strong>ブダペストの中心部は歩き回りやすいエリアです。中心部のほとんどの場所から、15～20分の散歩で集合場所に着きます。</p><div class="ltt-filmstrip-wrap"><button aria-label="前の写真" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="次の写真" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="フィルムストリップギャラリー3" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="現地検証の写真1" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a962741588aefc3ca6e7_WW2%20Jewish%20Quarter%20Walking%20Tour%20(6).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>現地検証の写真1</span></div></div><div class="ltt-strip-slide"><img alt="表面的な情報では物足りない歴史通にとって、このツアーは…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a974c8931dba57b758e6_WW2%20Jewish%20Quarter%20Walking%20Tour%20(9).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>表面的な情報では物足りない歴史通にとって、このツアーは…</span></div></div><div class="ltt-strip-slide"><img alt="ツアーは Madách Imre tér で始まり、ドハーニ通りのシナゴーグで終わります。" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9a6dd44c9b55d0396c8_WW2%20Jewish%20Quarter%20Walking%20Tour%20(4).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>ツアーは Madách Imre tér で始まり、ドハーニ通りのシナゴーグで終わります。</span></div></div><div class="ltt-strip-slide"><img alt="ツアーは中規模のグループ（20～30名）に合わせてうまく組まれており、…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a97e0c385a4c54577c42_WW2%20Jewish%20Quarter%20Walking%20Tour%20(3).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>ツアーは中規模のグループ（20～30名）に合わせてうまく組まれており、…</span></div></div><div class="ltt-strip-slide"><img alt="全体としては素晴らしいツアーでしたが、ガイドは最初にもう少し…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9b5b54fef43d38c55f8_WW2%20Jewish%20Quarter%20Walking%20Tour%20(7).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>全体としては素晴らしいツアーでしたが、ガイドは最初にもう少し…</span></div></div><div class="ltt-strip-slide"><img alt="ブダペストのユダヤ人の歴史を、ニュアンスを大切にした詳しい形で探りたい歴史好きの方に…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9c70c385a4c5457d028_WW2%20Jewish%20Quarter%20Walking%20Tour%20(2).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>ブダペストのユダヤ人の歴史を、ニュアンスを大切にした詳しい形で探りたい歴史好きの方に…</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>公式チケット＆リアルタイム空き状況</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">無料（チップ制）</span>
-<span class="ltt-buy-price-sub">2.5時間 • 無料キャンセル</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">ベストなユダヤ人街ウォーキングツアー</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">スマホ用QRバウチャーを即時発行</span>
-<span class="ltt-buy-perk">24時間前まで全額返金</span>
-<span class="ltt-buy-perk">出発地：<strong>Madách tér</strong></span>
-<span class="ltt-buy-perk">所要時間：<strong>2.5時間</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.guruwalk.com/walks/32765-nazism-and-world-war-ii-jewish-quarter-free-walking-tour?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">
-<span>日程を確認してチケットを予約</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>最安値保証 • 即時確定</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="ベストなユダヤ人街ウォーキングツアー">
+<a class="bpa-book-img" href="https://www.guruwalk.com/walks/32765-nazism-and-world-war-ii-jewish-quarter-free-walking-tour?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a962741588aefc3ca6e7_WW2%20Jewish%20Quarter%20Walking%20Tour%20(6).webp" alt="ベストなユダヤ人街ウォーキングツアー" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">第3位 Budapesttours</div>
+<a class="bpa-book-title" href="https://www.guruwalk.com/walks/32765-nazism-and-world-war-ii-jewish-quarter-free-walking-tour?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">ベストなユダヤ人街ウォーキングツアー</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.90"></span><b class="bpa-rate-score">4.9</b><span class="bpa-rate-meta">3k+件のレビュー · 1サイト</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GuruWalkでの評価</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.guruwalk.com/walks/32765-nazism-and-world-war-ii-jewish-quarter-free-walking-tour?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank"><img alt="GuruWalk" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,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"/><span class="bpa-rev-site">GuruWalk</span><span class="bpa-rev-score">4.9</span><span class="bpa-rev-count">(3k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>スマホ用QRバウチャーを即時発行</li><li>24時間前まで全額返金</li><li>出発地：<strong>Madách tér</strong></li><li>所要時間：<strong>2.5時間</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">無料（チップ制）<small>2.5時間 • 無料キャンセル</small></div><a class="bpa-book-btn" href="https://www.guruwalk.com/walks/32765-nazism-and-world-war-ii-jewish-quarter-free-walking-tour?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">日程を確認してチケットを予約 →</a></div>
+<div class="bpa-book-note">最安値保証 • 即時確定</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1303,39 +1266,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>💡 メモ：</strong>このレビューは、2.25時間の英語ウォーキングツアーでの私自身の体験に基づいています。</blockquote><p>ペスト側の中心部を歩くこのツアーは、<strong>ブダペストの歴史をざっと俯瞰する</strong>のにうってつけです。</p><p><strong>ソ連時代</strong>の苦難の日々、私たちが「体制転換」と呼ぶ<strong>ベルリンの壁崩壊後の時代</strong>、さらには<strong>現代史</strong>や論争まで、この国の過去を知ることができます。</p><h3>ツアーのハイライト</h3><p>ブダペストの豊かな歴史を一通り知りたい<strong>初めての訪問者</strong>に、理想的な選択です。<strong>ハンガリー人ガイド</strong>のおかげで、史実の正確さだけでなく、地元ならではの視点も得られます。</p><h3>集合場所とアクセス</h3><p><strong>集合場所はKossuth Square </strong>、<a href="/ja/budapesuto-kokkaigijido-chiketto">ハンガリー国会議事堂</a>のそばです。より正確には、<strong>地下鉄M2線および/または路面電車の駅の近く</strong>です。ツアーは車いすでも参加でき、移動に課題のある方も歓迎しています。ツアーの終点はVigadó Squareです。</p><h3>グループの人数</h3><p>参加者は<strong>約30名</strong>でした。大きめのグループでしたが、楽しさや学びが損なわれることはありませんでした。ほかの参加者と気持ちのよい会話を交わすこともできました。</p><h3>気になった点</h3><p>唯一の小さな難点は、<strong>ガイドが英語のネイティブスピーカーではなかった</strong>ことです。ただ、本物のハンガリー現地目線の語りが、それを補って余りあるものでした。</p><h3>参加すべき？</h3><p>答えはもうおわかりですよね。はい、行くべきです！ 特に、ブダペストの<strong>豊かな歴史を一通り知りたい初めての訪問者</strong>なら、参加する価値があります。</p><h3>行き方</h3><p>🗺️ <strong>集合場所：</strong><a href="https://goo.gl/maps/P5b4yRWVh4vfrww67" target="_blank">Kossuth Lajos tér</a>、トラムの停留所のすぐ隣です。オレンジ色の傘が目印。<br/>🚌 <strong>公共交通機関：</strong>地下鉄またはトラムの2番線に乗り、集合場所まで少し歩きます。<br/>🚶♂️ <strong>徒歩：</strong>ブダペストの中心部は歩き回りやすいエリアです。中心部のほとんどの場所から、15～20分の散歩で集合場所に着きます。</p><div class="ltt-filmstrip-wrap"><button aria-label="前の写真" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="次の写真" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="フィルムストリップギャラリー4" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="現地検証の写真1" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9e69165aa480e2191dd_Pest%20Walking%20Tour%20(9).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>現地検証の写真1</span></div></div><div class="ltt-strip-slide"><img alt="ブダペストの豊かな歴史を一通り知りたい初めての訪問者に、…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9fcab96feb3ee4822df_Pest%20Walking%20Tour%20(4).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>ブダペストの豊かな歴史を一通り知りたい初めての訪問者に、…</span></div></div><div class="ltt-strip-slide"><img alt="集合場所は Kossuth tér のハンガリー国会議事堂のそばです。" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa08f8ee33524047cdf3_Pest%20Walking%20Tour%20(10).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>集合場所は Kossuth tér のハンガリー国会議事堂のそばです。</span></div></div><div class="ltt-strip-slide"><img alt="参加者は約30名でした。" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa18b2ff17a3658353d0_Pest%20Walking%20Tour%20(5).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>参加者は約30名でした。</span></div></div><div class="ltt-strip-slide"><img alt="唯一の小さな難点は、ガイドが英語のネイティブスピーカーではなかったことです。" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa2b7eeef24bb914cd46_Pest%20Walking%20Tour%20(8).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>唯一の小さな難点は、ガイドが英語のネイティブスピーカーではなかったことです。</span></div></div><div class="ltt-strip-slide"><img alt="答えはもうおわかりですよね。はい、行くべきです！" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa420cfff4a85997ea49_Pest%20Walking%20Tour%20(2).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>答えはもうおわかりですよね。はい、行くべきです！</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>公式チケット＆リアルタイム空き状況</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">無料（チップ制）</span>
-<span class="ltt-buy-price-sub">2.25時間 • 無料キャンセル</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">ベストなブダペスト・インナーシティ・ウォーキングツアー</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">スマホ用QRバウチャーを即時発行</span>
-<span class="ltt-buy-perk">24時間前まで全額返金</span>
-<span class="ltt-buy-perk">出発地：<strong>Kossuth Lajos tér</strong></span>
-<span class="ltt-buy-perk">所要時間：<strong>2.25時間</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.guruwalk.com/walks/16551-free-tour-insightful-budapest-hungary-unfolded?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">
-<span>日程を確認してチケットを予約</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>最安値保証 • 即時確定</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="ベストなブダペスト・インナーシティ・ウォーキングツアー">
+<a class="bpa-book-img" href="https://www.guruwalk.com/walks/16551-free-tour-insightful-budapest-hungary-unfolded?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9a9e69165aa480e2191dd_Pest%20Walking%20Tour%20(9).webp" alt="ベストなブダペスト・インナーシティ・ウォーキングツアー" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">第4位 GoZeppelin Tours</div>
+<a class="bpa-book-title" href="https://www.guruwalk.com/walks/16551-free-tour-insightful-budapest-hungary-unfolded?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">ベストなブダペスト・インナーシティ・ウォーキングツアー</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.90"></span><b class="bpa-rate-score">4.9</b><span class="bpa-rate-meta">10k+件のレビュー · 1サイト</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GuruWalkでの評価</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.guruwalk.com/walks/16551-free-tour-insightful-budapest-hungary-unfolded?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank"><img alt="GuruWalk" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,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"/><span class="bpa-rev-site">GuruWalk</span><span class="bpa-rev-score">4.9</span><span class="bpa-rev-count">(10k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>スマホ用QRバウチャーを即時発行</li><li>24時間前まで全額返金</li><li>出発地：<strong>Kossuth Lajos tér</strong></li><li>所要時間：<strong>2.25時間</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">無料（チップ制）<small>2.25時間 • 無料キャンセル</small></div><a class="bpa-book-btn" href="https://www.guruwalk.com/walks/16551-free-tour-insightful-budapest-hungary-unfolded?ref=su9wlptuw5mqsnjh3dln" rel="noopener nofollow sponsored" target="_blank">日程を確認してチケットを予約 →</a></div>
+<div class="bpa-book-note">最安値保証 • 即時確定</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1394,39 +1334,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>💡 メモ：</strong>このレビューは、2時間の英語ウォーキングツアーでの私自身の体験に基づいています。</blockquote><p>飾り気はないのにとことん楽しめるこのウォーキングツアーで、ブダペスト王宮地区の建築と歴史の宝物を発見しましょう。地区の名所を<strong>事実に基づいて簡潔に紹介</strong>してくれるので、ハンガリーの波乱に満ちた歴史をしっかり押さえたい方にぴったりです。</p><h3>ツアーのハイライト</h3><p>王宮地区の趣ある石畳の道を歩く充実したコースで、<strong>王宮（「ブダ城」）、マーチャーシュ教会、漁夫の砦</strong>といった主要な名所を巡ります。</p><p>ほかのツアーで出てきがちな<strong>超自然的・幻想的な要素は一切なく</strong>、事実に基づく語りに徹している点が際立っています。<br/></p><h3>集合場所とアクセス</h3><p>ツアーは、象徴的な三位一体像のすぐ前、<strong>Szentháromság tér</strong>で始まります。しかも全行程が車椅子に対応しており、誰でも参加しやすい内容です。</p><h3>グループの人数</h3><p><strong>約25名</strong>のグループで、移動もしやすく、混みすぎていると感じることはありませんでした。</p><h3>気になった点</h3><p>ツアーは約束どおり、包括的で事実に基づいた概要を届けてくれます。ただし、私のように暑さが厳しい時期に訪れるなら、暑さなど<strong>気候への備えをしておいてください</strong>。😅</p><h3>参加すべき？</h3><p>もちろんです。ブダペストの王宮地区を<strong>飾らず、事実に基づいて</strong>知りたい方には、このツアーがぴったりです。</p><h3>行き方</h3><p>🗺️ <strong>集合場所：</strong><a href="https://goo.gl/maps/Pq2JUkaCqewB5Bx79" target="_blank">Szentháromság tér</a>、マーチャーシュ教会の向かいにある像の真正面です。<br/>🚌 <strong>公共交通機関：</strong>Erzsébet tér（エリザベート広場）から16番バスに乗ると王宮地区に着きます。<br/>🚶♂️ <strong>徒歩：</strong>最近改修されたセーチェーニ鎖橋を渡り、ブダの丘を上って Szentháromság tér（三位一体広場）を目指す、景色のよい散歩コースです。</p><div class="ltt-filmstrip-wrap"><button aria-label="前の写真" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="次の写真" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="フィルムストリップギャラリー5" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="現地検証の写真1" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa665536d44a917a4be1_Buda%20Castle%20Walking%20Tour%20(10).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>現地検証の写真1</span></div></div><div class="ltt-strip-slide"><img alt="王宮地区の趣ある石畳の道を歩く充実したコースで、…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aab76a90d3270b8a5f22_Buda%20Castle%20Walking%20Tour%20(13).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>王宮地区の趣ある石畳の道を歩く充実したコースで、…</span></div></div><div class="ltt-strip-slide"><img alt="ツアーは、象徴的な三位一体像のすぐ前、Szentháromság tér で始まります。" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aae8db5d54ad86f5d18f_Buda%20Castle%20Walking%20Tour%20(7).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>ツアーは、象徴的な三位一体像のすぐ前、Szentháromság tér で始まります。</span></div></div><div class="ltt-strip-slide"><img alt="約25名のグループで、移動もしやすく、混みすぎていると感じることは…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aaf8060885d81f1a5826_Buda%20Castle%20Walking%20Tour%20(4).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>約25名のグループで、移動もしやすく、混みすぎていると感じることは…</span></div></div><div class="ltt-strip-slide"><img alt="ツアーは約束どおり、包括的で事実に基づいた概要を届けてくれます。" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab0d3fe3f203a88ae5ae_Buda%20Castle%20Walking%20Tour%20(1).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>ツアーは約束どおり、包括的で事実に基づいた概要を届けてくれます。</span></div></div><div class="ltt-strip-slide"><img alt="もちろんです。" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab1ba5e26b34774d7e87_Buda%20Castle%20Walking%20Tour%20(15).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>もちろんです。</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>公式チケット＆リアルタイム空き状況</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€12～</span>
-<span class="ltt-buy-price-sub">2時間 • 無料キャンセル</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">ベストなブダ王宮地区ウォーキングツアー</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">スマホ用QRバウチャーを即時発行</span>
-<span class="ltt-buy-perk">24時間前まで全額返金</span>
-<span class="ltt-buy-perk">出発地：<strong>Szentháromság tér</strong></span>
-<span class="ltt-buy-perk">所要時間：<strong>2時間</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-buda-castle&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>日程を確認してチケットを予約</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>最安値保証 • 即時確定</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="ベストなブダ王宮地区ウォーキングツアー">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-buda-castle&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/best-walking-tours-budapest/best-buda-castle-district-walking-tour-01.avif" alt="ベストなブダ王宮地区ウォーキングツアー" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">第5位 Tourist Angel Smc</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-buda-castle&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">ベストなブダ王宮地区ウォーキングツアー</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.60"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">2.4k+件のレビュー · 1サイト</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuideでの評価</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-buda-castle&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(2.4k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>スマホ用QRバウチャーを即時発行</li><li>24時間前まで全額返金</li><li>出発地：<strong>Szentháromság tér</strong></li><li>所要時間：<strong>2時間</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€12～<small>2時間 • 無料キャンセル</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-buda-castle&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">日程を確認してチケットを予約 →</a></div>
+<div class="bpa-book-note">最安値保証 • 即時確定</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1485,39 +1402,16 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>💡 メモ：</strong>このレビューは、3時間の英語ウォーキングツアーでの私自身の体験に基づいています。</blockquote><p><strong>3時間</strong>で、象徴的なこの街の<strong>ペスト側とブダ側の両方</strong>を網羅する充実のツアーへ出発です。</p><p><strong>エアコン付きバスでの移動とゆったりした散策</strong>を組み合わせ、英雄広場から王宮地区まで<a href="/best-things-to-do-budapest">主要な名所</a>の歴史を学びながら巡ります。</p><p>街を広く見渡せる反面、各エリアに触れる程度で深くは掘り下げない、<strong>表面的な概要</strong>であることは覚悟しておきましょう。</p><h3>ツアーのハイライト</h3><p>このツアーで<strong>ブダペストを鳥瞰</strong>できました。短いながら有益な<strong>英雄広場</strong>での停車から始まり、オペラハウス、Városliget（市民公園）、東駅（Keleti）などの名所の前をバスで通り過ぎます。</p><p>このツアーの特徴は、王宮の丘へ<strong>ドナウ川と反対側から</strong>上るという独自のアプローチで、よくあるツアーとは違って新鮮です。<br/></p><h3>集合場所とアクセス</h3><p>出発地点は、ブダの丘のふもとにある<strong>Clark Ádám tér</strong>です。ここから丘の階段を<strong>5～10分</strong>かけて上ります。ご注意：身体の不自由な方には向いていません。</p><h3>グループの人数</h3><p><strong>ツアーは</strong>中規模のグループに合わせて組まれており、全員がガイドの声を聞き取り、名所を見渡せました。</p><h3>気になった点</h3><p>ツアーは<strong>盛りだくさんでしたが、もっと見たいと思いました</strong>。特にペスト側がそうです。</p><p>英雄広場での短い停車や<strong>車窓からの見学</strong>では、名所の豊かさを伝えきれません。</p><p>それでも、うだるような暑さの中でエアコン付きバスはありがたい休憩になりました。王宮地区のツアーは素晴らしかったです。</p><h3>参加すべき？</h3><p><strong>時間が限られている</strong>けれど、ブダペストをさっと把握したいなら、このツアーが合います。もっと詳しく探りたい方は、<strong>丸1日確保する</strong>ことをおすすめします。</p><h3>行き方</h3><p>🗺️ <strong>集合場所：</strong><a href="https://goo.gl/maps/6pewzgA4LQVj6EKA6" target="_blank">Báthory utca 19, 1054 Budapest, Hungary</a>にある Cityrama ＆ Gray Line Travel Agency のオフィスに集合します。<br/>🚌 <strong>公共交通機関：</strong>地下鉄2号線または3号線に乗り、集合場所まで少し歩きます。<br/>🚶♂️ <strong>徒歩：</strong>ブダペストの中心部は歩き回りやすいエリアです。中心部のほとんどの場所から、15～20分の散歩で集合場所に着きます。</p><div class="ltt-filmstrip-wrap"><button aria-label="前の写真" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="次の写真" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="フィルムストリップギャラリー6" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="現地検証の写真1" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab3947c2731b07da4884_All%20in%20One%20Walking%20Tour%20(16).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 7</span> <span>現地検証の写真1</span></div></div><div class="ltt-strip-slide"><img alt="エアコン付きバスでの移動とゆったりした散策を組み合わせ、…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab5efd1746ad2656f8a0_All%20in%20One%20Walking%20Tour%20(8).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 7</span> <span>エアコン付きバスでの移動とゆったりした散策を組み合わせ、…</span></div></div><div class="ltt-strip-slide"><img alt="このツアーでブダペストを鳥瞰できました。" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab4e4c6fedcabe27aa05_All%20in%20One%20Walking%20Tour%20(12).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 7</span> <span>このツアーでブダペストを鳥瞰できました。</span></div></div><div class="ltt-strip-slide"><img alt="出発地点は、ブダの丘のふもとにある Clark Ádám tér です。" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab6e97747bcde67d8abf_All%20in%20One%20Walking%20Tour%20(14).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 7</span> <span>出発地点は、ブダの丘のふもとにある Clark Ádám tér です。</span></div></div><div class="ltt-strip-slide"><img alt="ツアーは中規模のグループに合わせて組まれており、全員が…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab7e9cecaecc5731db1e_All%20in%20One%20Walking%20Tour%20(18).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 7</span> <span>ツアーは中規模のグループに合わせて組まれており、全員が…</span></div></div><div class="ltt-strip-slide"><img alt="ツアーは盛りだくさんでしたが、もっと見たいと思いました、特に…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab9212c70e72edf275b2_All%20in%20One%20Walking%20Tour%20(2).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 7</span> <span>ツアーは盛りだくさんでしたが、もっと見たいと思いました、特に…</span></div></div><div class="ltt-strip-slide"><img alt="時間が限られているけれど、ブダペストをさっと把握したいなら、このツアーが…" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aba283a9f4b867088949_All%20in%20One%20Walking%20Tour%20(19).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 7</span> <span>時間が限られているけれど、ブダペストをさっと把握したいなら、このツアーが…</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>公式チケット＆リアルタイム空き状況</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€35～</span>
-<span class="ltt-buy-price-sub">3時間 • 無料キャンセル</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">ブダペスト・グランド・シティツアー</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">スマホ用QRバウチャーを即時発行</span>
-<span class="ltt-buy-perk">24時間前まで全額返金</span>
-<span class="ltt-buy-perk">出発地：<strong>Báthory utca</strong></span>
-<span class="ltt-buy-perk">所要時間：<strong>3時間</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-grand-city&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>日程を確認してチケットを予約</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>最安値保証 • 即時確定</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="ブダペスト・グランド・シティツアー">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-grand-city&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/best-walking-tours-budapest/grand-city-tour-of-budapest-01.avif" alt="ブダペスト・グランド・シティツアー" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">第6位 Cityrama Budapest</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-grand-city&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">ブダペスト・グランド・シティツアー</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.40"></span><b class="bpa-rate-score">4.4</b><span class="bpa-rate-meta">1.1k+件のレビュー · 1サイト</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuideでの評価</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-grand-city&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.4</span><span class="bpa-rev-count">(1.1k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>スマホ用QRバウチャーを即時発行</li><li>24時間前まで全額返金</li><li>出発地：<strong>Báthory utca</strong></li><li>所要時間：<strong>3時間</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€35～<small>3時間 • 無料キャンセル</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-city-tour-t739/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-grand-city&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">日程を確認してチケットを予約 →</a></div>
+<div class="bpa-book-note">最安値保証 • 即時確定</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1583,39 +1477,16 @@ window.addEventListener('load', function() {
 <p><strong>向かない</strong>：グルテンフリーやヴィーガンの方。運営会社はまだ対応できません。ベジタリアンはメニューが少なくなりますが問題ありません。</p>
 <h3>集合場所</h3>
 <p>🗺️ <strong>集合場所：</strong>Kazinczy utca 29-31, 1075 Budapest（7区）、Kazinczy 通りのシナゴーグのそば。ツアーもここで終了します。<br/>🚇 <strong>公共交通機関：</strong>Astoria（M2）または Deák Ferenc tér（M1、M2、M3）から徒歩5分。</p><div class="ltt-filmstrip-wrap"><button aria-label="前の写真" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="次の写真" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="フィルムストリップギャラリー7" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="ブダペスト・フードウォーキングツアーのラーンゴシュと Dreher ビール" loading="lazy" src="/assets/walking-tours-2026/food-tour-01.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>ブダペスト・フードウォーキングツアーのラーンゴシュと Dreher ビール</span></div></div><div class="ltt-strip-slide"><img alt="7区のストリートフードバーの前に集まったフードツアーのグループ" loading="lazy" src="/assets/walking-tours-2026/food-tour-02.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>7区のストリートフードバーの前に集まったフードツアーのグループ</span></div></div><div class="ltt-strip-slide"><img alt="ユダヤ人街のルインバーの中庭にいるフードツアーのグループ" loading="lazy" src="/assets/walking-tours-2026/food-tour-05.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>ユダヤ人街のルインバーの中庭にいるフードツアーのグループ</span></div></div><div class="ltt-strip-slide"><img alt="フードツアーでハンガリービールで乾杯する2人の参加者" loading="lazy" src="/assets/walking-tours-2026/food-tour-04.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>フードツアーでハンガリービールで乾杯する2人の参加者</span></div></div><div class="ltt-strip-slide"><img alt="7区でハンガリー料理を解説する地元の食通ガイド" loading="lazy" src="/assets/walking-tours-2026/food-tour-03.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>7区でハンガリー料理を解説する地元の食通ガイド</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>公式チケット＆リアルタイム空き状況</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€62～</span>
-<span class="ltt-buy-price-sub">2.5時間 • 無料キャンセル</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">ブダペスト・フードウォーキングツアー：食べて、飲んで、歩く</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">スマホ用QRバウチャーを即時発行</span>
-<span class="ltt-buy-perk">24時間前まで全額返金</span>
-<span class="ltt-buy-perk">出発地：<strong>Kazinczy utca</strong></span>
-<span class="ltt-buy-perk">所要時間：<strong>2.5時間</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-food-walking-tour-eat-sip-explore-like-a-local-t519670/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-food&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>日程を確認してチケットを予約</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>最安値保証 • 即時確定</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="ブダペスト・フードウォーキングツアー：食べて、飲んで、歩く">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-food-walking-tour-eat-sip-explore-like-a-local-t519670/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-food&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/walking-tours-2026/food-tour-01.webp" alt="ブダペスト・フードウォーキングツアーのラーンゴシュと Dreher ビール" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">第7位 Carpe Diem Tours</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-food-walking-tour-eat-sip-explore-like-a-local-t519670/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-food&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">ブダペスト・フードウォーキングツアー：食べて、飲んで、歩く</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.80"></span><b class="bpa-rate-score">4.8</b><span class="bpa-rate-meta">1.7k+件のレビュー · 1サイト</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuideでの評価</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-food-walking-tour-eat-sip-explore-like-a-local-t519670/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-food&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.8</span><span class="bpa-rev-count">(1.7k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>スマホ用QRバウチャーを即時発行</li><li>24時間前まで全額返金</li><li>出発地：<strong>Kazinczy utca</strong></li><li>所要時間：<strong>2.5時間</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€62～<small>2.5時間 • 無料キャンセル</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-food-walking-tour-eat-sip-explore-like-a-local-t519670/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-food&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">日程を確認してチケットを予約 →</a></div>
+<div class="bpa-book-note">最安値保証 • 即時確定</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1681,39 +1552,16 @@ window.addEventListener('load', function() {
 <h3>こんな方におすすめ</h3>
 <p><strong>おすすめ</strong>：20世紀の歴史がブダペストに来た理由の方、House of Terror を壁の解説を読むだけでなく背景込みで見たい方に。無料の<a href="#item-3-ww2-jewish-quarter-tour">ユダヤ人街散策</a>との組み合わせも好相性です。</p>
 <p><strong>向かない</strong>：小さなお子さん連れ。House of Terror には尋問室や強制移送の展示があります。自由見学のオプションでは、博物館のオーディオガイドの利用もご検討ください。</p><div class="ltt-filmstrip-wrap"><button aria-label="前の写真" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="次の写真" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="フィルムストリップギャラリー8" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="ブダペスト、アンドラーシ通りにある House of Terror 博物館" loading="lazy" src="/assets/walking-tours-2026/communist-tour-01.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>ブダペスト、アンドラーシ通りにある House of Terror 博物館</span></div></div><div class="ltt-strip-slide"><img alt="ハンガリー国会議事堂の前で少人数グループと過ごすガイド" loading="lazy" src="/assets/walking-tours-2026/communist-tour-05.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>ハンガリー国会議事堂の前で少人数グループと過ごすガイド</span></div></div><div class="ltt-strip-slide"><img alt="House of Terror の犠牲者の肖像写真の壁" loading="lazy" src="/assets/walking-tours-2026/communist-tour-02.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>House of Terror の犠牲者の肖像写真の壁</span></div></div><div class="ltt-strip-slide"><img alt="House of Terror 博物館のアトリウムにある戦車" loading="lazy" src="/assets/walking-tours-2026/communist-tour-03.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>House of Terror 博物館のアトリウムにある戦車</span></div></div><div class="ltt-strip-slide"><img alt="共産主義の歴史散策が始まるハンガリー国会議事堂" loading="lazy" src="/assets/walking-tours-2026/communist-tour-04.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>共産主義の歴史散策が始まるハンガリー国会議事堂</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>公式チケット＆リアルタイム空き状況</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€50～</span>
-<span class="ltt-buy-price-sub">2時間 • 無料キャンセル</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">共産主義時代の歴史ツアー（House of Terror オプションあり）</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">スマホ用QRバウチャーを即時発行</span>
-<span class="ltt-buy-perk">24時間前まで全額返金</span>
-<span class="ltt-buy-perk">グループ：<strong>最大10名</strong></span>
-<span class="ltt-buy-perk">所要時間：<strong>2時間</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-house-of-terror-guided-tour-t389878/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-communism&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>日程を確認してチケットを予約</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>最安値保証 • 即時確定</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="共産主義時代の歴史ツアー（House of Terror オプションあり）">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-house-of-terror-guided-tour-t389878/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-communism&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/walking-tours-2026/communist-tour-01.webp" alt="ブダペスト、アンドラーシ通りにある House of Terror 博物館" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">第8位 Tourist Angel</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-house-of-terror-guided-tour-t389878/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-communism&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">共産主義時代の歴史ツアー（House of Terror オプションあり）</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.80"></span><b class="bpa-rate-score">4.8</b><span class="bpa-rate-meta">220件のレビュー · 1サイト</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuideでの評価</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-house-of-terror-guided-tour-t389878/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-communism&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.8</span><span class="bpa-rev-count">(220+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>スマホ用QRバウチャーを即時発行</li><li>24時間前まで全額返金</li><li>グループ：<strong>最大10名</strong></li><li>所要時間：<strong>2時間</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€50～<small>2時間 • 無料キャンセル</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-house-of-terror-guided-tour-t389878/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-communism&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">日程を確認してチケットを予約 →</a></div>
+<div class="bpa-book-note">最安値保証 • 即時確定</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1775,39 +1623,16 @@ window.addEventListener('load', function() {
 <h3>こんな方におすすめ</h3>
 <p><strong>おすすめ</strong>：お子さん連れのご家族、休憩が必要な年配の方、30人の他人と黄色い傘についていくのが苦手な方に。希望に合わせてガイドがルートを調整してくれた、という声があります。</p>
 <p><strong>向かない</strong>：予算重視の方。無料の<a href="#item-4-pest-walking-tour">インナーシティ散策</a>なら、チップだけでペスト側の見どころを押さえられます。また、8時間を一度に予約するのは避けましょう：終日コースで約12km歩いたという声もありました。</p><div class="ltt-filmstrip-wrap"><button aria-label="前の写真" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="次の写真" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="フィルムストリップギャラリー9" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="ブダペストの英雄広場にいるプライベートウォーキングツアーの参加者" loading="lazy" src="/assets/walking-tours-2026/private-tour-02.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>ブダペストの英雄広場にいるプライベートウォーキングツアーの参加者</span></div></div><div class="ltt-strip-slide"><img alt="鎖橋とドナウ川のそばにいるプライベートツアーのグループ" loading="lazy" src="/assets/walking-tours-2026/private-tour-01.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>鎖橋とドナウ川のそばにいるプライベートツアーのグループ</span></div></div><div class="ltt-strip-slide"><img alt="ブダペストの教会の中にいるプライベートツアーのグループ" loading="lazy" src="/assets/walking-tours-2026/private-tour-05.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>ブダペストの教会の中にいるプライベートツアーのグループ</span></div></div><div class="ltt-strip-slide"><img alt="ブダペストのカフェに立ち寄るプライベートツアーの参加者" loading="lazy" src="/assets/walking-tours-2026/private-tour-04.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>ブダペストのカフェに立ち寄るプライベートツアーの参加者</span></div></div><div class="ltt-strip-slide"><img alt="ブダペストのプライベートウォーキングツアーで休憩するガイドと参加者" loading="lazy" src="/assets/walking-tours-2026/private-tour-03.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>ブダペストのプライベートウォーキングツアーで休憩するガイドと参加者</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>公式チケット＆リアルタイム空き状況</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€40～</span>
-<span class="ltt-buy-price-sub">2～8時間 • 無料キャンセル</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">地元ガイドと巡るプライベート・カスタム・ウォーキングツアー</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">スマホ用QRバウチャーを即時発行</span>
-<span class="ltt-buy-perk">24時間前まで全額返金</span>
-<span class="ltt-buy-perk">お迎え：<strong>ご宿泊先のホテル</strong></span>
-<span class="ltt-buy-perk">所要時間：<strong>2～8時間</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-private&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>日程を確認してチケットを予約</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>最安値保証 • 即時確定</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="地元ガイドと巡るプライベート・カスタム・ウォーキングツアー">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-private&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/walking-tours-2026/private-tour-05.webp" alt="ブダペストの英雄広場にいるプライベートウォーキングツアーの参加者" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">第9位 Guydeez</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-private&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">地元ガイドと巡るプライベート・カスタム・ウォーキングツアー</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.70"></span><b class="bpa-rate-score">4.7</b><span class="bpa-rate-meta">110件のレビュー · 1サイト</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuideでの評価</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-private&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.7</span><span class="bpa-rev-count">(110+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>スマホ用QRバウチャーを即時発行</li><li>24時間前まで全額返金</li><li>お迎え：<strong>ご宿泊先のホテル</strong></li><li>所要時間：<strong>2～8時間</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€40～<small>2～8時間 • 無料キャンセル</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/private-custom-tour-with-local-guide-budapest-t467353/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-private&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">日程を確認してチケットを予約 →</a></div>
+<div class="bpa-book-note">最安値保証 • 即時確定</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1871,39 +1696,16 @@ window.addEventListener('load', function() {
 <p><strong>向かない</strong>：すでに無料の<a href="#item-4-pest-walking-tour">インナーシティ散策</a>と<a href="#item-5-buda-castle-walking-tour">ブダ王宮ツアー</a>を予定している方。この2つを合わせれば、同じエリアをより深く巡れます。</p>
 <h3>集合場所</h3>
 <p>🗺️ <strong>集合場所：</strong>Szent István tér 4, 1051 Budapest、聖イシュトヴァーン大聖堂の前。<br/>🚇 <strong>公共交通機関：</strong>Bajcsy-Zsilinszky út（M1）または Deák Ferenc tér（M1、M2、M3）から徒歩3分。</p><div class="ltt-filmstrip-wrap"><button aria-label="前の写真" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="次の写真" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="フィルムストリップギャラリー10" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="聖イシュトヴァーン大聖堂前のオリエンテーション・ウォーキングツアーのグループ" loading="lazy" src="/assets/walking-tours-2026/orientation-tour-02.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 3</span> <span>聖イシュトヴァーン大聖堂前のオリエンテーション・ウォーキングツアーのグループ</span></div></div><div class="ltt-strip-slide"><img alt="ドナウ川と国会議事堂を望むブダ側の展望スポットにいる参加者" loading="lazy" src="/assets/walking-tours-2026/orientation-tour-01.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 3</span> <span>ドナウ川と国会議事堂を望むブダ側の展望スポットにいる参加者</span></div></div><div class="ltt-strip-slide"><img alt="オリエンテーションツアーの集合場所、聖イシュトヴァーン大聖堂" loading="lazy" src="/assets/walking-tours-2026/orientation-tour-03.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 3</span> <span>オリエンテーションツアーの集合場所、聖イシュトヴァーン大聖堂</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>公式チケット＆リアルタイム空き状況</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">€35～</span>
-<span class="ltt-buy-price-sub">3時間 • 無料キャンセル</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">ブダとペストを巡る3時間オリエンテーション・ウォーキングツアー</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">スマホ用QRバウチャーを即時発行</span>
-<span class="ltt-buy-perk">24時間前まで全額返金</span>
-<span class="ltt-buy-perk">出発地：<strong>Szent István tér</strong></span>
-<span class="ltt-buy-perk">所要時間：<strong>3時間</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/free-walking-tour-of-budapest-t13960/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-orientation&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>日程を確認してチケットを予約</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>最安値保証 • 即時確定</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="ブダとペストを巡る3時間オリエンテーション・ウォーキングツアー">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/free-walking-tour-of-budapest-t13960/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-orientation&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/walking-tours-2026/orientation-tour-02.webp" alt="聖イシュトヴァーン大聖堂前のオリエンテーション・ウォーキングツアーのグループ" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">第10位 Tourist Angel</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/free-walking-tour-of-budapest-t13960/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-orientation&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">ブダとペストを巡る3時間オリエンテーション・ウォーキングツアー</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span aria-hidden="true" class="bpa-stars" style="--r:4.80"></span><b class="bpa-rate-score">4.8</b><span class="bpa-rate-meta">2.4k+件のレビュー · 1サイト</span><span aria-hidden="true" class="bpa-lang-chev">▾</span></summary><div class="bpa-lang-pop"><strong>GetYourGuideでの評価</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/free-walking-tour-of-budapest-t13960/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-orientation&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.8</span><span class="bpa-rev-count">(2.4k+)</span><span aria-hidden="true" class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>スマホ用QRバウチャーを即時発行</li><li>24時間前まで全額返金</li><li>出発地：<strong>Szent István tér</strong></li><li>所要時間：<strong>3時間</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">€35～<small>3時間 • 無料キャンセル</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/free-walking-tour-of-budapest-t13960/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=walking-tours-orientation&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">日程を確認してチケットを予約 →</a></div>
+<div class="bpa-book-note">最安値保証 • 即時確定</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">

@@ -63,7 +63,39 @@ window.addEventListener('load', function() {
 <link id="bpa-new-footer" rel="stylesheet" href="/css/shared/bpa-new-footer.4f85d90f75.css"/><link id="bpa-article-typography" rel="stylesheet" href="/css/shared/bpa-article-typography.c64a2a0b29.css"/>
 
 
-<link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><style id="bpa-overflow-clip-css">html,body{overflow-x:clip !important;}</style><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+<link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><style id="bpa-overflow-clip-css">html,body{overflow-x:clip !important;}</style><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -872,39 +904,17 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Is Sparty worth it?</strong><br/>💡 Yes, if you want one big night out in a thermal bath. Basic is the right ticket if you plan to drink more than a couple of beers.</blockquote><p>Sparty turns the Széchenyi Baths into an open-air club every Saturday night: DJs, lasers, fire shows and circus artists around steaming 34–38 °C pools under the yellow palace. It runs from 21:30 to 2:00, and the last entry is at 1:00.</p><p>The shows and the setting are the highlight. The two things to plan for are drink prices and the cash-only SpartyPay system.</p><h3>How to Get There</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Sz%C3%A9chenyi+Gy%C3%B3gyf%C3%BCrd%C5%91+%C3%81llatkerti+k%C3%B6r%C3%BAt+9-11+Budapest" rel="nofollow noopener" target="_blank">Állatkerti körút 9-11, 1146 Budapest (Széchenyi Baths, City Park)</a></li><li>🚇 Take <strong>metro M1</strong> to <strong>Széchenyi fürdő</strong>, about 5 minutes from the city centre.</li><li>🚕 Going home at 2:00: order a <strong>Bolt</strong> or an official taxi through an app. Guests report overpriced street taxis waiting at the exit.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €73</span>
-<span class="ltt-buy-price-sub">per adult · entry + locker</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Sparty Basic Ticket</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Booked via GetYourGuide</span>
-<span class="ltt-buy-perk">Live guidance in English</span>
-<span class="ltt-buy-perk">Address: <strong>Állatkerti körút 9-11, 1146 Budapest (Széchenyi Baths, City Park)</strong></span>
-<span class="ltt-buy-perk">Suggested time: <strong>Sat 21:30–2:00</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-the-ultimate-late-night-spa-party-ticket-t386559/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-sparty-review-sparty-basic&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Locker included</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Sparty Basic Ticket">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-the-ultimate-late-night-spa-party-ticket-t386559/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-sparty-review-sparty-basic&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/sparty-2026/sparty-drinks-05.avif" alt="Sparty pool party at the Széchenyi Baths" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#1 Best Value Sparty Ticket</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-the-ultimate-late-night-spa-party-ticket-t386559/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-sparty-review-sparty-basic&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Sparty Basic Ticket</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.15" aria-hidden="true"></span><b class="bpa-rate-score">4.2</b><span class="bpa-rate-meta">1.8k+ reviews · GetYourGuide</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-the-ultimate-late-night-spa-party-ticket-t386559/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-sparty-rating-sparty-basic&amp;mkt_cmp=true" rel="nofollow sponsored noopener nofollow sponsored noopener" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.2</span><span class="bpa-rev-count">(1.8k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Booked via GetYourGuide</li><li>Live guidance in English</li><li>Address: <strong>Állatkerti körút 9-11, 1146 Budapest (Széchenyi Baths, City Park)</strong></li><li>Suggested time: <strong>Sat 21:30–2:00</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €73<small>per adult · entry + locker</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-the-ultimate-late-night-spa-party-ticket-t386559/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-sparty-review-sparty-basic&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Locker included</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -985,39 +995,17 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Is the Sparty Premium ticket worth it?</strong><br/>💡 Only for light drinkers. The coupons cover 2 beers or 1 cocktail; anyone drinking more needs a SpartyPay card anyway.</blockquote><p>Premium is the same night as Basic: entry, a locker, the pools and the shows. The difference is 2 drink coupons and a reusable cup.</p><p>The coupons are the cheapest way to have one or two drinks, because the bars otherwise ask for a SpartyPay card with a first top-up of 20,000 HUF.</p><h3>How to Get There</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Sz%C3%A9chenyi+Gy%C3%B3gyf%C3%BCrd%C5%91+%C3%81llatkerti+k%C3%B6r%C3%BAt+9-11+Budapest" rel="nofollow noopener" target="_blank">Állatkerti körút 9-11, 1146 Budapest (Széchenyi Baths, City Park)</a></li><li>🚇 Take <strong>metro M1</strong> to <strong>Széchenyi fürdő</strong>, about 5 minutes from the city centre.</li><li>🚕 Going home at 2:00: order a <strong>Bolt</strong> or an official taxi through an app. Guests report overpriced street taxis waiting at the exit.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €100</span>
-<span class="ltt-buy-price-sub">per adult · entry, locker, 2 drink coupons</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Sparty Premium Ticket</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Booked via GetYourGuide</span>
-<span class="ltt-buy-perk">Locker included</span>
-<span class="ltt-buy-perk">Address: <strong>Állatkerti körút 9-11, 1146 Budapest (Széchenyi Baths, City Park)</strong></span>
-<span class="ltt-buy-perk">Suggested time: <strong>Sat 21:30–2:00</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-the-ultimate-late-night-spa-party-ticket-t386559/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-sparty-review-sparty-premium&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>2 drink coupons + cup</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Sparty Premium Ticket">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-the-ultimate-late-night-spa-party-ticket-t386559/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-sparty-review-sparty-premium&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/sparty-2026/sparty-drinks-05.avif" alt="Sparty pool party at the Széchenyi Baths" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#2 Sparty With Drinks</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-the-ultimate-late-night-spa-party-ticket-t386559/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-sparty-review-sparty-premium&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Sparty Premium Ticket</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.15" aria-hidden="true"></span><b class="bpa-rate-score">4.2</b><span class="bpa-rate-meta">1.8k+ reviews · GetYourGuide</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-the-ultimate-late-night-spa-party-ticket-t386559/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-sparty-rating-sparty-premium&amp;mkt_cmp=true" rel="nofollow sponsored noopener nofollow sponsored noopener" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.2</span><span class="bpa-rev-count">(1.8k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Booked via GetYourGuide</li><li>Locker included</li><li>Address: <strong>Állatkerti körút 9-11, 1146 Budapest (Széchenyi Baths, City Park)</strong></li><li>Suggested time: <strong>Sat 21:30–2:00</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €100<small>per adult · entry, locker, 2 drink coupons</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-the-ultimate-late-night-spa-party-ticket-t386559/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-sparty-review-sparty-premium&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">2 drink coupons + cup</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1097,39 +1085,17 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Is Rudas night bathing a good Sparty alternative?</strong><br/>💡 Yes, if you want the night-time bath without the club. It also runs on Fridays.</blockquote><p>Rudas opens its Turkish bath, swimming pool and wellness area every Friday and Saturday night from 22:00 to 3:00, with a cocktail bar on the roof. It is the calm, grown-up version of a night at the baths.</p><p>I have bathed at Rudas myself in the daytime; the rooftop pool looks straight over the Danube.</p><h3>How to Get There</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Rudas+Gy%C3%B3gyf%C3%BCrd%C5%91+D%C3%B6brentei+t%C3%A9r+9+Budapest" rel="nofollow noopener" target="_blank">Döbrentei tér 9, 1013 Budapest (Buda end of Elizabeth Bridge)</a></li><li>🚋 <strong>Tram</strong> 19, 41, 56 or 56A, or <strong>bus</strong> 7, 8E, 108E, 110 or 112 to the Buda end of Elizabeth Bridge.</li><li>🌙 After night bathing: night buses 907 and 973.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Online Tickets</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From 15,000 HUF</span>
-<span class="ltt-buy-price-sub">per adult · online ticket</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Rudas Night Bathing</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Online tickets only</span>
-<span class="ltt-buy-perk">Friday and Saturday nights</span>
-<span class="ltt-buy-perk">Address: <strong>Döbrentei tér 9, 1013 Budapest (Buda end of Elizabeth Bridge)</strong></span>
-<span class="ltt-buy-perk">Suggested time: <strong>Fri &amp; Sat 22:00–3:00</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.rudasfurdo.hu/en/offers/night-above-the-city" rel="nofollow noopener" target="_blank">
-<span>See Night Bathing Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Sold online on the official Rudas site</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Rudas Night Bathing">
+<a class="bpa-book-img" href="https://www.rudasfurdo.hu/en/offers/night-above-the-city" rel="nofollow noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12fda4ee7c50a6cee3178_3_1%20Rudas%20Thermal%20Bath.webp" alt="Rudas Thermal Bath" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#3 Best Late-Night Soak</div>
+<a class="bpa-book-title" href="https://www.rudasfurdo.hu/en/offers/night-above-the-city" rel="nofollow noopener" target="_blank">Rudas Night Bathing</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.28" aria-hidden="true"></span><b class="bpa-rate-score">4.3</b><span class="bpa-rate-meta">12k+ reviews · Google</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Google Maps</strong><span class="bpa-rate-list"><span class="bpa-rev-badge is-static">
+<img alt="Google" class="bpa-rev-icon" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/65350288cf6e222fd93f3743_google-icon.png"/><span class="bpa-rev-site">Google</span><span class="bpa-rev-score">4.3</span><span class="bpa-rev-count">(12.4k+)</span></span></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Online tickets only</li><li>Friday and Saturday nights</li><li>Address: <strong>Döbrentei tér 9, 1013 Budapest (Buda end of Elizabeth Bridge)</strong></li><li>Suggested time: <strong>Fri &amp; Sat 22:00–3:00</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From 15,000 HUF<small>per adult · online ticket</small></div><a class="bpa-book-btn" href="https://www.rudasfurdo.hu/en/offers/night-above-the-city" rel="nofollow noopener" target="_blank">See Night Bathing Tickets →</a></div>
+<div class="bpa-book-note">Sold online on the official Rudas site</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1205,39 +1171,17 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote>❓ <strong>Is the Beer Spa a good alternative to Sparty?</strong><br/>💡 Yes, for a fun daytime version with drinks included and free cancellation. It is not a party.</blockquote><p>The Beer Spa combines a full-day fast-track Széchenyi ticket with a 45-minute private soak in a wooden tub of thermal water infused with hops and malt, with unlimited draught beer from your own copper tap.</p><p>It is a relaxed, fun soak rather than a party, and it ends with the rest of the day free in the Széchenyi pools.</p><h3>How to Get There</h3><ul role="list"><li>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Sz%C3%A9chenyi+Gy%C3%B3gyf%C3%BCrd%C5%91+K%C3%B3s+K%C3%A1roly+s%C3%A9t%C3%A1ny+1+Budapest" rel="nofollow noopener" target="_blank">Széchenyi main entrance (Gate 1), Kós Károly sétány 1, 1146 Budapest</a></li><li>🚇 Take <strong>metro M1</strong> to <strong>Széchenyi fürdő</strong>.</li><li>➡️ Inside the main hall, turn left into the corridor to the Beer Spa reception; skip the information desk.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €125</span>
-<span class="ltt-buy-price-sub">per adult · bath + 45-min beer spa</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Széchenyi + Beer Spa</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Booked via GetYourGuide</span>
-<span class="ltt-buy-perk">Reserve now, pay later</span>
-<span class="ltt-buy-perk">Address: <strong>Széchenyi main entrance (Gate 1), Kós Károly sétány 1, 1146 Budapest</strong></span>
-<span class="ltt-buy-perk">Suggested time: <strong>3 Hours</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/beer-spa-with-optional-szechenyi-bath-tickets-t1145839/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-sparty-review-beer-spa&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Free cancellation up to 24 hours before</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Széchenyi + Beer Spa">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/beer-spa-with-optional-szechenyi-bath-tickets-t1145839/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-sparty-review-beer-spa&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/sparty-2026/beer-spa-tub-01.avif" alt="Beer Spa at the Széchenyi Baths" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#4 Best Daytime Alternative</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/beer-spa-with-optional-szechenyi-bath-tickets-t1145839/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-sparty-review-beer-spa&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Széchenyi + Beer Spa</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.43" aria-hidden="true"></span><b class="bpa-rate-score">4.4</b><span class="bpa-rate-meta">100+ reviews · GetYourGuide</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/beer-spa-with-optional-szechenyi-bath-tickets-t1145839/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-sparty-rating-beer-spa&amp;mkt_cmp=true" rel="nofollow sponsored noopener nofollow sponsored noopener" target="_blank">
+<img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.4</span><span class="bpa-rev-count">(100+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Booked via GetYourGuide</li><li>Reserve now, pay later</li><li>Address: <strong>Széchenyi main entrance (Gate 1), Kós Károly sétány 1, 1146 Budapest</strong></li><li>Suggested time: <strong>3 Hours</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €125<small>per adult · bath + 45-min beer spa</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/beer-spa-with-optional-szechenyi-bath-tickets-t1145839/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=en-sparty-review-beer-spa&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Free cancellation up to 24 hours before</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">

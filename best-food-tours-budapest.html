@@ -61,7 +61,39 @@ window.addEventListener('load', function() {
 <link id="ltt-language-switcher-styles" rel="stylesheet" href="/css/shared/ltt-language-switcher-styles.ebbf128d15.css"/><link id="CANONICAL_NAVBAR_UNIFIED_FONTS" rel="stylesheet" href="/css/shared/CANONICAL_NAVBAR_UNIFIED_FONTS.e6a1a25ced.css"/>
 <style>.ltt-mobile-drawer:not(.is-open){visibility:hidden !important;pointer-events:none !important;display:none !important;}.ltt-mobile-drawer.is-open{visibility:visible !important;pointer-events:auto !important;display:block !important;}</style><link id="ps-008fa3a483" data-ps-blocks="ltt-master-a11y-contrast ltt-wcag-contrast-fix bpa-light-bar" rel="stylesheet" href="/css/shared/bundle.008fa3a483.css"/>
 <link id="bpa-new-footer" rel="stylesheet" href="/css/shared/bpa-new-footer.4f85d90f75.css"/><link id="bpa-article-typography" rel="stylesheet" href="/css/shared/bpa-article-typography.c64a2a0b29.css"/>
-<link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+<link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -1034,39 +1066,16 @@ window.addEventListener('load', function() {
 <p><strong>Skip it</strong> if you would rather spend the evening in the Jewish Quarter&#x27;s bars: that is the Carpe Diem tour below.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Central Market Hall (Fővám tér), District IX. There are 2 start options depending on the slot you pick, and the exact spot is in your voucher.<br/>🚇 <strong>Public Transport:</strong> Fővám tér (M4) or trams 2, 47, 49.</p>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €62</span>
-<span class="ltt-buy-price-sub">3 Hours • Free cancellation</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Foodapest Market to Tavern Food Tour with Wine</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Central Market Hall</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>3 Hours</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-food-tour-market-to-tavern-14-tasters-wines-t808482/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-market-tavern&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-<span>Free Cancellation • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Foodapest Market to Tavern Food Tour with Wine">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-food-tour-market-to-tavern-14-tasters-wines-t808482/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-market-tavern&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/food-tours-budapest/foodapest-market-tavern-01.avif" alt="Friends toasting with Hungarian wine at the tavern stop" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#1 Foodapest</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-food-tour-market-to-tavern-14-tasters-wines-t808482/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-market-tavern&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Foodapest Market to Tavern Food Tour with Wine</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.90" aria-hidden="true"></span><b class="bpa-rate-score">4.9</b><span class="bpa-rate-meta">679 reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-food-tour-market-to-tavern-14-tasters-wines-t808482/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-market-tavern&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.9</span><span class="bpa-rev-count">(679+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Central Market Hall</strong></li><li>Duration: <strong>3 Hours</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €62<small>3 Hours • Free cancellation</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-food-tour-market-to-tavern-14-tasters-wines-t808482/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-market-tavern&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+<div class="bpa-book-note">Free Cancellation • Instant Confirmation</div>
+</div></aside>
 </div>
 </div>
 </details>
@@ -1130,39 +1139,16 @@ window.addEventListener('load', function() {
 <p><strong>Skip it</strong> if you eat gluten-free or vegan, or you want the Great Market Hall: this tour never goes there.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Kazinczy utca 29-31, 1075 Budapest (District VII), by the Kazinczy Street Synagogue.<br/>🚇 <strong>Public Transport:</strong> Astoria (M2) or Deák Ferenc tér (M1, M2, M3), then a 5-minute walk.</p>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €53</span>
-<span class="ltt-buy-price-sub">2.5 Hours • Free cancellation</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Carpe Diem Jewish Quarter Food Tour (Street Food Listing)</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Kazinczy utca</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>2.5 Hours</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-guided-food-tour-with-wine-beer-and-shots-t519498/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-carpe-diem&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-<span>Free Cancellation • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Carpe Diem Jewish Quarter Food Tour (Street Food Listing)">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-guided-food-tour-with-wine-beer-and-shots-t519498/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-carpe-diem&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/walking-tours-2026/food-tour-01.avif" alt="Carpe Diem Jewish Quarter Food Tour (Street Food Listing)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#2 Carpe Diem Tours</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-guided-food-tour-with-wine-beer-and-shots-t519498/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-carpe-diem&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Carpe Diem Jewish Quarter Food Tour (Street Food Listing)</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.80" aria-hidden="true"></span><b class="bpa-rate-score">4.8</b><span class="bpa-rate-meta">89 reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-guided-food-tour-with-wine-beer-and-shots-t519498/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-carpe-diem&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.8</span><span class="bpa-rev-count">(89+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Kazinczy utca</strong></li><li>Duration: <strong>2.5 Hours</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €53<small>2.5 Hours • Free cancellation</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-guided-food-tour-with-wine-beer-and-shots-t519498/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-carpe-diem&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+<div class="bpa-book-note">Free Cancellation • Instant Confirmation</div>
+</div></aside>
 </div>
 </div>
 </details>
@@ -1226,39 +1212,16 @@ window.addEventListener('load', function() {
 <p><strong>Skip it</strong> if you prefer a proven tour with hundreds of reviews: #1 covers the same ground with a longer record.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Central Market Hall (Nagycsarnok), Fővám tér, District IX. Ends at Ferenciek tere.<br/>🚇 <strong>Public Transport:</strong> Fővám tér (M4) or trams 2, 47, 49.</p>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €62</span>
-<span class="ltt-buy-price-sub">3 Hours • Free cancellation</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Market Walk Food Tour with 20+ Tastings and Local Drinks</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Central Market Hall</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>3 Hours</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-food-wine-tasting-tour-with-hungarian-foie-gras-t1114778/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-market-walk&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-<span>Free Cancellation • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Market Walk Food Tour with 20+ Tastings and Local Drinks">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-food-wine-tasting-tour-with-hungarian-foie-gras-t1114778/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-market-walk&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/food-tours-budapest/market-walk-20-tastings-3.webp" alt="Food tour guests tasting snacks inside the Great Market Hall" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#3 Experiences by George</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-food-wine-tasting-tour-with-hungarian-foie-gras-t1114778/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-market-walk&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Market Walk Food Tour with 20+ Tastings and Local Drinks</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.90" aria-hidden="true"></span><b class="bpa-rate-score">4.9</b><span class="bpa-rate-meta">61 reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-food-wine-tasting-tour-with-hungarian-foie-gras-t1114778/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-market-walk&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.9</span><span class="bpa-rev-count">(61+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Central Market Hall</strong></li><li>Duration: <strong>3 Hours</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €62<small>3 Hours • Free cancellation</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-food-wine-tasting-tour-with-hungarian-foie-gras-t1114778/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-market-walk&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+<div class="bpa-book-note">Free Cancellation • Instant Confirmation</div>
+</div></aside>
 </div>
 </div>
 </details>
@@ -1323,39 +1286,16 @@ window.addEventListener('load', function() {
 <p><strong>Skip it</strong> if your main goal is the Great Market Hall, which is closed by evening: book #1 or #3 instead.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Central Pest. The exact meeting point is in your voucher after booking.<br/>🚇 <strong>Public Transport:</strong> Central Pest is walkable from Deák Ferenc tér (M1, M2, M3).</p>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €61</span>
-<span class="ltt-buy-price-sub">3 Hours • Free cancellation</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">First Day Food Tour: Evening Tastings and a Tavern Meal</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Central Pest</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>3 Hours</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-classical-music-evening-tour-and-opera-visit-t1161898/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-first-day&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-<span>Free Cancellation • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="First Day Food Tour: Evening Tastings and a Tavern Meal">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-classical-music-evening-tour-and-opera-visit-t1161898/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-first-day&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/food-tours-budapest/first-day-food-tour-4.webp" alt="Food tour group walking through Budapest at night" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#4 Foodapest</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-classical-music-evening-tour-and-opera-visit-t1161898/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-first-day&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">First Day Food Tour: Evening Tastings and a Tavern Meal</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.80" aria-hidden="true"></span><b class="bpa-rate-score">4.8</b><span class="bpa-rate-meta">25 reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-classical-music-evening-tour-and-opera-visit-t1161898/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-first-day&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.8</span><span class="bpa-rev-count">(25+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Central Pest</strong></li><li>Duration: <strong>3 Hours</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €61<small>3 Hours • Free cancellation</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-classical-music-evening-tour-and-opera-visit-t1161898/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-first-day&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+<div class="bpa-book-note">Free Cancellation • Instant Confirmation</div>
+</div></aside>
 </div>
 </div>
 </details>
@@ -1419,39 +1359,16 @@ window.addEventListener('load', function() {
 <p><strong>Skip it</strong> if you only have a couple of hours, or you want to see more of the city: a walking food tour covers more ground.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Central Market Hall, District IX, for the market tour, then the Foodapest kitchen nearby.<br/>🚇 <strong>Public Transport:</strong> Fővám tér (M4) or trams 2, 47, 49.</p>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €90</span>
-<span class="ltt-buy-price-sub">3 to 4 Hours • Free cancellation</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Hungarian Cooking Class with a Market Tour and Wine Pairing</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Central Market Hall</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>3 to 4 Hours</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-market-tour-cooking-class-with-locals-tastings-t497653/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-cooking-class&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-<span>Free Cancellation • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Hungarian Cooking Class with a Market Tour and Wine Pairing">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-market-tour-cooking-class-with-locals-tastings-t497653/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-cooking-class&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/food-tours-budapest/cooking-class-market-3.webp" alt="Guests in Foodapest aprons mixing dough at the cooking class" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#5 Foodapest</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-market-tour-cooking-class-with-locals-tastings-t497653/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-cooking-class&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Hungarian Cooking Class with a Market Tour and Wine Pairing</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:5.00" aria-hidden="true"></span><b class="bpa-rate-score">5.0</b><span class="bpa-rate-meta">195 reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-market-tour-cooking-class-with-locals-tastings-t497653/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-cooking-class&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">5.0</span><span class="bpa-rev-count">(195+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Central Market Hall</strong></li><li>Duration: <strong>3 to 4 Hours</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €90<small>3 to 4 Hours • Free cancellation</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-market-tour-cooking-class-with-locals-tastings-t497653/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-cooking-class&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+<div class="bpa-book-note">Free Cancellation • Instant Confirmation</div>
+</div></aside>
 </div>
 </div>
 </details>
@@ -1515,39 +1432,16 @@ window.addEventListener('load', function() {
 <p><strong>Skip it</strong> if you want to try savoury Hungarian food or drink wine: that is #1 or #2.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Ipar utca 11, 1095 Budapest (District IX).<br/>🚇 <strong>Public Transport:</strong> Boráros tér (trams 2, 4, 6) or Corvin-negyed (M3), then a short walk.</p>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €20</span>
-<span class="ltt-buy-price-sub">65 Minutes • Free cancellation</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Chimney Cake (Kürtőskalács) Baking Workshop</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Ipar utca 11</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>65 Minutes</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-chimney-cake&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-<span>Free Cancellation • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Chimney Cake (Kürtőskalács) Baking Workshop">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-chimney-cake&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/food-tours-budapest/chimney-cake-workshop-01.avif" alt="Chimney Cake (Kürtőskalács) Baking Workshop" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#6 Chimney Cake Workshop</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-chimney-cake&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Chimney Cake (Kürtőskalács) Baking Workshop</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.90" aria-hidden="true"></span><b class="bpa-rate-score">4.9</b><span class="bpa-rate-meta">1.7k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-chimney-cake&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.9</span><span class="bpa-rev-count">(1.7k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Ipar utca 11</strong></li><li>Duration: <strong>65 Minutes</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €20<small>65 Minutes • Free cancellation</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-chimney-cake&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+<div class="bpa-book-note">Free Cancellation • Instant Confirmation</div>
+</div></aside>
 </div>
 </div>
 </details>
@@ -1608,39 +1502,16 @@ window.addEventListener('load', function() {
 <p><strong>Skip it</strong> if you want drinks included or a proven track record: #2 is €8 more with 3 drinks.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Central Pest. The exact meeting point is in your voucher after booking.<br/>🚇 <strong>Public Transport:</strong> Central Pest is walkable from Deák Ferenc tér (M1, M2, M3).</p>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €45</span>
-<span class="ltt-buy-price-sub">3 Hours • Free cancellation</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Small-Group Full-Meal Food Tour (4+ Stops)</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Central Pest</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>3 Hours</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-small-group-walking-full-meal-food-tour-4-stops-t1495938/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-full-meal&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-<span>Free Cancellation • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Small-Group Full-Meal Food Tour (4+ Stops)">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-small-group-walking-full-meal-food-tour-4-stops-t1495938/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-full-meal&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/food-tours-budapest/full-meal-food-tour-3.webp" alt="Guest biting into a loaded lángos" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#7 Do Eat Better</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-small-group-walking-full-meal-food-tour-4-stops-t1495938/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-full-meal&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Small-Group Full-Meal Food Tour (4+ Stops)</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><span class="bpa-rate-meta">✨ New listing · no reviews yet</span></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Central Pest</strong></li><li>Duration: <strong>3 Hours</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €45<small>3 Hours • Free cancellation</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-small-group-walking-full-meal-food-tour-4-stops-t1495938/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-full-meal&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+<div class="bpa-book-note">Free Cancellation • Instant Confirmation</div>
+</div></aside>
 </div>
 </div>
 </details>
@@ -1701,39 +1572,16 @@ window.addEventListener('load', function() {
 <p><strong>Skip it</strong> if everyone is fine in English: #1 and #3 do the market better and have hundreds of reviews.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Central Market Hall, Fővám tér, District IX.<br/>🚇 <strong>Public Transport:</strong> Fővám tér (M4) or trams 2, 47, 49.</p>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €60</span>
-<span class="ltt-buy-price-sub">2.5 Hours • Free cancellation</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Guided Food and Market Tour in 5 Languages</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Central Market Hall</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>2.5 Hours</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-guided-food-and-market-tour-with-tastings-t1564985/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-multilingual&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-<span>Free Cancellation • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Guided Food and Market Tour in 5 Languages">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-guided-food-and-market-tour-with-tastings-t1564985/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-multilingual&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/food-tours-budapest/market-tour-languages-1.webp" alt="Lángos topped with sour cream, rocket and tomatoes" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#8 Scandic Tours</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-guided-food-and-market-tour-with-tastings-t1564985/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-multilingual&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Guided Food and Market Tour in 5 Languages</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><span class="bpa-rate-meta">✨ New listing · no reviews yet</span></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Central Market Hall</strong></li><li>Duration: <strong>2.5 Hours</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €60<small>2.5 Hours • Free cancellation</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-guided-food-and-market-tour-with-tastings-t1564985/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-multilingual&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+<div class="bpa-book-note">Free Cancellation • Instant Confirmation</div>
+</div></aside>
 </div>
 </div>
 </details>
@@ -1795,39 +1643,16 @@ window.addEventListener('load', function() {
 <p><strong>Skip it</strong> if it&#x27;s your first trip or you want to eat a lot: #1 is €23 cheaper with twice the tastings.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Fővám tér, by the Central Market Hall. Ends at József nádor tér.<br/>🚇 <strong>Public Transport:</strong> Fővám tér (M4) or trams 2, 47, 49. Bring a public transport ticket for the ride between halls.</p>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €85</span>
-<span class="ltt-buy-price-sub">3 Hours • Free cancellation</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Tastes of Hungary: Two Market Halls and a Folk Music Performance</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Fővám tér</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>3 Hours</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-tastes-of-hungary-tour-folk-music-performance-t1071184/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-folk-music&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-<span>Free Cancellation • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Tastes of Hungary: Two Market Halls and a Folk Music Performance">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-tastes-of-hungary-tour-folk-music-performance-t1071184/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-folk-music&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/food-tours-budapest/tastes-of-hungary-folk-1.webp" alt="View over the stalls of the Great Market Hall" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#9 Maggino</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-tastes-of-hungary-tour-folk-music-performance-t1071184/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-folk-music&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Tastes of Hungary: Two Market Halls and a Folk Music Performance</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:5.00" aria-hidden="true"></span><b class="bpa-rate-score">5.0</b><span class="bpa-rate-meta">2 reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on GetYourGuide</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-tastes-of-hungary-tour-folk-music-performance-t1071184/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-folk-music&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">5.0</span><span class="bpa-rev-count">(2+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Fővám tér</strong></li><li>Duration: <strong>3 Hours</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €85<small>3 Hours • Free cancellation</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-tastes-of-hungary-tour-folk-music-performance-t1071184/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=food-tours-folk-music&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+<div class="bpa-book-note">Free Cancellation • Instant Confirmation</div>
+</div></aside>
 </div>
 </div>
 </details>

@@ -147,7 +147,39 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 .dec-dates{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;padding:0;list-style:none}
 .dec-dates li{background:#f1f5f9;border-radius:999px;padding:3px 10px;font-size:13.5px !important;color:#334155;margin:0 !important}
 .dec-free li{margin-bottom:10px}
-</style><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+</style><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -1325,38 +1357,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p><strong>Skip it</strong> if you want an all-inclusive price: drinks are paid on board. For a menu written for Christmas Day, see <a href="#item-2-silverline-christmas-dinner">Silverline's 25 December dinner</a>.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Legenda pier, Dock 7, Vigadó tér (Pest side).<br/>🚇 <strong>Public Transport:</strong> Vörösmarty tér (M1), tram 2 to Vigadó tér.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 1" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Candlelit Dinner Cruise With Live Music (1/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/663224a0b9517f8a892517a9_best-dinner-cruises-budapest-legenda-city-cruises-11.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 10</span> <span>Candlelit Dinner Cruise With Live Music</span></div></div><div class="ltt-strip-slide"><img alt="Candlelit Dinner Cruise With Live Music (2/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64c683ce54d6bc13eb860a03_Legenda-dinner-cruise%20(1).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 10</span> <span>Candlelit Dinner Cruise With Live Music</span></div></div><div class="ltt-strip-slide"><img alt="Candlelit Dinner Cruise With Live Music (3/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/66320ed9bd523888f1d2aa1f_best-dinner-cruises-budapest-legenda-city-cruises-9.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 10</span> <span>Candlelit Dinner Cruise With Live Music</span></div></div><div class="ltt-strip-slide"><img alt="Candlelit Dinner Cruise With Live Music (4/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/66320e4a4d501246b56e9d59_best-dinner-cruises-budapest-legenda-city-cruises-5.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 10</span> <span>Candlelit Dinner Cruise With Live Music</span></div></div><div class="ltt-strip-slide"><img alt="Candlelit Dinner Cruise With Live Music (5/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/6632100d16cd1e9d193ff6d6_best-dinner-cruises-budapest-legenda-city-cruises-6.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 10</span> <span>Candlelit Dinner Cruise With Live Music</span></div></div><div class="ltt-strip-slide"><img alt="Candlelit Dinner Cruise With Live Music (6/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/66322994ce51b39cdb68bb77_best-dinner-cruises-budapest-legenda-city-cruises-8.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 10</span> <span>Candlelit Dinner Cruise With Live Music</span></div></div><div class="ltt-strip-slide"><img alt="Candlelit Dinner Cruise With Live Music (7/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/6632102a9455a44b8ba053fb_best-dinner-cruises-budapest-legenda-city-cruises-12.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 10</span> <span>Candlelit Dinner Cruise With Live Music</span></div></div><div class="ltt-strip-slide"><img alt="Candlelit Dinner Cruise With Live Music (8/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/66322a0f443d1321ca0ccc05_best-dinner-cruises-budapest-legenda-city-cruises-13.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">8 / 10</span> <span>Candlelit Dinner Cruise With Live Music</span></div></div><div class="ltt-strip-slide"><img alt="Candlelit Dinner Cruise With Live Music (9/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/66322a2409d6d58a16b06276_best-dinner-cruises-budapest-legenda-city-cruises-16.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">9 / 10</span> <span>Candlelit Dinner Cruise With Live Music</span></div></div><div class="ltt-strip-slide"><img alt="Candlelit Dinner Cruise With Live Music (10/10)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/663229b884ffc8297ddcb52a_best-dinner-cruises-budapest-legenda-city-cruises-15.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">10 / 10</span> <span>Candlelit Dinner Cruise With Live Music</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €110</span>
-<span class="ltt-buy-price-sub">2.5 hours • 19:00, not on 24 Dec</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Candlelit Dinner Cruise With Live Music</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Booked directly with the operator</span>
-<span class="ltt-buy-perk">Pier: <strong>Dock 7</strong></span>
-<span class="ltt-buy-perk">Departure: <strong>19:00</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://legenda.hu/en?partner=38585" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Candlelit Dinner Cruise With Live Music">
+<a class="bpa-book-img" href="https://legenda.hu/en?partner=38585" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/663224a0b9517f8a892517a9_best-dinner-cruises-budapest-legenda-city-cruises-11.webp" alt="Candlelit Dinner Cruise With Live Music (1/10)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#1 Best December Dinner</div>
+<a class="bpa-book-title" href="https://legenda.hu/en?partner=38585" rel="nofollow sponsored noopener" target="_blank">Candlelit Dinner Cruise With Live Music</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.69" aria-hidden="true"></span><b class="bpa-rate-score">4.7</b><span class="bpa-rate-meta">5.5k+ reviews · 3 sites</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ratings on 3 booking sites, each for this exact product</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-candlelit-dinner-river-cruise-with-live-music-t400893/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=things-to-do-budapest-decemb-en-pop&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.7</span><span class="bpa-rev-count">(2.4k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a><a class="bpa-rev-badge is-link" href="https://tp.media/r?campaign_id=47&amp;marker=404154&amp;p=1922&amp;sub_id=things_to_do_budapest_decemb_en_pop&amp;trs=204442&amp;u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FCandlelit-Dinner-Cruise-by-Legenda-Cruises-Budapest%2Fd499-35015P4" rel="noopener nofollow sponsored" target="_blank"><img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">4.7</span><span class="bpa-rev-count">(2.1k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a><a class="bpa-rev-badge is-link" href="https://tp.media/r?campaign_id=149&amp;marker=404154&amp;p=4456&amp;sub_id=things_to_do_budapest_decemb_en_pop&amp;trs=204442&amp;u=https%3A%2F%2Fwww.tripadvisor.com%2FAttractionProductReview-g274887-d15534870-Candlelit_Dinner_Cruise_by_Legenda_City_Cruises_Budapest-Budapest_Central_Hungary.html" rel="noopener nofollow sponsored" target="_blank"><img alt="Tripadvisor" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,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"/><span class="bpa-rev-site">Tripadvisor</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(1k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Booked directly with the operator</li><li>Pier: <strong>Dock 7</strong></li><li>Departure: <strong>19:00</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €110<small>2.5 hours • 19:00, not on 24 Dec</small></div><a class="bpa-book-btn" href="https://legenda.hu/en?partner=38585" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1420,38 +1430,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p><strong>Skip it</strong> if your dates are flexible: <a href="#item-1-legenda-candlelit-dinner">Legenda</a> serves a similar 4-course dinner on almost every December evening for €110.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Silverline, Dock 11, Jane Haining rakpart (Pest side). Arrive by 19:00.<br/>🚇 <strong>Public Transport:</strong> Vörösmarty tér (M1), tram 2.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 2" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Christmas Day Dinner Cruise With Live Piano (1/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-silverline-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 9</span> <span>Christmas Day Dinner Cruise With Live Piano</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Day Dinner Cruise With Live Piano (2/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-silverline-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 9</span> <span>Christmas Day Dinner Cruise With Live Piano</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Day Dinner Cruise With Live Piano (3/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-silverline-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 9</span> <span>Christmas Day Dinner Cruise With Live Piano</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Day Dinner Cruise With Live Piano (4/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-silverline-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 9</span> <span>Christmas Day Dinner Cruise With Live Piano</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Day Dinner Cruise With Live Piano (5/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-silverline-06.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 9</span> <span>Christmas Day Dinner Cruise With Live Piano</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Day Dinner Cruise With Live Piano (6/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-silverline-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 9</span> <span>Christmas Day Dinner Cruise With Live Piano</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Day Dinner Cruise With Live Piano (7/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-silverline-10.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 9</span> <span>Christmas Day Dinner Cruise With Live Piano</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Day Dinner Cruise With Live Piano (8/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-silverline-09.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">8 / 9</span> <span>Christmas Day Dinner Cruise With Live Piano</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Day Dinner Cruise With Live Piano (9/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-silverline-11.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">9 / 9</span> <span>Christmas Day Dinner Cruise With Live Piano</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €155</span>
-<span class="ltt-buy-price-sub">3 hours • 25 December only</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Christmas Day Dinner Cruise With Live Piano</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Booked directly with the operator</span>
-<span class="ltt-buy-perk">Pier: <strong>Dock 11</strong></span>
-<span class="ltt-buy-perk">Date: <strong>25 Dec</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://budapestrivercruise.eu/product/budapest-christmas-dinner-cruise/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Christmas Day Dinner Cruise With Live Piano">
+<a class="bpa-book-img" href="https://budapestrivercruise.eu/product/budapest-christmas-dinner-cruise/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/xmas-2026/budapest-christmas-cruise-silverline-01.avif" alt="Christmas Day Dinner Cruise With Live Piano (1/9)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#2 Christmas Day Dinner</div>
+<a class="bpa-book-title" href="https://budapestrivercruise.eu/product/budapest-christmas-dinner-cruise/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank">Christmas Day Dinner Cruise With Live Piano</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><span class="bpa-rate-meta" style="font-size:13px;color:#64748b">🎄 Christmas-only sailing</span></div></div>
+<ul class="bpa-book-points"><li>Booked directly with the operator</li><li>Pier: <strong>Dock 11</strong></li><li>Date: <strong>25 Dec</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €155<small>3 hours • 25 December only</small></div><a class="bpa-book-btn" href="https://budapestrivercruise.eu/product/budapest-christmas-dinner-cruise/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1514,39 +1502,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p><strong>Skip it</strong> if you want quiet: for a smaller Ottoman-era bath with a rooftop pool, book <a href="#item-5-rudas-thermal-bath">Rudas</a>.</p>
 <h3>Getting There</h3>
 <p>🚇 <strong>Metro:</strong> M1 to Széchenyi fürdő, the station is at the entrance.<br/>🎒 <strong>Bring:</strong> Swimsuit, flip-flops and a towel. Walk fast between the indoor halls and the outdoor pools.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 3" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath (1/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12f890d9668187cda50a6_1_Sz%C3%A9chenyi%20Thermal%20Bath.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 8</span> <span>Széchenyi Thermal Bath</span></div></div><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath (2/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7a8d6a973a0c983a7095a_11Szechenyi-bath-ourdoor-pool.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 8</span> <span>Széchenyi Thermal Bath</span></div></div><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath (3/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7a8c8c9fdf77e1c5197bf_10-Szechenyi-bath-outdoor-lap-pool.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 8</span> <span>Széchenyi Thermal Bath</span></div></div><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath (4/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7b108d4bc082efa13bf83_12-Szechenyi-bath-indoor-pool-1.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 8</span> <span>Széchenyi Thermal Bath</span></div></div><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath (5/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7b1876a1ea8dedc6fb379_14-Szechenyi-bath-indoor-pool-3.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 8</span> <span>Széchenyi Thermal Bath</span></div></div><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath (6/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64b7b4187c0010e65f20f953_15-Szechenyi-bath-aroma-sauna.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 8</span> <span>Széchenyi Thermal Bath</span></div></div><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath (7/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64b6a6449efb8b06f9af724c_01-Szechenyi-bath-entrance.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 8</span> <span>Széchenyi Thermal Bath</span></div></div><div class="ltt-strip-slide"><img alt="Széchenyi Thermal Bath (8/8)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64b6a69a5ab0f3b16f839aa2_02-Szechenyi-bath-ticket-office.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">8 / 8</span> <span>Széchenyi Thermal Bath</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €39</span>
-<span class="ltt-buy-price-sub">per adult • Mon to Thu morning pass</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Széchenyi Thermal Bath</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Area: <strong>City Park</strong></span>
-<span class="ltt-buy-perk">Pools: <strong>3 outdoor</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-szechenyi&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Széchenyi Thermal Bath">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-szechenyi&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12f890d9668187cda50a6_1_Sz%C3%A9chenyi%20Thermal%20Bath.webp" alt="Széchenyi Thermal Bath (1/8)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#3 Best Winter Bath</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-szechenyi&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Széchenyi Thermal Bath</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.25" aria-hidden="true"></span><b class="bpa-rate-score">4.3</b><span class="bpa-rate-meta">32.7k+ reviews · 3 sites</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ratings on 3 booking sites, each for this exact product</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-rating-szechenyi&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.3</span><span class="bpa-rev-count">(29.2k+)</span><span class="bpa-rev-go">→</span></a><a class="bpa-rev-badge is-link" href="https://www.tiqets.com/en/things-to-do-in-budapest-c68199/tickets-for-szechenyi-spa-full-day-entry-p974376/?partner=thecruisedetective.com-176436&amp;tq_campaign=things-to-do-budapest-decemb-en-pop" rel="noopener nofollow sponsored" target="_blank"><img alt="Tiqets" class="bpa-rev-icon" loading="lazy" src="/assets/cdn/652d0405192ba076b04f74a3/6852917a8b23e16d4296b394_tiqets-logo.avif"/><span class="bpa-rev-site">Tiqets</span><span class="bpa-rev-score">4.4</span><span class="bpa-rev-count">(1.2k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a><a class="bpa-rev-badge is-link" href="https://tp.media/r?campaign_id=47&amp;marker=404154&amp;p=1922&amp;sub_id=things_to_do_budapest_decemb_en_pop&amp;trs=204442&amp;u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FPrivate-Entrance-to-Szechenyi-Spa-in-Budapest-with-Optional-Massage%2Fd499-5808SZECHENYI" rel="noopener nofollow sponsored" target="_blank"><img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">3.8</span><span class="bpa-rev-count">(2.3k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Area: <strong>City Park</strong></li><li>Pools: <strong>3 outdoor</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €39<small>per adult • Mon to Thu morning pass</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/szechenyi-spa-full-day-entrance-pass-t4139/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-szechenyi&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1608,39 +1573,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p><strong>Skip it</strong> if you are happy exploring alone: our <a href="/budapest-christmas-markets">Budapest Christmas markets guide</a> has the hours, prices and a walking route for free.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Hungarian State Opera, Andrássy út 22.<br/>🚇 <strong>Public Transport:</strong> Opera (M1).</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 4" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Christmas Market Tour With Tastings (1/8)" loading="lazy" src="/assets/xmas-markets-2026/wonderland-tasting-tour-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 8</span> <span>Christmas Market Tour With Tastings</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Market Tour With Tastings (2/8)" loading="lazy" src="/assets/xmas-markets-2026/wonderland-tasting-tour-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 8</span> <span>Christmas Market Tour With Tastings</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Market Tour With Tastings (3/8)" loading="lazy" src="/assets/xmas-markets-2026/wonderland-tasting-tour-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 8</span> <span>Christmas Market Tour With Tastings</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Market Tour With Tastings (4/8)" loading="lazy" src="/assets/xmas-markets-2026/wonderland-tasting-tour-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 8</span> <span>Christmas Market Tour With Tastings</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Market Tour With Tastings (5/8)" loading="lazy" src="/assets/xmas-markets-2026/wonderland-tasting-tour-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 8</span> <span>Christmas Market Tour With Tastings</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Market Tour With Tastings (6/8)" loading="lazy" src="/assets/xmas-markets-2026/wonderland-tasting-tour-06.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 8</span> <span>Christmas Market Tour With Tastings</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Market Tour With Tastings (7/8)" loading="lazy" src="/assets/xmas-markets-2026/wonderland-tasting-tour-07.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 8</span> <span>Christmas Market Tour With Tastings</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Market Tour With Tastings (8/8)" loading="lazy" src="/assets/xmas-markets-2026/wonderland-tasting-tour-08.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">8 / 8</span> <span>Christmas Market Tour With Tastings</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €90</span>
-<span class="ltt-buy-price-sub">per person • Every day in December</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Christmas Market Tour With Tastings</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Opera</strong></span>
-<span class="ltt-buy-perk">Markets: <strong>2</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-wonderland-christmas-market-tour-with-treats-t444209/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-market-tour&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Christmas Market Tour With Tastings">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-wonderland-christmas-market-tour-with-treats-t444209/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-market-tour&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/xmas-markets-2026/wonderland-tasting-tour-01.avif" alt="Christmas Market Tour With Tastings (1/8)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#4 Best Market Tour</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-wonderland-christmas-market-tour-with-treats-t444209/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-market-tour&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Christmas Market Tour With Tastings</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.97" aria-hidden="true"></span><b class="bpa-rate-score">5.0</b><span class="bpa-rate-meta">23 reviews · 2 sites</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ratings on 2 booking sites, each for this exact product</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-wonderland-christmas-market-tour-with-treats-t444209/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-rating-market-tour&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.9</span><span class="bpa-rev-count">(8)</span><span class="bpa-rev-go">→</span></a><a class="bpa-rev-badge is-link" href="https://tp.media/r?campaign_id=47&amp;marker=404154&amp;p=1922&amp;sub_id=things_to_do_budapest_decemb_en_pop&amp;trs=204442&amp;u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FBudapest-Wonderland-A-Christmas-Market-Tour%2Fd499-51057P14" rel="noopener nofollow sponsored" target="_blank"><img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">5.0</span><span class="bpa-rev-count">(15)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Opera</strong></li><li>Markets: <strong>2</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €90<small>per person • Every day in December</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-wonderland-christmas-market-tour-with-treats-t444209/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-market-tour&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1703,39 +1645,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p><strong>Skip it</strong> if your day falls on a single-sex day for the Turkish bath and you are travelling as a couple: check the timetable in the pill above.</p>
 <h3>Getting There</h3>
 <p>🚋 <strong>Public Transport:</strong> Tram 19 or 41, or bus 7, to Rudas fürdő at the Buda end of Elizabeth Bridge.<br/>🌙 <strong>After night bathing:</strong> night buses 907 and 973.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 5" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Rudas Thermal Bath With 3-Course Meal (1/9)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12fda4ee7c50a6cee3178_3_1%20Rudas%20Thermal%20Bath.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 9</span> <span>Rudas Thermal Bath With 3-Course Meal</span></div></div><div class="ltt-strip-slide"><img alt="Rudas Thermal Bath With 3-Course Meal (2/9)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6d882d74213380c1f24_Rudas-thermal-bath%20(11).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 9</span> <span>Rudas Thermal Bath With 3-Course Meal</span></div></div><div class="ltt-strip-slide"><img alt="Rudas Thermal Bath With 3-Course Meal (3/9)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e674b2871f3b832c1681_Rudas-thermal-bath%20(15).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 9</span> <span>Rudas Thermal Bath With 3-Course Meal</span></div></div><div class="ltt-strip-slide"><img alt="Rudas Thermal Bath With 3-Course Meal (4/9)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e7021d502805c7a7c112_Rudas-thermal-bath%20(18).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 9</span> <span>Rudas Thermal Bath With 3-Course Meal</span></div></div><div class="ltt-strip-slide"><img alt="Rudas Thermal Bath With 3-Course Meal (5/9)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e74e82fd0ed0adc4f09c_Rudas-thermal-bath%20(2).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 9</span> <span>Rudas Thermal Bath With 3-Course Meal</span></div></div><div class="ltt-strip-slide"><img alt="Rudas Thermal Bath With 3-Course Meal (6/9)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e65e09406b071f265969_Rudas-thermal-bath%20(14).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 9</span> <span>Rudas Thermal Bath With 3-Course Meal</span></div></div><div class="ltt-strip-slide"><img alt="Rudas Thermal Bath With 3-Course Meal (7/9)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e6a5a89136c45fd1d9fc_Rudas-thermal-bath%20(20).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 9</span> <span>Rudas Thermal Bath With 3-Course Meal</span></div></div><div class="ltt-strip-slide"><img alt="Rudas Thermal Bath With 3-Course Meal (8/9)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e69c6efb73a26f9877f6_Rudas-thermal-bath%20(19).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">8 / 9</span> <span>Rudas Thermal Bath With 3-Course Meal</span></div></div><div class="ltt-strip-slide"><img alt="Rudas Thermal Bath With 3-Course Meal (9/9)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64d4e79648d7f0b7f7ac4062_Rudas-thermal-bath%20(8).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">9 / 9</span> <span>Rudas Thermal Bath With 3-Course Meal</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €74.99</span>
-<span class="ltt-buy-price-sub">per adult • bath + 3-course meal</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Rudas Thermal Bath With 3-Course Meal</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Area: <strong>Elizabeth Bridge</strong></span>
-<span class="ltt-buy-perk">Rooftop: <strong>36 °C</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-rudas&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Rudas Thermal Bath With 3-Course Meal">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-rudas&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/63c12fda4ee7c50a6cee3178_3_1%20Rudas%20Thermal%20Bath.webp" alt="Rudas Thermal Bath With 3-Course Meal (1/9)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#5 Best Night Bath</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-rudas&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Rudas Thermal Bath With 3-Course Meal</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.19" aria-hidden="true"></span><b class="bpa-rate-score">4.2</b><span class="bpa-rate-meta">1.4k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on 1 booking site</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-rating-rudas&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.2</span><span class="bpa-rev-count">(1.4k+)</span><span class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Area: <strong>Elizabeth Bridge</strong></li><li>Rooftop: <strong>36 °C</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €74.99<small>per adult • bath + 3-course meal</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-rudas-turkish-bath-spa-day-pass-3-course-meal-t233617/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-rudas&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1797,38 +1716,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p><strong>Skip it</strong> on 24, 25 and 26 December, when it doesn't run. On Christmas Eve, the <a href="#item-7-hungaria-christmas-eve-cruise">Hungária Koncert cruise</a> sails instead.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Silverline, Dock 11, Jane Haining rakpart.<br/>🚇 <strong>Public Transport:</strong> Vörösmarty tér (M1), tram 2.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 6" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Danube Sightseeing Cruise With Unlimited Mulled Wine (1/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-mulled-wine-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 9</span> <span>Danube Sightseeing Cruise With Unlimited Mulled Wine</span></div></div><div class="ltt-strip-slide"><img alt="Danube Sightseeing Cruise With Unlimited Mulled Wine (2/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-mulled-wine-11.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 9</span> <span>Danube Sightseeing Cruise With Unlimited Mulled Wine</span></div></div><div class="ltt-strip-slide"><img alt="Danube Sightseeing Cruise With Unlimited Mulled Wine (3/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-mulled-wine-10.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 9</span> <span>Danube Sightseeing Cruise With Unlimited Mulled Wine</span></div></div><div class="ltt-strip-slide"><img alt="Danube Sightseeing Cruise With Unlimited Mulled Wine (4/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-mulled-wine-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 9</span> <span>Danube Sightseeing Cruise With Unlimited Mulled Wine</span></div></div><div class="ltt-strip-slide"><img alt="Danube Sightseeing Cruise With Unlimited Mulled Wine (5/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-mulled-wine-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 9</span> <span>Danube Sightseeing Cruise With Unlimited Mulled Wine</span></div></div><div class="ltt-strip-slide"><img alt="Danube Sightseeing Cruise With Unlimited Mulled Wine (6/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-mulled-wine-09.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 9</span> <span>Danube Sightseeing Cruise With Unlimited Mulled Wine</span></div></div><div class="ltt-strip-slide"><img alt="Danube Sightseeing Cruise With Unlimited Mulled Wine (7/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-mulled-wine-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 9</span> <span>Danube Sightseeing Cruise With Unlimited Mulled Wine</span></div></div><div class="ltt-strip-slide"><img alt="Danube Sightseeing Cruise With Unlimited Mulled Wine (8/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-mulled-wine-04.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">8 / 9</span> <span>Danube Sightseeing Cruise With Unlimited Mulled Wine</span></div></div><div class="ltt-strip-slide"><img alt="Danube Sightseeing Cruise With Unlimited Mulled Wine (9/9)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-mulled-wine-06.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">9 / 9</span> <span>Danube Sightseeing Cruise With Unlimited Mulled Wine</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €21</span>
-<span class="ltt-buy-price-sub">1 hour • Unlimited mulled wine</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Danube Sightseeing Cruise With Unlimited Mulled Wine</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Booked directly with the operator</span>
-<span class="ltt-buy-perk">Pier: <strong>Dock 11</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>1 Hour</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://budapestrivercruise.eu/product/unlimited-mulled-wine-cruise/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Danube Sightseeing Cruise With Unlimited Mulled Wine">
+<a class="bpa-book-img" href="https://budapestrivercruise.eu/product/unlimited-mulled-wine-cruise/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/xmas-2026/budapest-christmas-cruise-mulled-wine-03.avif" alt="Danube Sightseeing Cruise With Unlimited Mulled Wine (1/9)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#6 Cheapest Danube Hour</div>
+<a class="bpa-book-title" href="https://budapestrivercruise.eu/product/unlimited-mulled-wine-cruise/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank">Danube Sightseeing Cruise With Unlimited Mulled Wine</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.60" aria-hidden="true"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">286 reviews · 2 sites</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ratings on 2 booking sites, each for this exact product</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/unlimited-mulled-wine-cruise-t1049575/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=article-xmas-cruises-mulled&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(264)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a><span class="bpa-rev-badge"><img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">4.5</span><span class="bpa-rev-count">(22)</span></span></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Booked directly with the operator</li><li>Pier: <strong>Dock 11</strong></li><li>Duration: <strong>1 Hour</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €21<small>1 hour • Unlimited mulled wine</small></div><a class="bpa-book-btn" href="https://budapestrivercruise.eu/product/unlimited-mulled-wine-cruise/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1891,39 +1788,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p><strong>Skip it</strong> if you're hungry: eat first (restaurants may open on 24 December), because Legenda's dinner cruise doesn't sail that night.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Akadémia pier 2, near the Chain Bridge on the Pest side.<br/>🚋 <strong>Public Transport:</strong> Tram 2 to Széchenyi István tér.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 7" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Christmas Eve Cruise With Folk Show and Open Bar (1/10)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-grof-szechenyi-05.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 10</span> <span>Christmas Eve Cruise With Folk Show and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Eve Cruise With Folk Show and Open Bar (2/10)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-grof-szechenyi-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 10</span> <span>Christmas Eve Cruise With Folk Show and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Eve Cruise With Folk Show and Open Bar (3/10)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-grof-szechenyi-02.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 10</span> <span>Christmas Eve Cruise With Folk Show and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Eve Cruise With Folk Show and Open Bar (4/10)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-grof-szechenyi-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 10</span> <span>Christmas Eve Cruise With Folk Show and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Eve Cruise With Folk Show and Open Bar (5/10)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-grof-szechenyi-06.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 10</span> <span>Christmas Eve Cruise With Folk Show and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Eve Cruise With Folk Show and Open Bar (6/10)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-grof-szechenyi-07.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 10</span> <span>Christmas Eve Cruise With Folk Show and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Eve Cruise With Folk Show and Open Bar (7/10)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-grof-szechenyi-08.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 10</span> <span>Christmas Eve Cruise With Folk Show and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Eve Cruise With Folk Show and Open Bar (8/10)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-grof-szechenyi-10.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">8 / 10</span> <span>Christmas Eve Cruise With Folk Show and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Eve Cruise With Folk Show and Open Bar (9/10)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-grof-szechenyi-11.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">9 / 10</span> <span>Christmas Eve Cruise With Folk Show and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="Christmas Eve Cruise With Folk Show and Open Bar (10/10)" loading="lazy" src="/assets/xmas-2026/budapest-christmas-cruise-grof-szechenyi-13.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">10 / 10</span> <span>Christmas Eve Cruise With Folk Show and Open Bar</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €76</span>
-<span class="ltt-buy-price-sub">per person • 24 and 25 Dec</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Christmas Eve Cruise With Folk Show and Open Bar</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Pier: <strong>Akadémia 2</strong></span>
-<span class="ltt-buy-perk">Date: <strong>24 Dec</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/15-hour-danube-cruise-dinner-with-live-music-t1593/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-xmas-eve&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Christmas Eve Cruise With Folk Show and Open Bar">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/15-hour-danube-cruise-dinner-with-live-music-t1593/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-xmas-eve&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/xmas-2026/budapest-christmas-cruise-grof-szechenyi-05.avif" alt="Christmas Eve Cruise With Folk Show and Open Bar (1/10)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#7 Best on Christmas Eve</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/15-hour-danube-cruise-dinner-with-live-music-t1593/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-xmas-eve&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Christmas Eve Cruise With Folk Show and Open Bar</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.38" aria-hidden="true"></span><b class="bpa-rate-score">4.4</b><span class="bpa-rate-meta">2.3k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on 1 booking site</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/15-hour-danube-cruise-dinner-with-live-music-t1593/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-rating-xmas-eve&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.4</span><span class="bpa-rev-count">(2.3k+)</span><span class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Pier: <strong>Akadémia 2</strong></li><li>Date: <strong>24 Dec</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €76<small>per person • 24 and 25 Dec</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/15-hour-danube-cruise-dinner-with-live-music-t1593/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-xmas-eve&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -1986,39 +1860,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p><strong>Skip it</strong> if you just want a taste: a market stall is quicker. For a full evening of Hungarian food, see the <a href="#item-10-foodapest-food-tour">Foodapest tour</a>.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Ipar utca 11, 1095 Budapest (District IX).<br/>🚇 <strong>Public Transport:</strong> Tram 2 or 24, or M3 to Corvin-negyed.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 8" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Chimney Cake (Kürtőskalács) Baking Workshop (1/5)" loading="lazy" src="/assets/food-tours-budapest/chimney-cake-workshop-2.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>Chimney Cake (Kürtőskalács) Baking Workshop</span></div></div><div class="ltt-strip-slide"><img alt="Chimney Cake (Kürtőskalács) Baking Workshop (2/5)" loading="lazy" src="/assets/food-tours-budapest/chimney-cake-workshop-1.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>Chimney Cake (Kürtőskalács) Baking Workshop</span></div></div><div class="ltt-strip-slide"><img alt="Chimney Cake (Kürtőskalács) Baking Workshop (3/5)" loading="lazy" src="/assets/food-tours-budapest/chimney-cake-workshop-5.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>Chimney Cake (Kürtőskalács) Baking Workshop</span></div></div><div class="ltt-strip-slide"><img alt="Chimney Cake (Kürtőskalács) Baking Workshop (4/5)" loading="lazy" src="/assets/food-tours-budapest/chimney-cake-workshop-4.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>Chimney Cake (Kürtőskalács) Baking Workshop</span></div></div><div class="ltt-strip-slide"><img alt="Chimney Cake (Kürtőskalács) Baking Workshop (5/5)" loading="lazy" src="/assets/food-tours-budapest/chimney-cake-workshop-3.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>Chimney Cake (Kürtőskalács) Baking Workshop</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €19.56</span>
-<span class="ltt-buy-price-sub">per person • Every day in December</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Chimney Cake (Kürtőskalács) Baking Workshop</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Address: <strong>Ipar utca 11</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>65 Min</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-chimney-workshop&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Chimney Cake (Kürtőskalács) Baking Workshop">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-chimney-workshop&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/food-tours-budapest/chimney-cake-workshop-2.webp" alt="Chimney Cake (Kürtőskalács) Baking Workshop (1/5)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#8 Best Rainy-Day Pick</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-chimney-workshop&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Chimney Cake (Kürtőskalács) Baking Workshop</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.90" aria-hidden="true"></span><b class="bpa-rate-score">4.9</b><span class="bpa-rate-meta">2.2k+ reviews · 2 sites</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Ratings on 2 booking sites, each for this exact product</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-rating-chimney-workshop&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.9</span><span class="bpa-rev-count">(1.7k+)</span><span class="bpa-rev-go">→</span></a><a class="bpa-rev-badge is-link" href="https://tp.media/r?campaign_id=47&amp;marker=404154&amp;p=1922&amp;sub_id=things_to_do_budapest_decemb_en_pop&amp;trs=204442&amp;u=https%3A%2F%2Fwww.viator.com%2Ftours%2FBudapest%2FBudapest-Traditional-Chimney-Cake-Kurtoskalacs-Workshop%2Fd499-5628611P3" rel="noopener nofollow sponsored" target="_blank"><img alt="Viator" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">Viator</span><span class="bpa-rev-score">5.0</span><span class="bpa-rev-count">(460)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Address: <strong>Ipar utca 11</strong></li><li>Duration: <strong>65 Min</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €19.56<small>per person • Every day in December</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-chimney-workshop&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -2080,39 +1931,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p><strong>Skip it</strong> for the afternoon: by 15:30 the light is going. Go back after dark for the lit Bastion instead, it is free.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Szentháromság tér, by Matthias Church.<br/>🚌 <strong>Public Transport:</strong> Bus 16 from Deák Ferenc tér, or the Castle Hill funicular from Clark Ádám tér.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 9" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Buda Castle District Walking Tour (1/6)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa665536d44a917a4be1_Buda%20Castle%20Walking%20Tour%20(10).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 6</span> <span>Buda Castle District Walking Tour</span></div></div><div class="ltt-strip-slide"><img alt="Buda Castle District Walking Tour (2/6)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab1ba5e26b34774d7e87_Buda%20Castle%20Walking%20Tour%20(15).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 6</span> <span>Buda Castle District Walking Tour</span></div></div><div class="ltt-strip-slide"><img alt="Buda Castle District Walking Tour (3/6)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aaf8060885d81f1a5826_Buda%20Castle%20Walking%20Tour%20(4).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 6</span> <span>Buda Castle District Walking Tour</span></div></div><div class="ltt-strip-slide"><img alt="Buda Castle District Walking Tour (4/6)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aae8db5d54ad86f5d18f_Buda%20Castle%20Walking%20Tour%20(7).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 6</span> <span>Buda Castle District Walking Tour</span></div></div><div class="ltt-strip-slide"><img alt="Buda Castle District Walking Tour (5/6)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aab76a90d3270b8a5f22_Buda%20Castle%20Walking%20Tour%20(13).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 6</span> <span>Buda Castle District Walking Tour</span></div></div><div class="ltt-strip-slide"><img alt="Buda Castle District Walking Tour (6/6)" loading="lazy" src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9ab0d3fe3f203a88ae5ae_Buda%20Castle%20Walking%20Tour%20(1).webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 6</span> <span>Buda Castle District Walking Tour</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €12</span>
-<span class="ltt-buy-price-sub">per person • 2 hours</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Buda Castle District Walking Tour</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Szentháromság tér</strong></span>
-<span class="ltt-buy-perk">Duration: <strong>2 Hours</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-castle-walk&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Buda Castle District Walking Tour">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-castle-walk&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/cdn/60e43c7d6d05b671dff0dc1a/64f9aa665536d44a917a4be1_Buda%20Castle%20Walking%20Tour%20(10).webp" alt="Buda Castle District Walking Tour (1/6)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#9 Best Budget Pick</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-castle-walk&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Buda Castle District Walking Tour</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.58" aria-hidden="true"></span><b class="bpa-rate-score">4.6</b><span class="bpa-rate-meta">2.4k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on 1 booking site</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-rating-castle-walk&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.6</span><span class="bpa-rev-count">(2.4k+)</span><span class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Szentháromság tér</strong></li><li>Duration: <strong>2 Hours</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €12<small>per person • 2 hours</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-classic-buda-castle-walking-tour-t157275/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-castle-walk&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -2172,39 +2000,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p><strong>Skip it</strong> on a dinner cruise night. More options are in our <a href="/best-food-tours-budapest">Budapest food tours comparison</a>.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Central Market Hall, Fővám tér (the exact spot is in your voucher).<br/>🚇 <strong>Public Transport:</strong> Fővám tér (M4), tram 2, 47 or 49.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 10" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="Market to Tavern Food Tour With Wine (1/5)" loading="lazy" src="/assets/food-tours-budapest/foodapest-market-tavern-2.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 5</span> <span>Market to Tavern Food Tour With Wine</span></div></div><div class="ltt-strip-slide"><img alt="Market to Tavern Food Tour With Wine (2/5)" loading="lazy" src="/assets/food-tours-budapest/foodapest-market-tavern-3.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 5</span> <span>Market to Tavern Food Tour With Wine</span></div></div><div class="ltt-strip-slide"><img alt="Market to Tavern Food Tour With Wine (3/5)" loading="lazy" src="/assets/food-tours-budapest/foodapest-market-tavern-4.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 5</span> <span>Market to Tavern Food Tour With Wine</span></div></div><div class="ltt-strip-slide"><img alt="Market to Tavern Food Tour With Wine (4/5)" loading="lazy" src="/assets/food-tours-budapest/foodapest-market-tavern-5.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 5</span> <span>Market to Tavern Food Tour With Wine</span></div></div><div class="ltt-strip-slide"><img alt="Market to Tavern Food Tour With Wine (5/5)" loading="lazy" src="/assets/food-tours-budapest/foodapest-market-tavern-1.webp"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 5</span> <span>Market to Tavern Food Tour With Wine</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €62</span>
-<span class="ltt-buy-price-sub">per person • 12+ tastings</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Market to Tavern Food Tour With Wine</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Instant Smartphone QR Voucher</span>
-<span class="ltt-buy-perk">Full Refund up to 24h Before</span>
-<span class="ltt-buy-perk">Start: <strong>Market Hall</strong></span>
-<span class="ltt-buy-perk">Tastings: <strong>12+</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-food-tour-market-to-tavern-14-tasters-wines-t808482/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-food-tour&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Market to Tavern Food Tour With Wine">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-food-tour-market-to-tavern-14-tasters-wines-t808482/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-food-tour&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/food-tours-budapest/foodapest-market-tavern-2.webp" alt="Market to Tavern Food Tour With Wine (1/5)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#10 Best Food Tour</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-food-tour-market-to-tavern-14-tasters-wines-t808482/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-food-tour&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Market to Tavern Food Tour With Wine</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.86" aria-hidden="true"></span><b class="bpa-rate-score">4.9</b><span class="bpa-rate-meta">679 reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on 1 booking site</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://www.getyourguide.com/budapest-l29/budapest-food-tour-market-to-tavern-14-tasters-wines-t808482/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-rating-food-tour&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank"><img alt="GetYourGuide" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-site">GetYourGuide</span><span class="bpa-rev-score">4.9</span><span class="bpa-rev-count">(679)</span><span class="bpa-rev-go">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>Instant Smartphone QR Voucher</li><li>Full Refund up to 24h Before</li><li>Start: <strong>Market Hall</strong></li><li>Tastings: <strong>12+</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €62<small>per person • 12+ tastings</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-food-tour-market-to-tavern-14-tasters-wines-t808482/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=december-food-tour&amp;mkt_cmp=true" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">
@@ -2265,38 +2070,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 <p><strong>Skip it</strong> if you prefer to sit down for dinner, or to stay on the street for free.</p>
 <h3>Meeting Point</h3>
 <p>🗺️ <strong>Meeting Point: </strong>Silverline, Dock 11, Jane Haining rakpart. Boarding from 21:30.</p><div class="ltt-filmstrip-wrap"><button aria-label="Previous photo" class="ltt-film-btn ltt-film-prev is-disabled" onclick="window.lttFilmSlide(this, -1)" type="button">‹</button><button aria-label="Next photo" class="ltt-film-btn ltt-film-next" onclick="window.lttFilmSlide(this, 1)" type="button">›</button><div aria-label="Filmstrip gallery 11" class="ltt-filmstrip" onscroll="window.lttFilmSync(this)" tabindex="0"><div class="ltt-strip-slide"><img alt="New Year&#x27;s Eve Cruise With DJ and Open Bar (1/10)" loading="lazy" src="/assets/nye-2026/budapest-new-years-eve-cruise-silverline-07.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">1 / 10</span> <span>New Year&#x27;s Eve Cruise With DJ and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="New Year&#x27;s Eve Cruise With DJ and Open Bar (2/10)" loading="lazy" src="/assets/nye-2026/budapest-new-years-eve-cruise-silverline-09.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">2 / 10</span> <span>New Year&#x27;s Eve Cruise With DJ and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="New Year&#x27;s Eve Cruise With DJ and Open Bar (3/10)" loading="lazy" src="/assets/nye-2026/budapest-new-years-eve-cruise-silverline-01.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">3 / 10</span> <span>New Year&#x27;s Eve Cruise With DJ and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="New Year&#x27;s Eve Cruise With DJ and Open Bar (4/10)" loading="lazy" src="/assets/nye-2026/budapest-new-years-eve-cruise-silverline-11.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">4 / 10</span> <span>New Year&#x27;s Eve Cruise With DJ and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="New Year&#x27;s Eve Cruise With DJ and Open Bar (5/10)" loading="lazy" src="/assets/nye-2026/budapest-new-years-eve-cruise-silverline-12.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">5 / 10</span> <span>New Year&#x27;s Eve Cruise With DJ and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="New Year&#x27;s Eve Cruise With DJ and Open Bar (6/10)" loading="lazy" src="/assets/nye-2026/budapest-new-years-eve-cruise-silverline-03.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">6 / 10</span> <span>New Year&#x27;s Eve Cruise With DJ and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="New Year&#x27;s Eve Cruise With DJ and Open Bar (7/10)" loading="lazy" src="/assets/nye-2026/budapest-new-years-eve-cruise-silverline-14.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">7 / 10</span> <span>New Year&#x27;s Eve Cruise With DJ and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="New Year&#x27;s Eve Cruise With DJ and Open Bar (8/10)" loading="lazy" src="/assets/nye-2026/budapest-new-years-eve-cruise-silverline-15.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">8 / 10</span> <span>New Year&#x27;s Eve Cruise With DJ and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="New Year&#x27;s Eve Cruise With DJ and Open Bar (9/10)" loading="lazy" src="/assets/nye-2026/budapest-new-years-eve-cruise-silverline-16.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">9 / 10</span> <span>New Year&#x27;s Eve Cruise With DJ and Open Bar</span></div></div><div class="ltt-strip-slide"><img alt="New Year&#x27;s Eve Cruise With DJ and Open Bar (10/10)" loading="lazy" src="/assets/nye-2026/budapest-new-years-eve-cruise-silverline-17.avif"/><div class="ltt-strip-cap"><span class="ltt-strip-num">10 / 10</span> <span>New Year&#x27;s Eve Cruise With DJ and Open Bar</span></div></div></div></div></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Official Tickets &amp; Live Availability</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">From €239</span>
-<span class="ltt-buy-price-sub">3 hours • 31 December</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">New Year's Eve Cruise With DJ and Open Bar</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Booked directly with the operator</span>
-<span class="ltt-buy-perk">Pier: <strong>Dock 11</strong></span>
-<span class="ltt-buy-perk">Date: <strong>31 Dec</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://budapestrivercruise.eu/product/new-years-celebration-cruise/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank">
-<span>Check Dates &amp; Book Tickets</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Best Price Guaranteed • Instant Confirmation</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="New Year&#x27;s Eve Cruise With DJ and Open Bar">
+<a class="bpa-book-img" href="https://budapestrivercruise.eu/product/new-years-celebration-cruise/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/nye-2026/budapest-new-years-eve-cruise-silverline-07.avif" alt="New Year&#x27;s Eve Cruise With DJ and Open Bar (1/10)" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#11 Best New Year's Eve Party</div>
+<a class="bpa-book-title" href="https://budapestrivercruise.eu/product/new-years-celebration-cruise/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank">New Year's Eve Cruise With DJ and Open Bar</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><span class="bpa-rate-meta" style="font-size:13px;color:#64748b">🎄 Christmas-only sailing</span></div></div>
+<ul class="bpa-book-points"><li>Booked directly with the operator</li><li>Pier: <strong>Dock 11</strong></li><li>Date: <strong>31 Dec</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €239<small>3 hours • 31 December</small></div><a class="bpa-book-btn" href="https://budapestrivercruise.eu/product/new-years-celebration-cruise/?code=bpadventures" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book Tickets →</a></div>
+<div class="bpa-book-note">Best Price Guaranteed • Instant Confirmation</div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap">

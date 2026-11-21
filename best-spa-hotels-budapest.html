@@ -61,7 +61,39 @@ window.addEventListener('load', function() {
 <link id="ltt-language-switcher-styles" rel="stylesheet" href="/css/shared/ltt-language-switcher-styles.ebbf128d15.css"/><link id="CANONICAL_NAVBAR_UNIFIED_FONTS" rel="stylesheet" href="/css/shared/CANONICAL_NAVBAR_UNIFIED_FONTS.e6a1a25ced.css"/>
 <style>.ltt-mobile-drawer:not(.is-open){visibility:hidden !important;pointer-events:none !important;display:none !important;}.ltt-mobile-drawer.is-open{visibility:visible !important;pointer-events:auto !important;display:block !important;}</style><link id="ps-008fa3a483" data-ps-blocks="ltt-master-a11y-contrast ltt-wcag-contrast-fix bpa-light-bar" rel="stylesheet" href="/css/shared/bundle.008fa3a483.css"/>
 <link id="bpa-new-footer" rel="stylesheet" href="/css/shared/bpa-new-footer.4f85d90f75.css"/><link id="bpa-article-typography" rel="stylesheet" href="/css/shared/bpa-article-typography.c64a2a0b29.css"/>
-<link id="bpa-no-red-hover" rel="stylesheet" href="/css/shared/bpa-no-red-hover.802199d918.css"/><link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+<link id="bpa-no-red-hover" rel="stylesheet" href="/css/shared/bpa-no-red-hover.802199d918.css"/><link rel="stylesheet" href="/css/listicle-base.css?v=1e54b1e5d2"><link rel="stylesheet" href="/css/listicle-cards.css?v=b857249e22"><link id="ps-7bd769aea0" data-ps-blocks="cd-trust-css listicle-card-parity-css" rel="stylesheet" href="/css/shared/bundle.7bd769aea0.css"/><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -942,21 +974,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Ensana Thermal is the only hotel here with <strong>thermal water in the building, free for guests</strong>: a thermal pool, a recreational pool, a <strong>56 ft swimming pool</strong>, a seasonal outdoor pool, several saunas and a steam room. For the same night it cost <strong>€111</strong>, less than every central spa hotel except Continental.</p><p>It sits on the quiet northern end of Margaret Island, next to the Japanese Garden, and its medical centre runs treatment programmes for back, joint and stress problems at extra cost.</p><p>The catch is the location: 2.5 miles from downtown, so plan on buses or taxis for sightseeing. For a bathing holiday, it is the best value in Budapest.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €111</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Ensana Thermal Margaret Island</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District XIII, Margaret Island</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-thermal&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitsziget.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Ensana Thermal Margaret Island">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-thermal&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitsziget.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-spa-hotels-budapest/01-ensana-thermal-01.avif" alt="Ensana Thermal Margaret Island" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#1 Best Thermal Spa Hotel</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-thermal&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitsziget.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Ensana Thermal Margaret Island</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.50" aria-hidden="true"></span><b class="bpa-rate-score">9.0</b><span class="bpa-rate-meta">7.9k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-thermal&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitsziget.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.0</span><span class="bpa-rev-count">(7.9k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District XIII, Margaret Island</strong></li><li>🛏️ Guest score: <strong>9/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €111<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-thermal&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitsziget.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Ensana Thermal Margaret Island</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1007 Budapest, Margitsziget (District XIII, Margaret Island)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Spa and wellness centre, 3 pools (indoor, outdoor, heated), hot tub</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Margaret Island Japanese Garden (200 ft), Víztorony (650 ft), Domonkos Kolostor és templom Romjai (1,650 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Electric charging, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -994,21 +1020,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Kozmo is the best-rated spa hotel in this comparison: <strong>9.5 from 3,137 reviews</strong>. The spa has an <strong>indoor pool, sauna and hot tub</strong>, with massage and a fitness centre, in a 5-star member of Small Luxury Hotels of the World.</p><p>It is on Horváth Mihály tér in the Palace Quarter (District VIII), about 1,650 ft from Rákóczi tér metro and a 14-minute walk from the National Museum. At <strong>€163</strong> it is the most expensive hotel here.</p><p>It is listed as wheelchair accessible.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €163</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Kozmo Hotel Suites &amp; Spa</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District VIII</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.5/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-kozmo&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fkozmo-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Kozmo Hotel Suites &amp; Spa">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-kozmo&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fkozmo-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-spa-hotels-budapest/02-kozmo-01.avif" alt="Kozmo Hotel Suites &amp; Spa, Small Luxury Hotels of the World" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#2 Best-Rated Spa Hotel</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-kozmo&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fkozmo-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Kozmo Hotel Suites &amp; Spa</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.75" aria-hidden="true"></span><b class="bpa-rate-score">9.5</b><span class="bpa-rate-meta">3.1k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-kozmo&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fkozmo-budapest.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.5</span><span class="bpa-rev-count">(3.1k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District VIII</strong></li><li>🛏️ Guest score: <strong>9.5/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €163<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-kozmo&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fkozmo-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Kozmo Hotel Suites &amp; Spa</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1082 Budapest, 17 Horváth Mihály tér (District VIII); 1,650 ft walk to Rákóczi tér metro</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it very good; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Spa and wellness centre, indoor pool, hot tub</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Valet, Parking garage, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">Listed as wheelchair accessible; airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1046,21 +1066,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Queen's Court is the value spa pick in the centre: <strong>€120</strong> for a suite with a balcony and kitchenette, a spa with an <strong>indoor pool and jacuzzi</strong>, and a quiet courtyard garden. Guests score it <strong>9.2</strong> and 9.0 for value.</p><p>It is on Dob utca in District VII, 0.6 miles from downtown, with Oktogon about 1,750 ft away. The pool is small (26 × 14 ft), fine for a swim-and-soak after sightseeing.</p><p>Pets are welcome.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €120</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Queen's Court Hotel</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District VII</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9.2/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-queens-court&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fqueen-s-court-residence.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Queen&#x27;s Court Hotel">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-queens-court&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fqueen-s-court-residence.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-spa-hotels-budapest/03-queens-court-01.avif" alt="Queen's Court Hotel &amp; Residence" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#3 Best Spa Suites</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-queens-court&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fqueen-s-court-residence.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Queen's Court Hotel</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.60" aria-hidden="true"></span><b class="bpa-rate-score">9.2</b><span class="bpa-rate-meta">5k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-queens-court&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fqueen-s-court-residence.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.2</span><span class="bpa-rev-count">(5k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District VII</strong></li><li>🛏️ Guest score: <strong>9.2/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €120<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-queens-court&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fqueen-s-court-residence.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Queen's Court Hotel</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1074 Budapest, Dob utca 63. (District VII); 1,750 ft walk to Oktogon metro</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Spa and wellness centre, indoor pool, hot tub</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until From 6:00 AM to 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Blaha Lujza Square (2,300 ft), House of Terror (2,650 ft), Liszt Ferenc Memorial Museum (2,700 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">pets welcome (fees may apply)</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1098,21 +1112,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Helia is the big, practical spa hotel on the river: <strong>two heated indoor pools</strong>, a spa and a 2-storey fitness club, with most rooms looking over the Danube and Margaret Island. For the same night it cost <strong>€100</strong>, and its <strong>9.0 from 12,998 reviews</strong> is the deepest track record here.</p><p>It sits in District XIII, 1.9 miles from downtown; the listing gives about 15 minutes to the historic centre. Parking is right outside.</p><p>Medical treatments are available at extra cost, and the sauna is not mixed.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €100</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Danubius Hotel Helia</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District XIII</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>9/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-helia&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhelia.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Danubius Hotel Helia">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-helia&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhelia.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-spa-hotels-budapest/04-helia-01.avif" alt="Danubius Hotel Helia" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#4 Best River View Pool</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-helia&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhelia.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Danubius Hotel Helia</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.50" aria-hidden="true"></span><b class="bpa-rate-score">9.0</b><span class="bpa-rate-meta">13k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-helia&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhelia.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">9.0</span><span class="bpa-rev-count">(13k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District XIII</strong></li><li>🛏️ Guest score: <strong>9/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €100<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-helia&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fhelia.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Danubius Hotel Helia</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1133 Budapest, Kárpát u. 62-64. (District XIII)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it wonderful; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Spa and wellness centre, 2 pools (indoor, heated), hot tub</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Street, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">Listed as wheelchair accessible; airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1150,21 +1158,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Corinthia is the grand-hotel option with a spa: a <strong>5-star in a building standing since the late 1800s</strong> on the Grand Boulevard, with the <strong>Royal Spa</strong>, an indoor pool and hot tub. At <strong>€145</strong> it is cheaper than every 5-star on our <a href="/best-luxury-hotels-budapest">luxury hotels</a> page.</p><p>It is 1,250 ft from Oktogon, with the Opera and Andrássy Avenue within walking distance. Guests score it <strong>8.9</strong> and 8.6 for value.</p><p>Families should know the pool rule: guests under 16 may use the pool and spa tub only from 9 am to 3 pm, with an adult.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €145</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Corinthia Budapest</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District VII</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.9/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-corinthia&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcorinthiaroyal.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Corinthia Budapest">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-corinthia&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcorinthiaroyal.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-spa-hotels-budapest/05-corinthia-01.avif" alt="Corinthia Budapest" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#5 Best Grand Hotel Spa</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-corinthia&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcorinthiaroyal.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Corinthia Budapest</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.45" aria-hidden="true"></span><b class="bpa-rate-score">8.9</b><span class="bpa-rate-meta">6.4k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-corinthia&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcorinthiaroyal.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.9</span><span class="bpa-rev-count">(6.4k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District VII</strong></li><li>🛏️ Guest score: <strong>8.9/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €145<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-corinthia&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcorinthiaroyal.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Corinthia Budapest</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1073 Budapest, Erzsébet körút 43-49. (District VII); 1,250 ft walk to Oktogon metro</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Spa and wellness centre, indoor pool, hot tub</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until 12:00 PM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">House of Terror (2,100 ft), Liszt Ferenc Memorial Museum (2,150 ft), Blaha Lujza Square (2,500 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Parking garage, Electric charging, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">pets welcome (fees may apply); airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1202,21 +1204,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Continental is the budget spa hotel in the centre: <strong>€97</strong> for the same night for a 4-star superior with an <strong>indoor pool and a heated rooftop pool</strong>, a sauna and an infrared cabin. It was built on the site of the old <strong>Hungária Bath</strong>, a protected Art Nouveau building.</p><p>It is on Dohány utca in District VII, 500 ft from Blaha Lujza tér metro and 1,850 ft from the Dohány Street Synagogue. The rooftop pool is open in the summer months only.</p><p>Guests score it 8.7. Pets are welcome and it is listed as wheelchair accessible.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €97</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Continental Hotel Budapest</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District VII</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.7/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-continental&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcontinental-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Continental Hotel Budapest">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-continental&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcontinental-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-spa-hotels-budapest/06-continental-01.avif" alt="Continental Hotel Budapest" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#6 Best Rooftop Pool</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-continental&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcontinental-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Continental Hotel Budapest</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.35" aria-hidden="true"></span><b class="bpa-rate-score">8.7</b><span class="bpa-rate-meta">7.3k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-continental&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcontinental-budapest.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.7</span><span class="bpa-rev-count">(7.3k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District VII</strong></li><li>🛏️ Guest score: <strong>8.7/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €97<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-continental&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fcontinental-budapest.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Continental Hotel Budapest</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1074 Budapest, Dohány u. 42-44 (District VII); 500 ft walk to Blaha Lujza tér metro</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Spa and wellness centre, 2 pools (indoor, outdoor, rooftop, heated), sauna</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM to 11:30 PM; check-out until From 8:00 AM to 12:00 PM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Blaha Lujza Square (800 ft), Dohány Utcai Zsinagóga (1,850 ft), Károlyi Garden (3,050 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Electric charging</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">Listed as wheelchair accessible; pets welcome (fees may apply); airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>
@@ -1254,21 +1250,15 @@ window.addEventListener('load', function() {
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><p>Ensana Grand is the historic twin of #1: <strong>built in 1873</strong> on Margaret Island and connected through a <strong>heated underground hall</strong> to the Ensana Thermal spa, which guests use for free. For the same night it cost <strong>€104</strong>, €7 less than its neighbour.</p><p>You get the same thermal pool, lap pool, saunas and steam room, and the same quiet park setting 2.4 miles from downtown.</p><p>Pick the Grand for the period building, the Thermal for the modern rooms and the spa under one roof.</p></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge"><span class="ltt-live-dot"></span><span>Live Availability</span></div>
-<div class="ltt-buy-card-price"><span class="ltt-buy-price-val">From €104</span><span class="ltt-buy-price-sub">per night, 2 guests</span></div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Ensana Grand Margaret Island</h4>
-<div class="ltt-buy-card-perks"><span class="ltt-buy-perk">🛡️ Cancellation terms depend on the rate you choose</span><span class="ltt-buy-perk">📍 Area: <strong>District XIII, Margaret Island</strong></span><span class="ltt-buy-perk">🛏️ Guest score: <strong>8.9/10 guest score</strong></span></div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-grand&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitszigetgrand.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><span>Check Dates &amp; Book</span><span class="ltt-cta-arrow">→</span></a>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Ensana Grand Margaret Island">
+<a class="bpa-book-img" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-grand&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitszigetgrand.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank"><img src="/assets/best-spa-hotels-budapest/07-ensana-grand-01.avif" alt="Ensana Grand Margaret Island" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#7 Best Historic Thermal Hotel</div>
+<a class="bpa-book-title" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-grand&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitszigetgrand.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Ensana Grand Margaret Island</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews bpa-rate"><details class="bpa-lang bpa-rate-more"><summary class="bpa-rate-sum"><span class="bpa-stars" style="--r:4.45" aria-hidden="true"></span><b class="bpa-rate-score">8.9</b><span class="bpa-rate-meta">6.6k+ reviews · 1 site</span><span class="bpa-lang-chev" aria-hidden="true">▾</span></summary><div class="bpa-lang-pop"><strong>Rating on Booking.com (out of 10)</strong><span class="bpa-rate-list"><a class="bpa-rev-badge is-link" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-grand&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitszigetgrand.html&amp;campaign_id=84" rel="noopener nofollow sponsored" target="_blank"><img alt="Booking.com" class="bpa-rev-icon" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzAwMzU4MCIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05IDcuNWg3LjRjMy41IDAgNS44IDEuOCA1LjggNC42IDAgMi0xLjMgMy41LTMuMSA0LjEgMi4zLjYgMy45IDIuMyAzLjkgNC44IDAgMy4zLTIuNiA1LjUtNi42IDUuNUg5VjcuNXptNC4yIDdoMi43YzEuNSAwIDIuNC0uOCAyLjQtMnMtLjktMi0yLjQtMmgtMi43djR6bTAgNy44aDMuMWMxLjYgMCAyLjctLjkgMi43LTIuMnMtMS4xLTIuMi0yLjctMi4yaC0zLjF2NC40eiIvPjxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyMy44IiByPSIyLjIiIGZpbGw9IiMwMEJBRkMiLz48L3N2Zz4="/><span class="bpa-rev-site">Booking.com</span><span class="bpa-rev-score">8.9</span><span class="bpa-rev-count">(6.6k+)</span><span class="bpa-rev-go" aria-hidden="true">→</span></a></span></div></details></div></div>
+<ul class="bpa-book-points"><li>🛡️ Cancellation terms depend on the rate you choose</li><li>📍 Area: <strong>District XIII, Margaret Island</strong></li><li>🛏️ Guest score: <strong>8.9/10 guest score</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">From €104<small>per night, 2 guests</small></div><a class="bpa-book-btn" href="https://tp.media/r?marker=404154.best-spa-hotels-budapest-ensana-grand&amp;trs=204442&amp;p=2076&amp;u=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fhu%2Fmargitszigetgrand.html&amp;campaign_id=84" rel="nofollow sponsored noopener" target="_blank">Check Dates &amp; Book →</a></div>
+</div></aside>
 </div>
 </details>
 <div class="qf1-wrap"><div class="qf1-title-row"><h4 class="qf1-title">Quick Facts</h4><span class="qf1-badge">Ensana Grand Margaret Island</span></div><div class="qf1-table"><div class="qf1-row"><div class="qf1-label">Location</div><div class="qf1-val">1007 Budapest, Margitsziget (District XIII, Margaret Island)</div></div><div class="qf1-row"><div class="qf1-label">Breakfast</div><div class="qf1-val">Guests rate it excellent; whether it is included depends on the rate you choose</div></div><div class="qf1-row"><div class="qf1-label">Pool &amp; spa</div><div class="qf1-val">Spa and wellness centre, 3 pools (indoor, outdoor, heated), hot tub</div></div><div class="qf1-row"><div class="qf1-label">Check-in</div><div class="qf1-val">From 3:00 PM; check-out until 11:00 AM</div></div><div class="qf1-row"><div class="qf1-label">Walk to</div><div class="qf1-val">Víztorony (50 ft), Margaret Island Japanese Garden (800 ft), Domonkos Kolostor és templom Romjai (1,200 ft)</div></div><div class="qf1-row"><div class="qf1-label">Parking</div><div class="qf1-val">Valet, Electric charging, Accessible</div></div><div class="qf1-row"><div class="qf1-label">Good to know</div><div class="qf1-val">airport shuttle available at extra cost</div></div><div class="qf1-row"><div class="qf1-label">Cancellation</div><div class="qf1-val">Depends on the rate you choose; the terms show before you pay</div></div></div></div>

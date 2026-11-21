@@ -199,7 +199,39 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 .xm-btn-2:hover{background:#f1f5f9}
 .xm-box .xm-btn{margin-top:4px}
 @media (max-width:640px){.xm-pick{flex-direction:column;align-items:flex-start}.xm-pick img{width:100%;height:160px}.xm-btn{width:100%;box-sizing:border-box;text-align:center}}
-</style><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
+</style><link id="bpa-prose-editorial" rel="stylesheet" href="/css/shared/bpa-prose-editorial.c18eac9fbe.css"/><style id="bpa-book-css">
+.bpa-book{display:grid !important;grid-template-columns:minmax(0,40%) 1fr;gap:0;margin:16px 0 8px !important;background:#fff !important;border:1px solid #ecdcb6 !important;border-radius:16px !important;overflow:hidden;box-shadow:0 10px 30px -12px rgba(133,90,0,.25) !important;text-align:left;padding:0 !important}
+.bpa-book.no-img{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{display:block !important;min-height:100%;background:#f1f5f9;padding:0 !important;margin:0 !important;border:0 !important}
+.bpa-book .bpa-book-img img{width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;display:block !important;margin:0 !important;border-radius:0 !important;border:0 !important}
+.bpa-book .bpa-book-body{padding:20px 22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.bpa-book .bpa-book-kicker{font-size:11.5px !important;font-weight:800 !important;letter-spacing:.08em;text-transform:uppercase;color:#855a00 !important;margin:0 !important;line-height:1.4}
+.bpa-book a.bpa-book-title{font-family:'Playfair Display',Georgia,serif !important;font-size:22px !important;font-weight:700 !important;line-height:1.25 !important;color:#0f172a !important;text-decoration:none !important;background:none !important;padding:0 !important}
+.bpa-book a.bpa-book-title:hover{color:#855a00 !important}
+.bpa-book .bpa-book-rating{font-size:13.5px;color:#475569}
+.bpa-book .bpa-book-rating .bpa-summary-reviews{margin:0 !important;display:inline-block !important;width:auto !important;max-width:100%}
+.bpa-book .bpa-book-rating .bpa-rate-sum{justify-content:flex-start !important;width:auto !important;flex-wrap:nowrap !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{min-width:0}
+.bpa-book ul.bpa-book-points{margin:2px 0 4px !important;padding:0 !important;list-style:none !important}
+.bpa-book ul.bpa-book-points li{position:relative;padding-left:22px !important;margin:0 0 4px !important;font-size:14.5px !important;line-height:1.5 !important;color:#334155 !important;list-style:none !important;background:none !important}
+.bpa-book ul.bpa-book-points li::before{content:"\2713";position:absolute;left:0;top:0;color:#15803d;font-weight:800}
+.bpa-book ul.bpa-book-points li::marker{content:""}
+.bpa-book .bpa-book-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid #f1e7cf}
+.bpa-book .bpa-book-price{font-size:26px;font-weight:800;color:#0f172a;line-height:1.1}
+.bpa-book .bpa-book-price small{display:block;font-size:12px;font-weight:600;color:#64748b;margin-top:2px}
+.bpa-book a.bpa-book-btn{display:inline-block !important;background:linear-gradient(135deg,#dfa732 0%,#b88214 100%) !important;color:#fff !important;padding:12px 22px !important;border-radius:9999px !important;font-size:14.5px !important;font-weight:800 !important;text-decoration:none !important;box-shadow:0 4px 14px rgba(223,167,50,.35) !important;transition:all .15s ease;white-space:nowrap;border:0 !important;line-height:1.3 !important}
+.bpa-book a.bpa-book-btn:hover{background:linear-gradient(135deg,#ca9325 0%,#855a00 100%) !important;color:#fff !important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(223,167,50,.45) !important}
+.bpa-book .bpa-book-note{font-size:11.5px;color:#94a3b8;line-height:1.45}
+@media(max-width:640px){
+.bpa-book{grid-template-columns:1fr}
+.bpa-book a.bpa-book-img{aspect-ratio:16/9;min-height:0}
+.bpa-book .bpa-book-body{padding:16px 16px 18px}
+.bpa-book a.bpa-book-title{font-size:19px !important}
+.bpa-book .bpa-book-rating .bpa-rate-meta{font-size:12.5px !important}
+.bpa-book .bpa-book-foot{flex-direction:column;align-items:stretch}
+.bpa-book a.bpa-book-btn{text-align:center;white-space:normal}
+}
+</style></head><body id="top" class="ps-has-ltt-hero-wrap"><header class="ltt-navbar" role="banner">
 <div class="ltt-nav-inner">
 <a aria-label="BUDAPEST ADVENTURES Homepage" class="ltt-brand" href="/pl">
 <img alt="BUDAPEST ADVENTURES Logo" class="ltt-brand-logo" height="36" src="/assets/budapest-adventures-logo-96.webp" width="36"/>
@@ -1288,35 +1320,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>❓ Czy jedzenie jest wliczone w wycieczkę po jarmarku w Budapeszcie?</strong><br/>💡 Tak. Oferta obejmuje <strong>kürtőskalács, grzańca, marcepan i kawę</strong> w zabytkowej kawiarni. Wszystko inne kupione na stoiskach płacisz osobno.</blockquote><p>Budapest Urban Walks prowadzi ten <strong>2,5-godzinny spacer z przewodnikiem po jarmarku bożonarodzeniowym</strong>, zbudowany wokół węgierskich zwyczajów świątecznych, które, jak pisze oferta, kręcą się głównie wokół jedzenia.</p><p>Cena obejmuje cztery degustacje: <strong>kürtőskalács, grzańca, marcepan i kawę w zabytkowej kawiarni</strong>. Opinii jest niewiele, ale są ciepłe: <strong>4,9 na 5 w GetYourGuide i 5,0 w Viator</strong>.</p><h3>Co mówią uczestnicy</h3><blockquote>“Mogliśmy spróbować tradycyjnych przysmaków z jarmarku i dowiedzieć się więcej o kulturze tego pięknego kraju. Najbardziej podobał nam się przystanek w kawiarni na koniec!”<br/><strong>Eta, Australia</strong> · GetYourGuide · styczeń 2025</blockquote><blockquote>“Świetna wycieczka i degustacje, cudownie spacerowało się po jarmarkach, a do tego lekcje historii o Budapeszcie i Węgrzech.”<br/><strong>Arthur, USA</strong> · GetYourGuide · listopad 2024</blockquote><blockquote>“Nasz przewodnik Adam miał dużą wiedzę i był bardzo miły. Myślę, że było trochę za drogo w stosunku do tego, co dostaliśmy.”<br/><strong>Podróżny, Irlandia</strong> · GetYourGuide · grudzień 2024</blockquote><h3>Jak dojechać</h3><ul role="list"><li><strong>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Hungarian+State+Opera+Budapest" rel="nofollow" target="_blank">Miejsce zbiórki: Węgierska Opera Państwowa, Andrássy út 22</a></strong></li><li>🚇 <strong>M1 do stacji Opera</strong>; jarmark przy Bazylice jest około 8 minut pieszo stamtąd.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Dostępność na żywo na grudzień 2026</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">Od 90 €</span>
-<span class="ltt-buy-price-sub">za osobę</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Wycieczka po jarmarku z degustacjami</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Bezpłatne odwołanie do 24 godzin wcześniej</span><span class="ltt-buy-perk">Miejsce zbiórki: <strong>Hungarian State Opera</strong></span><span class="ltt-buy-perk">Czas trwania: <strong>2,5 godziny</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-wonderland-christmas-market-tour-with-treats-t444209/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-wonderland&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>Sprawdź terminy i zarezerwuj</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<span>Bezpieczna rezerwacja przez GetYourGuide</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Wycieczka po jarmarku z degustacjami">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-wonderland-christmas-market-tour-with-treats-t444209/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-wonderland&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/xmas-markets-2026/wonderland-tasting-tour-01.avif" alt="Stoiska jarmarku bożonarodzeniowego przed Bazyliką św. Stefana w Budapeszcie" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#1 Najlepsza wycieczka z przewodnikiem</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-wonderland-christmas-market-tour-with-treats-t444209/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-wonderland&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Wycieczka po jarmarku z degustacjami</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews"><div class="div-block-53"><span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">4.9</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(8)</span></span><span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">5.0</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg></span><span class="bpa-rev-count">(15)</span></span></div></div></div>
+<ul class="bpa-book-points"><li>Bezpłatne odwołanie do 24 godzin wcześniej</li><li>Miejsce zbiórki: <strong>Hungarian State Opera</strong></li><li>Czas trwania: <strong>2,5 godziny</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">Od 90 €<small>za osobę</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-wonderland-christmas-market-tour-with-treats-t444209/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-wonderland&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Sprawdź terminy i zarezerwuj →</a></div>
+<div class="bpa-book-note">Bezpieczna rezerwacja przez GetYourGuide</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1388,35 +1401,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>❓ Ile jarmarków odwiedza prywatna wycieczka?</strong><br/>💡 Trzy. Oferta opisuje jeden duży i dwa mniejsze jarmarki w centrum, a uczestnicy potwierdzają <strong>trzy jarmarki</strong>.</blockquote><p>Wycieczka Living Local Hungary to <strong>prywatny 2,5-godzinny spacer przez trzy jarmarki bożonarodzeniowe</strong> w centrum Budapesztu, z kürtőskalácsem i napojami w cenie.</p><p>Opinie w GetYourGuide dają średnio <strong>4,3 na 5 od 9 uczestników</strong>. Większość chwali opowieści przewodnika; jedna osoba uznała, że przewodniczka niewiele wiedziała.</p><h3>Co mówią uczestnicy</h3><blockquote>“Zabrał nas na trzy jarmarki w centrum Budapesztu. Był niezwykle miły, przyjazny i zabawny, szczegółowo opowiadał o charakterze każdego jarmarku, lokalnym jedzeniu i Węgrach.”<br/><strong>Miyako, Wielka Brytania</strong> · GetYourGuide · grudzień 2025</blockquote><blockquote>“Kürtőskalács, którego spróbowaliśmy, był niesamowity i autentyczny. To był magiczny wieczór.”<br/><strong>Janet, RPA</strong> · GetYourGuide · grudzień 2025</blockquote><blockquote>“Przewodniczka była bardzo miła, ale niewiele wiedziała.”<br/><strong>Podróżny, Kanada</strong> · GetYourGuide · grudzień 2025</blockquote><h3>Jak dojechać</h3><ul role="list"><li><strong>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=K%C3%A1roly+k%C3%B6r%C3%BAt+1+Budapest" rel="nofollow" target="_blank">Miejsce zbiórki: Károly krt. 1, Budapeszt</a></strong></li><li>🚇 Blisko <strong>Deák Ferenc tér</strong> (M1, M2, M3).</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Dostępność na żywo na grudzień 2026</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">Od 49 €</span>
-<span class="ltt-buy-price-sub">za osobę</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Jarmarki z kürtőskalácsem</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Bezpłatne odwołanie do 24 godzin wcześniej</span><span class="ltt-buy-perk">Miejsce zbiórki: <strong>Károly krt. 1</strong></span><span class="ltt-buy-perk">Czas trwania: <strong>2,5 godziny</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-christmas-markets-tour-with-chimney-cake-tasting-t546145/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-chimney-tour&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>Sprawdź terminy i zarezerwuj</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<span>Bezpieczna rezerwacja przez GetYourGuide</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Jarmarki z kürtőskalácsem">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-christmas-markets-tour-with-chimney-cake-tasting-t546145/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-chimney-tour&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/xmas-markets-2026/chimney-cake-markets-tour-01.avif" alt="Jarmark na Vörösmarty tér z góry o zmierzchu" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#2 Prywatny spacer po jarmarkach</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-christmas-markets-tour-with-chimney-cake-tasting-t546145/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-chimney-tour&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Jarmarki z kürtőskalácsem</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews"><div class="div-block-53"><span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">4.3</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(9)</span></span></div></div></div>
+<ul class="bpa-book-points"><li>Bezpłatne odwołanie do 24 godzin wcześniej</li><li>Miejsce zbiórki: <strong>Károly krt. 1</strong></li><li>Czas trwania: <strong>2,5 godziny</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">Od 49 €<small>za osobę</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-christmas-markets-tour-with-chimney-cake-tasting-t546145/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-chimney-tour&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Sprawdź terminy i zarezerwuj →</a></div>
+<div class="bpa-book-note">Bezpieczna rezerwacja przez GetYourGuide</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1487,35 +1481,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>❓ Czy kürtőskalács jest wliczony w rejs jarmarkowy?</strong><br/>💡 Nie. Oferta podaje, że kürtőskalács to <strong>płatny dodatek</strong>. Bilet obejmuje rejs oraz grzańca, Prosecco i Aperol Spritz bez limitu.</blockquote><p>Floating Lotus zamienia w 2026 swój statek w <strong>pływający jarmark bożonarodzeniowy</strong>: światła, ozdoby, stoisko z pamiątkami na pokładzie oraz <strong>grzaniec, Prosecco i Aperol Spritz bez limitu</strong> przez 75 minut.</p><p>Wejście na pokład jest przy <strong>Dock 9 na Petőfi tér</strong>, krótki spacer od Vörösmarty tér. Oferta jest nowa, więc nie ma jeszcze opinii.</p><h3>Jak dojechać</h3><ul role="list"><li><strong>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Pet%C5%91fi+t%C3%A9r+9+Budapest" rel="nofollow" target="_blank">Wejście na pokład: Dock 9, Petőfi tér 9, 1052 Budapeszt</a></strong></li><li>🚋 <strong>Tramwaj 2</strong> zatrzymuje się na nabrzeżu; z Vörösmarty tér 6 minut pieszo w stronę Mostu Elżbiety.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Dostępność na żywo na grudzień 2026</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">Od 39 €</span>
-<span class="ltt-buy-price-sub">za osobę</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Rejs jarmarkowy, napoje bez limitu</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Bezpłatne odwołanie do 24 godzin wcześniej</span><span class="ltt-buy-perk">Miejsce zbiórki: <strong>Dock 9, Petőfi tér</strong></span><span class="ltt-buy-perk">Czas trwania: <strong>75 min</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-christmas-market-cruise-with-unlimited-drinks-t1547619/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-market-cruise&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>Sprawdź terminy i zarezerwuj</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<span>Bezpieczna rezerwacja przez GetYourGuide</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Rejs jarmarkowy, napoje bez limitu">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-christmas-market-cruise-with-unlimited-drinks-t1547619/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-market-cruise&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/xmas-markets-2026/floating-christmas-market-cruise-01.avif" alt="Rejs jarmarkowy po Dunaju z oświetlonym Parlamentem" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#3 Jarmark na statku</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-christmas-market-cruise-with-unlimited-drinks-t1547619/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-market-cruise&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Rejs jarmarkowy, napoje bez limitu</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews"><div class="div-block-53"><span class="bpa-rev-count" style="font-size:13px;color:#64748b">✨ Nowa oferta · jeszcze bez opinii</span></div></div></div>
+<ul class="bpa-book-points"><li>Bezpłatne odwołanie do 24 godzin wcześniej</li><li>Miejsce zbiórki: <strong>Dock 9, Petőfi tér</strong></li><li>Czas trwania: <strong>75 min</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">Od 39 €<small>za osobę</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-christmas-market-cruise-with-unlimited-drinks-t1547619/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-market-cruise&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Sprawdź terminy i zarezerwuj →</a></div>
+<div class="bpa-book-note">Bezpieczna rezerwacja przez GetYourGuide</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1587,35 +1562,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>❓ Ile rodzajów grzańca jest na rejsie z grzańcem bez limitu?</strong><br/>💡 Uczestnicy naliczyli <strong>pięć gorących napojów z alkoholem i dwa bez</strong>, w tym malinowe rosé i jabłko z cynamonem. Wszystkie bez limitu przez godzinę.</blockquote><p><strong>Godzinny rejs widokowy z grzańcem bez limitu</strong> od Silverline to najtańszy sposób na rozgrzewkę przy centralnych jarmarkach: <strong>21 € za osobę</strong>, wejście na pokład 4 minuty od Vörösmarty tér.</p><p>Mija Parlament, Zamek Królewski i Most Łańcuchowy, z darmową aplikacją z audioprzewodnikiem. Uczestnicy oceniają go na <strong>4,6 na 5 w GetYourGuide (263 opinie)</strong> i 4,5 w Viator (22).</p><h3>Co mówią uczestnicy</h3><blockquote>“Mieliśmy grzańca bez limitu, do wyboru 5 rodzajów z alkoholem i 2 bez. Każde z nas wypiło po 4 bez żadnego problemu.”<br/><strong>Jana, Czechy</strong> · GetYourGuide · październik 2026</blockquote><blockquote>“Dla pasażerów z ograniczoną mobilnością: w środku są wysokie hokery, a rampa jest dość stroma przez niski stan Dunaju.”<br/><strong>Margaret, USA</strong> · GetYourGuide · listopad 2026</blockquote><h3>Jak dojechać</h3><ul role="list"><li><strong>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Jane+Haining+rakpart+Dock+11+Budapest" rel="nofollow" target="_blank">Przystań: Dock 11, Jane Haining rakpart, 1052 Budapeszt</a></strong></li><li>🚋 <strong>Tramwaj 2 do Vigadó tér</strong> albo 4 minuty pieszo z Vörösmarty tér nad rzekę.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Dostępność na żywo na grudzień 2026</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">Od 21 €</span>
-<span class="ltt-buy-price-sub">za osobę</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Rejs z grzańcem bez limitu</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Bezpłatne odwołanie do 24 godzin wcześniej</span><span class="ltt-buy-perk">Miejsce zbiórki: <strong>Dock 11, Jane Haining rkp.</strong></span><span class="ltt-buy-perk">Czas trwania: <strong>1 godzina</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://budapestrivercruise.eu/product/unlimited-mulled-wine-cruise/?code=bpadventures" rel="noopener nofollow sponsored" target="_blank">
-<span>Sprawdź terminy i zarezerwuj</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<span>Rezerwacja bezpośrednio u Silverline Cruises</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Rejs z grzańcem bez limitu">
+<a class="bpa-book-img" href="https://budapestrivercruise.eu/product/unlimited-mulled-wine-cruise/?code=bpadventures" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/xmas-2026/budapest-christmas-cruise-mulled-wine-01.avif" alt="Kieliszki grzańca na rejsie Silverline po Dunaju w Budapeszcie" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#4 Najtańszy grzaniec bez limitu</div>
+<a class="bpa-book-title" href="https://budapestrivercruise.eu/product/unlimited-mulled-wine-cruise/?code=bpadventures" rel="noopener nofollow sponsored" target="_blank">Rejs z grzańcem bez limitu</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews"><div class="div-block-53"><span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">4.6</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(263)</span></span><span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">4.5</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(22)</span></span></div></div></div>
+<ul class="bpa-book-points"><li>Bezpłatne odwołanie do 24 godzin wcześniej</li><li>Miejsce zbiórki: <strong>Dock 11, Jane Haining rkp.</strong></li><li>Czas trwania: <strong>1 godzina</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">Od 21 €<small>za osobę</small></div><a class="bpa-book-btn" href="https://budapestrivercruise.eu/product/unlimited-mulled-wine-cruise/?code=bpadventures" rel="noopener nofollow sponsored" target="_blank">Sprawdź terminy i zarezerwuj →</a></div>
+<div class="bpa-book-note">Rezerwacja bezpośrednio u Silverline Cruises</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1687,35 +1643,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>❓ Czy wycieczka po Zamku Królewskim wchodzi do kościoła Macieja?</strong><br/>💡 Nie. Bilety do kościoła Macieja, Muzeum Historii Zamku i Galerii Narodowej <strong>nie są wliczone</strong>; wycieczka zostaje na zewnątrz.</blockquote><p><strong>Dwugodzinny spacer po Wzgórzu Zamkowym</strong> z Tour X obejmuje kościół Macieja, Basztę Rybacką, kolejkę i pałac, z <strong>kawałkiem tortu Dobosa</strong> po drodze.</p><p>To jeden z najlepiej ocenianych spacerów na wzgórzu: <strong>4,8 na 5 z 388 opinii w GetYourGuide</strong> i 5,0 z 83 w Viator. Startuje tuż obok jarmarku Budavári Advent.</p><h3>Co mówią uczestnicy</h3><blockquote>“Antal był świetny, mnóstwo ciekawych informacji, nie zdawałem sobie sprawy, jak rozległy jest teren zamku.”<br/><strong>Mick, Wielka Brytania</strong> · GetYourGuide · listopad 2026</blockquote><blockquote>“Spacer historyczny był przyjemny i dużo się nauczyliśmy! Ciasto było świetne, a różne widoki ze Wzgórza Zamkowego bardzo nam się podobały.”<br/><strong>Isabella, Wielka Brytania</strong> · GetYourGuide · październik 2026</blockquote><h3>Jak dojechać</h3><ul role="list"><li><strong>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Hess+Andr%C3%A1s+t%C3%A9r+1+Budapest" rel="nofollow" target="_blank">Miejsce zbiórki: Starbucks Castle, Hess András tér 1-3</a></strong></li><li>🚌 <strong>Autobus 16</strong> z Deák Ferenc tér do Szentháromság tér.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Dostępność na żywo na grudzień 2026</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">Od 16 €</span>
-<span class="ltt-buy-price-sub">za osobę</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Zamek Królewski z tortem Dobosa</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Bezpłatne odwołanie do 24 godzin wcześniej</span><span class="ltt-buy-perk">Miejsce zbiórki: <strong>Hess András tér 1-3</strong></span><span class="ltt-buy-perk">Czas trwania: <strong>2 godziny</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/buda-castle-guided-walking-tour-with-royal-cake-tasting-t1262726/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-castle-cake&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>Sprawdź terminy i zarezerwuj</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<span>Bezpieczna rezerwacja przez GetYourGuide</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Zamek Królewski z tortem Dobosa">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/buda-castle-guided-walking-tour-with-royal-cake-tasting-t1262726/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-castle-cake&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/xmas-markets-2026/buda-castle-royal-cake-tour-01.avif" alt="Baszta Rybacka na Wzgórzu Zamkowym w Budapeszcie" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#5 Najlepszy spacer po Wzgórzu Zamkowym</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/buda-castle-guided-walking-tour-with-royal-cake-tasting-t1262726/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-castle-cake&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Zamek Królewski z tortem Dobosa</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews"><div class="div-block-53"><span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">4.8</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(388)</span></span><span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">5.0</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg></span><span class="bpa-rev-count">(83)</span></span></div></div></div>
+<ul class="bpa-book-points"><li>Bezpłatne odwołanie do 24 godzin wcześniej</li><li>Miejsce zbiórki: <strong>Hess András tér 1-3</strong></li><li>Czas trwania: <strong>2 godziny</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">Od 16 €<small>za osobę</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/buda-castle-guided-walking-tour-with-royal-cake-tasting-t1262726/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-castle-cake&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Sprawdź terminy i zarezerwuj →</a></div>
+<div class="bpa-book-note">Bezpieczna rezerwacja przez GetYourGuide</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1787,35 +1724,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>❓ Czy piesza wycieczka po jarmarkach obejmuje Óbudę?</strong><br/>💡 Tak. Po Bazylice i Vörösmarty tér grupa jedzie komunikacją miejską około <strong>30 minut do Advent Óbudán</strong> na Fő tér.</blockquote><p>Nowy <strong>3,5-godzinny spacer po jarmarkach</strong> od SzeRita łączy dwa jarmarki w centrum z <strong>Advent Óbudán</strong>, lokalnym jarmarkiem z darmowym lodowiskiem, komunikacją miejską.</p><p>Degustacja kürtőskalácsa jest w cenie. Oferta <strong>nie ma jeszcze opinii</strong> i ma tylko cztery zdjęcia, więc rezerwuj ją dla trasy, a nie dla dowodów.</p><h3>Jak dojechać</h3><ul role="list"><li><strong>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Budapest+Eye+Erzs%C3%A9bet+t%C3%A9r" rel="nofollow" target="_blank">Miejsce zbiórki: Budapest Eye, Erzsébet tér, 1051 Budapeszt</a></strong></li><li>🚇 <strong>Deák Ferenc tér</strong> (M1, M2, M3) jest obok Erzsébet tér.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Dostępność na żywo na grudzień 2026</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">Od 18 €</span>
-<span class="ltt-buy-price-sub">za osobę</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Jarmarki z Óbudą</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Bezpłatne odwołanie do 24 godzin wcześniej</span><span class="ltt-buy-perk">Miejsce zbiórki: <strong>Budapest Eye, Erzsébet tér</strong></span><span class="ltt-buy-perk">Czas trwania: <strong>3,5 godziny</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-christmas-markets-walking-tour-t1551827/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-obuda-walk&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>Sprawdź terminy i zarezerwuj</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<span>Bezpieczna rezerwacja przez GetYourGuide</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Jarmarki z Óbudą">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-christmas-markets-walking-tour-t1551827/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-obuda-walk&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/xmas-markets-2026/obuda-markets-walking-tour-01.avif" alt="Przewodnik z gorącym napojem na jarmarku w Budapeszcie" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">#6 Jedyna wycieczka do Óbudy</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-christmas-markets-walking-tour-t1551827/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-obuda-walk&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Jarmarki z Óbudą</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews"><div class="div-block-53"><span class="bpa-rev-count" style="font-size:13px;color:#64748b">✨ Nowa oferta · jeszcze bez opinii</span></div></div></div>
+<ul class="bpa-book-points"><li>Bezpłatne odwołanie do 24 godzin wcześniej</li><li>Miejsce zbiórki: <strong>Budapest Eye, Erzsébet tér</strong></li><li>Czas trwania: <strong>3,5 godziny</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">Od 18 €<small>za osobę</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-christmas-markets-walking-tour-t1551827/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-obuda-walk&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Sprawdź terminy i zarezerwuj →</a></div>
+<div class="bpa-book-note">Bezpieczna rezerwacja przez GetYourGuide</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
@@ -1887,35 +1805,16 @@ body a:hover{background-color:transparent;-webkit-text-fill-color:inherit}
 </summary>
 <div class="ltt-bento-group-body">
 <div class="w-richtext"><blockquote><strong>❓ Czy na warsztatach robi się samemu ciasto na kürtőskalács?</strong><br/>💡 Nie. Ciasto potrzebuje około 75 minut, żeby wyrosnąć, więc <strong>czeka gotowe, gdy przychodzisz</strong>. Ty je rozwałkowujesz, nawijasz na wałek, posypujesz cukrem i pieczesz.</blockquote><p>Te <strong>65-minutowe warsztaty kürtőskalácsa</strong> to najwyżej oceniane doświadczenie kulinarne, jakie znaleźliśmy w Budapeszcie: <strong>4,9 na 5 z 1 733 opinii w GetYourGuide</strong> i 5,0 z 460 w Viator.</p><p>Formujesz i pieczesz własny kürtőskalács, wybierasz posypkę i dostajesz kawę lub herbatę oraz certyfikat. Dobry plan B na zimny lub deszczowy dzień.</p><h3>Co mówią uczestnicy</h3><blockquote>“Sala jest ładnie udekorowana, pachnie obłędnie, a nasza grupa była przemiła. Kürtőskalács na koniec smakuje fantastycznie.”<br/><strong>Lisa, Austria</strong> · GetYourGuide · listopad 2026</blockquote><blockquote>“Moim zdaniem zrobienie własnego kürtőskalácsa jest dużo ciekawsze niż kupienie pierwszego lepszego w mieście.”<br/><strong>Karolina, Polska</strong> · GetYourGuide · listopad 2026</blockquote><h3>Jak dojechać</h3><ul role="list"><li><strong>📍 <a href="https://www.google.com/maps/search/?api=1&amp;query=Ipar+utca+11+Budapest+1095" rel="nofollow" target="_blank">Pracownia: Ipar u. 11, 1095 Budapeszt</a></strong></li><li>🚋 Około 15 minut od centrum komunikacją miejską, według oferty.</li></ul></div>
-<div class="ltt-buy-card">
-<div class="ltt-buy-card-head">
-<div class="ltt-buy-card-badge">
-<span class="ltt-live-dot"></span>
-<span>Dostępność na żywo na grudzień 2026</span>
-</div>
-<div class="ltt-buy-card-price">
-<span class="ltt-buy-price-val">Od 20 €</span>
-<span class="ltt-buy-price-sub">za osobę</span>
-</div>
-</div>
-<div class="ltt-buy-card-body">
-<div class="ltt-buy-card-info">
-<h4 class="ltt-buy-card-title">Warsztaty kürtőskalácsa</h4>
-<div class="ltt-buy-card-perks">
-<span class="ltt-buy-perk">Bezpłatne odwołanie do 24 godzin wcześniej</span><span class="ltt-buy-perk">Miejsce zbiórki: <strong>Ipar u. 11</strong></span><span class="ltt-buy-perk">Czas trwania: <strong>65 min</strong></span>
-</div>
-</div>
-<div class="ltt-buy-card-action">
-<a class="ltt-buy-cta-btn" href="https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-chimney-workshop&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">
-<span>Sprawdź terminy i zarezerwuj</span>
-<span class="ltt-cta-arrow">→</span>
-</a>
-<div class="ltt-buy-card-trust">
-<span>Bezpieczna rezerwacja przez GetYourGuide</span>
-</div>
-</div>
-</div>
-</div>
+<aside class="bpa-book" aria-label="Warsztaty kürtőskalácsa">
+<a class="bpa-book-img" href="https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-chimney-workshop&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank"><img src="/assets/xmas-markets-2026/chimney-cake-workshop-01.avif" alt="Uczestnicy pieką kürtőskalács na warsztatach w Budapeszcie" width="800" height="534" decoding="async" loading="lazy"/></a>
+<div class="bpa-book-body">
+<div class="bpa-book-kicker">⭐ #7 Najwyżej oceniane doświadczenie kulinarne</div>
+<a class="bpa-book-title" href="https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-chimney-workshop&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Warsztaty kürtőskalácsa</a>
+<div class="bpa-book-rating"><div class="bpa-summary-reviews"><div class="div-block-53"><span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADEElEQVR4nMWXWUgVURjHfzOOXbeylBZarLAiyMiwJJOwyEhCSKjIiKggXwrqLQgEe+gp6Kl6iqKXIrAFIgsKSS1KElsoQ0oLrSQtxX3rmvH5zXV8uDpzzeUPl5lz7v+c/3fOt5wzBjYG96UwlTAKK4eepi1+DGiU1yn6NdqaGPbKfwLzp3QLdMELhnZgGsSHNU2mGVbIIwYGICwMfBEQGa19fb3Q0+X8N2kGGAasTobNmZC4BmLjtL+zDWo/wstiqH4Dg4PepxzUIHQfISvOPghZuRA7JzinuwMe34Z713VHPOhb3sw0YPdhyDkCVrj2+f9AV6e+R8dof9RMyDkK4TPgxkXw+12ntlwZ4tekjbAr1xGvfguPbkF9jbYXLYOs/coTZO6Bd+VQ+dw1JixXA2SC1AxdnaCmCi4XQEO9w6mvhU/v4eQ5NULclbZDjXCJB9PVAJls6SqnXVak4mLYyF9zE5QWObwliRARNQFBaFmwLg1i47VdVQGNP4Jz4+ZCcrq+93RCRYlbHBjuLpAJ2lshaQN8+wrNUkFHQcsveHLHaXuoCZYrQ4rNoVOa/1Jw2prhVcnok4dYiExPrED0B/w9gbBcGVJQbl6CjGyo+6yRHTBCUnQsTIgLLJvy+hkM+NUl4gpBQiIkrAg+rr8PPlQ43HEbEO6DA8dh5VqtfhdOawwI0nfC3rzg41qaoCBv9IwJKQYMM/i2BnbnP2C5Mv4OQG+3zQ6HuHmOIRVl0N4G/n5I2aL1IkSYrgzx4fcvTjt1G8yO1wCUM+HuVSgvBl9kyOLeDBAh8bkctQKp9Xln9LkwAVK3womzWifGAcuVIVstl4yyh3riCTZth/Xp0NUO0bP0vAgEniDgJg8wPbGkHBdegaf3NRMEIipCAXFx07Xz0FBHKLA8MztaVeDtCz1qFy+HMAvaWjTfSx9AU4Oegp3t0PrbtQYIvF/JRsaEzweRMeoeqZQjheT2FID73dAIPZFFVFwiOxIMIVxIBdP+XWDazzEO+UnDkKZpf6XmA3YOTQlEK1+0hyNmuj7P/wFtgwzE0AJjuwAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">4.9</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 15.968L16.2469 18.345L15.2979 13.572L18.8709 10.267L14.0379 9.694L11.9999 5.275V15.968ZM11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26V18.26Z"></path></svg></span><span class="bpa-rev-count">(1 733)</span></span><span class="bpa-rev-badge"><img alt="" class="bpa-rev-icon" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACQUlEQVR4nO2WTUhUURSAv3OfkwtDQipcSrSqRVCLyE1BiG1atEhoV0g5BppCMIOEPAhUIkiKRmcyipKK9oWFQdEqiKiF/YGrWgjW0tQZe0euQTbNveM09Fb67d4595778X7OebDBekdKIuGZrWwKusrsmaRv5KU3ezF5iIT0E0UHEAoIzyC6QPrGVGUClsHkW2APLkTfkM7uc+aGkm0o94CgOKFzqB6mL/fq7y3GWQiGPXFQ2ctA58GSeNhVD5otPXzFug6Rm65yxnlIXeI+MOOVEO0tidUWWlDZ4t2D7OZyx67KBLqvLQIZfzGOMti+s7g+21mLvNlWmYBFF0dRXcCNgcS5oogEnymPEhSmHYU89N2axchdXxo4Sdizesvnp14AH8usf0Rq7GvlApYaHQZV3GymdvH076vw+RIStTnfHdX3BGZ17Zqf4Z8MJCcQWnGhfCHfuIMwXCrqI7WmE5VmJCqgMkk+GiPM/ahOYCjZijLhzQsnSI8+oErMmivSo09BnV1sBdWeag+vTMDeaIy/MSH7GTrbHKcANM6PA7P+BVFvvAKnbi+gMuLNqx5jMNkUn4AlvyJgO6QDCRC6iVUgzMyA2hnhRmnnqh1IcQlYCmWmJNQzV2gnVoH+7DvU/mB46ebh8SA+AYuRK/hpYrqhhVgFUiOPgU+e7DwJfR2vgNjGZIeUA2Wc87lv8QpYGvQO8J0iVAlMucfzHwU67GSTXPH55gmpzId/LVVDtfzU6wQcQfTXRI3MpaprbbCuWQYVHqj3/7MhXAAAAABJRU5ErkJggg=="/><span class="bpa-rev-score">5.0</span><span class="bpa-rev-stars"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M11.9999 18.26L4.94691 22.208L6.52191 14.28L0.586914 8.792L8.61391 7.84L11.9999 0.5L15.3859 7.84L23.4129 8.792L17.4779 14.28L19.0529 22.208L11.9999 18.26Z"></path></svg></span><span class="bpa-rev-count">(460)</span></span></div></div></div>
+<ul class="bpa-book-points"><li>Bezpłatne odwołanie do 24 godzin wcześniej</li><li>Miejsce zbiórki: <strong>Ipar u. 11</strong></li><li>Czas trwania: <strong>65 min</strong></li></ul>
+<div class="bpa-book-foot"><div class="bpa-book-price">Od 20 €<small>za osobę</small></div><a class="bpa-book-btn" href="https://www.getyourguide.com/budapest-l29/budapest-traditional-chimney-cake-kurtoskalacs-workshop-t1151683/?partner_id=YS414AJ&amp;utm_medium=online_publisher&amp;cmp=xmas-markets-chimney-workshop&amp;mkt_cmp=true" rel="noopener nofollow sponsored" target="_blank">Sprawdź terminy i zarezerwuj →</a></div>
+<div class="bpa-book-note">Bezpieczna rezerwacja przez GetYourGuide</div>
+</div></aside>
 </div>
 </details>
 <details class="ltt-bento-group" open="">
